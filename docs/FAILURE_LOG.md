@@ -31,3 +31,5 @@
   hashes, and no-write behavior. The deleted GIF likewise showed that proxy.
 - Highest supported stage: **Implemented and Executed XP-loader proxy only**.
   The historical runtime extraction is not Implemented, Verified, or Accepted.
+- The rejected `.tape` recipe was deleted because it could only recreate the
+  adapter proxy recording; no recapture is valid before the runtime exists.
