@@ -702,3 +702,17 @@
   comment lines with trailing spaces in `docs/upstream/historical-build.sh`.
 - Normalize only those three comment lines; do not sweep unrelated historical
   source whitespace into the integration commit.
+
+## P0C-06 · 2026-08-12 — first pushed web CI job lacked its server artifact owner
+
+- GitHub Actions run `31536352775` built the WebAssembly client through final
+  site staging, then failed while generating `.web/slot_manifest.json` because
+  the isolated `web-build` job had not produced `.run/server`.
+- Local web verification passed only because the authoritative server binary
+  was already present from the separately executed server build. The workflow
+  therefore did not reproduce the integrated web/server bundle from a clean
+  checkout even though the local path did.
+- The `web-build` job must install the server dependency and build the server
+  before `build-web.sh`. Using the script's web-only missing-server override
+  would weaken this full-runtime repository's bundle proof by emitting a null
+  server hash, so it is not an acceptable correction here.

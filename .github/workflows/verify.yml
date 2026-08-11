@@ -61,4 +61,6 @@ jobs:
         with:
           version: "4.0.21"
           actions-cache-folder: emsdk-cache
+      - run: sudo apt-get update && sudo apt-get install -y libpulse-dev
+      - run: make -j2 -f makefile_server
       - run: ./build-web.sh
