@@ -1,0 +1,46 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "player_shield_regular",
+  "output_path": "assets/sprites/player-shield-regular.xp",
+  "output_sha256": "26be8acb2ff973b100b0d18954d296021fe5bda8bfc156a8db8b6c804a38eb12",
+  "output_dimensions": {
+    "width": 162,
+    "height": 80
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/player-0010.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/player-0010.xp",
+    "raw_layer_index": 2,
+    "upstream_xp_sha256": "96d3879f75cd017861b761a8a17391ade6099331be83010ecde6ef61e16b110d",
+    "upstream_layer_count": 3,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 162,
+        "height": 80
+      },
+      {
+        "index": 1,
+        "width": 162,
+        "height": 80
+      },
+      {
+        "index": 2,
+        "width": 162,
+        "height": 80
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "reviewer visual inspection 2026-05-19",
+    "method": "Source: upstream/master:sprites/player-0010.xp is a 3-layer 162x80 file (wider + taller than baseline). Shield is MERGED into L2 with the body -- upstream does NOT author a single-role shield overlay for the on-foot player family. The shield-equipped idle/walk player IS the upstream representation. Reviewer visual call 2026-05-19: composite source (full body + shield in L2).",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=player_shield_regular -> upstream_xp_path=sprites/player-0010.xp:raw_layer_index=2. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

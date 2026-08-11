@@ -1,0 +1,3571 @@
+{
+  "assets": [
+    {
+      "world": "x3",
+      "kind": "prop",
+      "url": "https://asciicker.com/x3/images/house.png",
+      "source": "assets/images/legacy_asciicker/x3/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x4",
+      "kind": "prop",
+      "url": "https://asciicker.com/x4/images/house.png",
+      "source": "assets/images/legacy_asciicker/x4/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x5",
+      "kind": "prop",
+      "url": "https://asciicker.com/x5/images/house.png",
+      "source": "assets/images/legacy_asciicker/x5/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x5",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x5/images/map.png",
+      "source": "assets/images/legacy_asciicker/x5/map.png",
+      "source_sha256": "6fb6b7290a039da4213c4a40765e4533f4edca4e5c873c2fba4ffd15c1bb321a",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x6",
+      "kind": "prop",
+      "url": "https://asciicker.com/x6/images/house.png",
+      "source": "assets/images/legacy_asciicker/x6/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x6",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x6/images/map.png",
+      "source": "assets/images/legacy_asciicker/x6/map.png",
+      "source_sha256": "6fb6b7290a039da4213c4a40765e4533f4edca4e5c873c2fba4ffd15c1bb321a",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x7",
+      "kind": "prop",
+      "url": "https://asciicker.com/x7/images/house.png",
+      "source": "assets/images/legacy_asciicker/x7/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x7",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x7/images/map.png",
+      "source": "assets/images/legacy_asciicker/x7/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x7",
+      "kind": "reference",
+      "url": "https://asciicker.com/x7/images/temp.png",
+      "source": "assets/images/legacy_asciicker/x7/temp.png",
+      "source_sha256": "a4487d7ada684d8c38a05a07e895e82b0f0dcd67b3871afba87b09662eae110c",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x8",
+      "kind": "prop",
+      "url": "https://asciicker.com/x8/images/house.png",
+      "source": "assets/images/legacy_asciicker/x8/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x8",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x8/images/map.png",
+      "source": "assets/images/legacy_asciicker/x8/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x8",
+      "kind": "reference_actor",
+      "url": "https://asciicker.com/x8/images/player.png",
+      "source": "assets/images/legacy_asciicker/x8/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x9",
+      "kind": "prop",
+      "url": "https://asciicker.com/x9/images/house.png",
+      "source": "assets/images/legacy_asciicker/x9/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x9",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x9/images/map.png",
+      "source": "assets/images/legacy_asciicker/x9/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x9",
+      "kind": "reference_actor",
+      "url": "https://asciicker.com/x9/images/player.png",
+      "source": "assets/images/legacy_asciicker/x9/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x9",
+      "kind": "prop",
+      "url": "https://asciicker.com/x9/images/tree.png",
+      "source": "assets/images/legacy_asciicker/x9/tree.png",
+      "source_sha256": "95fbcf5fe3af97765b35d91f023bfc9bdf12bb287f37589382989ba97d4311e8",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x9",
+      "kind": "shot_reference",
+      "url": "https://asciicker.com/x9/shot.xp",
+      "source": "assets/images/legacy_asciicker/x9/shot.xp",
+      "status": "missing_source_http_404"
+    },
+    {
+      "world": "x10",
+      "kind": "prop",
+      "url": "https://asciicker.com/x10/images/house.png",
+      "source": "assets/images/legacy_asciicker/x10/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x10",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x10/images/map.png",
+      "source": "assets/images/legacy_asciicker/x10/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x10",
+      "kind": "reference_actor",
+      "url": "https://asciicker.com/x10/images/player.png",
+      "source": "assets/images/legacy_asciicker/x10/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x10",
+      "kind": "prop",
+      "url": "https://asciicker.com/x10/images/tree.png",
+      "source": "assets/images/legacy_asciicker/x10/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x10",
+      "kind": "shot_reference",
+      "url": "https://asciicker.com/x10/shot.xp",
+      "source": "assets/images/legacy_asciicker/x10/shot.xp",
+      "status": "missing_source_http_404"
+    },
+    {
+      "world": "x11",
+      "kind": "prop",
+      "url": "https://asciicker.com/x11/images/house.png",
+      "source": "assets/images/legacy_asciicker/x11/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x11",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x11/images/map.png",
+      "source": "assets/images/legacy_asciicker/x11/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x11",
+      "kind": "reference_actor",
+      "url": "https://asciicker.com/x11/images/player.png",
+      "source": "assets/images/legacy_asciicker/x11/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x11",
+      "kind": "prop",
+      "url": "https://asciicker.com/x11/images/tree.png",
+      "source": "assets/images/legacy_asciicker/x11/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x11",
+      "kind": "shot_reference",
+      "url": "https://asciicker.com/x11/shot.xp",
+      "source": "assets/images/legacy_asciicker/x11/shot.xp",
+      "status": "missing_source_http_404"
+    },
+    {
+      "world": "x12",
+      "kind": "prop",
+      "url": "https://asciicker.com/x12/images/house.png",
+      "source": "assets/images/legacy_asciicker/x12/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x12",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x12/images/map.png",
+      "source": "assets/images/legacy_asciicker/x12/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x12",
+      "kind": "reference_actor",
+      "url": "https://asciicker.com/x12/images/player.png",
+      "source": "assets/images/legacy_asciicker/x12/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x12",
+      "kind": "prop",
+      "url": "https://asciicker.com/x12/images/tree.png",
+      "source": "assets/images/legacy_asciicker/x12/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x12",
+      "kind": "backdrop",
+      "url": "https://asciicker.com/x12/images/sky.png",
+      "source": "assets/images/legacy_asciicker/x12/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x12",
+      "kind": "shot_reference",
+      "url": "https://asciicker.com/x12/shot.xp",
+      "source": "assets/images/legacy_asciicker/x12/shot.xp",
+      "status": "missing_source_http_404"
+    },
+    {
+      "world": "x13",
+      "kind": "prop",
+      "url": "https://asciicker.com/x13/images/house.png",
+      "source": "assets/images/legacy_asciicker/x13/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x13",
+      "kind": "terrain",
+      "url": "https://asciicker.com/x13/images/map2.png",
+      "source": "assets/images/legacy_asciicker/x13/map2.png",
+      "source_sha256": "b2e86240ae15f07911bef66445f05c7ae3a7cb19fb1f0b461c73918991c3f129",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x13",
+      "kind": "reference_actor",
+      "url": "https://asciicker.com/x13/images/player.png",
+      "source": "assets/images/legacy_asciicker/x13/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x13",
+      "kind": "prop",
+      "url": "https://asciicker.com/x13/images/tree.png",
+      "source": "assets/images/legacy_asciicker/x13/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x13",
+      "kind": "backdrop",
+      "url": "https://asciicker.com/x13/images/sky.png",
+      "source": "assets/images/legacy_asciicker/x13/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "x13",
+      "kind": "shot_reference",
+      "url": "https://asciicker.com/x13/shot.xp",
+      "source": "assets/images/legacy_asciicker/x13/shot.xp",
+      "status": "missing_source_http_404"
+    },
+    {
+      "world": "xx",
+      "kind": "prop",
+      "url": "https://asciicker.com/xx/images/house.png",
+      "source": "assets/images/legacy_asciicker/xx/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "xx",
+      "kind": "terrain",
+      "url": "https://asciicker.com/xx/images/map.png",
+      "source": "assets/images/legacy_asciicker/xx/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "xx",
+      "kind": "reference_actor",
+      "url": "https://asciicker.com/xx/images/player.png",
+      "source": "assets/images/legacy_asciicker/xx/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "xx",
+      "kind": "prop",
+      "url": "https://asciicker.com/xx/images/tree.png",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "source_sha256": "95fbcf5fe3af97765b35d91f023bfc9bdf12bb287f37589382989ba97d4311e8",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item",
+      "url": "https://asciicker.com/yy/images/block.png",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "source_sha256": "fd54ed2809f83860c9e860e295e7abf215d5e61c564868196fb86599e8d7081b",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "yy",
+      "kind": "prop",
+      "url": "https://asciicker.com/yy/images/house.png",
+      "source": "assets/images/legacy_asciicker/yy/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "yy",
+      "kind": "terrain",
+      "url": "https://asciicker.com/yy/images/map2.png",
+      "source": "assets/images/legacy_asciicker/yy/map2.png",
+      "source_sha256": "b2e86240ae15f07911bef66445f05c7ae3a7cb19fb1f0b461c73918991c3f129",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "yy",
+      "kind": "reference_actor",
+      "url": "https://asciicker.com/yy/images/player.png",
+      "source": "assets/images/legacy_asciicker/yy/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "yy",
+      "kind": "backdrop",
+      "url": "https://asciicker.com/yy/images/sky.png",
+      "source": "assets/images/legacy_asciicker/yy/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "yy",
+      "kind": "prop",
+      "url": "https://asciicker.com/yy/images/tree.png",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "downloaded_source"
+    },
+    {
+      "world": "yy",
+      "kind": "shot_reference",
+      "url": "https://asciicker.com/yy/shot.xp",
+      "source": "assets/images/legacy_asciicker/yy/shot.xp",
+      "status": "missing_source_http_404"
+    },
+    {
+      "world": "x3",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x3/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "source_only"
+    },
+    {
+      "world": "x3",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x3/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "xp": "assets/sprites/legacy-x3-house.xp",
+      "xp_sha256": "c3fd2545f7fdf458dc73b6675bab7a4f48555fbdb1dffc3626a1df84c7ad9893",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x4",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x4/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "source_only"
+    },
+    {
+      "world": "x4",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x4/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "xp": "assets/sprites/legacy-x4-house.xp",
+      "xp_sha256": "34932f2730c91d24fed452ff5e4d3e52e82f56c6735bccb806b94f93c5335677",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x5",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x5/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "source_only"
+    },
+    {
+      "world": "x5",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x5/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "xp": "assets/sprites/legacy-x5-house.xp",
+      "xp_sha256": "3b4b31f027f27dbf416d3b368ba65bb9b2b8f0d0ce45c21d288162fbbb408861",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x5",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x5/map.png",
+      "source_sha256": "6fb6b7290a039da4213c4a40765e4533f4edca4e5c873c2fba4ffd15c1bb321a",
+      "status": "source_only"
+    },
+    {
+      "world": "x5",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x5/map.png",
+      "source_sha256": "6fb6b7290a039da4213c4a40765e4533f4edca4e5c873c2fba4ffd15c1bb321a",
+      "xp": "assets/sprites/legacy-x5-map.xp",
+      "xp_sha256": "3f64424d11ac9aa0fe9773f04e7a615831f997d6d24893892f309723b35fea1f",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x6",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x6/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "source_only"
+    },
+    {
+      "world": "x6",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x6/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "xp": "assets/sprites/legacy-x6-house.xp",
+      "xp_sha256": "624764ad1a5bc14cb8cff2a4b4f3ec9e69dab52d8e8981481c1431f255f94648",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x6",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x6/map.png",
+      "source_sha256": "6fb6b7290a039da4213c4a40765e4533f4edca4e5c873c2fba4ffd15c1bb321a",
+      "status": "source_only"
+    },
+    {
+      "world": "x6",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x6/map.png",
+      "source_sha256": "6fb6b7290a039da4213c4a40765e4533f4edca4e5c873c2fba4ffd15c1bb321a",
+      "xp": "assets/sprites/legacy-x6-map.xp",
+      "xp_sha256": "e5c06ab67427c3ccea9a1f5eea2f844e1a3f4b57cef9a651d022dee45077948c",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x7",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x7/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "source_only"
+    },
+    {
+      "world": "x7",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x7/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "xp": "assets/sprites/legacy-x7-house.xp",
+      "xp_sha256": "46a086c58874017f9f07552c2c647350736e0a0d7a78349f90f3e3abaac16753",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x7",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x7/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "source_only"
+    },
+    {
+      "world": "x7",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x7/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "xp": "assets/sprites/legacy-x7-map.xp",
+      "xp_sha256": "cb431877d8a44badd2d4a0060f891a4a3189a83df5f77a875d2e68f99063b37e",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x7",
+      "kind": "reference",
+      "source": "assets/images/legacy_asciicker/x7/temp.png",
+      "source_sha256": "a4487d7ada684d8c38a05a07e895e82b0f0dcd67b3871afba87b09662eae110c",
+      "status": "source_only"
+    },
+    {
+      "world": "x7",
+      "kind": "reference",
+      "source": "assets/images/legacy_asciicker/x7/temp.png",
+      "source_sha256": "a4487d7ada684d8c38a05a07e895e82b0f0dcd67b3871afba87b09662eae110c",
+      "xp": "assets/sprites/legacy-x7-temp.xp",
+      "xp_sha256": "fcb749f14c4b45dca6af246003fe0f408a03765ae99256fbbd9b7ee5a95e934f",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        7,
+        12
+      ],
+      "xp_cells": [
+        7,
+        6
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        7,
+        12
+      ],
+      "xp_frame_cells": [
+        7,
+        6
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x8",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x8/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "source_only"
+    },
+    {
+      "world": "x8",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x8/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "xp": "assets/sprites/legacy-x8-house.xp",
+      "xp_sha256": "81ebf834cf424858a42a4f33df2f797d9a8bc71661c2da8b01df30778cca4e9c",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x8",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x8/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "source_only"
+    },
+    {
+      "world": "x8",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x8/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "xp": "assets/sprites/legacy-x8-map.xp",
+      "xp_sha256": "d515edf0e8048eca0d1e27aa3aeae8233177fb7f6a87e88e1ddb95b8692e295e",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x8",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x8/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "status": "source_only"
+    },
+    {
+      "world": "x8",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x8/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "xp": "assets/sprites/legacy-x8-player.xp",
+      "xp_sha256": "cb87fdafc1968de3b2f63e81c01e04c67e4dd5e0a5b42bff439e69913249db0d",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        45,
+        72
+      ],
+      "xp_cells": [
+        45,
+        72
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        45,
+        72
+      ],
+      "xp_frame_cells": [
+        45,
+        72
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x9",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x9/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "source_only"
+    },
+    {
+      "world": "x9",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x9/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "xp": "assets/sprites/legacy-x9-house.xp",
+      "xp_sha256": "44434eedcd6c37116ca8eef88eac7cb52f8d8dcb785fe9e54dd5ec34910d11c0",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x9",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x9/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "source_only"
+    },
+    {
+      "world": "x9",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x9/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "xp": "assets/sprites/legacy-x9-map.xp",
+      "xp_sha256": "433d502f02f658de4dcd1074e43d34d4411436f9c8a1e98175942b35a47e9a50",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x9",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x9/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "status": "source_only"
+    },
+    {
+      "world": "x9",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x9/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "xp": "assets/sprites/legacy-x9-player.xp",
+      "xp_sha256": "a43bde49ceceb40e6765cd9c2e89ec1fbe25d1b854d1d1a63b07794366cdc6a3",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        45,
+        72
+      ],
+      "xp_cells": [
+        45,
+        72
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        45,
+        72
+      ],
+      "xp_frame_cells": [
+        45,
+        72
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x9",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x9/tree.png",
+      "source_sha256": "95fbcf5fe3af97765b35d91f023bfc9bdf12bb287f37589382989ba97d4311e8",
+      "status": "source_only"
+    },
+    {
+      "world": "x9",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x9/tree.png",
+      "source_sha256": "95fbcf5fe3af97765b35d91f023bfc9bdf12bb287f37589382989ba97d4311e8",
+      "xp": "assets/sprites/legacy-x9-tree.xp",
+      "xp_sha256": "6cf57fbe7d5a96493e97128c055ce30d37d019be5175d379584fcd2e80731244",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        96,
+        29
+      ],
+      "xp_cells": [
+        96,
+        29
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        96,
+        29
+      ],
+      "xp_frame_cells": [
+        96,
+        29
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x10",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x10/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "source_only"
+    },
+    {
+      "world": "x10",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x10/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "xp": "assets/sprites/legacy-x10-house.xp",
+      "xp_sha256": "c850e60c69ad30a5e9f387497bc138c6f07e983d1ed35de31f94f6af86bbff39",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x10",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x10/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "source_only"
+    },
+    {
+      "world": "x10",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x10/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "xp": "assets/sprites/legacy-x10-map.xp",
+      "xp_sha256": "defcba017098f60138a0a3b31c978bbb116db0008afb6e9a503213104541d055",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x10",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x10/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "source_only"
+    },
+    {
+      "world": "x10",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x10/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "xp": "assets/sprites/legacy-x10-player.xp",
+      "xp_sha256": "1fa3bea4343ff6cb18d51ca0b22da4986eb8cebfb5827ff625f79f0fbe49ee2e",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        90,
+        72
+      ],
+      "xp_cells": [
+        90,
+        72
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        90,
+        72
+      ],
+      "xp_frame_cells": [
+        90,
+        72
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x10",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x10/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "source_only"
+    },
+    {
+      "world": "x10",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x10/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "xp": "assets/sprites/legacy-x10-tree.xp",
+      "xp_sha256": "9e162e57ef3ead8745ea6e0fa12081fa3bd2ff4944c45a5b6980ba57f33db6bb",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        108,
+        66
+      ],
+      "xp_cells": [
+        108,
+        66
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        108,
+        66
+      ],
+      "xp_frame_cells": [
+        108,
+        66
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x11",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x11/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "source_only"
+    },
+    {
+      "world": "x11",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x11/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "xp": "assets/sprites/legacy-x11-house.xp",
+      "xp_sha256": "d8a8dea5b852114c81fb159fd2b6ccde9a1ae274ef5349916934d54b9b6e3016",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x11",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x11/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "source_only"
+    },
+    {
+      "world": "x11",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x11/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "xp": "assets/sprites/legacy-x11-map.xp",
+      "xp_sha256": "ad9c428e6a12eb378c62133119cf8eefe8840f4d4838a58c24bb6f7338f6c731",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x11",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x11/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "source_only"
+    },
+    {
+      "world": "x11",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x11/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "xp": "assets/sprites/legacy-x11-player.xp",
+      "xp_sha256": "5447383788ac56e03e26bbad499d69b33f5bcbe1070cfdef10af6807671ec173",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        90,
+        72
+      ],
+      "xp_cells": [
+        90,
+        72
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        90,
+        72
+      ],
+      "xp_frame_cells": [
+        90,
+        72
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x11",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x11/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "source_only"
+    },
+    {
+      "world": "x11",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x11/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "xp": "assets/sprites/legacy-x11-tree.xp",
+      "xp_sha256": "c0abbac68fb25369d40195245d9045fc61827d7f8bbf37756877377f82cb29f8",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        108,
+        66
+      ],
+      "xp_cells": [
+        108,
+        66
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        108,
+        66
+      ],
+      "xp_frame_cells": [
+        108,
+        66
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x12",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x12/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "source_only"
+    },
+    {
+      "world": "x12",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x12/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "xp": "assets/sprites/legacy-x12-house.xp",
+      "xp_sha256": "404da5160c7072463f1ab7077ab68d61d7464659a5492a448b5f163c9c2b29ca",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x12",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x12/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "source_only"
+    },
+    {
+      "world": "x12",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x12/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "xp": "assets/sprites/legacy-x12-map.xp",
+      "xp_sha256": "61e95278c2c3921eaf5e73b6d710e776d8046117aeb6460b180b5f324e9600c2",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x12",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x12/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "source_only"
+    },
+    {
+      "world": "x12",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x12/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "xp": "assets/sprites/legacy-x12-player.xp",
+      "xp_sha256": "237ad06fd487381ef1337e2310e7ab09d35a2cca3abf626083c92e7929fa3963",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        90,
+        72
+      ],
+      "xp_cells": [
+        90,
+        72
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        90,
+        72
+      ],
+      "xp_frame_cells": [
+        90,
+        72
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x12",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x12/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "source_only"
+    },
+    {
+      "world": "x12",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x12/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "xp": "assets/sprites/legacy-x12-tree.xp",
+      "xp_sha256": "2f3c730b25543d7d1478642178e413fdff3843dbb3b9629cefcac11462be36f9",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        108,
+        66
+      ],
+      "xp_cells": [
+        108,
+        66
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        108,
+        66
+      ],
+      "xp_frame_cells": [
+        108,
+        66
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x12",
+      "kind": "backdrop",
+      "source": "assets/images/legacy_asciicker/x12/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "status": "source_only"
+    },
+    {
+      "world": "x12",
+      "kind": "backdrop",
+      "source": "assets/images/legacy_asciicker/x12/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "xp": "assets/sprites/legacy-x12-sky.xp",
+      "xp_sha256": "bc20adf967a3a7713c13a4fbdea88790f6ab0b88ec3ea5db9ca3a1778e855938",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        735,
+        180
+      ],
+      "xp_cells": [
+        735,
+        180
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        735,
+        180
+      ],
+      "xp_frame_cells": [
+        735,
+        180
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x13",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x13/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "source_only"
+    },
+    {
+      "world": "x13",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x13/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "xp": "assets/sprites/legacy-x13-house.xp",
+      "xp_sha256": "24a401183605463ab939933173f9dee20037ba9b3dee31839e4eb256f04c476c",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x13",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x13/map2.png",
+      "source_sha256": "b2e86240ae15f07911bef66445f05c7ae3a7cb19fb1f0b461c73918991c3f129",
+      "status": "source_only"
+    },
+    {
+      "world": "x13",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/x13/map2.png",
+      "source_sha256": "b2e86240ae15f07911bef66445f05c7ae3a7cb19fb1f0b461c73918991c3f129",
+      "xp": "assets/sprites/legacy-x13-map2.xp",
+      "xp_sha256": "44974cdca4b443e74a0fb93c909b0783f7adff96459e6b5b2d63ae1c4c5aba05",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x13",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x13/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "source_only"
+    },
+    {
+      "world": "x13",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/x13/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "xp": "assets/sprites/legacy-x13-player.xp",
+      "xp_sha256": "6e6787a0b01ea56513643c0dbd4621ade4268824b30f59bc16454f490e593eda",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        90,
+        72
+      ],
+      "xp_cells": [
+        90,
+        72
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        90,
+        72
+      ],
+      "xp_frame_cells": [
+        90,
+        72
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x13",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x13/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "source_only"
+    },
+    {
+      "world": "x13",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/x13/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "xp": "assets/sprites/legacy-x13-tree.xp",
+      "xp_sha256": "b6a6ca49fdbf7ee96019f0dedcd282622e7f650a8193d57498308d8a7d7a3d26",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        108,
+        66
+      ],
+      "xp_cells": [
+        108,
+        66
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        108,
+        66
+      ],
+      "xp_frame_cells": [
+        108,
+        66
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "x13",
+      "kind": "backdrop",
+      "source": "assets/images/legacy_asciicker/x13/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "status": "source_only"
+    },
+    {
+      "world": "x13",
+      "kind": "backdrop",
+      "source": "assets/images/legacy_asciicker/x13/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "xp": "assets/sprites/legacy-x13-sky.xp",
+      "xp_sha256": "3497f29f9939be9e4a0e0ea3133236956e7ff5f9132424439daab24a4638b3db",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        735,
+        180
+      ],
+      "xp_cells": [
+        735,
+        180
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        735,
+        180
+      ],
+      "xp_frame_cells": [
+        735,
+        180
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "xx",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/xx/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "status": "source_only"
+    },
+    {
+      "world": "xx",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/xx/house.png",
+      "source_sha256": "adf425864f62f7c950c6a30bd397cc45ce0cb0fe338d620183e6ac1e09641eea",
+      "xp": "assets/sprites/legacy-xx-house.xp",
+      "xp_sha256": "eb5ec63b7923ed262432acc2f01b47b7c9ec3d52c85198c3fe193b66141f3ec3",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "xx",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/xx/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "status": "source_only"
+    },
+    {
+      "world": "xx",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/xx/map.png",
+      "source_sha256": "1c5bc6811a2960f0e2b2138e47ec4f7fbdaeb02ac2c667fe28532c33b5e8076c",
+      "xp": "assets/sprites/legacy-xx-map.xp",
+      "xp_sha256": "bc003222533378b173d3cf15a2a02b3df158c966313fcafb4da89afb0a2e0c92",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "xx",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/xx/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "status": "source_only"
+    },
+    {
+      "world": "xx",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "source_sha256": "95fbcf5fe3af97765b35d91f023bfc9bdf12bb287f37589382989ba97d4311e8",
+      "status": "source_only"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "source_sha256": "fd54ed2809f83860c9e860e295e7abf215d5e61c564868196fb86599e8d7081b",
+      "status": "source_only"
+    },
+    {
+      "world": "yy",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/yy/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "status": "source_only"
+    },
+    {
+      "world": "yy",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/yy/house.png",
+      "source_sha256": "1541187c8f1af4a2673203236ff34e40033e05ffded68999b3288089cd01675d",
+      "xp": "assets/sprites/legacy-yy-house.xp",
+      "xp_sha256": "afb4551e6ed900fdeead83ae38f55e6a0fe8e661c92fdd1bc4e908e430c200c3",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        265,
+        209
+      ],
+      "xp_cells": [
+        265,
+        209
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        265,
+        209
+      ],
+      "xp_frame_cells": [
+        265,
+        209
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "yy",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/yy/map2.png",
+      "source_sha256": "b2e86240ae15f07911bef66445f05c7ae3a7cb19fb1f0b461c73918991c3f129",
+      "status": "source_only"
+    },
+    {
+      "world": "yy",
+      "kind": "terrain",
+      "source": "assets/images/legacy_asciicker/yy/map2.png",
+      "source_sha256": "b2e86240ae15f07911bef66445f05c7ae3a7cb19fb1f0b461c73918991c3f129",
+      "xp": "assets/sprites/legacy-yy-map2.xp",
+      "xp_sha256": "a41a84e022d0085bcefd63b14b3df5560672bd18e59b96cb50711551b508b745",
+      "status": "xp_reconstructed_reference",
+      "source_pixels": [
+        512,
+        512
+      ],
+      "xp_cells": [
+        512,
+        256
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        512,
+        512
+      ],
+      "xp_frame_cells": [
+        512,
+        256
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "single_png_half_block_reference",
+      "source_transparent_key": null,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "yy",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/yy/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "status": "source_only"
+    },
+    {
+      "world": "yy",
+      "kind": "backdrop",
+      "source": "assets/images/legacy_asciicker/yy/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "status": "source_only"
+    },
+    {
+      "world": "yy",
+      "kind": "backdrop",
+      "source": "assets/images/legacy_asciicker/yy/sky.png",
+      "source_sha256": "07b7e298e70e56938515554bccfba2175914b789d8c8ae2146ee8b3aff471bbb",
+      "xp": "assets/sprites/legacy-yy-sky.xp",
+      "xp_sha256": "37f69d5100ddbe7bec72e8d70107a5a86cbd32e39b1c79990cfa9dc9e901e498",
+      "status": "xp_decoded_static_fmt1",
+      "source_pixels": [
+        735,
+        180
+      ],
+      "xp_cells": [
+        735,
+        180
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        735,
+        180
+      ],
+      "xp_frame_cells": [
+        735,
+        180
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_cell_encoded_reference",
+      "source_transparent_key_index": 11,
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "yy",
+      "kind": "prop",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "status": "source_only"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c00.png",
+      "slice_sha256": "7f174bb47879461ffa37dc678671a1cf96f1af67902c1df30f8a152346ac17a4",
+      "frame_col": 0,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c01.png",
+      "slice_sha256": "f9e79cef7f11b0e2dc9bd4ef84f091d1070bc28cc06274a9372bba1d204ea91b",
+      "frame_col": 1,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c02.png",
+      "slice_sha256": "0314a5291ebaa1799e16343dc4bda468363e88d888f6155b6be8bb1fdfa607a1",
+      "frame_col": 2,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c03.png",
+      "slice_sha256": "07c1ce8dff817dc985ed0435edb9cf409ffe0e72631b8f8474f6e38dec6933e4",
+      "frame_col": 3,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c04.png",
+      "slice_sha256": "48fb179e3e7b5643aee60a56f3ef145c26a7ea2b6318fec0e93c0c0e86f090c3",
+      "frame_col": 4,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c05.png",
+      "slice_sha256": "e0df4d2f2852b0154e3b0408c318ddfe4d8b8addf19baff940f3c8b0226866b5",
+      "frame_col": 5,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c06.png",
+      "slice_sha256": "66f4c2bfa56ecbf3aaa91dcc65bacd7ef59c4d61eb353015bc3537bbcebc8f40",
+      "frame_col": 6,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c07.png",
+      "slice_sha256": "9d7e883c4aae4c260d77657c2f51dfd0b36649e225f8d20ff781fbeb27c78b13",
+      "frame_col": 7,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c08.png",
+      "slice_sha256": "63c3722bd6d87c4fe96ea470150b469755427bddd44868a1596a40260a3f5e88",
+      "frame_col": 8,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c09.png",
+      "slice_sha256": "afdae246cfff90d1cae80076e3dec8c4275648588010fd48c61e181866619037",
+      "frame_col": 9,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c10.png",
+      "slice_sha256": "b667c44a1bd216007a1617301fb5f4bf6c3a42551fd64201c5e6ec6387a4dd3c",
+      "frame_col": 10,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c11.png",
+      "slice_sha256": "35a740b3d8287d95ad1c8f70bf1fd347e732ca392b8b88ecba2ac1c55fa58099",
+      "frame_col": 11,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c12.png",
+      "slice_sha256": "52dc2b5bc7e2705e76ee48b779970d791ee7c63b76676a43affb4450ecc5a882",
+      "frame_col": 12,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c13.png",
+      "slice_sha256": "ee79f84e755d5fc554760787d7026650083a915a1b859c44fd7bcce97f76f4fb",
+      "frame_col": 13,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c14.png",
+      "slice_sha256": "0246f73df25db37ac4a835f29108139f3829bca338ef869352137770d9d5fd1b",
+      "frame_col": 14,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c15.png",
+      "slice_sha256": "07c1ce8dff817dc985ed0435edb9cf409ffe0e72631b8f8474f6e38dec6933e4",
+      "frame_col": 15,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c16.png",
+      "slice_sha256": "929017b7aa7f73de13817e6264896482a3697b107fb429e55e4877f1a40a4ac7",
+      "frame_col": 16,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c17.png",
+      "slice_sha256": "d331a482cb6e71d700e6001f6201200a7b96d7741976cf249e6c5c6147a594e7",
+      "frame_col": 17,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c18.png",
+      "slice_sha256": "f266e01d8179ea406bd2a7baf4a8fc2d18cf603abb6ca2dc68f4ebdd572265f1",
+      "frame_col": 18,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c19.png",
+      "slice_sha256": "96f85615fb81c5ddfcca2d39ebeb3f9259e42a129c6f84d2ca35da63556cfdb5",
+      "frame_col": 19,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c20.png",
+      "slice_sha256": "36c511e1d01115830b599dc1f550604a6de7fc5b1a358ba445de6c7b00a02942",
+      "frame_col": 20,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c21.png",
+      "slice_sha256": "707998619e7ba3014b3c91c3cd7376eb1f11a919261eedb739b0d9f98d0307e6",
+      "frame_col": 21,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c22.png",
+      "slice_sha256": "f58afbaa7148c8569451514a9d3a68ebccfd5cf35e026bdfa0fc8b8e23b75538",
+      "frame_col": 22,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r00_c23.png",
+      "slice_sha256": "1a027253c07ad759879485383c481cccd22ba11458f54e00198960d788cb2d4a",
+      "frame_col": 23,
+      "frame_row": 0,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c00.png",
+      "slice_sha256": "eb3741ce02aed1677c2a6f4fe13a01434c6e9f7eab42f33355851cb194f2cb37",
+      "frame_col": 0,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c01.png",
+      "slice_sha256": "cea32bc5f1578b7ff74533f9414e430d015df63523964c50c81b4eb6c315fafb",
+      "frame_col": 1,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c02.png",
+      "slice_sha256": "d667915298b8a0246aaad11b62a8a4b12e2e2b0afe0462314ede4f0b6a71eeb9",
+      "frame_col": 2,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c03.png",
+      "slice_sha256": "06b2d98e158bddbb52e87b8d9594c03436f6177c47ecee6b9dbe7b0b21d22dba",
+      "frame_col": 3,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c04.png",
+      "slice_sha256": "9604c3958f8242daaf06ab0261a85994e11acfeb11adef5b0f5138cf49257e85",
+      "frame_col": 4,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c05.png",
+      "slice_sha256": "056b7b29165b4eb74fa61702e2deffa25c9cedf57314941302e17c3a67ed3eeb",
+      "frame_col": 5,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c06.png",
+      "slice_sha256": "65d5e7f7447275e5a11bcd267d1267015454e7f6eded90923f994df7c959534c",
+      "frame_col": 6,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c07.png",
+      "slice_sha256": "debde74199953f943bd49e047f7ab33f81d1955cd6cbf9c68eb1ef70e67e3d91",
+      "frame_col": 7,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c08.png",
+      "slice_sha256": "8965048e1a4ebd78c7868e63e7352e467e01ea42d27d16289d6a85ba508951b0",
+      "frame_col": 8,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c09.png",
+      "slice_sha256": "47dc3e197b43d23b5909f75e9f1e96636eff3c3533e7083715a5b869f02bc937",
+      "frame_col": 9,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c10.png",
+      "slice_sha256": "f98e2e0b3de02a3e3132bca3fb8c02206d41d27a264091905acfabbb39f404b4",
+      "frame_col": 10,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c11.png",
+      "slice_sha256": "5e9b01ef6eac03bd0a73cfaa34e747957ed8dee0c865c7874cd0d3a6db159157",
+      "frame_col": 11,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c12.png",
+      "slice_sha256": "07d46dd10d8be4d10668d1cb564060fee7380bdd2cd30b8a3f708e3d5790a9d2",
+      "frame_col": 12,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c13.png",
+      "slice_sha256": "16ec5bc70f06acb909ed5924d7e78eb31866fc524e7364872bf787bf74877586",
+      "frame_col": 13,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c14.png",
+      "slice_sha256": "78f64a32b9f52368ffe5c9e7fe3b5a7701df78f230f662c62bfe61e16c14f790",
+      "frame_col": 14,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c15.png",
+      "slice_sha256": "06b2d98e158bddbb52e87b8d9594c03436f6177c47ecee6b9dbe7b0b21d22dba",
+      "frame_col": 15,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c16.png",
+      "slice_sha256": "4b0fe3c1706c146a139c9fdccb376164c95d41a0309dc67ec7cafbab2a20f449",
+      "frame_col": 16,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c17.png",
+      "slice_sha256": "a1c087897fbc2fc0c185372dfffe55c854da32c0a6fc878cf13af97e8bdde6ea",
+      "frame_col": 17,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c18.png",
+      "slice_sha256": "b706d05d3757b0370361b5654bbfde530fa54780513a4ad44e30771c3f517d32",
+      "frame_col": 18,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c19.png",
+      "slice_sha256": "ed327369e43e08c080e8b8369f6c7a7ef44558a5be0ca0b727c8fc5cb53cb5e1",
+      "frame_col": 19,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c20.png",
+      "slice_sha256": "a62c90fac0867d66cfe667d90ce11b9929fc8468487d760482dfe799415e9169",
+      "frame_col": 20,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c21.png",
+      "slice_sha256": "b2ffaa330a9010561da574031312725f5536cbaa038bdec55daad8b2b1cdb4d9",
+      "frame_col": 21,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c22.png",
+      "slice_sha256": "c9ea12398739138bb559f43ebdaa637ca9696410a9a29614c4b702788958bbf6",
+      "frame_col": 22,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_frame",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-block/r01_c23.png",
+      "slice_sha256": "0ab771cada0be88bd7d4478ac2f0f2d9bd3f952de92c454ce1e62d73e87f7bc0",
+      "frame_col": 23,
+      "frame_row": 1,
+      "frame_pixels": [
+        13,
+        10
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c00.png",
+      "slice_sha256": "22e0939b63a2841db9f3c271fe7defd25b50fcc5b5fefbbe8f0174923e5419b4",
+      "frame_col": 0,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c01.png",
+      "slice_sha256": "af69ba8ac8687eeb4b38030f037c84f2a4b70df76d82a1dc41babc80adedd9e0",
+      "frame_col": 1,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c02.png",
+      "slice_sha256": "bada888cbcaec9323b887c943bbbc3836cc5a9499d1a7dea963b472adcbd6786",
+      "frame_col": 2,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c03.png",
+      "slice_sha256": "018a562d3f9a2e5d7ba7680d9fa43ce4d410d9b09f9f34682bebae127638ea86",
+      "frame_col": 3,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c04.png",
+      "slice_sha256": "a02e445b5a8ce3539b72b46fa0cf32865c7b26bb49e7919a8e68680993e4fd6a",
+      "frame_col": 4,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c05.png",
+      "slice_sha256": "b0fa572eb69755bb1dabd16ad2861a574d76ab083135f47dcc5f21a53cb63ae5",
+      "frame_col": 5,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c06.png",
+      "slice_sha256": "691754631b61bb15f7ef76a019416d2dd5b53cfe056488398b984a5a55132713",
+      "frame_col": 6,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c07.png",
+      "slice_sha256": "4fc6769c8ed6c29594038b883737e278b6ebb07862be0d804ab0c3874c9c6f5b",
+      "frame_col": 7,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c08.png",
+      "slice_sha256": "05bd19081b2b92a4924bdcb58ffe391b0bdc2f15a01c4c1cbd3f3630444c56da",
+      "frame_col": 8,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c09.png",
+      "slice_sha256": "5170bbbda71fe80653a6a2b9815cf5adef5204f728ceb3e2d89bf695771c2c67",
+      "frame_col": 9,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c10.png",
+      "slice_sha256": "87d9b655a4277102e70e0b2ba68ffb097da2a096461ffec0821f964596fde70c",
+      "frame_col": 10,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-xx-tree/r00_c11.png",
+      "slice_sha256": "41496ca19f16a5ff101acb5c10d1841e55b5efab51aac31e187b21874c8e1846",
+      "frame_col": 11,
+      "frame_row": 0,
+      "frame_pixels": [
+        8,
+        29
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c00.png",
+      "slice_sha256": "34427910c96b16f36376333db204182cdf4f285d5cdfc2fbc82c3ec0cadddec8",
+      "frame_col": 0,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c01.png",
+      "slice_sha256": "b7083a1bfeb66ada5346bc62898849cea1860f8ce5262cf234ab75b0174686c0",
+      "frame_col": 1,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c02.png",
+      "slice_sha256": "c554ffce3b4e41a0d9a249feabc067143de94e81caf60365b081937c57c2c2cc",
+      "frame_col": 2,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c03.png",
+      "slice_sha256": "0fe2256cf1313950a1e81c231a0159be85985fb2ecefefa0ac988ce40bc58610",
+      "frame_col": 3,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c04.png",
+      "slice_sha256": "5e7fdaf6c72847857231f3f77438cda416f0c7178da604eb998bd92bda56007b",
+      "frame_col": 4,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c05.png",
+      "slice_sha256": "43e8bcf5f3ffcf27ac0ac1fd6beb2a22a1f2a7bbaa753e517adf23658954b866",
+      "frame_col": 5,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c06.png",
+      "slice_sha256": "48881b66232578e37f9d2e250309eeda9af87ee821bb12d4d5d617ba970147b6",
+      "frame_col": 6,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c07.png",
+      "slice_sha256": "a2160627a3b275b134904582ee1130464cd3b5e4a5aee342961bcd8d62d681e7",
+      "frame_col": 7,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c08.png",
+      "slice_sha256": "52553dc2cb33146fe7f44e4099a6dde038696821cb1e5028d9a85a1b95d3de73",
+      "frame_col": 8,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c09.png",
+      "slice_sha256": "86074c1ed60ebe24f302c31b7ff54757302cb20cfdd08b70e33a39a6d996863e",
+      "frame_col": 9,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c10.png",
+      "slice_sha256": "6ddb678ee03e2f1084356cd0fda100f3d89c9437388522d2058082af8b7afaad",
+      "frame_col": 10,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r00_c11.png",
+      "slice_sha256": "cb6205320db63a6b683dc02b2d534a66024f7cd7932a276bd4e2ce5c4048e8c8",
+      "frame_col": 11,
+      "frame_row": 0,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c00.png",
+      "slice_sha256": "3925713a4179ab8ec554884c0731a729162d82c1efe64fff162983da89783d80",
+      "frame_col": 0,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c01.png",
+      "slice_sha256": "e716f475f6e95b89b2f64d163e4d1279594504f3693d934bad18321b7c43a78e",
+      "frame_col": 1,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c02.png",
+      "slice_sha256": "f2f35c6134ab1cbf2fe9be613c75805704e4e9fbef8113162af241eb36d94fde",
+      "frame_col": 2,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c03.png",
+      "slice_sha256": "efbbfda06a93d16660264310cd187693d12e05300e11b016b47725e3c68a6e1d",
+      "frame_col": 3,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c04.png",
+      "slice_sha256": "0902ded709659215b90f724447d2639e82a1633bc6b62b236883cbf93d67c1e3",
+      "frame_col": 4,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c05.png",
+      "slice_sha256": "60b3d64e548af5dc45db55c101cfbc0819099711def5438a4014c5b7222b234a",
+      "frame_col": 5,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c06.png",
+      "slice_sha256": "49e519e372824fb181a7fc5db4f41e0de8c703744d84ede583d7c14765e3b1aa",
+      "frame_col": 6,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c07.png",
+      "slice_sha256": "0baae4a90d4a07db1d5837ed9a3a4e4ec9444949257f9b8ab2a904fc52ca38e6",
+      "frame_col": 7,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c08.png",
+      "slice_sha256": "59c70c24bf2f8f04f47f61d9cf8b3bc51a7ce3a09e4b7ae15c0ce44a03d01b58",
+      "frame_col": 8,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c09.png",
+      "slice_sha256": "9dac4785d40a49d42acd72ccf2c0ce427e4a1a5838edb5c08f71e4ebe19bd1cd",
+      "frame_col": 9,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c10.png",
+      "slice_sha256": "1369c6485eb2bc66fe5f4e395888db9b34c6d3b4195b0016f35143d5caa0d79d",
+      "frame_col": 10,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "yy",
+      "kind": "tree_frame",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "slice": "assets/images/legacy_asciicker/slices/legacy-yy-tree/r01_c11.png",
+      "slice_sha256": "bc6bb754f2898cb6e53f0edcd8e1d812d1970abdfdaa77bff8ac7eb1f2a514f3",
+      "frame_col": 11,
+      "frame_row": 1,
+      "frame_pixels": [
+        9,
+        33
+      ],
+      "status": "source_slice"
+    },
+    {
+      "world": "xx",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/xx/player.png",
+      "source_sha256": "36eee9ba24c0ac51032552230f436d5de4b6d0515b6aa72a5d4d5404949f1dba",
+      "xp": "assets/sprites/legacy-xx-player.xp",
+      "xp_sha256": "d79c1ba0eec7b3e8854df38dbb9b7b22aaf9963ddee638909b29a418a5ac44cb",
+      "status": "xp_sliced",
+      "source_pixels": [
+        45,
+        72
+      ],
+      "xp_cells": [
+        90,
+        72
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        5,
+        9
+      ],
+      "xp_frame_cells": [
+        5,
+        9
+      ],
+      "angles": 8,
+      "anim_lengths": [
+        9
+      ],
+      "layout": "static_fmt1_rows_angles_duplicate_reflection",
+      "source_transparent_key": [
+        0,
+        32,
+        187
+      ],
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "yy",
+      "kind": "reference_actor",
+      "source": "assets/images/legacy_asciicker/yy/player.png",
+      "source_sha256": "9847a8fd7d1c1cbc241a7cca67c80e6155623d6ad2bd3132f334a36a918f061b",
+      "xp": "assets/sprites/legacy-yy-player.xp",
+      "xp_sha256": "e7bad219dba94433242f5acf099d26361c6f3aadfc1b3ecf5c3f45acab37ccc5",
+      "status": "xp_sliced",
+      "source_pixels": [
+        90,
+        72
+      ],
+      "xp_cells": [
+        90,
+        72
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        5,
+        9
+      ],
+      "xp_frame_cells": [
+        5,
+        9
+      ],
+      "angles": 8,
+      "anim_lengths": [
+        9
+      ],
+      "layout": "static_fmt1_rows_angles_projection_reflection",
+      "source_transparent_key": [
+        0,
+        32,
+        187
+      ],
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "yy",
+      "kind": "block_item_reference",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "source_sha256": "fd54ed2809f83860c9e860e295e7abf215d5e61c564868196fb86599e8d7081b",
+      "xp": "assets/sprites/legacy-yy-block-angles.xp",
+      "xp_sha256": "a43a4db9ce2e4a24c7d79ca476b132d36f46a8b587a2d9a6fcde2b802f4abedc",
+      "status": "xp_sliced",
+      "source_pixels": [
+        312,
+        20
+      ],
+      "xp_cells": [
+        26,
+        240
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        13,
+        10
+      ],
+      "xp_frame_cells": [
+        13,
+        10
+      ],
+      "angles": 24,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_columns_angles_rows_projection_reflection",
+      "source_transparent_key": [
+        0,
+        32,
+        187
+      ],
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "yy",
+      "kind": "block_item",
+      "source": "assets/images/legacy_asciicker/yy/block.png",
+      "source_sha256": "fd54ed2809f83860c9e860e295e7abf215d5e61c564868196fb86599e8d7081b",
+      "xp": "assets/sprites/legacy-yy-block.xp",
+      "xp_sha256": "5143572353a3f61324629f5a27e4b7c7885e20e9d83b3f363faf9f555f9b8c4a",
+      "status": "xp_sliced",
+      "source_pixels": [
+        312,
+        20
+      ],
+      "xp_cells": [
+        13,
+        10
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        13,
+        10
+      ],
+      "xp_frame_cells": [
+        13,
+        10
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_single_frame_first",
+      "source_transparent_key": [
+        0,
+        32,
+        187
+      ],
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "xx",
+      "kind": "prop_static_reference",
+      "source": "assets/images/legacy_asciicker/xx/tree.png",
+      "source_sha256": "95fbcf5fe3af97765b35d91f023bfc9bdf12bb287f37589382989ba97d4311e8",
+      "xp": "assets/sprites/legacy-xx-tree.xp",
+      "xp_sha256": "8508e7229831e0e60f5326bce0425a5b6ccb2f291ad97cbc08cb4e76739b0218",
+      "status": "xp_sliced",
+      "source_pixels": [
+        96,
+        29
+      ],
+      "xp_cells": [
+        8,
+        29
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        8,
+        29
+      ],
+      "xp_frame_cells": [
+        8,
+        29
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_single_column_full_height",
+      "source_transparent_key": [
+        0,
+        32,
+        187
+      ],
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    },
+    {
+      "world": "yy",
+      "kind": "prop_static_reference",
+      "source": "assets/images/legacy_asciicker/yy/tree.png",
+      "source_sha256": "776595ca1fc755ccebdcb877122815883c8efea2f1fa08db704996cdbf7965d2",
+      "xp": "assets/sprites/legacy-yy-tree.xp",
+      "xp_sha256": "31115620cf851b0642f8abfd10ca3892499212a51d2a63b14ef83cf5a0f07d75",
+      "status": "xp_sliced",
+      "source_pixels": [
+        108,
+        66
+      ],
+      "xp_cells": [
+        9,
+        33
+      ],
+      "layers": 3,
+      "source_frame_pixels": [
+        9,
+        33
+      ],
+      "xp_frame_cells": [
+        9,
+        33
+      ],
+      "angles": 0,
+      "anim_lengths": [
+        1
+      ],
+      "layout": "static_fmt1_single_column_full_height",
+      "source_transparent_key": [
+        0,
+        32,
+        187
+      ],
+      "xp_transparent_key": [
+        255,
+        255,
+        85
+      ]
+    }
+  ]
+}

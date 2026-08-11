@@ -1,0 +1,7066 @@
+{
+  "_comment": "FL-4131 W2 legacy CP437 no-diff baseline. NOT a glyph manifest. The leading underscore key is the convention compile_glyph_manifest.py uses to skip non-manifest JSON files in assets/glyphs/fixtures/.",
+  "corpus_root": "assets/sprites",
+  "fl": "FL-4131",
+  "gate": "legacy_cp437_unchanged",
+  "record_count": 279,
+  "records": [
+    {
+      "bytes_sha256": "f65a90dc2a69f5f2dc18b0501ce6f247edea89fd1d86a1fc2905f877702c50ba",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/2026-05-28-gromit.xp",
+      "structural_sha256": "631a8c29e872a6f3ccfe696f711b2cbe9d3509fe1600bdd5b352a002cc84f8ff",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "38a16b6a0d4f2394be0df58dbef45720d7a5f8d3ad927edf2e1e60ffc99dd9e0",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/2026-05-28-wallace.xp",
+      "structural_sha256": "748aa945629c2376136ee563ba9e7581302ad711a74727dfd4a20977540170e5",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "742a0776c786f637249b02f8ebc7b1a8ab3b5f64e6da728922ab6655f4024884",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          34,
+          9
+        ],
+        [
+          34,
+          9
+        ],
+        [
+          34,
+          9
+        ]
+      ],
+      "path": "assets/sprites/asciicker.xp",
+      "structural_sha256": "a25c00082d59537683ec77bed5095ebbea0361472065aa0e1ccfaaab009e2571",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "a2ebf074ff8bfd1ef94703c011f2b9b793429b889223afd55951a13400cd7538",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-0001.xp",
+      "structural_sha256": "94430284627e3d79315910521eb10d825e81b8b56a8924e3ff184b30b0876c52",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "8e7989d7bbfed895da5043fa8575d31d63d98d4b81c5f22af69edfec733d5e58",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-0011.xp",
+      "structural_sha256": "48ab608ff2f22628a3988db99c25890eb8c5dd58878d7a281b5feb0ff718b9da",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5861d7be3c5675d4ede8f20dd8754d87f27572e7977219a27a5bfb56f6de1db4",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-0101.xp",
+      "structural_sha256": "444cf291985171d5300b3c401aa8b83a40dc23c2731a805af0ba8757a261aab9",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "d407b6a36fcf9ee1023ae24b4222fdf3f27bf3a3353448cbe305085d97ac9b5b",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-0111.xp",
+      "structural_sha256": "c64376d8bdf1ee754b6d3fcc856651e5368f02e622d09f849947a5cb652cd265",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "2081940ff3db46c53878beb7f4cff3ebe44808c35ce0a47c787f79935172bfd8",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-1001.xp",
+      "structural_sha256": "7ec2bf78af6839789a9ee352433cca790d673e5e190c3f34ddb5949e08e7b791",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "a91db53d43aeb1941b13eb0b647094a3e303a3fa80e001f682c2e2abc81d4082",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-1011.xp",
+      "structural_sha256": "40e710a01bb8ab0fc09fc68e844107b6c106089b66cd155ae5b4d10f145d809e",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "2ff3e2e8f4134b618bab667b66aff259ff9d7f9be137d806096004dd7de5b8d0",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-1101.xp",
+      "structural_sha256": "0af828b0edbbe10c1879ab00fcb8a31f56fc2ff11ca799740b22e56329ca965e",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "bc599701f0d5898d075f0c2dbd1e84a15e01a13b27e2758fd957eddd1b34959c",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-1111.xp",
+      "structural_sha256": "35e09445c4c3dcd847f56208340f3abe2cf9b0c8d6e03c36a141364d022e6ed4",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "2d789147987f936756f767932a68b891dd25d198e059cdfe76d17fdfd1bc3bf3",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-armor-regular.xp",
+      "structural_sha256": "1bda283980dfe83ca36d603903efe5aed52039fd1975336980051e69d2ee97fb",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "39235e35ba1dabcdb8b66e0a2fffa1b0806911e456424b940ebf160ed7d73672",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-body.xp",
+      "structural_sha256": "322b9fb437456e18f5c14906a96eda39923909c5f3c4f53922985ff7f0c968fa",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "9dccece996f2e1e8ef71eeb6d6ca4edd710b4a1c099de03c2d5e96c74d97f15d",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-helmet-regular.xp",
+      "structural_sha256": "35e8783d7dcf7c5946620dfeba45da3d22a5596126b4554f0694fc782a7062e6",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "fce6500b84974cc030ab457a96c72018945e18512bbbe62a8fadbe12c58e9f61",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ],
+        [
+          144,
+          80
+        ]
+      ],
+      "path": "assets/sprites/attack-weapon-sword.xp",
+      "structural_sha256": "322b9fb437456e18f5c14906a96eda39923909c5f3c4f53922985ff7f0c968fa",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "981e2374d6789141e2865152e9ea9a65dd45449f9824eaa8467d7e21306b0df6",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0000.xp",
+      "structural_sha256": "4b5b7244af6968b8d133b581e3d4eddd083e2d3f7c78b278510b9bd3bafd8f20",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "23c5657269a0c7b414c1530dfd2cc700eb5d13cfbb89518ea04499b5c1ef15db",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0001.xp",
+      "structural_sha256": "251444e7e5299197b84883906c84d3ea6b27d8a870975a9cd41e21f013fac6be",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "2ce28bd80a0d57fdd9cc1ad195e207b68bfdcac226b9f7bb73ca17142d7b8078",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0002.xp",
+      "structural_sha256": "c0b860a8490d8ae08999b675a0e785deca4cd455673caeaf33f250b7404cfa02",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "d54bfcdf5f5adcb4093e3e2d30aae57a21f004e5e7bf12f3967307bb8c3f91f0",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0010.xp",
+      "structural_sha256": "eadc151d4ccf7dec1ff6c3ead120312678e6345bea5b3e8090f949a68f37039b",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "41693ccf8beafa10eaf7bfa69437f1821056744fb6753af113872bebaa24e50e",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0011.xp",
+      "structural_sha256": "1fbde398309847ef0ade0d6413f3d715f18c2a59afd90586b67febc93516c277",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "7f666353583ca27d66f816a418b04edb18f92c25138d0489a245a31bd1f90cb6",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0012.xp",
+      "structural_sha256": "ac53b99b7be43e18c524e9afc8c909b7627ec52bc3ad451de17839a03db4d40f",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "09585cc721739c81cddcfda15929c0824c8631d9b3e467cc81cf00814bbd404a",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0100.xp",
+      "structural_sha256": "90a19656925191a3d6e7f0626dd350a98f83a584996523861a9f60e2cd8f6e92",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "05c9f0383e27f987b6144f2a68307bba1dd335dea47b82b7fbf1e051c037bd61",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0101.xp",
+      "structural_sha256": "6b4191eeb5b2d2bed5de02f8a3075b800a62492b2bc4fe42efd62ab7c210d5b1",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "0f4014e52115a0149fd660c731f5007d5083b25f09a8d0580644e2246e613e5c",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0102.xp",
+      "structural_sha256": "b41f54d0588aaf1b1f5bd51628953b02e53e2be9e1ac4c1394c1067fb860d6a3",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "77b655b50fac395d9254fe887d59d41540c1107454df3873c9565615c96b159e",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0110.xp",
+      "structural_sha256": "92bc93cdb8fc2600f278fd3044ca16eccc2beda6dca16fafc42e28c14e02b212",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "7159b0ceff90e794204a40e2f342ea0f3ba27202a7f4594a672c22350d94b58c",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0111.xp",
+      "structural_sha256": "43799b8f55314c263675af1f71d60772c70f3422fcd356ed88c2aeabe2ef6a90",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "ea3ecda3d1f1e23a06c1c145fbbe07bcf8668e5028c38a3c0ffbb1dcc04b5ace",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-0112.xp",
+      "structural_sha256": "8be617e686c3ba2ed1906b2a9e64db92060dc1b0175defbd7bcf69f5df8aa6f2",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "054557c5557983e099518ccc08e522ff8a5a99e81eabb79ca4fec0085095dbff",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1000.xp",
+      "structural_sha256": "42203b155edb3a6180d8e8930d8f6be81bd394c9971ff765750e987f793fbfbf",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "07a1920dd352c1c88435fd5122ca5392d8a8b098e44f3466522bc9c6653070c3",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1001.xp",
+      "structural_sha256": "5c5f164c6173db88f021b98927152ea61ec66111b8ba277bea05c3ac59054d11",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "e8e8db2cb9041853f42c80835afff21e0cf1d9303a4e859c6aa009e30a819a8e",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1002.xp",
+      "structural_sha256": "54a84f4da7d1b568bb0e808ae761613b40c9ddbb6b5c3d879a2491f863d8d28d",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c0251fdda41f78f101dced752a17661eaaba46e67c749f0c9557e9e168c52646",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1010.xp",
+      "structural_sha256": "7b38c4e1fea5c0bc70784ff348345cff523b8ee285215049aed47fa4d051ff45",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "33e4dd2962eaba885c16de46faa31a5c66fbd4154a36ef7b772ab321ea33744d",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1011.xp",
+      "structural_sha256": "cbbd56be2782b66f1096a2809d54893be4cc43c5be0034a5b8dd95be5c860830",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "8612c34d2332ea4267dd0f3fded5bf173da2db8df719074d21137b4b67320d46",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1012.xp",
+      "structural_sha256": "0480364dca865ad02d0d5ce9442c3fc908e93c8f043e969b876665c3ed34132e",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "4322f1ad9bcb9db5eb7fc54535cc6ef40a195acb416207202a45167228d0ea9b",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1100.xp",
+      "structural_sha256": "c245ff372118413eb633eb4cb45fb4b8597ba34451fa3b690c6574a7135331d0",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "80ba8734526779600e5019287213103a34fc8e3677e138a7162c18c81f152628",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1101.xp",
+      "structural_sha256": "7dd65cf8fc69d59bdafc59faf2dfcc326180cb1c2522304b2b89979a633b92f4",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "948a201c02d59b5092248f495b1838ea3cb11f0d760a96607df0450381f5e711",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1102.xp",
+      "structural_sha256": "5a76cdf14a1e72ebd6365e788191feecf20705db9797426a6f39740c8ea2c909",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "0ba248b663e1bcbeba45ed0d0cd33495cad013ca5d5140300c009b4d1bd97675",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1110.xp",
+      "structural_sha256": "8c44628bab9373095f148e8c7aac0368a2f03017ca57dc5b6f5b416d80f70248",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "3892267e74707dd832b1dda2c0ec932c6c16b57f26bc726a8531824fe18c2135",
+      "cp437_only": true,
+      "layer_count": 8,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1111.xp",
+      "structural_sha256": "3c0746d83a7e90f03af6a3e0a740cb3f2cc9015de983672bb03a9bfcd79d6752",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "0cb9288786ea851bac4c1928e04348be3d335b0d34c984c530f4f9099e034a88",
+      "cp437_only": true,
+      "layer_count": 8,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee-1112.xp",
+      "structural_sha256": "310c1e7d01ec36b18406d242f910e80cdb0cdcf70915a5aee3b6a95692d10e88",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "7bc083356f7787f959ed93db241484012b2627d8766cf4acdb220f45bf842330",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ],
+        [
+          66,
+          104
+        ]
+      ],
+      "path": "assets/sprites/bigbee.xp",
+      "structural_sha256": "7e138d0d6d029e1b7f72f47b61bd8cd4d14ad4596955836de36dd4006070d667",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "39052ac5ff4b176fa4c06c6bdca0bf45199a6ae603a0286a7642955622d3d9fe",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          6
+        ]
+      ],
+      "path": "assets/sprites/character.xp",
+      "structural_sha256": "bd33597ff5d2de78221e8d6d3b864e72c42d951cecf94ff1425fb9c90b62c0dc",
+      "worst_glyph": 254
+    },
+    {
+      "bytes_sha256": "d9a6cd1a7aaef11eec0d6970c21e1097408040c7f0800c582844da08d6988f65",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          84
+        ],
+        [
+          10,
+          84
+        ],
+        [
+          10,
+          84
+        ]
+      ],
+      "path": "assets/sprites/desert_plants.xp",
+      "structural_sha256": "a932e917823397c4a40dcf0e82611680fa677ccbac04036db1e7279f588680ef",
+      "worst_glyph": 250
+    },
+    {
+      "bytes_sha256": "399fbdbafb54fd64ad6242fe9aeee1476cb7d89a5eae091fd2f9d7ce0acd766b",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          14,
+          12
+        ],
+        [
+          14,
+          12
+        ],
+        [
+          14,
+          12
+        ]
+      ],
+      "path": "assets/sprites/enemygen.xp",
+      "structural_sha256": "236f8617bfff291bb4aacfb9bbbf5b0bc6b3c250f259202be8111edbad1f760f",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "dee9ade511dab8bbc7de89e4c59ff0401cad8ee60e77ad252beac53792998ec2",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          98,
+          15
+        ],
+        [
+          98,
+          15
+        ],
+        [
+          98,
+          15
+        ]
+      ],
+      "path": "assets/sprites/fire.xp",
+      "structural_sha256": "e5ade9713f65c2ac7a20fc2e40f5aa203a8ae1d566a74d28a2a2cb9f36f0908d",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "494ac5a6df7529dc2a6c6257e4207aafba04be5b9caf069b74026d22c787cd89",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          65,
+          20
+        ],
+        [
+          65,
+          20
+        ],
+        [
+          65,
+          20
+        ]
+      ],
+      "path": "assets/sprites/font-1.xp",
+      "structural_sha256": "a5bd659a5eac207304f9b0bd05cd3ad523116b6152923ae3575db12bc9bfc312",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "16e66814fc482b3deda9fb37ce32c650d5d502161b40f245832c438b39a4ae9e",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          51,
+          60
+        ],
+        [
+          51,
+          60
+        ],
+        [
+          51,
+          60
+        ],
+        [
+          51,
+          60
+        ]
+      ],
+      "path": "assets/sprites/gamepad.xp",
+      "structural_sha256": "976595eb0e48939d9899eef782ded308d7a8fa2370b08fe3c0e2158283371e29",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c78f3d36895f72a5def63d0c933a1daceefb2bf98e88327c828a537a65400a65",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          11
+        ]
+      ],
+      "path": "assets/sprites/grid-alpha-sword.xp",
+      "structural_sha256": "3495ef70e35ab71109af82cc96b7b0391c635c6afb42cefba0634cc60484e578",
+      "worst_glyph": 224
+    },
+    {
+      "bytes_sha256": "ae8765e9a7d073995304e48a429f86021de4a13b83b60f9a1d194052ba1738d5",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-apple.xp",
+      "structural_sha256": "3917857ceac60b074397f49d18412783b63a6af8df261cd931991b2335417f67",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "7ae66ffeee645c37e582085bbdfe7e9444430f357e352274c0880500ab7d9c8e",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-beet.xp",
+      "structural_sha256": "0cafecf92af13533c45686c29cc2168f3f5f676375c5fb3a20d9679517d4b7ce",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "46c5d74fced1f5ad93bed9ac8f8e3e28de85ed17b36ed8e54d3ee42f0404a56c",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          11
+        ]
+      ],
+      "path": "assets/sprites/grid-big-axe.xp",
+      "structural_sha256": "6c42de2c63752f05d826e888fcbbef771159cb81b33c78b2b335da54abce5b18",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5a745c40de9ce1cc4c87221aa009e38631dc8d952b0ccacc2f15a13362956d89",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          11
+        ]
+      ],
+      "path": "assets/sprites/grid-big-hammer.xp",
+      "structural_sha256": "4186d1871a72d45611d1323c32ee8ace2398e6ec9a8653d28ffbe8465662d09d",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5ad45b365843593a6189fd444dda2a94cf0f66de52d011727c74a29076d68029",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          11
+        ]
+      ],
+      "path": "assets/sprites/grid-big-mace.xp",
+      "structural_sha256": "cf59d1acee8cc3dcb5a968010dc6310741f9e02c283312e084920714e130a102",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "44f542d33fea2b7b2e110363d66d925579f00b1be4fdec526c800d13ee8c3485",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-blue-potion.xp",
+      "structural_sha256": "957438934d9f985601709cc52ba35b4a9b876547abcbe5d42c204590a469f678",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "db0c35c1c7109d0bb0835d9e70c9a6a4f44b9696993d74e5aa7c6e6ec39721d3",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-bread.xp",
+      "structural_sha256": "b6de76904958563206bc80fd06fc59cfb0516b06bf414d4c6c2725786b494cda",
+      "worst_glyph": 253
+    },
+    {
+      "bytes_sha256": "a4e2bb6e6fc3fc6f28c4e84e29502909f80721eaf7d6b12f3080c718c40ed8d9",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-carrot.xp",
+      "structural_sha256": "69079bc4adcd91520846a26c0da551692c1da891bfe5a8c48e8f3b7bdd0abf05",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "3b85f2e6a817f1b3ad7528a1406c46b27f8c15b27f78d8afd64006c92c2b0429",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-cheese.xp",
+      "structural_sha256": "7235857f96d2411aff82483d81b16ad8c6df867749bfbc4a962beefda533c5bc",
+      "worst_glyph": 250
+    },
+    {
+      "bytes_sha256": "d53aeefdef10f81f9704cbf430c659a259f645016f9e2cb5fa70f16146b17dc3",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-cherry.xp",
+      "structural_sha256": "c3f309ff348f6130502c02822ea98433a2f5f675afe960fd823a36872b965bdc",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "bdb03fe5f0ecbfc3a48b96f539d1601f6bfe7e16863ab0a73c8e9b2333de87a2",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-crossbow.xp",
+      "structural_sha256": "8f1846f7bd1356b0d4046c5491ba3d4286511b10e5f877c19c202ba2a3046fd5",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "4bf68996a7137d158b717ce92fb0e4b8079715da7f4f9d6a6b12a6ada3ecfd90",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-cucumber.xp",
+      "structural_sha256": "630d1293e7669e5b5fe7374939324933e30be355e049b10783ffaa7f49d3efe7",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "64cb53bc26ccfdf8bacf14f6801860ad3c77d78c919aa1fe82be44492bd78e09",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-cyan-potion.xp",
+      "structural_sha256": "ea2f5e93ec634721180535a2fb58584e5971ad86df2ded50436898a528147ec3",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "da74dd65160165134bd3c5f2dc9901e6b67031dc0f1725198601fd861ec7de07",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "path": "assets/sprites/grid-cyan-ring.xp",
+      "structural_sha256": "fa9c9b1f7459996f3725e5af651ce1194fc99d25693110fe264914fc8af23f74",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "9290f48194211ef6f2feb7dff6e6bf3b68ac68c8a72af4b928c6da144ef276e9",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-egg.xp",
+      "structural_sha256": "bb961c8625231bf6c4a0dbe2f22a604a6994f4c4937796e6096aca3efb241b8c",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "43bd3d436d45985b593f19d3e70efc6df0489b59adbbeb0facdf00c6e830778a",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-flail.xp",
+      "structural_sha256": "6afe8bef3b5cf1a7286928f30721925ec8ab89dbda48f085b0b9ce4c0666310f",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "08d19687f47a5b7af600158047c03ae4391864e483e81602c2cd7d7491df480e",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-gold-potion.xp",
+      "structural_sha256": "46e7a80e230e61b862a79dde5224b6ac2352d84b69eaa8e4c7bee4f39afbfde5",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "345d7039d89e931140098211c91556ee3668c5080f6103b43f9fdc207758d1b0",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "path": "assets/sprites/grid-gold-ring.xp",
+      "structural_sha256": "4b7f6a74abba7cf129d8f9225bc13b2735cbea5c1a22b20a699bc12147914ef4",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c303e0d874ae7d9eefbc97cc923ce897d9b56de6d449a990ab3b58e1cef245bb",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-green-potion.xp",
+      "structural_sha256": "6c183b9a8f481b5c29ffaea38c22f0f2d1e9536afd5b04ec4a6994694dbffa64",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "064aa700741dbb947f119f622af174065d6c88fb56b8aef3f82a0cadbe9c85c0",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-grey-potion.xp",
+      "structural_sha256": "2d60cf1bf57dc3ea53496c9369c2c8636fda1aaae2d01738437ff974972371a2",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "42a512e846fb84eaefee689970168bb5c47d86f51cc6fd16297a0c299a995a07",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-heavy-armor.xp",
+      "structural_sha256": "be1ecf33d8c31d8e87ef773e9253a1b7f700c3233fb252a47f1ba3bcb91f0893",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "1fc21d63616e8398d1b4d05426bbf0cefbb4bdb58982dd416b073ce68c3f7ce3",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-heavy-helmet.xp",
+      "structural_sha256": "3e80cf6868d14b4ae28f641b7a384f9b405626fc348467ac67e4d6ffbb700e63",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "1e8704c163833aececce94d5788771dbb4573319a1ef96ab04c48c3c4f574343",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-heavy-shield.xp",
+      "structural_sha256": "f3d26987b450c960c213816c1de19ab92b96f2518938b7b77cdfc8195ceb463e",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "4a0a3eec89889388faa625013fbd17a0981849f68229858e446f41aac81c1fec",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-light-armor.xp",
+      "structural_sha256": "9d299d8f986a8ed42ea4f3e6fc89bda77fbb27861ab2288c96de62e47595a6b1",
+      "worst_glyph": 254
+    },
+    {
+      "bytes_sha256": "572c306d4f6ca47f3c3a3c2a8d53ad8f6c52fa10852cf57c222734ac0c8797f4",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-light-helmet.xp",
+      "structural_sha256": "8cac0265f5f784030f0427e24e3ce6178dd6191118503ccb4b5bcae90f87c65a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "b8e9127acd7452fe060a0779ce9380f190c38d319ca499f1d76ba00866d2e00e",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-light-shield.xp",
+      "structural_sha256": "ee3bca68b134f324d3c19cc60b4f5f3bf4588f6a8a30c78fc979e189079a9531",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "aeebdf1bf41484eb722d7c131d93cf2be48ae33d158fccc891d51db55d9762a7",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-lumber-axe.xp",
+      "structural_sha256": "525d26d9f7eea1d2b83dc5cba0af7417dbe19fb0f36e852a50151154ffa39b32",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "48a45e735330b13cd2fe15f9256efcf1e2a9c14b16722c86048252b38ee2b5b1",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-meat.xp",
+      "structural_sha256": "969b10fe345b91901ad7e881092b6210adb55dd01a1955668e0135254bf68977",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "78d088ca5f85c2b69a8d31bf4537aedad47540920c9bad391b7a5e4c66c56cec",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-milk.xp",
+      "structural_sha256": "6a5046ba8a6f532c243d47e954eb5b6c5a4557e4dda0b8c8893c010979979bb9",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "8d5b04275d6736d6dc985b380d439ebb1a773a74b2b4af237d83715f02cd6741",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-pink-potion.xp",
+      "structural_sha256": "77e7ee6b53b116f6080bdf6fdb74892356f518a373211f30e1e760d4dc8ab7c8",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "0aa8827b212fce7ce44bff3064f1f01d9c114dfc1625aabffb24558d7a8847b2",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "path": "assets/sprites/grid-pink-ring.xp",
+      "structural_sha256": "6e37bcee4f8058c3a20b459360ecb587a73039baca092a5405d24c06a9ac5910",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "34e5c0d19740ef474ab0441064311e5c0a596955f8611f09e54d34ef87d3c466",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-plum.xp",
+      "structural_sha256": "97a44862dc941dd7406bcd654a1d4d034bb9ef636f50bb29c3e6badd8276e63e",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "85e339c2db92f5687892d5b7290c03860197c380c531114fc37e4676e14330f4",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          11
+        ]
+      ],
+      "path": "assets/sprites/grid-plus-sword.xp",
+      "structural_sha256": "51bfcedc50dce21aae0eb7fe776b264e1f645a9956104d4366177b2a31952079",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5a67d91a309c78955193d3d360e1ad49e0df0e656e3beae054eafeac9e539d21",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-red-potion.xp",
+      "structural_sha256": "d18742f51fdfe717e3f1d2e43469090a54d241e6586668f11940fc35abddeda5",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "38fd431adfabc42b21a1a9f7f27603c51d0510f81c0ce15eeab9d61c623a97e2",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          11
+        ]
+      ],
+      "path": "assets/sprites/grid-small-mace.xp",
+      "structural_sha256": "27cdf5af99375b250cebc4c99eedb8d150d873ac847910c8fb32b1389f249963",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "ad359ddd47700bf404b83a1800318edbe516621413a2b6883fab4aa4407c5648",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-small-saber.xp",
+      "structural_sha256": "f7f343dcc48b019a31c82c39cb87666e20d503195517f6aa374cad49d0bae3b4",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "3e8b5061d412c6f954b5d632fc8d8da9de70c289fa05ebf1eb0bc07dc75aeb88",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-small-sword.xp",
+      "structural_sha256": "6dba5cd5902f750fb9cc3c74303cf4f161e5c675b696f5da11e8cb64bc13e4d6",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "03c122f6e52589d9565a11feb4db8fc0139d437357668d7f20cd4208f108ba8f",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-water.xp",
+      "structural_sha256": "c360a8560cc09db2244688238d68635f3d0b192c88b36990d51bf8409d2449a4",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "e18d6aeaff262b0693b704967427951592fbb9d644cb29559e99fe591b2d9bd6",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "path": "assets/sprites/grid-white-ring.xp",
+      "structural_sha256": "ea51125aa7480b06a7125355c4bc40afcfdebb298fb125871fd2c201242db6df",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "45eb4aac6949c0624fcb287eddd25c616da224ef9771921786ed6700e1ae6d35",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "path": "assets/sprites/grid-wine.xp",
+      "structural_sha256": "80f245a0d1adb2661a73804c7516a077c3229d7e574dea80d2e027d95cd3cac2",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "183c2705ff212092c2b1a780178b65a91f5d35a4b98d50edc0c59d20b01366e8",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          39,
+          35
+        ],
+        [
+          39,
+          35
+        ],
+        [
+          39,
+          35
+        ]
+      ],
+      "path": "assets/sprites/inventory.xp",
+      "structural_sha256": "f1db7f3377629371de1970d0d440596f99684c77a24c3c53468a2922e508545f",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "8e0bec174edafa649ab3721bfc413e67b4030adc1759db2e090bad370b2730bd",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-apple.xp",
+      "structural_sha256": "7ffc416b16df9d1085eb20b5075011afe7752dbc2445d08d9ecc97e52c4ec2a8",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "a0ae26145b0ab091564c36147d72798d84b894292e0e21757f3dae1b24ab9f07",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-armor.xp",
+      "structural_sha256": "1ef26023c53c30afa1860ae80d22dc44e5ad967f979f2e531d9f3d27a64475fd",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "4bd83788af59712f7e834a0556ce962c7bae44883814fdd820bb2687e17b576e",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-axe.xp",
+      "structural_sha256": "1d375c049a0286f64f2857b27f36832c71e13094d1fb48db3692eebe03271ad4",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "a332f90d8469672ceb39a7d09ccd213b5563bdbe55b3e35d01ecf0693fe9501f",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-beet.xp",
+      "structural_sha256": "a01b4ad4116b1d894b0b94132e138a186f36b829bd26c4e58c90a2a8e2296672",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "bd103dcd58a982baa7b945fd26e999582a4b374e8e156395c19f968ec10fb365",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-blue-potion.xp",
+      "structural_sha256": "b5137efa0156120ecba4cddb2b7703cb85a05e7e2ed5fac9ab3d55e16334642c",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "a970a0207cbe1af8c1a1d89f77c7523306fcb2047731c196142561892d11ec95",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-bread.xp",
+      "structural_sha256": "96e0aa85c768b0b03be216a9e20a3cb35f82830bc77e4d0b2ead4b08d5df537b",
+      "worst_glyph": 254
+    },
+    {
+      "bytes_sha256": "0caac514dc07ee607345540d3c4ac1311d7e816e1391a8c36dfdc0c14eb7d2be",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-carrot.xp",
+      "structural_sha256": "a4ab986e0afbb3cd8e2a2ba9fd9d5f5ce33da83c9e342e8354de738ee4f3431d",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "1059253ef1efa13a033d8fd21f0ec117cf37e9548ef0c280a16368a8c447d60a",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-cheese.xp",
+      "structural_sha256": "05c98fd77b7efe4f6c7ea2a2d518a916de152df7d80de9a536bc7117fd66a431",
+      "worst_glyph": 254
+    },
+    {
+      "bytes_sha256": "f858013c9d4ccaa5248cd710b10792e3b882544ead672edbdbcd68535e73c9e3",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-cherry.xp",
+      "structural_sha256": "24b0f22238e3566fb10628aa2cc020d804472b2414da0a1b0a7eeb19d9d94126",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "a22aa50042c0534517a3c7ad36ed0cef1f7e70b914f7689768648eb2a0f5751a",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-crossbow.xp",
+      "structural_sha256": "b5d3bcd0310f721134e5252c5ceed016976fe0418e6583a74c7f187d8ec2519d",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "54c70054e6fa9f1f939709f06e4e59511dcf0334732774ba57e8f3bbfcfb452c",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-cucumber.xp",
+      "structural_sha256": "2c9dafd8331f9ca6bf5f52cd5aef5f58683c9dd7467a6afb9b9d69749dc859cd",
+      "worst_glyph": 49
+    },
+    {
+      "bytes_sha256": "5255eef09f68f363dd35a6b1821afe1ee6a7a3ad5b856e618f2622a41e62ecac",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-cyan-potion.xp",
+      "structural_sha256": "6a6fe3ad720642c04449e4b6fb7723348357fc84a520e25b830b7d2d52120d98",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "8e3b0557b7e916033a266217a915e1389edb0bdd6897ec443d897d0579bf4766",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-cyan-ring.xp",
+      "structural_sha256": "ab41832a384b7533b7e5caae154b2f40815ed5e94a015e7eb024f28d017aca9e",
+      "worst_glyph": 248
+    },
+    {
+      "bytes_sha256": "066a27cd923e6674f97344ea990b424f2045f0de697cf7ef91aed7affae6b2ab",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-egg.xp",
+      "structural_sha256": "07cd2ce9c055c4cbdb067df95513212c88ac00e630c55b6d9bc2fda48ee6f7a4",
+      "worst_glyph": 49
+    },
+    {
+      "bytes_sha256": "b46c4902c748c6761ecd82b210d6781ecc3206fca09e4b93e8469431682ff545",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-flail.xp",
+      "structural_sha256": "de7caad5d39045ec04a782f7b302528913ab3893782d85c6f3cd45b761bbbe59",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "dcac05d15e26b0d3c5a3b1891ccb33191eac5f6d02cf89f4e104dc3350dc249b",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-gold-potion.xp",
+      "structural_sha256": "42538688493bf5d12139f9d3e62abb1258063e1eb8b01bedec8d4d83f160f2e2",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "1ca92339aad72bfea35d19f48c2a5b134a73a888bd29b5ed3ace8f6a217d3737",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-gold-ring.xp",
+      "structural_sha256": "d13769d285e68f35d8372c313fae04a85cd56bd4fdedb59373a2138948d8a2a5",
+      "worst_glyph": 248
+    },
+    {
+      "bytes_sha256": "47ac7258a2afbe0e48e250b8119aab4888773398b16ba23aa2369838ff843706",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-green-potion.xp",
+      "structural_sha256": "a7be347582a465231add359bf3712e68dddde876718c97fc055c370562e67a4c",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "8d2842fab21976b7722b12fa393610a48f47876ac0c52c6f6e5460df6f4f20c6",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-grey-potion.xp",
+      "structural_sha256": "cd27a603fbc1b3c496261ee79284036434a0f8f9e3a6c7f1968fca366c4bc738",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "4f93d487096e4066f58e832e3818ec5ac0d590e64563a88035a9dfc3de60d934",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-hammer.xp",
+      "structural_sha256": "a2ec35bbad5861e61b99b51340edd5bd466bc4799ba84867772c5d768f1a5459",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "d28fd9ae2dcd7a8386b3a50ee47f84e46494019dde67b741c6c084acba371bc7",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-helmet.xp",
+      "structural_sha256": "ca64d39634c9373430389cc0ae9d1ee82e6b0af26772d9a9724ee31221678a43",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "27691c915239752ff940264cbbcdc1cbfc78fd1d6988fa2ba6a3490b287f9d6a",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-mace.xp",
+      "structural_sha256": "5ba3715cde50ab8afa5f88a58b8431bac8417ac4e28d7c6582f5aa10209b9a21",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "f5f8c5e233b0c04857760c96e271dcebc043206ef0a443f491bd77da791c14dd",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-meat.xp",
+      "structural_sha256": "7680610a8df5f4c97956402491b4c5961666f0e2791a2dca87282f1b08e318e8",
+      "worst_glyph": 254
+    },
+    {
+      "bytes_sha256": "e3f71f66e5492fd4ea4b5dcf1f575779eca54760c21563ca77e40288fa5ec487",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-milk.xp",
+      "structural_sha256": "0199b85407db06c558d55e1050cdebf0fe5356a5784b36096f32eef855253ec2",
+      "worst_glyph": 247
+    },
+    {
+      "bytes_sha256": "1f7fbd5eb431d01cd93acf66d818afe7a8d5e0e11f5a0923e862140655587f25",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-pink-potion.xp",
+      "structural_sha256": "370b064f949be8aae23df355bc03886d10d412403a280c58fbe8c63dd7d47eab",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "df4da0af9d7c57ce842e34941dedafcbcfc14c3a8d5d52ef04e6733b3b860b9b",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-pink-ring.xp",
+      "structural_sha256": "695751a6db748e892c5defd799c15892bbd707a71e5269c441a71e63e0f57c33",
+      "worst_glyph": 248
+    },
+    {
+      "bytes_sha256": "0f99828542ec28e9db7193a414b7b57d1306a1de1d51115b16b4a4372de64d77",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-plum.xp",
+      "structural_sha256": "43526f972cb70170b51adb7db9d1003d380ec35fcfd9b48c0f8c9e2286a9b8c2",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "b3858161bfb1349361aad970b0cfe89fc48e17945379ef82387ff4ded4ec7e41",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-red-potion.xp",
+      "structural_sha256": "3475094e9314256fe2f133c1eb25734e9e8fea6309f1ed947b680b1d80fd24ca",
+      "worst_glyph": 96
+    },
+    {
+      "bytes_sha256": "46fdd785b38b1371cc5e26396eeab9f29de99afb82bd6eb2e6e36135499dff33",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-shield.xp",
+      "structural_sha256": "82c18d5776cef8518a9500e9424997dc59b5e7e01a3025ce2c8f1454ffc01e75",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c54435cf4623720fb7970784cca09fb4064532a33b01ee6fcb632e743abec00a",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "path": "assets/sprites/item-sword.xp",
+      "structural_sha256": "8c8002b332a8c157a9d8d9aa66b02bb9fb384b0cc5046c034fdc328acefbfc70",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "6c91165f4806c0f3d9c3e872a53cabaaa5675f5c8891c8d5f68c924c296e3f55",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-water.xp",
+      "structural_sha256": "9d1b9e886c4c9d05353dd6e354e8597dcfc63cebefd8c615139b8172f9228dc5",
+      "worst_glyph": 247
+    },
+    {
+      "bytes_sha256": "85c1e29e62aef5fbc5cc6dc147212db3d26d592fddca742e7b92fe6844c5d102",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-white-ring.xp",
+      "structural_sha256": "e447280c0a2754fb1affcf86a7affcc31e2edb1c4ff6d888d7a2cb4c71391753",
+      "worst_glyph": 248
+    },
+    {
+      "bytes_sha256": "62d83ffa7e87283329d4bae8ab6a4be8c75bd6f554109c81bd2136c76319185d",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path": "assets/sprites/item-wine.xp",
+      "structural_sha256": "6cd1ef3626aff7b3744085a95d60bdf8273db1aa041fa4656ca054103077c1fa",
+      "worst_glyph": 247
+    },
+    {
+      "bytes_sha256": "d78f3f3c970146d21bae4f6cedd433bbeafa9de609a98f84c4ec36918aff2315",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          21,
+          8
+        ],
+        [
+          21,
+          8
+        ],
+        [
+          21,
+          8
+        ]
+      ],
+      "path": "assets/sprites/keyb-07.xp",
+      "structural_sha256": "7f65b288a73b971d98449d9c3a4401ccb3d99c24553e1fc7abde98fc340b7d09",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "a408d1fa8b91d54a13c32ee60c584549f2f59ad0a1196362d9c7d147d5317a4c",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          8
+        ]
+      ],
+      "path": "assets/sprites/keyb-09.xp",
+      "structural_sha256": "108c5898113a9bfbee79e599e1edb452e8dfb4fb68e094736e9ee6be708c1687",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "48e14064e5d74e5a26f1387b4e87ece0083f70f85888c0736a9b80ff201c89e4",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          33,
+          10
+        ],
+        [
+          33,
+          10
+        ],
+        [
+          33,
+          10
+        ]
+      ],
+      "path": "assets/sprites/keyb-11.xp",
+      "structural_sha256": "c54fe50eee2f606bee0672fd35df4aa07ba889ebe7e87c5c556a6db17ccde1c1",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "08d53c80bbbe5ce95e442988e1f310fc3f66e3aaec7e7915f15066ece1f8d151",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          39,
+          13
+        ],
+        [
+          39,
+          13
+        ],
+        [
+          39,
+          13
+        ]
+      ],
+      "path": "assets/sprites/keyb-13.xp",
+      "structural_sha256": "b1efb57d7eb6c8daf39f45d4682307f8b8fcf6ad7f64f7d4c45ce9458a6d482d",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "f3ec24581d0ddc39527bb7bc871e63ea1bb43e3266c4aee9d305e64b1bb0f932",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          45,
+          15
+        ],
+        [
+          45,
+          15
+        ],
+        [
+          45,
+          15
+        ]
+      ],
+      "path": "assets/sprites/keyb-15.xp",
+      "structural_sha256": "b7e32d2365408c2ef0debf50593b1db00718190ece3cdd523a134ce75856ffe7",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "867c972df1452335276d931940b1fc64790753ae84d4f680beafb37074ba855f",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          50,
+          15
+        ],
+        [
+          50,
+          15
+        ],
+        [
+          50,
+          15
+        ]
+      ],
+      "path": "assets/sprites/keyb-caps-a.xp",
+      "structural_sha256": "c5ec6bb66b2feb65ba269c0ab855898a3b527cf2d32b27f44ae77be6aefc5c41",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "2b8165301fe0004cdfbf133aae5065d2b39937cdab1e4bbb1651297e55038c11",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          50,
+          15
+        ],
+        [
+          50,
+          15
+        ],
+        [
+          50,
+          15
+        ]
+      ],
+      "path": "assets/sprites/keyb-caps-b.xp",
+      "structural_sha256": "244a86053cf05692139550fe92d008258fbcc9ec61cf9b86b7098f8eae41f73f",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "ff99dc48dc0d5daa4d8ed8465e405164b2923ecabcda24accd0ffef12fc88bf6",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          50,
+          15
+        ],
+        [
+          50,
+          15
+        ],
+        [
+          50,
+          15
+        ]
+      ],
+      "path": "assets/sprites/keyb-caps-c.xp",
+      "structural_sha256": "e0567349cea6d984f68b01d45a1d00e8529c5ef50a821fc781261fef49cd8ded",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c850e60c69ad30a5e9f387497bc138c6f07e983d1ed35de31f94f6af86bbff39",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x10-house.xp",
+      "structural_sha256": "9480f509c0fae9a02f54bca49dac63f7b5ea8c9e48ddafcfa0f02185fd69a699",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "defcba017098f60138a0a3b31c978bbb116db0008afb6e9a503213104541d055",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x10-map.xp",
+      "structural_sha256": "e9c2c5fe1416f63ca0867072923f2622a07e88e7bb95e4146b39ebe87922ca15",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "1fa3bea4343ff6cb18d51ca0b22da4986eb8cebfb5827ff625f79f0fbe49ee2e",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ]
+      ],
+      "path": "assets/sprites/legacy-x10-player.xp",
+      "structural_sha256": "ce4c5eb9633c790c90b370243d11202c29ffb0a5895a167d3a82d15bb2bb0ce1",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "9e162e57ef3ead8745ea6e0fa12081fa3bd2ff4944c45a5b6980ba57f33db6bb",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          108,
+          66
+        ],
+        [
+          108,
+          66
+        ],
+        [
+          108,
+          66
+        ]
+      ],
+      "path": "assets/sprites/legacy-x10-tree.xp",
+      "structural_sha256": "0fe9cf4159c43358058aebd24620f473357b764ca1b299422523dfa83829c2a6",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "d8a8dea5b852114c81fb159fd2b6ccde9a1ae274ef5349916934d54b9b6e3016",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x11-house.xp",
+      "structural_sha256": "9480f509c0fae9a02f54bca49dac63f7b5ea8c9e48ddafcfa0f02185fd69a699",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "ad9c428e6a12eb378c62133119cf8eefe8840f4d4838a58c24bb6f7338f6c731",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x11-map.xp",
+      "structural_sha256": "e9c2c5fe1416f63ca0867072923f2622a07e88e7bb95e4146b39ebe87922ca15",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "5447383788ac56e03e26bbad499d69b33f5bcbe1070cfdef10af6807671ec173",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ]
+      ],
+      "path": "assets/sprites/legacy-x11-player.xp",
+      "structural_sha256": "ce4c5eb9633c790c90b370243d11202c29ffb0a5895a167d3a82d15bb2bb0ce1",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c0abbac68fb25369d40195245d9045fc61827d7f8bbf37756877377f82cb29f8",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          108,
+          66
+        ],
+        [
+          108,
+          66
+        ],
+        [
+          108,
+          66
+        ]
+      ],
+      "path": "assets/sprites/legacy-x11-tree.xp",
+      "structural_sha256": "0fe9cf4159c43358058aebd24620f473357b764ca1b299422523dfa83829c2a6",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "404da5160c7072463f1ab7077ab68d61d7464659a5492a448b5f163c9c2b29ca",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x12-house.xp",
+      "structural_sha256": "9480f509c0fae9a02f54bca49dac63f7b5ea8c9e48ddafcfa0f02185fd69a699",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "61e95278c2c3921eaf5e73b6d710e776d8046117aeb6460b180b5f324e9600c2",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x12-map.xp",
+      "structural_sha256": "e9c2c5fe1416f63ca0867072923f2622a07e88e7bb95e4146b39ebe87922ca15",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "237ad06fd487381ef1337e2310e7ab09d35a2cca3abf626083c92e7929fa3963",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ]
+      ],
+      "path": "assets/sprites/legacy-x12-player.xp",
+      "structural_sha256": "ce4c5eb9633c790c90b370243d11202c29ffb0a5895a167d3a82d15bb2bb0ce1",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "bc20adf967a3a7713c13a4fbdea88790f6ab0b88ec3ea5db9ca3a1778e855938",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          735,
+          180
+        ],
+        [
+          735,
+          180
+        ],
+        [
+          735,
+          180
+        ]
+      ],
+      "path": "assets/sprites/legacy-x12-sky.xp",
+      "structural_sha256": "227a3bcd46a5c499c3653697a1a4698e01207fd20e9107fb151a7a139c5bfdc0",
+      "worst_glyph": 176
+    },
+    {
+      "bytes_sha256": "2f3c730b25543d7d1478642178e413fdff3843dbb3b9629cefcac11462be36f9",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          108,
+          66
+        ],
+        [
+          108,
+          66
+        ],
+        [
+          108,
+          66
+        ]
+      ],
+      "path": "assets/sprites/legacy-x12-tree.xp",
+      "structural_sha256": "0fe9cf4159c43358058aebd24620f473357b764ca1b299422523dfa83829c2a6",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "24a401183605463ab939933173f9dee20037ba9b3dee31839e4eb256f04c476c",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x13-house.xp",
+      "structural_sha256": "9480f509c0fae9a02f54bca49dac63f7b5ea8c9e48ddafcfa0f02185fd69a699",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "44974cdca4b443e74a0fb93c909b0783f7adff96459e6b5b2d63ae1c4c5aba05",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x13-map2.xp",
+      "structural_sha256": "3a996485fb8d2146643f1390b8db8eb4216b6a53b65535a3128daba648b99bb5",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "6e6787a0b01ea56513643c0dbd4621ade4268824b30f59bc16454f490e593eda",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ]
+      ],
+      "path": "assets/sprites/legacy-x13-player.xp",
+      "structural_sha256": "ce4c5eb9633c790c90b370243d11202c29ffb0a5895a167d3a82d15bb2bb0ce1",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "3497f29f9939be9e4a0e0ea3133236956e7ff5f9132424439daab24a4638b3db",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          735,
+          180
+        ],
+        [
+          735,
+          180
+        ],
+        [
+          735,
+          180
+        ]
+      ],
+      "path": "assets/sprites/legacy-x13-sky.xp",
+      "structural_sha256": "227a3bcd46a5c499c3653697a1a4698e01207fd20e9107fb151a7a139c5bfdc0",
+      "worst_glyph": 176
+    },
+    {
+      "bytes_sha256": "b6a6ca49fdbf7ee96019f0dedcd282622e7f650a8193d57498308d8a7d7a3d26",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          108,
+          66
+        ],
+        [
+          108,
+          66
+        ],
+        [
+          108,
+          66
+        ]
+      ],
+      "path": "assets/sprites/legacy-x13-tree.xp",
+      "structural_sha256": "0fe9cf4159c43358058aebd24620f473357b764ca1b299422523dfa83829c2a6",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c3fd2545f7fdf458dc73b6675bab7a4f48555fbdb1dffc3626a1df84c7ad9893",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x3-house.xp",
+      "structural_sha256": "58b4aba4b887a39a15979ade9eab2945868c12798a94531259e55d6bb084763a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "34932f2730c91d24fed452ff5e4d3e52e82f56c6735bccb806b94f93c5335677",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x4-house.xp",
+      "structural_sha256": "58b4aba4b887a39a15979ade9eab2945868c12798a94531259e55d6bb084763a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "3b4b31f027f27dbf416d3b368ba65bb9b2b8f0d0ce45c21d288162fbbb408861",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x5-house.xp",
+      "structural_sha256": "58b4aba4b887a39a15979ade9eab2945868c12798a94531259e55d6bb084763a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "3f64424d11ac9aa0fe9773f04e7a615831f997d6d24893892f309723b35fea1f",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x5-map.xp",
+      "structural_sha256": "be77e205417564655eab29e88b81aae084d9b17821b792a09b399a1d945c9bb3",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "624764ad1a5bc14cb8cff2a4b4f3ec9e69dab52d8e8981481c1431f255f94648",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x6-house.xp",
+      "structural_sha256": "58b4aba4b887a39a15979ade9eab2945868c12798a94531259e55d6bb084763a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "e5c06ab67427c3ccea9a1f5eea2f844e1a3f4b57cef9a651d022dee45077948c",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x6-map.xp",
+      "structural_sha256": "be77e205417564655eab29e88b81aae084d9b17821b792a09b399a1d945c9bb3",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "46a086c58874017f9f07552c2c647350736e0a0d7a78349f90f3e3abaac16753",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x7-house.xp",
+      "structural_sha256": "58b4aba4b887a39a15979ade9eab2945868c12798a94531259e55d6bb084763a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "cb431877d8a44badd2d4a0060f891a4a3189a83df5f77a875d2e68f99063b37e",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x7-map.xp",
+      "structural_sha256": "e9c2c5fe1416f63ca0867072923f2622a07e88e7bb95e4146b39ebe87922ca15",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "fcb749f14c4b45dca6af246003fe0f408a03765ae99256fbbd9b7ee5a95e934f",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "path": "assets/sprites/legacy-x7-temp.xp",
+      "structural_sha256": "9e62e6e39171b24341dd00b20530d1cf1250fc45853f016cd0f773e8525aa01a",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "81ebf834cf424858a42a4f33df2f797d9a8bc71661c2da8b01df30778cca4e9c",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x8-house.xp",
+      "structural_sha256": "58b4aba4b887a39a15979ade9eab2945868c12798a94531259e55d6bb084763a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "d515edf0e8048eca0d1e27aa3aeae8233177fb7f6a87e88e1ddb95b8692e295e",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x8-map.xp",
+      "structural_sha256": "e9c2c5fe1416f63ca0867072923f2622a07e88e7bb95e4146b39ebe87922ca15",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "cb87fdafc1968de3b2f63e81c01e04c67e4dd5e0a5b42bff439e69913249db0d",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          45,
+          72
+        ],
+        [
+          45,
+          72
+        ],
+        [
+          45,
+          72
+        ]
+      ],
+      "path": "assets/sprites/legacy-x8-player.xp",
+      "structural_sha256": "9f4970a2fb93998fb10b160d871df669e205d8e1a2b2837e35904d7103423680",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "44434eedcd6c37116ca8eef88eac7cb52f8d8dcb785fe9e54dd5ec34910d11c0",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-x9-house.xp",
+      "structural_sha256": "58b4aba4b887a39a15979ade9eab2945868c12798a94531259e55d6bb084763a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "433d502f02f658de4dcd1074e43d34d4411436f9c8a1e98175942b35a47e9a50",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-x9-map.xp",
+      "structural_sha256": "e9c2c5fe1416f63ca0867072923f2622a07e88e7bb95e4146b39ebe87922ca15",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "a43bde49ceceb40e6765cd9c2e89ec1fbe25d1b854d1d1a63b07794366cdc6a3",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          45,
+          72
+        ],
+        [
+          45,
+          72
+        ],
+        [
+          45,
+          72
+        ]
+      ],
+      "path": "assets/sprites/legacy-x9-player.xp",
+      "structural_sha256": "9f4970a2fb93998fb10b160d871df669e205d8e1a2b2837e35904d7103423680",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "6cf57fbe7d5a96493e97128c055ce30d37d019be5175d379584fcd2e80731244",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          96,
+          29
+        ],
+        [
+          96,
+          29
+        ],
+        [
+          96,
+          29
+        ]
+      ],
+      "path": "assets/sprites/legacy-x9-tree.xp",
+      "structural_sha256": "837408c1078d0adb92716031adeb81ccdcd225c82239f87686110933bad9887b",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "eb5ec63b7923ed262432acc2f01b47b7c9ec3d52c85198c3fe193b66141f3ec3",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-xx-house.xp",
+      "structural_sha256": "58b4aba4b887a39a15979ade9eab2945868c12798a94531259e55d6bb084763a",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "bc003222533378b173d3cf15a2a02b3df158c966313fcafb4da89afb0a2e0c92",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-xx-map.xp",
+      "structural_sha256": "e9c2c5fe1416f63ca0867072923f2622a07e88e7bb95e4146b39ebe87922ca15",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "d79c1ba0eec7b3e8854df38dbb9b7b22aaf9963ddee638909b29a418a5ac44cb",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ]
+      ],
+      "path": "assets/sprites/legacy-xx-player.xp",
+      "structural_sha256": "470e92633db1027080b615a021d0accf057a7b1879b27873531bff592c0922a9",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "8508e7229831e0e60f5326bce0425a5b6ccb2f291ad97cbc08cb4e76739b0218",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          8,
+          29
+        ],
+        [
+          8,
+          29
+        ],
+        [
+          8,
+          29
+        ]
+      ],
+      "path": "assets/sprites/legacy-xx-tree.xp",
+      "structural_sha256": "d76d2a1b801da2035ce8673ebc022c17d793469f28d8ef3582fe313ef93e1e61",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "a43a4db9ce2e4a24c7d79ca476b132d36f46a8b587a2d9a6fcde2b802f4abedc",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          26,
+          240
+        ],
+        [
+          26,
+          240
+        ],
+        [
+          26,
+          240
+        ]
+      ],
+      "path": "assets/sprites/legacy-yy-block-angles.xp",
+      "structural_sha256": "752c14cd4f14411f270860409a9b709648091fed552781c7a8ed8aabc6bbb01f",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "e32d3290505d773e4c171aa30fff58eb4601554fbd5428fdee88764985bee363",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "path": "assets/sprites/legacy-yy-block-step.xp",
+      "structural_sha256": "8483399d8ef40beeff952804b4e69fb0baaf046ad517b4e96ffafa5b14ba29ae",
+      "worst_glyph": 219
+    },
+    {
+      "bytes_sha256": "5143572353a3f61324629f5a27e4b7c7885e20e9d83b3f363faf9f555f9b8c4a",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          13,
+          10
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          13,
+          10
+        ]
+      ],
+      "path": "assets/sprites/legacy-yy-block.xp",
+      "structural_sha256": "d48eec369273fa9440f56f8c850045d1576cccbd12cc1c723f10053cf63027ee",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "afb4551e6ed900fdeead83ae38f55e6a0fe8e661c92fdd1bc4e908e430c200c3",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ],
+        [
+          265,
+          209
+        ]
+      ],
+      "path": "assets/sprites/legacy-yy-house.xp",
+      "structural_sha256": "9480f509c0fae9a02f54bca49dac63f7b5ea8c9e48ddafcfa0f02185fd69a699",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "a41a84e022d0085bcefd63b14b3df5560672bd18e59b96cb50711551b508b745",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          512,
+          256
+        ]
+      ],
+      "path": "assets/sprites/legacy-yy-map2.xp",
+      "structural_sha256": "3a996485fb8d2146643f1390b8db8eb4216b6a53b65535a3128daba648b99bb5",
+      "worst_glyph": 220
+    },
+    {
+      "bytes_sha256": "e7bad219dba94433242f5acf099d26361c6f3aadfc1b3ecf5c3f45acab37ccc5",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ],
+        [
+          90,
+          72
+        ]
+      ],
+      "path": "assets/sprites/legacy-yy-player.xp",
+      "structural_sha256": "0b0f3f135195aa5b98f427c2afcc58bb4c8b122d24dcdf4f5efd84a200ef39f3",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "37f69d5100ddbe7bec72e8d70107a5a86cbd32e39b1c79990cfa9dc9e901e498",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          735,
+          180
+        ],
+        [
+          735,
+          180
+        ],
+        [
+          735,
+          180
+        ]
+      ],
+      "path": "assets/sprites/legacy-yy-sky.xp",
+      "structural_sha256": "227a3bcd46a5c499c3653697a1a4698e01207fd20e9107fb151a7a139c5bfdc0",
+      "worst_glyph": 176
+    },
+    {
+      "bytes_sha256": "31115620cf851b0642f8abfd10ca3892499212a51d2a63b14ef83cf5a0f07d75",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          9,
+          33
+        ],
+        [
+          9,
+          33
+        ],
+        [
+          9,
+          33
+        ]
+      ],
+      "path": "assets/sprites/legacy-yy-tree.xp",
+      "structural_sha256": "542bc823c685c6722858d8edd2b504069039723f6ed38332ee18b649f4a4ef42",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5cbb0d4ac1b9d0e0dc721ed5cd30bec8eafd6afcab98383a77b8116d0859acad",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/player-0000.xp",
+      "structural_sha256": "3063165fed93d76362f7bc8af3916c75312e51c8648d4407a77a85ba5eac7319",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "911fcad889478799ed7e6e1c7a59b6c056795ce3877f4567eda84969c51a1d96",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0001.xp",
+      "structural_sha256": "01e4ae63b961cbb7a0e4df111adaa80c760f282dd18f5bc9f8995ea4e6e308b0",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "03bc082c651bc1fa53741b22baba66e63edd35a089df133b855d09e91af905ec",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/player-0002.xp",
+      "structural_sha256": "ee1ed2ec9d2505b05a0eb56f20ee15edf82e886ade51ca1df084b3e26deb09e5",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "96d3879f75cd017861b761a8a17391ade6099331be83010ecde6ef61e16b110d",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0010.xp",
+      "structural_sha256": "f3917e65c018830d298842e58c9b05a928059abd8c197acee8279594c4dd1d08",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "34f5b471fb774f2f55ebd89c13e42df1f338f929eb863fda8819d28dd2eb667d",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0011.xp",
+      "structural_sha256": "fd17b7e3a41317629305aa0d16d6529e3f6643d62994d48b0cb1502371be010b",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "107d9454d56b3d94968e6347d993b88d3146b4eb9dc39cb79a87c083313c4673",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0012.xp",
+      "structural_sha256": "b8e630c5b41ed7575b57a2fe06f092aa6ed2286c4f8f5cd88c44e8c9356f8139",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "073bd74099536d9b2f0b1bab074a485060e2f135a1f309ec759d9a94f15c7e9c",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0100.xp",
+      "structural_sha256": "73ca41b9da3909549fd75d7bf4168cc85a807c50e3c3fe802e5afa3cb459a3e0",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "08d76bebeb2adac1402f560672ebdd5a08e9d0bc61ecea71aa36084eb194d07d",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0101.xp",
+      "structural_sha256": "24054664337e3dce77655a3e1d3dc747159af5823c3c0c2581de2b8acc55f639",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "d0ce7f1d18e31ef58be2788e0b6c12536d3cc73ea377a7e6bf701b8440c1f4d9",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0102.xp",
+      "structural_sha256": "22b6ecba6a79f9968a9ef28e33d3829bb4a9b13bce68a399b4829df4bfded5e4",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "90ee9129952b01ac9f16edaa0258e9af0442dc56ac8bc8c616db281d413f9388",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0110.xp",
+      "structural_sha256": "e766b246e19200ea97b75aed1ad9fac5d1eabc6eb34000ba03289102c8fa0787",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "82c636cdda8de1cd6af60807b8f8e1bf3efdfd5c7cc7734be6eb160215bdfbfd",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0111.xp",
+      "structural_sha256": "e4aebbeafee5d8a4209b2f7b6ecd4fd789b7626e8e4a824002fafb0a0eadb803",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "e0e8100c5ad3e4542dac152db2b911f98ef119ab4be67dd220175d6637d9bf9d",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-0112.xp",
+      "structural_sha256": "c5325533abe9c908c8fda0b31d181e878aeffad43470030f3bee0352edf5b7c0",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "8f6b3eb6f94af62ae33befb9262f15faecf3a2ff917bbcf7f8eb6e0951a6949f",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/player-1000.xp",
+      "structural_sha256": "1ff088c7e5acc03abdfe0d8e3e742aa3422cc63456d437c2dd7ccc59b5c0407f",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5d49312cf9162759dde64faf822e5070a4003ce3225b0afbfb881cdd55ca54c5",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1001.xp",
+      "structural_sha256": "e3c8517f8503a0e396825987bfeae52281b4f0124e40fa7470a622b524d13087",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c4325ad69754d4538f0b7a7962519ba5601362b8f4c7c7738f086d5af6bfbc18",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/player-1002.xp",
+      "structural_sha256": "e6aadeb0688155fed483616281875a1ffa3cfbaca625eadb69335ec1b1ccfbf3",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "06316b640b0a2e04fcb7bd66d0d1ce0f81deda3905eadf4be6284c9f38abed7e",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1010.xp",
+      "structural_sha256": "84ab757606dc671e26f943feba6c1e50786771d2e01d3c09e8d5984965183b13",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "682cfc995959dc66fba3f88fd4bfdfeb109437d865115055853ed36bad1acdbb",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1011.xp",
+      "structural_sha256": "d95ba30e35674c637bf9951a12c6978d46ff0429585e738a07ff8549a65a86a3",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "fa62ba2c9c7ddd58691920cb2f17bfd82356a921aced9a7e2942f710fd6dbf79",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1012.xp",
+      "structural_sha256": "673c8975d48d97bf0dd5ab9e55013ea468bc91e2396b027c5eaa416f0e6411f7",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "9895deede51b6bfe2a0a054b165005d41154962cd1aee37490b04467018de37c",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1100.xp",
+      "structural_sha256": "d9d25a14cf74e0e88194e2dc3c2d056aa3526ff59214922d203404b2f9250aab",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "be76c68b2422ce79d1e04bb04b714c798a888e7433e827911745772934a01631",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1101.xp",
+      "structural_sha256": "577a3eb019c42de2e266f94f558c6898302f364d2bb01abc3aeba55474519cbf",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "6c8464802699cda41d5f494a43ef3a812785404345d1486fe0c3cbb6b6028d0c",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1102.xp",
+      "structural_sha256": "be72499975db6b955b846df7c2f49d90af8b5ecece4e1402bdbeb37732833d2d",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "cd4c3ac73bd359e75cf573f377495ed440e2612156481e05e9402ae6b311c85e",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1110.xp",
+      "structural_sha256": "89dd3dbfe7fbc58543cd992a48cb5eaddf4b24d95ae579e2d836e35f4d1c9d4e",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "dbd58630d3c8897cef3bc9c79c9f5008270be22251c0c1cf97806f031ee1eb86",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1111.xp",
+      "structural_sha256": "5b9002a0920cf1b1032c86ae6a373841fbc560d09f21a5346e2e2ac205bafbc8",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "4002817c4c6ee420a3e57fa605bb6c4e9f244505a9a40d5952b3469fbbc9fe2a",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-1112.xp",
+      "structural_sha256": "91b84aa386ab5abab6735e4d4339b1115de68b1f4a34ea3823728c956818d678",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "bcdef09c668dc54fbffdf4f1b749c4b0a25e733c640472547e169d6a3edda5a7",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/player-armor-regular.xp",
+      "structural_sha256": "2f1894bcff7ba5575e3fa5687d631c6e70060581af3812eaedaead537f189cf6",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "3994f4ad18856671e11316715557db6e4ba3994ba49a612068d4243ab73ce8d9",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/player-body.xp",
+      "structural_sha256": "3063165fed93d76362f7bc8af3916c75312e51c8648d4407a77a85ba5eac7319",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "c73df398adbf891953d1a22671beac539dc59755521dffcd2de56dc478dae3ff",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ],
+        [
+          126,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-helmet-regular.xp",
+      "structural_sha256": "88f748194785c4df1d4ea9d97d70492b372cf761211ea9ef9b211e97ca14f9c9",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5054a77f6d991b58e4e3fb326e71eea1d03135fd30127348ba4ee7be1cd8e39c",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/player-nude.xp",
+      "structural_sha256": "30c91c9a0391786036dc132717ba2ec17dee2d3c66596cc3e0ad7671a5fefebd",
+      "worst_glyph": 227
+    },
+    {
+      "bytes_sha256": "26be8acb2ff973b100b0d18954d296021fe5bda8bfc156a8db8b6c804a38eb12",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-shield-regular.xp",
+      "structural_sha256": "f3917e65c018830d298842e58c9b05a928059abd8c197acee8279594c4dd1d08",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "719a855d7b7805a9d2ad3b042160a11e3cd9a78231d746cfdbfa999ea0012089",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ],
+        [
+          126,
+          72
+        ]
+      ],
+      "path": "assets/sprites/player-weapon-crossbow.xp",
+      "structural_sha256": "c8561a35bad09cb695b3e4d3586015a290c1e2c009d68272565774d2a6001b85",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "08313326106aa380f980b22784ab911f371964d46385605f29df3eaa351246a9",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ],
+        [
+          162,
+          80
+        ]
+      ],
+      "path": "assets/sprites/player-weapon-sword.xp",
+      "structural_sha256": "01e4ae63b961cbb7a0e4df111adaa80c760f282dd18f5bc9f8995ea4e6e308b0",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "29627bf1873555e2935ad8eaf31834fc7a6f9b0fe5694de398a1b2e351e45442",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-0000.xp",
+      "structural_sha256": "b4bd21ae4711715937a7b8c04da0aab3a58d7bba74867b2e5e9b47ea047d2bab",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "6ed765f6ffd56ef8cfd7f6de5f13ff91a1438ae9cd7a9ac22775485ae350890c",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-0001.xp",
+      "structural_sha256": "e3534abe2ae4131abe9e6a200a20b9662dd0d68ad5eb12ec9ca88bcb3453d927",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "b1768a0fdf4ea4d61a2e840cbf69ce6fe5dc51b839581071c7f0bc145da0f859",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-0002.xp",
+      "structural_sha256": "4160c87d59640bc99182dc35010b36d3121ba684c225526090b04ef6edeefada",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "d535b8d446288924a0a714b9c96d5e11f30a075d6543bff40425af4f25c673c5",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-0010.xp",
+      "structural_sha256": "6216b25d66df4bd5818a147fec4937e149ea77597026fe622c8ba838251f474c",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "f25d7fbf32242506c69c17ff791afa65bd1ba83293854d03eb8ad44b681c6bb5",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-0011.xp",
+      "structural_sha256": "3daa2c44dc6bef1b9db2e242002dbc0a1b7016b19719a98a6ac5007b1545b797",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "66755f091433f567273f47f8ab9c478543735615725ea011552ee4662c0585c0",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-0012.xp",
+      "structural_sha256": "5cbdf68ece7eba4381262dbed84039064004df7ba244a741f5c6795ca95d5e0b",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "4a9700f3956979ab454b67c926ca2c1a806ae3cc5a4bc9f16c2153f1bcacbb08",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-0100.xp",
+      "structural_sha256": "f7aec53bc5b37f0532d29df378c9c74804a6d28a606f0b8f1b66da2153bb8165",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "bbd74d61e66c236f7d155b73ffc6a20725beed5c82b4da3e4574bd2b41b7063a",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-0101.xp",
+      "structural_sha256": "e72082c56feb2dd5fda13b8a37ff2da5ff9b9e660d76876394a78f025d387ace",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "501e20a0a791b24c6e738dcb628665d65480313cf6268dbcfe3d8cb3898e6d00",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-0102.xp",
+      "structural_sha256": "56211603bf7ae017723466197b46b6271b3f7ca37b403e5c1b3826fcc4459cf8",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "ad6d5d227c7adea43e844373041310485c311554ace08e06c17de2b86e53fac4",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-0110.xp",
+      "structural_sha256": "c0b08ac7d50860ba61cffcb21fea6c675493848e114949ef16e6d845b9398e2c",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "cbfccb7079f5397515c25e2c2593691be0720d6a9b583d1d11420c50e0a2f53c",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-0111.xp",
+      "structural_sha256": "0072dd4b8f76c5b9ee7d3c9be491be809c8eb758d50e57feee4c8d2fcc0cefb0",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "0deeda5168e605d9746ebfd7737c12b19132fc6ab31bda4798aa627d272b133d",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-0112.xp",
+      "structural_sha256": "5ad9bdada187e3ebd342591863aef10a1e973bc4aaa742ed7bed8e595058b10a",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "b2e32ffed282f718aa52b237d20b9102fd19db85a4d5202001f91d73513e55e3",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-1000.xp",
+      "structural_sha256": "79f707549bcf5af5dc263b283261c685b081e3ffe60b2d4eb74b2d726f979539",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "2911d0c20c5bfa887bc870c3b3530c033cac1f2be3599a645e095fc005fb1275",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-1001.xp",
+      "structural_sha256": "aab47ad5f65b0f6bdd72b236cfd2ffd52bc33df279ca50c6a458b9c40bace6a5",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "be0432822fabc9851ffa9da7d2c580b6c604fa19828e899aee5c743edb408f95",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-1002.xp",
+      "structural_sha256": "fcfadd86f686d58e2f8828af793e705a35a231756c2565f33afc76562dcbe995",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "a4decb01fecd6fbadb97cda5dfcb4b87d1fa519cc0e347ce61ff8fb06640ae54",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-1010.xp",
+      "structural_sha256": "ff49e35a9eeed599e100f084cf43836bac78ae40b6f0b79f3cc3cbd0a2720819",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "1a47da7a41fc387ed3a9c9f5015c815211993e02388e04e8a582345aeac1048a",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-1011.xp",
+      "structural_sha256": "ff1e15531b7639b9451db04e6b4b4ac4492e96b0c55fa0b7250a181e67849585",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "9b654eb5ba400824530f0f9abb07e62fa239f59d058d52f900971a818ffc74dc",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-1012.xp",
+      "structural_sha256": "c9f32f701fdefefc78f55415b321bfb06cf5ce315d6779dee6996b0767a8d083",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "17334f2b3c582cc382779b1574ef87c99596a651b67ee737da7c63ea4c362e45",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-1100.xp",
+      "structural_sha256": "83b2151fa156bcb648e45b943086f1f3df1951c93a64a0a0c77c803920a7a8e7",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "a94a5be200a24b3e3183fba43b8c29b30e762395f018d85d4beda6da3ada767d",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-1101.xp",
+      "structural_sha256": "be9a30061c2d7199ae92edf3b50b32183aedb376efc910a9f83cb6047138821f",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "0c78c90efb6c1e2063d707b1837392dbc045c726fb3bddc651d69c0d62616e03",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-1102.xp",
+      "structural_sha256": "d9ea7f1cb4534f37daa0e775634133a76170cc3adcebe0fff45dddbe31b6e892",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "2a4f632a7a1e244ed1cc5b973bf8dcaa04c00318d2e687e5e0c96d4af41283e8",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-1110.xp",
+      "structural_sha256": "918020c892542331dfc9be26c5d2f1805f09aae1532be6d7dd567fcd57887290",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "749ecc5befab8143da2744b22ff2748f3f750a76b029c34731c508a225d25d66",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-1111.xp",
+      "structural_sha256": "3a50ec4aa5f06a1966c317b019be18bd4612fa6ee77c5b3ab69a0f03bb673ac9",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "5ac7e95bd49fe4bfe12ce0ef94d5f4fd7be85b5f2a226f4d0b8a79234bcca4b7",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-1112.xp",
+      "structural_sha256": "d9b575adb5ae3d0a46923410357216e8e45bc3f345d599b49018cf9b92bf1624",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "8e8e2645051073ffd7c3337209fb8cbe8627418983d09d997d12c3d148683402",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-armor-regular.xp",
+      "structural_sha256": "c76f9f1970fd81b1ac2909fc75e053f6973acf7acb09a7ea0b6821dc634f6af2",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "20b7a955c94491c55430b560e8869e3f3916055df4c64a87e6b0650cfe3fdb3f",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-body.xp",
+      "structural_sha256": "b4bd21ae4711715937a7b8c04da0aab3a58d7bba74867b2e5e9b47ea047d2bab",
+      "worst_glyph": 240
+    },
+    {
+      "bytes_sha256": "86b7227757ffafbac56c140e795489bea77f00a583695dc2430aa0ca0a315bbf",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ],
+        [
+          110,
+          96
+        ]
+      ],
+      "path": "assets/sprites/plydie-helmet-regular.xp",
+      "structural_sha256": "1ddd4c1af68d0ca081e05a0c471a0282d2b638efe84a68680eff94ed34a24599",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "0ba265ebd93b40118acb324a507fca9ac6b60d9504c94b8a932e79a21ed6a2fe",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-weapon-crossbow.xp",
+      "structural_sha256": "fa08dff05be24a2cbd2ce858d340a6fc3323aa2d012c8d1151ede947b25316a6",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "bd51588ccdfa593c4f13623b0353ad9f274b4d2b22e2b7e998772740b29c1f94",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ],
+        [
+          110,
+          88
+        ]
+      ],
+      "path": "assets/sprites/plydie-weapon-sword.xp",
+      "structural_sha256": "dda12a76c134c1c336584a2a51057b02e4278eac8030d995e8212581a83737ad",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "20247d143b306be27a14a6a8034b4a70f1c5441912f5d13b5bcf8616fef084dc",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-0001.xp",
+      "structural_sha256": "78b1af6a328b9fc8c501eedb344f2ca8b8fbbbf5102c84b2fc7bc8aaf263bda5",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "329e862e2173e67915f723ca39f0f5ba72d5af5f9060927ccec73a265d0ef599",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-0011.xp",
+      "structural_sha256": "b8271b425cece7d3a0e38b9a029aee074711a68f1490dd9f5ff59de1a66c6cbe",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "5320190045f0dc6c4d20d1f4e0e86cd0798dbe30934d58c432492ba1047d0623",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-0101.xp",
+      "structural_sha256": "7552c9f1d18ba52ca36bd1e41cc49a0aa82d1c392445fc38dd2280a2f095f194",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "65d61249a4fb7100f59eb332097cde8abcdc41e0b9b4a22ace67cc91a6c8977d",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-0111.xp",
+      "structural_sha256": "2de226b2b2230fbd49aa977471c9762bd89de5d1a4031e868add3392676fb725",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "13f57eb4521d52dc215ad08100c54147c0059d4083d2b4099e5f4dd301ded3e1",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-1001.xp",
+      "structural_sha256": "18a8ca9004f39baff7b43642f2bbac44bb6f816d46d2b9654620608c008f4ae9",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "e1624a916ca7ccef0d941908573eb6ccd0aade891ade7e1a21a231480bc6b922",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-1011.xp",
+      "structural_sha256": "e537116fcbdbdaa8fc5a03753351fcf6b50d3a9d36b617b15994ef554d312c5b",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "6f8f0cb82ae2d10d75cf69e58e654c4e05e510eb511712ca96096e5c79661d4b",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-1101.xp",
+      "structural_sha256": "89cbeba96f9ca92ef9b46c4897f9d4a1d4db31538f77a588d23f36dfc305264f",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "35db57518293bef2a25288b4baef41f74f7b0c84369429d77cb3d82187cc1a27",
+      "cp437_only": true,
+      "layer_count": 8,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-1111.xp",
+      "structural_sha256": "53f9a66aac6b7455f086b5626acfea716013eaddeeb3eb9311d7e78d8da0b9ad",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "25749b4f472898ef9ba348983c26ec85b28cec709d445f1c7d1906d157f42347",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-armor-regular.xp",
+      "structural_sha256": "44ff3656174bd1a394c0b81e1e46e6970be16aac5d2f4affd80c8954970439a9",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "8385a04751d6d3e9bfcc49abe8610950ffb77dd867bdc2380faa2e7a28a14d78",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-helmet-regular.xp",
+      "structural_sha256": "1e119ed69fcb898ca1a2961a1b8c52ef42ab983284e76d7535826f18fd9e70f7",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "81e33cca1bf77f6c50505f15e552fd35e13ef1cf9688deab3783248a5d949fa5",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ],
+        [
+          160,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolack-weapon-sword.xp",
+      "structural_sha256": "494093793d5d753e3440231401996b8cff51c98fdbebd49ceeee6687bd153af5",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "0a71765714abf3539828432330ab02a6875ae4f017be72316b086dc99e150eb8",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0000.xp",
+      "structural_sha256": "520665306f68c88b3af5510e7db1b15bdeadec563698447c08c0b873716a1432",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "a9917ee5172cdc1ea335d07754f3b389653905bf7a4ad56701c94f00bd18496c",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0001.xp",
+      "structural_sha256": "0d986ef1b77bddb9d75ffb4d3bb42458050c437689b3f9babd43376e3572b0dd",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "d93d04c2045bfaebb8567993a6b18bb2b3d4ff22a0cf2cdf2d32ff629e13d9f0",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0002.xp",
+      "structural_sha256": "6ea72851225969d80915f5579caa143a93f13235c91c3a054d7dae63c4851383",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "6fb0453741a12d7a784d42300b05a734505900e4d6747499675778c4ad484b67",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0010.xp",
+      "structural_sha256": "96b929a9abc2fec984172c5adf7d1cd8273f9ece60787d14a5bfdd4f0c17e61c",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "a42d90132aaf37c20c4ecfed7667fe3862a6307329846870412b23c9501815ea",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0011.xp",
+      "structural_sha256": "d2de428e863bdbca7d14e98a37b041c0183712075df85465693e795fef71913e",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "0a59de672c4b41053dedacf6433617080a0bee616096daf1f1f0d1fea0f85864",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0012.xp",
+      "structural_sha256": "8ec599ff434e2c23a5cd01ab1cabf4118c7246fd987b18c34cd540fa68cc50df",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "930b9e3dc2482258c5b492e89bd083ee70fe2705ade2dd6b527f68190e54fe28",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0100.xp",
+      "structural_sha256": "66daf7f437510916d7199851cd64c1522361ecc888f0f44dcc5e8c5c4cb59b1a",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "400dc46472a8225c8918a61c0bef1aaee20b5f55ab9525fbb75bd9213757e00c",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0101.xp",
+      "structural_sha256": "11c05eb6dd6c58a34e28c445a88ed21df56fa9c4ddcf2ff875cdbbaec937bc5c",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "1ca20e2732da8d8ec12289c6c65d2456c658281768422c8d1a2b4e7a7ce92da2",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0102.xp",
+      "structural_sha256": "ab408569967de9cbf8503c55c7a2d482af4fe3513258114e29d092fdce39ffaf",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "5b6ade3f6ef3194c1e04ff61ddc4d6e2baacc6d9ef093a56f112a75e3a318661",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0110.xp",
+      "structural_sha256": "7a0936bae51e503c610db1af348f414677b35f2a3437863dbfbbf6758341abe7",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "8e7d5c69ef463d8f359bb96723d61a81f91f865a67ee8456b3f06053ca684fb9",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0111.xp",
+      "structural_sha256": "aed363e88d5d91d4e99adbb7d6975978ad7683674f9385a5dd0ccd2c0b4795dd",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "2e70a1fc23f5923b3c930184d0d30f9702c5e9aae8c6861efb6ff6d5ed5c616d",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-0112.xp",
+      "structural_sha256": "4c6dec67f65abd3428d1aa48542b4bc363b863d54b77026faf410f812b77d975",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "ff975c8af2797d9ee529f445557aa8560a63b4039076a9da0baac179acf6f319",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1000.xp",
+      "structural_sha256": "bd273d68ce42d0609d5a501f535ec6e3eb57fb1fb7689e9901bb2c12e33b4063",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "cead92c470e1469552845819efc92ac4638642edd303c3bac446a28e5538272c",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1001.xp",
+      "structural_sha256": "b82a74addb8ad315d14d6f6d37826f9458ffc8bd4244f462d13bf41a08ae1d34",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "79e2d43871164d71bd5ffa4d4bcaea37308c69e03ef485ce46aa7044a93fb24d",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1002.xp",
+      "structural_sha256": "ceb77d32ec55ae18eb2158b462bb6a8c8d97bedfde2c5eefd1c620984a85d09e",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "96cf7653b115027ea93d5d7fb02dcc1ea465d5da76c470eb8c1b3b07fd92f695",
+      "cp437_only": true,
+      "layer_count": 6,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1010.xp",
+      "structural_sha256": "e3dade7dcbc6d62e8f7f8952b92e0db3070eb9276b8639594b312fe18d317bde",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "f7da4e858c7dae644a6a58d8e91fb7bfc15441462286f484b518e9e4a0a79911",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1011.xp",
+      "structural_sha256": "8f371270d846839cb47a41dca327eb6e9f0e261f5f33a6dcd33c59da00da28cb",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "7e28b908abdb8901a36b3c5df270e0ede7f704dd320cfe4f71756a62c586fb43",
+      "cp437_only": true,
+      "layer_count": 7,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1012.xp",
+      "structural_sha256": "f8067087408539878617193297c7e3cf3c8d5ea2006b546dee0e6d681aacef85",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "c37b4a30cd1f2de0f279c21439e9cdf2f23a0a440190c457918cd46bfb840a6c",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1100.xp",
+      "structural_sha256": "5bbeab6450a9788318fe1482f5e2455e3634565cab65a1b4619567760d785a6a",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "3c2c3634b8e7ff1f328070c8da519a24dcedaec052734e588c55e2942f2552f3",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1101.xp",
+      "structural_sha256": "011b486c444ab4bd45e5b5a866ce609ce175e0992570a77ca2528db1e5913a23",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "2e22b3b63aa4742ac3b972b5dcf795e20783adec0e6106226d149b082f71cac2",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1102.xp",
+      "structural_sha256": "a42072748b71fb007695f8ecd9db09b2ea510a84feb0155e1f3633969a4d669c",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "deb8177b81d19c50f3aab85d93b47c2b0057af0d8bab5fdd77117ff2c8238fc1",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1110.xp",
+      "structural_sha256": "48223bea4d4480171783808b5eebb18abd7b8dbe78c979532c4ac6e0c45cc94c",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "d5ec3c6bdf07ec25caa89eba887c314d07540f44767eedb06e1c1e8850a8b499",
+      "cp437_only": true,
+      "layer_count": 4,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1111.xp",
+      "structural_sha256": "311c1fad22c0fd859f7032305a22182c524d77f66502e1bfffdc9fc242940acd",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "c10b2051a1a15254b25038533dbea31a120a7f1d5c7c9a4d58abb5bea94b0586",
+      "cp437_only": true,
+      "layer_count": 5,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-1112.xp",
+      "structural_sha256": "99d811b48b2a34448a8b51a4207816515a23e50a67fc6d4fbb6244acb3e32b1c",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "495b4924e1c8f35b7973593ca54a51ef58e070fa583cc595cbc4e819ecbbbea7",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-armor-regular.xp",
+      "structural_sha256": "1a741e0584e83c97e943cf1e1cbdc685efb01d2351a303ae45827b1c4e33a148",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "2625194c3f5f222cac78dfc1f010acc79e4e0049b215da3b987c8e3191952e59",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-body-front.xp",
+      "structural_sha256": "a130f604c7232f0c70aedde25b176702fb0fa387a012290f97e19c9b5e935274",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "c40c113da18e4d75c90b685e33d6ef1e95ba24b4dd183bda146d7abb80172316",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-body-rear.xp",
+      "structural_sha256": "f8690f259a1dfff03591d0a9641601b2bae13a24168d6ff55dce56d0b7f73c6e",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5ab353fa1daa3fdbcbe8c176f33d5b695268928da3737f86581ea4551f5c4c7e",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-helmet-regular.xp",
+      "structural_sha256": "d46f2f4767562a2f5d257b189cc598fae066ee23c62c8768874b39e2bf98da2b",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "5e29af7915c9c2fdc33ec8e2ff305a1268140ee6cd192afa8d7fecc27118ed33",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-mount-base-padded.xp",
+      "structural_sha256": "ac1ed7faf4a0d4a61d18df1a2da2ead5db895354f4652cb1fe07e805d10140df",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "8a513b930f5e8840ceb51cb94457371e62df19fb3d2145974dbda0cc9bb55b01",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ],
+        [
+          180,
+          104
+        ]
+      ],
+      "path": "assets/sprites/wolfie-mounted-idle-rider-body.xp",
+      "structural_sha256": "7bc2b0926be8f37c71623ca98938bb842545b574985f17df9c3505d9099c8a97",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "d57a52ad7dd0e90010ffbb08019a63785f2715393da6ace29daf643969f079d0",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-weapon-crossbow.xp",
+      "structural_sha256": "33840ceaeb6217bd5f06c82a829b15b6c2f8c03206e20d30a854882b28b3b16e",
+      "worst_glyph": 223
+    },
+    {
+      "bytes_sha256": "15d28488381446bb5d33223af5dc6beda31b2080b3eeccdf5992ce14d722ac98",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie-weapon-sword.xp",
+      "structural_sha256": "0d986ef1b77bddb9d75ffb4d3bb42458050c437689b3f9babd43376e3572b0dd",
+      "worst_glyph": 249
+    },
+    {
+      "bytes_sha256": "d9707a16369f43254c84a2f91ba3dce434cbc43c5e8d75b057c0622c5ab05859",
+      "cp437_only": true,
+      "layer_count": 3,
+      "layer_geometry": [
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ],
+        [
+          180,
+          96
+        ]
+      ],
+      "path": "assets/sprites/wolfie.xp",
+      "structural_sha256": "5fbf358a6f5d351a6a60f4f744ed3ba7f99133e7580e2d8bd3f43f6990385509",
+      "worst_glyph": 249
+    }
+  ],
+  "skip_count": 0,
+  "skipped": [],
+  "version": 1
+}

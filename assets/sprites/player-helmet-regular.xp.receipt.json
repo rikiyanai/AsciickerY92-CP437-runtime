@@ -1,0 +1,51 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "player_helmet_regular",
+  "output_path": "assets/sprites/player-helmet-regular.xp",
+  "output_sha256": "c73df398adbf891953d1a22671beac539dc59755521dffcd2de56dc478dae3ff",
+  "output_dimensions": {
+    "width": 126,
+    "height": 80
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/player-0100.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/player-0100.xp",
+    "raw_layer_index": 3,
+    "upstream_xp_sha256": "073bd74099536d9b2f0b1bab074a485060e2f135a1f309ec759d9a94f15c7e9c",
+    "upstream_layer_count": 4,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 126,
+        "height": 80
+      },
+      {
+        "index": 1,
+        "width": 126,
+        "height": 80
+      },
+      {
+        "index": 2,
+        "width": 126,
+        "height": 80
+      },
+      {
+        "index": 3,
+        "width": 126,
+        "height": 80
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "reviewer visual inspection 2026-05-19",
+    "method": "Source: upstream/master:sprites/player-0100.xp is a 4-layer 126x80 file (+8 rows taller than the 126x72 baseline) -- the extra height accommodates the helmet extending above the head. L3 has sparse top-edge marks above body position. Reviewer visual call 2026-05-19: sparse top/head-height overlay.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=player_helmet_regular -> upstream_xp_path=sprites/player-0100.xp:raw_layer_index=3. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

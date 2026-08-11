@@ -1,0 +1,24 @@
+[Unit]
+Description=Asciicker authoritative multiplayer server
+After=network.target
+Wants=network-online.target
+OnFailure=asciicker-notify@%n.service
+
+[Service]
+Type=simple
+User=asciicker
+Group=asciicker
+WorkingDirectory=/opt/asciicker/current
+EnvironmentFile=-/etc/default/asciicker-server
+ExecStart=/bin/sh -c 'exec /opt/asciicker/current/.run/server --port "${ASCIICKER_PORT:-8080}" --max-players "${ASCIICKER_MAX_PLAYERS:-16}"'
+Restart=always
+RestartSec=2
+KillSignal=SIGTERM
+TimeoutStopSec=10
+NoNewPrivileges=true
+LimitNOFILE=65535
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

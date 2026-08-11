@@ -1,0 +1,36 @@
+{
+  "_comment": "FL-4131 W3 terrain shade perf baseline. NOT a glyph manifest. The leading underscore key is the convention compile_glyph_manifest.py uses to skip non-manifest JSON files in assets/glyphs/fixtures/.",
+  "cells_per_frame": 7680,
+  "checksum": 46673,
+  "comparison_rule": {
+    "exception_owner": "FL-4131 overlay PerfExceptionRefs",
+    "policy": "extended sidecar path mean ms/frame <= baseline * 1.20",
+    "ratio_threshold": 1.2
+  },
+  "fl": "FL-4131",
+  "frame_count": 30,
+  "gate_candidate": "future:extended_sidecar_perf_within_1_2x_baseline",
+  "ms_per_frame": {
+    "max": 1.6729999333620071,
+    "mean": 1.651865344805022,
+    "median": 1.6520419158041477,
+    "min": 1.636207802221179,
+    "stdev": 0.009902559981693104
+  },
+  "ops_per_sec": 4649289.37709902,
+  "system": {
+    "machine": "arm64",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "python": "3.14.3"
+  },
+  "version": 1,
+  "warmup_frames": 3,
+  "workload": {
+    "frames": 30,
+    "grid_height": 48,
+    "grid_width": 160,
+    "lights": 16,
+    "seed": 16689,
+    "slopes": 4
+  }
+}

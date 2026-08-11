@@ -1,0 +1,17 @@
+# Runtime dependencies — needed for VPS deployment / production / launcher / pipeline.
+# Install: pip install -r requirements.txt
+
+Pillow>=10.0.0
+rich>=13.0.0
+click>=8.0.0
+questionary>=2.0.0
+prompt-toolkit>=3.0.0
+numpy>=1.20.0
+jsonschema>=4.0.0
+textual>=0.40.0
+pydantic>=2.0.0
+
+# Web API (F102/F103)
+flask>=2.0.0
+flask-cors>=3.0.0
+werkzeug>=2.0.0

@@ -1,0 +1,1706 @@
+{
+  "_comment": "FL-4131 Phase 2 additive material fixture. Contains the 32-glyph cross-material additive core plus the Phase 4 preset-admission expansion for GlyphIds 544-647. GlyphIds 512-647 are project-assigned (>255). Coverage values are hand-authored in the 0-15 per-quadrant scale (see docs/research/ascii/verification/fl4131/coverage_contract.md). CP437 fallback bytes for each glyph are documented in the preset proposal and in ASCIIID's kAsciiidExtendedGlyphLabels table; fallback identity is informational for legacy byte mirrors and must not replace GlyphId authoring. This fixture is additive only; nothing here replaces or remaps an existing CP437 row.",
+  "manifest_version": 1,
+  "profile_kind": "extended_glyph_v1",
+  "content_pack_id": "material.additive.v1",
+  "fallback_glyph_id": 539,
+  "admission_set": [
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    568,
+    569,
+    570,
+    571,
+    572,
+    573,
+    574,
+    575,
+    576,
+    577,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588,
+    589,
+    590,
+    591,
+    592,
+    593,
+    594,
+    595,
+    596,
+    597,
+    598,
+    599,
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619,
+    620,
+    621,
+    622,
+    623,
+    624,
+    625,
+    626,
+    627,
+    628,
+    629,
+    630,
+    631,
+    632,
+    633,
+    634,
+    635,
+    636,
+    637,
+    638,
+    639,
+    640,
+    641,
+    642,
+    643,
+    644,
+    645,
+    646,
+    647,
+    648,
+    649,
+    650,
+    651,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657,
+    658,
+    659,
+    660,
+    661,
+    662,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    1876,
+    1877,
+    1878,
+    1879
+  ],
+  "script_packs": [
+    {
+      "pack_id": "arabic-core",
+      "status": "partial",
+      "purpose": "Arabic letters admitted for flame, light, label, and future text-material authoring.",
+      "script": "Arabic",
+      "glyph_ids": [
+        616,
+        617,
+        618,
+        619,
+        620,
+        621,
+        622,
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631,
+        647
+      ],
+      "notes": "No shaping, bidi, combining mark, and contextual-form ownership is declared here."
+    },
+    {
+      "pack_id": "hebrew-core",
+      "status": "planned",
+      "purpose": "Hebrew block reserved for explicit future admission without pretending coverage today.",
+      "script": "Hebrew",
+      "glyph_ids": [],
+      "notes": "No RTL layout ownership is declared here."
+    },
+    {
+      "pack_id": "cyrillic-core",
+      "status": "planned",
+      "purpose": "Cyrillic block reserved for Russian text-material authoring once explicit GlyphIds are admitted.",
+      "script": "Cyrillic",
+      "glyph_ids": [],
+      "notes": "No Cyrillic GlyphIds are admitted in this manifest yet."
+    },
+    {
+      "pack_id": "kana-core",
+      "status": "partial",
+      "purpose": "Katakana glyphs admitted for Japanese-style labels and terrain/material marks.",
+      "script": "Katakana",
+      "glyph_ids": [
+        556,
+        557,
+        558,
+        559,
+        560,
+        561,
+        562,
+        563,
+        564,
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606,
+        607,
+        608,
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615
+      ],
+      "notes": "Hiragana, kanji text coverage, dakuten, handakuten, and small-kana expansion remain undeclared."
+    },
+    {
+      "pack_id": "cjk-terrain-symbols",
+      "status": "partial",
+      "purpose": "Hand-picked CJK ideographs used as terrain/material symbols rather than full text coverage.",
+      "script": "CJK",
+      "glyph_ids": [
+        637,
+        638,
+        639,
+        646
+      ],
+      "notes": "This is a terrain-symbol pack, not a full CJK language pack."
+    },
+    {
+      "pack_id": "math-symbols",
+      "status": "partial",
+      "purpose": "Math and geometric symbols admitted for material, proof, editor, and debug notation.",
+      "script": "Symbol",
+      "glyph_ids": [
+        520,
+        526,
+        527,
+        532,
+        533,
+        543,
+        544,
+        545,
+        546,
+        566,
+        567,
+        640,
+        641,
+        642,
+        643,
+        644,
+        645
+      ],
+      "notes": "The pack is curated to existing admitted GlyphIds."
+    },
+    {
+      "pack_id": "water-current-symbols",
+      "status": "partial",
+      "purpose": "FL-4208 rounded water-current and foam glyphs for FL-4129/FL-4216 compositor-owned water.",
+      "script": "Symbol",
+      "glyph_ids": [
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519
+      ],
+      "notes": "Straight bars, slash/backslash, triangle, hard-angle, and V-shaped substitutes are rejected for this pack."
+    },
+    {
+      "pack_id": "weather-fire-light-symbols",
+      "status": "partial",
+      "purpose": "Weather, flame, and local-light particle glyphs for additive material rendering.",
+      "script": "Symbol",
+      "glyph_ids": [
+        571,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        626,
+        628,
+        647
+      ],
+      "notes": "Arabic waw, seen, and sad are the declared flame/light particle letters."
+    },
+    {
+      "pack_id": "shoreline-wave-symbols",
+      "status": "partial",
+      "purpose": "FL-4216 shoreline-wave 8-direction x 4-stage glyph table. Direction = where shore is relative to the water cell; stage = distance-to-shore band.",
+      "script": "Symbol",
+      "glyph_ids": [
+        517,
+        546,
+        556,
+        647,
+        648,
+        649,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        656,
+        657,
+        658,
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668,
+        669
+      ],
+      "notes": "Glyph picks span Arabic, Syriac, Sinhala, Kannada, Cyrillic, Canadian Syllabics, Japanese kana, Greek archaic, math symbols, and geometric arcs. coverage_quadrants for 648..669 are placeholders to be regenerated from baked atlas pixels."
+    },
+    {
+      "pack_id": "deep-ocean-fallback-symbols",
+      "status": "partial",
+      "purpose": "FL-4216 G4 deep-ocean fallback symbols. Cells beyond Chebyshev radius 6 from any shore rotate among glyph 670 (almost equal to), 659 (Syriac heth), and base ASCII 0x7E (~) using x13 sweep phase so the open ocean animates instead of staying as the hard-fail red '!' marker.",
+      "script": "Symbol",
+      "glyph_ids": [
+        670
+      ],
+      "notes": "coverage_quadrants placeholder. Real bitmap hash recorded in fl4216_shoreline_wave_receipts.json after page12 rebake."
+    },
+    {
+      "pack_id": "water-body-layer1-symbols",
+      "status": "partial",
+      "purpose": "FL-4216 G5 Layer 1 water body glyphs. All water cells up to shore (per the C++ runtime model at engine/game_app.cpp:826) rotate among ~ (ASCII 0x7E), ≈ (glyph_id 670), and ᘖ (glyph_id 671) selected by per-cell hash. Wave break (Layer 3) overlays a separate staged glyph; this pack owns only the non-breaking water body.",
+      "script": "Symbol",
+      "glyph_ids": [
+        671
+      ],
+      "notes": "Bitmap receipts in fl4216_shoreline_wave_receipts.json deep_ocean_fallback_entries section after page12/page16 rebake."
+    }
+  ],
+  "entries": [
+    {
+      "glyph_id": 512,
+      "label": "WATER_CALM_HIRAGANA_HU",
+      "unicode_scalar": 12405,
+      "coverage_quadrants": 17730,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 513,
+      "label": "WATER_RIPPLE_HIRAGANA_WA",
+      "unicode_scalar": 12431,
+      "coverage_quadrants": 17749,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 514,
+      "label": "WATER_HIRAGANA_HU",
+      "unicode_scalar": 12405,
+      "coverage_quadrants": 21777,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 515,
+      "label": "WATER_HIRAGANA_WA",
+      "unicode_scalar": 12431,
+      "coverage_quadrants": 240,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 516,
+      "label": "WATER_LEFT_HIRAGANA_HU",
+      "unicode_scalar": 12405,
+      "coverage_quadrants": 4386,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 517,
+      "label": "WATER_RIGHT_HIRAGANA_TU",
+      "unicode_scalar": 12388,
+      "coverage_quadrants": 17697,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 518,
+      "label": "WATER_CURL_LEFT_HIRAGANA_WA",
+      "unicode_scalar": 12431,
+      "coverage_quadrants": 16641,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 519,
+      "label": "WATER_CURL_RIGHT_HIRAGANA_TU",
+      "unicode_scalar": 12388,
+      "coverage_quadrants": 4356,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 520,
+      "label": "ELECTRIC_ARROW",
+      "unicode_scalar": 8961,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 521,
+      "label": "WAVY_LINE",
+      "unicode_scalar": 8967,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 522,
+      "label": "TOP_LEFT_CORNER",
+      "unicode_scalar": 8988,
+      "coverage_quadrants": 3072,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 523,
+      "label": "TOP_RIGHT_CORNER",
+      "unicode_scalar": 8989,
+      "coverage_quadrants": 49152,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 524,
+      "label": "BOTTOM_LEFT_CORNER",
+      "unicode_scalar": 8990,
+      "coverage_quadrants": 12,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 525,
+      "label": "BOTTOM_RIGHT_CORNER",
+      "unicode_scalar": 8991,
+      "coverage_quadrants": 192,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 526,
+      "label": "UP_TACK",
+      "unicode_scalar": 8869,
+      "coverage_quadrants": 8772,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 527,
+      "label": "DOWN_TACK",
+      "unicode_scalar": 8868,
+      "coverage_quadrants": 17442,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 528,
+      "label": "MIDDLE_DOT",
+      "unicode_scalar": 183,
+      "coverage_quadrants": 17,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 529,
+      "label": "BULLET_OPERATOR",
+      "unicode_scalar": 8729,
+      "coverage_quadrants": 34,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 530,
+      "label": "RING_OPERATOR",
+      "unicode_scalar": 8728,
+      "coverage_quadrants": 34,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 531,
+      "label": "WHITE_BULLET",
+      "unicode_scalar": 9702,
+      "coverage_quadrants": 51,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 532,
+      "label": "THEREFORE",
+      "unicode_scalar": 8756,
+      "coverage_quadrants": 4369,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 533,
+      "label": "BECAUSE",
+      "unicode_scalar": 8757,
+      "coverage_quadrants": 17424,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 534,
+      "label": "DOWN_RIGHT_DIAGONAL_ELLIPSIS",
+      "unicode_scalar": 8945,
+      "coverage_quadrants": 17,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 535,
+      "label": "UP_RIGHT_DIAGONAL_ELLIPSIS",
+      "unicode_scalar": 8944,
+      "coverage_quadrants": 4352,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 536,
+      "label": "WHITE_DIAMOND",
+      "unicode_scalar": 9671,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 537,
+      "label": "BLACK_DIAMOND",
+      "unicode_scalar": 9670,
+      "coverage_quadrants": 52428,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 538,
+      "label": "WHITE_SQUARE",
+      "unicode_scalar": 9633,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 539,
+      "label": "BLACK_SQUARE",
+      "unicode_scalar": 9632,
+      "coverage_quadrants": 65535,
+      "coverage_hint": "full",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 540,
+      "label": "WHITE_CIRCLE",
+      "unicode_scalar": 9675,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 541,
+      "label": "BULLSEYE",
+      "unicode_scalar": 9678,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 542,
+      "label": "TRIPLE_TILDE",
+      "unicode_scalar": 8779,
+      "coverage_quadrants": 39321,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 543,
+      "label": "ALMOST_EQUAL_TO",
+      "unicode_scalar": 8776,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 544,
+      "label": "SINE_WAVE",
+      "unicode_scalar": 8767,
+      "coverage_quadrants": 39321,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 545,
+      "label": "REVERSED_TILDE",
+      "unicode_scalar": 8765,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 546,
+      "label": "ARC",
+      "unicode_scalar": 8978,
+      "coverage_quadrants": 4080,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 547,
+      "label": "DOT_OPERATOR",
+      "unicode_scalar": 8901,
+      "coverage_quadrants": 17,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 548,
+      "label": "RING_ABOVE",
+      "unicode_scalar": 730,
+      "coverage_quadrants": 4352,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 549,
+      "label": "LEFT_SINGLE_QUOTATION_MARK",
+      "unicode_scalar": 8216,
+      "coverage_quadrants": 4352,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 550,
+      "label": "RIGHT_SINGLE_QUOTATION_MARK",
+      "unicode_scalar": 8217,
+      "coverage_quadrants": 17,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 551,
+      "label": "DITTO_MARK",
+      "unicode_scalar": 12291,
+      "coverage_quadrants": 4369,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 552,
+      "label": "ACUTE_ACCENT",
+      "unicode_scalar": 180,
+      "coverage_quadrants": 256,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 553,
+      "label": "GRAVE_ACCENT",
+      "unicode_scalar": 96,
+      "coverage_quadrants": 4096,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 554,
+      "label": "LOW_STROKE_LEFT",
+      "unicode_scalar": 8218,
+      "coverage_quadrants": 1,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 555,
+      "label": "LOW_STROKE_RIGHT",
+      "unicode_scalar": 8219,
+      "coverage_quadrants": 16,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 556,
+      "label": "KATAKANA_NO",
+      "unicode_scalar": 12494,
+      "coverage_quadrants": 34833,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 557,
+      "label": "KATAKANA_HA",
+      "unicode_scalar": 12495,
+      "coverage_quadrants": 34952,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 558,
+      "label": "KATAKANA_HE",
+      "unicode_scalar": 12504,
+      "coverage_quadrants": 26112,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 559,
+      "label": "KATAKANA_TO",
+      "unicode_scalar": 12488,
+      "coverage_quadrants": 33825,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 560,
+      "label": "KATAKANA_I",
+      "unicode_scalar": 12452,
+      "coverage_quadrants": 8738,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 561,
+      "label": "KATAKANA_RI",
+      "unicode_scalar": 12522,
+      "coverage_quadrants": 8738,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 562,
+      "label": "KATAKANA_SO",
+      "unicode_scalar": 12477,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 563,
+      "label": "KATAKANA_TSU",
+      "unicode_scalar": 12484,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 564,
+      "label": "WORD_SEPARATOR_MIDDLE_DOT",
+      "unicode_scalar": 12539,
+      "coverage_quadrants": 17,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 565,
+      "label": "DOT_ABOVE",
+      "unicode_scalar": 729,
+      "coverage_quadrants": 4352,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 566,
+      "label": "RIGHT_TACK",
+      "unicode_scalar": 8866,
+      "coverage_quadrants": 8737,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 567,
+      "label": "LEFT_TACK",
+      "unicode_scalar": 8867,
+      "coverage_quadrants": 4642,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 568,
+      "label": "SMILE_ARC",
+      "unicode_scalar": 8995,
+      "coverage_quadrants": 255,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 569,
+      "label": "FROWN_ARC",
+      "unicode_scalar": 8994,
+      "coverage_quadrants": 65280,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 570,
+      "label": "BREVE",
+      "unicode_scalar": 728,
+      "coverage_quadrants": 13056,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 571,
+      "label": "SNOW_STAR_BRIGHT",
+      "unicode_scalar": 10052,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 572,
+      "label": "SNOW_STAR_LIGHT",
+      "unicode_scalar": 10053,
+      "coverage_quadrants": 13107,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 573,
+      "label": "SIX_SPOKE_STAR",
+      "unicode_scalar": 10033,
+      "coverage_quadrants": 30583,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 574,
+      "label": "EIGHT_SPOKE_STAR",
+      "unicode_scalar": 10036,
+      "coverage_quadrants": 30583,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 575,
+      "label": "ASTERISK_STAR",
+      "unicode_scalar": 10035,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 576,
+      "label": "OPEN_CENTER_STAR",
+      "unicode_scalar": 10034,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 577,
+      "label": "ASTERISK_OPERATOR",
+      "unicode_scalar": 8727,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 578,
+      "label": "STAR_OPERATOR",
+      "unicode_scalar": 8902,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 579,
+      "label": "WHITE_ROUNDED_SQUARE",
+      "unicode_scalar": 9634,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 580,
+      "label": "SQUARE_TARGET",
+      "unicode_scalar": 9635,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 581,
+      "label": "DIAMOND_TARGET",
+      "unicode_scalar": 9672,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 582,
+      "label": "DIAMOND_FILL",
+      "unicode_scalar": 9670,
+      "coverage_quadrants": 52428,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 583,
+      "label": "DOTTED_CIRCLE",
+      "unicode_scalar": 9676,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 584,
+      "label": "CIRCLE_FILL",
+      "unicode_scalar": 9679,
+      "coverage_quadrants": 52428,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 585,
+      "label": "LEFT_HALF_CIRCLE",
+      "unicode_scalar": 9680,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 586,
+      "label": "RIGHT_HALF_CIRCLE",
+      "unicode_scalar": 9681,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 587,
+      "label": "LOWER_HALF_CIRCLE",
+      "unicode_scalar": 9682,
+      "coverage_quadrants": 255,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 588,
+      "label": "UPPER_HALF_CIRCLE",
+      "unicode_scalar": 9683,
+      "coverage_quadrants": 65280,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 589,
+      "label": "SMALL_UP_TRIANGLE",
+      "unicode_scalar": 9652,
+      "coverage_quadrants": 13056,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 590,
+      "label": "SMALL_DOWN_TRIANGLE",
+      "unicode_scalar": 9662,
+      "coverage_quadrants": 51,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 591,
+      "label": "SMALL_LEFT_TRIANGLE",
+      "unicode_scalar": 9666,
+      "coverage_quadrants": 4369,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 592,
+      "label": "SMALL_RIGHT_TRIANGLE",
+      "unicode_scalar": 9656,
+      "coverage_quadrants": 8738,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 593,
+      "label": "WHITE_LEFT_TRIANGLE",
+      "unicode_scalar": 9665,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 594,
+      "label": "WHITE_RIGHT_TRIANGLE",
+      "unicode_scalar": 9655,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 595,
+      "label": "BLACK_LEFT_TRIANGLE",
+      "unicode_scalar": 9664,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 596,
+      "label": "BLACK_RIGHT_TRIANGLE",
+      "unicode_scalar": 9654,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 597,
+      "label": "WHITE_UP_TRIANGLE",
+      "unicode_scalar": 9651,
+      "coverage_quadrants": 13056,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 598,
+      "label": "WHITE_DOWN_TRIANGLE",
+      "unicode_scalar": 9661,
+      "coverage_quadrants": 51,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 599,
+      "label": "LOZENGE",
+      "unicode_scalar": 9674,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 600,
+      "label": "KATAKANA_A",
+      "unicode_scalar": 12450,
+      "coverage_quadrants": 25122,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 601,
+      "label": "KATAKANA_U",
+      "unicode_scalar": 12454,
+      "coverage_quadrants": 26180,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 602,
+      "label": "KATAKANA_E",
+      "unicode_scalar": 12456,
+      "coverage_quadrants": 58436,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 603,
+      "label": "KATAKANA_O",
+      "unicode_scalar": 12458,
+      "coverage_quadrants": 26210,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 604,
+      "label": "KATAKANA_KA",
+      "unicode_scalar": 12459,
+      "coverage_quadrants": 42598,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 605,
+      "label": "KATAKANA_KI",
+      "unicode_scalar": 12461,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 606,
+      "label": "KATAKANA_KU",
+      "unicode_scalar": 12463,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 607,
+      "label": "KATAKANA_KE",
+      "unicode_scalar": 12465,
+      "coverage_quadrants": 58982,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 608,
+      "label": "KATAKANA_KO",
+      "unicode_scalar": 12467,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 609,
+      "label": "KATAKANA_SA",
+      "unicode_scalar": 12469,
+      "coverage_quadrants": 26212,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 610,
+      "label": "KATAKANA_SHI",
+      "unicode_scalar": 12471,
+      "coverage_quadrants": 8738,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 611,
+      "label": "KATAKANA_SU",
+      "unicode_scalar": 12473,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 612,
+      "label": "KATAKANA_SE",
+      "unicode_scalar": 12475,
+      "coverage_quadrants": 58982,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 613,
+      "label": "KATAKANA_TA",
+      "unicode_scalar": 12479,
+      "coverage_quadrants": 58982,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 614,
+      "label": "KATAKANA_CHI",
+      "unicode_scalar": 12481,
+      "coverage_quadrants": 57890,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 615,
+      "label": "KATAKANA_TE",
+      "unicode_scalar": 12486,
+      "coverage_quadrants": 57344,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 616,
+      "label": "ARABIC_ALEF",
+      "unicode_scalar": 1575,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "vertical_stroke",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 617,
+      "label": "ARABIC_BEH",
+      "unicode_scalar": 1576,
+      "coverage_quadrants": 61680,
+      "coverage_hint": "curved_baseline",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 618,
+      "label": "ARABIC_TEH",
+      "unicode_scalar": 1578,
+      "coverage_quadrants": 61680,
+      "coverage_hint": "curved_baseline",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 619,
+      "label": "ARABIC_THEH",
+      "unicode_scalar": 1579,
+      "coverage_quadrants": 61680,
+      "coverage_hint": "curved_baseline",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 620,
+      "label": "ARABIC_JEEM",
+      "unicode_scalar": 1580,
+      "coverage_quadrants": 57072,
+      "coverage_hint": "bowl_descender",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 621,
+      "label": "ARABIC_HAH",
+      "unicode_scalar": 1581,
+      "coverage_quadrants": 57072,
+      "coverage_hint": "bowl_descender",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 622,
+      "label": "ARABIC_KHAH",
+      "unicode_scalar": 1582,
+      "coverage_quadrants": 57072,
+      "coverage_hint": "bowl_descender",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 623,
+      "label": "ARABIC_DAL",
+      "unicode_scalar": 1583,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "curved_edge",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 624,
+      "label": "ARABIC_REH",
+      "unicode_scalar": 1585,
+      "coverage_quadrants": 13107,
+      "coverage_hint": "curved_edge",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 625,
+      "label": "ARABIC_ZAIN",
+      "unicode_scalar": 1586,
+      "coverage_quadrants": 13107,
+      "coverage_hint": "curved_edge",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 626,
+      "label": "ARABIC_SEEN",
+      "unicode_scalar": 1587,
+      "coverage_quadrants": 60928,
+      "coverage_hint": "wave_baseline",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 627,
+      "label": "ARABIC_SHEEN",
+      "unicode_scalar": 1588,
+      "coverage_quadrants": 60928,
+      "coverage_hint": "wave_baseline",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 628,
+      "label": "ARABIC_SAD",
+      "unicode_scalar": 1589,
+      "coverage_quadrants": 61200,
+      "coverage_hint": "wide_bowl",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 629,
+      "label": "ARABIC_DAD",
+      "unicode_scalar": 1590,
+      "coverage_quadrants": 61200,
+      "coverage_hint": "wide_bowl",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 630,
+      "label": "ARABIC_TAH",
+      "unicode_scalar": 1591,
+      "coverage_quadrants": 61166,
+      "coverage_hint": "upright_bowl",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 631,
+      "label": "ARABIC_ZAH",
+      "unicode_scalar": 1592,
+      "coverage_quadrants": 61166,
+      "coverage_hint": "upright_bowl",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 632,
+      "label": "CONTOUR_INTEGRAL",
+      "unicode_scalar": 8750,
+      "coverage_quadrants": 17730,
+      "coverage_hint": "curve_contour",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 633,
+      "label": "BOX_ARC_DOWN_RIGHT",
+      "unicode_scalar": 9581,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "corner_curve",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 634,
+      "label": "BOX_ARC_DOWN_LEFT",
+      "unicode_scalar": 9582,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "corner_curve",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 635,
+      "label": "BOX_ARC_UP_LEFT",
+      "unicode_scalar": 9583,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "corner_curve",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 636,
+      "label": "BOX_ARC_UP_RIGHT",
+      "unicode_scalar": 9584,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "corner_curve",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 637,
+      "label": "CJK_RIVER",
+      "unicode_scalar": 24029,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "vertical_rock_grain",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 638,
+      "label": "CJK_MOUNTAIN",
+      "unicode_scalar": 23665,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "angular_rock_peak",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 639,
+      "label": "CJK_STONE",
+      "unicode_scalar": 30707,
+      "coverage_quadrants": 26214,
+      "coverage_hint": "blocky_rock_face",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 640,
+      "label": "IDENTICAL_TO",
+      "unicode_scalar": 8801,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "horizontal_strata",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 641,
+      "label": "PLUS_MINUS",
+      "unicode_scalar": 177,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "cross_fracture",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 642,
+      "label": "MULTIPLICATION_SIGN",
+      "unicode_scalar": 215,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "cross_fracture",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 643,
+      "label": "DIVISION_SIGN",
+      "unicode_scalar": 247,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "separated_fracture",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 644,
+      "label": "BOX_DOUBLE_HORIZONTAL",
+      "unicode_scalar": 9552,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "heavy_horizontal_strata",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 645,
+      "label": "BOX_LIGHT_HORIZONTAL",
+      "unicode_scalar": 9472,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "light_horizontal_strata",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 646,
+      "label": "CJK_FIELD",
+      "unicode_scalar": 30000,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "blocky_grid_face",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 647,
+      "label": "ARABIC_WAW",
+      "unicode_scalar": 1608,
+      "coverage_quadrants": 13107,
+      "coverage_hint": "curved_edge",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 648,
+      "label": "WATER_WAVE_E_S2_RIGHT_PAREN",
+      "unicode_scalar": 41,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 649,
+      "label": "WATER_WAVE_NE_S2_GREEK_SAMPI",
+      "unicode_scalar": 993,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 650,
+      "label": "WATER_WAVE_W_S4_CYRILLIC_UKRAINIAN_YE",
+      "unicode_scalar": 1028,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 651,
+      "label": "WATER_WAVE_SW_S3_ARABIC_COMMA",
+      "unicode_scalar": 1548,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 652,
+      "label": "WATER_WAVE_E_S3_ARABIC_SEMICOLON",
+      "unicode_scalar": 1563,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 653,
+      "label": "WATER_WAVE_SW_S2_ARABIC_AIN",
+      "unicode_scalar": 1593,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 654,
+      "label": "WATER_WAVE_SE_S1_ARABIC_FEH",
+      "unicode_scalar": 1601,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 655,
+      "label": "WATER_WAVE_NW_S2_ARABIC_MEEM",
+      "unicode_scalar": 1605,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 656,
+      "label": "WATER_WAVE_S_S2_ARABIC_NUN",
+      "unicode_scalar": 1606,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 657,
+      "label": "WATER_WAVE_E_S4_ARABIC_FULL_STOP",
+      "unicode_scalar": 1748,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 658,
+      "label": "WATER_WAVE_NW_S34_SYRIAC_WAW",
+      "unicode_scalar": 1816,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 659,
+      "label": "WATER_WAVE_SE_S4_SYRIAC_HETH",
+      "unicode_scalar": 1818,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 660,
+      "label": "WATER_WAVE_S_S34_SYRIAC_SHIN",
+      "unicode_scalar": 1835,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 661,
+      "label": "WATER_WAVE_N_S34_KANNADA_ONE",
+      "unicode_scalar": 3303,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 662,
+      "label": "WATER_WAVE_NE_S34_SINHALA_AYANNA",
+      "unicode_scalar": 3486,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 663,
+      "label": "WATER_WAVE_W_S2_CANADIAN_SYLLABICS_SE",
+      "unicode_scalar": 5620,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 664,
+      "label": "WATER_WAVE_N_S1_INTERSECT",
+      "unicode_scalar": 8745,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 665,
+      "label": "WATER_WAVE_S_S1_UNION",
+      "unicode_scalar": 8746,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 666,
+      "label": "WATER_WAVE_W_S1_SUBSET",
+      "unicode_scalar": 8834,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 667,
+      "label": "WATER_WAVE_NW_S1_ARC_QUADRANT_UPPER_LEFT",
+      "unicode_scalar": 9692,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 668,
+      "label": "WATER_WAVE_NE_S1_ARC_QUADRANT_UPPER_RIGHT",
+      "unicode_scalar": 9693,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 669,
+      "label": "WATER_WAVE_SW_S1_ARC_QUADRANT_LOWER_LEFT",
+      "unicode_scalar": 9695,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 670,
+      "label": "WATER_DEEP_OCEAN_SWIRLY_EQUALS_ALMOST_EQUAL_TO",
+      "unicode_scalar": 8776,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 671,
+      "label": "WATER_BODY_CARRIER_JO",
+      "unicode_scalar": 5654,
+      "coverage_quadrants": 17476,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 1876,
+      "label": "ABSENCE_TILE_WHITE_SQUARE",
+      "unicode_scalar": 9633,
+      "coverage_quadrants": 0,
+      "coverage_hint": "absence",
+      "cell_width_em": 1.0,
+      "semantic_role": "absence_tile"
+    },
+    {
+      "glyph_id": 1877,
+      "label": "ABSENCE_MISSING_FACT_SQUARE_H_FILL",
+      "unicode_scalar": 9636,
+      "coverage_quadrants": 0,
+      "coverage_hint": "absence",
+      "cell_width_em": 1.0,
+      "semantic_role": "absence_missing_fact"
+    },
+    {
+      "glyph_id": 1878,
+      "label": "ABSENCE_UNADMITTED_BALLOT_X",
+      "unicode_scalar": 9746,
+      "coverage_quadrants": 0,
+      "coverage_hint": "absence",
+      "cell_width_em": 1.0,
+      "semantic_role": "absence_unadmitted_glyph"
+    },
+    {
+      "glyph_id": 1879,
+      "label": "ABSENCE_POOL_LOAD_FAILURE_WARNING",
+      "unicode_scalar": 9888,
+      "coverage_quadrants": 0,
+      "coverage_hint": "absence",
+      "cell_width_em": 1.0,
+      "semantic_role": "absence_pool_load_failure"
+    }
+  ],
+  "font_id": "unifont-17.0.04",
+  "font_sha256": "d1f664a9753b9c6b7ff357128749e32b5d3eee90c7c03618363fabd43a39b5b7",
+  "style_id": "regular",
+  "supported_cell_sizes": [
+    16
+  ]
+}

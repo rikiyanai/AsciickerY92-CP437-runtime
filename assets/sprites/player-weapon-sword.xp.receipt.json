@@ -1,0 +1,46 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "player_weapon_sword",
+  "output_path": "assets/sprites/player-weapon-sword.xp",
+  "output_sha256": "08313326106aa380f980b22784ab911f371964d46385605f29df3eaa351246a9",
+  "output_dimensions": {
+    "width": 162,
+    "height": 80
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/player-0001.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/player-0001.xp",
+    "raw_layer_index": 2,
+    "upstream_xp_sha256": "911fcad889478799ed7e6e1c7a59b6c056795ce3877f4567eda84969c51a1d96",
+    "upstream_layer_count": 3,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 162,
+        "height": 80
+      },
+      {
+        "index": 1,
+        "width": 162,
+        "height": 80
+      },
+      {
+        "index": 2,
+        "width": 162,
+        "height": 80
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "reviewer visual inspection 2026-05-19",
+    "method": "Source: upstream/master:sprites/player-0001.xp is a 3-layer 162x80 file (wider + taller than baseline). Sword is MERGED into L2 with the body -- upstream does NOT author a single-role sword overlay for the on-foot player family. The sword-held idle/walk player IS the upstream representation (NOT the attack family). Reviewer visual call 2026-05-19: composite source (full body + sword in L2).",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=player_weapon_sword -> upstream_xp_path=sprites/player-0001.xp:raw_layer_index=2. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

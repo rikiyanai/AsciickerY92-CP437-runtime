@@ -1,0 +1,51 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "plydie_weapon_sword",
+  "output_path": "assets/sprites/plydie-weapon-sword.xp",
+  "output_sha256": "bd51588ccdfa593c4f13623b0353ad9f274b4d2b22e2b7e998772740b29c1f94",
+  "output_dimensions": {
+    "width": 110,
+    "height": 88
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/plydie-0001.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/plydie-0001.xp",
+    "raw_layer_index": 3,
+    "upstream_xp_sha256": "6ed765f6ffd56ef8cfd7f6de5f13ff91a1438ae9cd7a9ac22775485ae350890c",
+    "upstream_layer_count": 4,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 110,
+        "height": 88
+      },
+      {
+        "index": 1,
+        "width": 110,
+        "height": 88
+      },
+      {
+        "index": 2,
+        "width": 110,
+        "height": 88
+      },
+      {
+        "index": 3,
+        "width": 110,
+        "height": 88
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "reviewer visual inspection 2026-05-19",
+    "method": "Source: upstream/master:sprites/plydie-0001.xp is a 4-layer 110x88 file. Per the plydie family pattern, L3 SHOULD be a clean overlay, but reviewer flagged this row as composite-ish (sword fragments AND body-looking pixels visible in L3). Treated as composite: sword-equipped death overlay, not strictly single-role-pure. Reviewer visual call 2026-05-19: not as clean as plydie_weapon_crossbow.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=plydie_weapon_sword -> upstream_xp_path=sprites/plydie-0001.xp:raw_layer_index=3. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

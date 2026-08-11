@@ -1,0 +1,56 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "attack_helmet_regular",
+  "output_path": "assets/sprites/attack-helmet-regular.xp",
+  "output_sha256": "9dccece996f2e1e8ef71eeb6d6ca4edd710b4a1c099de03c2d5e96c74d97f15d",
+  "output_dimensions": {
+    "width": 144,
+    "height": 80
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/attack-0101.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/attack-0101.xp",
+    "raw_layer_index": 3,
+    "upstream_xp_sha256": "5861d7be3c5675d4ede8f20dd8754d87f27572e7977219a27a5bfb56f6de1db4",
+    "upstream_layer_count": 5,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 144,
+        "height": 80
+      },
+      {
+        "index": 1,
+        "width": 144,
+        "height": 80
+      },
+      {
+        "index": 2,
+        "width": 144,
+        "height": 80
+      },
+      {
+        "index": 3,
+        "width": 144,
+        "height": 80
+      },
+      {
+        "index": 4,
+        "width": 144,
+        "height": 80
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "user interactive review 2026-05-19",
+    "method": "User visual call 2026-05-19: YES (helmet bit). attack-0101 has 5 layers; L4 is swoosh (cyan-fg last-layer per sprite.cpp); L3 = helmet overlay, authored to merge over attack-swinging body context per upstream merge contract.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=attack_helmet_regular -> upstream_xp_path=sprites/attack-0101.xp:raw_layer_index=3. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

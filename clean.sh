@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+make -f makefile_asciiid clean
+make -f makefile_server clean
+make -f makefile_game clean
+make -f makefile_game_term clean

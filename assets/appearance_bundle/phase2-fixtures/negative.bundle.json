@@ -1,0 +1,232 @@
+{
+  "attack_attachment_metadata": [],
+  "bundle_contract_version": 2,
+  "bundle_slug": "phase2-negative-fixtures",
+  "death_playback_metadata": [],
+  "id_namespaces": {
+    "appearance_profile_id": {
+      "entries": [
+        {
+          "label": "Reject Profile",
+          "skin_definition_slug": "reject_skin",
+          "slug": "reject_profile",
+          "starter_loadout": []
+        }
+      ],
+      "range": [
+        200,
+        299
+      ],
+      "reserved_ranges": [],
+      "tombstones": []
+    },
+    "item_definition_id": {
+      "entries": [
+        {
+          "inventory_visuals": {},
+          "label": "Bad Hat",
+          "gameplay_kind": "wearable",
+          "slot_kind_slug": "head",
+          "slug": "bad_hat",
+          "world_visuals": {}
+        }
+      ],
+      "range": [
+        400,
+        499
+      ],
+      "reserved_ranges": [],
+      "tombstones": []
+    },
+    "layer_definition_id": {
+      "entries": [
+        {
+          "contract": "idle_walk_character",
+          "item_definition_slug": "bad_hat",
+          "label": "Bad Hat Angle Count",
+          "path": "BAD_HAT_ANGLECOUNT_4TEST.xp",
+          "presentation_kind_slug": "idle_walk",
+          "slot_kind_slug": "head",
+          "slug": "bad_hat_anglecount",
+          "variant_signature": {
+            "height_class": "base",
+            "silhouette_class": "full",
+            "width_class": "base"
+          },
+          "visual_style_slug": "default"
+        },
+        {
+          "contract": "idle_walk_character",
+          "item_definition_slug": "bad_hat",
+          "label": "Bad Hat Anims",
+          "path": "BAD_HAT_ANIMS_4TEST.xp",
+          "presentation_kind_slug": "idle_walk",
+          "slot_kind_slug": "head",
+          "slug": "bad_hat_anims",
+          "variant_signature": {
+            "height_class": "tall",
+            "silhouette_class": "full",
+            "width_class": "base"
+          },
+          "visual_style_slug": "default"
+        },
+        {
+          "contract": "idle_walk_character",
+          "item_definition_slug": "bad_hat",
+          "label": "Bad Hat Anchor",
+          "path": "BAD_HAT_ANCHOR_4TEST.xp",
+          "presentation_kind_slug": "idle_walk",
+          "slot_kind_slug": "head",
+          "slug": "bad_hat_anchor",
+          "variant_signature": {
+            "height_class": "base",
+            "silhouette_class": "full",
+            "width_class": "wide"
+          },
+          "visual_style_slug": "default"
+        }
+      ],
+      "range": [
+        700,
+        899
+      ],
+      "reserved_ranges": [],
+      "tombstones": []
+    },
+    "mount_definition_id": {
+      "entries": [],
+      "range": [
+        900,
+        999
+      ],
+      "reserved_ranges": [
+        {
+          "end": 949,
+          "reason": "phase10 mount follow-up reserve",
+          "start": 900
+        }
+      ],
+      "tombstones": []
+    },
+    "mounted_wrapper_definition_id": {
+      "entries": [],
+      "range": [
+        1000,
+        1099
+      ],
+      "reserved_ranges": [
+        {
+          "end": 1049,
+          "reason": "phase12 mounted wrapper reserve",
+          "start": 1000
+        }
+      ],
+      "tombstones": []
+    },
+    "presentation_kind_id": {
+      "entries": [
+        {
+          "label": "Idle Walk",
+          "slug": "idle_walk"
+        }
+      ],
+      "range": [
+        600,
+        699
+      ],
+      "reserved_ranges": [],
+      "tombstones": []
+    },
+    "skin_definition_id": {
+      "entries": [
+        {
+          "label": "Reject Skin",
+          "layer_definition_slugs": [],
+          "slug": "reject_skin"
+        }
+      ],
+      "range": [
+        100,
+        199
+      ],
+      "reserved_ranges": [],
+      "tombstones": []
+    },
+    "slot_kind_id": {
+      "entries": [
+        {
+          "label": "Head",
+          "slug": "head"
+        }
+      ],
+      "range": [
+        300,
+        399
+      ],
+      "reserved_ranges": [],
+      "tombstones": []
+    },
+    "visual_style_id": {
+      "entries": [
+        {
+          "label": "Default",
+          "slug": "default"
+        }
+      ],
+      "range": [
+        500,
+        599
+      ],
+      "reserved_ranges": [],
+      "tombstones": []
+    }
+  },
+  "mounted_wrapper_definitions": [],
+  "presentation_selector_tables": [
+    {
+      "presentation_kind_slug": "idle_walk",
+      "selector_input_contract": {
+        "combat_states": [
+          "neutral"
+        ],
+        "life_states": [
+          "alive"
+        ],
+        "locomotion_states": [
+          "idle"
+        ],
+        "mount_states": [
+          "unmounted"
+        ],
+        "presentation_kinds": [
+          "idle"
+        ],
+        "variant_dimensions": [
+          "height_class",
+          "width_class",
+          "silhouette_class"
+        ],
+        "variant_fallback_chain": [
+          {
+            "height_class": "base",
+            "silhouette_class": "full",
+            "width_class": "base"
+          },
+          {
+            "height_class": "tall",
+            "silhouette_class": "full",
+            "width_class": "base"
+          },
+          {
+            "height_class": "base",
+            "silhouette_class": "full",
+            "width_class": "wide"
+          }
+        ]
+      },
+      "selector_slug": "on_foot_idle",
+      "subject_kind": "actor"
+    }
+  ],
+  "server_seat_subjects": []
+}

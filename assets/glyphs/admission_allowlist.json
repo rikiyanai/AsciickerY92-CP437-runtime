@@ -1,0 +1,63 @@
+{
+  "_comment": "FL-4131 W6 admission allowlist contract draft. NOT a runtime enforcement surface yet. The corresponding schema lives at assets/glyphs/schema/admission_allowlist.schema.json. The Python draft validator at scripts/fl4131_admission_check.py exercises the schema only and does NOT scan the live sprite corpus. Phase 2+ runtime (FL-4049 owner lane) will consume this file via a deletion-first compile-identity hash.",
+  "version": 1,
+  "fl": "FL-4131",
+  "stage": "W6_DRAFT_NO_RUNTIME_ENFORCEMENT",
+  "allow": [
+    {
+      "kind": "fixture",
+      "path": "assets/glyphs/fixtures/extended_glyph_terrain_v1.json",
+      "reason": "Phase 0 reference fixture for the extended-glyph contract; no runtime XP attaches to this entry."
+    },
+    {
+      "kind": "fixture",
+      "path": "assets/glyphs/fixtures/fl4131_phase2_valid.xp",
+      "reason": "Compile-admission regression fixture: XP source has a valid sidecar and verified terrain.extended.v1 manifest hash."
+    },
+    {
+      "kind": "directory",
+      "path": "assets/sprites/signs/",
+      "reason": "Static, non-combat sign sprites are the initial admission target for extended-glyph content."
+    }
+  ],
+  "deny": [
+    {
+      "kind": "directory_prefix",
+      "path_prefix": "assets/sprites/player",
+      "reason": "Combat-critical player rig. Extended glyphs must not be admitted here without explicit Phase 3+ approval."
+    },
+    {
+      "kind": "directory_prefix",
+      "path_prefix": "assets/sprites/wolfie",
+      "reason": "Combat-critical wolfie rig."
+    },
+    {
+      "kind": "directory_prefix",
+      "path_prefix": "assets/sprites/bigbee",
+      "reason": "Combat-critical bee rig."
+    },
+    {
+      "kind": "directory_prefix",
+      "path_prefix": "assets/sprites/wolack",
+      "reason": "Combat-critical wolack rig."
+    },
+    {
+      "kind": "directory_prefix",
+      "path_prefix": "assets/sprites/attack",
+      "reason": "Combat attack overlays."
+    },
+    {
+      "kind": "directory_prefix",
+      "path_prefix": "assets/sprites/plydie",
+      "reason": "Combat-critical player-death rig."
+    }
+  ],
+  "resolution_policy": {
+    "order": [
+      "any path matching a deny entry is REJECTED regardless of allow entries",
+      "any path matching an allow entry is ADMITTED",
+      "any other path is REJECTED by default (fail-closed)"
+    ],
+    "phase_2_runtime_note": "Until Phase 2+ runtime enforcement lands, no source XP is actually admitted. The presence of this allowlist is a contract pin; runtime continues to require all XPs to be CP437-only via the VAL-03 legacy path and the FL-4049 Stage B compile-side scan."
+  }
+}

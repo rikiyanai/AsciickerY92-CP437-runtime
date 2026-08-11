@@ -1,0 +1,68 @@
+{
+  "_about": "FL-4208 Gate T2 FROZEN ORACLES. These are the ground-truth graph topologies the FUTURE skeleton-graph constructor (junction-cluster collapse, degree-2 suppression, edge tracing, beta_0, cycle rank, mask-vs-graph equality) must reproduce. The constructor is NOT implemented yet (round-6 step 3: freeze fixtures first). `beta_0` and `beta_1_raw` are grounded against the committed mask-side primitives (glyph_skeleton.components / _enclosed_holes) by test_glyph_topology_gate_t2_fixtures.py. `degree_multiset`, `nodes`, and `edges` are HUMAN-REVIEWED expectations that require the constructor to verify; no code asserts them yet.",
+  "_connectivity": "(8,4) contract: foreground 8-connected (beta_0 via components()), background 4-connected (beta_1_raw via _enclosed_holes()). Masks: '#'=ink(1), '.'=background(0).",
+  "_frozen_against_head": "see git log for this file (committed with the Gate-T2-fixtures-only change)",
+  "synthetic_graph_oracles": [
+    {
+      "name": "segment",
+      "mask": [".......", ".......", ".#####.", ".......", "......."],
+      "beta_0": 1, "beta_1_raw": 0,
+      "nodes": 2, "edges": 1, "degree_multiset": {"1": 2},
+      "note": "Two endpoints, one edge. No degree-2 interior after suppression."
+    },
+    {
+      "name": "two_segments",
+      "mask": [".......", ".##.##.", ".......", ".......", "......."],
+      "beta_0": 2, "beta_1_raw": 0,
+      "nodes": 4, "edges": 2, "degree_multiset": {"1": 4},
+      "note": "Two disjoint segments -> beta_0=2; grounds the component count."
+    },
+    {
+      "name": "ell_corner",
+      "mask": [".......", ".#.....", ".#.....", ".#####.", ".......", ".......", "......."],
+      "beta_0": 1, "beta_1_raw": 0,
+      "nodes": 2, "edges": 1, "degree_multiset": {"1": 2},
+      "note": "L-bend: the corner is degree-2 and is SUPPRESSED -> two endpoints, one edge."
+    },
+    {
+      "name": "tee_junction",
+      "mask": [".......", ".#####.", "...#...", "...#...", "...#...", ".......", "......."],
+      "beta_0": 1, "beta_1_raw": 0,
+      "nodes": 4, "edges": 3, "degree_multiset": {"1": 3, "3": 1},
+      "note": "One degree-3 junction, three endpoints. beta_1 = E-V+C = 3-4+1 = 0."
+    },
+    {
+      "name": "ex_cross",
+      "mask": [".......", ".#...#.", "..#.#..", "...#...", "..#.#..", ".#...#.", "......."],
+      "beta_0": 1, "beta_1_raw": 0,
+      "nodes": 5, "edges": 4, "degree_multiset": {"1": 4, "4": 1},
+      "note": "One degree-4 junction (8-connected center), four endpoints. beta_1 = 4-5+1 = 0."
+    },
+    {
+      "name": "ring",
+      "mask": [".......", ".#####.", ".#...#.", ".#...#.", ".#####.", ".......", "......."],
+      "beta_0": 1, "beta_1_raw": 1,
+      "nodes": 1, "edges": 1, "degree_multiset": {"2": 1},
+      "note": "Pure loop: degree-2 suppression keeps ONE basepoint node carrying a self-loop (cannot suppress to zero nodes). E-V+C = 1-1+1 = 1 = cycle_rank (beta_1)."
+    },
+    {
+      "name": "theta",
+      "mask": [".#####.", ".#...#.", ".#...#.", ".#####.", ".#...#.", ".#...#.", ".#####."],
+      "beta_0": 1, "beta_1_raw": 2,
+      "nodes": 2, "edges": 3, "degree_multiset": {"3": 2},
+      "note": "Two degree-3 nodes joined by three edges (top arc, mid bar, bottom arc). beta_1 = E-V+C = 3-2+1 = 2."
+    }
+  ],
+  "reviewed_glyph_traces": {
+    "_render": "pinned unifont-17.0.04.otf (sha256 d1f664a9753b9c6b7ff357128749e32b5d3eee90c7c03618363fabd43a39b5b7), font_px=192, fit-centered 96x96, ink threshold 96. beta_0/beta_1_raw grounded on the FILLED raster.",
+    "_degree_multiset": "DEFERRED — exact glyph degree multisets require the Gate-T2 constructor over the thinned skeleton; not hand-frozen here to avoid guessing. Only the reliably-reviewable mask invariants are frozen.",
+    "traces": [
+      {"codepoint": "U+0049", "char": "I", "beta_0": 1, "beta_1_raw": 0, "structure": "single open stroke, no loop"},
+      {"codepoint": "U+0054", "char": "T", "beta_0": 1, "beta_1_raw": 0, "structure": "bar + stem, one junction, no loop"},
+      {"codepoint": "U+004F", "char": "O", "beta_0": 1, "beta_1_raw": 1, "structure": "one loop, no endpoints"},
+      {"codepoint": "U+0041", "char": "A", "beta_0": 1, "beta_1_raw": 1, "structure": "one loop + two legs"},
+      {"codepoint": "U+0038", "char": "8", "beta_0": 1, "beta_1_raw": 2, "structure": "two stacked loops"},
+      {"codepoint": "U+0042", "char": "B", "beta_0": 1, "beta_1_raw": 2, "structure": "spine + two loops"}
+    ]
+  }
+}

@@ -1,4 +1,36 @@
-build/
-.DS_Store
-__pycache__/
-*.pyc
+# Local product builds
+/.run/
+/.web/
+/.tmp-ems/
+/.o_*/
+/.d_*/
+*.o
+*.a
+*.bc
+*.ii
+*.s
+*.i
+
+# Dependency and test caches
+/node_modules/
+/.venv/
+/.pytest_cache/
+**/__pycache__/
+*.py[cod]
+
+# Local runtime state
+/asciicker.cfg
+/imgui.ini
+/.DS_Store
+._*
+*.log
+
+# Private working/agent state must never become repository content
+/AGENTS.md
+/CLAUDE.md
+/CONTEXT.md
+/.agent/
+/.agents/
+/.claude/
+/.planning/
+/.worktrees/

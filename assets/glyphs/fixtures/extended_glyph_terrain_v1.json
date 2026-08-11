@@ -1,0 +1,90 @@
+{
+  "_comment": "FL-4131 Phase 0: Extended glyph fixture corpus for manifest schema validation and sidecar parser parity tests. Gate: extended_glyph_fixture_exists. This fixture uses GlyphIds in the range 256-511 (first extended repertoire page) with Unicode scalars for terrain decoration glyphs. The glyph_manifest_hash field is a placeholder until compile_glyph_manifest.py --check runs against this file.",
+  "manifest_version": 1,
+  "profile_kind": "extended_glyph_v1",
+  "content_pack_id": "terrain.extended.v1",
+  "fallback_glyph_id": 256,
+  "admission_set": [256, 257, 258, 259, 260, 261, 262, 263, 264, 265],
+  "entries": [
+    {
+      "glyph_id": 256,
+      "label": "REPLACEMENT_CHARACTER",
+      "unicode_scalar": 65533,
+      "coverage_quadrants": 65535,
+      "coverage_hint": "full",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 257,
+      "label": "LIGHT_SHADE_EXTENDED",
+      "unicode_scalar": 9617,
+      "coverage_quadrants": 21845,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 258,
+      "label": "MEDIUM_SHADE_EXTENDED",
+      "unicode_scalar": 9618,
+      "coverage_quadrants": 43690,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 259,
+      "label": "DARK_SHADE_EXTENDED",
+      "unicode_scalar": 9619,
+      "coverage_quadrants": 52428,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 260,
+      "label": "BOX_DRAWINGS_LIGHT_HORIZONTAL",
+      "unicode_scalar": 9472,
+      "coverage_quadrants": 3276,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 261,
+      "label": "BOX_DRAWINGS_LIGHT_VERTICAL",
+      "unicode_scalar": 9474,
+      "coverage_quadrants": 8738,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 262,
+      "label": "BOX_DRAWINGS_LIGHT_DOWN_AND_RIGHT",
+      "unicode_scalar": 9484,
+      "coverage_quadrants": 3840,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 263,
+      "label": "BOX_DRAWINGS_LIGHT_DOWN_AND_LEFT",
+      "unicode_scalar": 9488,
+      "coverage_quadrants": 3855,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 264,
+      "label": "BOX_DRAWINGS_LIGHT_UP_AND_RIGHT",
+      "unicode_scalar": 9492,
+      "coverage_quadrants": 240,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    },
+    {
+      "glyph_id": 265,
+      "label": "BOX_DRAWINGS_LIGHT_UP_AND_LEFT",
+      "unicode_scalar": 9496,
+      "coverage_quadrants": 255,
+      "coverage_hint": "partial",
+      "cell_width_em": 1.0
+    }
+  ]
+}

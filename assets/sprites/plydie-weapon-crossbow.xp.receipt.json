@@ -1,0 +1,51 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "plydie_weapon_crossbow",
+  "output_path": "assets/sprites/plydie-weapon-crossbow.xp",
+  "output_sha256": "0ba265ebd93b40118acb324a507fca9ac6b60d9504c94b8a932e79a21ed6a2fe",
+  "output_dimensions": {
+    "width": 110,
+    "height": 88
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/plydie-0002.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/plydie-0002.xp",
+    "raw_layer_index": 3,
+    "upstream_xp_sha256": "b1768a0fdf4ea4d61a2e840cbf69ce6fe5dc51b839581071c7f0bc145da0f859",
+    "upstream_layer_count": 4,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 110,
+        "height": 88
+      },
+      {
+        "index": 1,
+        "width": 110,
+        "height": 88
+      },
+      {
+        "index": 2,
+        "width": 110,
+        "height": 88
+      },
+      {
+        "index": 3,
+        "width": 110,
+        "height": 88
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "reviewer visual inspection 2026-05-19",
+    "method": "Source: upstream/master:sprites/plydie-0002.xp is a 4-layer 110x88 file at baseline dimensions. L3 is the added overlay with weapon/crossbow fragments. Reviewer visual call 2026-05-19: crossbow/weapon fragments; cleaner than the sword row counterpart.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=plydie_weapon_crossbow -> upstream_xp_path=sprites/plydie-0002.xp:raw_layer_index=3. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

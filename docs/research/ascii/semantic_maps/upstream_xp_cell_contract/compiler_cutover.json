@@ -1,0 +1,52 @@
+{
+  "authority_owner": "compiled_actor_visual_profile_table",
+  "compiler_cutover_complete": true,
+  "contract_authority": "reviewed_upstream_source_contract",
+  "coverage": {
+    "bound_source_ids": 112,
+    "compiled_rows": 192,
+    "frozen_raw_cells": 6807104,
+    "frozen_raw_layers": 573,
+    "pending_review_units": 0,
+    "server_reachable_keys": 192
+  },
+  "fl": "FL-4162",
+  "invariants": {
+    "composite_semantic_contribution_sets_first_class": true,
+    "local_ahsw_resolution_deleted": true,
+    "local_reachability_enumeration_deleted": true,
+    "per_key_legacy_merge_fallback_deleted": true,
+    "render_operation_separate_from_semantic_contributions": true,
+    "server_catalog_is_reachability_owner": true
+  },
+  "legacy_owner_deletion": {
+    "absent_compiler_symbols": [
+      "_ahs_digits",
+      "_resolve_source_xp",
+      "_enumerate_server_reachable_keys",
+      "merge_extra_layers=true"
+    ],
+    "absent_runtime_symbols": [
+      "ACTOR_VISUAL_LAYER_ROLE_",
+      "const bool merge_extra"
+    ],
+    "deleted_paths": [
+      "assets/actor_visual_profiles/source/layer_roles.json",
+      "scripts/promote_entries_to_layer_roles.py",
+      "scripts/lib/row_compose_policies.py",
+      "scripts/lib/semantic_roles.py"
+    ]
+  },
+  "rq": "RQ-200",
+  "runtime_authoritative": true,
+  "schema": "fl4162.compiler_cutover.v1",
+  "source_hashes": {
+    "cell_role_decisions_sha256": "8bb4417991204c47890488ddb6e73d350772023e901ae4842331070468cd9462",
+    "compiler_source_sha256": "9a465acf728388b6150b5354f0445184510de1eb1412518f57645dc54c70554a",
+    "family_contract_freeze_sha256": "ab8490bd1c88bdbc0864a264af609b014733081b9fc0c65b905618162a4b1798",
+    "generated_provenance_sha256": "ab7038498772790b82106cbf2423776dbcebdf39d8c70466f82952eb39f7d10f",
+    "generated_table_sha256": "e291cd466b7c6a8bd7e7dc609f919a926b63571c2ca38939de917b29fbd02f43",
+    "profile_bindings_sha256": "88e74f593d2f803384d9c1c93ddc87479bff7f9051dc3cdce40b24d5c2ba8725",
+    "server_reachable_keys_sha256": "44cef5e34532469bb72b81e739a4aa421f11a71ef80413b13da66fbcf2ddc8ba"
+  }
+}

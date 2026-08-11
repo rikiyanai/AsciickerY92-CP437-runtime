@@ -1,2 +1,3 @@
-docs/licenses/** whitespace=-blank-at-eol,-blank-at-eof
-historical/engine/** whitespace=-blank-at-eol,-blank-at-eof
+# Failure evidence is append-only across merges.
+docs/FAILURE_LOG.md merge=fl-append
+*.bin binary
