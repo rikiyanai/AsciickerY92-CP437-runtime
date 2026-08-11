@@ -1,0 +1,58 @@
+{
+  "schema": "fl4162.family_contract_freeze.v2",
+  "rq": "RQ-200",
+  "frozen": true,
+  "is_proposal": false,
+  "runtime_authoritative": false,
+  "contract_authority": "reviewed_upstream_source_contract",
+  "operator_signoff": {
+    "approved": true,
+    "reviewer": "operator_directed_rq200_execution_order",
+    "reviewed_at": "2026-07-16",
+    "basis": "The operator-directed Correct Fix Order requires complete fingerprint review followed by family-contract freeze before compiler ownership work."
+  },
+  "source_hashes": {
+    "review_queue_sha256": "3585a2c7f6a01cd6707495213345547264543cbd00e161426db38decb7f473a3",
+    "cell_role_decisions_sha256": "8bb4417991204c47890488ddb6e73d350772023e901ae4842331070468cd9462",
+    "cell_review_state_decisions_sha256": "3ebde2336d6019ff6c4c54fe91d85bbf35100b74fb8651cd972a56fc7e3cea09",
+    "cell_contract_manifest_sha256": "1c2cfcae608d2928616b35de1f2ff562d308f103f1beac732a56e4b6c740e14c",
+    "semantic_honesty_audit_sha256": "f208ed54f53a1329b970db03d3da751fe8074e40fdc7cd01131c4fc867340855",
+    "family_topology_contracts_sha256": "2db8b3e46c2ec0cd5d349595ba14ba00ef9ba23cb5de2cc825ee5036ca2f8c42",
+    "review_provenance_manifest_sha256": "4e9220d985078d5f028733b05991a22de6447bdee9fd26732804ef0662646022",
+    "state_final_sha256": "ecc9a16112ce48beaeb0e24beba2ccc7399c4efc50d32505f3fd54f8e8d76020"
+  },
+  "coverage": {
+    "families": [
+      "attack",
+      "bigbee",
+      "player",
+      "plydie",
+      "wolack",
+      "wolfie"
+    ],
+    "family_raw_layers": {
+      "attack": 40,
+      "bigbee": 149,
+      "player": 107,
+      "plydie": 106,
+      "wolack": 52,
+      "wolfie": 119
+    },
+    "raw_layers": 573,
+    "raw_cells": 6807104,
+    "review_units": 203,
+    "exact_duplicate_layers_reusing_reviewed_units": 370,
+    "pending_review_units": 0
+  },
+  "semantic_honesty": {
+    "recorded_false_clean_retractions": 20,
+    "distinct_expanded_replacements": 20,
+    "known_false_clean_units_remaining": 0,
+    "equipment_only_units_reviewed": 57
+  },
+  "cutover_boundary": {
+    "compiler_cutover_complete": true,
+    "required_receipt": "docs/research/ascii/semantic_maps/upstream_xp_cell_contract/compiler_cutover.json",
+    "reason": "The contract-backed compiler consumes the frozen full-cell decisions for every server-reachable key. Retired layer-role, local AHSW, local reachability, and per-key legacy merge owners are deleted; compiler_cutover.json binds the generated runtime table to this freeze."
+  }
+}

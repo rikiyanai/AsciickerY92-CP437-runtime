@@ -1,0 +1,90 @@
+{
+  "authority": false,
+  "authority_boundary": "Evidence ledger only. No row is compiler or runtime authority.",
+  "cell_addressing": "all raw atlas cells covered exactly once by compact frame-row horizontal spans",
+  "cell_span_encoding": [
+    "angle",
+    "frame",
+    "local_y",
+    "local_x_start",
+    "length",
+    "cell_value_index"
+  ],
+  "family_layers": {
+    "attack": 40,
+    "bigbee": 149,
+    "player": 107,
+    "plydie": 106,
+    "wolack": 52,
+    "wolfie": 119
+  },
+  "fl": "FL-4162",
+  "input_counts": {
+    "evidence_cards": 343,
+    "family_topology_cards": 343,
+    "manual_reviews": 343,
+    "review_decisions": 343,
+    "source_xp_files": 115,
+    "state_final_rows": 343
+  },
+  "is_proposal": true,
+  "review_states": {
+    "engine_metadata_semantics_unverified": 230,
+    "layer_role_reviewed_cell_semantics_unverified": 261,
+    "rejected_fragment_needs_contract": 5,
+    "reviewed_composite_cell_assignment_pending": 77
+  },
+  "rq": "RQ-200",
+  "schema": "fl4162.upstream_xp_cell_contract.manifest.v2",
+  "shards": [
+    {
+      "family": "attack",
+      "path": "attack.jsonl",
+      "records": 40,
+      "sha256": "7ec9bc2db8ffdca4877c5318f3d41dd47ac0bc25c033b165534dce66f51b47a5"
+    },
+    {
+      "family": "bigbee",
+      "path": "bigbee.jsonl",
+      "records": 149,
+      "sha256": "ab8e6a370b599c14fc55113d9c3572901879542cae51729c35bd3eaad65d915b"
+    },
+    {
+      "family": "player",
+      "path": "player.jsonl",
+      "records": 107,
+      "sha256": "bc170422f53bf888054226028f03f971a9e7697b916d6424bcad053142a44084"
+    },
+    {
+      "family": "plydie",
+      "path": "plydie.jsonl",
+      "records": 106,
+      "sha256": "f1105bb42bc303d836311b5f81156684aedd9f666a34df9882cb000bef9ef8cb"
+    },
+    {
+      "family": "wolack",
+      "path": "wolack.jsonl",
+      "records": 52,
+      "sha256": "bbda57f1c410be2820a01f10fe95a3b9aa0d7aa73b6af303670ded6a45ffc5ee"
+    },
+    {
+      "family": "wolfie",
+      "path": "wolfie.jsonl",
+      "records": 119,
+      "sha256": "7cf3189c6ccc88ef79dc789ce70737244e557662831faeadf0ad25285e5ab1e6"
+    }
+  ],
+  "source_final": {
+    "path": "historical-source:/bundle_layer_audit_20260520/verifier_state_backups/state_FINAL_20260521-163326.json",
+    "sha256": "ecc9a16112ce48beaeb0e24beba2ccc7399c4efc50d32505f3fd54f8e8d76020"
+  },
+  "totals": {
+    "engine_metadata_layers": 230,
+    "layers": 573,
+    "raw_cells": 6807104,
+    "spans": 1720910,
+    "transparent_cells": 3466934,
+    "visible_cells": 3340170
+  },
+  "unresolved_source_keys": []
+}
