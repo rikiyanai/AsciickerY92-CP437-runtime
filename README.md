@@ -1,6 +1,6 @@
-# Asciicker Historical Runtime
+# Asciicker Y9-2 Forked snapshot (blocks + bundle refactor latest state) 
 
-This private standalone repository is the full pre-FL-4512 C++ Asciicker
+This standalone repository is the full pre-FL-4512 C++ Asciicker
 runtime from the Block Feature candidate lineage, with the final normalized-XP
 layer contract and bundle-based actor appearance cutover integrated into that
 runtime. It is a game repository: native terminal client, authoritative server,
