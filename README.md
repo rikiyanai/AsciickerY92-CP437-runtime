@@ -1,25 +1,38 @@
-# Historical Asciicker Runtime
+# Historical Asciicker XP Runtime
 
-Private standalone repository for P0C-06: the historical C++ runtime immediately
-before the FL-4512 rendering-pipeline refactor, plus a selected frozen
-normalized-XP contract snapshot.
+A clean-build C++ terminal adapter for the historical Asciicker REXPaint XP
+loading contract at commit `0bdb614c77e9b06ee47af7b4ff1d584ada4793a1`, paired
+with the completed 115-file normalized-XP snapshot.
 
-## Selected identities
+![Build, verify, and browse the historical XP contract](docs/historical-runtime.gif)
 
-- Base candidate: `0bdb614c77e9b06ee47af7b4ff1d584ada4793a1`.
-- First source-changing FL-4512 runtime commit:
-  `873374a1e30bda2c7854192a6466c4fc48e677d4`.
-- Divergent deployed checkpoint: `e7cca2c840e8344da16e8df62cfb214f5a1a4b4e`.
-- Merge base of the historical candidate and divergent checkpoint:
-  `661ccd385cc1de36bdf9246c777e2ed20e118fd1`.
+## Build and run
 
-## Current state
+Requirements: a C++20 compiler and zlib.
 
-Repository ownership is established, but no runtime source is copied yet. The
-base candidate still requires a clean historical build and a minimal adapter
-for the later normalized-XP contract. The 267-commit interleaved range must not
-be blindly cherry-picked.
+```sh
+./build.sh
+./run-runtime.sh
+```
 
-The eventual product excludes the current FL-4512 renderer, research-paper
-pipeline, agent/process infrastructure, and unrelated current-repository code.
-This private scaffold is not a runnable-runtime claim.
+Controls: `j`/`k` change raw layer, `h`/`l` change angle, `n`/`p` change
+frame, `a` changes animation, and `q` exits. Deterministic checks:
+
+```sh
+./run-runtime.sh --once
+./run-runtime.sh --verify-corpus
+```
+
+The corpus verification parses all 115 bundled XP files through the C++ loader
+and reports the total raw-layer count. It never writes into the snapshot.
+
+## Product boundary
+
+This is the reviewed minimal adapter/transplant, not the full historical game.
+It preserves the historical runtime's gzip/REXPaint layer-loading contract and
+exercises it against the later frozen normalized-XP corpus. It excludes the
+FL-4512 renderer, gameplay, editor, server, research pipeline, agent material,
+and the unsafe 267-commit interleaved range.
+
+See [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md) for exact source and snapshot
+identities.
