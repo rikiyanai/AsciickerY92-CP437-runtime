@@ -4,7 +4,10 @@ A clean-build C++ terminal adapter for the historical Asciicker REXPaint XP
 loading contract at commit `0bdb614c77e9b06ee47af7b4ff1d584ada4793a1`, paired
 with the completed 115-file normalized-XP snapshot.
 
-![Build, verify, and browse the historical XP contract](docs/historical-runtime.gif)
+**Status: failed product boundary.** The build compiles only a newly written XP
+parser/browser. It does not compile or run the preserved historical engine and
+is not a historical runtime extraction. The prior GIF was removed because it
+demonstrated the replacement proxy.
 
 ## Build and run
 

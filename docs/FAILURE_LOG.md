@@ -17,3 +17,17 @@
   a real terminal recording.
 - The adapter is runnable and verified. It is not a bootable/full-game claim,
   and user acceptance remains separate.
+
+## P0C-06 / FL-4512 · 2026-08-12 — acceptance re-audit rejected the adapter substitution
+
+- Intended product: a standalone runnable extraction of the selected historical
+  Asciicker C++ runtime, with the later normalized-XP contract carried forward
+  only as a selected subsystem.
+- Observed result: `build.sh` compiles only `src/xp_runtime.cpp`. The exact
+  historical `engine/sprite.cpp` and `engine/sprite.h` are preserved but never
+  compiled or connected; the game loop, renderer, input, world, gameplay, and
+  other runtime owners are absent.
+- The four tests and sanitizer run prove only the replacement parser, snapshot
+  hashes, and no-write behavior. The deleted GIF likewise showed that proxy.
+- Highest supported stage: **Implemented and Executed XP-loader proxy only**.
+  The historical runtime extraction is not Implemented, Verified, or Accepted.
