@@ -1155,3 +1155,32 @@
   inventorying the PNG dimensions/alpha silhouettes and comparing them with
   the current mesh and collision metadata owners. A full engine refactor is
   not assumed.
+
+### P0C-07 default-subagent review — partially correct
+
+- Read-only review of `9508af7` confirmed the yellow fixed-height map, nearby
+  rocket instance, exact checked-in asset hashes, Wallace map-owned spawn path,
+  independent server-owned companion entity, follow branch, disconnect cleanup,
+  zero hostile generators, and central damage-target exclusion. The reviewer
+  did not edit, build, launch, or generate proof.
+- Open P1: Gromit is entity-standalone but not semantically dismounted.
+  `SvrEnsurePlayerCompanion` assigns `MOUNT::WOLF` and mount definition `950`;
+  the normalized compiled row no longer contains the historical rider layer,
+  but authoritative state still describes Gromit through the mounted-wolf lane.
+  Acceptance requires a dedicated non-mounted companion key/profile or direct
+  evidence that the mounted semantic lane is intentionally the companion body
+  contract. Do not call mount `950` a fully standalone companion contract.
+- Open P2: the headed receipt records matching web artifact hashes but does not
+  bind them to committed source revision `9508af7`; the ignored local slot
+  manifest identified an earlier dirty revision. Existing visual evidence is a
+  live-state observation, not commit-bound closure proof.
+- Open P2: target-repository attribution records the Wallace/Gromit and rocket
+  hashes, but source-commit and GLB-to-AKM lineage need a durable checked-in
+  provenance/conversion receipt to be independently auditable from this repo.
+- Open P3: follow force starts above distance `9` and clears below `7`, but the
+  `7..9` band retains the previous force. Replace this stale-force seam with an
+  explicit persistent follow-state owner or a deterministic zero-force decision
+  throughout the band.
+- Selected next analysis surface: design the smallest normalized, non-mounted
+  Gromit profile and a commit-bound proof contract. No runtime attempt is
+  authorized by this review result alone.
