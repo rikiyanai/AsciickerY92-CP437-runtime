@@ -1125,3 +1125,33 @@
   zero items from the frozen map. The headed image and receipt are committed as
   the acceptance artifact; operator signoff remains the only stage above this
   verified result.
+
+### P0C-07 operator hold — review before further execution
+
+- Operator direction on 2026-08-14: do not start more runtime attempts after
+  small two-or-three-change batches. No further launch, gameplay run, or proof
+  capture is authorized until a read-only review identifies a concrete gap and
+  the operator directs continuation.
+- Review must re-check the committed implementation rather than treating the
+  prior green run as self-validating. The exact rocket identity is
+  `assets/meshes/source/toy_rocket.glb` (SHA-256
+  `6990ca861b55d4afd5073aa1cc09b018eb6617324a618c52215ca40ded271263`),
+  converted to `assets/meshes/toy_rocket_ship.akm` (SHA-256
+  `5225c421a0321f75aa058b449af876c708915e87b09fe2968743a1bed7e343ed`).
+- Current selected action: one default subagent performs a read-only review of
+  commit `9508af7`. It must not edit files, rebuild, launch, or generate new
+  proof. Findings remain findings until the operator accepts a follow-up.
+
+## P0C-08 · 2026-08-14 — extracted shaped block PNGs (deferred)
+
+- Future requirement: locate the extracted `block*.png` assets in the Y9-2
+  source repository and turn each approved shape into a placeable runtime block
+  with matching visible geometry and collision shape.
+- Scope is deliberately deferred while P0C-07 is under review. Do not import
+  PNGs, generate meshes, alter the item catalog, or refactor placement/collision
+  ownership as part of the Wallace/Gromit/rocket scene.
+- Named unknown: whether the existing catalog-owned placeable-item plus AKM
+  world-mesh contract can express every extracted block shape. Resolve later by
+  inventorying the PNG dimensions/alpha silhouettes and comparing them with
+  the current mesh and collision metadata owners. A full engine refactor is
+  not assumed.
