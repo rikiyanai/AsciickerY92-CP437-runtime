@@ -539,6 +539,12 @@ static inline bool SvrTransitionPhase(SvrPlayerState* ps, ClientPhase target)
     return true;
 }
 
+enum SvrNpcDisposition : uint8_t
+{
+    SVR_NPC_HOSTILE = 0,
+    SVR_NPC_COMPANION = 1,
+};
+
 // ─── NPC State (authoritative, tick thread only) ─────────────────
 struct SvrNpcState
 {
@@ -573,7 +579,10 @@ struct SvrNpcState
     // AI state
     uint16_t target_id;
     bool target_is_player;
-    bool enemy;
+    // Disposition and owner are authoritative relationship state. Companions
+    // follow exactly one player and are excluded from every damage target path.
+    uint8_t disposition;
+    uint16_t owner_player_id;
     int stuck_counter;
     float unstuck_pos[2][3];
     bool jump_request;

@@ -42,6 +42,28 @@ The accepted gameplay recording uses the armored player composite (helmet,
 armor, and sword) specifically because it exposes more of that integrated layer
 stack than a nude or single-layer sprite.
 
+## Wallace, Gromit, and rocket scene
+
+The playable Wallace and companion Gromit sheets are the exact approved assets
+from `asciicker-pipeline-v3` commit
+`f9ca59759fd46828e6cc320428ec7e6132dd4648`:
+
+- `sprites/2026-08-12-030327-wallace.xp`, SHA-256
+  `0e2bd7823d3aab79007df8a1c6c58150b5bb3c7718a75ce0ae9df27e88adbc3a`;
+- `sprites/2026-08-12-030327-gromit.xp`, SHA-256
+  `e2e2a4212fb57c70ffc615c4c8539e336f7a9bc08b88e6c3648f37ec2a9b5bb5`.
+
+The timestamped files are retained as audit identities. Byte-identical copies
+replace the normalized `player-0000.xp` and `wolfie-0000.xp` source owners so
+the compiled appearance path remains the only runtime selector. The untracked
+June duplicate names and distinct repaired `adhoc/` variants were not imported.
+
+The rocket source is `assets/meshes/source/toy_rocket.glb`, SHA-256
+`6990ca861b55d4afd5073aa1cc09b018eb6617324a618c52215ca40ded271263`.
+Its runtime conversion is `assets/meshes/toy_rocket_ship.akm`, SHA-256
+`5225c421a0321f75aa058b449af876c708915e87b09fe2968743a1bed7e343ed`.
+The checked-in conversion scripts preserve the GLB-to-AKM production path.
+
 ## License
 
 The historical source license is preserved at

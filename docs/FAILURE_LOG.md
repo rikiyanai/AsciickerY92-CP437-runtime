@@ -1082,3 +1082,46 @@
 - Verify the resolved repository object's exact `name`, `html_url`, privacy,
   and default branch, plus the local origin and directory. Record the old slug
   only as a redirect alias; do not require it to return 404.
+
+## P0C-07 · 2026-08-14 — Wallace/Gromit sand scene
+
+- Intended outcome: the canonical C++ runtime opens on an entirely yellow sand
+  map with playable Wallace, the converted rocket within twelve world units of
+  the map-owned start, and one friendly Gromit that automatically follows the
+  joining player.
+- Observed mismatch: the canonical map retained mixed terrain, scenery, and
+  hostile generators; server spawn ignored the map-owned start; all NPCs used
+  nearest-player hostile AI; the approved timestamped XP and rocket assets were
+  absent from this repository.
+- Owners selected: `game_map_y8.a3d` owns terrain/start/rocket placement; the
+  normalized appearance sources own Wallace and Gromit selection; server tick
+  state owns companion relationship, follow intent, cleanup, and damage
+  exclusion. Hard-coded fallback spawn remains only for maps without a start.
+- Rejected findings: the untracked June XP duplicates and modified repaired
+  `adhoc/` variants are not provenance-equivalent to the approved commit and
+  remain outside this repository.
+- Acceptance surface: exact asset hashes; parsed v4 map invariants; generated
+  appearance table currentness; native server compile; standalone contract
+  suite; user-reachable live viewport plus matching authoritative companion
+  state from the same run.
+
+### P0C-07 attempt 1 — rejected underwater baseline
+
+- The first headed run rendered the authored yellow material blue-purple.
+  Authoritative terrain Z was `0`, below the global water plane at `55`; the
+  discrepancy was environmental tinting, not a material-ID failure.
+- Replace height `0` with the A3D canonical export baseline `128` and rebuild
+  both native and web products.
+
+### P0C-07 attempt 2 — accepted live scene
+
+- The rebuilt viewport visibly shows ochre-yellow sand, Wallace, Gromit, and
+  the rocket. Spawn resolves from the v4 map at Z `128`.
+- Gromit initially lost mount definition `950` because NPC presentation derives
+  it from runtime mount state. Set the companion's catalog-owned runtime state
+  to `MOUNT::WOLF`; same-run authority then reports mount `950`, disposition
+  companion, owner player `0`, and a post-movement distance of `6.883`.
+- Disconnect cleanup removes Gromit and idle reset reconstructs zero NPCs and
+  zero items from the frozen map. The headed image and receipt are committed as
+  the acceptance artifact; operator signoff remains the only stage above this
+  verified result.

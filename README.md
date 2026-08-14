@@ -16,6 +16,14 @@ the integrated runtime is CP437-only.
 
 ## Real runtime evidence
 
+![Wallace, Gromit, and the rocket on the sand map](docs/recordings/wallace-gromit-sand-scene.jpg)
+
+The canonical scene is now a flat yellow sand map. Wallace spawns as the
+playable actor, the map-owned rocket sits nearby, and authoritative Gromit
+follows the player while remaining outside hostile and damage-target paths.
+The matching [scene receipt](docs/recordings/wallace-gromit-sand-scene.receipt.json)
+binds the viewport, map, web build, asset hashes, and same-run follow state.
+
 ![Same-session base, armor, helmet, and sword transitions in the browser runtime](docs/recordings/cp437-runtime-layer-transitions.gif)
 
 This recording comes from one real browser session connected to the real
@@ -83,7 +91,7 @@ python3 -m pip install -r requirements-test.txt
 ./scripts/run_standalone_checks.sh
 ~~~
 
-That command runs 26 collected pytest cases, five standalone Python contract
+That command runs 29 collected pytest cases, five standalone Python contract
 checks, three JavaScript tests, and four currentness or isolation gates. The
 native server and terminal client are separate build acceptance surfaces; the
 browser build additionally runs the glyph-manifest and actor-visual coverage

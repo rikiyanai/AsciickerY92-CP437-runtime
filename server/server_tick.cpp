@@ -594,6 +594,15 @@ static bool SvrWithinVerticalBand(const float a[3], const float b[3], float max_
 static void SvrResolveSafePlayerSpawn(ServerState* state, float out_pos[3])
 {
     if (!out_pos) return;
+    float map_pos[3] = {};
+    if (state && state->world && WorldGetPlayerStart(state->world, map_pos))
+    {
+        out_pos[0] = map_pos[0];
+        out_pos[1] = map_pos[1];
+        out_pos[2] = SvrSampleTerrainHeight(
+            state->terrain, out_pos[0], out_pos[1], map_pos[2]);
+        return;
+    }
     // WARNING (FL-2540/FL-2574): local single-player authority must consume
     // the same injected spawn contract as the native client. Leaving the
     // server on its own hardcoded safe-player XY recreates mixed ownership:
@@ -1208,8 +1217,9 @@ void SvrInitWorldItems(ServerState* state)
     SvrMapWorldItemLoadContext ctx = {};
     ctx.state = state;
     ctx.cache = &cache;
-    if (SvrSeedLegacyBlockWorldItem(state, &cache))
-        ctx.spawned++;
+    // World content now belongs exclusively to the loaded A3D map. The old
+    // unconditional block proof seed is intentionally not invoked here: it
+    // otherwise mutates every production scene after the map has loaded.
     // FL-4137 b8: sword auto-seed gated behind ASCIICKER_SEED_TEST_SWORD=1.
     // mobile_controls is hardcoded true (engine/game_utility.cpp:615) so an
     // equipped weapon auto-triggers mobile auto-combat every ~500ms, which
@@ -3251,6 +3261,8 @@ static bool SvrPublishAuthoritativeStateDetailed(ServerState* state,
                 "\"appearance_subject_kind\":%u,"
                 "\"appearance_subject_key\":\"%s\","
                 "\"appearance_entry_count\":%u,"
+                "\"disposition\":%u,"
+                "\"owner_player_id\":%u,"
                 "\"hp\":%d,"
                 "\"max_hp\":%d,"
                 "\"death_tick\":%u"
@@ -3275,6 +3287,8 @@ static bool SvrPublishAuthoritativeStateDetailed(ServerState* state,
                 (unsigned)npc->appearance.subject_kind,
                 npc->appearance.subject_key,
                 (unsigned)npc->appearance.entry_count,
+                (unsigned)npc->disposition,
+                (unsigned)npc->owner_player_id,
                 (int)npc->hp,
                 (int)npc->max_hp,
                 (unsigned)npc->death_tick);
@@ -5024,7 +5038,8 @@ void SvrInitNpcs(ServerState* state)
             npc->pos[2] = SvrSampleTerrainHeight(
                 state->terrain, npc->pos[0], npc->pos[1], npc->spawn_pos[2]);
             npc->spawn_gen_index = gen_index;
-            npc->enemy = true;
+            npc->disposition = SVR_NPC_HOSTILE;
+            npc->owner_player_id = 0xFFFF;
             npc->hp = SVR_NPC_MAX_HP;
             npc->max_hp = SVR_NPC_MAX_HP;
             npc->target_id = 0xFFFF;
@@ -5080,6 +5095,116 @@ void SvrInitNpcs(ServerState* state)
 
     printf("[tick] Initialized %d NPCs from EnemyGen spawn points\n",
            state->npc_count);
+}
+
+static bool SvrEnsurePlayerCompanion(ServerState* state, int owner_player_id)
+{
+    if (!state || owner_player_id < 0 || owner_player_id >= SVR_MAX_CLIENTS)
+        return false;
+
+    SvrActorVisualProfileCatalog cache = {};
+    if (!SvrLoadActorVisualProfileCatalog(&cache))
+        return false;
+    const SvrActorVisualProfileCatalogProfileDef* profile =
+        SvrFindAppearanceProfileById(&cache, cache.default_profile_id);
+    if (!profile)
+        return false;
+
+    SvrNpcState* npc = 0;
+    int npc_index = -1;
+    for (int i = 0; i < state->npc_count; i++)
+    {
+        if (state->npcs[i].disposition == SVR_NPC_COMPANION &&
+            state->npcs[i].owner_player_id == (uint16_t)owner_player_id)
+        {
+            npc = &state->npcs[i];
+            npc_index = i;
+            break;
+        }
+    }
+    if (!npc)
+    {
+        if (state->npc_count >= SVR_MAX_NPCS)
+            return false;
+        npc_index = state->npc_count++;
+        npc = &state->npcs[npc_index];
+    }
+
+    if (npc->physics)
+    {
+        DeletePhysics(npc->physics);
+        npc->physics = 0;
+    }
+    memset(npc, 0, sizeof(*npc));
+    const SvrPlayerState* owner = &state->players[owner_player_id];
+    npc->active = true;
+    npc->entity_id = SVR_MAX_CLIENTS + npc_index;
+    npc->disposition = SVR_NPC_COMPANION;
+    npc->owner_player_id = (uint16_t)owner_player_id;
+    npc->target_id = (uint16_t)owner_player_id;
+    npc->target_is_player = true;
+    npc->spawn_gen_index = -1;
+    npc->hp = SVR_NPC_MAX_HP;
+    npc->max_hp = SVR_NPC_MAX_HP;
+    npc->life_state = LIFE_STATE::ALIVE;
+    npc->mount_state = MOUNT::WOLF;
+    npc->locomotion_state = LOCOMOTION_STATE::IDLE;
+    npc->combat_state = COMBAT_STATE::NONE;
+    npc->presentation_kind_id = APPEARANCE_PRESENTATION_KIND_IDLE_WALK;
+    npc->presentation_started_tick = state->tick;
+    npc->last_swing_presentation_kind_id = APPEARANCE_PRESENTATION_KIND_IDLE_WALK;
+    npc->pos[0] = owner->pos[0] - 4.0f;
+    npc->pos[1] = owner->pos[1] - 3.0f;
+    npc->pos[2] = SvrSampleTerrainHeight(
+        state->terrain, npc->pos[0], npc->pos[1], owner->pos[2]);
+    memcpy(npc->spawn_pos, npc->pos, sizeof(npc->pos));
+
+    SvrApplyProfileToAppearance(&npc->appearance,
+                                &cache,
+                                profile,
+                                SVR_APPEARANCE_SOURCE_DEFAULT_PROFILE,
+                                SVR_APPEARANCE_SUBJECT_NPC_SPAWN,
+                                "gromit_companion");
+    // The normalized wolf-rig base row now owns the approved Gromit sheet.
+    // This authored mount key selects that row without adding a renderer-side
+    // path selector or a loose-XP fallback.
+    npc->appearance.mount_definition_id = 950;
+    SvrSyncAppearanceCompiledActorVisualKeyDimensions(
+        &npc->appearance, APPEARANCE_PRESENTATION_KIND_IDLE_WALK, true);
+    SvrRefreshNpcPresentationKind(state, npc);
+
+    if (state->terrain && state->world)
+    {
+        npc->physics = CreatePhysics(state->terrain, state->world,
+                                     npc->pos, npc->dir, 0.0f, a3dGetTime(),
+                                     PHYSICS_CREATE_EXACT_POS);
+    }
+    printf("[companion] spawned owner=%d npc_id=%u pos=(%.2f,%.2f,%.2f) profile=%u mount=%u\n",
+           owner_player_id,
+           (unsigned)npc->entity_id,
+           npc->pos[0], npc->pos[1], npc->pos[2],
+           (unsigned)npc->appearance.appearance_profile_id,
+           (unsigned)npc->appearance.mount_definition_id);
+    return true;
+}
+
+static void SvrReleasePlayerCompanion(ServerState* state, int owner_player_id)
+{
+    if (!state)
+        return;
+    for (int i = 0; i < state->npc_count; i++)
+    {
+        SvrNpcState* npc = &state->npcs[i];
+        if (npc->disposition != SVR_NPC_COMPANION ||
+            npc->owner_player_id != (uint16_t)owner_player_id)
+            continue;
+        if (npc->physics)
+        {
+            DeletePhysics(npc->physics);
+            npc->physics = 0;
+        }
+        npc->active = false;
+    }
 }
 
 static void SvrResetIdleWorld(ServerState* state)
@@ -5726,6 +5851,9 @@ static bool SvrBootstrapAlive(ServerState* state, int ci, const char* reason)
     }
 
     SvrRefreshPlayerPresentationKind(state, ps);
+
+    if (!SvrEnsurePlayerCompanion(state, ci))
+        printf("[companion] failed to spawn owner=%d tick=%u\n", ci, (unsigned)state->tick);
 
     return true;
 }
@@ -6478,7 +6606,8 @@ static bool SvrResolveSwingTargetById(ServerState* state, uint16_t target_id, Sv
     if (target_id - SVR_MAX_CLIENTS < state->npc_count)
     {
         SvrNpcState* npc = &state->npcs[target_id - SVR_MAX_CLIENTS];
-        if (!npc->active || npc->death_tick > 0)
+        if (!npc->active || npc->death_tick > 0 ||
+            npc->disposition == SVR_NPC_COMPANION)
             return false;
         hit->target_id = target_id;
         memcpy(hit->target_pos, npc->pos, 12);
@@ -6592,7 +6721,8 @@ static int SvrCollectSwingHits(ServerState* state, const PendingSwing* s, SvrSwi
     for (int i = 0; i < state->npc_count; i++)
     {
         SvrNpcState* npc = &state->npcs[i];
-        if (!npc->active || npc->death_tick > 0)
+        if (!npc->active || npc->death_tick > 0 ||
+            npc->disposition == SVR_NPC_COMPANION)
             continue;
         if (npc->entity_id == s->attacker_id)
             continue;
@@ -7668,7 +7798,8 @@ static void SvrProcessRespawns(ServerState* state)
     for (int i = 0; i < state->npc_count; i++)
     {
         SvrNpcState* npc = &state->npcs[i];
-        if (!npc->active || npc->death_tick == 0) continue;
+        if (!npc->active || npc->death_tick == 0 ||
+            npc->disposition == SVR_NPC_COMPANION) continue;
 
         if (state->tick - npc->death_tick >= npc->respawn_delay)
         {
@@ -7732,6 +7863,7 @@ static void SvrProcessDisconnects(ServerState* state)
 
             SvrReleaseOwnedItemsOnDisconnect(state, i);
             SvrInvalidatePlayerAppearanceSendCachesForSlot(state, (uint16_t)i);
+            SvrReleasePlayerCompanion(state, i);
 
             // Clean up physics
             if (ps->physics)
@@ -7780,6 +7912,54 @@ static void SvrUpdateNpcAI(ServerState* state)
     {
         SvrNpcState* npc = &state->npcs[i];
         if (!npc->active || npc->death_tick > 0) continue;
+
+        if (npc->disposition == SVR_NPC_COMPANION)
+        {
+            const uint16_t owner_id = npc->owner_player_id;
+            if (owner_id >= SVR_MAX_CLIENTS)
+                continue;
+            SvrPlayerState* owner = &state->players[owner_id];
+            npc->target_id = owner_id;
+            npc->target_is_player = true;
+            if (!owner->active || owner->phase != CPHASE_ALIVE || owner->death_tick > 0)
+            {
+                npc->intent_force[0] = 0.0f;
+                npc->intent_force[1] = 0.0f;
+                continue;
+            }
+            float dx = owner->pos[0] - npc->pos[0];
+            float dy = owner->pos[1] - npc->pos[1];
+            float dist = sqrtf(dx * dx + dy * dy);
+            if (dist > 60.0f)
+            {
+                npc->pos[0] = owner->pos[0] - 4.0f;
+                npc->pos[1] = owner->pos[1] - 3.0f;
+                npc->pos[2] = SvrSampleTerrainHeight(
+                    state->terrain, npc->pos[0], npc->pos[1], owner->pos[2]);
+                if (npc->physics)
+                {
+                    PhysicsTeleportCommand command = {};
+                    command.set_pos = true;
+                    memcpy(command.pos, npc->pos, sizeof(command.pos));
+                    PhysicsTeleport(npc->physics, command);
+                }
+                dist = 5.0f;
+            }
+            if (dist > 9.0f)
+            {
+                const float inv = 0.5f / dist;
+                npc->intent_force[0] = dx * inv;
+                npc->intent_force[1] = dy * inv;
+                npc->intent_dir =
+                    (float)(atan2((double)dy, (double)dx) * 180.0 / M_PI) + 90.0f;
+            }
+            else if (dist < 7.0f)
+            {
+                npc->intent_force[0] = 0.0f;
+                npc->intent_force[1] = 0.0f;
+            }
+            continue;
+        }
 
         // Find closest player
         float min_dist = 999999.0f;

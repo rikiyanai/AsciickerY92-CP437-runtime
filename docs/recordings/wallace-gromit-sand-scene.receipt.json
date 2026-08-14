@@ -1,0 +1,51 @@
+{
+  "schema": "asciicker.wallace_gromit_sand_scene_proof.v1",
+  "captured_at": "2026-08-14T12:21:00+09:00",
+  "runtime": {
+    "surface": "headed browser WebAssembly client connected to native authoritative server",
+    "url": "http://127.0.0.1:8765/?player=Wallace&server=ws%3A%2F%2F127.0.0.1%3A8080",
+    "web_build_version": "9d039fb8445012a8",
+    "index_data_sha256": "eba9fbead325dac31794c2a96968e5c07e7ce5d17d1ea5c2912e40950187534a",
+    "index_wasm_sha256": "5569b0be44e27d47b04cd8fa1e40df2fa8382b7eacea660aca8641d4d5988d98"
+  },
+  "artifact": {
+    "path": "docs/recordings/wallace-gromit-sand-scene.jpg",
+    "sha256": "8ddb4f4b2bf4bfa9f3188973d9d54bc115cb1eee8e8a2cf1a05562b1b297c576",
+    "width": 1200,
+    "height": 960,
+    "operator_observation": "The live viewport is uniformly ochre-yellow sand and visibly contains Wallace, the nearby orange-red rocket, and dog-shaped Gromit."
+  },
+  "map": {
+    "path": "assets/a3d/game_map_y8.a3d",
+    "sha256": "bb27af3bc38b80f1a18307e93e2682d51dfab916d41683931f6d00a2f325f562",
+    "format_version": 4,
+    "patch_count": 9207,
+    "only_material_id": 4,
+    "only_height": 128,
+    "player_start": [-2.8, -73.6, 128.0],
+    "rocket_position": [7.2, -68.0, 128.0],
+    "enemy_generator_count": 0,
+    "map_item_count": 0
+  },
+  "same_run_authoritative_state": {
+    "join": {
+      "player_id": 0,
+      "player_spawn": [-2.8, -73.6, 128.0],
+      "companion_entity_id": 50,
+      "companion_spawn": [-6.8, -76.6, 128.0],
+      "companion_subject_key": "gromit_companion",
+      "companion_disposition": 1,
+      "companion_owner_player_id": 0,
+      "companion_mount_definition_id": 950,
+      "companion_mount_state": 1,
+      "initial_distance": 5.0
+    },
+    "after_real_canvas_movement": {
+      "tick": 1950,
+      "player_position": [4.392, -68.618, 130.655],
+      "companion_position": [3.364, -61.812, 128.29],
+      "companion_distance": 6.883,
+      "follow_stop_distance": 7.0
+    }
+  }
+}

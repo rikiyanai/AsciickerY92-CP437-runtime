@@ -1,5 +1,19 @@
 # Verification record
 
+## Wallace/Gromit sand scene (2026-08-14)
+
+- `python3 -m pytest -q tests/test_wallace_sand_scene.py`: 3 passed.
+- `make -j4 -f makefile_server`: native server linked successfully.
+- `./build-web.sh`: glyph manifest, 192-row appearance coverage, diagnostic
+  isolation, Emscripten compile, and web staging passed.
+- Headed browser join: map start resolved to `(-2.8,-73.6,128)`, Wallace and
+  Gromit rendered on ochre-yellow terrain with the rocket nearby, and no legacy
+  block seeds or hostile generators were present.
+- Real canvas movement displaced Wallace by more than eight planar units;
+  authoritative Gromit followed and settled `6.883` units away inside the
+  seven-unit stop band. See the image and JSON receipt under
+  `docs/recordings/wallace-gromit-sand-scene.*`.
+
 Date: 2026-08-12 (Asia/Tokyo)
 
 ## Product acceptance conditions
@@ -17,7 +31,7 @@ Date: 2026-08-12 (Asia/Tokyo)
 
 ## Direct evidence
 
-- Python contract suite: 26 collected pytest cases and five standalone script
+- Python contract suite: 29 collected pytest cases and five standalone script
   checks passed.
 - JavaScript web/network suite: 3 passed.
 - Currentness/isolation gates: 4 passed (glyph manifests, 192-row actor-visual
