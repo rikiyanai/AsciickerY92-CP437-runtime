@@ -1184,3 +1184,232 @@
 - Selected next analysis surface: design the smallest normalized, non-mounted
   Gromit profile and a commit-bound proof contract. No runtime attempt is
   authorized by this review result alone.
+
+### P0C-07 correction batch — connected, runtime execution held
+
+- The earlier "accepted live scene" label is superseded for closure purposes.
+  Its receipt now records `commit_bound: false` and remains only an Executed
+  historical observation; it does not verify this correction batch.
+- Deleted stale visual ownership: `player-0000.xp` and `wolfie-0000.xp` are
+  restored to their pre-`9508af7` hashes. The approved timestamped files now
+  bind directly to catalog profiles `201/skin 102` (Wallace) and `202/skin 103`
+  (Gromit) through `custom_source_contract.json`.
+- The server reachability owner declares profile policy. It emits the prior 192
+  full-player keys, three fixed non-mounted Wallace presentation keys, and one
+  fixed non-mounted Gromit companion key. The appearance compiler generated a
+  196-row exact-key table and provenance rows bound to pipeline commit
+  `f9ca59759fd46828e6cc320428ec7e6132dd4648` and the exact XP hashes.
+- Deleted mounted-companion semantics: Gromit now spawns with `MOUNT::NONE`,
+  mount definition `0`, rig `0`, and its dedicated scene profile. No renderer
+  alias, loose-XP selector, wolf-mount row, or compatibility writer remains in
+  this path.
+- Follow hysteresis now has one persistent `follow_active` owner. Distances
+  above `9` activate following, distances below `7` deactivate it, and force is
+  derived from that state every tick; the `7..9` band can no longer retain an
+  accidental stale force.
+- Rocket lineage is now durable in
+  `assets/meshes/toy_rocket_ship.provenance.json`: source commit `40eab52f`,
+  exact GLB/AKM and converter hashes, command, vertex count, and face count.
+  It records the earlier byte-identical reproduction honestly as non-closure
+  evidence because no durable command transcript was captured at that time.
+- Artifact-generation record: the small reachability dumper ran twice. The
+  first emitted the 196 exact keys; the second also projected the three
+  catalog-owned profiles after inspection found the generated client catalog
+  still hard-coded only profile `200`.
+- The appearance compiler was invoked four times. The first connected the 196
+  rows. Two receipt-convergence invocations overlapped because the execution
+  wrapper yielded a session identifier before the live Python process exited,
+  allowing an older process to overwrite newer metadata. The fourth invocation
+  followed the catalog-projection fix; completion was taken from its live
+  session/PID, after which the generated client catalog contained profiles
+  `200`, `201`, and `202` and the receipt compiler hash matched current source.
+  These were compile-time source-artifact operations, not gameplay attempts.
+- Execution boundary: no native server build, web build, client launch, headed
+  browser session, gameplay movement, screenshot, or runtime proof was
+  attempted. Highest current stage is Connected for the generated appearance
+  contract and Implemented for runtime behavior. Runtime verification and
+  operator acceptance remain open under the run hold.
+
+### P0C-07 correction attempt 3 — rejected flat terrain and undersized rocket
+
+- Operator continuation authorized one headed visual and multimodal check of
+  the staged correction batch. The native server and isolated web build
+  completed, and the user-reachable browser viewport showed Wallace, standalone
+  Gromit, the yellow material, and the exact `toy_rocket_ship.akm` instance.
+- Same-run authority reported Wallace as profile `201`/skin `102` and Gromit as
+  profile `202`/skin `103`, mount `0`, companion disposition, owner player `0`.
+  After real viewport movement their separation was `6.186` world units, so
+  this attempt confirms the corrected catalog and follow paths at Executed
+  stage. It remains dirty-source evidence rather than commit-bound closure.
+- Visual acceptance failed. Every map height sample was still exactly `128`,
+  producing a featureless plane, and the rocket instance used a `1.0` scale.
+  The operator rejected both outcomes: the rocket was "wayyyy too small" and
+  the terrain must contain many varied bumpy hills.
+- Selected correction: the map generator remains the single owner. Replace its
+  constant height assignment with one deterministic world-coordinate height
+  function so duplicated patch-edge vertices agree exactly. Preserve yellow
+  material ownership, add broad dunes plus smaller knolls, flatten only the
+  immediate spawn and launch pads, derive both Z positions from the generated
+  surface, and enlarge the rocket at its map-owned transform.
+- Setup notes preserved for the next attempt: one detached build produced no
+  durable receipt, a date/session rollover interrupted the first web build,
+  and temporary-directory launch paths expired. The successful evidence used
+  foreground builds and managed live process sessions. The next run will use
+  those owners directly and omit verbose runtime diagnostics.
+- Structural generation attempt 3a did not launch the game. Shared-edge
+  continuity, yellow-only material selection, at least 60 distinct elevations,
+  and at least 60 units of relief passed, but the bounded local-maximum check
+  counted 43 hills against the selected minimum of 50. Reject that frequency
+  mix and increase only the small-knoll frequency before regenerating.
+- Structural generation attempt 3b passed the 50-hill floor after that
+  frequency change, then found one adjacent two-world-unit sample step of `10`
+  against the selected maximum of `9`. Reject the sharpest amplitude mix;
+  preserve the frequencies and reduce only the two small-feature amplitudes.
+- Structural generation attempt 3c passed all three scene tests. The generated
+  map preserves one yellow material ID, exact shared-edge continuity, at least
+  60 distinct elevations, at least 60 units of total relief, at least 50 local
+  peaks, and no adjacent two-world-unit step above `9`. The rocket transform is
+  uniformly `4.0`, remains within 24 world units of spawn, and its Z translation
+  seats the scaled AKM lower bound on the generated launch-pad elevation. This
+  is static Verified evidence only; headed terrain and rocket appearance remain
+  unresolved until the selected focused runtime attempt.
+
+### P0C-07 attempt 3d — operator rejection of scale-4/flat headed result
+
+- The subsequent headed frame still rendered the rocket as far too small even
+  at the configured `4.0` scale, and the terrain remained visually totally flat.
+  The operator explicitly rejected the frame; structural height/relief tests do
+  not substitute for visible render geometry.
+- Wallace and Gromit identities remained correct in that live frame, so the
+  unresolved owner is the map/mesh presentation path rather than actor identity.
+- No further completion claim is valid until a fresh user-reachable render
+  visibly shows many varied bumpy hills and a rocket that is unmistakably much
+  larger, tied to the same runtime state and authoritative scene data.
+
+### P0C-07 audit follow-up — visual flattening and rocket-scale diagnosis
+
+- Two Luna read-only audits found that the generated A3D heights survive the
+  loader and renderer. The visual flattening came from near-uniform sand RGB
+  values quantizing to one terminal color, while the local relief projected to
+  only one or two pixels. The rocket asset bounds are approximately
+  `4.929 x 7.202 x 4.810`, making scale `4` visually modest.
+- Selected correction: render a wide all-yellow ramp across multiple terminal
+  color bins, use much stronger continuous relief, and set the map-owned rocket
+  transform to scale `8` at `(-28,-36)`.
+- Static regeneration passed three tests: at least `180` total relief, at least
+  `120` local spawn-neighborhood relief, at least `160` elevations, at least
+  `50` peaks, exact shared-edge continuity, rocket distance `40..50`, and
+  terrain seating. This is static evidence only; fresh headed visual acceptance
+  remains pending.
+
+### P0C-07 headed attempt 3e — scale-8 terrain resolved, composition/color rejected
+
+- The first scale-8/high-relief headed frame plainly showed numerous terrain
+  contours and hills, resolving the prior flatness defect at the user-facing
+  viewport stage. The rocket was unmistakably larger, but was partially clipped
+  by the left viewport edge.
+- Some darkest terminal sand shades read olive rather than uniformly
+  yellow/brown. Composition and color are therefore not accepted yet.
+- Selected next correction: reposition the rocket into the visible composition
+  and use a red-dominant wide sandy ramp. No engine refactor is implicated.
+
+### P0C-07 operator clarification after headed attempt 3e
+
+- The original yellow terrain color was acceptable. In the operator's wording,
+  “flat” referred primarily to the rocket rendering, not the rocket's map
+  location. The scale-8 screenshot shows a huge, flat, glyphless orange
+  slab/blob over the player rather than a recognizable volumetric rocket.
+- Reject position and palette tuning as the primary intervention. Freeze the
+  rocket location, restore the original yellow material, and audit/fix the
+  GLB-to-AKM axes, node transforms, normals, material handling, and glyph
+  rendering before another headed run.
+
+### P0C-07 correction tooling — GLB-to-AKM geometry/material ownership
+
+- Luna's audit found the GLB long axis on Z becoming the AKM ground-plane Y
+  because node transforms were ignored; the renderer was not flattening the
+  triangles. The converter also applied material `0` globally, collapsing the
+  rocket body and glass into one material.
+- Implemented primitive-owned material texture selection in
+  `picocad_to_akm.py`. The exact converter command was run twice and produced
+  byte-identical AKM SHA-256
+  `ceb99d7aa06a00a9555f7bef8f6158e1c8857059215571a270ea376e2d714d7f`, with
+  `1128` vertices, `1012` faces, and colors orange `(255,102,0,0)` plus gray
+  `(204,204,204,0)`.
+- The generator restores the operator-approved original yellow ramp and uses
+  a `-90` degree X upright transform with horizontal scale `4`, vertical scale
+  `64` (`16:1` compensation), and exact rotated seating from AKM maxY `4.409`;
+  XY location remains frozen. Map SHA-256 is
+  `4343ab53041cbe826c654cc668d5ad74a49d2bc673669f2936d392e14fce622e`.
+- Three scene tests pass. A read-only awk inspection initially used `NR>16`
+  and hit `end_header`/out-of-range; the corrected `NR>17` inspection observed
+  both colors. This is structural evidence only; fresh headed proof remains
+  pending.
+
+### P0C-07 headed attempt 3f — rocket geometry/material defect resolved
+
+- A fresh real-browser frame after the upright/material correction shows the
+  rocket no longer flat: it is a volumetric upright orange body with depth
+  shading, fins, and gray glass on the restored original yellow sand. The main
+  operator-defined rocket defect is resolved at the headed visual stage.
+- Remaining secondary defect: the upright rocket is partly clipped by the left
+  viewport edge. Do not alter geometry or palette; calculate only a minimal
+  screen-right/Y-map translation before final proof.
+- This is dirty-source headed evidence. Operator acceptance remains pending.
+
+### P0C-07 attempt 3f placement correction tooling
+
+- Luna's projection audit selected `ROCKET_XY=(-16,-48)`, a delta of
+  `(+12,-12)`, to move the upright rocket mostly right with minimal vertical
+  change. The resulting XY bounds keep Wallace and Gromit outside collision.
+- The generator regenerated map SHA-256
+  `ba4d13c979d031df4fd5c6b3f44f3e98784079091a0ebbcdc89350b23fcec7c0`, and all
+  three scene tests pass. This supersedes only the prior intermediate map hash;
+  rocket geometry, material, and palette are unchanged.
+- Final headed proof remains pending.
+
+### P0C-07 headed attempt 3g — verified dirty-source composition
+
+- A user-reachable browser session using the real PLAY control displayed the
+  full rocket inside the viewport: large, upright, volumetric, with a rounded
+  body, fins/landing structure, depth shading, and separate gray glass. The
+  original yellow sand ramp was restored, and Wallace was visible nearby.
+- Same-run authority at tick `1370` reported Wallace profile `201`, skin `102`,
+  mount `0`, subject `wallace_player`, terrain Z `242`; Gromit profile `202`,
+  skin `103`, mount `0`, subject `gromit_companion`, disposition `1`, owner `0`.
+- Evidence screenshot
+  `docs/recordings/wallace-gromit-upright-rocket.png` SHA-256
+  `ca9531b9ca12344f9a7c32f9474d627333731477385bea0567a380212ae5490c`;
+  map `ba4d13c979d031df4fd5c6b3f44f3e98784079091a0ebbcdc89350b23fcec7c0`;
+  AKM `ceb99d7aa06a00a9555f7bef8f6158e1c8857059215571a270ea376e2d714d7f`;
+  web HTML `002a396...`, JS `619b232...`, WASM `546dd269...`, data
+  `7a1bf933...`, server `075b4f...`.
+- This is Verified dirty-source headed evidence. Operator acceptance and
+  commit-bound proof remain pending.
+
+### P0C-07 final static-suite attempt — stale upstream test owner blocks closure
+
+- Focused scene tests plus JSON/diff checks passed. The standalone suite
+  `./scripts/run_standalone_checks.sh` collected `29` tests, passed `26`, and
+  failed `3` in
+  `scripts/test_compile_actor_visual_profiles_upstream_contract.py`.
+- All three traces resolve to stale
+  `/Users/r/Projects/asciicker-historical-runtime`: two calls use the old
+  `_profile_layers` signature without `contract_kind`, and one assertion still
+  expects `192` rows instead of the current `196`.
+- Classify this as a stale test owner unrelated to the rocket visual, but it
+  blocks full-suite closure. Selected next action is to inspect/remove the old
+  repository resolution and update the tests to the current 196-row/custom
+  contract, then rerun the static suite only.
+
+### P0C-07 closure static rerun — passed
+
+- The stale tests were updated to call `_profile_layers` with explicit upstream
+  `contract_kind` and to assert `196` total bindings split into `192` upstream
+  plus `4` custom rows.
+- `./scripts/run_standalone_checks.sh` then passed all `29` pytest cases and
+  the FL-4131 fixture/admission/manifest outputs, glyph parity corpus `16/16`,
+  fail-closed glyph test, web atlas, JOIN_V2 capacity, inbound budget, glyph
+  manifests, actor coverage `196`, current server reachability, and diagnostic
+  isolation.
+- No game runtime was launched for this static rerun.

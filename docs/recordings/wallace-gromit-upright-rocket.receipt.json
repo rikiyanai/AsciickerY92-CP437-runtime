@@ -1,0 +1,84 @@
+{
+  "schema": "asciicker.wallace_gromit_upright_rocket_proof.v1",
+  "captured_at": "2026-08-15T01:31:00+09:00",
+  "evidence_scope": {
+    "stage": "Verified dirty-source headed evidence",
+    "source_head": "4c2610a84a791da83d67488ea566dd84644bfd7b",
+    "git_dirty": true,
+    "commit_bound": false,
+    "operator_accepted": false,
+    "limitation": "The frame verifies the staged correction before commit; operator acceptance and commit-bound proof remain open."
+  },
+  "runtime": {
+    "surface": "headed Chrome WebAssembly client connected through the real PLAY control to the native authoritative server",
+    "url": "http://127.0.0.1:8765/",
+    "web_build_version": "4bcc4c0517939fa8",
+    "index_html_sha256": "002a396937a93699671c1a3625618a38e17c2d83a0fd80755603d7bba77d5094",
+    "index_js_sha256": "619b232bf1f0ca8654bcb8787920dfcfbf9d397ae2f7cbfa4043862975e460c7",
+    "index_wasm_sha256": "546dd26954b48f86e8e463f5dd7b55b804caad383082989750d113d953c6227c",
+    "index_data_sha256": "7a1bf933dc0259483c1e9bb2e6b00fb73456d73ae0dd56b52f320c5e0123955c",
+    "server_sha256": "075b4fafd8f99f73b3a3f20c67e6d866a8b7df0c1b37f195fca98ce2c4a624d8"
+  },
+  "artifact": {
+    "path": "docs/recordings/wallace-gromit-upright-rocket.png",
+    "sha256": "ca9531b9ca12344f9a7c32f9474d627333731477385bea0567a380212ae5490c",
+    "width": 1200,
+    "height": 960,
+    "observation": "The full rocket is visibly large, upright, and volumetric with an orange rounded body, fins/landing structure, depth shading, and separate gray glass on the original yellow sand."
+  },
+  "map": {
+    "path": "assets/a3d/game_map_y8.a3d",
+    "sha256": "ba4d13c979d031df4fd5c6b3f44f3e98784079091a0ebbcdc89350b23fcec7c0",
+    "format_version": 4,
+    "patch_count": 9207,
+    "only_material_id": 4,
+    "height_contract": {
+      "minimum_distinct_elevations": 160,
+      "minimum_total_relief": 180,
+      "minimum_spawn_neighborhood_relief": 120,
+      "minimum_local_peaks": 50,
+      "shared_edges_identical": true
+    },
+    "player_start": [-4.0, -74.0, 242.0],
+    "rocket_xy": [-16.0, -48.0],
+    "rocket_transform": [
+      4.0, 0.0, 0.0, 0.0,
+      0.0, 0.0, -64.0, 0.0,
+      0.0, 4.0, 0.0, 0.0
+    ],
+    "enemy_generator_count": 0,
+    "map_item_count": 0
+  },
+  "rocket": {
+    "source_glb_sha256": "6990ca861b55d4afd5073aa1cc09b018eb6617324a618c52215ca40ded271263",
+    "akm_sha256": "ceb99d7aa06a00a9555f7bef8f6158e1c8857059215571a270ea376e2d714d7f",
+    "vertices": 1128,
+    "faces": 1012,
+    "vertex_colors": [[255, 102, 0, 0], [204, 204, 204, 0]],
+    "orientation": "AKM long-axis Y rotated to runtime vertical with 16:1 height compensation"
+  },
+  "same_run_authoritative_state": {
+    "tick": 1370,
+    "appearance_contract_version": 3,
+    "bundle_hash": "98fd748f3c0e47ac8ca02b32d5862deeb991593c23886a9027348122defd09dc",
+    "wallace": {
+      "player_id": 0,
+      "position": [-4.0, -74.0, 242.25],
+      "terrain_z": 242.0,
+      "profile_id": 201,
+      "skin_definition_id": 102,
+      "mount_definition_id": 0,
+      "subject_key": "wallace_player"
+    },
+    "gromit": {
+      "entity_id": 50,
+      "position": [-8.0, -77.0, 250.0],
+      "profile_id": 202,
+      "skin_definition_id": 103,
+      "mount_definition_id": 0,
+      "subject_key": "gromit_companion",
+      "disposition": 1,
+      "owner_player_id": 0
+    }
+  }
+}

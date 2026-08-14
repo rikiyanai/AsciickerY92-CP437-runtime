@@ -185,16 +185,18 @@ def read_gltf_buffers(gltf_dir, gltf_data):
     return buffers
 
 
-def resolve_texture_path(gltf_data, gltf_dir):
-    """Find the PNG texture path from the first material's baseColorTexture.
+def resolve_texture_path(gltf_data, gltf_dir, material_index=0):
+    """Find one material's PNG texture through its baseColorTexture chain.
 
     Returns the absolute path to the PNG, or None if not found.
     """
-    # Walk: materials[0] -> pbrMetallicRoughness -> baseColorTexture -> index -> images[]
+    # Walk: materials[index] -> PBR texture -> textures[] -> images[]. A GLTF
+    # primitive owns its material index; using material 0 globally erases every
+    # secondary material when primitives are merged into one AKM.
     materials = gltf_data.get("materials", [])
-    if not materials:
+    if material_index < 0 or material_index >= len(materials):
         return None
-    mat = materials[0]
+    mat = materials[material_index]
     pbr = mat.get("pbrMetallicRoughness", {})
     tex_ref = pbr.get("baseColorTexture", {})
     tex_index = tex_ref.get("index")
@@ -560,38 +562,43 @@ def convert_gltf_to_akm(
         print(f"Error: Could not read GLTF binary buffer(s): {e}", file=sys.stderr)
         return False
 
-    # Find texture
-    tex_path = resolve_texture_path(gltf, gltf_dir)
-    if not tex_path or not os.path.exists(tex_path):
-        print("Error: No texture found in GLTF material", file=sys.stderr)
+    # Material selection belongs to each primitive. Preload an independent
+    # texture/palette pair for every material so merged meshes preserve body,
+    # glass, trim, and any other authored surface distinctions.
+    material_palettes = {}
+    source_color_count = 0
+    snapped_colors = set()
+    for material_index, material in enumerate(gltf.get("materials", [])):
+        tex_path = resolve_texture_path(gltf, gltf_dir, material_index)
+        if not tex_path or not os.path.exists(tex_path):
+            print(
+                f"Error: No texture found for GLTF material {material_index}",
+                file=sys.stderr,
+            )
+            return False
+        try:
+            image = Image.open(tex_path).convert("RGB")
+        except Exception as e:
+            print(f"Error: Could not load texture {tex_path}: {e}", file=sys.stderr)
+            return False
+        colors, warning = detect_picocad_palette(image)
+        if not colors:
+            print(
+                f"Error: No colors detected for GLTF material {material_index}",
+                file=sys.stderr,
+            )
+            return False
+        if warning:
+            name = material.get("name", str(material_index))
+            print(f"Warning: material {name!r}: {warning}")
+        palette_map = quantize_picocad_palette(colors)
+        material_palettes[material_index] = (image, palette_map)
+        source_color_count += len(colors)
+        snapped_colors.update(palette_map.values())
+
+    if not material_palettes:
+        print("Error: No GLTF materials found", file=sys.stderr)
         return False
-
-    # Load texture
-    try:
-        image = Image.open(tex_path).convert("RGB")
-    except Exception as e:
-        print(f"Error: Could not load texture {tex_path}: {e}", file=sys.stderr)
-        return False
-
-    # Detect + quantize palette
-    colors, warning = detect_picocad_palette(image)
-    if not colors:
-        print("Error: No colors detected in texture", file=sys.stderr)
-        return False
-    if warning:
-        print(f"Warning: {warning}")
-
-    palette_map = quantize_picocad_palette(colors)
-
-    # Warn on SAFE_LEVELS collisions
-    snapped_set = set(palette_map.values())
-    if len(snapped_set) < len(colors):
-        print(
-            f"Warning: {len(colors)} source colors collapsed to "
-            f"{len(snapped_set)} unique snapped colors"
-        )
-
-    color_count = len(snapped_set)
 
     # Process each mesh
     meshes = gltf.get("meshes", [])
@@ -657,7 +664,18 @@ def convert_gltf_to_akm(
             for i in range(0, len(indices) - 2, 3):
                 faces.append((indices[i], indices[i + 1], indices[i + 2]))
 
-            # Sample texture at UVs to get per-vertex colors
+            material_index = prim.get("material", 0)
+            material_data = material_palettes.get(material_index)
+            if material_data is None:
+                print(
+                    f"Error: Primitive {pi} references missing material "
+                    f"{material_index}",
+                    file=sys.stderr,
+                )
+                return False
+            image, palette_map = material_data
+
+            # Sample this primitive's own texture at UVs for vertex colors.
             vertex_colors = []
             for uv in uvs:
                 u, v = uv[0], uv[1]
@@ -752,7 +770,8 @@ def convert_gltf_to_akm(
                 write_akm(out, verts, faces)
 
     print(
-        f"  {len(colors)} source colors → {color_count}/{16} unique SAFE_LEVELS colors"
+        f"  {source_color_count} source colors → "
+        f"{len(snapped_colors)}/216 unique SAFE_LEVELS colors"
     )
     return True
 

@@ -63,6 +63,13 @@ def _build_and_run() -> dict:
     keys = doc.get("reachable_keys")
     if not isinstance(keys, list) or len(keys) != doc.get("reachable_key_count"):
         raise ValueError("server reachability count does not match emitted keys")
+    profiles = doc.get("catalog_profiles")
+    if (
+        not isinstance(profiles, list)
+        or len(profiles) != doc.get("catalog_profile_count")
+        or not profiles
+    ):
+        raise ValueError("server catalog profile count does not match emitted profiles")
     scope_seed = {
         "schema_id": doc.get("schema_id"),
         "source": doc.get("source"),
@@ -76,6 +83,7 @@ def _build_and_run() -> dict:
             "schema_id": doc.get("schema_id"),
             "source": doc.get("source"),
             "catalog_source": doc.get("catalog_source"),
+            "catalog_profiles": profiles,
             "reachable_keys": keys,
         }
     )

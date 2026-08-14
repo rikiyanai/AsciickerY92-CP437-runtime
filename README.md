@@ -16,13 +16,16 @@ the integrated runtime is CP437-only.
 
 ## Real runtime evidence
 
-![Wallace, Gromit, and the rocket on the sand map](docs/recordings/wallace-gromit-sand-scene.jpg)
+![Wallace beside the large upright rocket on the sand map](docs/recordings/wallace-gromit-upright-rocket.png)
 
-The canonical scene is now a flat yellow sand map. Wallace spawns as the
-playable actor, the map-owned rocket sits nearby, and authoritative Gromit
-follows the player while remaining outside hostile and damage-target paths.
-The matching [scene receipt](docs/recordings/wallace-gromit-sand-scene.receipt.json)
-binds the viewport, map, web build, asset hashes, and same-run follow state.
+The canonical scene is now a varied yellow sand map with broad dunes and many
+smaller hills. Wallace spawns as the playable actor, the large upright rocket
+sits nearby, and authoritative Gromit follows the player while remaining
+outside hostile and damage-target paths.
+The current [upright-rocket scene receipt](docs/recordings/wallace-gromit-upright-rocket.receipt.json)
+binds the headed viewport to the rebuilt web artifacts and same-run authority.
+It is dirty-source verification; operator acceptance and commit-bound proof
+remain separate stages.
 
 ![Same-session base, armor, helmet, and sword transitions in the browser runtime](docs/recordings/cp437-runtime-layer-transitions.gif)
 

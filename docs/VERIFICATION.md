@@ -1,6 +1,35 @@
 # Verification record
 
+## Wallace/Gromit upright-rocket correction (2026-08-15)
+
+The current correction is Verified against the staged dirty source. It is not
+commit-bound closure and does not infer operator acceptance.
+
+- `python3 -m pytest tests/test_wallace_sand_scene.py -q`: 3 passed. The map
+  contract checks continuous varied hills, original yellow material ownership,
+  upright rocket transform/seating, exact assets, and standalone Gromit state.
+- The exact GLB conversion command ran twice and reproduced AKM SHA-256
+  `ceb99d7aa06a00a9555f7bef8f6158e1c8857059215571a270ea376e2d714d7f`
+  with 1,128 vertices, 1,012 faces, and separate orange-body/gray-glass colors.
+- `./build-web.sh` passed glyph admission, 196-row actor coverage, diagnostic
+  isolation, Emscripten compilation, and web staging.
+- The real headed browser **PLAY** control opened the current map. The saved
+  viewport shows the rocket fully in frame, large, upright, and volumetric with
+  a rounded body, fins/landing structure, depth shading, and gray glass on the
+  operator-approved yellow sand.
+- Same-run authority at tick `1370` reported Wallace profile `201`/skin `102`
+  and Gromit profile `202`/skin `103`; both had mount `0`, while Gromit retained
+  companion disposition `1` and owner player `0`.
+
+See `docs/recordings/wallace-gromit-upright-rocket.*` for the headed image and
+hash-bound dirty-source receipt.
+
 ## Wallace/Gromit sand scene (2026-08-14)
+
+The commands and viewport below describe the earlier `9508af7` attempt. The
+capture's ignored web slot manifest named an older dirty revision, so this is
+Executed historical evidence, not commit-bound verification of the current
+correction batch.
 
 - `python3 -m pytest -q tests/test_wallace_sand_scene.py`: 3 passed.
 - `make -j4 -f makefile_server`: native server linked successfully.
@@ -13,6 +42,11 @@
   authoritative Gromit followed and settled `6.883` units away inside the
   seven-unit stop band. See the image and JSON receipt under
   `docs/recordings/wallace-gromit-sand-scene.*`.
+- Review corrections now give Wallace and Gromit explicit standalone catalog
+  profiles, restore the historical normalized aliases, remove Gromit's mount
+  state, and give follow hysteresis one persistent state owner. These changes
+  are Implemented but intentionally not Executed while the operator run hold
+  remains active.
 
 Date: 2026-08-12 (Asia/Tokyo)
 

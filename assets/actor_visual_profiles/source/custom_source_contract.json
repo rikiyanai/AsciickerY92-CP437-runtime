@@ -1,0 +1,38 @@
+{
+  "schema": "actor_visual_custom_source_contract/v1",
+  "authority": true,
+  "source_owner": "target-authored standalone actor sheets",
+  "entry_count": 2,
+  "entries": [
+    {
+      "source_xp": "assets/sprites/2026-08-12-030327-wallace.xp",
+      "source_xp_id": "2026-08-12-030327-wallace",
+      "source_sha256": "0e2bd7823d3aab79007df8a1c6c58150b5bb3c7718a75ce0ae9df27e88adbc3a",
+      "source_commit": "f9ca59759fd46828e6cc320428ec7e6132dd4648",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "actor_body_wallace"
+      ],
+      "review_unit_id": "wallace-approved-sheet-L2"
+    },
+    {
+      "source_xp": "assets/sprites/2026-08-12-030327-gromit.xp",
+      "source_xp_id": "2026-08-12-030327-gromit",
+      "source_sha256": "e2e2a4212fb57c70ffc615c4c8539e336f7a9bc08b88e6c3648f37ec2a9b5bb5",
+      "source_commit": "f9ca59759fd46828e6cc320428ec7e6132dd4648",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "companion_body_gromit"
+      ],
+      "review_unit_id": "gromit-approved-sheet-L2"
+    }
+  ]
+}

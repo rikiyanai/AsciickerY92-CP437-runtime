@@ -3,9 +3,10 @@
 // All enumeration logic and ID vocabulary live in server/actor_visual_reachability.h
 // (the server-owned reachability authority). This file's job is to call
 // EnumerateReachableKeys() and serialise each key to JSON in a shape that the
-// scripts/dump_actor_visual_reachability.py wrapper consumes. It emits only the
-// full CompiledActorVisualKey shape; legacy partial fields are intentionally
-// absent so validators cannot match by selector-like subsets.
+// scripts/dump_actor_visual_reachability.py wrapper consumes. It emits the
+// catalog-owned profile projection plus the full CompiledActorVisualKey shape;
+// legacy partial keys are intentionally absent so validators cannot match by
+// selector-like subsets.
 
 #include "actor_visual_reachability.h"
 
@@ -33,6 +34,31 @@ int main()
 
 	printf("{\n");
 	printf("  \"catalog_source\": \"server/actor_visual_catalog_source.h\",\n");
+	printf("  \"catalog_profile_count\": %d,\n", kAppearanceCatalogProfileCount);
+	printf("  \"catalog_profiles\": [\n");
+	for (int i = 0; i < kAppearanceCatalogProfileCount; i++)
+	{
+		const AppearanceCatalogProfileDef& profile = kAppearanceCatalogProfiles[i];
+		printf("    {\"id\": %u, \"reachability_policy\": %u, \"skin_definition_id\": %u, \"slug\": ",
+		       (unsigned)profile.id,
+		       (unsigned)profile.reachability_policy,
+		       (unsigned)profile.skin_definition_id);
+		EmitJsonString(profile.slug);
+		printf(", \"starter_entries\": [");
+		for (uint8_t s = 0; s < profile.starter_count; s++)
+		{
+			if (s)
+				printf(", ");
+			const AppearanceCatalogStarterEntry& starter = profile.starter_entries[s];
+			printf("{\"item_definition_id\": %u, \"slot_kind_id\": %u, \"state_flags\": %u, \"visual_style_id\": %u}",
+			       (unsigned)starter.item_definition_id,
+			       (unsigned)starter.slot_kind_id,
+			       (unsigned)starter.state_flags,
+			       (unsigned)starter.visual_style_id);
+		}
+		printf("]}%s\n", (i + 1 < kAppearanceCatalogProfileCount) ? "," : "");
+	}
+	printf("  ],\n");
 	printf("  \"errors\": [],\n");
 	printf("  \"reachable_key_count\": %zu,\n", keys.size());
 	printf("  \"reachable_keys\": [\n");

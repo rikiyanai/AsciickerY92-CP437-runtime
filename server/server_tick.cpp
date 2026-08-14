@@ -1793,18 +1793,18 @@ static bool SvrSelectJoinAppearanceProfile(const ServerState* state,
     if (!SvrLoadActorVisualProfileCatalog(&cache))
         return false;
 
-    const SvrActorVisualProfileCatalogProfileDef* default_profile =
-        SvrFindAppearanceProfileById(&cache, cache.default_profile_id);
-    if (!default_profile)
+    const SvrActorVisualProfileCatalogProfileDef* wallace_profile =
+        SvrFindAppearanceProfileById(&cache, APPEARANCE_CATALOG_WALLACE_PROFILE_ID);
+    if (!wallace_profile)
         return false;
     if (out_profile)
-        *out_profile = default_profile;
+        *out_profile = wallace_profile;
     if (out_source_kind)
-        *out_source_kind = SVR_APPEARANCE_SOURCE_DEFAULT_PROFILE;
+        *out_source_kind = SVR_APPEARANCE_SOURCE_SCENE_PROFILE;
     if (out_subject_kind)
-        *out_subject_kind = SVR_APPEARANCE_SUBJECT_DEFAULT;
+        *out_subject_kind = SVR_APPEARANCE_SUBJECT_SCENE_ROLE;
     if (out_subject_key)
-        SvrCopyAppearanceSubjectKey(out_subject_key, "default_subject");
+        SvrCopyAppearanceSubjectKey(out_subject_key, "wallace_player");
     return true;
 }
 
@@ -5106,7 +5106,7 @@ static bool SvrEnsurePlayerCompanion(ServerState* state, int owner_player_id)
     if (!SvrLoadActorVisualProfileCatalog(&cache))
         return false;
     const SvrActorVisualProfileCatalogProfileDef* profile =
-        SvrFindAppearanceProfileById(&cache, cache.default_profile_id);
+        SvrFindAppearanceProfileById(&cache, APPEARANCE_CATALOG_GROMIT_PROFILE_ID);
     if (!profile)
         return false;
 
@@ -5147,7 +5147,7 @@ static bool SvrEnsurePlayerCompanion(ServerState* state, int owner_player_id)
     npc->hp = SVR_NPC_MAX_HP;
     npc->max_hp = SVR_NPC_MAX_HP;
     npc->life_state = LIFE_STATE::ALIVE;
-    npc->mount_state = MOUNT::WOLF;
+    npc->mount_state = MOUNT::NONE;
     npc->locomotion_state = LOCOMOTION_STATE::IDLE;
     npc->combat_state = COMBAT_STATE::NONE;
     npc->presentation_kind_id = APPEARANCE_PRESENTATION_KIND_IDLE_WALK;
@@ -5162,13 +5162,9 @@ static bool SvrEnsurePlayerCompanion(ServerState* state, int owner_player_id)
     SvrApplyProfileToAppearance(&npc->appearance,
                                 &cache,
                                 profile,
-                                SVR_APPEARANCE_SOURCE_DEFAULT_PROFILE,
-                                SVR_APPEARANCE_SUBJECT_NPC_SPAWN,
+                                SVR_APPEARANCE_SOURCE_SCENE_PROFILE,
+                                SVR_APPEARANCE_SUBJECT_SCENE_ROLE,
                                 "gromit_companion");
-    // The normalized wolf-rig base row now owns the approved Gromit sheet.
-    // This authored mount key selects that row without adding a renderer-side
-    // path selector or a loose-XP fallback.
-    npc->appearance.mount_definition_id = 950;
     SvrSyncAppearanceCompiledActorVisualKeyDimensions(
         &npc->appearance, APPEARANCE_PRESENTATION_KIND_IDLE_WALK, true);
     SvrRefreshNpcPresentationKind(state, npc);
@@ -7946,6 +7942,11 @@ static void SvrUpdateNpcAI(ServerState* state)
                 dist = 5.0f;
             }
             if (dist > 9.0f)
+                npc->follow_active = true;
+            else if (dist < 7.0f)
+                npc->follow_active = false;
+
+            if (npc->follow_active && dist > 0.01f)
             {
                 const float inv = 0.5f / dist;
                 npc->intent_force[0] = dx * inv;
@@ -7953,7 +7954,7 @@ static void SvrUpdateNpcAI(ServerState* state)
                 npc->intent_dir =
                     (float)(atan2((double)dy, (double)dx) * 180.0 / M_PI) + 90.0f;
             }
-            else if (dist < 7.0f)
+            else
             {
                 npc->intent_force[0] = 0.0f;
                 npc->intent_force[1] = 0.0f;

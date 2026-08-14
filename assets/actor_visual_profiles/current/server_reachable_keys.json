@@ -1,7 +1,31 @@
 {
+  "catalog_profile_count": 3,
+  "catalog_profiles": [
+    {
+      "id": 200,
+      "reachability_policy": 0,
+      "skin_definition_id": 101,
+      "slug": "default_profile",
+      "starter_entries": []
+    },
+    {
+      "id": 201,
+      "reachability_policy": 1,
+      "skin_definition_id": 102,
+      "slug": "wallace_player",
+      "starter_entries": []
+    },
+    {
+      "id": 202,
+      "reachability_policy": 2,
+      "skin_definition_id": 103,
+      "slug": "gromit_companion",
+      "starter_entries": []
+    }
+  ],
   "catalog_source": "server/actor_visual_catalog_source.h",
   "errors": [],
-  "reachable_key_count": 192,
+  "reachable_key_count": 196,
   "reachable_keys": [
     {
       "key": {
@@ -3842,12 +3866,92 @@
         "weapon_style_id": 500
       },
       "server_reason": "server C++ catalog plus server_tick presentation/combat ownership"
+    },
+    {
+      "key": {
+        "actor_style_id": 0,
+        "chest_item_id": 0,
+        "chest_style_id": 0,
+        "future_slots": [],
+        "head_item_id": 0,
+        "head_style_id": 0,
+        "mount_id": 0,
+        "presentation_kind_id": 600,
+        "rig_id": 0,
+        "shield_item_id": 0,
+        "shield_style_id": 0,
+        "skin_id": 102,
+        "variation_id": 0,
+        "weapon_item_id": 0,
+        "weapon_style_id": 0
+      },
+      "server_reason": "server C++ catalog plus server_tick presentation/combat ownership"
+    },
+    {
+      "key": {
+        "actor_style_id": 0,
+        "chest_item_id": 0,
+        "chest_style_id": 0,
+        "future_slots": [],
+        "head_item_id": 0,
+        "head_style_id": 0,
+        "mount_id": 0,
+        "presentation_kind_id": 601,
+        "rig_id": 0,
+        "shield_item_id": 0,
+        "shield_style_id": 0,
+        "skin_id": 102,
+        "variation_id": 0,
+        "weapon_item_id": 0,
+        "weapon_style_id": 0
+      },
+      "server_reason": "server C++ catalog plus server_tick presentation/combat ownership"
+    },
+    {
+      "key": {
+        "actor_style_id": 0,
+        "chest_item_id": 0,
+        "chest_style_id": 0,
+        "future_slots": [],
+        "head_item_id": 0,
+        "head_style_id": 0,
+        "mount_id": 0,
+        "presentation_kind_id": 602,
+        "rig_id": 0,
+        "shield_item_id": 0,
+        "shield_style_id": 0,
+        "skin_id": 102,
+        "variation_id": 0,
+        "weapon_item_id": 0,
+        "weapon_style_id": 0
+      },
+      "server_reason": "server C++ catalog plus server_tick presentation/combat ownership"
+    },
+    {
+      "key": {
+        "actor_style_id": 0,
+        "chest_item_id": 0,
+        "chest_style_id": 0,
+        "future_slots": [],
+        "head_item_id": 0,
+        "head_style_id": 0,
+        "mount_id": 0,
+        "presentation_kind_id": 600,
+        "rig_id": 0,
+        "shield_item_id": 0,
+        "shield_style_id": 0,
+        "skin_id": 103,
+        "variation_id": 0,
+        "weapon_item_id": 0,
+        "weapon_style_id": 0
+      },
+      "server_reason": "server C++ catalog plus server_tick presentation/combat ownership"
     }
   ],
   "schema_id": "asciicker.actor_visual_profiles.server_reachability.v1",
-  "server_catalog_hash": "9aa4e65ab689d31c14dc3601be054a822c3b821b5b7f09b47eb469970f0b64be",
+  "server_catalog_hash": "55db1cdc2ac876386bf8e47073f1f9b506253bc7b58ed8dc1fbf73cc6b23cb7e",
   "server_markers_ok": true,
-  "server_reachability_hash": "c0dd1d0e142cc5dbb08d3a06368b9f97cfafe81046397524fbadbfd0cedceccd",
+  "server_reachability_hash": "6538a96f3d6220d3640f89256189fce407f4f51cd19cde10234d75b2e44745da",
   "server_reachability_scope_id": "server_reachability_scope:b18f0823d6b7f04b",
   "source": "server/actor_visual_reachability_dump.cpp"
 }

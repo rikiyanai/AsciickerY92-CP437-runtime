@@ -51,7 +51,7 @@ def test_false_clean_player_base_stays_composite() -> None:
     source_xp = "assets/sprites/player-0001.xp"
     sprite = compiler._load_xp(REPO_ROOT / source_xp)
     layers = compiler._profile_layers(
-        source_id, source_xp, sprite, list(range(sprite.atlas_frames))
+        source_id, source_xp, sprite, list(range(sprite.atlas_frames)), "upstream"
     )
     assert len(layers) == 1
     assert layers[0]["layer_index"] == 2
@@ -69,7 +69,7 @@ def test_final_cyan_swoosh_uses_reviewed_multifold() -> None:
     source_xp = "assets/sprites/attack-0001.xp"
     sprite = compiler._load_xp(REPO_ROOT / source_xp)
     layers = compiler._profile_layers(
-        source_id, source_xp, sprite, list(range(sprite.atlas_frames))
+        source_id, source_xp, sprite, list(range(sprite.atlas_frames)), "upstream"
     )
     assert [layer["layer_index"] for layer in layers] == [2, 3]
     assert layers[0]["multifold_composite_overlay_indices"] == [3]
@@ -102,8 +102,15 @@ def test_server_dump_and_authored_bindings_cover_exact_same_keys() -> None:
     compiler = _load_module()
     reachability, keys = compiler._server_reachable_keys()
     bindings = compiler._profile_bindings(reachability, keys)
-    assert len(keys) == 192
-    assert len(bindings) == 192
+    assert len(keys) == 196
+    assert len(bindings) == 196
+    assert sum(
+        row.get("source_contract_kind", "upstream") == "upstream"
+        for row in bindings.values()
+    ) == 192
+    assert sum(
+        row.get("source_contract_kind") == "custom" for row in bindings.values()
+    ) == 4
     assert set(bindings) == {compiler._key_sort_tuple(key) for key in keys}
 
 

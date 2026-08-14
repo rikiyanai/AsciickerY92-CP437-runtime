@@ -43,6 +43,9 @@ SERVER_REACHABILITY = (
 PROFILE_BINDINGS = (
     REPO_ROOT / "assets/actor_visual_profiles/source/profile_bindings.json"
 )
+CUSTOM_SOURCE_CONTRACT = (
+    REPO_ROOT / "assets/actor_visual_profiles/source/custom_source_contract.json"
+)
 GENERATED_PROVENANCE = REPO_ROOT / "assets" / "actor_visual_profiles" / "current" / "actor_visual_profile_provenance.json"
 ADMISSION_ALLOWLIST = REPO_ROOT / "assets" / "glyphs" / "admission_allowlist.json"
 TRANSPARENT = 255
@@ -1129,6 +1132,52 @@ def _server_reachable_keys() -> tuple[dict[str, Any], list[dict[str, Any]]]:
     return doc, keys
 
 
+def _server_catalog_profiles(reachability_doc: dict[str, Any]) -> list[dict[str, Any]]:
+    profiles = reachability_doc.get("catalog_profiles")
+    if (
+        not isinstance(profiles, list)
+        or len(profiles) != int(reachability_doc.get("catalog_profile_count", -1))
+        or not profiles
+    ):
+        _fail("server reachability lacks the catalog-owned profile list")
+    ids: set[int] = set()
+    out: list[dict[str, Any]] = []
+    for index, profile in enumerate(profiles):
+        if not isinstance(profile, dict):
+            _fail(f"server catalog profile {index} is malformed")
+        profile_id = profile.get("id")
+        skin_id = profile.get("skin_definition_id")
+        slug = profile.get("slug")
+        starters = profile.get("starter_entries")
+        if (
+            not isinstance(profile_id, int)
+            or profile_id <= 0
+            or profile_id in ids
+            or not isinstance(skin_id, int)
+            or skin_id <= 0
+            or not isinstance(slug, str)
+            or not slug
+            or not isinstance(starters, list)
+        ):
+            _fail(f"server catalog profile {index} has invalid identity")
+        for starter_index, starter in enumerate(starters):
+            if not isinstance(starter, dict) or any(
+                not isinstance(starter.get(field), int)
+                for field in (
+                    "slot_kind_id",
+                    "item_definition_id",
+                    "visual_style_id",
+                    "state_flags",
+                )
+            ):
+                _fail(
+                    f"server catalog profile {index} starter {starter_index} is malformed"
+                )
+        ids.add(profile_id)
+        out.append(profile)
+    return out
+
+
 def _profile_bindings(
     reachability_doc: dict[str, Any],
     reachable_keys: list[dict[str, Any]],
@@ -1164,8 +1213,16 @@ def _profile_bindings(
             _fail(f"profile binding row {row_index} lacks an exact XP binding")
         if Path(source_xp).stem != source_id or not (REPO_ROOT / source_xp).is_file():
             _fail(f"profile binding row {row_index} has a stale XP binding")
-        if row.get("pinned_upstream_commit") != PINNED_UPSTREAM_COMMIT:
-            _fail(f"profile binding row {row_index} has stale upstream provenance")
+        contract_kind = row.get("source_contract_kind", "upstream")
+        if contract_kind == "upstream":
+            if row.get("pinned_upstream_commit") != PINNED_UPSTREAM_COMMIT:
+                _fail(f"profile binding row {row_index} has stale upstream provenance")
+        elif contract_kind == "custom":
+            contract = _custom_source_contract().get((source_xp, source_id))
+            if contract is None or row.get("source_commit") != contract.get("source_commit"):
+                _fail(f"profile binding row {row_index} has stale custom provenance")
+        else:
+            _fail(f"profile binding row {row_index} has an unknown source contract kind")
         profile_ids.add(profile_id)
         by_key[key_tuple] = row
     expected = {_key_sort_tuple(key) for key in reachable_keys}
@@ -1244,6 +1301,7 @@ def _attack_to_bigbee_frame_map(attack_sprite: Sprite, bigbee_sprite: Sprite) ->
 
 
 _UPSTREAM_CONTRACT_CACHE: tuple[dict[str, Any], dict[str, dict[str, Any]]] | None = None
+_CUSTOM_SOURCE_CONTRACT_CACHE: dict[tuple[str, str], dict[str, Any]] | None = None
 
 
 def _upstream_contract() -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
@@ -1253,13 +1311,95 @@ def _upstream_contract() -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
     return _UPSTREAM_CONTRACT_CACHE
 
 
+def _custom_source_contract() -> dict[tuple[str, str], dict[str, Any]]:
+    """Load target-owned authored sheets without borrowing upstream semantics."""
+    global _CUSTOM_SOURCE_CONTRACT_CACHE
+    if _CUSTOM_SOURCE_CONTRACT_CACHE is not None:
+        return _CUSTOM_SOURCE_CONTRACT_CACHE
+    doc = _read_json(CUSTOM_SOURCE_CONTRACT)
+    if (
+        doc.get("schema") != "actor_visual_custom_source_contract/v1"
+        or doc.get("authority") is not True
+        or doc.get("source_owner") != "target-authored standalone actor sheets"
+    ):
+        _fail("custom source contract is not the target-authored source owner")
+    entries = doc.get("entries")
+    if not isinstance(entries, list) or len(entries) != int(doc.get("entry_count", -1)):
+        _fail("custom source contract entry count is missing or stale")
+    by_source: dict[tuple[str, str], dict[str, Any]] = {}
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            _fail(f"custom source contract entry {index} is malformed")
+        source_xp = entry.get("source_xp")
+        source_id = entry.get("source_xp_id")
+        key = (source_xp, source_id)
+        if (
+            not isinstance(source_xp, str)
+            or not isinstance(source_id, str)
+            or Path(source_xp).stem != source_id
+            or key in by_source
+        ):
+            _fail(f"custom source contract entry {index} has an invalid source identity")
+        source_path = REPO_ROOT / source_xp
+        if not source_path.is_file() or _sha256_file(source_path) != entry.get("source_sha256"):
+            _fail(f"custom source contract entry {index} has stale source bytes")
+        if entry.get("source_kind") != "VERIFIED_STATE_LAYER":
+            _fail(f"custom source contract entry {index} has an invalid source kind")
+        operations = entry.get("render_operations")
+        contributions = entry.get("semantic_contributions")
+        if (
+            operations != ["seed_l2_base_accumulator"]
+            or not isinstance(contributions, list)
+            or not contributions
+            or not all(isinstance(value, str) and value for value in contributions)
+        ):
+            _fail(f"custom source contract entry {index} has invalid layer semantics")
+        by_source[key] = entry
+    _CUSTOM_SOURCE_CONTRACT_CACHE = by_source
+    return by_source
+
+
+def _source_layer_sha256(sprite: "XpSprite", layer_index: int) -> str:
+    cells = [
+        [glyph, *fg, *bg]
+        for glyph, fg, bg in sprite.layers[layer_index].cells
+    ]
+    return _sha256_bytes(_stable_json_bytes(cells))
+
+
 def _contract_layer(
     source_id: str,
     source_xp: str,
     sprite: "XpSprite",
     frame_map: list[int],
     layer_index: int,
+    contract_kind: str = "upstream",
 ) -> dict[str, Any]:
+    if contract_kind == "custom":
+        contract = _custom_source_contract().get((source_xp, source_id))
+        if contract is None:
+            _fail(f"{source_id}: custom source contract lacks {source_xp}")
+        if layer_index != int(contract.get("visual_layer_index", -1)):
+            _fail(f"{source_id}: custom source contract does not own layer {layer_index}")
+        operations = list(contract["render_operations"])
+        operation_mask = 0
+        for operation in operations:
+            operation_mask |= RENDER_OPERATION_BITS[operation]
+        return {
+            "source_xp": source_xp,
+            "source_xp_id": source_id,
+            "source_kind": contract["source_kind"],
+            "layer_index": layer_index,
+            "render_operations": operations,
+            "render_operation_mask": operation_mask,
+            "semantic_contributions": list(contract["semantic_contributions"]),
+            "contract_review_unit_id": contract["review_unit_id"],
+            "source_layer_sha256": _source_layer_sha256(sprite, layer_index),
+            "required": True,
+            "anim_lens": sprite.anim_lens,
+            "frame_map": frame_map,
+            "frame_map_count": len(frame_map),
+        }
     source_key = f"{source_id}-L{layer_index}"
     contract = _upstream_contract()[1].get(source_key)
     if contract is None:
@@ -1296,14 +1436,27 @@ def _contract_layer(
 
 
 def _profile_layers(
-    source_id: str, source_xp: str, sprite: "XpSprite", frame_map: list[int]
+    source_id: str,
+    source_xp: str,
+    sprite: "XpSprite",
+    frame_map: list[int],
+    contract_kind: str,
 ) -> list[dict[str, Any]]:
     """Build every raw visual layer from the frozen full-cell source contract."""
     if len(sprite.layers) <= 2:
         _fail(f"{source_id}: {source_xp} has no layer 2 (stub/split asset)")
+    if contract_kind == "custom":
+        custom = _custom_source_contract().get((source_xp, source_id))
+        if custom is None:
+            _fail(f"{source_id}: missing custom source contract")
+        layer_indices = [int(custom["visual_layer_index"])]
+    else:
+        layer_indices = list(range(2, len(sprite.layers)))
     layers = [
-        _contract_layer(source_id, source_xp, sprite, frame_map, layer_index)
-        for layer_index in range(2, len(sprite.layers))
+        _contract_layer(
+            source_id, source_xp, sprite, frame_map, layer_index, contract_kind
+        )
+        for layer_index in layer_indices
     ]
     # FL-4162: weapon_swoosh is upstream composition semantics, not an independent paste
     # layer. The legacy owner folded the final cyan-fg swoosh INTO the body (layer 2) via
@@ -1366,6 +1519,8 @@ def _profile_for_binding(
     source_id = binding["source_xp_id"]
     profile_id = binding["profile_id"]
     composition_kind = binding["composition_kind"]
+    contract_kind = binding.get("source_contract_kind", "upstream")
+    source_commit = binding.get("source_commit", PINNED_UPSTREAM_COMMIT)
     sprite = _load_xp(REPO_ROOT / source_xp)
     attack_xp = binding.get("extension_overlay_xp") or ""
     attack_id = binding.get("extension_overlay_source_xp_id") or ""
@@ -1407,11 +1562,15 @@ def _profile_for_binding(
         ),
         "timeline_source_xp": source_xp,
         "timeline_source_xp_id": source_id,
-        "timeline_source_kind": "UPSTREAM_AUTHORED",
+        "timeline_source_kind": (
+            "VERIFIED_STATE_LAYER" if contract_kind == "custom" else "UPSTREAM_AUTHORED"
+        ),
         "timeline_frame_map": frame_map,
         # FL-4162/RQ-200: every raw visual layer comes from the frozen full-cell
         # source contract. There is no local role list and no legacy merge fallback.
-        "layers": _profile_layers(source_id, source_xp, sprite, frame_map),
+        "layers": _profile_layers(
+            source_id, source_xp, sprite, frame_map, contract_kind
+        ),
     }
     if attack_xp:
         profile["layers"].append(_contract_layer(
@@ -1427,7 +1586,8 @@ def _profile_for_binding(
         "source_xp_id": source_id,
         "source_xp": source_xp,
         "extension_overlay_xp": attack_xp,
-        "pinned_upstream_commit": PINNED_UPSTREAM_COMMIT,
+        "source_commit": source_commit,
+        "source_contract_kind": contract_kind,
         "key": key,
     }
     return profile, provenance
@@ -1622,6 +1782,7 @@ def _emit_generated_header(
     source_doc: dict[str, Any],
     profiles: list[dict[str, Any]],
     cell_entries: list[dict[str, Any]],
+    catalog_profiles: list[dict[str, Any]],
 ) -> None:
     identity = _server_identity()
     source_bytes = _stable_json_bytes(source_doc)
@@ -1875,12 +2036,40 @@ def _emit_generated_header(
             "static constexpr int kCompiledActorVisualCellPayloadCount = sizeof(kCompiledActorVisualCellPayloads) / sizeof(kCompiledActorVisualCellPayloads[0]);",
             "static_assert(kCompiledActorVisualCellPayloadCount == kCompiledActorVisualRowCount, \"cell payload table must match visual row table\");",
             "",
-            "static constexpr ActorVisualSlot kActorVisualCatalogProfileStarter_200[] = {",
-            "    {0, 0, 0, 0},",
-            "};",
-            "",
-            "static constexpr ActorVisualCatalogProfile kActorVisualCatalogProfiles[] = {",
-            '    {200, 101, "default_profile", 0, kActorVisualCatalogProfileStarter_200},',
+        ]
+    )
+    for catalog_profile in catalog_profiles:
+        profile_id = int(catalog_profile["id"])
+        lines.append(
+            f"static constexpr ActorVisualSlot kActorVisualCatalogProfileStarter_{profile_id}[] = {{"
+        )
+        starters = catalog_profile["starter_entries"]
+        if starters:
+            for starter in starters:
+                lines.append(
+                    "    {"
+                    + f"{int(starter['slot_kind_id'])}, "
+                    + f"{int(starter['item_definition_id'])}, "
+                    + f"{int(starter['visual_style_id'])}, "
+                    + f"{int(starter['state_flags'])}"
+                    + "},"
+                )
+        else:
+            lines.append("    {0, 0, 0, 0},")
+        lines.extend(["};", ""])
+    lines.append("static constexpr ActorVisualCatalogProfile kActorVisualCatalogProfiles[] = {")
+    for catalog_profile in catalog_profiles:
+        profile_id = int(catalog_profile["id"])
+        lines.append(
+            "    {"
+            + f"{profile_id}, {int(catalog_profile['skin_definition_id'])}, "
+            + f"{_cpp_string(catalog_profile['slug'])}, "
+            + f"{len(catalog_profile['starter_entries'])}, "
+            + f"kActorVisualCatalogProfileStarter_{profile_id}"
+            + "},"
+        )
+    lines.extend(
+        [
             "};",
             "static constexpr int kActorVisualCatalogProfileCount = sizeof(kActorVisualCatalogProfiles) / sizeof(kActorVisualCatalogProfiles[0]);",
             "",
@@ -1914,6 +2103,7 @@ def emit_current() -> None:
     deletion_evidence = _require_deleted_legacy_owners()
     freeze, _ = _require_frozen_upstream_contract()
     reachability_doc, reachable_keys = _server_reachable_keys()
+    catalog_profiles = _server_catalog_profiles(reachability_doc)
     bindings = _profile_bindings(reachability_doc, reachable_keys)
     profiles = []
     provenance = []
@@ -1925,12 +2115,14 @@ def emit_current() -> None:
         provenance.append(profile_provenance)
     source_doc = {
         "schema_id": "asciicker.actor_visual_profiles.synthetic.v2",
-        "source": "server/actor_visual_reachability_dump.cpp plus frozen RQ-200 source contract",
+        "source": "server reachability plus frozen upstream and target-authored source contracts",
         "pinned_upstream_commit": PINNED_UPSTREAM_COMMIT,
         "row_count": len(profiles),
         "server_reachability_hash": reachability_doc["server_reachability_hash"],
         "upstream_contract_freeze_sha256": _sha256_file(UPSTREAM_CONTRACT_FREEZE),
-        "compile_rule": "exact server C++ reachable keys bind to frozen reviewed XP full-cell contracts",
+        "custom_source_contract_sha256": _sha256_file(CUSTOM_SOURCE_CONTRACT),
+        "catalog_profiles": catalog_profiles,
+        "compile_rule": "exact server C++ reachable keys bind to hash-verified authored XP contracts",
     }
     xp_cache: dict[str, XpSprite] = {}
     cell_entries = []
@@ -1946,13 +2138,14 @@ def emit_current() -> None:
                 "cells": cells,
             }
         )
-    _emit_generated_header(source_doc, profiles, cell_entries)
+    _emit_generated_header(source_doc, profiles, cell_entries, catalog_profiles)
     GENERATED_PROVENANCE.parent.mkdir(parents=True, exist_ok=True)
     GENERATED_PROVENANCE.write_text(
         json.dumps(
             {
                 "schema_id": "asciicker.actor_visual_profiles.provenance.v1",
                 "pinned_upstream_commit": PINNED_UPSTREAM_COMMIT,
+                "custom_source_contract_sha256": _sha256_file(CUSTOM_SOURCE_CONTRACT),
                 "row_count": len(provenance),
                 "rows": provenance,
             },
@@ -1996,6 +2189,9 @@ def emit_current() -> None:
             ),
             "server_reachable_keys_sha256": _sha256_file(SERVER_REACHABILITY),
             "profile_bindings_sha256": _sha256_file(PROFILE_BINDINGS),
+            "custom_source_contract_sha256": _sha256_file(
+                CUSTOM_SOURCE_CONTRACT
+            ),
             "generated_table_sha256": _sha256_file(GENERATED_HEADER),
             "generated_provenance_sha256": _sha256_file(GENERATED_PROVENANCE),
             "compiler_source_sha256": _sha256_file(Path(__file__)),

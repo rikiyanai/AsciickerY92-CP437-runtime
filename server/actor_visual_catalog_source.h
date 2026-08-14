@@ -30,6 +30,16 @@ struct AppearanceCatalogStarterEntry
 	uint16_t state_flags;
 };
 
+enum AppearanceCatalogProfileReachability : uint8_t
+{
+	// Full player profiles enumerate every catalog-owned equipment, mount, and
+	// presentation combination. Standalone authored sheets deliberately expose
+	// only the exact runtime keys their source contract can render.
+	APPEARANCE_PROFILE_REACHABILITY_FULL_PLAYER = 0,
+	APPEARANCE_PROFILE_REACHABILITY_FIXED_PLAYER = 1,
+	APPEARANCE_PROFILE_REACHABILITY_FIXED_COMPANION = 2,
+};
+
 struct AppearanceCatalogProfileDef
 {
 	uint16_t id;
@@ -37,6 +47,7 @@ struct AppearanceCatalogProfileDef
 	const char* slug;
 	const AppearanceCatalogStarterEntry* starter_entries;
 	uint8_t starter_count;
+	uint8_t reachability_policy;
 };
 
 struct AppearanceCatalogSeatDef
@@ -113,6 +124,8 @@ struct AppearanceCatalogMountDef
 
 static constexpr uint16_t APPEARANCE_CATALOG_CONTRACT_VERSION = 2;
 static constexpr uint16_t APPEARANCE_CATALOG_DEFAULT_PROFILE_ID = 200;
+static constexpr uint16_t APPEARANCE_CATALOG_WALLACE_PROFILE_ID = 201;
+static constexpr uint16_t APPEARANCE_CATALOG_GROMIT_PROFILE_ID = 202;
 
 // Server catalog gameplay-kind vocabulary. These numeric ids must match
 // server_state.h::SVR_ITEM_GAMEPLAY_* because ServerState persists the value
@@ -137,7 +150,12 @@ static constexpr uint16_t APPEARANCE_CATALOG_ITEM_LEGACY_YY_BLOCK_ID = 420;
 static constexpr uint16_t APPEARANCE_CATALOG_ITEM_TALL_YY_BLOCK_ID  = 421;
 
 static constexpr AppearanceCatalogProfileDef kAppearanceCatalogProfiles[] = {
-	{200, 101, "default_profile", nullptr, 0},
+	{APPEARANCE_CATALOG_DEFAULT_PROFILE_ID, 101, "default_profile", nullptr, 0,
+	 APPEARANCE_PROFILE_REACHABILITY_FULL_PLAYER},
+	{APPEARANCE_CATALOG_WALLACE_PROFILE_ID, 102, "wallace_player", nullptr, 0,
+	 APPEARANCE_PROFILE_REACHABILITY_FIXED_PLAYER},
+	{APPEARANCE_CATALOG_GROMIT_PROFILE_ID, 103, "gromit_companion", nullptr, 0,
+	 APPEARANCE_PROFILE_REACHABILITY_FIXED_COMPANION},
 };
 static constexpr int kAppearanceCatalogProfileCount =
 	sizeof(kAppearanceCatalogProfiles) / sizeof(kAppearanceCatalogProfiles[0]);

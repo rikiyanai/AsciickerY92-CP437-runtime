@@ -53,16 +53,22 @@ from `asciicker-pipeline-v3` commit
 - `sprites/2026-08-12-030327-gromit.xp`, SHA-256
   `e2e2a4212fb57c70ffc615c4c8539e336f7a9bc08b88e6c3648f37ec2a9b5bb5`.
 
-The timestamped files are retained as audit identities. Byte-identical copies
-replace the normalized `player-0000.xp` and `wolfie-0000.xp` source owners so
-the compiled appearance path remains the only runtime selector. The untracked
-June duplicate names and distinct repaired `adhoc/` variants were not imported.
+The timestamped files are the runtime source identities for dedicated Wallace
+and Gromit catalog profiles. The historical normalized `player-0000.xp` and
+`wolfie-0000.xp` assets retain their original bytes and contracts; neither is
+an alias for these characters. The untracked June duplicate names and distinct
+repaired `adhoc/` variants were not imported.
 
 The rocket source is `assets/meshes/source/toy_rocket.glb`, SHA-256
 `6990ca861b55d4afd5073aa1cc09b018eb6617324a618c52215ca40ded271263`.
 Its runtime conversion is `assets/meshes/toy_rocket_ship.akm`, SHA-256
-`5225c421a0321f75aa058b449af876c708915e87b09fe2968743a1bed7e343ed`.
+`ceb99d7aa06a00a9555f7bef8f6158e1c8857059215571a270ea376e2d714d7f`.
+The corrected conversion preserves the GLB's separate orange body and gray
+glass materials. The map transform rotates its long axis upright and applies
+the runtime's 16:1 vertical-height compensation.
 The checked-in conversion scripts preserve the GLB-to-AKM production path.
+Exact source, converter, and output identities are bound by
+`assets/meshes/toy_rocket_ship.provenance.json`.
 
 ## License
 

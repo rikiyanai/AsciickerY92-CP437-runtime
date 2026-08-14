@@ -281,6 +281,7 @@ enum SvrAppearanceSourceKind : uint8_t
     SVR_APPEARANCE_SOURCE_NONE = 0,
     SVR_APPEARANCE_SOURCE_DEFAULT_PROFILE = 1,
     SVR_APPEARANCE_SOURCE_SERVER_SEAT_PROFILE = 2,
+    SVR_APPEARANCE_SOURCE_SCENE_PROFILE = 3,
 };
 
 enum SvrAppearanceProjectionKind : uint8_t
@@ -295,6 +296,7 @@ enum SvrAppearanceSubjectKind : uint8_t
     SVR_APPEARANCE_SUBJECT_DEFAULT = 1,
     SVR_APPEARANCE_SUBJECT_SERVER_SEAT = 2,
     SVR_APPEARANCE_SUBJECT_NPC_SPAWN = 3,
+    SVR_APPEARANCE_SUBJECT_SCENE_ROLE = 4,
 };
 
 enum SvrAppearanceEntryStateFlags : uint16_t
@@ -583,6 +585,9 @@ struct SvrNpcState
     // follow exactly one player and are excluded from every damage target path.
     uint8_t disposition;
     uint16_t owner_player_id;
+    // Owns the 7/9-unit follow hysteresis state. Force is derived from this
+    // every tick, so the dead band cannot retain stale movement input.
+    bool follow_active;
     int stuck_counter;
     float unstuck_pos[2][3];
     bool jump_request;

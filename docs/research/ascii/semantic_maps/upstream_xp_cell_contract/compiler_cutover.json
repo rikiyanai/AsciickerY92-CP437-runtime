@@ -3,12 +3,12 @@
   "compiler_cutover_complete": true,
   "contract_authority": "reviewed_upstream_source_contract",
   "coverage": {
-    "bound_source_ids": 112,
-    "compiled_rows": 192,
+    "bound_source_ids": 114,
+    "compiled_rows": 196,
     "frozen_raw_cells": 6807104,
     "frozen_raw_layers": 573,
     "pending_review_units": 0,
-    "server_reachable_keys": 192
+    "server_reachable_keys": 196
   },
   "fl": "FL-4162",
   "invariants": {
@@ -42,11 +42,12 @@
   "schema": "fl4162.compiler_cutover.v1",
   "source_hashes": {
     "cell_role_decisions_sha256": "8bb4417991204c47890488ddb6e73d350772023e901ae4842331070468cd9462",
-    "compiler_source_sha256": "9a465acf728388b6150b5354f0445184510de1eb1412518f57645dc54c70554a",
+    "compiler_source_sha256": "1efd2d145127c1b3004f69fb16ae671fd4843ee6a0fd82c639560f28b3b270cd",
+    "custom_source_contract_sha256": "5c48d5d5bc16f8fcedc2cfa0983cad35192f5633ba51bcb419db957d394b96ce",
     "family_contract_freeze_sha256": "ab8490bd1c88bdbc0864a264af609b014733081b9fc0c65b905618162a4b1798",
-    "generated_provenance_sha256": "ab7038498772790b82106cbf2423776dbcebdf39d8c70466f82952eb39f7d10f",
-    "generated_table_sha256": "83aec93f604c65814b8023f8ad04ba0a79eb3c43983deeb4defcde17c063fd23",
-    "profile_bindings_sha256": "88e74f593d2f803384d9c1c93ddc87479bff7f9051dc3cdce40b24d5c2ba8725",
-    "server_reachable_keys_sha256": "44cef5e34532469bb72b81e739a4aa421f11a71ef80413b13da66fbcf2ddc8ba"
+    "generated_provenance_sha256": "3b4cc90ca6969c414a7819e88cca03ca732657813a81720bc78377d6ac809d7d",
+    "generated_table_sha256": "86b20aaccad0fb6ce41e0a45432f92fbec88a5032d648a284c1fd6ab427a7555",
+    "profile_bindings_sha256": "0341b03d5fcefa2affe26ef0d4cdd950d7d6d2fb3395c50f3aae35e24f155059",
+    "server_reachable_keys_sha256": "5a23c5d0541638556f4a8c37b447ac7c5ce17f2ce9cf6d5f20862d86602beb77"
   }
 }

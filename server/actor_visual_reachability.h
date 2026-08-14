@@ -144,21 +144,6 @@ inline bool WeaponPublishesAttackPresentation(const AppearanceCatalogItemDef* we
 			APPEARANCE_PRESENTATION_KIND_ATTACK;
 }
 
-// Derive skin_id enumeration from kAppearanceCatalogProfiles[] — the catalog
-// is the authority, not a relocated SKIN_NORMAL_PLAYER constant. Today this
-// resolves to a single skin (101) because all three catalog profiles point at
-// skin_definition_id=101; the day a new player skin is added to the catalog,
-// this enumeration picks it up without editing this file.
-inline std::vector<uint16_t> EnumerateSkinIds()
-{
-	std::vector<uint16_t> skins;
-	for (int i = 0; i < kAppearanceCatalogProfileCount; i++)
-		skins.push_back(kAppearanceCatalogProfiles[i].skin_definition_id);
-	std::sort(skins.begin(), skins.end());
-	skins.erase(std::unique(skins.begin(), skins.end()), skins.end());
-	return skins;
-}
-
 inline std::vector<uint16_t> EnumerateMountIds()
 {
 	std::vector<uint16_t> mounts;
@@ -290,32 +275,57 @@ inline std::vector<CanonicalActorVisualReachableKey> EnumerateReachableKeys()
 	PushSlotOption(weapons, APPEARANCE_SLOT_KIND_WEAPON);
 	PushSlotOption(shields, APPEARANCE_SLOT_KIND_SHIELD);
 
-	std::vector<uint16_t> skins = EnumerateSkinIds();
 	std::vector<uint16_t> mounts = EnumerateMountIds();
 
 	std::vector<CanonicalActorVisualReachableKey> keys;
-	for (uint16_t skin_id : skins)
-	for (const AppearanceCatalogItemDef* head : heads)
-	for (const AppearanceCatalogItemDef* chest : chests)
-	for (const AppearanceCatalogItemDef* weapon : weapons)
-	for (const AppearanceCatalogItemDef* shield : shields)
-	for (uint16_t mount_id : mounts)
+	for (int profile_index = 0;
+	     profile_index < kAppearanceCatalogProfileCount;
+	     profile_index++)
 	{
-		AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_IDLE_WALK,
-		       mount_id, head, chest, weapon, shield);
-		keys.back().variation_id = VariationForServerAppearanceKey(
-			APPEARANCE_PRESENTATION_KIND_IDLE_WALK, weapon);
-		AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_DEATH,
-		       mount_id, head, chest, weapon, shield);
-		keys.back().variation_id = VariationForServerAppearanceKey(
-			APPEARANCE_PRESENTATION_KIND_DEATH, weapon);
-
-		if (WeaponPublishesAttackPresentation(weapon))
+		const AppearanceCatalogProfileDef* profile =
+			&kAppearanceCatalogProfiles[profile_index];
+		const uint16_t skin_id = profile->skin_definition_id;
+		if (profile->reachability_policy ==
+			APPEARANCE_PROFILE_REACHABILITY_FIXED_COMPANION)
 		{
+			AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_IDLE_WALK,
+			       ACTOR_VISUAL_REACHABILITY_MOUNT_NONE, 0, 0, 0, 0);
+			continue;
+		}
+		if (profile->reachability_policy ==
+			APPEARANCE_PROFILE_REACHABILITY_FIXED_PLAYER)
+		{
+			AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_IDLE_WALK,
+			       ACTOR_VISUAL_REACHABILITY_MOUNT_NONE, 0, 0, 0, 0);
 			AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_ATTACK,
+			       ACTOR_VISUAL_REACHABILITY_MOUNT_NONE, 0, 0, 0, 0);
+			AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_DEATH,
+			       ACTOR_VISUAL_REACHABILITY_MOUNT_NONE, 0, 0, 0, 0);
+			continue;
+		}
+
+		for (const AppearanceCatalogItemDef* head : heads)
+		for (const AppearanceCatalogItemDef* chest : chests)
+		for (const AppearanceCatalogItemDef* weapon : weapons)
+		for (const AppearanceCatalogItemDef* shield : shields)
+		for (uint16_t mount_id : mounts)
+		{
+			AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_IDLE_WALK,
 			       mount_id, head, chest, weapon, shield);
 			keys.back().variation_id = VariationForServerAppearanceKey(
-				APPEARANCE_PRESENTATION_KIND_ATTACK, weapon);
+				APPEARANCE_PRESENTATION_KIND_IDLE_WALK, weapon);
+			AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_DEATH,
+			       mount_id, head, chest, weapon, shield);
+			keys.back().variation_id = VariationForServerAppearanceKey(
+				APPEARANCE_PRESENTATION_KIND_DEATH, weapon);
+
+			if (WeaponPublishesAttackPresentation(weapon))
+			{
+				AddKey(keys, skin_id, APPEARANCE_PRESENTATION_KIND_ATTACK,
+				       mount_id, head, chest, weapon, shield);
+				keys.back().variation_id = VariationForServerAppearanceKey(
+					APPEARANCE_PRESENTATION_KIND_ATTACK, weapon);
+			}
 		}
 	}
 	std::sort(keys.begin(), keys.end(), KeyLess);

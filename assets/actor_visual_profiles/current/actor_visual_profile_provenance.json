@@ -1,6 +1,7 @@
 {
+  "custom_source_contract_sha256": "5c48d5d5bc16f8fcedc2cfa0983cad35192f5633ba51bcb419db957d394b96ce",
   "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
-  "row_count": 192,
+  "row_count": 196,
   "rows": [
     {
       "composition_kind": "upstream_parity",
@@ -39,8 +40,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0000_p600_m0_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0000.xp",
       "source_xp_id": "player-0000"
     },
@@ -81,8 +83,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0010_p600_m0_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0010.xp",
       "source_xp_id": "player-0010"
     },
@@ -123,8 +126,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0001_p600_m0_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0001.xp",
       "source_xp_id": "player-0001"
     },
@@ -165,8 +169,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0011_p600_m0_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0011.xp",
       "source_xp_id": "player-0011"
     },
@@ -207,8 +212,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0002_p600_m0_h0_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0002.xp",
       "source_xp_id": "player-0002"
     },
@@ -249,8 +255,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0012_p600_m0_h0_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0012.xp",
       "source_xp_id": "player-0012"
     },
@@ -291,8 +298,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1000_p600_m0_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1000.xp",
       "source_xp_id": "player-1000"
     },
@@ -333,8 +341,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1010_p600_m0_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1010.xp",
       "source_xp_id": "player-1010"
     },
@@ -375,8 +384,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1001_p600_m0_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1001.xp",
       "source_xp_id": "player-1001"
     },
@@ -417,8 +427,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1011_p600_m0_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1011.xp",
       "source_xp_id": "player-1011"
     },
@@ -459,8 +470,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1002_p600_m0_h0_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1002.xp",
       "source_xp_id": "player-1002"
     },
@@ -501,8 +513,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1012_p600_m0_h0_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1012.xp",
       "source_xp_id": "player-1012"
     },
@@ -543,8 +556,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0100_p600_m0_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0100.xp",
       "source_xp_id": "player-0100"
     },
@@ -585,8 +599,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0110_p600_m0_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0110.xp",
       "source_xp_id": "player-0110"
     },
@@ -627,8 +642,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0101_p600_m0_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0101.xp",
       "source_xp_id": "player-0101"
     },
@@ -669,8 +685,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0111_p600_m0_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0111.xp",
       "source_xp_id": "player-0111"
     },
@@ -711,8 +728,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0102_p600_m0_h410_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0102.xp",
       "source_xp_id": "player-0102"
     },
@@ -753,8 +771,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0112_p600_m0_h410_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0112.xp",
       "source_xp_id": "player-0112"
     },
@@ -795,8 +814,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1100_p600_m0_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1100.xp",
       "source_xp_id": "player-1100"
     },
@@ -837,8 +857,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1110_p600_m0_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1110.xp",
       "source_xp_id": "player-1110"
     },
@@ -879,8 +900,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1101_p600_m0_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1101.xp",
       "source_xp_id": "player-1101"
     },
@@ -921,8 +943,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1111_p600_m0_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1111.xp",
       "source_xp_id": "player-1111"
     },
@@ -963,8 +986,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1102_p600_m0_h410_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1102.xp",
       "source_xp_id": "player-1102"
     },
@@ -1005,8 +1029,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1112_p600_m0_h410_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1112.xp",
       "source_xp_id": "player-1112"
     },
@@ -1047,8 +1072,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0000_p600_m950_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0000.xp",
       "source_xp_id": "wolfie-0000"
     },
@@ -1089,8 +1115,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0010_p600_m950_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0010.xp",
       "source_xp_id": "wolfie-0010"
     },
@@ -1131,8 +1158,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0001_p600_m950_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0001.xp",
       "source_xp_id": "wolfie-0001"
     },
@@ -1173,8 +1201,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0011_p600_m950_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0011.xp",
       "source_xp_id": "wolfie-0011"
     },
@@ -1215,8 +1244,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0002_p600_m950_h0_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0002.xp",
       "source_xp_id": "wolfie-0002"
     },
@@ -1257,8 +1287,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0012_p600_m950_h0_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0012.xp",
       "source_xp_id": "wolfie-0012"
     },
@@ -1299,8 +1330,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1000_p600_m950_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1000.xp",
       "source_xp_id": "wolfie-1000"
     },
@@ -1341,8 +1373,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1010_p600_m950_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1010.xp",
       "source_xp_id": "wolfie-1010"
     },
@@ -1383,8 +1416,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1001_p600_m950_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1001.xp",
       "source_xp_id": "wolfie-1001"
     },
@@ -1425,8 +1459,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1011_p600_m950_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1011.xp",
       "source_xp_id": "wolfie-1011"
     },
@@ -1467,8 +1502,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1002_p600_m950_h0_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1002.xp",
       "source_xp_id": "wolfie-1002"
     },
@@ -1509,8 +1545,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1012_p600_m950_h0_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1012.xp",
       "source_xp_id": "wolfie-1012"
     },
@@ -1551,8 +1588,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0100_p600_m950_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0100.xp",
       "source_xp_id": "wolfie-0100"
     },
@@ -1593,8 +1631,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0110_p600_m950_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0110.xp",
       "source_xp_id": "wolfie-0110"
     },
@@ -1635,8 +1674,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0101_p600_m950_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0101.xp",
       "source_xp_id": "wolfie-0101"
     },
@@ -1677,8 +1717,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0111_p600_m950_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0111.xp",
       "source_xp_id": "wolfie-0111"
     },
@@ -1719,8 +1760,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0102_p600_m950_h410_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0102.xp",
       "source_xp_id": "wolfie-0102"
     },
@@ -1761,8 +1803,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0112_p600_m950_h410_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0112.xp",
       "source_xp_id": "wolfie-0112"
     },
@@ -1803,8 +1846,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1100_p600_m950_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1100.xp",
       "source_xp_id": "wolfie-1100"
     },
@@ -1845,8 +1889,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1110_p600_m950_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1110.xp",
       "source_xp_id": "wolfie-1110"
     },
@@ -1887,8 +1932,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1101_p600_m950_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1101.xp",
       "source_xp_id": "wolfie-1101"
     },
@@ -1929,8 +1975,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1111_p600_m950_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1111.xp",
       "source_xp_id": "wolfie-1111"
     },
@@ -1971,8 +2018,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1102_p600_m950_h410_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1102.xp",
       "source_xp_id": "wolfie-1102"
     },
@@ -2013,8 +2061,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1112_p600_m950_h410_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1112.xp",
       "source_xp_id": "wolfie-1112"
     },
@@ -2055,8 +2104,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0000_p600_m951_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0000.xp",
       "source_xp_id": "bigbee-0000"
     },
@@ -2097,8 +2147,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0010_p600_m951_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0010.xp",
       "source_xp_id": "bigbee-0010"
     },
@@ -2139,8 +2190,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0001_p600_m951_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0001.xp",
       "source_xp_id": "bigbee-0001"
     },
@@ -2181,8 +2233,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0011_p600_m951_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0011.xp",
       "source_xp_id": "bigbee-0011"
     },
@@ -2223,8 +2276,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0002_p600_m951_h0_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0002.xp",
       "source_xp_id": "bigbee-0002"
     },
@@ -2265,8 +2319,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0012_p600_m951_h0_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0012.xp",
       "source_xp_id": "bigbee-0012"
     },
@@ -2307,8 +2362,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1000_p600_m951_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1000.xp",
       "source_xp_id": "bigbee-1000"
     },
@@ -2349,8 +2405,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1010_p600_m951_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1010.xp",
       "source_xp_id": "bigbee-1010"
     },
@@ -2391,8 +2448,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1001_p600_m951_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1001.xp",
       "source_xp_id": "bigbee-1001"
     },
@@ -2433,8 +2491,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1011_p600_m951_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1011.xp",
       "source_xp_id": "bigbee-1011"
     },
@@ -2475,8 +2534,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1002_p600_m951_h0_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1002.xp",
       "source_xp_id": "bigbee-1002"
     },
@@ -2517,8 +2577,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1012_p600_m951_h0_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1012.xp",
       "source_xp_id": "bigbee-1012"
     },
@@ -2559,8 +2620,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0100_p600_m951_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0100.xp",
       "source_xp_id": "bigbee-0100"
     },
@@ -2601,8 +2663,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0110_p600_m951_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0110.xp",
       "source_xp_id": "bigbee-0110"
     },
@@ -2643,8 +2706,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0101_p600_m951_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0101.xp",
       "source_xp_id": "bigbee-0101"
     },
@@ -2685,8 +2749,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0111_p600_m951_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0111.xp",
       "source_xp_id": "bigbee-0111"
     },
@@ -2727,8 +2792,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0102_p600_m951_h410_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0102.xp",
       "source_xp_id": "bigbee-0102"
     },
@@ -2769,8 +2835,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0112_p600_m951_h410_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0112.xp",
       "source_xp_id": "bigbee-0112"
     },
@@ -2811,8 +2878,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1100_p600_m951_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1100.xp",
       "source_xp_id": "bigbee-1100"
     },
@@ -2853,8 +2921,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1110_p600_m951_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1110.xp",
       "source_xp_id": "bigbee-1110"
     },
@@ -2895,8 +2964,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1101_p600_m951_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1101.xp",
       "source_xp_id": "bigbee-1101"
     },
@@ -2937,8 +3007,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1111_p600_m951_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1111.xp",
       "source_xp_id": "bigbee-1111"
     },
@@ -2979,8 +3050,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1102_p600_m951_h410_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1102.xp",
       "source_xp_id": "bigbee-1102"
     },
@@ -3021,8 +3093,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1112_p600_m951_h410_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1112.xp",
       "source_xp_id": "bigbee-1112"
     },
@@ -3063,8 +3136,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0000_p601_m0_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0000.xp",
       "source_xp_id": "player-0000"
     },
@@ -3105,8 +3179,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0010_p601_m0_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0010.xp",
       "source_xp_id": "player-0010"
     },
@@ -3147,8 +3222,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "attack_0001_p601_m0_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/attack-0001.xp",
       "source_xp_id": "attack-0001"
     },
@@ -3189,8 +3265,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "attack_0011_p601_m0_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/attack-0011.xp",
       "source_xp_id": "attack-0011"
     },
@@ -3231,8 +3308,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1000_p601_m0_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1000.xp",
       "source_xp_id": "player-1000"
     },
@@ -3273,8 +3351,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1010_p601_m0_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1010.xp",
       "source_xp_id": "player-1010"
     },
@@ -3315,8 +3394,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "attack_1001_p601_m0_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/attack-1001.xp",
       "source_xp_id": "attack-1001"
     },
@@ -3357,8 +3437,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "attack_1011_p601_m0_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/attack-1011.xp",
       "source_xp_id": "attack-1011"
     },
@@ -3399,8 +3480,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0100_p601_m0_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0100.xp",
       "source_xp_id": "player-0100"
     },
@@ -3441,8 +3523,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_0110_p601_m0_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-0110.xp",
       "source_xp_id": "player-0110"
     },
@@ -3483,8 +3566,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "attack_0101_p601_m0_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/attack-0101.xp",
       "source_xp_id": "attack-0101"
     },
@@ -3525,8 +3609,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "attack_0111_p601_m0_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/attack-0111.xp",
       "source_xp_id": "attack-0111"
     },
@@ -3567,8 +3652,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1100_p601_m0_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1100.xp",
       "source_xp_id": "player-1100"
     },
@@ -3609,8 +3695,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "player_1110_p601_m0_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/player-1110.xp",
       "source_xp_id": "player-1110"
     },
@@ -3651,8 +3738,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "attack_1101_p601_m0_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/attack-1101.xp",
       "source_xp_id": "attack-1101"
     },
@@ -3693,8 +3781,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "attack_1111_p601_m0_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/attack-1111.xp",
       "source_xp_id": "attack-1111"
     },
@@ -3735,8 +3824,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0000_p601_m950_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0000.xp",
       "source_xp_id": "wolfie-0000"
     },
@@ -3777,8 +3867,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0010_p601_m950_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0010.xp",
       "source_xp_id": "wolfie-0010"
     },
@@ -3819,8 +3910,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolack_0001_p601_m950_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolack-0001.xp",
       "source_xp_id": "wolack-0001"
     },
@@ -3861,8 +3953,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolack_0011_p601_m950_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolack-0011.xp",
       "source_xp_id": "wolack-0011"
     },
@@ -3903,8 +3996,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1000_p601_m950_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1000.xp",
       "source_xp_id": "wolfie-1000"
     },
@@ -3945,8 +4039,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1010_p601_m950_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1010.xp",
       "source_xp_id": "wolfie-1010"
     },
@@ -3987,8 +4082,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolack_1001_p601_m950_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolack-1001.xp",
       "source_xp_id": "wolack-1001"
     },
@@ -4029,8 +4125,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolack_1011_p601_m950_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolack-1011.xp",
       "source_xp_id": "wolack-1011"
     },
@@ -4071,8 +4168,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0100_p601_m950_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0100.xp",
       "source_xp_id": "wolfie-0100"
     },
@@ -4113,8 +4211,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_0110_p601_m950_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-0110.xp",
       "source_xp_id": "wolfie-0110"
     },
@@ -4155,8 +4254,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolack_0101_p601_m950_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolack-0101.xp",
       "source_xp_id": "wolack-0101"
     },
@@ -4197,8 +4297,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolack_0111_p601_m950_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolack-0111.xp",
       "source_xp_id": "wolack-0111"
     },
@@ -4239,8 +4340,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1100_p601_m950_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1100.xp",
       "source_xp_id": "wolfie-1100"
     },
@@ -4281,8 +4383,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolfie_1110_p601_m950_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolfie-1110.xp",
       "source_xp_id": "wolfie-1110"
     },
@@ -4323,8 +4426,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolack_1101_p601_m950_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolack-1101.xp",
       "source_xp_id": "wolack-1101"
     },
@@ -4365,8 +4469,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "wolack_1111_p601_m950_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/wolack-1111.xp",
       "source_xp_id": "wolack-1111"
     },
@@ -4407,8 +4512,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0000_p601_m951_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0000.xp",
       "source_xp_id": "bigbee-0000"
     },
@@ -4449,8 +4555,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0010_p601_m951_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0010.xp",
       "source_xp_id": "bigbee-0010"
     },
@@ -4491,8 +4598,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0001_p601_m951_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0001.xp",
       "source_xp_id": "bigbee-0001"
     },
@@ -4533,8 +4641,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0011_p601_m951_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0011.xp",
       "source_xp_id": "bigbee-0011"
     },
@@ -4575,8 +4684,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1000_p601_m951_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1000.xp",
       "source_xp_id": "bigbee-1000"
     },
@@ -4617,8 +4727,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1010_p601_m951_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1010.xp",
       "source_xp_id": "bigbee-1010"
     },
@@ -4659,8 +4770,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1001_p601_m951_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1001.xp",
       "source_xp_id": "bigbee-1001"
     },
@@ -4701,8 +4813,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1011_p601_m951_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1011.xp",
       "source_xp_id": "bigbee-1011"
     },
@@ -4743,8 +4856,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0100_p601_m951_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0100.xp",
       "source_xp_id": "bigbee-0100"
     },
@@ -4785,8 +4899,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0110_p601_m951_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0110.xp",
       "source_xp_id": "bigbee-0110"
     },
@@ -4827,8 +4942,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0101_p601_m951_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0101.xp",
       "source_xp_id": "bigbee-0101"
     },
@@ -4869,8 +4985,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_0111_p601_m951_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-0111.xp",
       "source_xp_id": "bigbee-0111"
     },
@@ -4911,8 +5028,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1100_p601_m951_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1100.xp",
       "source_xp_id": "bigbee-1100"
     },
@@ -4953,8 +5071,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1110_p601_m951_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1110.xp",
       "source_xp_id": "bigbee-1110"
     },
@@ -4995,8 +5114,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1101_p601_m951_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1101.xp",
       "source_xp_id": "bigbee-1101"
     },
@@ -5037,8 +5157,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "bigbee_1111_p601_m951_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/bigbee-1111.xp",
       "source_xp_id": "bigbee-1111"
     },
@@ -5079,8 +5200,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0000_p602_m0_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0000.xp",
       "source_xp_id": "plydie-0000"
     },
@@ -5121,8 +5243,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0010_p602_m0_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0010.xp",
       "source_xp_id": "plydie-0010"
     },
@@ -5163,8 +5286,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0001_p602_m0_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0001.xp",
       "source_xp_id": "plydie-0001"
     },
@@ -5205,8 +5329,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0011_p602_m0_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0011.xp",
       "source_xp_id": "plydie-0011"
     },
@@ -5247,8 +5372,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0002_p602_m0_h0_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0002.xp",
       "source_xp_id": "plydie-0002"
     },
@@ -5289,8 +5415,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0012_p602_m0_h0_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0012.xp",
       "source_xp_id": "plydie-0012"
     },
@@ -5331,8 +5458,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1000_p602_m0_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1000.xp",
       "source_xp_id": "plydie-1000"
     },
@@ -5373,8 +5501,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1010_p602_m0_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1010.xp",
       "source_xp_id": "plydie-1010"
     },
@@ -5415,8 +5544,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1001_p602_m0_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1001.xp",
       "source_xp_id": "plydie-1001"
     },
@@ -5457,8 +5587,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1011_p602_m0_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1011.xp",
       "source_xp_id": "plydie-1011"
     },
@@ -5499,8 +5630,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1002_p602_m0_h0_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1002.xp",
       "source_xp_id": "plydie-1002"
     },
@@ -5541,8 +5673,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1012_p602_m0_h0_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1012.xp",
       "source_xp_id": "plydie-1012"
     },
@@ -5583,8 +5716,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0100_p602_m0_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0100.xp",
       "source_xp_id": "plydie-0100"
     },
@@ -5625,8 +5759,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0110_p602_m0_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0110.xp",
       "source_xp_id": "plydie-0110"
     },
@@ -5667,8 +5802,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0101_p602_m0_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0101.xp",
       "source_xp_id": "plydie-0101"
     },
@@ -5709,8 +5845,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0111_p602_m0_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0111.xp",
       "source_xp_id": "plydie-0111"
     },
@@ -5751,8 +5888,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0102_p602_m0_h410_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0102.xp",
       "source_xp_id": "plydie-0102"
     },
@@ -5793,8 +5931,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0112_p602_m0_h410_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0112.xp",
       "source_xp_id": "plydie-0112"
     },
@@ -5835,8 +5974,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1100_p602_m0_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1100.xp",
       "source_xp_id": "plydie-1100"
     },
@@ -5877,8 +6017,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1110_p602_m0_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1110.xp",
       "source_xp_id": "plydie-1110"
     },
@@ -5919,8 +6060,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1101_p602_m0_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1101.xp",
       "source_xp_id": "plydie-1101"
     },
@@ -5961,8 +6103,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1111_p602_m0_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1111.xp",
       "source_xp_id": "plydie-1111"
     },
@@ -6003,8 +6146,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1102_p602_m0_h410_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1102.xp",
       "source_xp_id": "plydie-1102"
     },
@@ -6045,8 +6189,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1112_p602_m0_h410_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1112.xp",
       "source_xp_id": "plydie-1112"
     },
@@ -6087,8 +6232,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0000_p602_m950_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0000.xp",
       "source_xp_id": "plydie-0000"
     },
@@ -6129,8 +6275,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0010_p602_m950_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0010.xp",
       "source_xp_id": "plydie-0010"
     },
@@ -6171,8 +6318,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0001_p602_m950_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0001.xp",
       "source_xp_id": "plydie-0001"
     },
@@ -6213,8 +6361,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0011_p602_m950_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0011.xp",
       "source_xp_id": "plydie-0011"
     },
@@ -6255,8 +6404,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0002_p602_m950_h0_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0002.xp",
       "source_xp_id": "plydie-0002"
     },
@@ -6297,8 +6447,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0012_p602_m950_h0_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0012.xp",
       "source_xp_id": "plydie-0012"
     },
@@ -6339,8 +6490,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1000_p602_m950_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1000.xp",
       "source_xp_id": "plydie-1000"
     },
@@ -6381,8 +6533,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1010_p602_m950_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1010.xp",
       "source_xp_id": "plydie-1010"
     },
@@ -6423,8 +6576,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1001_p602_m950_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1001.xp",
       "source_xp_id": "plydie-1001"
     },
@@ -6465,8 +6619,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1011_p602_m950_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1011.xp",
       "source_xp_id": "plydie-1011"
     },
@@ -6507,8 +6662,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1002_p602_m950_h0_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1002.xp",
       "source_xp_id": "plydie-1002"
     },
@@ -6549,8 +6705,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1012_p602_m950_h0_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1012.xp",
       "source_xp_id": "plydie-1012"
     },
@@ -6591,8 +6748,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0100_p602_m950_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0100.xp",
       "source_xp_id": "plydie-0100"
     },
@@ -6633,8 +6791,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0110_p602_m950_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0110.xp",
       "source_xp_id": "plydie-0110"
     },
@@ -6675,8 +6834,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0101_p602_m950_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0101.xp",
       "source_xp_id": "plydie-0101"
     },
@@ -6717,8 +6877,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0111_p602_m950_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0111.xp",
       "source_xp_id": "plydie-0111"
     },
@@ -6759,8 +6920,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0102_p602_m950_h410_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0102.xp",
       "source_xp_id": "plydie-0102"
     },
@@ -6801,8 +6963,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0112_p602_m950_h410_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0112.xp",
       "source_xp_id": "plydie-0112"
     },
@@ -6843,8 +7006,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1100_p602_m950_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1100.xp",
       "source_xp_id": "plydie-1100"
     },
@@ -6885,8 +7049,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1110_p602_m950_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1110.xp",
       "source_xp_id": "plydie-1110"
     },
@@ -6927,8 +7092,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1101_p602_m950_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1101.xp",
       "source_xp_id": "plydie-1101"
     },
@@ -6969,8 +7135,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1111_p602_m950_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1111.xp",
       "source_xp_id": "plydie-1111"
     },
@@ -7011,8 +7178,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1102_p602_m950_h410_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1102.xp",
       "source_xp_id": "plydie-1102"
     },
@@ -7053,8 +7221,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1112_p602_m950_h410_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1112.xp",
       "source_xp_id": "plydie-1112"
     },
@@ -7095,8 +7264,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0000_p602_m951_h0_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0000.xp",
       "source_xp_id": "plydie-0000"
     },
@@ -7137,8 +7307,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0010_p602_m951_h0_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0010.xp",
       "source_xp_id": "plydie-0010"
     },
@@ -7179,8 +7350,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0001_p602_m951_h0_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0001.xp",
       "source_xp_id": "plydie-0001"
     },
@@ -7221,8 +7393,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0011_p602_m951_h0_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0011.xp",
       "source_xp_id": "plydie-0011"
     },
@@ -7263,8 +7436,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0002_p602_m951_h0_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0002.xp",
       "source_xp_id": "plydie-0002"
     },
@@ -7305,8 +7479,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0012_p602_m951_h0_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0012.xp",
       "source_xp_id": "plydie-0012"
     },
@@ -7347,8 +7522,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1000_p602_m951_h0_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1000.xp",
       "source_xp_id": "plydie-1000"
     },
@@ -7389,8 +7565,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1010_p602_m951_h0_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1010.xp",
       "source_xp_id": "plydie-1010"
     },
@@ -7431,8 +7608,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1001_p602_m951_h0_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1001.xp",
       "source_xp_id": "plydie-1001"
     },
@@ -7473,8 +7651,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1011_p602_m951_h0_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1011.xp",
       "source_xp_id": "plydie-1011"
     },
@@ -7515,8 +7694,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1002_p602_m951_h0_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1002.xp",
       "source_xp_id": "plydie-1002"
     },
@@ -7557,8 +7737,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1012_p602_m951_h0_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1012.xp",
       "source_xp_id": "plydie-1012"
     },
@@ -7599,8 +7780,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0100_p602_m951_h410_c0_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0100.xp",
       "source_xp_id": "plydie-0100"
     },
@@ -7641,8 +7823,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0110_p602_m951_h410_c0_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0110.xp",
       "source_xp_id": "plydie-0110"
     },
@@ -7683,8 +7866,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0101_p602_m951_h410_c0_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0101.xp",
       "source_xp_id": "plydie-0101"
     },
@@ -7725,8 +7909,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0111_p602_m951_h410_c0_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0111.xp",
       "source_xp_id": "plydie-0111"
     },
@@ -7767,8 +7952,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0102_p602_m951_h410_c0_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0102.xp",
       "source_xp_id": "plydie-0102"
     },
@@ -7809,8 +7995,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_0112_p602_m951_h410_c0_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-0112.xp",
       "source_xp_id": "plydie-0112"
     },
@@ -7851,8 +8038,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1100_p602_m951_h410_c411_w0_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1100.xp",
       "source_xp_id": "plydie-1100"
     },
@@ -7893,8 +8081,9 @@
         "weapon_item_id": 0,
         "weapon_style_id": 0
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1110_p602_m951_h410_c411_w0_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1110.xp",
       "source_xp_id": "plydie-1110"
     },
@@ -7935,8 +8124,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1101_p602_m951_h410_c411_w409_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1101.xp",
       "source_xp_id": "plydie-1101"
     },
@@ -7977,8 +8167,9 @@
         "weapon_item_id": 409,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1111_p602_m951_h410_c411_w409_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1111.xp",
       "source_xp_id": "plydie-1111"
     },
@@ -8019,8 +8210,9 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1102_p602_m951_h410_c411_w417_s0",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1102.xp",
       "source_xp_id": "plydie-1102"
     },
@@ -8061,10 +8253,183 @@
         "weapon_item_id": 417,
         "weapon_style_id": 500
       },
-      "pinned_upstream_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
       "profile_id": "plydie_1112_p602_m951_h410_c411_w417_s402",
+      "source_commit": "8ff75d0c5a8d2745a8ad6a8a841dd31a46e81635",
+      "source_contract_kind": "upstream",
       "source_xp": "assets/sprites/plydie-1112.xp",
       "source_xp_id": "plydie-1112"
+    },
+    {
+      "composition_kind": "target_authored_standalone",
+      "extension_overlay_xp": "",
+      "key": {
+        "actor_style_id": 0,
+        "chest_item_id": 0,
+        "chest_style_id": 0,
+        "future_item_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "future_slot_kind_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "future_style_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "head_item_id": 0,
+        "head_style_id": 0,
+        "mount_id": 0,
+        "presentation_kind_id": 600,
+        "rig_id": 0,
+        "shield_item_id": 0,
+        "shield_style_id": 0,
+        "skin_id": 102,
+        "variation_id": 0,
+        "weapon_item_id": 0,
+        "weapon_style_id": 0
+      },
+      "profile_id": "wallace_p600_m0",
+      "source_commit": "f9ca59759fd46828e6cc320428ec7e6132dd4648",
+      "source_contract_kind": "custom",
+      "source_xp": "assets/sprites/2026-08-12-030327-wallace.xp",
+      "source_xp_id": "2026-08-12-030327-wallace"
+    },
+    {
+      "composition_kind": "target_authored_standalone",
+      "extension_overlay_xp": "",
+      "key": {
+        "actor_style_id": 0,
+        "chest_item_id": 0,
+        "chest_style_id": 0,
+        "future_item_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "future_slot_kind_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "future_style_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "head_item_id": 0,
+        "head_style_id": 0,
+        "mount_id": 0,
+        "presentation_kind_id": 601,
+        "rig_id": 0,
+        "shield_item_id": 0,
+        "shield_style_id": 0,
+        "skin_id": 102,
+        "variation_id": 0,
+        "weapon_item_id": 0,
+        "weapon_style_id": 0
+      },
+      "profile_id": "wallace_p601_m0",
+      "source_commit": "f9ca59759fd46828e6cc320428ec7e6132dd4648",
+      "source_contract_kind": "custom",
+      "source_xp": "assets/sprites/2026-08-12-030327-wallace.xp",
+      "source_xp_id": "2026-08-12-030327-wallace"
+    },
+    {
+      "composition_kind": "target_authored_standalone",
+      "extension_overlay_xp": "",
+      "key": {
+        "actor_style_id": 0,
+        "chest_item_id": 0,
+        "chest_style_id": 0,
+        "future_item_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "future_slot_kind_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "future_style_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "head_item_id": 0,
+        "head_style_id": 0,
+        "mount_id": 0,
+        "presentation_kind_id": 602,
+        "rig_id": 0,
+        "shield_item_id": 0,
+        "shield_style_id": 0,
+        "skin_id": 102,
+        "variation_id": 0,
+        "weapon_item_id": 0,
+        "weapon_style_id": 0
+      },
+      "profile_id": "wallace_p602_m0",
+      "source_commit": "f9ca59759fd46828e6cc320428ec7e6132dd4648",
+      "source_contract_kind": "custom",
+      "source_xp": "assets/sprites/2026-08-12-030327-wallace.xp",
+      "source_xp_id": "2026-08-12-030327-wallace"
+    },
+    {
+      "composition_kind": "target_authored_standalone",
+      "extension_overlay_xp": "",
+      "key": {
+        "actor_style_id": 0,
+        "chest_item_id": 0,
+        "chest_style_id": 0,
+        "future_item_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "future_slot_kind_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "future_style_ids": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "head_item_id": 0,
+        "head_style_id": 0,
+        "mount_id": 0,
+        "presentation_kind_id": 600,
+        "rig_id": 0,
+        "shield_item_id": 0,
+        "shield_style_id": 0,
+        "skin_id": 103,
+        "variation_id": 0,
+        "weapon_item_id": 0,
+        "weapon_style_id": 0
+      },
+      "profile_id": "gromit_p600_m0",
+      "source_commit": "f9ca59759fd46828e6cc320428ec7e6132dd4648",
+      "source_contract_kind": "custom",
+      "source_xp": "assets/sprites/2026-08-12-030327-gromit.xp",
+      "source_xp_id": "2026-08-12-030327-gromit"
     }
   ],
   "schema_id": "asciicker.actor_visual_profiles.provenance.v1"

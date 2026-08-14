@@ -1,6 +1,13 @@
 {
   "schema": "asciicker.wallace_gromit_sand_scene_proof.v1",
   "captured_at": "2026-08-14T12:21:00+09:00",
+  "evidence_scope": {
+    "stage": "Executed historical observation",
+    "source_commit": null,
+    "commit_bound": false,
+    "closure_grade": false,
+    "limitation": "The ignored web slot manifest identified an older dirty revision; this receipt does not verify the current correction batch."
+  },
   "runtime": {
     "surface": "headed browser WebAssembly client connected to native authoritative server",
     "url": "http://127.0.0.1:8765/?player=Wallace&server=ws%3A%2F%2F127.0.0.1%3A8080",

@@ -4,5 +4,5 @@
 // Server/deploy identity for the compiled actor visual table.
 
 static constexpr const char* kServerActorVisualReachabilityScopeId = "server_reachability_scope:b18f0823d6b7f04b";
-static constexpr const char* kServerActorVisualReachabilityHash = "c0dd1d0e142cc5dbb08d3a06368b9f97cfafe81046397524fbadbfd0cedceccd";
-static constexpr const char* kServerActorVisualCatalogHash = "9aa4e65ab689d31c14dc3601be054a822c3b821b5b7f09b47eb469970f0b64be";
+static constexpr const char* kServerActorVisualReachabilityHash = "6538a96f3d6220d3640f89256189fce407f4f51cd19cde10234d75b2e44745da";
+static constexpr const char* kServerActorVisualCatalogHash = "55db1cdc2ac876386bf8e47073f1f9b506253bc7b58ed8dc1fbf73cc6b23cb7e";
