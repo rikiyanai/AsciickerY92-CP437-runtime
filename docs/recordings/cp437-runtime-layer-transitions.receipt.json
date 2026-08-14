@@ -1,0 +1,1794 @@
+{
+  "schema_version": 1,
+  "artifact": "cp437-runtime-layer-transitions.gif",
+  "artifact_sha256": "9ae5bc26bf1539619ee32fdfa6ab9bdf434eed6fc17a0f21991e333229cdb970",
+  "artifact_width": 956,
+  "artifact_height": 386,
+  "decoded_frame_count": 52,
+  "frame_duration_ms": 150,
+  "loop": 0,
+  "capture": {
+    "repository": "rikiyanai/AsciickerY92-CP437-runtime",
+    "git_head": "c71c8d7214be3b69f7817b36f129b3781d341478",
+    "player_name": "layer-proof-7",
+    "source": "real browser/WebAssembly client connected to the real authoritative C++ server",
+    "browser_screenshot_size": [
+      1091,
+      873
+    ],
+    "render_grid_cells": [
+      160,
+      90
+    ],
+    "server_binary_sha256": "d7fce0d1769cd74b22ffad4d149dfffe137696ece89d2fac7edca3533570d357",
+    "local_index_html_sha256": "a405f53d9d45c1aeb9156e4e25502c8abfc545278486a944a244cc3cbadbfc9b",
+    "served_index_html_sha256": "a405f53d9d45c1aeb9156e4e25502c8abfc545278486a944a244cc3cbadbfc9b",
+    "appearance_contract_version": 3,
+    "appearance_bundle_hash": "85aa7f25dcce1b061b65f6c40cbda8535ea7c9ffdf39b184bc5d22e3c927b333",
+    "ids_lock_hash": "64bf59751f1176a11f4dd2801f5dfc8b539093d81ff8dcacd60d63c66939aa56",
+    "captured_at_start": "2026-08-11T23:43:05.692Z",
+    "captured_at_end": "2026-08-11T23:57:32.034Z"
+  },
+  "composition": {
+    "world_crop_in_source_pixels": [
+      239,
+      271,
+      849,
+      609
+    ],
+    "world_panel_size": [
+      610,
+      338
+    ],
+    "detail_crop_size_in_source_pixels": [
+      64,
+      64
+    ],
+    "detail_panel_size": [
+      336,
+      336
+    ],
+    "detail_resampling": "nearest-neighbor",
+    "detail_center": "per-frame body_screen_pos projected from the real 160x90 render grid",
+    "truthfulness": "Each right panel is a nearest-neighbor crop of the same browser screenshot shown at left; no sprite was reconstructed or redrawn.",
+    "server_slot_evidence_rendered_in_gif": false
+  },
+  "world_proof": {
+    "artifact": "armored-block-feature-gameplay.gif",
+    "sha256": "f0c203dd8979e327236014f3a232a8b947368a0c1ddee65ef95a4acda59e852a",
+    "claim": "uncropped runtime-world movement proof; not used as fine layer evidence"
+  },
+  "server_slot_evidence": {
+    "source": "GetActorWearableProofProbeJson(0).server_truth backed by player.appearance_v2",
+    "note": "Slot identities are recorded here and tested separately; they are not overlaid as if they were visible game UI."
+  },
+  "phases": [
+    {
+      "name": "baseline",
+      "gif_start": 0,
+      "gif_end": 7,
+      "source_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angles": [
+        1
+      ],
+      "position_start": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "position_end": [
+        -2.8,
+        -73.6,
+        73.25
+      ]
+    },
+    {
+      "name": "armor",
+      "gif_start": 8,
+      "gif_end": 15,
+      "source_indices": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angles": [
+        4
+      ],
+      "position_start": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "position_end": [
+        13.105,
+        -69.995,
+        57.25
+      ]
+    },
+    {
+      "name": "helmet",
+      "gif_start": 16,
+      "gif_end": 23,
+      "source_indices": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angles": [
+        4
+      ],
+      "position_start": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "position_end": [
+        13.105,
+        -69.995,
+        57.25
+      ]
+    },
+    {
+      "name": "sword",
+      "gif_start": 24,
+      "gif_end": 31,
+      "source_indices": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angles": [
+        0
+      ],
+      "position_start": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "position_end": [
+        1.473,
+        -77.784,
+        73.431
+      ]
+    },
+    {
+      "name": "turn",
+      "gif_start": 32,
+      "gif_end": 43,
+      "source_indices": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "position_start": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "position_end": [
+        18.697,
+        -73.058,
+        57.25
+      ]
+    },
+    {
+      "name": "move",
+      "gif_start": 44,
+      "gif_end": 51,
+      "source_indices": [
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angles": [
+        1,
+        2
+      ],
+      "position_start": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "position_end": [
+        20.944,
+        -71.319,
+        57.25
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "gif_index": 0,
+      "phase": "baseline",
+      "source_index": 0,
+      "source_file": "000-baseline.png",
+      "source_png_sha256": "ebfa34b58d9b11f824788d34e0bd59072a0417f2fd3f1e03ef90ae885914b964",
+      "decoded_rgba_sha256": "3cb0d2c224f351a30c8fa78adba237c40c408f9b90802dc10a2d6595a31c7d67",
+      "server_tick": 809,
+      "probe_seq": 754,
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1998472687
+    },
+    {
+      "gif_index": 1,
+      "phase": "baseline",
+      "source_index": 1,
+      "source_file": "001-baseline.png",
+      "source_png_sha256": "baf349a8e66b018b472e133772839bd2ee654ae94c67e56f00b07bee6265eb30",
+      "decoded_rgba_sha256": "297448603923471dedec004be673fb51017d3fd114a53a4700c8d7a803ef18c7",
+      "server_tick": 821,
+      "probe_seq": 774,
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 2563730963
+    },
+    {
+      "gif_index": 2,
+      "phase": "baseline",
+      "source_index": 2,
+      "source_file": "002-baseline.png",
+      "source_png_sha256": "c7c851c26784d009e93c7eaa29b3360a7fcf8aa6f57fafd1dd2626d90ca77a83",
+      "decoded_rgba_sha256": "c13f6c9db403cf6f99262798ed0e6e28ed07976db33418281d10c64453988090",
+      "server_tick": 832,
+      "probe_seq": 794,
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1582198291
+    },
+    {
+      "gif_index": 3,
+      "phase": "baseline",
+      "source_index": 3,
+      "source_file": "003-baseline.png",
+      "source_png_sha256": "08cf51b7171177172c9151fe322b0e498ea5c4b4fc226d742771dd08de151be9",
+      "decoded_rgba_sha256": "3dd1a29fcbcdb1ac3f1e0a605dba1f1dfd74bba4e6512b76bd7ced886c74bd19",
+      "server_tick": 843,
+      "probe_seq": 813,
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3016715795
+    },
+    {
+      "gif_index": 4,
+      "phase": "baseline",
+      "source_index": 4,
+      "source_file": "004-baseline.png",
+      "source_png_sha256": "342949e2afdd1adce74682660ca82e0ba1f462918d806a12661a3f0d2f139472",
+      "decoded_rgba_sha256": "59567012292eee0b54db753d883e7a958c11aa3951cf0d841518950f8b0797ff",
+      "server_tick": 854,
+      "probe_seq": 833,
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 272461331
+    },
+    {
+      "gif_index": 5,
+      "phase": "baseline",
+      "source_index": 5,
+      "source_file": "005-baseline.png",
+      "source_png_sha256": "73ad27e46a4dd613b3d6d6f2172d1925ec21cca7f6c288baf44ec731fe81ccbe",
+      "decoded_rgba_sha256": "9986d2223362599dcaab4b44b6640769f4f226ff259b110d54e6ae83535fd352",
+      "server_tick": 866,
+      "probe_seq": 852,
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3460591123
+    },
+    {
+      "gif_index": 6,
+      "phase": "baseline",
+      "source_index": 6,
+      "source_file": "006-baseline.png",
+      "source_png_sha256": "894a98661a569b36882cd15aaf2d561ce7eba15107a5351f3e3d528d39442bee",
+      "decoded_rgba_sha256": "8787b57a71d961c504e3c40cef60062a3db56a9dbd0ad5efaa40bea88d1cec5b",
+      "server_tick": 879,
+      "probe_seq": 873,
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3460591123
+    },
+    {
+      "gif_index": 7,
+      "phase": "baseline",
+      "source_index": 7,
+      "source_file": "007-baseline.png",
+      "source_png_sha256": "772299520c3e2dfe33642424d3ea23d4651e29ee6993820472a2918f24c7b1a4",
+      "decoded_rgba_sha256": "7ddd135f22749f5d1cfd4f36aa21c0bcade80d05007f44bb47e0eea52e2e8051",
+      "server_tick": 890,
+      "probe_seq": 893,
+      "server_slots": [],
+      "server_definitions": [],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        -2.8,
+        -73.6,
+        73.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 2335134628
+    },
+    {
+      "gif_index": 8,
+      "phase": "armor",
+      "source_index": 24,
+      "source_file": "024-armor_final.png",
+      "source_png_sha256": "8f7be48f0ad9bb5c2cf1580f2700e0a41eb70fb1d2c7537b40bdba8e7c00304d",
+      "decoded_rgba_sha256": "95ba27d5fc4dc7746c8e081d8203b36c7e7ff5f9619c51b894996b90c196bf41",
+      "server_tick": 10843,
+      "probe_seq": 37691,
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 1740363717
+    },
+    {
+      "gif_index": 9,
+      "phase": "armor",
+      "source_index": 25,
+      "source_file": "025-armor_final.png",
+      "source_png_sha256": "8f7be48f0ad9bb5c2cf1580f2700e0a41eb70fb1d2c7537b40bdba8e7c00304d",
+      "decoded_rgba_sha256": "c44b8fffe60c325e2517b1fccd2957907cab8c76cad45c36d5d291f30fda747c",
+      "server_tick": 10847,
+      "probe_seq": 37710,
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 1740363717
+    },
+    {
+      "gif_index": 10,
+      "phase": "armor",
+      "source_index": 26,
+      "source_file": "026-armor_final.png",
+      "source_png_sha256": "b436632dec1acd8380fa5e1272a3bb700d9f9188a597aec30ca727ee51ba76ce",
+      "decoded_rgba_sha256": "54882916af412dfb35918e6133debe67f03f1473c9c4b163d59682d59c39e345",
+      "server_tick": 10849,
+      "probe_seq": 37720,
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 3553155013
+    },
+    {
+      "gif_index": 11,
+      "phase": "armor",
+      "source_index": 27,
+      "source_file": "027-armor_final.png",
+      "source_png_sha256": "8f7be48f0ad9bb5c2cf1580f2700e0a41eb70fb1d2c7537b40bdba8e7c00304d",
+      "decoded_rgba_sha256": "53e76ddd504a968d777b05ba67cc514f308c218524ee58c87d41fb2380d7be37",
+      "server_tick": 10852,
+      "probe_seq": 37733,
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 793827269
+    },
+    {
+      "gif_index": 12,
+      "phase": "armor",
+      "source_index": 28,
+      "source_file": "028-armor_final.png",
+      "source_png_sha256": "458688044d23e3c1af4eacca35550716160b8e4ad085041db9138f50da7acbee",
+      "decoded_rgba_sha256": "c2abb00b2dcc550ef461daaf6b074cd7b3391b20574350906be48de11796032a",
+      "server_tick": 10856,
+      "probe_seq": 37744,
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 1740363717
+    },
+    {
+      "gif_index": 13,
+      "phase": "armor",
+      "source_index": 29,
+      "source_file": "029-armor_final.png",
+      "source_png_sha256": "8f7be48f0ad9bb5c2cf1580f2700e0a41eb70fb1d2c7537b40bdba8e7c00304d",
+      "decoded_rgba_sha256": "70c12750b83221e116932c83e0d2591936d96dc8cc7058bd6fb5b6947013c2b2",
+      "server_tick": 10859,
+      "probe_seq": 37759,
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 793827269
+    },
+    {
+      "gif_index": 14,
+      "phase": "armor",
+      "source_index": 30,
+      "source_file": "030-armor_final.png",
+      "source_png_sha256": "8f7be48f0ad9bb5c2cf1580f2700e0a41eb70fb1d2c7537b40bdba8e7c00304d",
+      "decoded_rgba_sha256": "264e3640b75aef2171c59ebf17c4164b57928afabfb53bd1c39340e3a3450b4b",
+      "server_tick": 10861,
+      "probe_seq": 37769,
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 3553155013
+    },
+    {
+      "gif_index": 15,
+      "phase": "armor",
+      "source_index": 31,
+      "source_file": "031-armor_final.png",
+      "source_png_sha256": "8f7be48f0ad9bb5c2cf1580f2700e0a41eb70fb1d2c7537b40bdba8e7c00304d",
+      "decoded_rgba_sha256": "e442c6aa8d943566196ef3da01ee7d355a986d079dcf71aea20a94999b52f854",
+      "server_tick": 10865,
+      "probe_seq": 37783,
+      "server_slots": [
+        306
+      ],
+      "server_definitions": [
+        411
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 185128901
+    },
+    {
+      "gif_index": 16,
+      "phase": "helmet",
+      "source_index": 32,
+      "source_file": "032-helmet_final.png",
+      "source_png_sha256": "8c4624904a462720ac0dead160f7a44d182ea643fb114965c7eee91f7c3ba6d7",
+      "decoded_rgba_sha256": "3d53cf09d6b04a1ffa86b16310d1ffa714a302e6735c4ece2b1e55e6de96c474",
+      "server_tick": 11417,
+      "probe_seq": 39973,
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 3260884535
+    },
+    {
+      "gif_index": 17,
+      "phase": "helmet",
+      "source_index": 33,
+      "source_file": "033-helmet_final.png",
+      "source_png_sha256": "43878daf3f0c957b9619cf29fb09500d7e56b7a51abe0dc0680e05901ca8087d",
+      "decoded_rgba_sha256": "da2ee5ace74bd8fd0028e9c362d51b413009a6201ffa47b4343b13945960e4e1",
+      "server_tick": 11425,
+      "probe_seq": 40001,
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 420226615
+    },
+    {
+      "gif_index": 18,
+      "phase": "helmet",
+      "source_index": 34,
+      "source_file": "034-helmet_final.png",
+      "source_png_sha256": "1bf8dc8479972c27b4cfc305a923473083c3777e48056f84d5897615c5649ef8",
+      "decoded_rgba_sha256": "e5c82e13de9a193c94eec261c3e2e492cd3f36752c2d8199e46aaae3d9041391",
+      "server_tick": 11431,
+      "probe_seq": 40024,
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 3260884535
+    },
+    {
+      "gif_index": 19,
+      "phase": "helmet",
+      "source_index": 35,
+      "source_file": "035-helmet_final.png",
+      "source_png_sha256": "8c4624904a462720ac0dead160f7a44d182ea643fb114965c7eee91f7c3ba6d7",
+      "decoded_rgba_sha256": "0d1ec3e8cab90cb44660ea7371d786a788a45f7736f8d0931260c2219321f871",
+      "server_tick": 11436,
+      "probe_seq": 40046,
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 3260884535
+    },
+    {
+      "gif_index": 20,
+      "phase": "helmet",
+      "source_index": 36,
+      "source_file": "036-helmet_final.png",
+      "source_png_sha256": "8c4624904a462720ac0dead160f7a44d182ea643fb114965c7eee91f7c3ba6d7",
+      "decoded_rgba_sha256": "c87dd535e097f74b6866a615811d020141688e9730d123d7c6315a29f2753022",
+      "server_tick": 11442,
+      "probe_seq": 40067,
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 3260884535
+    },
+    {
+      "gif_index": 21,
+      "phase": "helmet",
+      "source_index": 37,
+      "source_file": "037-helmet_final.png",
+      "source_png_sha256": "43878daf3f0c957b9619cf29fb09500d7e56b7a51abe0dc0680e05901ca8087d",
+      "decoded_rgba_sha256": "e64f19d17234385c972919709ab639a8c9c7049df28457039bcc330f33a320be",
+      "server_tick": 11447,
+      "probe_seq": 40091,
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 420226615
+    },
+    {
+      "gif_index": 22,
+      "phase": "helmet",
+      "source_index": 38,
+      "source_file": "038-helmet_final.png",
+      "source_png_sha256": "1bf8dc8479972c27b4cfc305a923473083c3777e48056f84d5897615c5649ef8",
+      "decoded_rgba_sha256": "d346c666675548dd5fe95d150acb3bad899db6c795eb1a7fc144f4366a3175a0",
+      "server_tick": 11453,
+      "probe_seq": 40114,
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 3260884535
+    },
+    {
+      "gif_index": 23,
+      "phase": "helmet",
+      "source_index": 39,
+      "source_file": "039-helmet_final.png",
+      "source_png_sha256": "8c4624904a462720ac0dead160f7a44d182ea643fb114965c7eee91f7c3ba6d7",
+      "decoded_rgba_sha256": "5e9ab66c997d39157dc0643062946605015ad3cf4247bd8d0912bead0911d983",
+      "server_tick": 11458,
+      "probe_seq": 40136,
+      "server_slots": [
+        306,
+        301
+      ],
+      "server_definitions": [
+        411,
+        410
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        13.105,
+        -69.995,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 911091255
+    },
+    {
+      "gif_index": 24,
+      "phase": "sword",
+      "source_index": 40,
+      "source_file": "040-sword_final.png",
+      "source_png_sha256": "b670a4490f15d6ad21054a3a3ac65454da1608ff370cd6f71aa162b94b867458",
+      "decoded_rgba_sha256": "be9cc5091e920e06eb242f949acd6b063b4011dfe7a68ad39608f6ece5212349",
+      "server_tick": 12218,
+      "probe_seq": 43173,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3577138579
+    },
+    {
+      "gif_index": 25,
+      "phase": "sword",
+      "source_index": 41,
+      "source_file": "041-sword_final.png",
+      "source_png_sha256": "d906ff4da6eae1607ba161390fcfd883b992d675dc8f8b13932305424643018a",
+      "decoded_rgba_sha256": "214b6b8b31a55921480db413a070b01f36fd95298cae2a38b1fffcc4761f9d84",
+      "server_tick": 12225,
+      "probe_seq": 43198,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 2358867566
+    },
+    {
+      "gif_index": 26,
+      "phase": "sword",
+      "source_index": 42,
+      "source_file": "042-sword_final.png",
+      "source_png_sha256": "80deebaffa5704012470b11ef53f7bfc393b2c283a3f0ca656dec6dc3bb24903",
+      "decoded_rgba_sha256": "e2d202bb07838ca4370d3a1b7e521c68fa75356509989bfa7e641ec208a6524b",
+      "server_tick": 12231,
+      "probe_seq": 43227,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1436295241
+    },
+    {
+      "gif_index": 27,
+      "phase": "sword",
+      "source_index": 43,
+      "source_file": "043-sword_final.png",
+      "source_png_sha256": "b6277bf75969aeff4e4cb78f3ed6d897ff8222988cd271e92f9779b7c2c37015",
+      "decoded_rgba_sha256": "636042f8ed8dbde60db8337bf75a8e294d43a568772e8dfab3cb95563cddcca1",
+      "server_tick": 12236,
+      "probe_seq": 43249,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3414728799
+    },
+    {
+      "gif_index": 28,
+      "phase": "sword",
+      "source_index": 44,
+      "source_file": "044-sword_final.png",
+      "source_png_sha256": "f50cc838ce3484e3e1cb531588106ce592574d9c1f092eb6c2ccc2958dce7cff",
+      "decoded_rgba_sha256": "cf96ece88daf10b0ceffa0906858bbf15e32a439003b86fc49965461a766ea48",
+      "server_tick": 12248,
+      "probe_seq": 43294,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3767586195
+    },
+    {
+      "gif_index": 29,
+      "phase": "sword",
+      "source_index": 45,
+      "source_file": "045-sword_final.png",
+      "source_png_sha256": "05191fb042ce1c22a5f568f3b9cfa69b412db23498abe1ecf07efba8b198823d",
+      "decoded_rgba_sha256": "1b2cb879bac37b6149401cbe67fc98add3956e3b6970e1e639d55fcd7d023f16",
+      "server_tick": 12254,
+      "probe_seq": 43317,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 585397870
+    },
+    {
+      "gif_index": 30,
+      "phase": "sword",
+      "source_index": 46,
+      "source_file": "046-sword_final.png",
+      "source_png_sha256": "56f3160c72b4f516ddd0bf6fb691ed734bb37ef1b9ef59cfee840ccee8b77c3b",
+      "decoded_rgba_sha256": "c9e5f7bbc06959689a9b9bdfdd70ec37b468bcb06f2e4231a7613b9e05c39815",
+      "server_tick": 12260,
+      "probe_seq": 43340,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3134398537
+    },
+    {
+      "gif_index": 31,
+      "phase": "sword",
+      "source_index": 47,
+      "source_file": "047-sword_final.png",
+      "source_png_sha256": "975d70a5aef6ba885f83acb2303b300d8002e2bcab0afd823ae7c90601f416de",
+      "decoded_rgba_sha256": "a2a05d3f8b5a03849d8a3e04da5786cdaaf88eb133b28572c1e44114bc23f2d3",
+      "server_tick": 12265,
+      "probe_seq": 43362,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        1.473,
+        -77.784,
+        73.431
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 2783411124
+    },
+    {
+      "gif_index": 32,
+      "phase": "turn",
+      "source_index": 76,
+      "source_file": "076-turn_open.png",
+      "source_png_sha256": "2c0719e8056458ff0c45ffd60de78510b5940a57efbe47ec43ad744a573dd633",
+      "decoded_rgba_sha256": "471e28a75787c05c528939f89d2115ee306a737f8de661b023fb3534ee4cb980",
+      "server_tick": 22181,
+      "probe_seq": 83022,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 4161568363
+    },
+    {
+      "gif_index": 33,
+      "phase": "turn",
+      "source_index": 77,
+      "source_file": "077-turn_open.png",
+      "source_png_sha256": "29db197a6edb345697dbac53fcfa11b3c0e49ea5b5fa69823e44e5e4098fe9f9",
+      "decoded_rgba_sha256": "c78a3c0777878bb8d6c2ed6b0bb1d15334a3f81b681484b81935cd5fbd95f041",
+      "server_tick": 22185,
+      "probe_seq": 83039,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1851709083
+    },
+    {
+      "gif_index": 34,
+      "phase": "turn",
+      "source_index": 78,
+      "source_file": "078-turn_open.png",
+      "source_png_sha256": "9fac13d01ee5ef5911228f7adbd8231ee7bdd70866d128b11b87653619ceed55",
+      "decoded_rgba_sha256": "f2f94182089993ee4813445778bb3625d57fa2d2886f9ac9fd8a1071a3aabf4f",
+      "server_tick": 22188,
+      "probe_seq": 83056,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1577537212
+    },
+    {
+      "gif_index": 35,
+      "phase": "turn",
+      "source_index": 79,
+      "source_file": "079-turn_open.png",
+      "source_png_sha256": "9d2492e2bb2b14e5af8597c18f312c2bf9a4e2a07e5c208c59758d2ab39e7fd2",
+      "decoded_rgba_sha256": "49cf9645ae91a3c7159c75b95b23b6dd115d5a348465f0fc7086c83e6db27a2f",
+      "server_tick": 22192,
+      "probe_seq": 83071,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3328441018
+    },
+    {
+      "gif_index": 36,
+      "phase": "turn",
+      "source_index": 80,
+      "source_file": "080-turn_open.png",
+      "source_png_sha256": "eae556ab8d1c129d5ac556ca8dad82eabd57b8797f53e0d04a2234bc72580424",
+      "decoded_rgba_sha256": "a23349cf2ec2845295c809ddb2598886cf3cc7094846ea9a5b1d703f43339561",
+      "server_tick": 22197,
+      "probe_seq": 83088,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 0,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 2335406824
+    },
+    {
+      "gif_index": 37,
+      "phase": "turn",
+      "source_index": 81,
+      "source_file": "081-turn_open.png",
+      "source_png_sha256": "b3fcefa9cb63c4a95ec8fa9a6f1fa53d5a584ebdcd002ee92c4a59903d8d10f7",
+      "decoded_rgba_sha256": "ae4ff69e2e535b068a46be299d31da57e539b4254d419a133e4b6fbcc3e0072c",
+      "server_tick": 22201,
+      "probe_seq": 83104,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 7,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3277139783
+    },
+    {
+      "gif_index": 38,
+      "phase": "turn",
+      "source_index": 82,
+      "source_file": "082-turn_open.png",
+      "source_png_sha256": "c7271f97c3c039ef22064cd0f6cd7d8314c1936137225f5a0cdb3d1af4f7ac1e",
+      "decoded_rgba_sha256": "fbcda2f742926bde7b2afb9210fc90ebd22f3b7aed9384b54a6794a9db184d23",
+      "server_tick": 22206,
+      "probe_seq": 83121,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 6,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 379151294
+    },
+    {
+      "gif_index": 39,
+      "phase": "turn",
+      "source_index": 87,
+      "source_file": "087-turn_open.png",
+      "source_png_sha256": "0270da70f159e9fca0abbc3303e15c9418c840b7cdde1f1cc46d974bc0263fc3",
+      "decoded_rgba_sha256": "25337880999573d0f3142d869a4c32cd196b650903cdba0c7abff5168f7c8513",
+      "server_tick": 22225,
+      "probe_seq": 83201,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 4,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 2963729323
+    },
+    {
+      "gif_index": 40,
+      "phase": "turn",
+      "source_index": 88,
+      "source_file": "088-turn_open_finish.png",
+      "source_png_sha256": "85c8092069c1972e3efd669410cd2542a914cbbaaf0afe0df629817e78503a9e",
+      "decoded_rgba_sha256": "fb9862edadf48fc0e2fe41a78a44fa8f1149e3eb9f02df4da3e743a74c17599c",
+      "server_tick": 22436,
+      "probe_seq": 84042,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 3,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 653178944
+    },
+    {
+      "gif_index": 41,
+      "phase": "turn",
+      "source_index": 89,
+      "source_file": "089-turn_open_finish.png",
+      "source_png_sha256": "c0a0c784a60f8041583e8e9f61b9e88dc6d80dbb9cfd310f5bbdea7a27a77731",
+      "decoded_rgba_sha256": "9beba0da245a0c8f36809fbb29b535405c77b512905e4858688dcdb4cdf84f54",
+      "server_tick": 22440,
+      "probe_seq": 84058,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1012810975
+    },
+    {
+      "gif_index": 42,
+      "phase": "turn",
+      "source_index": 90,
+      "source_file": "090-turn_open_finish.png",
+      "source_png_sha256": "5fd59b9c76579ce8dace5259dc53098790e5384546646d5174f6ee959a095a6a",
+      "decoded_rgba_sha256": "3801fc32434476e7e18c4e7957d3cd47dc810389bb8304749d4b85a8946f4b2d",
+      "server_tick": 22444,
+      "probe_seq": 84075,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 3772062734
+    },
+    {
+      "gif_index": 43,
+      "phase": "turn",
+      "source_index": 91,
+      "source_file": "091-turn_open_finish.png",
+      "source_png_sha256": "3bc63af3f707de290978d4133a452b13d6e3788e131b6c382f7d4a5a89cda0d4",
+      "decoded_rgba_sha256": "c815d4c8725040b1eb6b52befee7debdb4292a927129f95c32929ff01d7a6c03",
+      "server_tick": 22448,
+      "probe_seq": 84092,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1997114942
+    },
+    {
+      "gif_index": 44,
+      "phase": "move",
+      "source_index": 92,
+      "source_file": "092-move_level_pre.png",
+      "source_png_sha256": "2bcfc627daffc4a4e1799a8e187748320dbec5f6926201e3762951435780f2b4",
+      "decoded_rgba_sha256": "5ac9de3de9983dc6f494c69cb2cb546442a4dec0100fe466f86746f9739eddc4",
+      "server_tick": 26751,
+      "probe_seq": 101309,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1901746120
+    },
+    {
+      "gif_index": 45,
+      "phase": "move",
+      "source_index": 93,
+      "source_file": "093-move_level_pre.png",
+      "source_png_sha256": "2bcfc627daffc4a4e1799a8e187748320dbec5f6926201e3762951435780f2b4",
+      "decoded_rgba_sha256": "210cab068eda539fc446e07c3c2f7e5eddfc5ba19662fa696230ceade070a1ea",
+      "server_tick": 26755,
+      "probe_seq": 101319,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 1,
+      "authoritative_position": [
+        18.697,
+        -73.058,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        46
+      ],
+      "render_buf_hash": 1708687961
+    },
+    {
+      "gif_index": 46,
+      "phase": "move",
+      "source_index": 94,
+      "source_file": "094-move_level_post.png",
+      "source_png_sha256": "4c9cd3729fbdb77c86dafb16e15165fa154de4dcb4f03a96f9c08aca7a56c85b",
+      "decoded_rgba_sha256": "b5325670cb4971cca4d9d95779d5af2feb386b8222641916bf34c42dbeaae299",
+      "server_tick": 26778,
+      "probe_seq": 101411,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        20.944,
+        -71.319,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 2244627010
+    },
+    {
+      "gif_index": 47,
+      "phase": "move",
+      "source_index": 95,
+      "source_file": "095-move_level_post.png",
+      "source_png_sha256": "66aec5210909dcc6a2ad6f392ebfe87ea92c4da499753f84ab4ef612eeea6c45",
+      "decoded_rgba_sha256": "4244a2c42aa8a26b120d16098a2d550fe302a641be9a1871c9b85950179cf0d1",
+      "server_tick": 26782,
+      "probe_seq": 101430,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        20.944,
+        -71.319,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 1928938097
+    },
+    {
+      "gif_index": 48,
+      "phase": "move",
+      "source_index": 96,
+      "source_file": "096-move_level_post.png",
+      "source_png_sha256": "973bc31a7305f3c2076567d4b202c6e0c9da8d57b07b0977d2b7be7dc17f41dd",
+      "decoded_rgba_sha256": "55dc631cc3ff6b42681fa5385fda1f0ae9b7f440dca5296f8ac6aef53a08a4ab",
+      "server_tick": 26786,
+      "probe_seq": 101448,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        20.944,
+        -71.319,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 1764075063
+    },
+    {
+      "gif_index": 49,
+      "phase": "move",
+      "source_index": 97,
+      "source_file": "097-move_level_post.png",
+      "source_png_sha256": "e9dabdc3e5f49f939e1a73dbef725391105e8e40b2c54ec0e83e5e23e060613d",
+      "decoded_rgba_sha256": "a91736a2264aeb822a764de8fb528f7cb25f0e5a59bc5fc771422b3ecd55b848",
+      "server_tick": 26792,
+      "probe_seq": 101466,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        20.944,
+        -71.319,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 4075268409
+    },
+    {
+      "gif_index": 50,
+      "phase": "move",
+      "source_index": 98,
+      "source_file": "098-move_level_post.png",
+      "source_png_sha256": "2ee5ffa0f25ccef37f41891b996a616d131ba94c15c59c09624cfa1f46c1a428",
+      "decoded_rgba_sha256": "4968e99f4a83a88ffa934a0b72b12c73e38c74bf0c57845c31ddf20952185726",
+      "server_tick": 26795,
+      "probe_seq": 101483,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        20.944,
+        -71.319,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 2244627010
+    },
+    {
+      "gif_index": 51,
+      "phase": "move",
+      "source_index": 99,
+      "source_file": "099-move_level_post.png",
+      "source_png_sha256": "ff4e77d1ce54bbb85769586ae2a90b71bd70347981d2c25a5d79f4366d196eb3",
+      "decoded_rgba_sha256": "35b51bdebad94e9bbe06b7990fdc80403b81c7c66d519f02ef54d5c77c693387",
+      "server_tick": 26801,
+      "probe_seq": 101502,
+      "server_slots": [
+        306,
+        301,
+        303
+      ],
+      "server_definitions": [
+        411,
+        410,
+        409
+      ],
+      "sprite_angle": 2,
+      "authoritative_position": [
+        20.944,
+        -71.319,
+        57.25
+      ],
+      "body_screen_pos": [
+        80,
+        45
+      ],
+      "render_buf_hash": 4015099684
+    }
+  ]
+}

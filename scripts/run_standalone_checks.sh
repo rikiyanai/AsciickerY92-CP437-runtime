@@ -8,7 +8,8 @@ python3 -m pytest -q \
   scripts/test_compile_actor_visual_profiles_upstream_contract.py \
   scripts/test_fl4131_actor_visual_compile_admission.py \
   scripts/test_glyph_topology_gate_t1.py \
-  scripts/test_glyph_topology_gate_t2_fixtures.py
+  scripts/test_glyph_topology_gate_t2_fixtures.py \
+  tests/test_recording_contract.py
 python3 scripts/test_fl4131_glyph_admission.py
 python3 scripts/test_fl4131_glyph_manifest_compile_outputs.py
 python3 scripts/test_glyph_manifest_parity.py

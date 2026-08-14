@@ -716,3 +716,369 @@
   before `build-web.sh`. Using the script's web-only missing-server override
   would weaken this full-runtime repository's bundle proof by emitting a null
   server hash, so it is not an acceptable correction here.
+
+## P0C-06 · 2026-08-12 — wide gameplay GIF did not prove the appearance stack
+
+- `docs/recordings/armored-block-feature-gameplay.gif` is a valid recording of
+  the real browser client moving in the Block Feature world, but its 520-pixel
+  wide view leaves the player too small to judge the base, armor, helmet, and
+  sword layers individually.
+- The animation shows neither the unequipped baseline nor equipment transitions,
+  and it has no artifact-level test that checks decoded frames for those visual
+  states. It therefore proves runtime/world movement, not the full normalized-XP
+  appearance stack.
+- `README.md` also overattributes separately observed pickup and authoritative
+  slot evidence to that GIF. Server-owned slots 301, 306, and 303 remain valid
+  runtime evidence, but they are not visible in the recording and must be stated
+  separately.
+- Preserve the wide animation as world proof. The successor must record one real
+  browser/server session with an uncropped world view plus a nearest-neighbor
+  player inset, explicitly showing the unequipped baseline, armor added, helmet
+  added, a held sword if visibly rendered, and movement/turning across angles.
+  A receipt and decoded all-frame semantic-state test must bind the new artifact
+  to those claims without treating server slot state as a visible pixel fact.
+
+## P0C-06 · 2026-08-12 — first successor join check queried a nonexistent wrapper
+
+- The first new-session browser interaction uniquely resolved the live name,
+  server, and PLAY controls and submitted them, but its immediate confirmation
+  query assumed a `#login` wrapper that the actual page does not expose.
+- The query failed before returning bounded state. The click may have joined the
+  server, so it is not repeated. The successor must inspect the current canvas,
+  runtime log, and server-owned player state independently before sending any
+  further input or capturing a claimed baseline.
+
+## P0C-06 · 2026-08-12 — live server and browser bundle identities diverged
+
+- Independent console evidence from the first successor session showed the
+  browser sending a 488-byte JOIN_V2 request and the still-running authoritative
+  server rejecting it with `bundle_hash_mismatch`.
+- The rejection is a valid fail-closed contract result, not a playable session
+  or capture source. No screenshot from the rejected login is product evidence.
+- The server process belongs to this checkout but predates the current built web
+  bundle. Rebuild and restart that exact repository-owned server, then require a
+  successful JOIN_V2 response before capturing the unequipped baseline.
+
+## P0C-06 · 2026-08-12 — rebuild falsified the stale-server hypothesis
+
+- The scoped server rebuild passed actor-table coverage and server-reachability
+  gates without relinking: `.run/server` was already the exact binary recorded
+  by the current web slot manifest (SHA-256 `d7fce0d1769...`).
+- The checked-in/current appearance bundle is `43976fa43434...`, while the
+  rejected Chrome client logged request bundle `9a96b4d5485e...`. This locates
+  the divergence in Chrome's cached prior client artifacts, not in the running
+  authoritative server.
+- The successor must disable the cache for this local tab, reload the same
+  current site, and verify the request identity and accepted join. A server
+  restart alone would not correct the stale browser payload.
+
+## P0C-06 · 2026-08-12 — uncached reload proved the staged web build was stale
+
+- Chrome cache was disabled through the local tab's developer protocol and the
+  site was reloaded, but the next JOIN_V2 request still carried bundle
+  `9a96b4d5485e...` and was again rejected against current bundle
+  `43976fa43434...`.
+- That result falsifies browser HTTP cache as the remaining owner. The served
+  `.web/index.wasm`/preload bundle itself was built before the current compiled
+  appearance bundle even though the later slot manifest names the current Git
+  head.
+- Regenerate the complete web bundle with `build-web.sh`; do not edit the join
+  hash, bypass the server rejection, or use either rejected session as proof.
+
+## P0C-06 · 2026-08-12 — generic repository name hid the runnable contract
+
+- `asciicker-historical-runtime` described provenance but did not identify the
+  standalone product: the Asciicker Y9-2 Block Feature-era CP437 native/server/
+  browser runtime with the normalized-XP bundle integration.
+- Rename the private repository and local checkout to the exact product name
+  `AsciickerY92-CP437-runtime`. The README must still state that the runtime is
+  not CP437-only because admitted extended glyphs travel through the sidecar,
+  compiled manifest, and atlas path.
+
+## P0C-06 · 2026-08-12 — port 8765 was owned by the obsolete transplant
+
+- After rebuilding the renamed checkout, an independent served-file hash still
+  disagreed with its `.web/index.html`. `lsof` located HTTP PID 69085 at
+  `/private/tmp/p0c06-transplant.Gz4n01`, while the authoritative game server's
+  working directory correctly followed the renamed product checkout.
+- This supersedes the narrower "staged web build was stale" diagnosis: the
+  stale bundle was real, but port 8765 was serving it from the obsolete
+  transplant rather than the rebuilt repository.
+- Stop only that confirmed HTTP owner and relaunch port 8765 with the renamed
+  checkout's absolute `.web` directory. Require the served and local HTML hashes
+  to converge before another browser reload or join attempt.
+
+## P0C-06 · 2026-08-12 — first renamed-checkout HTTP launch did not persist
+
+- A background `nohup` launch wrote PID 80964 but the process exited before the
+  first socket check and left an empty log. Port 8765 was closed; no browser
+  request reached the renamed checkout.
+- The successor must keep the HTTP server in an owned execution session, record
+  its PID and log path, and prove both a listening socket and exact served/local
+  HTML hash equality before reloading Chrome.
+
+## P0C-06 · 2026-08-12 — Chrome rejected raw developer-protocol keyboard input
+
+- The accepted live session captured an unequipped eight-frame baseline, then
+  the first positioning attempt tried to hold `D` through raw developer-protocol
+  key events so authoritative movement could be measured.
+- This Chrome control surface explicitly rejects raw input injection and directed
+  the caller to visible CUA keyboard actions. No key event was sent and the
+  authoritative player position did not change.
+- Use repeated supported keyboard presses against the focused real canvas,
+  measuring the server snapshot after each bounded batch. Do not add a runtime
+  teleport, verifier mutation, or reconstructed state to simplify the recording.
+
+## P0C-06 · 2026-08-12 — completed keypresses were shorter than a game tick
+
+- Ten supported Chrome `D` keypresses reached the focused canvas: the page input
+  trace recorded matching `KeyD` down/character/up events. The authoritative
+  snapshot nevertheless remained exactly `(-2.8, -73.6, 73.25)` because each
+  completed press released before the game's held-key sampling observed it.
+- No captured delivery frame is attributed to movement from that batch. The
+  successor must use the production page's own `Keyb(DOWN/UP)` bridge with a
+  bounded hold interval, then verify displacement from the authoritative
+  snapshot. This preserves the real client input path without enabling a
+  teleport or verifier-only mutation API.
+
+## P0C-06 · 2026-08-12 — first production-bridge hold overshot the equipment
+
+- A 700 ms `Keyb(DOWN, D)` hold proved the real production bridge reaches the
+  authoritative server, moving the player from `(-2.8, -73.6, 73.25)` to
+  `(18.195, -106.429, 57.25)`. It also overshot all equipment pickup radii;
+  the pickup strip became empty.
+- Those positioning frames are not included in the deliverable. Use the
+  opposite `A` vector for a shorter bounded hold, and accept the correction only
+  when the server-owned pickup strip actually contains definitions 409, 410,
+  and 411 before any numbered pickup input.
+
+## P0C-06 · 2026-08-12 — opposite hold also crossed past the pickup cluster
+
+- The first correction held `A` for 550 ms and moved to
+  `(-18.176, -58.624, 57.25)`, again leaving the pickup strip empty. The
+  vector was correct but the interval ignored the runtime's acceleration and
+  produced a second overshoot.
+- Discard those positioning frames. Use shorter measured holds, decomposing the
+  remaining displacement across strafe and forward axes, and gate every pickup
+  on the authoritative strip rather than screen proximity alone.
+
+## P0C-06 · 2026-08-12 — measured strafe climbed the placeable block
+
+- Short `D`/`W` probes established the two movement vectors, but the final
+  330 ms strafe crossed the nearby placed-block collision volume. The server Z
+  rose to `259.476` and settled at the block top near `97.431`; only block
+  definitions 420/421 remained in pickup range.
+- This is real Block Feature collision behavior but not useful layer-transition
+  staging. No airborne/block-top frame enters the deliverable. Use a short
+  forward move followed by a short strafe to route off the block and toward the
+  six ground equipment items, then gate on pickup-strip definition identities.
+
+## P0C-06 · 2026-08-12 — numbered pickup cascaded across a reordering strip
+
+- The player reached the equipment cluster and pressed visible pickup number 4
+  for armor item 25095. The recorder later reported 24 pickup attempts as the
+  strip reordered, and server truth contained both armor 411 and an unintended
+  sword 409.
+- Dropping the sword through the real inventory briefly produced the desired
+  armor-only state, but it was picked again before the eight-frame phase ended.
+  The saved attempted armor frames (temporary indices 8–15) are rejected and
+  must not enter the GIF or receipt.
+- Restart a clean browser session and use a single visible mouse click on the
+  exact armor item in the real pickup strip. After each click, require one new
+  owned item and an exact server-truth definition/slot set before capturing any
+  phase frames.
+
+## P0C-06 · 2026-08-12 — clean-session browser transaction timed out after reload
+
+- The first clean-session restart exceeded the browser-control deadline while
+  waiting for the page-debug channel after reload. The compound transaction may
+  have reached login or PLAY, so no control is repeated and no resulting frame
+  is accepted yet.
+- Inspect the current tab visually and read the latest connection log before
+  deciding whether to join, resume, or reload. Only an independently verified
+  zero-entry server-truth state can start the replacement same-session capture.
+
+## P0C-06 · 2026-08-12 — reset variables did not retarget the capture closure
+
+- The clean session joined with zero equipment entries, but the first baseline
+  capture call reused a helper closed over the rejected attempt's directory and
+  frame index. The new temporary directory stayed empty, so its reported
+  checkpoint is not paired with the intended clean-session pixels.
+- Do not reuse that helper or any frame it appended to the rejected directory.
+  Create a new distinctly named capture function closed over a new directory,
+  recapture baseline, and verify its file count/range before positioning.
+
+## P0C-06 · 2026-08-12 — exact pickup-strip click still crossed adjacent items
+
+- The replacement session recaptured eight clean baseline frames and resolved
+  armor item 25095 to its exact visible strip interval. One CUA click inside
+  that interval nevertheless produced four pickup requests while the dense
+  strip reordered, leaving server truth with sword 409, helmet 410, and armor
+  411 together.
+- No post-click frames were saved. The UI's dense-cluster request behavior means
+  selecting by number or pixel is not sufficient when all three definitions are
+  simultaneously in range.
+- Clear the accidental loadout through the real inventory, then position at the
+  outer edge of the six-unit radius so only one definition class is eligible:
+  armor first, helmet second, sword last. Gate the strip's definition set before
+  every click and the exact server-truth slot set before every capture phase.
+
+## P0C-06 · 2026-08-12 — inventory navigation re-equipped the second sword
+
+- Repeated `Y` input on the first inventory focus removed one sword from the
+  authoritative weapon slot, but the four owned inventory records persisted.
+  The attempted `ArrowDown`, `Y` sequence then focused the second sword and
+  re-equipped slot 303, restoring the full server-truth set 409/410/411 instead
+  of advancing directly to helmet removal.
+- No frame from this inventory interaction is accepted. Clear the loadout by
+  toggling the currently focused second sword off, advancing exactly once to
+  helmet and exactly once to armor, and checking authoritative slot/definition
+  state after every single toggle before returning to the world view.
+
+## P0C-06 · 2026-08-12 — the cleanup session lost its browser tab
+
+- With the panel genuinely open, an authoritative focus advance did remove
+  helmet 410, but the runtime simultaneously restored weapon slot 303 from the
+  remaining owned sword. Before the next single-step state query, the
+  agent-created Chrome tab disappeared and its control channel reported no
+  remaining tabs.
+- The clean baseline saved from that disconnected session cannot support a
+  same-session transition artifact and is rejected with the rest of that
+  attempt. Open a fresh runtime tab, prove zero server entries, and recapture
+  the baseline. This time, move to a definition-isolated pickup radius before
+  the first item interaction so inventory cleanup is unnecessary.
+
+## P0C-06 · 2026-08-12 — disconnected player retained the equipment corpus
+
+- A fresh browser actor joined with an empty appearance loadout, but the
+  authoritative item snapshot showed all six 409/410/411 equipment instances
+  still owned by client 0 from the disconnected cleanup session. Moving within
+  four world units of armor therefore produced an empty eligible pickup strip.
+- The newly captured empty-loadout frames do not form a viable transition
+  session and are rejected. Restart the local authoritative server to reset its
+  seeded item corpus, reconnect one fresh actor, verify both zero loadout and
+  unowned equipment, and only then begin the accepted same-session capture.
+
+## P0C-06 · 2026-08-12 — direct route crossed the dense equipment radius
+
+- After the authoritative reset, the accepted baseline was clean. The first
+  route then passed through the center of the six equipment instances while
+  combining forward and strafe movement. By the next checkpoint the client had
+  sent eight pickup requests and server truth already contained slots
+  303/301/306 for definitions 409/410/411.
+- No post-baseline frame from that session is accepted. Reset once more and
+  route around the cluster: move well south while still west, move east outside
+  every equipment radius, then approach from the east until only armor 411 is
+  eligible. Verify zero pickup attempts after each leg.
+
+## P0C-06 · 2026-08-12 — route exposed a retained pointer contact
+
+- The around-cluster route remained unequipped until it briefly entered sword
+  range. Without any deliberate pickup command, the client's pickup-attempt
+  counter rose from zero to one and server truth gained one item. This is
+  consistent with the PLAY interaction leaving a pointer contact visible to
+  the canvas after the overlay closed; the movement keys themselves do not map
+  to pickup actions.
+- Reject that session. On the next clean join, explicitly deliver mouse-button
+  up and touch-cancel events through the production input bridge before the
+  baseline, verify the attempt counter remains zero, and repeat the outside
+  route with a zero-attempt gate at every leg.
+
+## P0C-06 · 2026-08-12 — first armor capture outlasted weapon-drop grace
+
+- The east approach correctly auto-picked armor 411 after both 417 weapons,
+  and real inventory drops briefly produced exact armor-only server truth.
+  Because both dropped weapons remained at the actor's position, their
+  two-second repick grace expired before the first saved armor frame; all eight
+  attempted frames already contained armor plus 417.
+- Reject temporary frame indices 8–15. Drop both 417 instances again, move the
+  armored actor immediately east/south beyond their pickup radius while grace
+  is active, require exact armor-only truth at the destination, and capture the
+  replacement phase there.
+
+## P0C-06 · 2026-08-12 — first armored movement segment climbed a block
+
+- The final loadout and twelve-frame turn were valid, with sprite angles 0
+  through 7 and exact server definitions 411/410/409. The first forward-motion
+  segment then intersected the placed-block collision volume; authoritative Z
+  rose from 73.25 to 370.401 before falling.
+- Reject temporary frame indices 60–67. Preserve the valid turn as angle proof,
+  wait for the actor to land, move away from the block with a short bounded
+  strafe, and accept replacement movement only when horizontal displacement is
+  visible while Z remains at the ground/support height.
+
+## P0C-06 · 2026-08-12 — first compositor expected one movement metadata file
+
+- The first preview compositor correctly selected replacement frame indices
+  68–75 but tried to load a nonexistent `movement.frames.json`. The accepted
+  movement is intentionally split across `move_ground_active.frames.json` and
+  `move_ground_settle.frames.json`, so the preview stopped before writing a GIF.
+- No artifact was produced. Load metadata from every accepted capture-phase
+  receipt, then map the combined movement label to those two exact ranges.
+
+## P0C-06 · 2026-08-12 — full angle sweep included world-object occlusion
+
+- Both real-runtime turn sweeps reached multiple sprite angles, but nearby
+  roofs and trees fully hid the player in several frames. Those pixels are
+  truthful world occlusion yet fail the layer-detail purpose of this artifact.
+- The delivery excludes original turn indices 48–59 and open-field indices
+  83–86. It uses only open-field indices 76–82 and 87–91, where the same-session
+  player remains readable across sprite angles 0, 1, 2, 3, 4, 6, and 7. The GIF
+  says “seven visible angles”; it does not claim the omitted angle 5.
+
+## P0C-06 · 2026-08-12 — first final GIF coalesced identical frames
+
+- The compositor submitted 52 accepted frames, but Pillow's GIF writer merged
+  five consecutive pixel-identical frames even with optimization disabled. The
+  decoded artifact therefore exposed only 47 frames, preventing an exact
+  one-source-frame-to-one-decoded-frame semantic receipt.
+- Overwrite that artifact with a tiny visible evidence-frame counter in the
+  header. The counter prevents coalescing and lets the test bind every decoded
+  frame to one recorded semantic state and source screenshot.
+
+## P0C-06 · 2026-08-12 — first artifact nonblank assertion used RGBA alpha
+
+- The exact hash, dimensions, frame count, durations, phase states, and motion
+  assertions passed. The first standalone artifact test then failed its
+  nonblank check because `ImageChops.difference` on two opaque RGBA images has
+  an all-zero alpha difference, which makes `getbbox()` report no box even when
+  the RGB channels differ.
+- Compare RGB crops against RGB black references. This changes only the test's
+  pixel predicate; the GIF and receipt remain unchanged.
+
+## P0C-06 · 2026-08-12 — transition-difference assertion repeated RGBA mistake
+
+- The corrected per-frame nonblank loop passed, but the representative
+  base/armor/helmet/sword comparison still passed RGBA crops to the same
+  alpha-sensitive `getbbox()` path. The second test run therefore failed only
+  that transition-difference assertion.
+- Convert both representative crops to RGB before comparison, matching the
+  already-correct nonblank predicate.
+
+## P0C-06 · 2026-08-12 — first final security command was rejected
+
+- The combined final check attempted to create and remove a temporary tracked-
+  path list. The execution safety layer rejected the command because it
+  contained `rm -f`; none of the checks in that compound command ran.
+- Repeat the checks without a temporary file or cleanup command, using direct
+  Git/file-list pipelines and scoped repository searches.
+
+## P0C-06 · 2026-08-12 — credential regex was parsed as an option
+
+- The replacement diff, receipt, README-link, root-document, and filename
+  checks ran, but the high-confidence credential pattern began with five
+  hyphens and `rg` parsed it as an unsupported flag. The surrounding shell
+  fallback also allowed the compound command to print a misleading final pass
+  line.
+- Rerun the content scan with all options before an explicit `--` separator,
+  and treat its zero-match status independently from the already-passed checks.
+
+## P0C-06 · 2026-08-12 — old GitHub slug check mistook redirect for duplicate
+
+- The final rename check expected the old API path to fail. GitHub instead
+  resolves the former repository slug through its automatic rename redirect,
+  so the command exited nonzero after printing “old repository target still
+  resolves.” This does not represent a second repository.
+- Verify the resolved repository object's exact `name`, `html_url`, privacy,
+  and default branch, plus the local origin and directory. Record the old slug
+  only as a redirect alias; do not require it to return 404.

@@ -17,7 +17,7 @@ Date: 2026-08-12 (Asia/Tokyo)
 
 ## Direct evidence
 
-- Python contract suite: 25 collected pytest cases and five standalone script
+- Python contract suite: 26 collected pytest cases and five standalone script
   checks passed.
 - JavaScript web/network suite: 3 passed.
 - Currentness/isolation gates: 4 passed (glyph manifests, 192-row actor-visual
@@ -32,10 +32,20 @@ Date: 2026-08-12 (Asia/Tokyo)
 - Live appearance: ordinary input equipped definitions 410, 411, and 409 in
   server-owned slots 301, 306, and 303.
 
-The accepted recording is
-docs/recordings/armored-block-feature-gameplay.gif: 520 by 520 pixels, 60
+The layer-detail recording is
+`docs/recordings/cp437-runtime-layer-transitions.gif`: 956 by 386 pixels, 52
+decoded frames at 150 ms per frame, SHA-256
+`9ae5bc26bf1539619ee32fdfa6ab9bdf434eed6fc17a0f21991e333229cdb970`.
+Its exact per-frame source, decoded hashes, semantic states, authoritative
+positions, slots, definitions, and angle selections are pinned in the adjacent
+JSON receipt and checked by `tests/test_recording_contract.py`.
+
+The preserved world-scale recording is
+`docs/recordings/armored-block-feature-gameplay.gif`: 520 by 520 pixels, 60
 frames at 10 frames per second, SHA-256
-f0c203dd8979e327236014f3a232a8b947368a0c1ddee65ef95a4acda59e852a.
+`f0c203dd8979e327236014f3a232a8b947368a0c1ddee65ef95a4acda59e852a`.
+It proves runtime-world movement, while the player-detail recording carries the
+equipment-layer claim.
 
 ## Completion stage
 

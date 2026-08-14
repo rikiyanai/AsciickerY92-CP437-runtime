@@ -7,17 +7,37 @@ runtime. It is a game repository: native terminal client, authoritative server,
 browser/WebAssembly client, maps, meshes, audio, sprites, and the normalized
 appearance compiler/runtime owners are all included.
 
-It is not an XP parser, corpus browser, two-file historical loader, or
-documentation snapshot.
+The principal display path is the historical CP437 byte-cell contract: each
+screen cell carries foreground, background, and one byte-sized glyph identity.
+The integrated normalized-XP refactor also admits non-CP437 glyphs through the
+versioned extended-glyph sidecar, compiled manifest, and hash-bound atlas path.
+The repository name describes the runtime lineage; it does **not** mean that
+the integrated runtime is CP437-only.
 
-![Armored player moving beside Block Feature blocks](docs/recordings/armored-block-feature-gameplay.gif)
+## Real runtime evidence
 
-The GIF is a six-second recording of the real browser build connected to the
-real authoritative server. The player picked up the map-owned helmet (definition
-410), armor (411), and sword (409) through ordinary gameplay input; the server
-reported them equipped in slots 301, 306, and 303. The armored composite then
-moves and turns beside the placeable blocks. No synthetic TUI or command-entry
-sequence is used as product proof.
+![Same-session base, armor, helmet, and sword transitions in the browser runtime](docs/recordings/cp437-runtime-layer-transitions.gif)
+
+This recording comes from one real browser session connected to the real
+authoritative server. Every frame keeps the uncropped Block Feature world at
+left and shows a nearest-neighbor enlargement of the same frame's player at
+right. The labeled phases expose the unequipped base, armor addition, helmet
+addition, visibly held sword, and movement/turning. The inset is a crop of the
+real rendered frame, not a sprite reconstruction.
+
+![Wide world movement beside Block Feature blocks](docs/recordings/armored-block-feature-gameplay.gif)
+
+The second, preserved six-second recording is world-scale proof: the real
+browser build moves and turns beside placeable blocks while connected to the
+authoritative server. Its player is too small to prove individual equipment
+layers, so it is not used for that claim.
+
+The separate [capture receipt](docs/recordings/cp437-runtime-layer-transitions.receipt.json)
+records the same-session probe checkpoints. The server reported definitions
+411, 410, and 409 in armor, head, and weapon slots; that authoritative slot
+state corroborates the visible transitions but is not claimed as text visible
+inside either GIF. No synthetic TUI or command-entry sequence is used as
+product proof.
 
 ## Run the browser game
 
@@ -63,7 +83,7 @@ python3 -m pip install -r requirements-test.txt
 ./scripts/run_standalone_checks.sh
 ~~~
 
-That command runs 25 collected pytest cases, five standalone Python contract
+That command runs 26 collected pytest cases, five standalone Python contract
 checks, three JavaScript tests, and four currentness or isolation gates. The
 native server and terminal client are separate build acceptance surfaces; the
 browser build additionally runs the glyph-manifest and actor-visual coverage
