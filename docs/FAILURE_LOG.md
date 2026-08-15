@@ -1413,3 +1413,20 @@
   manifests, actor coverage `196`, current server reachability, and diagnostic
   isolation.
 - No game runtime was launched for this static rerun.
+
+### P0C-07 operator manual-test rejection — anatomy, companion pursuit, and movement
+
+- The currently running Safari headed scene entered the world successfully, but
+  visual and temporal acceptance is rejected. The following remain separate
+  unresolved acceptance failures:
+  - Wallace's arms do not show.
+  - Wallace's ears do not show.
+  - Gromit/dog still has visible sprite defects; the exact morphology is not
+    yet bounded and persists from earlier observations.
+  - Gromit teleports/snaps instead of continuously following the player.
+  - Player/general movement is very buggy and snappy.
+- Responsible owners and causes remain unknown pending a later audit; this entry
+  makes no diagnosis or fix claim. Acceptance requires visible complete Wallace
+  anatomy, a defect-free Gromit sprite, continuous non-teleport companion
+  pursuit, and smooth player/general movement in one real headed manual run with
+  matching runtime state.
