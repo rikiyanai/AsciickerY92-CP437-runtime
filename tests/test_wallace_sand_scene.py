@@ -35,6 +35,13 @@ def _akm_vertex_colors(path: Path) -> set[tuple[int, int, int, int]]:
     }
 
 
+def _terrain_xterm_index(rgb: tuple[int, int, int]) -> int:
+    """Mirror the DBL terrain resolve for four identical material samples."""
+
+    channels = [(4 * channel + 102) // 204 for channel in rgb]
+    return 16 + 36 * channels[0] + 6 * channels[1] + channels[2]
+
+
 def test_approved_character_and_rocket_assets_are_exact() -> None:
     sprites = REPO_ROOT / "assets" / "sprites"
     wallace = sprites / "2026-08-12-030327-wallace.xp"
@@ -137,6 +144,17 @@ def test_canonical_map_is_rolling_sand_with_start_and_large_nearby_rocket() -> N
     sand_cells = [cell for ramp in materials[4].shade for cell in ramp]
     assert all(cell.fg[0] >= cell.fg[1] > cell.fg[2] for cell in sand_cells)
     assert all(cell.bg[0] >= cell.bg[1] > cell.bg[2] for cell in sand_cells)
+    assert all(cell.gl not in (0, 32) for cell in sand_cells)
+    # The accepted yellow fill is the background owner. Glyph visibility is a
+    # separate invariant: its foreground must survive terminal quantization as
+    # a distinct palette entry at every terrain shade.
+    for ramp_index, ramp in enumerate(materials[4].shade):
+        for shade_index, cell in enumerate(ramp):
+            light = max(0, 28 - ramp_index * 8 - shade_index * 2)
+            assert tuple(cell.bg) == (186 + light, 140 + light, 28 + light // 2)
+            assert _terrain_xterm_index(tuple(cell.fg)) != _terrain_xterm_index(
+                tuple(cell.bg)
+            )
     assert enemy_count == 0
     assert player_start is not None
     assert len(instances) == 1

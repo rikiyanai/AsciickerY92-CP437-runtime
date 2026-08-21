@@ -117,10 +117,14 @@ def _sand_material() -> A3DMaterial:
                 max(0, 140 + light),
                 max(0, 28 + light // 2),
             )
+            # Keep the accepted yellow background unchanged.  The terminal
+            # resolver quantizes four terrain samples into a six-level xterm
+            # cube; smaller offsets collapse fg and bg to the same palette
+            # entry at the active shade, making valid glyph bytes invisible.
             foreground = (
-                min(255, background[0] + 34),
-                min(255, background[1] + 31),
-                min(255, background[2] + 18),
+                min(255, background[0] + 50),
+                min(255, background[1] + 45),
+                min(255, background[2] + 25),
             )
             material.shade[ramp_index][shade_index] = MatCell(
                 fg=foreground,

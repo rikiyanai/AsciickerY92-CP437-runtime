@@ -1414,6 +1414,26 @@
   isolation.
 - No game runtime was launched for this static rerun.
 
+### P0C-07 next open attempt — operator rejection: no visible terrain glyphs
+
+- Operator rejection after the final headed scene: the moon surface shows zero
+  visible terrain glyphs or surface marks. Preserve the prior evidence; color,
+  location, and height are not the target defect for this attempt.
+- Acceptance is explicitly the visible terrain glyph marks in the real headed
+  viewport, corroborated by the same live scene state. This entry records an
+  open hypothesis only and does not claim a fix or closure.
+
+### P0C-07 glyph attempt — implemented/static Verified, headed proof pending
+
+- Audit proved the A3D material glyph bytes are non-space, but the active
+  terrain shade quantized foreground and background to the identical xterm
+  index `179`, making the glyphs invisible in the viewport.
+- Implemented only sand foreground offsets `+50/+45/+25`, preserving the
+  original yellow background formula. Regenerated map SHA-256 is
+  `1e17af62b0bbf459a731834f9d363ace3e8309c62539adb7cd2295576a1c5125`.
+- Focused three scene tests pass. This establishes Implemented/static Verified
+  evidence only; headed visual verification and closure remain pending.
+
 ### P0C-07 operator manual-test rejection — anatomy, companion pursuit, and movement
 
 - The currently running Safari headed scene entered the world successfully, but
