@@ -12,7 +12,7 @@ endif
         run-server run-terminal serve-web
 
 help:
-	@echo "Asciicker Historical Runtime"
+	@echo "Asciicker Y9-2 Runtime"
 	@echo "  make server        Build .run/server"
 	@echo "  make terminal      Build .run/game_term"
 	@echo "  make web           Build .web browser artifacts"
