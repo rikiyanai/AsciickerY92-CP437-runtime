@@ -1,0 +1,306 @@
+diff --git a/docs/FAILURE_LOG.md b/docs/FAILURE_LOG.md
+index 779ee669c..36c6abed8 100644
+--- a/docs/FAILURE_LOG.md
++++ b/docs/FAILURE_LOG.md
+@@ -147648,12 +147648,6 @@ CURRENT STATE: The Rendering tab is a partial developer-operator profile-authori
+ 
+ #### Fix attempt — 2026-06-22 @ `main`
+ 
+-- **Finding:** Operator rejected commit `8797e033b` as insufficient headed inventory work. The artifact `docs/research/ascii/verification/fl4260/2026-06-22-current-ui-inventory-headed-check/` captured 17 parent frames and then classified 596 rows as `reachable_with_capture` by parent tab/leaf membership. Its own README says captures are one frame per parent scope, not per row, and row visibility inside the capture is not proven. That is not manual row checking and must not be used to claim headed inventory completion.
+-- **Approach:** Updated `docs/plans/2026-06-15-fl4260-rendering-ui-target-leaf-layout.md` to mark the `8797e033b` headed-check package as diagnostic only and add a hard acceptance rule: every scanner row needs row-level visible-control evidence. A parent tab screenshot, parent leaf screenshot, sidebar section screenshot, shared screenshot path, or inherited proof path cannot satisfy row reachability. A shared frame may be cited only when the row also has a row-specific crop, bounding rectangle, visible label, row index, scroll position, and manual note showing the exact control in that frame. The required manual inventory columns now include `headed_row_capture_file`, `headed_row_crop_file`, `headed_row_bbox_xywh`, `headed_scroll_y`, and `headed_visibility_note`. Also added a rejection notice directly to `docs/research/ascii/verification/fl4260/2026-06-22-current-ui-inventory-headed-check/README.md`.
+-- **Proof state:** doc/handoff correction only. No runtime proof, no headed inventory completion, no Phase 0 completion, no Phase 1 completion, no backend-complete claim, no product-complete claim, no Law 15 claim, no Law 16 claim, no UI acceptance, no closure.
+-
+-#### Fix attempt — 2026-06-22 @ `main`
+-
+ - **Approach:** Cleanup pass for the FL-4260 2026-06-22-isolate-jitter-rows proof commit `11dd6da6e`. Three findings addressed:
+   1. Stale jitter wording still mentioned in five later sections of `docs/plans/2026-06-15-fl4260-rendering-ui-target-leaf-layout.md` (lines 630, 756, 980, 1202, 1238 plus one Priority-Order step 1 "(currently jitter-partial)" prefix and one Phase 1 Claim Review line 374 referencing "jitter rows"). Replaced each stale framing with explicit "all 9 rows pass exact expected-coordinate match as of 2026-06-22" wording plus reference to the new artifact. Profile-Path Priority Order step 1 also rephrased to "(no longer partial/jitter as of 2026-06-22)".
+   2. `git diff --check 11dd6da6e^ 11dd6da6e` previously flagged trailing whitespace on line 9 of the 10 generated `asciiid.stdout.log` files (5 rows x 2 processes). The trailing whitespace is runtime output from `asciiid`'s own material-ID listing print at startup (`[Material] Populated IDs from Default Map: ... 255 `) and must remain unmodified for runtime provenance. Decision: do NOT strip whitespace from logs (would destroy byte-identity vs the run); instead add `docs/research/ascii/verification/fl4260/**/*.log -whitespace` to `.gitattributes` so `git diff --check` does not flag these proof evidence files. `git diff --check 11dd6da6e^ 11dd6da6e` now exits 0 clean.
+diff --git a/docs/plans/2026-06-15-fl4260-rendering-ui-target-leaf-layout.md b/docs/plans/2026-06-15-fl4260-rendering-ui-target-leaf-layout.md
+index d2018b295..f4efab3d9 100644
+--- a/docs/plans/2026-06-15-fl4260-rendering-ui-target-leaf-layout.md
++++ b/docs/plans/2026-06-15-fl4260-rendering-ui-target-leaf-layout.md
+@@ -134,39 +134,6 @@ If live HEAD differs from 8e969ba39, rerun the inventory generator first,
+ compare row ids against the current CSV, then manually classify any changed
+ rows before making product-loop proof claims.
+ 
+-Default rule:
+-Almost every current ASCIIID UI row needs a TERM++ verdict. The verdict can be
+-positive delta, expected no-delta, pose-only delta, metadata-only, diagnostic,
+-persistence/reload, raw-world edit with expected downstream TERM++ effect, stale
+-source, layout-blocked, label-blocked, backend-owner-unknown. Do not default an
+-excluded row to "not FL-4260" just because it is outside Material Rendering
+-Profile. EDIT terrain paint, material paint, sprite placement, mesh placement,
+-VIEW camera/lighting/weather, Trace, receipts, persistence, diagnostics, and
+-navigation still need a named TERM++ verdict that says what detached TERM++
+-should do at that instant.
+-
+-The small non-TERM++ subset must be explicit: pure receipt metadata, pure
+-table-refresh metadata, pure launcher/navigation rows, collapsed diagnostic
+-headers with no live render effect, and source-dead commented rows. Even those
+-rows need headed label/reachability evidence plus a written reason that no
+-TERM++ cell state should change.
+-
+-Rejected evidence pattern:
+-`docs/research/ascii/verification/fl4260/2026-06-22-current-ui-inventory-headed-check/`
+-and commit `8797e033b` are diagnostic only. They captured one frame per
+-top-level tab plus one frame per RENDERING parent leaf, then assigned 596 rows
+-as reachable from parent capture membership. That is not manual row checking.
+-It does not prove the specific control row was visible, readable, reachable,
+-or actionable. Do not use that package to claim headed inventory completion.
+-
+-Hard acceptance rule for headed inventory:
+-Every row needs row-level visible-control evidence. A parent tab screenshot, a
+-parent leaf screenshot, a sidebar section screenshot, a shared screenshot path,
+-or a pseudo inherited proof path cannot satisfy row reachability. A shared
+-frame may be used only as context when the row also has a row-specific crop,
+-bounding rectangle, visible label, row index, scroll position, and manual note
+-showing the exact control in that shared frame.
+-
+ Manual inventory audit output:
+ docs/research/ascii/verification/fl4260/<date>-current-ui-inventory-manual-check/
+ - README.md
+@@ -178,8 +145,7 @@ docs/research/ascii/verification/fl4260/<date>-current-ui-inventory-manual-check
+ - dynamic-label-controls.jsonl
+ - diagnostic-only-controls.jsonl
+ - profile-path-proof-queue.csv
+-- termpp-verdict-queue.csv
+-- non-termpp-exception-queue.csv
++- non-profile-control-queue.csv
+ 
+ For every scanner row, record:
+ - inventory_row
+@@ -193,20 +159,11 @@ For every scanner row, record:
+ - headed_location_section
+ - headed_reachable
+ - headed_capture_file
+-- headed_row_capture_file
+-- headed_row_crop_file
+-- headed_row_bbox_xywh
+-- headed_scroll_y
+-- headed_visibility_note
+ - backend_mutation_owner
+ - render_proof_consumer
+ - inventory_status_before
+ - manual_status_after
+-- termpp_verdict
+-- termpp_expected_surface
+-- termpp_expected_property
+-- termpp_expected_delta_class
+-- termpp_exception_reason
++- immediate_visible_delta_class
+ - product_loop_class
+ - existing_matrix_row
+ - existing_proof_artifact
+@@ -217,12 +174,6 @@ Manual status values:
+ - PROFILE_PATH_PROOF_REQUIRED
+ - PROFILE_PATH_PROOF_ACCEPTED
+ - PROFILE_PATH_PROOF_PARTIAL
+-- TERMPLUSPLUS_VERDICT_REQUIRED
+-- TERMPLUSPLUS_VERDICT_ACCEPTED
+-- TERMPLUSPLUS_VERDICT_NO_DELTA_ACCEPTED
+-- TERMPLUSPLUS_VERDICT_BLOCKED_BY_LABEL
+-- TERMPLUSPLUS_VERDICT_BLOCKED_BY_LAYOUT
+-- TERMPLUSPLUS_VERDICT_BLOCKED_BY_BACKEND_TRACE
+ - PERSISTENCE_PROOF_REQUIRED
+ - METADATA_ONLY_NOT_CLOSURE
+ - DIAGNOSTIC_ONLY_EXCLUDED
+@@ -235,35 +186,14 @@ Manual status values:
+ - BACKEND_OWNER_UNKNOWN
+ - NON_PROFILE_WORLD_EDIT_CONTROL
+ 
+-TERM++ verdict values:
+-- TERMPLUSPLUS_GLYPH_DELTA_EXPECTED
+-- TERMPLUSPLUS_COLOR_DELTA_EXPECTED
+-- TERMPLUSPLUS_MARKER_DELTA_EXPECTED
+-- TERMPLUSPLUS_POSE_DELTA_EXPECTED
+-- TERMPLUSPLUS_CAMERA_VIEW_DELTA_EXPECTED
+-- TERMPLUSPLUS_LIGHT_WEATHER_DELTA_EXPECTED
+-- TERMPLUSPLUS_WORLD_EDIT_DELTA_EXPECTED
+-- TERMPLUSPLUS_TRACE_SELECTION_EXPECTED
+-- TERMPLUSPLUS_PERSISTENCE_RELOAD_EXPECTED
+-- TERMPLUSPLUS_NO_DELTA_EXPECTED_METADATA
+-- TERMPLUSPLUS_NO_DELTA_EXPECTED_DIAGNOSTIC
+-- TERMPLUSPLUS_NO_DELTA_EXPECTED_NAVIGATION
+-- TERMPLUSPLUS_VERDICT_BLOCKED_PENDING_LABEL
+-- TERMPLUSPLUS_VERDICT_BLOCKED_PENDING_LAYOUT
+-- TERMPLUSPLUS_VERDICT_BLOCKED_PENDING_SOURCE_TRACE
+-
+-TERM++ expected delta class values:
++Immediate visible delta class values:
+ - detached_termpp_glyph_delta
+ - detached_termpp_color_delta
+ - detached_termpp_marker_delta
+-- detached_termpp_pose_delta
+-- detached_termpp_camera_delta
+-- detached_termpp_light_weather_delta
+-- detached_termpp_world_edit_delta
+ - trace_only_metadata
+ - receipt_only_metadata
+ - persistence_only_save_reload
+-- raw_world_edit_downstream_termpp
++- raw_world_edit_not_fl4260_profile
+ - diagnostic_no_product_delta
+ - no_immediate_delta_expected
+ - unknown_pending_source_trace
+@@ -274,39 +204,26 @@ Required row procedure:
+    capture adjacent text and write the resolved label. If the label is
+    dynamic, capture the runtime text and note the state that produced it.
+ 3. Navigate to the visible tab and section. Capture the UI frame proving
+-   the exact control row is reachable. The row needs its own row crop and
+-   bounding rectangle. Parent tab and parent leaf screenshots are context
+-   only. If the exact control row is not visible, scroll until it is visible,
+-   capture again, and record `headed_scroll_y`. If the row cannot be made
+-   visible, capture the closest visible parent section, record the layout
+-   blocker, and stop that row at UNREACHABLE_LAYOUT_BLOCKER.
++   the control is reachable. If it is not reachable, record the layout
++   blocker and stop that row at UNREACHABLE_LAYOUT_BLOCKER.
+ 4. Trace the backend mutation owner from the control action. If the control
+    is read-only, metadata-only, diagnostic-only, persistence-only, raw-world
+    edit, tab navigation, proof navigation, camera/view control, receipt
+    control, Trace control, profile starter, glyph pool, role bucket, palette
+    row, shade slider, scoring slider, Save, Revert, then state that class.
+-5. Assign a TERM++ verdict for the row. The verdict must describe expected
+-   detached TERM++ cell behavior after the user action: glyph, color, marker,
+-   pose/camera, lighting/weather, raw-world edit, trace selection, persistence
+-   reload, expected no-delta metadata, expected no-delta diagnostic, expected
+-   no-delta navigation, blocked pending label/layout/source trace.
+-6. Decide whether the row is inside the Material Rendering Profile product
+-   loop: selected material -> profile edit -> detached TERM++ final cell
+-   change -> Trace explanation -> Save when requested. Rows inside this loop
+-   go to profile-path-proof-queue.csv and run the Mandatory proof loop below.
+-7. For rows outside Material Rendering Profile, keep the TERM++ verdict. EDIT
+-   world edits, VIEW pose controls, lighting/weather controls, Trace controls,
+-   receipts, persistence, diagnostics, and navigation still need a verdict
+-   explaining detached TERM++ delta, expected no-delta, blocked proof, and the
+-   reason.
++5. Decide whether the row is inside the FL-4260 Rendering product loop:
++   selected material -> Material Rendering Profile edit -> detached TERM++
++   final cell change -> Trace explanation -> Save when requested.
++6. If the row is inside that product loop, add it to
++   profile-path-proof-queue.csv and run the Mandatory proof loop below.
++7. If the row is outside that product loop, do not create a fake TERM++
++   proof obligation. Record its exclusion reason and required next action.
+ 8. Update the included backend matrix only for rows that truly belong in the
+-   profile-path product loop. Update termpp-verdict-queue.csv for every other
+-   row with its TERM++ verdict. Update non-termpp-exception-queue.csv only for
+-   the narrow metadata/navigation/source-dead subset.
++   profile-path product loop. Update the excluded-gap matrix for rows that
++   stay outside that loop.
+ 9. Do not claim full current UI inventory complete until every scanner row
+    has manual_status_after, headed label result, reachability result,
+-   row-level capture/crop/bbox, backend owner result, termpp_verdict,
+-   product_loop_class, and required_next_action.
++   backend owner result, product_loop_class, and required_next_action.
+ 
+ Mandatory proof loop for each reachable control:
+ 1. Pick one inventory row/control.
+@@ -439,54 +356,45 @@ as the last committed package from `f72c3a4b5`, **not** current-HEAD product-com
+ - included backend matrix: 214 data rows (`fl4260-complete-backend-proof-matrix.csv`)
+ - excluded-gap matrix: 433 data rows (`fl4260-backend-matrix-excluded-control-gaps.csv`)
+ 
+-**Current generator addendum verified by the latest FL-4260 proof slice
+-(`11dd6da6e`, generator rerun at HEAD `8e969ba39`):**
++**Current-HEAD generator addendum (`6b28e0457` / HEAD `e15c4643b`):**
+ - `rows=628`
+ - `residuals=0`
+-- generator `unmapped=27`
++- `unmapped=27`
+ - `backend_gap_rows=428`
+ 
+-The 27 generated unmapped row ids were manually classified in
+-`docs/research/ascii/verification/fl4260/2026-06-22-current-head-unmapped-classification/`.
+-The latest proof slice verified that the current CSV's 27 generated unmapped
+-ids still match that artifact exactly, so the post-classification generator gap
+-is `unmapped=0` for the 8e969ba39 checkpoint.
+-
+-That is still **not** a full manual current UI inventory. The next inventory
+-standard is stricter: every one of the 628 scanner rows needs headed label
+-binding, reachability review, backend-owner review, and a TERM++ verdict. The
+-backend matrix is a 214-row included-row matrix, not a per-control matrix for
+-all 628 scanner rows. The excluded-gap count is at least 428 at current HEAD;
+-the previously tracked 433-row package is the conservative gap surface until a
++Because 27 rows are unmapped at current HEAD, do **not** claim more than 601
++mapped/classified rows until those 27 rows are manually classified. The backend
++matrix is a 214-row included-row matrix, not a per-control matrix for all 628
++scanner rows. The excluded-gap count is at least 428 at current HEAD; the
++previously tracked 433-row package is the conservative gap surface until a
+ reviewed refresh lands. The non-diagnostic excluded gap count remains
+ conservative at 74 until the 72/74 drift is manually row-reviewed.
+ 
+-**Required manual pass for all 628 current scanner rows:**
++**Required classification pass for the 27 unmapped current-HEAD rows:**
+ 
+-For each row, the agent must record:
++For each unmapped row, the agent must record:
+ 1. `source_anchor` (file:line)
+-2. headed `visible_label`
++2. `visible_label` (or `DYNAMIC_LABEL` / `ID_ONLY_LABEL` / `DIAGNOSTIC_ONLY`)
+ 3. `target_leaf` (Edit / Rendering sub-tab)
+-4. headed reachability and capture path
+-5. `backend_owner` (function symbol that mutates state on click/change)
+-6. `render_consumer` (render path that reads the mutation)
+-7. `termpp_verdict`
+-8. `termpp_expected_surface`
+-9. `termpp_expected_property`
+-10. `termpp_expected_delta_class`
+-11. `termpp_exception_reason`
+-12. `required_next_action`
+-
+-Flag explicitly: ID-only buttons with adjacent-label binding, dynamic labels
+-with runtime text, unreachable UI, diagnostic-only legacy Shape Lab /
+-terminal-flag captures, persistence-only Save/Revert, no-immediate-delta rows,
+-raw-world edit rows that should affect TERM++ after world mutation, view/camera
+-rows that should affect TERM++ pose, light/weather rows that should affect
+-rendered TERM++ state, and metadata rows where TERM++ no-delta is expected.
+-
+-Full current UI inventory completion requires a row verdict for all 628 scanner
+-rows. The 27-row classification only closes the generated unmapped-row gap; it
+-does not close the manual TERM++ verdict audit.
++4. `backend_owner` (function symbol that mutates state on click/change)
++5. `render_consumer` (render path that reads the mutation)
++6. `status` (one of: `DIAGNOSTIC_ONLY`, `SOURCE_WIRED_PROOF_PENDING`,
++   `SOURCE_WIRED_LOCAL_PROOF_PARTIAL`, `PARTIAL_DISABLED_LANES`,
++   `METADATA_ONLY_NOT_CLOSURE`, `FOCUSED_WRITE_AUDIT_REQUIRED`,
++   `LABEL_NEEDS_MANUAL_RESOLUTION`, `ID_ONLY_LABEL_REQUIRES_UI_CONTEXT`,
++   `KNOWN_LABEL_BACKING_ANOMALY`)
++7. `required_next_action` (one of: `headed label bind`, `runtime label resolve`,
++   `source fix or document`, `visible UI button action capture`,
++   `detached TERM++ proof`, `known jitter record with mismatch counts`)
++
++Flag explicitly: ID-only buttons (no visible string label), dynamic labels
++(runtime-computed strings), unreachable UI (off-screen / behind narrow fixed
++column), diagnostic-only (legacy Shape Lab / terminal-flag captures),
++persistence-only (Save / Revert without immediate TERM++ delta), and
++no-immediate-delta controls.
++
++The 27-row classification is a **prerequisite** to any current-source inventory
++completion claim; it is **not** proof of the rendering loop itself.
+ 
+ ## Profile-Path Expected-Before-Action Priority Order (2026-06-22)
+ 
+diff --git a/docs/research/ascii/verification/fl4260/2026-06-22-current-ui-inventory-headed-check/README.md b/docs/research/ascii/verification/fl4260/2026-06-22-current-ui-inventory-headed-check/README.md
+index 9aaecf085..db2987fbf 100644
+--- a/docs/research/ascii/verification/fl4260/2026-06-22-current-ui-inventory-headed-check/README.md
++++ b/docs/research/ascii/verification/fl4260/2026-06-22-current-ui-inventory-headed-check/README.md
+@@ -1,20 +1,4 @@
+-# FL-4260 Headed UI Inventory Parent-Capture Artifact (Rejected)
+-
+-## Rejection Notice
+-
+-This artifact is **diagnostic only**. It is rejected as manual headed inventory
+-completion because it captured one frame per parent tab/leaf and assigned
+-row reachability from parent membership. It does not prove each specific
+-control row was visible, readable, reachable, and actionable.
+-
+-Do not cite this package as headed UI inventory completion. A valid row needs
+-row-level visible-control evidence: capture path, row crop, bounding rectangle,
+-visible label, row index, scroll position, and manual visibility note.
+-
+-Canonical correction is logged under FL-4260 on 2026-06-22 and in
+-`docs/plans/2026-06-15-fl4260-rendering-ui-target-leaf-layout.md`.
+-
+-# Original Artifact Notes
++# FL-4260 Real Headed UI Inventory Capture (2026-06-22)
+ 
+ Date: 2026-06-22
+ Current HEAD: 4718fbaf3

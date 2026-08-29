@@ -1,0 +1,48 @@
+{
+  "name": "wizard_cli_smoke",
+  "schema_version": 1,
+  "grid": {
+    "rows": 1,
+    "cols": 2,
+    "frame_width": 57,
+    "frame_height": 57
+  },
+  "angles": 1,
+  "anim_frames": [
+    2
+  ],
+  "source_projs": 1,
+  "frame_map": [
+    {
+      "row": 0,
+      "col": 0,
+      "direction": "dir_0",
+      "animation": "anim_0",
+      "frame_idx": 0,
+      "file": "frames/dir_0/anim_0/frame_000.png"
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "direction": "dir_0",
+      "animation": "anim_0",
+      "frame_idx": 1,
+      "file": "frames/dir_0/anim_0/frame_001.png"
+    }
+  ],
+  "normalization": {
+    "method": "extractor_cluster",
+    "confidence": 1.0,
+    "bg_model": "color_corner",
+    "bg_color": null,
+    "sprite_count": 2,
+    "cluster_params": {
+      "alpha_threshold": 25,
+      "color_tolerance": 30.0,
+      "min_sprite_size": 8,
+      "overlap_threshold": 0.5
+    }
+  },
+  "source_path": "/var/folders/r8/n6419zqn3lx20lt6f2dph24w0000gn/T/tmpckrwyvs7.png",
+  "canonical_sheet_path": "/Users/r/Downloads/asciicker-Y9-2/scripts/pipeline/staging/normalized/wizard_cli_smoke/spritesheet_canonical.png"
+}

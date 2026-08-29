@@ -1,0 +1,195 @@
+
+#version 450
+
+// FL-4408: final paint is product-only. Terrain, water, actor, foliage,
+// wake, blood, shadow, local-light, vapor, beam, attack, and dash decisions
+// are completed by cell_owner_product.glsl under PixelCameraContext. This
+// shader may only rasterize the completed product glyph/color into the live
+// Camera3D render target and record what it consumed.
+
+layout(local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
+
+layout(rgba16f, set = 0, binding = 0) uniform restrict image2D color_image;
+layout(set = 0, binding = 4) uniform sampler2D font_tex;
+layout(set = 0, binding = 5) uniform sampler2D extended_glyph_tex;
+
+const int ANSI_CELL_SIZE = 8;
+const uint CO_OWNER_SKY = 6u;
+
+struct CellOwnerRecord {
+	uvec4 r0;
+	vec4  r1;
+	uvec4 r2;
+	uvec4 r3;
+	vec4  r4;
+	vec4  r5;
+	uvec4 r6;
+	vec4  r7;
+	vec4  r8;
+	vec4  r9;
+	uvec4 r10;
+	vec4  r11;
+	uvec4 r12;
+	vec4  r13;
+	uvec4 r14;
+	vec4  r15;
+	uvec4 r16;
+	vec4  r17;
+	uvec4 r18;
+	vec4  r19;
+	vec4  r20;
+	vec4  r21;
+};
+
+layout(set = 0, binding = 42, std430) readonly buffer CellOwnerProduct {
+	CellOwnerRecord cells[];
+} cell_owner_product;
+
+layout(set = 0, binding = 43, std430) buffer FinalCellPaintBuffer {
+	uint words[];
+} final_cell_paint;
+
+const uint FINAL_CELL_RECORD_WORDS = 16u;
+const uint FINAL_CELL_MAGIC = 0xF14231u;
+
+layout(push_constant, std430) uniform Params {
+	mat4  inv_view_proj;
+	vec4  terrain_params;
+	ivec4 cell_dims;
+	ivec4 misc;
+	vec4  feature_params;
+} params;
+
+struct AnsiResolve {
+	int glyph;
+	vec3 fg;
+	vec3 bg;
+};
+
+CellOwnerRecord empty_owner() {
+	CellOwnerRecord c;
+	c.r0 = uvec4(CO_OWNER_SKY, 0u, 0u, 0xFFFFFFFFu);
+	c.r1 = vec4(0.0);
+	c.r2 = uvec4(0u);
+	c.r3 = uvec4(0u);
+	c.r4 = vec4(0.0);
+	c.r5 = vec4(0.0, 0.0, 0.0, float(CO_OWNER_SKY));
+	c.r6 = uvec4(0u);
+	c.r7 = vec4(0.0);
+	c.r8 = vec4(0.0);
+	c.r9 = vec4(0.0);
+	c.r10 = uvec4(0u);
+	c.r11 = vec4(0.0);
+	c.r12 = uvec4(0u);
+	c.r13 = vec4(0.0);
+	c.r14 = uvec4(0u);
+	c.r15 = vec4(0.0);
+	c.r16 = uvec4(0u);
+	c.r17 = vec4(0.0);
+	c.r18 = uvec4(0u);
+	c.r19 = vec4(0.0);
+	c.r20 = vec4(0.0);
+	c.r21 = vec4(0.0);
+	return c;
+}
+
+CellOwnerRecord load_cell_owner(ivec2 ansi_xy, ivec2 ansi_size) {
+	if (ansi_xy.x < 0 || ansi_xy.y < 0 || ansi_xy.x >= ansi_size.x || ansi_xy.y >= ansi_size.y) {
+		return empty_owner();
+	}
+	return cell_owner_product.cells[uint(ansi_xy.y * ansi_size.x + ansi_xy.x)];
+}
+
+AnsiResolve resolve_cell_owner_product(CellOwnerRecord owner) {
+	AnsiResolve r;
+	r.glyph = clamp(int(owner.r2.x), 0, 671);
+	r.fg = clamp(owner.r8.rgb, vec3(0.0), vec3(1.0));
+	r.bg = clamp(owner.r9.rgb, vec3(0.0), vec3(1.0));
+	return r;
+}
+
+float sample_compositor_glyph_intensity(int glyph, ivec2 glyph_sub, int glyph_w_px, int glyph_h_px) {
+	if (glyph >= 512 && glyph <= 671) {
+		int idx = glyph - 512;
+		int col = idx & 15;
+		int row = idx >> 4;
+		const int EXT_GLYPH_W_PX = 16;
+		const int EXT_GLYPH_H_PX = 16;
+		ivec2 ext_size = textureSize(extended_glyph_tex, 0);
+		ivec2 ext_sub = ivec2(
+			clamp(int((float(glyph_sub.x) + 0.5) * float(EXT_GLYPH_W_PX) / float(max(glyph_w_px, 1))), 0, EXT_GLYPH_W_PX - 1),
+			clamp(int((float(glyph_sub.y) + 0.5) * float(EXT_GLYPH_H_PX) / float(max(glyph_h_px, 1))), 0, EXT_GLYPH_H_PX - 1)
+		);
+		ivec2 ext_px = clamp(ivec2(col * EXT_GLYPH_W_PX + ext_sub.x, row * EXT_GLYPH_H_PX + ext_sub.y),
+			ivec2(0), max(ext_size - ivec2(1), ivec2(0)));
+		return texelFetch(extended_glyph_tex, ext_px, 0).r;
+	}
+	int glyph_col = glyph & 0xF;
+	int glyph_row = glyph >> 4;
+	ivec2 glyph_pixel = ivec2(glyph_col * glyph_w_px + glyph_sub.x, glyph_row * glyph_h_px + glyph_sub.y);
+	return texelFetch(font_tex, glyph_pixel, 0).r;
+}
+
+uint pack_unorm16_pair(float a, float b) {
+	uint ua = uint(round(clamp(a, 0.0, 1.0) * 65535.0));
+	uint ub = uint(round(clamp(b, 0.0, 1.0) * 65535.0));
+	return (ua & 0xFFFFu) | ((ub & 0xFFFFu) << 16);
+}
+
+void record_final_cell_paint(ivec2 pos, ivec2 ansi_xy, ivec2 ansi_size, CellOwnerRecord owner, AnsiResolve r, vec3 final_color) {
+	if (ansi_xy.x < 0 || ansi_xy.y < 0 || ansi_xy.x >= ansi_size.x || ansi_xy.y >= ansi_size.y) return;
+	uint cell_index = uint(ansi_xy.y * ansi_size.x + ansi_xy.x);
+	uint base = cell_index * FINAL_CELL_RECORD_WORDS;
+	ivec2 local = pos - ansi_xy * params.cell_dims.xy;
+	float d_fg = distance(final_color, r.fg);
+	float d_bg = distance(final_color, r.bg);
+	if (d_fg <= d_bg && d_fg < 0.20) {
+		atomicAdd(final_cell_paint.words[base + 8u], 1u);
+	} else if (d_bg < 0.20) {
+		atomicAdd(final_cell_paint.words[base + 9u], 1u);
+	} else {
+		atomicAdd(final_cell_paint.words[base + 10u], 1u);
+	}
+	atomicAdd(final_cell_paint.words[base + 11u], 1u);
+	if (local.x == 0 && local.y == 0) {
+		final_cell_paint.words[base + 0u] = FINAL_CELL_MAGIC;
+		final_cell_paint.words[base + 1u] = owner.r0.x;
+		final_cell_paint.words[base + 2u] = uint(r.glyph);
+		final_cell_paint.words[base + 3u] = owner.r2.y;
+		final_cell_paint.words[base + 4u] = pack_unorm16_pair(r.fg.r, r.fg.g);
+		final_cell_paint.words[base + 5u] = pack_unorm16_pair(r.fg.b, r.bg.r);
+		final_cell_paint.words[base + 6u] = pack_unorm16_pair(r.bg.g, r.bg.b);
+		final_cell_paint.words[base + 7u] = 0u;
+		final_cell_paint.words[base + 12u] = pack_unorm16_pair(final_color.r, final_color.g);
+		final_cell_paint.words[base + 13u] = pack_unorm16_pair(final_color.b, 1.0);
+		final_cell_paint.words[base + 14u] = (uint(ansi_xy.x) & 0xFFFFu) | ((uint(ansi_xy.y) & 0xFFFFu) << 16);
+		final_cell_paint.words[base + 15u] = 1u;
+	}
+}
+
+void main() {
+	ivec2 pos = ivec2(gl_GlobalInvocationID.xy);
+	ivec2 size = imageSize(color_image);
+	if (pos.x >= size.x || pos.y >= size.y) return;
+
+	ivec2 cell_px = max(params.cell_dims.xy, ivec2(1));
+	ivec2 ansi_size = ivec2(
+		(size.x + cell_px.x - 1) / cell_px.x,
+		(size.y + cell_px.y - 1) / cell_px.y
+	);
+	ivec2 ansi_xy = pos / cell_px;
+	CellOwnerRecord owner = load_cell_owner(ansi_xy, ansi_size);
+	AnsiResolve resolved = resolve_cell_owner_product(owner);
+
+	ivec2 sub = pos - ansi_xy * cell_px;
+	int glyph_w_px = max(params.cell_dims.z, 1);
+	int glyph_h_px = max(params.cell_dims.w, 1);
+	ivec2 glyph_sub = ivec2(
+		clamp(int((float(sub.x) + 0.5) * float(glyph_w_px) / float(cell_px.x)), 0, glyph_w_px - 1),
+		clamp(int((float(sub.y) + 0.5) * float(glyph_h_px) / float(cell_px.y)), 0, glyph_h_px - 1)
+	);
+	float intensity = sample_compositor_glyph_intensity(resolved.glyph, glyph_sub, glyph_w_px, glyph_h_px);
+	vec3 color = (intensity > 0.5) ? resolved.fg : resolved.bg;
+	record_final_cell_paint(pos, ansi_xy, ansi_size, owner, resolved, color);
+	imageStore(color_image, pos, vec4(color, 1.0));
+}

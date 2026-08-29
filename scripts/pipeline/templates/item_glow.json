@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "item_potion",
+  "type": "item",
+  "angles": 1,
+  "frames": [4],
+  "animations": [
+    {"name": "glow", "length": 4}
+  ],
+  "layout": {
+    "rows": "angles",
+    "cols": "sum(frames)"
+  },
+  "processing": {
+    "magenta_snap": true,
+    "palette_quantize": true,
+    "downscale": "box"
+  },
+  "debug": {
+    "labels": true,
+    "label_format": "A{angle}-{anim}:{frame}",
+    "label_sheet": "debug/potion_glow_labels.png"
+  }
+}

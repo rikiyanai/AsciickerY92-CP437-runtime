@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asciicker Asset Pipeline</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="themes/sacred.css">
+</head>
+<body>
+<script>
+(function(){var p=new URLSearchParams(location.search);
+var t=p.get('theme')||localStorage.getItem('asciicker-theme')||'sacred';
+document.body.classList.add('theme-'+t);
+localStorage.setItem('asciicker-theme',t);})();
+</script>
+  <header class="app-header">
+    <h1>Asciicker Asset Pipeline</h1>
+    <p class="subtitle">PNG to .xp sprite conversion</p>
+  </header>
+
+  <nav class="step-nav" id="step-nav" aria-label="Pipeline steps">
+    <ol>
+      <li data-step="upload" class="active">
+        <span class="step-num">1</span>
+        <span class="step-label">Upload</span>
+      </li>
+      <li data-step="analyze" class="locked">
+        <span class="step-num">2</span>
+        <span class="step-label">Analyze</span>
+      </li>
+      <li data-step="configure" class="locked">
+        <span class="step-num">3</span>
+        <span class="step-label">Configure</span>
+      </li>
+      <li data-step="confirm" class="locked">
+        <span class="step-num">4</span>
+        <span class="step-label">Confirm</span>
+      </li>
+      <li data-step="run" class="locked">
+        <span class="step-num">5</span>
+        <span class="step-label">Run</span>
+      </li>
+      <li data-step="result" class="locked">
+        <span class="step-num">6</span>
+        <span class="step-label">Result</span>
+      </li>
+    </ol>
+  </nav>
+
+  <main class="step-panels">
+    <!-- Step 1: Upload -->
+    <section id="panel-upload" class="step-panel active" data-step="upload">
+      <h2>Upload Image</h2>
+      <p>Select a PNG sprite sheet or single-frame image to import.</p>
+      <div class="upload-zone" id="upload-zone">
+        <input type="file" id="file-input" accept=".png,.jpg,.jpeg,.bmp,.tiff,.tif,.gif,.webp" />
+        <label for="file-input" class="upload-label">
+          <span class="upload-icon">&#x2191;</span>
+          <span>Drop file here or click to browse</span>
+          <span class="upload-hint">PNG, JPG, BMP, TIFF, GIF, WebP</span>
+        </label>
+      </div>
+      <div id="upload-preview" class="preview-area hidden">
+        <img id="preview-img" alt="Upload preview" />
+        <div id="upload-info" class="info-block"></div>
+      </div>
+      <div class="step-actions">
+        <button id="btn-upload-next" class="btn btn-primary" disabled>
+          Next: Analyze
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 2: Analyze -->
+    <section id="panel-analyze" class="step-panel hidden" data-step="analyze">
+      <h2>Analyze Image</h2>
+      <p>Detecting grid geometry and suggesting pipeline parameters.</p>
+      <div id="analyze-status" class="status-block">
+        <span class="spinner"></span>
+        <span>Analyzing...</span>
+      </div>
+      <div id="analyze-results" class="results-block hidden">
+        <table class="info-table">
+          <tbody id="analyze-table-body"></tbody>
+        </table>
+      </div>
+      <div id="analyze-intelligence" class="intelligence-card hidden"></div>
+      <div class="step-actions">
+        <button class="btn btn-secondary btn-back" data-target="upload">Back</button>
+        <button id="btn-analyze-next" class="btn btn-primary" disabled>
+          Next: Configure
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 3: Configure -->
+    <section id="panel-configure" class="step-panel hidden" data-step="configure">
+      <h2>Configure Pipeline</h2>
+      <p>Adjust pipeline parameters. Defaults are pre-filled from analysis.
+        <em style="color:var(--fg-dim,#6b7280);font-size:12px;">Draw a box on the preview to set extraction seed dimensions.</em>
+      </p>
+
+      <div style="display:grid;grid-template-columns:minmax(360px,1fr) minmax(420px,1.2fr);gap:1rem;">
+        <!-- Left column: settings form -->
+        <div>
+          <form id="config-form" class="config-form">
+            <fieldset>
+              <legend>Basic</legend>
+              <div class="form-row">
+                <label for="cfg-name">Sprite name
+                  <span class="form-hint" title="A unique name for this sprite asset. Used in filenames and the asset library.">?</span>
+                </label>
+                <input type="text" id="cfg-name" value="unnamed" required />
+              </div>
+              <div class="form-row">
+                <label for="cfg-asset-type">Asset type
+                  <span class="form-hint" title="Character = 8-angle walking sprites. Item = single-angle pickup. UI = interface elements.">?</span>
+                </label>
+                <select id="cfg-asset-type">
+                  <option value="custom" selected>Custom</option>
+                  <option value="character">Character</option>
+                  <option value="item">Item</option>
+                  <option value="ui">UI</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Geometry</legend>
+              <div class="form-row">
+                <label for="cfg-angles">Angles
+                  <span class="form-hint" title="Number of rotation angles in the sprite sheet. 1 = no rotation. 8 = standard octagonal.">?</span>
+                </label>
+                <input type="number" id="cfg-angles" min="1" max="360" value="1" />
+              </div>
+              <div class="form-row">
+                <label for="cfg-frames">Frames (comma-separated)
+                  <span class="form-hint" title="Frame counts per animation. '1' = static. '1,8' = 1 idle + 8 walk frames.">?</span>
+                </label>
+                <input type="text" id="cfg-frames" value="1" pattern="^[0-9]+(,[0-9]+)*$" />
+              </div>
+              <div class="form-row">
+                <label for="cfg-render-res">Render resolution (px)
+                  <span class="form-hint" title="Pixel size of the engine cell. Default 24px. Higher = more detail but larger files.">?</span>
+                </label>
+                <input type="number" id="cfg-render-res" min="1" max="128" value="24" />
+              </div>
+              <div class="form-row" style="display:none;">
+                <label for="cfg-explicit-projs">Projections
+                  <span class="form-hint" title="The game engine doubles the sheet width for multi-angle sprites to store a dimmed 'reflection' copy alongside the original. This is automatic &mdash; only change this if your source sheet already includes reflections.">?</span>
+                </label>
+                <select id="cfg-explicit-projs">
+                  <option value="" selected>Auto (recommended)</option>
+                  <option value="1">1 &mdash; no reflections needed (single-angle or flat sprite)</option>
+                  <option value="2">2 &mdash; my sheet already has reflections baked in</option>
+                </select>
+                <span class="form-hint">Only relevant for multi-angle sprites. Most users should leave this on Auto.</span>
+              </div>
+              <div class="form-row">
+                <label for="cfg-transparency">
+                  <input type="checkbox" id="cfg-transparency" />
+                  Transparency (alpha channel)
+                  <span class="form-hint" title="Enable for sprites with transparent backgrounds. Disable for solid-color key backgrounds.">?</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Grid / Slicing</legend>
+              <div class="form-row">
+                <label for="cfg-cell-w">Cell width (px)
+                  <span class="form-hint" title="Width of each cell in the sprite sheet grid. Leave blank to auto-detect.">?</span>
+                </label>
+                <input type="number" id="cfg-cell-w" min="0" max="1024" step="2" value="" placeholder="auto" />
+                <span class="form-hint">Leave blank for auto-detection (use step 2 for quality mode)</span>
+              </div>
+              <div class="form-row">
+                <label for="cfg-cell-h">Cell height (px)
+                  <span class="form-hint" title="Height of each cell in the sprite sheet grid. Leave blank to auto-detect.">?</span>
+                </label>
+                <input type="number" id="cfg-cell-h" min="0" max="1024" step="2" value="" placeholder="auto" />
+                <span class="form-hint">Leave blank for auto-detection (use step 2 for quality mode)</span>
+              </div>
+              <div class="form-row">
+                <label for="cfg-grid-offset-x">Grid offset X (px)
+                  <span class="form-hint" title="Shift the grid overlay right/left to match sprite boundaries.">?</span>
+                </label>
+                <input type="number" id="cfg-grid-offset-x" min="-4096" max="4096" step="1" value="0" />
+              </div>
+              <div class="form-row">
+                <label for="cfg-grid-offset-y">Grid offset Y (px)
+                  <span class="form-hint" title="Shift the grid overlay down/up to match sprite boundaries.">?</span>
+                </label>
+                <input type="number" id="cfg-grid-offset-y" min="-4096" max="4096" step="1" value="0" />
+              </div>
+              <div class="form-row">
+                <button type="button" id="btn-apply-roi-cellsize" class="btn btn-secondary">
+                  Use selection size as cell size
+                </button>
+                <span class="form-hint">Selection only sets ROI by default; click to copy selection width/height into cell size.</span>
+              </div>
+              <div class="form-row">
+                <label for="cfg-order">Row order</label>
+                <select id="cfg-order">
+                  <option value="angle_major" selected>Angle-major (row = angle)</option>
+                  <option value="animation_major">Animation-major (row = frame)</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="cfg-angle-row-map">Angle row map</label>
+                <input type="text" id="cfg-angle-row-map" value="" placeholder="e.g. 3,2,1,0" />
+                <span class="form-hint">Comma-separated permutation of row indices (0-based)</span>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Background</legend>
+              <div class="form-row">
+                <label for="cfg-bg-mode">Background mode
+                  <span class="form-hint" title="Key Color = magenta/green screen removal. Alpha = transparent PNG. Auto = detect automatically.">?</span>
+                </label>
+                <select id="cfg-bg-mode">
+                  <option value="key_color" selected>Key Color</option>
+                  <option value="alpha">Alpha</option>
+                  <option value="auto">Auto-detect</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="cfg-bg-tolerance">Tolerance
+                  <span class="form-hint" title="How close a pixel color must be to the key color to be treated as background. Higher = more aggressive removal.">?</span>
+                </label>
+                <input type="number" id="cfg-bg-tolerance" min="0" max="255" value="8" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Reflection</legend>
+              <div style="background:var(--bg-surface,#111827);border:1px solid var(--bg-elevated,#1f2937);border-radius:var(--radius,6px);padding:8px 12px;margin-bottom:8px;font-size:11px;color:var(--fg-muted,#9ca3af);line-height:1.5;">
+                <strong style="color:var(--fg-strong,#d1d5db);">Why reflections?</strong>
+                The game engine renders a dimmed "shadow" copy of every multi-angle sprite
+                (used for isometric ground reflections). It does this by storing the original
+                frames in the left half of the sheet and a dimmed copy in the right half,
+                doubling the sheet width. Single-angle or flat sprites (angles = 1) skip this.
+              </div>
+              <div class="form-row">
+                <label for="cfg-reflection">Reflection handling
+                  <span class="form-hint" title="Controls how the pipeline handles the dimmed reflection half of the sprite sheet.">?</span>
+                </label>
+                <select id="cfg-reflection">
+                  <option value="" selected>Auto (recommended)</option>
+                  <option value="generate">Always generate</option>
+                  <option value="none">Skip (none)</option>
+                </select>
+              </div>
+              <div id="reflection-choice-desc" style="font-size:11px;color:var(--fg-dim,#6b7280);padding:2px 0 4px 0;line-height:1.5;">
+                Detects if the sheet already has reflections by comparing left/right half brightness.
+                If not found, generates them automatically.
+              </div>
+            </fieldset>
+
+            <!-- Auto-mode badge + override -->
+            <div id="auto-mode-badge" style="background:var(--bg-surface,#111827);border:1px solid var(--accent-secondary,#7c83ff);border-radius:var(--radius,6px);padding:10px 14px;margin:8px 0;font-size:12px;color:var(--fg-muted,#9ca3af);">
+              <strong style="color:var(--accent-secondary,#7c83ff);">Auto-selected mode:</strong>
+              <span id="auto-mode-label" style="color:var(--fg-strong,#d1d5db);">detecting...</span>
+            </div>
+            <details style="margin:4px 0 8px;">
+              <summary style="cursor:pointer;color:var(--fg-muted,#888);font-size:12px;">Override processing settings</summary>
+              <fieldset style="margin-top:6px;">
+                <div class="form-row">
+                  <label for="cfg-process-mode">Process mode</label>
+                  <select id="cfg-process-mode">
+                    <option value="" selected>Auto (recommended)</option>
+                    <option value="quality">Quality (subcell dithering)</option>
+                    <option value="literal">Literal (1:1 pixel copy)</option>
+                    <option value="standard-legacy">Standard-legacy</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="cfg-error-diffusion">Error diffusion</label>
+                  <select id="cfg-error-diffusion">
+                    <option value="" selected>Default</option>
+                    <option value="none">None</option>
+                    <option value="intra_cell">Intra-cell</option>
+                    <option value="cross_cell">Cross-cell</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="cfg-color-metric">Color metric</label>
+                  <select id="cfg-color-metric">
+                    <option value="" selected>Default</option>
+                    <option value="euclidean">Euclidean</option>
+                    <option value="perceptual">Perceptual</option>
+                  </select>
+                </div>
+              </fieldset>
+            </details>
+
+            <details>
+              <summary style="cursor:pointer;color:var(--fg-muted,#888);font-size:13px;padding:8px 0;">
+                Advanced: Branch pipeline settings
+              </summary>
+              <fieldset>
+                <div id="wizard-config-fields" style="font-size: 13px;">
+                  <p style="color:var(--fg-muted,#888); font-size: 12px;">Loading pipeline settings...</p>
+                </div>
+              </fieldset>
+            </details>
+
+            <!-- Troubleshooting panel -->
+            <details style="margin-top:8px;">
+              <summary style="cursor:pointer;color:var(--fg-dim,#666);font-size:12px;">Troubleshooting</summary>
+              <div style="padding:8px 0;font-size:11px;color:var(--fg-dim,#6b7280);line-height:1.6;">
+                <p><strong>Sprites look stretched?</strong> Check that cell width/height match your sprite grid.</p>
+                <p><strong>Colors look wrong?</strong> Try Quality mode for better color matching.</p>
+                <p><strong>Too many branches?</strong> Lower max_branches_per_stage in Advanced settings, or set a specific process mode instead of Auto.</p>
+                <p><strong>Nothing detected?</strong> Make sure the background color or alpha threshold is set correctly.</p>
+              </div>
+            </details>
+          </form>
+        </div>
+
+        <!-- Right column: sprite preview viewer -->
+        <div>
+          <div id="wizard-viewer-panel" style="height:min(72vh,760px);position:sticky;top:20px;"></div>
+        </div>
+      </div>
+
+      <!-- Layout Editor (drag/drop reorder, delete/restore) -->
+      <div id="layout-editor-container" class="layout-editor-container"></div>
+
+      <div class="step-actions">
+        <button class="btn btn-secondary btn-back" data-target="analyze">Back</button>
+        <button id="btn-configure-next" class="btn btn-primary">
+          Next: Confirm
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 4: Confirm -->
+    <section id="panel-confirm" class="step-panel hidden" data-step="confirm">
+      <h2>Confirm Configuration</h2>
+      <p>Review your settings before running the pipeline.</p>
+      <div id="confirm-summary" class="summary-block"></div>
+      <div id="confirm-validation" class="validation-block hidden">
+        <span class="validation-icon"></span>
+        <span id="confirm-validation-msg"></span>
+      </div>
+      <div class="step-actions">
+        <button class="btn btn-secondary btn-back" data-target="configure">Back</button>
+        <button id="btn-confirm-run" class="btn btn-primary" disabled>
+          Run Pipeline
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 5: Run -->
+    <section id="panel-run" class="step-panel hidden" data-step="run">
+      <h2>Running Pipeline</h2>
+      <div id="run-progress" class="progress-block">
+        <div class="progress-bar">
+          <div class="progress-fill" id="run-progress-fill"></div>
+        </div>
+        <p id="run-status-text">Submitting job...</p>
+        <div id="stage-chips" class="stage-chips">
+          <span class="stage-chip" data-stage="generate">Generate</span>
+          <span class="stage-chip-arrow">&rarr;</span>
+          <span class="stage-chip" data-stage="slice">Slice</span>
+          <span class="stage-chip-arrow">&rarr;</span>
+          <span class="stage-chip" data-stage="process">Process</span>
+          <span class="stage-chip-arrow">&rarr;</span>
+          <span class="stage-chip" data-stage="assemble">Assemble</span>
+        </div>
+      </div>
+      <div id="run-error" class="error-block hidden"></div>
+      <div class="step-actions">
+        <button id="btn-run-result" class="btn btn-primary hidden">
+          View Result
+        </button>
+      </div>
+    </section>
+
+    <!-- Step 6: Result -->
+    <section id="panel-result" class="step-panel hidden" data-step="result">
+      <h2>Result</h2>
+      <div id="result-preview-container"></div>
+      <div id="result-info" class="results-block">
+        <table class="info-table">
+          <tbody id="result-table-body"></tbody>
+        </table>
+      </div>
+      <div id="export-controls-container" class="export-controls-container"></div>
+      <div id="result-actions" class="export-actions">
+        <button id="btn-result-workbench" class="btn btn-primary">Edit in Workbench</button>
+        <button id="btn-export-xp" class="btn btn-secondary">Download .xp</button>
+        <button id="btn-export-png" class="btn btn-secondary">Export PNG</button>
+        <button id="btn-export-zip" class="btn btn-secondary">Export ZIP</button>
+        <button id="btn-export-gif" class="btn btn-secondary">Export GIF</button>
+        <button id="btn-view-branches" class="btn btn-secondary" style="display:none;">View Branches</button>
+      </div>
+      <p class="xp-tool-hint">Open downloaded .xp in <code>xp_tool.py</code> for cell editing, animation preview, and MCP connection</p>
+      <div class="step-actions">
+        <button id="btn-start-over" class="btn btn-primary">Start Over</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="sprite_viewer_panel.js"></script>
+  <script src="layout_editor.js"></script>
+  <script src="export_step.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

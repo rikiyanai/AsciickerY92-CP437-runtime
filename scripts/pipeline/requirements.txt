@@ -1,0 +1,19 @@
+# Python dependencies for asset generation pipeline
+
+# Core image processing
+Pillow>=10.0.0
+
+# CLI Wizard
+questionary>=2.0.0
+
+# Scientific computing (required by scipy)
+numpy>=1.24.0
+
+# Scientific computing for block-majority downsampling
+scipy>=1.17.0
+
+# Image processing utilities (block_reduce for downsampling)
+scikit-image>=0.26.0
+
+# Gemini API for AI image generation (GeminiNanoBananaAdapter)
+google-genai>=1.0.0

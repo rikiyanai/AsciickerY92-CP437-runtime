@@ -1,0 +1,6 @@
+# Archived sprite sources after publish
+# These are kept locally for iteration but not tracked in git
+archive/
+
+# macOS metadata
+.DS_Store

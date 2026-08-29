@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "notes": "Driver coverage manifest. Each roadmap phase must declare at least one user-simulation driver.",
+  "phases": {
+    "1": [
+      {
+        "id": "P1-sprite-manifest-driver",
+        "description": "Real sprite corpus discovery and clustering baseline",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_sprite_manifest.py -q"
+      }
+    ],
+    "2": [
+      {
+        "id": "P2-unified-import-driver",
+        "description": "User import path parity across entry points",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_unified_import.py -q"
+      }
+    ],
+    "3": [
+      {
+        "id": "P3-grid-detection-driver",
+        "description": "User-provided arbitrary sheet dimensions and explicit overrides",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_grid_detection.py -q"
+      }
+    ],
+    "4": [
+      {
+        "id": "P4-alpha-e2e-driver",
+        "description": "RGBA and background mode user-facing conversion flow",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_alpha_e2e.py -q"
+      }
+    ],
+    "5": [
+      {
+        "id": "P5-orientation-driver",
+        "description": "Row/column ordering behavior as seen by import users",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_slicer_spec.py -q"
+      }
+    ],
+    "5.1": [
+      {
+        "id": "P5.1-layout-heuristic-driver",
+        "description": "Orientation suggestions and remap correctness from user perspective",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_layout_heuristic.py -q"
+      }
+    ],
+    "6": [
+      {
+        "id": "P6-reflection-driver",
+        "description": "Reflection/projs crash and contract regressions",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_projs_crash.py -q"
+      }
+    ],
+    "7": [
+      {
+        "id": "P7-cli-robustness-driver",
+        "description": "Import-mode and non-interactive CLI user flows",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_ux_gaps.py -q"
+      }
+    ],
+    "8": [
+      {
+        "id": "P8-acceptance-matrix-driver",
+        "description": "Real acceptance matrix scenarios (user-observable outcomes)",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_acceptance_matrix.py -q"
+      }
+    ],
+    "9": [
+      {
+        "id": "P9-angle-row-map-driver",
+        "description": "Angle row remapping in user-imported sheets",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_angle_row_map.py -q"
+      }
+    ],
+    "10": [
+      {
+        "id": "P10-external-bank-driver",
+        "description": "External fixture-bank import behavior",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_external_bank.py -q"
+      }
+    ],
+    "10.5": [
+      {
+        "id": "P10.5-gap-driver",
+        "description": "P0/P1 UX+backend gap regressions",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_p1_gaps.py scripts/pipeline/tests/test_ux_gaps.py -q"
+      }
+    ],
+    "11": [
+      {
+        "id": "P11-regression-governance-driver",
+        "description": "Golden corpus and regression behavior",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_baseline_golden.py -q"
+      }
+    ],
+    "12": [
+      {
+        "id": "P12-pre-slice-driver",
+        "description": "Pre-slice hook behavior and strict-mode semantics",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_preslice_grid_check.py scripts/pipeline/tests/test_preslice_pixel_perfect.py -q"
+      }
+    ],
+    "13": [
+      {
+        "id": "P13-web-user-driver",
+        "description": "User-flow API driver for upload/analyze/configure/run with explicit slicing",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_web_user_driver.py -q"
+      },
+      {
+        "id": "P13-web-browser-e2e-driver",
+        "description": "Real browser behavior flow for extraction/assignment/export (no DOM-only checks)",
+        "simulates_user": true,
+        "command": "python3 -m pytest -o \"addopts=\" -m e2e --browser chromium scripts/pipeline/tests/e2e/test_workbench_behavior.py -k \"upload_extract_produces_sprites or extract_assign_populates_grid_with_thumbnails or export_produces_xp_file\" -q"
+      }
+    ],
+    "14": [
+      {
+        "id": "P14-governance-driver",
+        "description": "Planning governance and execution-coherence gates",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/tests/test_plan_lint.py scripts/tests/test_gsd_audit.py -q"
+      }
+    ],
+    "15": [
+      {
+        "id": "P15-blender-e2e-driver",
+        "description": "Blender-to-XP end-to-end user pipeline",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_blender_to_xp_e2e.py -q"
+      },
+      {
+        "id": "P15-unified-addon-tcp-driver",
+        "description": "Unified addon registration, bulk import, and legacy compat via TCP",
+        "simulates_user": true,
+        "command": "python3 -m pytest tests/driver/test_blender_unified_addon_tcp_driver.py -q"
+      }
+    ],
+    "16.0": [
+      {
+        "id": "P16.0-extraction-config-parity-driver",
+        "description": "Extraction config fields wired through all 4 entry paths (CLI, web, wizard, service)",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_extraction_config_parity.py -q"
+      }
+    ],
+    "16.1": [
+      {
+        "id": "P16.1-extractor-core-driver",
+        "description": "Flood-fill sprite extraction from non-grid sheets",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_extractor.py -q"
+      }
+    ],
+    "16.2": [
+      {
+        "id": "P16.2-extractor-pipeline-driver",
+        "description": "Extraction mode dispatch in pipeline with grid assignment",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_extractor_pipeline.py -q"
+      }
+    ],
+    "16.3": [
+      {
+        "id": "P16.3-transforms-oplog-driver",
+        "description": "Transform primitives and deterministic operation replay",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_transforms.py scripts/pipeline/tests/test_op_log.py -q"
+      }
+    ],
+    "16.4": [
+      {
+        "id": "P16.4-workbench-api-driver",
+        "description": "Workbench extract/assign/template API endpoints",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_workbench_api.py -q"
+      },
+      {
+        "id": "P16.4-workbench-browser-e2e-driver",
+        "description": "Workbench extraction and assignment behavior in a real browser session",
+        "simulates_user": true,
+        "command": "python3 -m pytest -o \"addopts=\" -m e2e --browser chromium scripts/pipeline/tests/e2e/test_workbench_behavior.py -k \"upload_extract_produces_sprites or extract_assign_populates_grid_with_thumbnails or debug_console_captures_events\" -q"
+      }
+    ],
+    "16.5": [
+      {
+        "id": "P16.5-workbench-editing-driver",
+        "description": "Cell-level editing, undo/redo, and export from workbench",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_workbench_editing.py -q"
+      },
+      {
+        "id": "P16.5-workbench-editing-browser-e2e-driver",
+        "description": "Browser-level manual box editing, selection, preview, and export behavior",
+        "simulates_user": true,
+        "command": "python3 -m pytest -o \"addopts=\" -m e2e --browser chromium scripts/pipeline/tests/e2e/test_workbench_behavior.py -k \"draw_box_creates_manual_bbox or cell_click_shows_direction_info or animation_preview_plays or manual_boxes_to_grid_and_export\" -q"
+      }
+    ],
+    "16.6": [
+      {
+        "id": "P16.6-sheet-merge-driver",
+        "description": "Multi-source sheet merge with provenance tracking",
+        "simulates_user": true,
+        "command": "python3 -m pytest scripts/pipeline/tests/test_sheet_merge.py -q"
+      },
+      {
+        "id": "P16.6-sheet-merge-browser-e2e-driver",
+        "description": "Browser-level multi-source merge behavior with visible extraction growth",
+        "simulates_user": true,
+        "command": "python3 -m pytest -o \"addopts=\" -m e2e --browser chromium scripts/pipeline/tests/e2e/test_workbench_behavior.py -k \"multi_source_merge_adds_sprites\" -q"
+      }
+    ],
+    "17": [
+      {
+        "id": "P17-snow-weather-driver",
+        "description": "Snow particle rendering and terrain accumulation (C++ engine visual verification)",
+        "simulates_user": true,
+        "command": "echo 'Phase 17 drivers TBD — C++ engine visual tests require manual verification'"
+      }
+    ],
+    "18": [
+      {
+        "id": "P18-blender-mcp-driver",
+        "description": "Blender MCP render_asset deterministic pipeline",
+        "simulates_user": true,
+        "command": "echo 'Phase 18 drivers TBD — Blender MCP tests planned with render parity fixtures'"
+      }
+    ],
+    "19": [
+      {
+        "id": "P19-engine-mcp-driver",
+        "description": "C++ MCP RENDER zoom and SET_CAMERA controls",
+        "simulates_user": true,
+        "command": "echo 'Phase 19 drivers TBD — C++ MCP command tests planned'"
+      }
+    ],
+    "20": [
+      {
+        "id": "P20-wysiwyr-driver",
+        "description": "WYSIWYR cross-source wizard integration",
+        "simulates_user": true,
+        "command": "echo 'Phase 20 drivers TBD — wizard parity tests planned'"
+      }
+    ]
+  }
+}

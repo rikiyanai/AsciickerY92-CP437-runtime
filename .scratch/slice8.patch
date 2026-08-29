@@ -1,0 +1,204 @@
+diff --git a/editor/asciiid.cpp b/editor/asciiid.cpp
+index f9a7e2dc0..57b628a8a 100644
+--- a/editor/asciiid.cpp
++++ b/editor/asciiid.cpp
+@@ -4368,6 +4368,10 @@ static bool g_fl4260_force_scroll_promotion = false;
+ // (and the Role Buckets / Profile Scoring sections below it) to the top of the
+ // capture, which the old scroll_focus only-Trace/Promotion targets never reached.
+ static bool g_fl4260_force_scroll_pools = false;
++// FL-4260 UI Slice 8 (new-user audit M2): scroll_focus=0 brings the first
++// "2. Starters" tile above the fold so the top capture proves starters exist,
++// not just the section header.
++static bool g_fl4260_force_scroll_starters = false;
+ static char g_fl4260_last_ui_capture_path[2048] = {};
+ static char g_fl4260_last_ui_capture_id[1024] = {};
+ 
+@@ -18894,10 +18898,14 @@ void ProcessMCPCommand(char* line) {
+         // lands on the RENDERING tab with "2. Preset Tiles" open. Pair before/
+         // after FL4131_DUMP_MATERIAL_GLYPHS <mat_id> to prove no glyph_plane
+ 	        // mutation. Usage: FL4260_RENDERING_PROOF <mat_id|-1> <preset_index|-1> [scroll_focus]
+-	        // scroll_focus=1 scrolls "7. Trace" to the top; scroll_focus=2 scrolls
+-	        // "8. Promotion / Admission" to the top; scroll_focus=3 scrolls "4. Glyph
+-	        // Pools" to the top (so sections 4-6 are capturable). The window clamps to
+-	        // screen height, so lower sections are off-frame without a capture-only focus.
++	        // FL-4260 UI Slice 8 (new-user audit H1): section-aligned scroll_focus so a
++	        // new-user capture pass walks the panel top-to-bottom in reading order:
++	        //   0 = top (Mode & Status + at least one Starter tile visible)
++	        //   1 = "4. Glyph Pools" + "5. Role Buckets" (incl. Edge blocked state)
++	        //   2 = "7. Trace"
++	        //   3 = "8. Promotion / Admission"
++	        // The window clamps to screen height, so lower sections are off-frame
++	        // without a capture-only focus.
+ 	        int mat_id = -1, preset_index = -1, scroll_focus = 0;
+ 	        if (sscanf(line, "%*s %d %d %d", &mat_id, &preset_index, &scroll_focus) < 1) {
+ 	            printf("[MCP] Error: Usage: FL4260_RENDERING_PROOF <mat_id|-1> <preset_index|-1> [scroll_focus]\n");
+@@ -18907,9 +18915,10 @@ void ProcessMCPCommand(char* line) {
+ 	        g_asciiid_active_material_selection = mat_id;   // drive existing selection state
+ 	        g_fl4260_force_rendering_tab = true;            // headed: select RENDERING tab strip
+ 	        g_fl4260_force_sidebar_tab = 9;                 // headed: force RENDERING body (deterministic)
+-	        g_fl4260_force_scroll_trace = (scroll_focus == 1); // headed: scroll to "7. Trace" for the diagram capture
+-	        g_fl4260_force_scroll_promotion = (scroll_focus == 2); // headed: scroll to "8. Promotion / Admission"
+-	        g_fl4260_force_scroll_pools = (scroll_focus == 3); // headed: scroll to "4. Glyph Pools" (sections 4-6)
++	        g_fl4260_force_scroll_starters = (scroll_focus == 0); // headed: bring a Starter tile above the fold at top
++	        g_fl4260_force_scroll_pools = (scroll_focus == 1); // headed: scroll to "4. Glyph Pools" (sections 4-5, Edge)
++	        g_fl4260_force_scroll_trace = (scroll_focus == 2); // headed: scroll to "7. Trace" for the diagram capture
++	        g_fl4260_force_scroll_promotion = (scroll_focus == 3); // headed: scroll to "8. Promotion / Admission"
+         // RQ-156 UI proof: keep "3. Colors & Shade Bands" COLLAPSED here (it is tall
+         // — 4 elv rows — and pushes Glyph Pools/Role Buckets/Trace/Promotion off the
+         // capture). Colors is shown in the separate top capture. Force-open the rest.
+@@ -26273,8 +26282,13 @@ void my_render(A3D_WND* wnd)
+ 					if (has_mesh)   { if (src[0]) strcat(src, "  "); strcat(src, "mesh"); }
+ 					if (has_sprite) { if (src[0]) strcat(src, "  "); strcat(src, "sprite"); }
+ 					char label[160];
+-					snprintf(label, sizeof(label), "mat %d  %s%s  vis=%d##rmat%d",
+-						mid, src, adm ? "  [admitted]" : "", vis, mid);
++					// FL-4260 UI Slice 8 (new-user audit M1): "vis=0" read as "broken".
++					// Show a plain "viewport:N" count only when nonzero; hide it at zero
++					// so an admitted off-screen material does not look empty.
++					char visbuf[28] = {0};
++					if (vis > 0) snprintf(visbuf, sizeof(visbuf), "  viewport:%d", vis);
++					snprintf(label, sizeof(label), "mat %d  %s%s%s##rmat%d",
++						mid, src, adm ? "  [admitted]" : "", visbuf, mid);
+ 					shown++;
+ 					if (ImGui::Selectable(label, g_asciiid_active_material_selection == mid))
+ 						g_asciiid_active_material_selection = mid;
+@@ -26290,7 +26304,7 @@ void my_render(A3D_WND* wnd)
+ 			ImGui::EndChild();
+ 			// FL-4260 UI Slice 7 (new-user audit M2): label what "vis=" means so a
+ 			// new user does not read vis=0 on an admitted material as "broken".
+-			Fl4260UiWrappedDisabled("vis = cells of this material currently in the viewport (0 just means none are on screen right now).");
++			Fl4260UiWrappedDisabled("viewport:N = cells of this material currently on screen (hidden when none are visible; an admitted material can still render — it is just off-screen right now).");
+ 			if (g_asciiid_active_material_selection >= 0)
+ 				ImGui::Text("Selected: terrain:%d", g_asciiid_active_material_selection);
+ 			else
+@@ -26313,6 +26327,9 @@ void my_render(A3D_WND* wnd)
+ 				const bool any_adm = Fl4260AnyV1ProfileAdmitted();
+ 				const bool sel_adm = (sel >= 0) && Fl4260MaterialProfileAdmitted(sel);
+ 				ImGui::Text("Mode: %s", mode_str);
++					// FL-4260 UI Slice 8 (new-user audit M6): plain-English CP437 hint.
++					if (mode != 1)
++						Fl4260UiWrappedDisabled("CP437 = the standard ASCII set; the default raw-map rendering mode.");
+ 				// FL-4260 UI width/overflow: qualifier on its own wrapped line (was a
+ 				// SameLine append that ran off the pane at narrow widths).
+ 				// FL-4260 UI Slice 7 (new-user audit H2): the qualifier must not claim
+@@ -26326,6 +26343,11 @@ void my_render(A3D_WND* wnd)
+ 				else
+ 					Fl4260UiWrappedDisabled("(CP437 default — no profile admitted yet)");
+ 				Fl4260UiWrapped("Selected material: terrain:%d   admitted: %s", sel, sel_adm ? "TRUE" : "FALSE");
++					// FL-4260 UI Slice 8 (new-user audit H2): when the selected material is
++					// admitted, say so plainly from v1.json instead of leaving "no admitted
++					// profile active" as the only admission cue (the H2 contradiction).
++					if (mode != 1 && sel_adm)
++						Fl4260UiWrappedColored(ImVec4(0.55f, 0.85f, 0.55f, 1.0f), "This material's profile is admitted (v1.json); its cells render profile glyphs once PROFILE render mode is active.");
+ 				Fl4260UiWrapped("v1.json any admitted: %s   runtime_admitted (data-driven): %s",
+ 					any_adm ? "TRUE" : "FALSE", any_adm ? "TRUE" : "FALSE");
+ 				Fl4260UiPathLine("Profile data: ", kFl4260ProfilesV1Path, NULL);
+@@ -26373,6 +26395,14 @@ void my_render(A3D_WND* wnd)
+ 
+ 					// ── Full starters: seed the whole profile (pool + roles) ──
+ 					ImGui::TextColored(ImVec4(0.8f, 0.8f, 0.4f, 1.0f), "Full starters (whole profile)");
++						// FL-4260 UI Slice 8 (new-user audit M2): at scroll_focus=0, bring the
++						// first starter tile above the fold so the top capture proves starters
++						// exist (Mode & Status stays partly visible above this anchor).
++						if (g_fl4260_force_scroll_starters)
++						{
++							ImGui::SetScrollHereY(0.7f);
++							g_fl4260_force_scroll_starters = false;
++						}
+ 					const int preset_count = (int)(sizeof(kAsciiidExtendedGlyphPresets) / sizeof(kAsciiidExtendedGlyphPresets[0]));
+ 					for (int pi = 0; pi < preset_count; pi++)
+ 					{
+@@ -26596,7 +26626,7 @@ void my_render(A3D_WND* wnd)
+ 			{
+ 				// FL-4260 UI Slice 7: one-frame scroll so Glyph Pools (and Role
+ 				// Buckets / Profile Scoring below it) sit at the top of the capture.
+-				if (g_fl4260_force_scroll_pools)
++				if (false) // FL-4260 Slice 8: anchor moved to Glyph Pools closing caption (keeps flag set for the caption consume below)
+ 				{
+ 					ImGui::SetScrollHereY(0.0f);
+ 					g_fl4260_force_scroll_pools = false;
+@@ -26732,6 +26762,15 @@ void my_render(A3D_WND* wnd)
+ 						ImGui::Text("'%c'", vc);
+ 					}
+ 					Fl4260UiWrappedDisabled("Pool defines which glyphs are eligible. Role Buckets assigns them to placement lanes.");
++						// FL-4260 UI Slice 8 (new-user audit H4): scroll_focus=1 anchors HERE
++						// (end of Glyph Pools) so the capture shows this boundary at the top:
++						// Glyph Pools tail above, the full Role Buckets section (incl. the Edge
++						// BLOCKED line) below it in one frame.
++						if (g_fl4260_force_scroll_pools)
++						{
++							ImGui::SetScrollHereY(0.0f);
++							g_fl4260_force_scroll_pools = false;
++						}
+ 				}
+ 			}
+ 			if (g_fl4260_force_all_sections_open) ImGui::SetNextTreeNodeOpen(true, ImGuiCond_Always);
+@@ -26838,7 +26877,7 @@ void my_render(A3D_WND* wnd)
+ 					ImGui::Separator();
+ 					Fl4260UiWrappedDisabled("Direction: 17 lanes reserved; disabled in first slice (Ramp+Density only).");
+ 					Fl4260UiItemTip("Reserved for a later slice — the first slice authors Ramp + Density only.");
+-					Fl4260UiWrappedDisabled("Edge: ridge/valley/wall/overhang — not yet available (no terrain edge data).");
++					Fl4260UiWrappedColored(ImVec4(0.86f, 0.51f, 0.27f, 1.0f), "Edge (ridge/valley/wall/overhang): BLOCKED - not authorable. Needs the vertical_relation fact producer (RQ-153b), which is not built yet.");
+ 					Fl4260UiItemTip("Blocked by data: no terrain edge facts (vertical_relation, RQ-153b) are produced yet.");
+ 					Fl4260UiWrappedDisabled("Flow: wave/wind/grass_stroke — not yet available.");
+ 					Fl4260UiItemTip("Reserved: wave/wind/grass-stroke flow lanes are not authored in this slice.");
+@@ -26951,7 +26990,7 @@ void my_render(A3D_WND* wnd)
+ 						nodes[n].title = "7. Scorer";
+ 						snprintf(nodes[n].value, 72, "detail=%d tone=%d density=%d", d.detail_contrast, d.tone_contrast, d.density_bias); nodes[n].ok = 1; n++;
+ 						nodes[n].title = "8. CPU / GPU winner";
+-						snprintf(nodes[n].value, 72, "%s", g_fl4131_harri_gpu_bridge.valid ? "live (click a cell below)" : "needs TERM++ embed"); nodes[n].ok = g_fl4131_harri_gpu_bridge.valid ? 1 : 2; n++;
++						snprintf(nodes[n].value, 72, "%s", g_fl4131_harri_gpu_bridge.valid ? "live (click a cell below)" : "live winner appears once TERM++ is mounted"); nodes[n].ok = g_fl4131_harri_gpu_bridge.valid ? 1 : 2; n++;
+ 						nodes[n].title = "9. Final glyph / marker";
+ 						snprintf(nodes[n].value, 72, adm ? "rendered profile glyph" : "MISSING_POLICY marker"); nodes[n].ok = adm ? 1 : 0; n++;
+ 						nodes[n].title = "10. Rejection / fallback reason";
+@@ -27008,7 +27047,17 @@ void my_render(A3D_WND* wnd)
+ 						cx >= 0 && cy >= 0 && cx < 160 && cy < 90;
+ 					if (!bok)
+ 					{
+-						Fl4260UiWrappedDisabled("  Mount TERM++ embed (SET_TERMPP_EMBEDDED_VISIBLE 1) then click a cell.");
++						// FL-4260 UI Slice 8 (new-user audit H3): do not leave the raw command
++						// as the only explanation. Say plainly what will appear once the live
++						// TERM++ winner is mounted, then show a representative (non-live) row so
++						// a first-time user can read the trace shape before mounting it.
++						Fl4260UiWrappedDisabled("  No live winner yet: the per-cell CPU/GPU result appears here once the TERM++ render embed is mounted (it is not mounted in the editor).");
++						Fl4260UiWrappedDisabled("  To mount it: enable the TERM++ embed (command SET_TERMPP_EMBEDDED_VISIBLE 1), then click a terrain cell in the viewport.");
++						Fl4260UiWrappedDisabled("  Representative row (layout only - NOT a live sample):");
++						ImGui::TextDisabled("    material: terrain:1 (GRASS)");
++						ImGui::TextDisabled("    elevation ramp row: 2 (mid)");
++						ImGui::TextDisabled("    shade density bucket: D1");
++						ImGui::TextDisabled("    CPU picks: gid <n>   GPU final: gid <n> (agree)");
+ 					}
+ 					else
+ 					{
+@@ -27112,6 +27161,10 @@ void my_render(A3D_WND* wnd)
+ 							if (rq.review_total > 0)
+ 								Fl4260UiWrapped("Review progress: %d of %d decided  -  %d remaining (operator-owned per-cell accept; Law 16).",
+ 									rq.review_done, rq.review_total, rq.review_remaining);
++								// FL-4260 UI Slice 8 (new-user audit M3): one always-visible line so the
++								// Accept / Reject / Defer workflow is learnable at the top of the queue
++								// without scrolling down to the controls.
++								Fl4260UiWrappedDisabled("Workflow: load a row -> type a row-specific reason -> Accept / Reject / Defer (each writes a receipt only; runtime promotion stays blocked).");
+ 							if (rq.blocked_summary[0])
+ 								Fl4260UiWrappedDisabled("%s", rq.blocked_summary);
+ 							if (rq.status[0])
+@@ -27148,6 +27201,20 @@ void my_render(A3D_WND* wnd)
+ 							{
+ 								Fl4260UiWrappedColored(ImVec4(0.7f, 0.9f, 0.7f, 1.0f),
+ 								"No next unreviewed row is loaded. Refresh the queue, then run the gate.");
++								// FL-4260 UI Slice 8 (new-user audit M3/H2): show Accept / Reject /
++								// Defer as a visible DISABLED row even with no row loaded, so a
++								// first-time user can learn the controls without scrolling. These
++								// placeholders write nothing (disabled item flag + dimmed alpha).
++								ImGui::PushItemFlag(ImGuiItemFlags_Disabled, true);
++								ImGui::PushStyleVar(ImGuiStyleVar_Alpha, ImGui::GetStyle().Alpha * 0.5f);
++								ImGui::Button("Accept primary##rq153cph_accept");
++								ImGui::SameLine();
++								ImGui::Button("Reject primary##rq153cph_reject");
++								ImGui::SameLine();
++								ImGui::Button("Defer##rq153cph_defer");
++								ImGui::PopStyleVar();
++								ImGui::PopItemFlag();
++								Fl4260UiWrappedDisabled("These become active once a review row is loaded and a row-specific reason is typed. Each writes a receipt only; runtime promotion stays blocked.");
+ 						}
+ 						else
+ 							{

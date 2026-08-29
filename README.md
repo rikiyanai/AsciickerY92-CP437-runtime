@@ -4,7 +4,7 @@ A fork of [msokalski/asciicker](https://github.com/msokalski/asciicker), a CP437
 
 This repository contains the full playable C++ runtime used by the Y9-2 branch: an authoritative server, native terminal client, browser/WebAssembly client, maps, meshes, audio, sprites, and the actor-appearance tooling used by the runtime.
 
-The renderer keeps the original CP437 byte-cell path for glyph IDs `0..255`. Y9-2 also supports manifest-declared extended glyph IDs through separate sidecar data, so the current runtime is not limited to CP437 even though that remains its compatibility fast path.
+The renderer keeps the original CP437 byte-cell path for glyph IDs `0..255`. Y9-2 also supports manifest-declared extended glyph IDs through an extended-glyph sidecar, so the current runtime is not limited to CP437 even though that remains its compatibility fast path.
 
 ## Current scene
 
@@ -19,6 +19,8 @@ The current tests pin the Wallace and Gromit sprite bytes, the rocket source and
 ![Base, armor, helmet, sword, and movement transitions in the browser runtime](docs/recordings/cp437-runtime-layer-transitions.gif)
 
 Actor appearance is compiled from normalized REXPaint `.xp` source layers into runtime profiles. The server selects reachable appearance state, while the client resolves the corresponding layered presentation. The bundled data includes base sprites as well as equipment layers such as armor, helmets, and weapons.
+
+The recording contract also retains `docs/recordings/armored-block-feature-gameplay.gif` as the gameplay proof path for armored block behavior.
 
 ## Runtime layout
 

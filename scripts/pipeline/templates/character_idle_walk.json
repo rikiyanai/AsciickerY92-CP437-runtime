@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "name": "player_idle_walk",
+  "type": "character",
+  "angles": 8,
+  "frames": [
+    1,
+    8
+  ],
+  "layout": {
+    "rows": "angles",
+    "cols": "sum(frames)",
+    "frame_order": [
+      "idle:0",
+      "walk:0",
+      "walk:1",
+      "walk:2",
+      "walk:3",
+      "walk:4",
+      "walk:5",
+      "walk:6",
+      "walk:7"
+    ]
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "length": 1
+    },
+    {
+      "name": "walk",
+      "length": 8
+    }
+  ],
+  "processing": {
+    "magenta_snap": true,
+    "palette_quantize": true,
+    "downscale": "box",
+    "normalization": true
+  },
+  "debug": {
+    "labels": true,
+    "label_format": "A{angle}-{anim}:{frame}",
+    "label_sheet": "debug/player_idle_walk_labels.png"
+  }
+}

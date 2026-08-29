@@ -1,0 +1,826 @@
+import argparse
+import sys
+import json
+import logging
+from dataclasses import asdict
+from pathlib import Path
+from typing import Optional
+import questionary
+from .schemas import AssetDef
+from .presets import get_preset, ORC_TEMPLATE
+
+try:
+    from processor_core import ImageProcessor
+except ImportError:
+    from scripts.processor_core import ImageProcessor
+
+# Import template loader and models
+from scripts.pipeline.templates.loader import TemplateLoader, TemplateLoadError
+from scripts.pipeline.templates.models import Template as TemplateModel
+
+# Downscaling algorithms for image resizing
+DOWNSCALE_ALGORITHMS = ["nearest", "box", "area", "block-majority"]
+DEFAULT_BY_SOURCE = {
+    "ai": "box",
+    "blender": "nearest",
+    "file": "nearest",
+}
+
+logger = logging.getLogger(__name__)
+
+
+# Downscaling algorithms for image resizing
+DOWNSCALE_ALGORITHMS = ["nearest", "box", "area", "block-majority"]
+DEFAULT_BY_SOURCE = {
+    "ai": "box",
+    "blender": "nearest",
+    "file": "nearest",
+}
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Asciicker Asset Generation Pipeline",
+        epilog="""
+Examples:
+  # Process AI-generated sprite sheet with magenta transparency:
+  python -m asset_gen.cli --source-type ai --input sprites.png --name my_char --type character --angles 8 --frames 4
+
+  # Render from Blender scene via MCP:
+  python -m asset_gen.cli --source-type blender --blender-object TestCube --name test_cube --type item
+
+  # Load regular PNG file:
+  python -m asset_gen.cli --source-type file --input image.png --name asset --type character
+
+  # Direct RGB processing (early exit):
+  python -m asset_gen.cli --image-path image.png --process-rgb-to-cp437
+        """,
+    )
+
+    # Mutually exclusive mode group
+    mode_group = parser.add_mutually_exclusive_group()
+    mode_group.add_argument(
+        "--wizard", action="store_true", help="Interactive wizard for guided setup"
+    )
+    mode_group.add_argument(
+        "--template", metavar="NAME", type=str, help="Load template by name"
+    )
+
+    # Template discovery flags (allowed with any mode)
+    parser.add_argument(
+        "--list-templates", action="store_true", help="List available templates"
+    )
+    parser.add_argument(
+        "--describe-template", metavar="NAME", type=str, help="Show template details"
+    )
+
+    # Validation flags
+    parser.add_argument(
+        "--dry-run", action="store_true", help="Validate only, skip rendering"
+    )
+    parser.add_argument(
+        "--force", action="store_true", help="Override locked template fields"
+    )
+    parser.add_argument(
+        "--strict", action="store_true", help="Treat warnings as errors"
+    )
+
+    # Existing flags (preserved)
+    parser.add_argument(
+        "prompt", nargs="?", help="Text prompt for the asset (e.g. 'Orc warrior')"
+    )
+    parser.add_argument(
+        "--type",
+        choices=["character", "item", "custom"],
+        default="custom",
+        help="Asset type preset",
+    )
+    parser.add_argument("--name", help="Output name (default: derived from prompt)")
+    parser.add_argument(
+        "--angles", type=int, choices=[1, 4, 8], help="Number of angles"
+    )
+    parser.add_argument(
+        "--source-type",
+        choices=["file", "ai", "blender"],
+        default="file",
+        help="Source type: file (load PNG), ai (PNG with magenta transparency), blender (render from scene)",
+    )
+    parser.add_argument(
+        "--input",
+        "--image-path",
+        help="Path to image file or blend file for processing",
+        nargs="?",
+    )
+    parser.add_argument(
+        "--blender-object",
+        help="Object name to render (for source_type=blender)",
+    )
+    parser.add_argument(
+        "--transparency",
+        action="store_true",
+        help="Indicate PNG has magenta (255,0,255) transparency",
+    )
+    parser.add_argument(
+        "--process-rgb-to-cp437",
+        action="store_true",
+        help="Process RGB image to CP437 glyphs and exit (early exit)",
+    )
+    parser.add_argument(
+        "--downscale",
+        choices=DOWNSCALE_ALGORITHMS,
+        help="Downscaling algorithm (auto if template specifies)",
+    )
+
+    return parser.parse_args()
+
+
+def detect_cli_mode(args) -> Optional[str]:
+    """
+    Determine CLI mode (wizard/template/raw) from parsed arguments.
+
+    Returns:
+        "wizard" if args.wizard is True
+        "template" if args.template is specified
+        "raw" if all core args present (--name, --angles, --input)
+        None if no mode detected (user needs to specify mode or provide core args)
+    """
+    if getattr(args, "wizard", False):
+        return "wizard"
+    if getattr(args, "template", None):
+        return "template"
+    # Check for raw mode: core args present
+    if (
+        getattr(args, "name", None)
+        and getattr(args, "angles", None)
+        and getattr(args, "input", None)
+    ):
+        return "raw"
+    return None
+
+
+def exit_with_code(code: int, message: str = ""):
+    """
+    Exit with semantic exit code.
+
+    Exit codes:
+        0 = Success
+        1 = Usage/config errors (missing args, mode conflicts)
+        2 = Validation errors (template load, dimension mismatches)
+        3 = Runtime/IO errors (file not found, Blender failure)
+        4 = Internal errors (unexpected exceptions)
+    """
+    if message:
+        print(message, file=sys.stderr)
+    sys.exit(code)
+
+
+def load_template_if_needed(
+    mode: Optional[str], template_name: Optional[str]
+) -> Optional[TemplateModel]:
+    """
+    Load template from file if mode == "template".
+
+    Args:
+        mode: CLI mode (wizard/template/raw)
+        template_name: Template name to load
+
+    Returns:
+        Template object if loaded, None otherwise
+
+    Raises:
+        TemplateLoadError: If template not found or invalid
+    """
+    if mode != "template" or not template_name:
+        return None
+
+    # Construct template path
+    templates_dir = Path("scripts/pipeline/templates")
+    template_path = templates_dir / f"{template_name}.json"
+
+    try:
+        logger.info(f"Loading template from {template_path}")
+        template = TemplateLoader.from_file(template_path)
+        logger.info(f"Successfully loaded template: {template.name}")
+        return template
+    except TemplateLoadError as e:
+        exit_with_code(2, f"Template load failed: {e}")
+    except Exception as e:
+        exit_with_code(4, f"Unexpected error loading template: {e}")
+
+
+def get_templates_by_type(asset_type: Optional[str] = None) -> list:
+    """
+    Load all templates from scripts/pipeline/templates/, optionally filtered by type.
+
+    Args:
+        asset_type: Filter to only templates of this type (character, item, ui, etc.)
+
+    Returns:
+        List of template dictionaries with keys: name, type, description, angles, frames
+
+    Template description format:
+    - Character/idle_walk: "Standard 8-direction idle + walk loop" (Angles: 8 • Frames: 1,8 • Layout: angle-rows)
+    - Character/attack: "Directional attack burst" (Angles: 8 • Frames: 6 • Layout: angle-rows)
+    - Item/static: "Single-frame item" (Angles: 1 • Frames: 1 • Layout: row-major)
+    """
+    templates_dir = Path("scripts/pipeline/templates")
+    templates = []
+
+    if not templates_dir.exists():
+        logger.warning(f"Templates directory not found: {templates_dir}")
+        return templates
+
+    for template_file in templates_dir.glob("*.json"):
+        try:
+            with open(template_file, "r") as f:
+                data = json.load(f)
+
+            # Apply type filter if specified
+            if asset_type and data.get("type") != asset_type:
+                continue
+
+            # Build description
+            t_type = data.get("type", "custom")
+            angles = data.get("angles", 1)
+            frames = data.get("frames", [1])
+            frames_str = (
+                ",".join(str(f) for f in frames)
+                if isinstance(frames, list)
+                else str(frames)
+            )
+            total_frames = sum(frames) if isinstance(frames, list) else int(frames)
+
+            description = f"Angles: {angles} • Frames: {frames_str}"
+            if t_type == "character":
+                description = f"8-direction character animation ({description})"
+            elif t_type == "item":
+                description = f"Item asset ({description})"
+            elif t_type == "ui":
+                description = f"UI element ({description})"
+
+            templates.append(
+                {
+                    "name": data.get("name", template_file.stem),
+                    "type": t_type,
+                    "description": description,
+                    "angles": angles,
+                    "frames": frames,
+                    "file": template_file,
+                }
+            )
+
+        except Exception as e:
+            logger.warning(f"Failed to read {template_file}: {e}")
+
+    return templates
+
+
+def run_wizard_mode() -> Optional[TemplateModel]:
+    """
+    Interactive 6-screen wizard flow for guided asset generation.
+
+    Screens:
+    1. Intent selection (new_character, convert_sheet, render_blender, modify_xp)
+    2. Asset type (character, item, ui, custom)
+    3. Template selection (grouped by type) or "Custom" for raw mode
+    4. Input source (file/ai/blender) + path
+    5. Summary + proceed confirmation
+    6. Advanced settings (optional - skip/modify key settings)
+
+    Returns:
+        Template object if template selected and user proceeds, None if cancelled or Custom
+
+    Note: questionary returns None on Ctrl+C, handled gracefully.
+    """
+    print("\n" + "=" * 60)
+    print("Asciicker Asset Generation Wizard")
+    print("=" * 60 + "\n")
+
+    # Screen 1: Intent selection
+    intent = questionary.select(
+        "What do you want to create?",
+        choices=[
+            {"name": "New character asset", "value": "new_character"},
+            {"name": "Convert sprite sheet to XP format", "value": "convert_sheet"},
+            {"name": "Render from Blender scene", "value": "render_blender"},
+            {"name": "Modify existing XP asset", "value": "modify_xp"},
+        ],
+    ).ask()
+
+    if intent is None:
+        print("Wizard cancelled.")
+        return None
+
+    # Screen 2: Asset type selection
+    asset_type = questionary.select(
+        "What type of asset?",
+        choices=[
+            {"name": "Character (animated sprite)", "value": "character"},
+            {"name": "Item (static object)", "value": "item"},
+            {"name": "UI element (interface graphics)", "value": "ui"},
+            {"name": "Custom (raw mode)", "value": "custom"},
+        ],
+    ).ask()
+
+    if asset_type is None:
+        print("Wizard cancelled.")
+        return None
+
+    # If custom, fall through to raw mode
+    if asset_type == "custom":
+        print("Custom mode selected - please provide raw arguments via CLI flags.")
+        return None
+
+    # Screen 3: Template selection (grouped by type)
+    templates = get_templates_by_type(asset_type)
+
+    if not templates:
+        print(f"\nNo templates found for type: {asset_type}")
+        print("You can proceed with custom mode by using raw CLI arguments.")
+        return None
+
+    # Build template choices with descriptions
+    template_choices = []
+    for t in templates:
+        template_choices.append(
+            {
+                "name": f"{t['name']} - {t['description']}",
+                "value": t["file"],
+            }
+        )
+
+    # Add "Custom" fallback option
+    template_choices.append({"name": "Custom (raw mode)", "value": "__custom__"})
+
+    template_path = questionary.select(
+        f"Select a {asset_type} template:",
+        choices=template_choices,
+    ).ask()
+
+    if template_path is None:
+        print("Wizard cancelled.")
+        return None
+
+    # If Custom selected, fall through to raw mode
+    if template_path == "__custom__":
+        print("Custom mode selected - please provide raw arguments via CLI flags.")
+        return None
+
+    # Load selected template
+    try:
+        template = TemplateLoader.from_file(template_path)
+        print(f"\nLoaded template: {template.name}")
+    except (TemplateLoadError, Exception) as e:
+        print(f"Failed to load template: {e}")
+        return None
+
+    # Screen 4: Input source selection
+    source_type = questionary.select(
+        "Source type:",
+        choices=[
+            {"name": "File (PNG sprite sheet)", "value": "file"},
+            {"name": "AI (PNG with magenta transparency)", "value": "ai"},
+            {"name": "Blender (render from scene)", "value": "blender"},
+        ],
+    ).ask()
+
+    if source_type is None:
+        print("Wizard cancelled.")
+        return None
+
+    input_path = None
+    if source_type != "blender":
+        path_hint = "sprites.png" if source_type == "file" else "ai_output.png"
+        input_path = questionary.text(
+            f"Input path ({path_hint}):",
+            default=path_hint if source_type == "file" else "ai_sprites.png",
+        ).ask()
+
+        if input_path is None:
+            print("Wizard cancelled.")
+            return None
+    else:
+        object_name = questionary.text(
+            "Blender object name to render:", default="Cube"
+        ).ask()
+        if object_name is None:
+            print("Wizard cancelled.")
+            return None
+
+        input_path = object_name
+
+    # Screen 5: Summary + proceed confirmation
+    print("\n" + "-" * 60)
+    print("Summary")
+    print("-" * 60)
+    print(f"Template: {template.name}")
+    print(f"Type: {asset_type}")
+    print(f"Source: {source_type}")
+    print(f"Input: {input_path}")
+    if hasattr(template, "angles"):
+        print(f"Angles: {template.angles}")
+    if hasattr(template, "frames"):
+        frames_str = (
+            ",".join(str(f) for f in template.frames)
+            if isinstance(template.frames, list)
+            else str(template.frames)
+        )
+        print(f"Frames: {frames_str}")
+
+    print("-" * 60)
+
+    proceed = questionary.confirm(
+        "Proceed with these settings?",
+        default=True,
+    ).ask()
+
+    if proceed is None:
+        print("Wizard cancelled.")
+        return None
+
+    if not proceed:
+        # Offer advanced settings option
+        edit = questionary.select(
+            "Want to change anything?",
+            choices=[
+                {"name": "Downscale algorithm", "value": "downscale"},
+                {"name": "Output path", "value": "output"},
+                {"name": "Skip changes and cancel", "value": "cancel"},
+            ],
+        ).ask()
+
+        if edit is None or edit == "cancel":
+            print("Wizard cancelled.")
+            return None
+
+        # Screen 6: Advanced settings (skip for now, can be extended)
+        print("\nAdvanced settings...")
+        print("(Press Enter to skip, or modify specific values)")
+        # Advanced settings can be extended here in future iterations
+
+    print("\nWizard complete. Proceeding with template generation...")
+    return template
+
+
+def resolve_field_config(args, template: Optional["TemplateModel"] = None) -> dict:
+    """
+    Resolve field configuration from CLI args, template, and global defaults.
+
+    Field resolution order:
+    - Locked fields (angles, frames, layout, cell_size, frame_size):
+      CLI (if args.force) → template. Error if CLI conflicts without --force.
+    - Tunable fields (downscale, transparency, tolerance, palette):
+      CLI > template > global. Log warning when CLI overrides template.
+    - Metadata fields (name, output_path, tags):
+      CLI > template > global (no warning needed).
+
+    Args:
+        args: Parsed CLI arguments
+        template: Optional Template object
+
+    Returns:
+        Config dict with resolved values
+    """
+    config = {}
+
+    if template:
+        # Locked fields (no override without --force)
+        locked_fields = ["angles", "frames", "layout", "cell_size", "frame_size"]
+        for field in locked_fields:
+            template_val = getattr(template, field, None)
+            cli_val = getattr(args, field, None)
+
+            if cli_val is not None and template_val is not None:
+                if getattr(args, "force", False):
+                    config[field] = cli_val
+                    logger.warning(
+                        f"Overriding template '{template.name}' field: {field} (CLI: {cli_val}, template: {template_val})"
+                    )
+                else:
+                    exit_with_code(
+                        2,
+                        f"Cannot override template '{template.name}' field '{field}' "
+                        f"(use --force to override, or remove this flag)",
+                    )
+            else:
+                config[field] = template_val
+
+        # Tunable fields (CLI takes precedence, log warning on override)
+        tunable_fields = ["downscale", "transparency", "tolerance", "palette"]
+        for field in tunable_fields:
+            cli_val = getattr(args, field, None)
+            template_val = getattr(template, field, None) if template else None
+            global_val = {
+                "downscale": "nearest",  # Default fallback
+                "transparency": False,
+                "tolerance": None,
+                "palette": None,
+            }.get(field)
+
+            if (
+                cli_val is not None
+                and template_val is not None
+                and cli_val != template_val
+            ):
+                logger.warning(
+                    f"CLI --{field}={cli_val} overrides template {field}={template_val}"
+                )
+
+            config[field] = cli_val or template_val or global_val
+
+        # Metadata fields (CLI > template > global, no warning)
+        metadata_fields = ["name", "output_path", "tags"]
+        for field in metadata_fields:
+            cli_val = getattr(args, field, None)
+            template_val = getattr(template, field, None) if template else None
+            config[field] = cli_val or template_val or None
+    else:
+        # No template: use CLI values or defaults
+        config["name"] = getattr(args, "name", None)
+        config["angles"] = getattr(args, "angles", None)
+        config["transparency"] = getattr(args, "transparency", False)
+        config["downscale"] = getattr(args, "downscale", None)
+
+    return config
+
+
+def select_algorithm(
+    source_type: str,
+    cli_algorithm: str | None = None,
+    template_default: str | None = None,
+) -> str:
+    """
+    Select downscaling algorithm based on priority order:
+
+    1. CLI override (--downscale flag) - highest priority
+    2. Template default (processing.downscale field)
+    3. Source-type default (from DEFAULT_BY_SOURCE)
+    4. Fallback to "nearest"
+
+    Args:
+        source_type: Type of source ("ai", "blender", "file")
+        cli_algorithm: Algorithm specified via CLI --downscale flag
+        template_default: Algorithm specified in template's processing.downscale
+
+    Returns:
+        Selected downscaling algorithm name
+    """
+    # Priority 1: CLI override
+    if cli_algorithm:
+        if cli_algorithm == "auto":
+            # Fall through to template or source default
+            pass
+        else:
+            return cli_algorithm
+
+    # Priority 2: Template default
+    if template_default:
+        return template_default
+
+    # Priority 3: Source-type default
+    algorithm = DEFAULT_BY_SOURCE.get(source_type, "nearest")
+
+    # Validate final choice
+    if algorithm not in DOWNSCALE_ALGORITHMS:
+        import warnings
+
+        warnings.warn(f"Invalid algorithm '{algorithm}', falling back to 'nearest'")
+        algorithm = "nearest"
+
+    return algorithm
+
+
+def main():
+    args = parse_args()
+
+    # Handle --list-templates: List all available templates grouped by type
+    if args.list_templates:
+        templates_dir = Path("scripts/pipeline/templates")
+        if not templates_dir.exists():
+            print(f"Templates directory not found: {templates_dir}", file=sys.stderr)
+            sys.exit(2)
+
+        # Group templates by type from JSON files
+        templates_by_type = {}
+        for template_file in templates_dir.glob("*.json"):
+            try:
+                with open(template_file, "r") as f:
+                    data = json.load(f)
+                template_type = data.get("type", "custom")
+                template_name = data.get("name", template_file.stem)
+                if template_type not in templates_by_type:
+                    templates_by_type[template_type] = []
+                templates_by_type[template_type].append(template_name)
+            except Exception as e:
+                logger.warning(f"Failed to read {template_file}: {e}")
+
+        # Print grouped templates
+        for template_type in sorted(templates_by_type.keys()):
+            print(f"\n{template_type.capitalize()}:")
+            for name in sorted(templates_by_type[template_type]):
+                print(f"  - {name}")
+
+        return
+
+    # Handle --describe-template: Show template details
+    if args.describe_template:
+        templates_dir = Path("scripts/pipeline/templates")
+        template_path = templates_dir / f"{args.describe_template}.json"
+
+        if not template_path.exists():
+            exit_with_code(2, f"Template not found: {args.describe_template}")
+
+        try:
+            with open(template_path, "r") as f:
+                data = json.load(f)
+
+            print(f"\nTemplate: {data.get('name', args.describe_template)}")
+            print(f"Type: {data.get('type', 'custom')}")
+            print(f"Description: {data.get('description', 'No description')}")
+            print(f"Angles: {data.get('angles', 'N/A')}")
+            print(f"Frames: {data.get('frames', 'N/A')}")
+            print(f"Layout: {data.get('layout', 'N/A')}")
+
+            if "processing" in data:
+                print("\nProcessing Settings:")
+                for key, val in data["processing"].items():
+                    print(f"  - {key}: {val}")
+
+        except Exception as e:
+            exit_with_code(2, f"Failed to describe template: {e}")
+
+        return
+
+    # Handle --process-rgb-to-cp437 flag (early exit for Phase 2)
+    if args.process_rgb_to_cp437:
+        if not args.input:
+            exit_with_code(1, "--input is required when using --process-rgb-to-cp437")
+
+        processor = ImageProcessor()
+        for grid_x, grid_y, glyph_idx, color_idx in processor.process_image(args.input):
+            print(f"({grid_x},{grid_y}): glyph={glyph_idx}, color={color_idx}")
+        return
+
+    # Validate --downscale argument if provided
+    if args.downscale and args.downscale not in DOWNSCALE_ALGORITHMS:
+        exit_with_code(
+            1,
+            f"Invalid algorithm '{args.downscale}'. "
+            f"Available: {', '.join(DOWNSCALE_ALGORITHMS)}",
+        )
+
+    # Detect CLI mode
+    mode = detect_cli_mode(args)
+
+    if mode is None:
+        exit_with_code(
+            1,
+            "Error: No mode specified. Use --wizard, --template <name>, or provide all core args (--name, --angles, --input)",
+        )
+
+    # Template mode routing
+    if mode == "template":
+        template = load_template_if_needed(mode, args.template)
+        if not template:
+            exit_with_code(2, f"Failed to load template: {args.template}")
+
+        config = resolve_field_config(args, template)
+
+        # Create AssetDef from template + resolved config
+        # Note: downscale is a processing flag (used by pipeline), not stored in AssetDef
+        asset_kwargs = {
+            "name": config.get("name") or template.name or "template_asset",
+            "type": getattr(template, "type", "custom") or "custom",
+            "angles": config.get("angles") or getattr(template, "angles", 1) or 1,
+            "source_type": getattr(template, "source_type", "file") or "file",
+            "transparency": config.get("transparency", False),
+        }
+
+        # Add frames if present in template
+        if hasattr(template, "frames") and template.frames:
+            asset_kwargs["frames"] = template.frames
+
+        asset = AssetDef(**asset_kwargs)
+
+    # Wizard mode: interactive prompts
+    elif mode == "wizard":
+        template = run_wizard_mode()
+
+        if template is None:
+            # User cancelled
+            exit_with_code(
+                0,
+                "Wizard cancelled. Use --wizard to run again, or provide --name, --angles, and --input for raw mode.",
+            )
+
+        # Template selected from wizard - create AssetDef
+        config = resolve_field_config(args, template)
+
+        # Create AssetDef from template + resolved config
+        asset_kwargs = {
+            "name": config.get("name") or template.name or "wizard_asset",
+            "type": getattr(template, "type", "custom") or "custom",
+            "angles": config.get("angles") or getattr(template, "angles", 1) or 1,
+            "source_type": getattr(template, "source_type", "file") or "file",
+            "transparency": config.get("transparency", False),
+        }
+
+        # Add frames if present in template
+        if hasattr(template, "frames") and template.frames:
+            asset_kwargs["frames"] = template.frames
+
+        asset = AssetDef(**asset_kwargs)
+
+    # Raw mode: keep existing AssetDef creation logic
+    elif mode == "raw":
+        # 1. Start with base
+        if args.type == "custom":
+            # clean slate if custom
+            asset = AssetDef(
+                name="custom_asset", type="custom", angles=1, source_type="file"
+            )
+        else:
+            # Load preset
+            preset = get_preset(args.type)
+            if not preset:
+                exit_with_code(1, f"Error: Unknown preset {args.type}")
+            # Create a copy
+            asset = AssetDef(**asdict(preset))
+
+        # 2. Override with CLI args
+        if args.prompt:
+            asset.prompt = args.prompt
+            if not args.name:
+                asset.name = args.prompt.replace(" ", "_").lower()
+
+        if args.name:
+            asset.name = args.name
+
+        if args.angles:
+            asset.angles = args.angles
+
+        if args.source_type:
+            asset.source_type = args.source_type
+
+        if args.input:
+            asset.source_path = args.input
+
+        if args.transparency:
+            asset.transparency = True
+
+        if args.blender_object:
+            asset.blender_object = args.blender_object
+
+    # Skip asset creation if wizard already created it (mode set to None)
+    if mode is None:
+        pass  # Asset already created by wizard
+
+    # Validation: asset must exist at this point
+    if "asset" not in locals():
+        exit_with_code(
+            1,
+            "No asset configuration loaded. Provide --template, --wizard, or core raw arguments.",
+        )
+
+    # Ensure staging directory structure exists
+    from scripts.pipeline.staging import ensure_staging_structure
+
+    ensure_staging_structure()
+
+    # Validation: source_type=blender requires blender_object
+    if getattr(asset, "source_type", "file") == "blender" and not getattr(
+        asset, "blender_object", None
+    ):
+        exit_with_code(
+            1, "--blender-object is required when using --source-type blender"
+        )
+
+    # 3. Validate
+    errors = asset.validate()
+    if errors:
+        print("Validation Errors:", file=sys.stderr)
+        for e in errors:
+            print(f"- {e}", file=sys.stderr)
+        sys.exit(1)
+
+    # 4. Run pipeline (skip if --dry-run)
+    if args.dry_run:
+        print("\nValidation passed (--dry-run active, skipping rendering)")
+        sys.exit(0)
+
+    try:
+        from .pipeline import AssetPipeline
+
+        pipeline = AssetPipeline(asset, args.input)
+        pipeline.run()
+        print("\nPipeline complete!")
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        import traceback
+
+        traceback.print_exc()
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

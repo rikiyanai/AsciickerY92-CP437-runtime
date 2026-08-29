@@ -1,0 +1,112 @@
+/* Sacred (SRCL) Theme — Terminal aesthetic from www-sacred
+   Opt-in via body.theme-sacred class (toggle: ?theme=sacred URL param)
+   Source: https://github.com/internet-development/www-sacred
+   Tags: [FLOW:WEB-UI] */
+
+body.theme-sacred {
+  /* Core backgrounds — pure black base, gray tiers */
+  --bg: #000000;
+  --bg-panel: #161616;
+  --bg-input: #262626;
+  --bg-deep: #000000;
+  --bg-surface: #1a1a1a;
+  --bg-elevated: #393939;
+
+  /* Foreground — high-contrast white on black */
+  --fg: #ffffff;
+  --fg-strong: #ffffff;
+  --fg-muted: #a8a8a8;
+  --fg-dim: #6f6f6f;
+  --fg-on-accent: #ffffff;
+  --fg-on-dark: #000000;
+
+  /* Accent — Sacred daybreak orange */
+  --accent: #EF6300;
+  --accent-dim: #662a00;
+  --accent-secondary: #EF6300;
+
+  /* Status */
+  --success: #24a148;
+  --warning: #ff6c04;
+  --error: #da1e28;
+
+  /* Borders — gray-80 */
+  --border: #393939;
+  --border-subtle: #262626;
+  --border-strong: #525252;
+
+  /* Pipeline stage colors — Sacred palette */
+  --stage-upload: #525252;
+  --stage-extract: #EF6300;
+  --stage-generate: #ff6c04;
+  --stage-slice: #24a148;
+  --stage-process: #0f62fe;
+  --stage-assemble: #a8a8a8;
+
+  /* Score badges */
+  --score-high: #24a148;
+  --score-mid: #ff6c04;
+  --score-low: #da1e28;
+
+  /* Tool-specific — keep functional, shift to Sacred hues */
+  --tool-bbox: #2ee71d;
+  --tool-bbox-manual: #0f62fe;
+  --tool-swap: #ff6c04;
+  --tool-playing: #42be65;
+
+  /* Log panel */
+  --log-warn: #ff6c04;
+  --log-err: #da1e28;
+
+  /* Shape + typography — terminal: no rounding, monospace everything */
+  --radius: 0px;
+  --font-mono: "GeistMono-Regular", Consolas, monaco, monospace;
+  --font-body: "GeistMono-Regular", Consolas, monaco, monospace;
+  --line-height: 1.25;
+}
+
+/* Sacred button overrides — uppercase monospace, inset border */
+body.theme-sacred .btn {
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+body.theme-sacred .btn-primary {
+  border-style: inset;
+}
+
+body.theme-sacred .btn-secondary {
+  border: 1px inset var(--border);
+}
+
+/* Sacred upload zone — orange accent instead of red */
+body.theme-sacred .upload-zone.drag-over {
+  border-color: var(--accent);
+  background: rgba(239, 99, 0, 0.08);
+}
+
+/* Sacred validation blocks — use theme status colors */
+body.theme-sacred .validation-block.valid {
+  background: rgba(36, 161, 72, 0.1);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+body.theme-sacred .validation-block.invalid {
+  background: rgba(218, 30, 40, 0.1);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+body.theme-sacred .error-block {
+  background: rgba(218, 30, 40, 0.1);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+/* Sacred layout drag states */
+body.theme-sacred .layout-item.layout-drop-target {
+  border-color: var(--success);
+  background: rgba(36, 161, 72, 0.08);
+}

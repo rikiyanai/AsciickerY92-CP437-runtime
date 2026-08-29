@@ -6,8 +6,8 @@ official Unicode block across all 17 planes (~347 named blocks, ~148.8k assigned
 codepoints). Each glyph is rendered from the repo's bundled ``unifont-17.0.04.otf``
 into a 16x16 ink grid (the same ``cell_px`` the material shape catalog uses) and
 scored with the exact same morphology functions the real catalog baker uses
-(:mod:`generate_glyph_shape_catalog`). Nothing here touches Godot or asciiid --
-it is a pure exploration spike for picking distinctive terrain/material glyphs.
+(:mod:`generate_glyph_shape_catalog`). This tool is a pure exploration spike
+for picking distinctive terrain/material glyphs.
 
 Coverage reality: morphology only exists for glyphs the font can actually draw.
 ``unifont-17.0.04.otf`` renders ~58,910 codepoints (essentially the whole BMP
@@ -58,6 +58,8 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 FONT_PATH = REPO_ROOT / "assets" / "fonts" / "unifont-17.0.04.otf"
+# Optional GNU Unifont upper-plane file; if present it widens SMP coverage.
+UPPER_FONT_PATH = REPO_ROOT / "assets" / "fonts" / "unifont_upper-17.0.04.otf"
 CELL_PX = 16  # matches material.*.shape_catalog.json cell_px so metrics are comparable
 INK_THRESHOLD = 96
 # Sorting/filtering a block needs every member scored. CJK Unified is ~20k glyphs;
@@ -70,7 +72,6 @@ from generate_glyph_shape_catalog import (  # noqa: E402
     repertoire_for_scalar,
     shape6_metrics,
 )
-from fl4482_font_chain import FONT_DIR, discover_font_chain  # noqa: E402
 
 try:
     from PIL import Image, ImageDraw, ImageFont  # noqa: E402
@@ -130,6 +131,28 @@ class GlyphEntry:
     blank: bool
     metrics: dict = field(default_factory=dict)
     shape6: dict = field(default_factory=dict)
+
+
+FONT_DIR = REPO_ROOT / "assets" / "fonts"
+
+
+def discover_font_chain() -> list[Path]:
+    """Ordered list of font files to resolve glyphs against.
+
+    Priority: base unifont first (so the whole BMP keeps its consistent 16x16
+    pixel look), then any specialized fonts dropped in (Noto historic scripts,
+    BabelStone Han for CJK extensions, ...), with unifont_upper LAST as the
+    catch-all SMP fallback. A codepoint renders through the first font in the
+    chain whose cmap contains it.
+    """
+    if not FONT_DIR.exists():
+        return [FONT_PATH] if FONT_PATH.exists() else []
+    fonts = sorted(p for p in FONT_DIR.iterdir()
+                   if p.suffix.lower() in (".otf", ".ttf", ".ttc"))
+    base = [p for p in fonts if p.name == FONT_PATH.name]
+    upper = [p for p in fonts if "unifont_upper" in p.name]
+    middle = [p for p in fonts if p not in base and p not in upper]
+    return base + middle + upper
 
 
 class GlyphScorer:

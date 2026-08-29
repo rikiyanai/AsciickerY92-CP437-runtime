@@ -32,5 +32,6 @@
 /.agent/
 /.agents/
 /.claude/
+/.conductor/
 /.planning/
 /.worktrees/

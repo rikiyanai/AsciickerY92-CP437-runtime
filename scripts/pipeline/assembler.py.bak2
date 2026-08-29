@@ -1,0 +1,119 @@
+from typing import List, Tuple, Dict, Any
+import logging
+
+import sys
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from xp_core import XPFile, XPLayer
+
+logger = logging.getLogger(__name__)
+
+
+class XPAssembler:
+    def assemble(
+        self,
+        frames: List[List[Tuple[int, Tuple[int, int, int], Tuple[int, int, int]]]],
+        metadata: Dict[str, Any],
+        filename: str,
+    ) -> None:
+        """
+        Assemble processed glyph data into a .xp file.
+
+        Args:
+            frames: List of frame grids, where each frame is List[List[Tuple[glyph, fg_rgb, bg_rgb]]]
+            metadata: Dict with 'angles' (int) and 'anims' (List[int] for frame counts)
+            filename: Output .xp file path
+
+        Raises:
+            ValueError: If validation fails
+        """
+        # Validate metadata
+        angles = metadata.get("angles", 1)
+        anims = metadata.get("anims", [1])
+        total_frames_expected = sum(anims)
+
+        if angles > 35:
+            raise ValueError(f"Angles {angles} exceeds maximum 35 (encoding limit)")
+        if any(a > 35 for a in anims):
+            raise ValueError(
+                f"Animation counts {anims} exceed maximum 35 (encoding limit)"
+            )
+        if len(frames) != total_frames_expected:
+            raise ValueError(
+                f"Frame count mismatch: Expected {total_frames_expected} frames, got {len(frames)}"
+            )
+
+        logger.info(
+            f"Assembling {len(frames)} frames with angles={angles}, anims={anims}"
+        )
+
+        xp_file = XPFile()
+        xp_file.version = -1
+
+        # Determine layer dimensions
+        if not frames:
+            raise ValueError("No frames provided")
+
+        first_frame = frames[0]
+        if not first_frame:
+            raise ValueError("Empty frame provided")
+
+        width = len(first_frame[0])  # Width of each frame (grid width, e.g., 12px)
+        # Layer height: header row + one row per frame
+        total_height = 1 + len(frames)
+        total_width = width
+
+        logger.info(
+            f"Layer dimensions: {total_width}x{total_height} (header + {len(frames)} frames)"
+        )
+
+        # Create layer data: header row + rows for each frame
+        layer_data = [
+            [(32, (0, 0, 0), (0, 0, 0)) for _ in range(total_width)]
+            for _ in range(total_height)
+        ]
+
+        # Write metadata in first row: angles, then anim counts
+        angles_glyph = self._encode_digit(angles)
+        layer_data[0][0] = (angles_glyph, (0, 0, 0), (0, 0, 0))
+
+        for i, count in enumerate(anims):
+            if i + 1 < total_width:
+                frame_glyph = self._encode_digit(count)
+                layer_data[0][i + 1] = (frame_glyph, (0, 0, 0), (0, 0, 0))
+
+        # Write frame data: each frame on its own row below header
+        for frame_idx, frame in enumerate(frames):
+            row_idx = 1 + frame_idx
+            if row_idx >= total_height:
+                logger.warning(f"Skipping frame {frame_idx} beyond layer height")
+                continue
+
+            for y, row in enumerate(frame):
+                for x, cell in enumerate(row):
+                    if x < total_width and y < len(frame) and row_idx < total_height:
+                        layer_data[row_idx][x] = cell
+
+        layer = XPLayer(total_width, total_height, layer_data)
+        xp_file.layers.append(layer)
+        xp_file.save(filename)
+
+        logger.info(f"✓ Saved XP file: {filename}")
+
+    def _encode_digit(self, value: int) -> int:
+        """
+        Convert integer 0-35 to glyph codepoint.
+
+        0-9: '0'-'9' (48-57)
+        10-35: 'A'-'Z' (65-90)
+        """
+        if not isinstance(value, int):
+            raise ValueError(f"Value must be integer, got {type(value)}")
+
+        if 0 <= value <= 9:
+            return ord(str(value))
+        elif 10 <= value <= 35:
+            return ord("A") + value - 10
+        else:
+            raise ValueError(f"Value {value} out of range (0-35)")

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "name": "item_sword",
+  "type": "item",
+  "angles": 1,
+  "frames": [1],
+  "layout": {
+    "rows": "angles",
+    "cols": "sum(frames)"
+  },
+  "debug": {
+    "label_format": "A{angle}-F{frame}",
+    "label_sheet": "debug/sword_labels.png"
+  }
+}
