@@ -1,0 +1,33 @@
+{
+  "schema": "asciicker.mesh_conversion_provenance/v1",
+  "source": {
+    "path": "assets/meshes/source/toy_rocket.glb",
+    "sha256": "6990ca861b55d4afd5073aa1cc09b018eb6617324a618c52215ca40ded271263",
+    "origin_repository": "/Users/r/Downloads/asciicker-Y9-2",
+    "origin_path": "godot_project/assets/props/models/toy_rocket.glb",
+    "origin_commit": "40eab52f0ccc005b0e75798b481838686de243c4"
+  },
+  "conversion": {
+    "front_end": "scripts/glb_to_akm.py",
+    "front_end_sha256": "3b35c459ee1abe46bc5c19f64901559e78328c81d6c9c2110ef5aea1e7c79ec1",
+    "akm_writer": "scripts/picocad_to_akm.py",
+    "akm_writer_sha256": "df58da7f46bd1ed7f51a484d18d5b3f2225ccbc124c6ec808f80dcc78a2e813f",
+    "command": "python3 scripts/glb_to_akm.py assets/meshes/source/toy_rocket.glb --output assets/meshes/toy_rocket_ship.akm"
+  },
+  "output": {
+    "path": "assets/meshes/toy_rocket_ship.akm",
+    "sha256": "ceb99d7aa06a00a9555f7bef8f6158e1c8857059215571a270ea376e2d714d7f",
+    "vertices": 1128,
+    "faces": 1012,
+    "vertex_colors": [
+      [255, 102, 0, 0],
+      [204, 204, 204, 0]
+    ]
+  },
+  "reproduction": {
+    "byte_identical_output_observed": true,
+    "observed_before_runtime_attempt_hold": false,
+    "closure_grade_command_receipt": true,
+    "correction": "primitive material indices now select their own textures; body and glass no longer collapse to material 0"
+  }
+}

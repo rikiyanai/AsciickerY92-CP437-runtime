@@ -1,0 +1,44 @@
+{
+  "mode": "walk",
+  "gif": "docs/recordings/gameplay/witch-walk.gif",
+  "commit": "cab03daa7fad1acb553da07aa43e0560f724ef0e",
+  "worktree_dirty": false,
+  "binaries": {
+    ".run/server": "88481733ba17e49eaa69355fdb708d31245ca1398854449ea9fa5bf6b515489a",
+    ".run/game_term": "35df1cacaa98c964b912737f949ebaff08fab4eefc11bf8631794e122f5bbd7c"
+  },
+  "server_cmd": "stdbuf -oL /home/user/int-wt/.run/server --port 47027",
+  "clients": {
+    "victim": "/home/user/int-wt/.run/game_term --skin witch -url player@127.0.0.1:47027/ws/y8/"
+  },
+  "server_log": {
+    "join": [
+      "[skin-select] join name=player outcome=matched profile_id=205 skin=106 slug=witch_player tick=8",
+      "[SPAWN-DECISION] ci=0 tick=8 spawn_pos=(-4.000,-74.000,242.000) phys_pos=(-4.000,-74.000,242.000) phys_vel=(0.000,0.000,0.000) terrain_z=242.000 spawn_terrain_z=242.000 spawn_fallback_z=0.000 in_water=0.000 has_physics=1",
+      "[tick] Player 'player' joined as ID 0 tick=8 stamp_us=11436044469"
+    ],
+    "death": [],
+    "respawn": [],
+    "rapture": []
+  },
+  "client_log": {
+    "victim": [
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] All 9207 patches done, progress -> 3",
+      "[LOAD] progress=3: InitGame...",
+      "[LOAD] progress -> 0 (done)"
+    ]
+  },
+  "skin": "witch",
+  "frames": 121,
+  "seconds": 7.99,
+  "script": "idle 1.5 s, then w/d/s/a held 1.6 s each in turn while e is tapped every 0.60 s"
+}

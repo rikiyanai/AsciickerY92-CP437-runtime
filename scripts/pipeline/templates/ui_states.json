@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "name": "ui_button",
+  "type": "ui",
+  "angles": 1,
+  "frames": [1, 1, 1, 1],
+  "layout": {
+    "rows": "angles",
+    "cols": "sum(frames)"
+  },
+  "animations": [
+    {"name": "normal", "length": 1},
+    {"name": "hover", "length": 1},
+    {"name": "pressed", "length": 1},
+    {"name": "disabled", "length": 1}
+  ],
+  "debug": {
+    "labels": true,
+    "label_format": "A{angle}-{anim}:{frame}",
+    "label_sheet": "debug/button_labels.png"
+  }
+}

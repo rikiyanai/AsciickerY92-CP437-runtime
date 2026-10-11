@@ -1,0 +1,21 @@
+ply
+format ascii 1.0
+comment Created by Blender 4.5.0 - Asciicker AKM Export
+element vertex 5
+property float x
+property float y
+property float z
+property float nx
+property float ny
+property float nz
+element face 3
+property list uchar uint vertex_indices
+end_header
+-349.902 -270.966 0.000 0.00 -0.00 1.00
+-355.581 -279.236 0.000 0.00 -0.00 1.00
+-336.156 -267.682 0.000 0.00 -0.00 1.00
+-335.945 -265.367 0.000 -0.00 0.00 1.00
+-358.466 -270.052 0.000 -0.00 -0.00 1.00
+3 0 1 2 
+3 2 3 0 
+3 0 4 1 

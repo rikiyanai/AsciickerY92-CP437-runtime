@@ -1,0 +1,66 @@
+{
+  "schema": "fl4162.upstream_xp_semantic_honesty_audit.v1",
+  "authority": false,
+  "is_proposal": true,
+  "rq": "RQ-200",
+  "reviewed_at": "2026-07-16",
+  "reviewer": "codex_manual_source_review",
+  "scope": {
+    "raw_layers": 573,
+    "unique_fingerprint_units": 203,
+    "equipment_only_units_reviewed": 57,
+    "equipment_only_units_by_family": {
+      "attack": 7,
+      "bigbee": 10,
+      "player": 7,
+      "plydie": 18,
+      "wolack": 8,
+      "wolfie": 7
+    },
+    "equipment_role_incidence": {
+      "armor": 28,
+      "helmet": 17,
+      "shield": 17,
+      "crossbow": 2,
+      "sword": 0
+    }
+  },
+  "review_result": {
+    "known_false_clean_units_remaining": 0,
+    "recorded_false_clean_retractions": 20,
+    "distinct_expanded_replacements": 20,
+    "equipment_only_units_missing_evidence": 0,
+    "crossbow_without_body_rider_mount_semantics": [
+      {
+        "review_unit_id": "xp-cell-unit:0ba421d6584bfe57bcbf:841889a515c7",
+        "source_keys": [
+          "bigbee-1012-L6",
+          "bigbee-1112-L7"
+        ],
+        "verdict": "honest crossbow-string plus shield replacement fragment; exact reviewed shield cells remain shield and changed cells contribute crossbow"
+      },
+      {
+        "review_unit_id": "xp-cell-unit:21f08835c7cdfec01b4d:50df2d51bd84",
+        "source_keys": [
+          "plydie-1102-L3"
+        ],
+        "verdict": "honest helmet plus crossbow-reflection fragment; exact reviewed helmet cells remain helmet and changed cells contribute the reflection fragment"
+      }
+    ],
+    "sword_without_body_rider_mount_semantics": []
+  },
+  "review_method": [
+    "preserve immutable hand status, corrected label, note, and rejected guess provenance",
+    "inspect active per-coordinate semantic sets rather than normalized role names",
+    "require raw-render, full-atlas, exact-subset, zero-delta, translated-reference, or separate-layer evidence for every equipment-only unit",
+    "retract false-clean owners before recording replacement decisions",
+    "require every replacement to be fingerprint-bound, full-coordinate, and semantically expanded"
+  ],
+  "source_hashes": {
+    "cell_role_decisions_sha256": "8bb4417991204c47890488ddb6e73d350772023e901ae4842331070468cd9462",
+    "cell_review_state_decisions_sha256": "3ebde2336d6019ff6c4c54fe91d85bbf35100b74fb8651cd972a56fc7e3cea09",
+    "review_queue_sha256": "3585a2c7f6a01cd6707495213345547264543cbd00e161426db38decb7f473a3",
+    "state_final_sha256": "ecc9a16112ce48beaeb0e24beba2ccc7399c4efc50d32505f3fd54f8e8d76020"
+  },
+  "boundary": "This receipt records the manual semantic-honesty audit. It does not become runtime authority and does not permit profile promotion without the separately hash-bound family-contract freeze."
+}

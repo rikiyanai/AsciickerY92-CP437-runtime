@@ -1,0 +1,1 @@
+{"schema_version": 1, "phase": "launch", "phases_completed": ["resolve_source", "health_checks", "pre_action_manifest", "deploy_lock", "deploy_candidate", "preflight", "controller_setup"]}

@@ -1,0 +1,12 @@
+# Optional heavy dependencies — only needed for specific pipelines.
+# Install: pip install -r requirements-optional.txt
+# (inherits all runtime deps)
+
+-r requirements.txt
+
+# Image analysis pipeline (scikit-image depends on scipy)
+scikit-image>=0.19.0
+scipy>=1.8.0
+
+# Blender MCP integration
+blender-mcp>=1.4.0

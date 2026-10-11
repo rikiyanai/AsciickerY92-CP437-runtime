@@ -1,0 +1,177 @@
+[
+  {
+    "phase": "startup",
+    "ts": "2026-10-10T19:49:45.293Z",
+    "epoch_ms": 1791661785293,
+    "rel_s": 0,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "base_url": "http://192.168.1.157:8765",
+    "ws_server": "192.168.1.157:8080",
+    "headed": true,
+    "watchdog_join_names_raw": [
+      "watchdog_tab1",
+      "watchdog_tab2"
+    ],
+    "watchdog_join_names_expected": [
+      "watchdog_tab1",
+      "watchdog_tab2"
+    ]
+  },
+  {
+    "phase": "http_ready",
+    "ts": "2026-10-10T19:49:45.308Z",
+    "epoch_ms": 1791661785308,
+    "rel_s": 0.015,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "ok": true
+  },
+  {
+    "phase": "infra_rtt_measured",
+    "ts": "2026-10-10T19:49:45.520Z",
+    "epoch_ms": 1791661785520,
+    "rel_s": 0.227,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "infra_rtt_ms": 1
+  },
+  {
+    "phase": "manifest_verified",
+    "ts": "2026-10-10T19:49:45.524Z",
+    "epoch_ms": 1791661785524,
+    "rel_s": 0.231,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "ok": true,
+    "url": "http://192.168.1.157:8765/slot_manifest.json",
+    "mismatches": 0,
+    "error": null
+  },
+  {
+    "phase": "ws_tcp_ready",
+    "ts": "2026-10-10T19:49:45.525Z",
+    "epoch_ms": 1791661785525,
+    "rel_s": 0.232,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "ok": true,
+    "host": "192.168.1.157",
+    "port": 8080
+  },
+  {
+    "phase": "overlay_started",
+    "ts": "2026-10-10T19:49:48.875Z",
+    "epoch_ms": 1791661788875,
+    "rel_s": 3.582,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "tab": "tab1"
+  },
+  {
+    "phase": "overlay_started",
+    "ts": "2026-10-10T19:49:48.877Z",
+    "epoch_ms": 1791661788877,
+    "rel_s": 3.584,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "tab": "tab2"
+  },
+  {
+    "phase": "world_ready",
+    "ts": "2026-10-10T19:49:48.892Z",
+    "epoch_ms": 1791661788892,
+    "rel_s": 3.599,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "tab1": true,
+    "tab2": true
+  },
+  {
+    "phase": "post_world_ready_ws_probe_start",
+    "ts": "2026-10-10T19:49:48.982Z",
+    "epoch_ms": 1791661788982,
+    "rel_s": 3.689,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null
+  },
+  {
+    "phase": "post_world_ready_snapshot_probe_start",
+    "ts": "2026-10-10T19:49:49.012Z",
+    "epoch_ms": 1791661789012,
+    "rel_s": 3.719,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null
+  },
+  {
+    "phase": "tick_cadence_measured",
+    "ts": "2026-10-10T19:49:52.049Z",
+    "epoch_ms": 1791661792049,
+    "rel_s": 6.756,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "ok": true,
+    "packet_rate_hz": 28.5,
+    "tick_rate_hz": 30.15
+  },
+  {
+    "phase": "pre_run_readiness_gate_start",
+    "ts": "2026-10-10T19:49:52.050Z",
+    "epoch_ms": 1791661792050,
+    "rel_s": 6.757,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "timeout_ms": 4000,
+    "poll_ms": 1000
+  },
+  {
+    "phase": "pre_run_readiness_gate_PASSED",
+    "ts": "2026-10-10T19:49:52.050Z",
+    "epoch_ms": 1791661792050,
+    "rel_s": 6.757,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "tab1_samples": 4,
+    "tab1_bootstrap_ready_samples": 4,
+    "tab2_samples": 4,
+    "tab2_bootstrap_ready_samples": 4
+  },
+  {
+    "phase": "human_input_ready",
+    "ts": "2026-10-10T19:49:52.054Z",
+    "epoch_ms": 1791661792054,
+    "rel_s": 6.761,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "hold_open_ms": 120000
+  },
+  {
+    "phase": "artifacts_ready",
+    "ts": "2026-10-10T19:51:52.118Z",
+    "epoch_ms": 1791661912118,
+    "rel_s": 126.825,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "operator_media_requested": false,
+    "stitched": false
+  },
+  {
+    "phase": "cleanup_done",
+    "ts": "2026-10-10T19:51:52.309Z",
+    "epoch_ms": 1791661912309,
+    "rel_s": 127.016,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null
+  },
+  {
+    "phase": "report_written",
+    "ts": "2026-10-10T19:51:52.345Z",
+    "epoch_ms": 1791661912345,
+    "rel_s": 127.052,
+    "operator_media_ts": null,
+    "operator_media_ts_fmt": null,
+    "result_path": "/tmp/watchdog-vps-manual-20261010-194939/metrics.json",
+    "report_path": "/tmp/watchdog-vps-manual-20261010-194939/iteration_report.md",
+    "verdict": "FAIL"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "artifacts": {
+    "actor_visual_profile_requirements.json": "4f962237961bdea1a8ea229fbabb73419a22301225a0696f2ddb7f405ad605bd",
+    "layer_evidence_cards.jsonl": "c39875a33f3f0100be7a53ba1a050ce4b48f57cb585de25e9fd4bcafe9fd00d3",
+    "manual_candidate_review.json": "a108518f759c8bd7f19b23c87d2b3d7ca727111d85b15b95f35ae64cc97a089c",
+    "source_layer_review_decisions.jsonl": "a63aa36ca89ff6a65fbe8b6c2fbd41243714b3690d1e5c1a90f9beb83419353a"
+  },
+  "authority": false,
+  "fail_closed": {
+    "final_file_sha_mismatch": false,
+    "split_corpus": false
+  },
+  "generator_commit": {
+    "generator": "pipeline-v3/scripts/build_review_provenance_manifest.py",
+    "parent_repo": "ec94284951392f94d2ae4cca7f8f94453bd1d5b6",
+    "pipeline_v3_submodule": "ff513aee924bab5662442fef91a4518638aa90d0"
+  },
+  "is_proposal": false,
+  "non_authority_boundary": [
+    "This manifest is provenance only.",
+    "A recorded SHA is not closure (Canon Law 16).",
+    "It does not author ActorVisualProfile rows or feed a compiler."
+  ],
+  "recorded_at": "2026-06-18",
+  "schema": "review_provenance_manifest/v1",
+  "state_FINAL": {
+    "bound_by": "every evidence card's source_final_sha256",
+    "expected_sha256": "ecc9a16112ce48beaeb0e24beba2ccc7399c4efc50d32505f3fd54f8e8d76020",
+    "file_matches_card_binding": true,
+    "file_present_on_this_machine": true,
+    "file_sha256": "ecc9a16112ce48beaeb0e24beba2ccc7399c4efc50d32505f3fd54f8e8d76020",
+    "operator_local_path": "historical-source:/bundle_layer_audit_20260520/verifier_state_backups/state_FINAL_20260521-163326.json",
+    "role": "immutable human hand corpus (operator-local)"
+  },
+  "surface_kind": "review_provenance_manifest"
+}

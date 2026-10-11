@@ -1,0 +1,23 @@
+{
+  "schema_id": "asciicker.watchdog.slot_manifest.v1",
+  "slot_name": "candidate",
+  "machine_role": "candidate",
+  "source_ref": "ac7aaabb594d7972b4d1cfa77acc6f41b93580e1",
+  "git_head": "ac7aaabb594d7972b4d1cfa77acc6f41b93580e1",
+  "git_dirty": true,
+  "runtime_root": ".",
+  "config_file": "web/asciicker.json",
+  "generated_at_unix_ms": 1791654725801,
+  "web": {
+    "index_html_sha256": "de650496925a37db8cba2c2bcdd02886fc8b409a1d8e70b67f815df635e63113",
+    "index_js_sha256": "bce5a04fe40e211268545a8abad114112b433f78326eb9f52e6ff4e7f9f3f95c",
+    "index_wasm_sha256": "5f7a3412b99a1f2b89daa7f79060f74086de90fdd2d10a617e33b074facb308e",
+    "index_data_sha256": "c7883971ca20d210af5856b425e3621fc69df736ae668a499c53e82fe2a27cc3",
+    "generated_table_sha256": "9ee8561a0aec0f5145b062d645486f02167ef9f7eb0debb42085f4cf9608b95d",
+    "server_reachability_identity_sha256": "d4185aeb99ae5c8037605e351e4c49b49e0baa7d5f9ec84c2497fd1fb03608fc"
+  },
+  "server": {
+    "path": ".run/server",
+    "sha256": "c38bf901921117f33946b6b96ee74b4c568ff54ef80d61654ed4cdee6a75c3ee"
+  }
+}

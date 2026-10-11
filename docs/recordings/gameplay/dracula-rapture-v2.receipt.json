@@ -1,0 +1,368 @@
+{
+  "mode": "rapture",
+  "gif": "docs/recordings/gameplay/dracula-rapture-v2.gif",
+  "commit": "1a20496e0b44d54deb3580c52fc20b1c1d42546e",
+  "worktree_dirty": false,
+  "binaries": {
+    ".run/server": "3b170603fdedca3c067b24a30772db39e815a7b41e88d77eda614f9ecc32bad6",
+    ".run/game_term": "410d9d3a7444161c9ff8f95a882451f13ea81cfc20db873c2121b43dec9d8ba6"
+  },
+  "server_cmd": "stdbuf -oL /home/user/int-wt/.run/server --port 36173 --map assets/a3d/game_map_y8.a3d.pre-npc-add",
+  "clients": {
+    "victim": "/home/user/int-wt/.run/game_term --skin dracula --map assets/a3d/game_map_y8.a3d.pre-npc-add -url player@127.0.0.1:36173/ws/y8/"
+  },
+  "server_log": {
+    "join": [
+      "[skin-select] join name=player outcome=matched profile_id=204 skin=105 slug=dracula_player tick=9",
+      "[SPAWN-DECISION] ci=0 tick=9 spawn_pos=(-2.800,-73.600,57.000) phys_pos=(-2.800,-73.600,57.000) phys_vel=(0.000,0.000,0.000) terrain_z=57.000 spawn_terrain_z=57.000 spawn_fallback_z=0.000 in_water=0.000 has_physics=1",
+      "[tick] Player 'player' joined as ID 0 tick=9 stamp_us=2247572205"
+    ],
+    "death": [
+      "[death] tick=2656 target_id=0 target_kind=player target_index=0 attacker_id=50 hp_before=11 damage=18 pos=(43.353,-9.360,57.250)"
+    ],
+    "respawn": [
+      "[respawn] tick=2836 player_id=0 death_tick=2656 respawn_tick=2746 pos=(-2.800,-73.600,57.000)"
+    ],
+    "rapture": [
+      "[rapture-standoff] tick=2657 eid=55 owner=0 mode=step_back dist_body=35.45 radius=13.67 dist_goal=21.78 npc=(8.81,-17.32,57.25) goal=(30.04,-12.43)",
+      "[rapture-retreat] tick=2661 eid=50 from_player=0 mode=back_off dist_body=4.77 radius=16.67 npc=(43.42,-4.59,57.25) world_dir=(0.01,0.50)",
+      "[rapture-retreat] tick=2666 eid=50 from_player=0 mode=back_off dist_body=8.77 radius=16.67 npc=(43.47,-0.59,57.25) world_dir=(0.01,0.50)",
+      "[rapture-retreat] tick=2671 eid=50 from_player=0 mode=back_off dist_body=12.76 radius=16.67 npc=(43.53,3.40,57.25) world_dir=(0.01,0.50)",
+      "[rapture-standoff] tick=2672 eid=55 owner=0 mode=step_back dist_body=24.90 radius=13.67 dist_goal=11.23 npc=(19.59,-16.81,57.25) goal=(30.31,-13.45)",
+      "[rapture-retreat] tick=2676 eid=50 mode=clear npc=(43.58,7.40,57.25)",
+      "[rapture-standoff] tick=2686 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2701 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2716 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2731 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2746 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2761 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2776 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2791 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2806 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2821 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)"
+    ],
+    "companion": [
+      "[companion] spawned owner=0 npc_id=55 pos=(-6.80,-76.60,57.00) profile=202 mount=0",
+      "[rapture-standoff] tick=2657 eid=55 owner=0 mode=step_back dist_body=35.45 radius=13.67 dist_goal=21.78 npc=(8.81,-17.32,57.25) goal=(30.04,-12.43)",
+      "[rapture-standoff] tick=2672 eid=55 owner=0 mode=step_back dist_body=24.90 radius=13.67 dist_goal=11.23 npc=(19.59,-16.81,57.25) goal=(30.31,-13.45)",
+      "[rapture-standoff] tick=2686 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2701 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2716 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2731 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2746 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2761 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2776 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2791 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2806 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)",
+      "[rapture-standoff] tick=2821 eid=55 owner=0 mode=hold dist_body=13.71 radius=13.67 dist_goal=0.04 npc=(30.28,-13.50,57.25) goal=(30.33,-13.49)"
+    ],
+    "npc_retreat": [
+      "[rapture-retreat] tick=2661 eid=50 from_player=0 mode=back_off dist_body=4.77 radius=16.67 npc=(43.42,-4.59,57.25) world_dir=(0.01,0.50)",
+      "[rapture-retreat] tick=2666 eid=50 from_player=0 mode=back_off dist_body=8.77 radius=16.67 npc=(43.47,-0.59,57.25) world_dir=(0.01,0.50)",
+      "[rapture-retreat] tick=2671 eid=50 from_player=0 mode=back_off dist_body=12.76 radius=16.67 npc=(43.53,3.40,57.25) world_dir=(0.01,0.50)",
+      "[rapture-retreat] tick=2676 eid=50 mode=clear npc=(43.58,7.40,57.25)"
+    ]
+  },
+  "client_log": {
+    "victim": [
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] All 9207 patches done, progress -> 3",
+      "[LOAD] progress=3: InitGame...",
+      "[LOAD] progress -> 0 (done)",
+      "[DEATH-DIAG] tick=2608 life=1->1 kind=600->600 hp=100->76 mount=0 pos=(40.4,-3.2,57.2) accepted=1 stale=0",
+      "[DEATH-DIAG] tick=2620 life=1->1 kind=600->600 hp=76->55 mount=0 pos=(40.9,-4.5,57.2) accepted=1 stale=0",
+      "[DEATH-DIAG] tick=2632 life=1->1 kind=600->600 hp=55->27 mount=0 pos=(41.4,-4.7,57.2) accepted=1 stale=0",
+      "[DEATH-DIAG] tick=2644 life=1->1 kind=600->600 hp=27->11 mount=0 pos=(42.6,-5.5,57.3) accepted=1 stale=0",
+      "[DEATH-DIAG] tick=2656 life=2->2 kind=602->602 hp=11->0 mount=0 pos=(43.4,-9.4,57.2) accepted=1 stale=0",
+      "[DEATH-DIAG] tick=2836 life=2->1 kind=602->600 hp=0->100 mount=0 pos=(-2.8,-73.6,57.0) accepted=1 stale=0"
+    ]
+  },
+  "skin": "dracula",
+  "map": "assets/a3d/game_map_y8.a3d.pre-npc-add",
+  "killer_npc_eid": 50,
+  "death_seen_wall": 1791473006.5901308,
+  "window": "[death] -3.0 s .. +7.6 s (wall clock when the server log line appeared)",
+  "other_player_deaths": [],
+  "status_end": {
+    "victim": {
+      "x": -2.8,
+      "y": -73.6,
+      "z": 57.25,
+      "yaw": -102.0,
+      "dir": 15.9
+    }
+  },
+  "frames": 159,
+  "seconds": 10.53,
+  "camera_tap_s": 1.0,
+  "status_track": [
+    [
+      0.0,
+      -17.7,
+      57.25
+    ],
+    [
+      0.2,
+      -9.1,
+      57.25
+    ],
+    [
+      0.4,
+      -9.1,
+      57.25
+    ],
+    [
+      0.6,
+      -9.1,
+      57.25
+    ],
+    [
+      0.8,
+      -9.1,
+      57.25
+    ],
+    [
+      1.0,
+      7.2,
+      57.25
+    ],
+    [
+      1.2,
+      15.9,
+      57.25
+    ],
+    [
+      1.4,
+      15.9,
+      57.25
+    ],
+    [
+      1.6,
+      15.9,
+      57.25
+    ],
+    [
+      1.8,
+      40.3,
+      57.25
+    ],
+    [
+      2.0,
+      40.3,
+      57.25
+    ],
+    [
+      2.2,
+      40.3,
+      57.25
+    ],
+    [
+      2.4,
+      40.3,
+      57.25
+    ],
+    [
+      2.6,
+      40.3,
+      57.25
+    ],
+    [
+      2.8,
+      65.3,
+      57.25
+    ],
+    [
+      3.0,
+      65.3,
+      57.25
+    ],
+    [
+      3.2,
+      65.3,
+      57.25
+    ],
+    [
+      3.4,
+      65.3,
+      57.25
+    ],
+    [
+      3.6,
+      65.3,
+      57.25
+    ],
+    [
+      3.8,
+      89.7,
+      57.25
+    ],
+    [
+      4.0,
+      89.7,
+      57.25
+    ],
+    [
+      4.2,
+      89.7,
+      57.25
+    ],
+    [
+      4.4,
+      89.7,
+      57.25
+    ],
+    [
+      4.6,
+      89.7,
+      57.25
+    ],
+    [
+      4.8,
+      113.9,
+      57.25
+    ],
+    [
+      5.0,
+      113.9,
+      57.25
+    ],
+    [
+      5.2,
+      113.9,
+      57.4
+    ],
+    [
+      5.4,
+      113.9,
+      60.89
+    ],
+    [
+      5.6,
+      113.9,
+      69.12
+    ],
+    [
+      5.8,
+      138.1,
+      80.7
+    ],
+    [
+      6.0,
+      138.1,
+      92.53
+    ],
+    [
+      6.2,
+      138.1,
+      105.79
+    ],
+    [
+      6.4,
+      138.1,
+      117.85
+    ],
+    [
+      6.6,
+      138.1,
+      125.74
+    ],
+    [
+      6.8,
+      161.1,
+      128.85
+    ],
+    [
+      7.0,
+      161.1,
+      129.22
+    ],
+    [
+      7.2,
+      161.1,
+      129.25
+    ],
+    [
+      7.4,
+      161.1,
+      129.25
+    ],
+    [
+      7.6,
+      161.1,
+      129.25
+    ],
+    [
+      7.8,
+      -175.5,
+      129.25
+    ],
+    [
+      8.0,
+      -175.5,
+      129.25
+    ],
+    [
+      8.2,
+      -175.5,
+      129.25
+    ],
+    [
+      8.4,
+      -175.5,
+      129.25
+    ],
+    [
+      8.6,
+      -175.5,
+      129.25
+    ],
+    [
+      8.8,
+      -150.8,
+      129.25
+    ],
+    [
+      9.0,
+      -150.8,
+      57.1
+    ],
+    [
+      9.2,
+      -150.8,
+      57.24
+    ],
+    [
+      9.4,
+      -150.8,
+      57.25
+    ],
+    [
+      9.6,
+      -150.8,
+      57.25
+    ],
+    [
+      9.8,
+      -126.2,
+      57.25
+    ],
+    [
+      10.0,
+      -126.2,
+      57.25
+    ],
+    [
+      10.2,
+      -126.2,
+      57.25
+    ],
+    [
+      10.4,
+      -126.2,
+      57.25
+    ]
+  ],
+  "recorded_from": "victim client"
+}

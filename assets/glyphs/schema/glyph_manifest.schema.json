@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "assets/glyphs/schema/glyph_manifest.schema.json",
+  "title": "GlyphManifest",
+  "description": "FL-4131 Phase 0: Versioned glyph manifest for extended-glyph identity contract. Declares all extended GlyphIds (>255) used by a content pack, their Unicode backing scalars or project cluster IDs, atlas page bindings, and coverage metadata. RFC8785 canonical serialization + SHA-256 hash is the bundle-identity signal (gates bundle_compile_identity_includes_glyph_manifest_hash / bundle_compiler_rejects_extended_glyph_without_manifest_hash).",
+  "type": "object",
+  "required": [
+    "manifest_version",
+    "profile_kind",
+    "content_pack_id",
+    "fallback_glyph_id",
+    "entries"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "_comment": {
+      "description": "Free-form documentation string. Ignored by the validator.",
+      "type": "string"
+    },
+    "manifest_version": {
+      "description": "Schema version. Must be 1 for this schema.",
+      "type": "integer",
+      "const": 1
+    },
+    "font_id": {
+      "description": "Required for Phase 1+ when the manifest declares atlas pages. Human-readable font name (e.g., 'Roboto-Medium'). Combined with font_sha256 to lock visual identity.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "font_sha256": {
+      "description": "Required for Phase 1+ when atlas pages exist. Lowercase hex SHA-256 of the source TTF/OTF file used to bake the atlas pages. Part of manifest_hash so font swaps invalidate downstream artifacts.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "style_id": {
+      "description": "Optional style identifier for the font (e.g., 'regular', 'bold'). Reserved for future multi-style manifests.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "supported_cell_sizes": {
+      "description": "Phase 1+ ladder of integer cell pixel widths the manifest is compiled for. The compiler emits one atlas page per size. Must be non-empty if present. Recommended ladder matches the CP437 font ladder (4,6,8,10,12,14,16,18,20,24,28,32,36,40).",
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 128
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "profile_kind": {
+      "description": "Discriminator for the XP extended profile path. Must be 'extended_glyph_v1' for Phase 0 sidecars. Parsers reject unknown profile_kinds fail-closed.",
+      "type": "string",
+      "const": "extended_glyph_v1"
+    },
+    "content_pack_id": {
+      "description": "Opaque identifier for the content pack that owns this manifest. Used as provenance key in bundle compile identity.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-zA-Z0-9_\\-\\.]+$"
+    },
+    "fallback_glyph_id": {
+      "description": "Manifest-declared renderable replacement GlyphId for unknown/unresolvable glyphs. MUST be a real entry in 'entries' with full coverage data. Sentinels (GLYPH_ID_NONE=0xFFFFFFFF, GLYPH_ID_UNRESOLVED=0xFFFFFFFE) are invalid here — validators must reject them.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967291
+    },
+    "admission_set": {
+      "description": "Optional explicit admission allowlist. If present, only GlyphIds listed here may appear as extended glyphs in XP files that reference this manifest. Enforcement gate: bundle_extended_admission_set_enforced (Phase 1). If absent, admission is open within the content pack.",
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 256,
+        "maximum": 4294967291
+      },
+      "uniqueItems": true
+    },
+    "entries": {
+      "description": "All extended GlyphIds declared by this manifest. GlyphIds 0-255 (CP437 legacy contract) MUST NOT appear here — they have no manifest entry.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/GlyphEntry"
+      }
+    },
+    "atlas_pages": {
+      "description": "Atlas page descriptors. Entries reference pages by index. If absent, atlas binding is deferred to Phase 1.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AtlasPage"
+      }
+    }
+  },
+  "$defs": {
+    "GlyphEntry": {
+      "type": "object",
+      "required": ["glyph_id", "label", "coverage_quadrants"],
+      "additionalProperties": false,
+      "properties": {
+        "glyph_id": {
+          "description": "Project-assigned GlyphId. Must be > 255 (CP437 IDs 0-255 are not extended glyphs). Must not be a sentinel (0xFFFFFFFF GLYPH_ID_NONE or 0xFFFFFFFE GLYPH_ID_UNRESOLVED).",
+          "type": "integer",
+          "minimum": 256,
+          "maximum": 4294967291
+        },
+        "label": {
+          "description": "Human-readable identifier for tooling and debugging. Not a rendering value.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "unicode_scalar": {
+          "description": "Optional Unicode scalar backing this GlyphId. Informational only — extended GlyphIds are project-assigned IDs, not raw Unicode codepoints in the runtime. Validators may use this for cross-reference but must not substitute it for the glyph_id.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1114111
+        },
+        "cluster_id": {
+          "description": "Optional project cluster ID if this glyph belongs to a named repertoire cluster. Clusters allow grouping variant glyphs (e.g., regional digit variants) under a shared identity. Phase 1 feature.",
+          "type": "string"
+        },
+        "atlas_page_index": {
+          "description": "Index into atlas_pages array. Required when atlas_pages is present. Absent means atlas binding is deferred.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "atlas_uv": {
+          "description": "UV coordinates within the referenced atlas page [u_min, v_min, u_max, v_max] in normalized 0..1 space. Required when atlas_page_index is present.",
+          "type": "array",
+          "items": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "cell_width_em": {
+          "description": "Cell width in em units. 1.0 = one standard CP437 cell width. Extended glyphs may be fractional or multi-cell (Phase 2+).",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "coverage_quadrants": {
+          "description": "4-nibble quadrant coverage bitmask packed into a uint16. Nibbles: [NW, NE, SW, SE] from MSN to LSN. 0xF = full quadrant covered, 0x0 = empty. Required for all entries — governs CP437-compatible coverage blending in the render pipeline.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "coverage_hint": {
+          "description": "Optional hint for coverage computation. 'full' means glyph covers the full cell; 'partial' means partial coverage (e.g., combining marks). Defaults to 'full' if absent.",
+          "type": "string",
+          "enum": ["full", "partial"]
+        }
+      }
+    },
+    "AtlasPage": {
+      "type": "object",
+      "required": ["page_id", "path"],
+      "additionalProperties": false,
+      "properties": {
+        "page_id": {
+          "description": "Unique page identifier within this manifest.",
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "description": "Relative path from assets/glyphs/atlases/ to the atlas image file.",
+          "type": "string",
+          "minLength": 1
+        },
+        "width_px": {
+          "description": "Atlas texture width in pixels.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "height_px": {
+          "description": "Atlas texture height in pixels.",
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}

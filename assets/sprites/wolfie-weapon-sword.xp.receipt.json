@@ -1,0 +1,46 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "wolfie_weapon_sword",
+  "output_path": "assets/sprites/wolfie-weapon-sword.xp",
+  "output_sha256": "15d28488381446bb5d33223af5dc6beda31b2080b3eeccdf5992ce14d722ac98",
+  "output_dimensions": {
+    "width": 180,
+    "height": 96
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/wolfie-0001.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/wolfie-0001.xp",
+    "raw_layer_index": 2,
+    "upstream_xp_sha256": "a9917ee5172cdc1ea335d07754f3b389653905bf7a4ad56701c94f00bd18496c",
+    "upstream_layer_count": 3,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 1,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 2,
+        "width": 180,
+        "height": 96
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "user interactive review 2026-05-19",
+    "method": "User visual call 2026-05-19: 'MOUNTED NO ARMOR HOLDING SWORD WOLF IDLE'. L2 of wolfie-0001 is the composite mounted+wolf+sword pose; sword is NOT a clean overlay, it is merged into the composite body. COMPOSITE_SOURCE.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=wolfie_weapon_sword -> upstream_xp_path=sprites/wolfie-0001.xp:raw_layer_index=2. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490690,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

@@ -1,0 +1,108 @@
+import argparse
+import sys
+import json
+from dataclasses import asdict
+from .schemas import AssetDef
+from .presets import get_preset, ORC_TEMPLATE
+
+try:
+    from processor_core import ImageProcessor
+except ImportError:
+    from scripts.processor_core import ImageProcessor
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Asciicker Asset Generation Pipeline")
+
+    parser.add_argument(
+        "prompt", nargs="?", help="Text prompt for the asset (e.g. 'Orc warrior')"
+    )
+    parser.add_argument(
+        "--type",
+        choices=["character", "item", "custom"],
+        default="custom",
+        help="Asset type preset",
+    )
+    parser.add_argument("--name", help="Output name (default: derived from prompt)")
+    parser.add_argument(
+        "--angles", type=int, choices=[1, 4, 8], help="Number of angles"
+    )
+    parser.add_argument(
+        "--image-path",
+        help="Path to image file for processing (for --process-rgb-to-cp437)",
+    )
+    parser.add_argument(
+        "--process-rgb-to-cp437",
+        action="store_true",
+        help="Process RGB image to CP437 glyphs and exit",
+    )
+
+    return parser.parse_args()
+
+
+def main():
+    args = parse_args()
+
+    # Handle --process-rgb-to-cp437 flag (early exit for Phase 2)
+    if args.process_rgb_to_cp437:
+        if not args.image_path:
+            print(
+                "Error: --image-path is required when using --process-rgb-to-cp437",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+
+        processor = ImageProcessor()
+        for grid_x, grid_y, glyph_idx, color_idx in processor.process_image(
+            args.image_path
+        ):
+            print(f"({grid_x},{grid_y}): glyph={glyph_idx}, color={color_idx}")
+        return
+
+    # 1. Start with base
+    if args.type == "custom":
+        # clean slate if custom
+        asset = AssetDef(name="custom_asset", type="custom", angles=1)
+    else:
+        # Load preset
+        preset = get_preset(args.type)
+        if not preset:
+            print(f"Error: Unknown preset {args.type}", file=sys.stderr)
+            sys.exit(1)
+        # Create a copy
+        asset = AssetDef(**asdict(preset))
+
+    # 2. Override with CLI args
+    if args.prompt:
+        asset.prompt = args.prompt
+        if not args.name:
+            asset.name = args.prompt.replace(" ", "_").lower()
+
+    if args.name:
+        asset.name = args.name
+
+    if args.angles:
+        asset.angles = asset.angles
+
+    # 3. Validate
+    errors = asset.validate()
+    if errors:
+        print("Validation Errors:", file=sys.stderr)
+        for e in errors:
+            print(f"- {e}", file=sys.stderr)
+        sys.exit(1)
+
+    # 4. Run pipeline
+    try:
+        from .pipeline import AssetPipeline
+
+        pipeline = AssetPipeline(asset, args.image_path)
+        pipeline.run()
+        print("\nPipeline complete!")
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

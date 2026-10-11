@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://asciicker.dev/schema/recorder_extended_glyph.schema.json",
+  "title": "FL-4131 recorder extended-glyph diagnostic schema (W7 draft)",
+  "description": "Versioned schema for two recorder event families that carry the extended-glyph identity diagnostic: per-frame samples and missing-glyph events. Does NOT replace existing recorder fields; this is an additive contract for Phase 2+ runtime to populate. Phase 0/1 runtime MUST NOT emit these fields. The cell.gl byte is NEVER proof of extended identity — full GlyphId identity is always uint32 and lives in the recorder field below.",
+  "oneOf": [
+    { "$ref": "#/definitions/sample" },
+    { "$ref": "#/definitions/event" }
+  ],
+  "definitions": {
+    "row_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Recorder row schema version for the extended-glyph diagnostic. Phase 0/1 = 1."
+    },
+    "target_surface": {
+      "type": "string",
+      "enum": [
+        "native_terminal",
+        "web_canvas",
+        "asciiid_editor",
+        "headless_render",
+        "godot_compositor",
+        "unknown"
+      ]
+    },
+    "glyph_id": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295,
+      "description": "Full 32-bit GlyphId identity. CP437 values live in 0..255; extended values live in 256.. . MUST NOT be derived from the 8-bit cell.gl byte at the renderer layer; the source is the bundle-side resolved glyph id."
+    },
+    "glyph_id_or_unresolved": {
+      "anyOf": [
+        { "$ref": "#/definitions/glyph_id" },
+        { "type": "null", "description": "GLYPH_ID_UNRESOLVED sentinel" }
+      ]
+    },
+    "manifest_hash": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "64-char lowercase hex SHA-256 of the bound glyph manifest."
+        },
+        {
+          "type": "null",
+          "description": "No manifest bound (legacy CP437)."
+        }
+      ]
+    },
+    "sample": {
+      "type": "object",
+      "description": "Per-frame sample carrying the bound manifest identity and the dominant glyph id seen during the frame.",
+      "required": ["kind", "row_version", "target_surface", "manifest_hash_observed"],
+      "additionalProperties": true,
+      "properties": {
+        "kind": { "const": "fl4131_glyph_sample" },
+        "row_version": { "$ref": "#/definitions/row_version" },
+        "target_surface": { "$ref": "#/definitions/target_surface" },
+        "manifest_hash_observed": { "$ref": "#/definitions/manifest_hash" },
+        "dominant_glyph_id": { "$ref": "#/definitions/glyph_id_or_unresolved" },
+        "extended_cell_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of cells in this frame whose GlyphId > 255. MUST be 0 in Phase 0/1; Phase 2+ may emit positive counts."
+        },
+        "fallback_used_cell_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of cells in this frame that resolved through the fallback path."
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "description": "Discrete event emitted when an unknown / missing glyph fallback is taken at a specific render surface.",
+      "required": ["kind", "row_version", "target_surface", "manifest_hash_observed", "requested_glyph_id", "fallback_glyph_id", "reason"],
+      "additionalProperties": true,
+      "properties": {
+        "kind": { "const": "fl4131_missing_glyph_event" },
+        "row_version": { "$ref": "#/definitions/row_version" },
+        "target_surface": { "$ref": "#/definitions/target_surface" },
+        "manifest_hash_observed": { "$ref": "#/definitions/manifest_hash" },
+        "requested_glyph_id": { "$ref": "#/definitions/glyph_id" },
+        "fallback_glyph_id": { "$ref": "#/definitions/glyph_id" },
+        "reason": {
+          "type": "string",
+          "enum": [
+            "glyph_id_out_of_range",
+            "glyph_id_not_in_manifest",
+            "manifest_hash_mismatch",
+            "manifest_not_loaded",
+            "atlas_page_missing"
+          ]
+        },
+        "source_path": {
+          "type": "string",
+          "description": "Optional XP / asset path that triggered this event."
+        }
+      }
+    }
+  }
+}

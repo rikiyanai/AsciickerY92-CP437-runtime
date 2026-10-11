@@ -1,0 +1,1057 @@
+{
+  "schema_version": 1,
+  "description": "FL-4131 extended glyph coverage table \u2014 font-independent compositing metadata. uint16 quadrant-nibble format: nibble0=bottom-left, nibble1=bottom-right, nibble2=top-left, nibble3=top-right. Each nibble 0..4 (legacy scale) or 0..15 (extended scale).",
+  "generated_from": [
+    "assets/glyphs/fixtures/extended_glyph_terrain_v1.json",
+    "assets/glyphs/fixtures/extended_glyph_material_additive_v1.json"
+  ],
+  "generated_at": "2026-05-31",
+  "entry_count": 130,
+  "additive_core_gid_range": [
+    512,
+    543
+  ],
+  "cp437_note": "CP437 glyph_coverage[256] is frozen \u2014 this generator never touches it",
+  "entries": [
+    {
+      "glyph_id": 256,
+      "label": "REPLACEMENT_CHARACTER",
+      "unicode_scalar": 65533,
+      "coverage_quadrants": 65535,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 257,
+      "label": "LIGHT_SHADE_EXTENDED",
+      "unicode_scalar": 9617,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 258,
+      "label": "MEDIUM_SHADE_EXTENDED",
+      "unicode_scalar": 9618,
+      "coverage_quadrants": 43690,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 259,
+      "label": "DARK_SHADE_EXTENDED",
+      "unicode_scalar": 9619,
+      "coverage_quadrants": 52428,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 260,
+      "label": "BOX_DRAWINGS_LIGHT_HORIZONTAL",
+      "unicode_scalar": 9472,
+      "coverage_quadrants": 3276,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 261,
+      "label": "BOX_DRAWINGS_LIGHT_VERTICAL",
+      "unicode_scalar": 9474,
+      "coverage_quadrants": 8738,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 262,
+      "label": "BOX_DRAWINGS_LIGHT_DOWN_AND_RIGHT",
+      "unicode_scalar": 9484,
+      "coverage_quadrants": 3840,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 263,
+      "label": "BOX_DRAWINGS_LIGHT_DOWN_AND_LEFT",
+      "unicode_scalar": 9488,
+      "coverage_quadrants": 3855,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 264,
+      "label": "BOX_DRAWINGS_LIGHT_UP_AND_RIGHT",
+      "unicode_scalar": 9492,
+      "coverage_quadrants": 240,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 265,
+      "label": "BOX_DRAWINGS_LIGHT_UP_AND_LEFT",
+      "unicode_scalar": 9496,
+      "coverage_quadrants": 255,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_terrain_v1.json"
+    },
+    {
+      "glyph_id": 512,
+      "label": "INTEGRAL",
+      "unicode_scalar": 8747,
+      "coverage_quadrants": 17730,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 513,
+      "label": "INCREMENT_TRIANGLE_UP",
+      "unicode_scalar": 8710,
+      "coverage_quadrants": 17749,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 514,
+      "label": "NABLA_TRIANGLE_DOWN",
+      "unicode_scalar": 8711,
+      "coverage_quadrants": 21777,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 515,
+      "label": "ANGLE",
+      "unicode_scalar": 8736,
+      "coverage_quadrants": 240,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 516,
+      "label": "PERPENDICULAR",
+      "unicode_scalar": 10178,
+      "coverage_quadrants": 4386,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 517,
+      "label": "PARALLEL_TO",
+      "unicode_scalar": 8741,
+      "coverage_quadrants": 17697,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 518,
+      "label": "DIVISION_SLASH",
+      "unicode_scalar": 8725,
+      "coverage_quadrants": 16641,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 519,
+      "label": "SET_MINUS_BACKSLASH",
+      "unicode_scalar": 8726,
+      "coverage_quadrants": 4356,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 520,
+      "label": "ELECTRIC_ARROW",
+      "unicode_scalar": 8961,
+      "coverage_quadrants": 17476,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 521,
+      "label": "WAVY_LINE",
+      "unicode_scalar": 8967,
+      "coverage_quadrants": 17476,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 522,
+      "label": "TOP_LEFT_CORNER",
+      "unicode_scalar": 8988,
+      "coverage_quadrants": 3072,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 523,
+      "label": "TOP_RIGHT_CORNER",
+      "unicode_scalar": 8989,
+      "coverage_quadrants": 49152,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 524,
+      "label": "BOTTOM_LEFT_CORNER",
+      "unicode_scalar": 8990,
+      "coverage_quadrants": 12,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 525,
+      "label": "BOTTOM_RIGHT_CORNER",
+      "unicode_scalar": 8991,
+      "coverage_quadrants": 192,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 526,
+      "label": "UP_TACK",
+      "unicode_scalar": 8869,
+      "coverage_quadrants": 8772,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 527,
+      "label": "DOWN_TACK",
+      "unicode_scalar": 8868,
+      "coverage_quadrants": 17442,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 528,
+      "label": "MIDDLE_DOT",
+      "unicode_scalar": 183,
+      "coverage_quadrants": 17,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 529,
+      "label": "BULLET_OPERATOR",
+      "unicode_scalar": 8729,
+      "coverage_quadrants": 34,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 530,
+      "label": "RING_OPERATOR",
+      "unicode_scalar": 8728,
+      "coverage_quadrants": 34,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 531,
+      "label": "WHITE_BULLET",
+      "unicode_scalar": 9702,
+      "coverage_quadrants": 51,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 532,
+      "label": "THEREFORE",
+      "unicode_scalar": 8756,
+      "coverage_quadrants": 4369,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 533,
+      "label": "BECAUSE",
+      "unicode_scalar": 8757,
+      "coverage_quadrants": 17424,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 534,
+      "label": "DOWN_RIGHT_DIAGONAL_ELLIPSIS",
+      "unicode_scalar": 8945,
+      "coverage_quadrants": 17,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 535,
+      "label": "UP_RIGHT_DIAGONAL_ELLIPSIS",
+      "unicode_scalar": 8944,
+      "coverage_quadrants": 4352,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 536,
+      "label": "WHITE_DIAMOND",
+      "unicode_scalar": 9671,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 537,
+      "label": "BLACK_DIAMOND",
+      "unicode_scalar": 9670,
+      "coverage_quadrants": 52428,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 538,
+      "label": "WHITE_SQUARE",
+      "unicode_scalar": 9633,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 539,
+      "label": "BLACK_SQUARE",
+      "unicode_scalar": 9632,
+      "coverage_quadrants": 65535,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 540,
+      "label": "WHITE_CIRCLE",
+      "unicode_scalar": 9675,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 541,
+      "label": "BULLSEYE",
+      "unicode_scalar": 9678,
+      "coverage_quadrants": 43690,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 542,
+      "label": "TRIPLE_TILDE",
+      "unicode_scalar": 8779,
+      "coverage_quadrants": 39321,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 543,
+      "label": "ALMOST_EQUAL_TO",
+      "unicode_scalar": 8776,
+      "coverage_quadrants": 26214,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 544,
+      "label": "SINE_WAVE",
+      "unicode_scalar": 8767,
+      "coverage_quadrants": 39321,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 545,
+      "label": "REVERSED_TILDE",
+      "unicode_scalar": 8765,
+      "coverage_quadrants": 26214,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 546,
+      "label": "ARC",
+      "unicode_scalar": 8978,
+      "coverage_quadrants": 4080,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 547,
+      "label": "DOT_OPERATOR",
+      "unicode_scalar": 8901,
+      "coverage_quadrants": 17,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 548,
+      "label": "RING_ABOVE",
+      "unicode_scalar": 730,
+      "coverage_quadrants": 4352,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 549,
+      "label": "LEFT_SINGLE_QUOTATION_MARK",
+      "unicode_scalar": 8216,
+      "coverage_quadrants": 4352,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 550,
+      "label": "RIGHT_SINGLE_QUOTATION_MARK",
+      "unicode_scalar": 8217,
+      "coverage_quadrants": 17,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 551,
+      "label": "DITTO_MARK",
+      "unicode_scalar": 12291,
+      "coverage_quadrants": 4369,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 552,
+      "label": "ACUTE_ACCENT",
+      "unicode_scalar": 180,
+      "coverage_quadrants": 256,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 553,
+      "label": "GRAVE_ACCENT",
+      "unicode_scalar": 96,
+      "coverage_quadrants": 4096,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 554,
+      "label": "LOW_STROKE_LEFT",
+      "unicode_scalar": 8218,
+      "coverage_quadrants": 1,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 555,
+      "label": "LOW_STROKE_RIGHT",
+      "unicode_scalar": 8219,
+      "coverage_quadrants": 16,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 556,
+      "label": "KATAKANA_NO",
+      "unicode_scalar": 12494,
+      "coverage_quadrants": 34833,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 557,
+      "label": "KATAKANA_HA",
+      "unicode_scalar": 12495,
+      "coverage_quadrants": 34952,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 558,
+      "label": "KATAKANA_HE",
+      "unicode_scalar": 12504,
+      "coverage_quadrants": 26112,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 559,
+      "label": "KATAKANA_TO",
+      "unicode_scalar": 12488,
+      "coverage_quadrants": 33825,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 560,
+      "label": "KATAKANA_I",
+      "unicode_scalar": 12452,
+      "coverage_quadrants": 8738,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 561,
+      "label": "KATAKANA_RI",
+      "unicode_scalar": 12522,
+      "coverage_quadrants": 8738,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 562,
+      "label": "KATAKANA_SO",
+      "unicode_scalar": 12477,
+      "coverage_quadrants": 17476,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 563,
+      "label": "KATAKANA_TSU",
+      "unicode_scalar": 12484,
+      "coverage_quadrants": 26214,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 564,
+      "label": "WORD_SEPARATOR_MIDDLE_DOT",
+      "unicode_scalar": 12539,
+      "coverage_quadrants": 17,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 565,
+      "label": "DOT_ABOVE",
+      "unicode_scalar": 729,
+      "coverage_quadrants": 4352,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 566,
+      "label": "RIGHT_TACK",
+      "unicode_scalar": 8866,
+      "coverage_quadrants": 8737,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 567,
+      "label": "LEFT_TACK",
+      "unicode_scalar": 8867,
+      "coverage_quadrants": 4642,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 568,
+      "label": "SMILE_ARC",
+      "unicode_scalar": 8995,
+      "coverage_quadrants": 255,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 569,
+      "label": "FROWN_ARC",
+      "unicode_scalar": 8994,
+      "coverage_quadrants": 65280,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 570,
+      "label": "BREVE",
+      "unicode_scalar": 728,
+      "coverage_quadrants": 13056,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 571,
+      "label": "SNOW_STAR_BRIGHT",
+      "unicode_scalar": 10052,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 572,
+      "label": "SNOW_STAR_LIGHT",
+      "unicode_scalar": 10053,
+      "coverage_quadrants": 13107,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 573,
+      "label": "SIX_SPOKE_STAR",
+      "unicode_scalar": 10033,
+      "coverage_quadrants": 30583,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 574,
+      "label": "EIGHT_SPOKE_STAR",
+      "unicode_scalar": 10036,
+      "coverage_quadrants": 30583,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 575,
+      "label": "ASTERISK_STAR",
+      "unicode_scalar": 10035,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 576,
+      "label": "OPEN_CENTER_STAR",
+      "unicode_scalar": 10034,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 577,
+      "label": "ASTERISK_OPERATOR",
+      "unicode_scalar": 8727,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 578,
+      "label": "STAR_OPERATOR",
+      "unicode_scalar": 8902,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 579,
+      "label": "WHITE_ROUNDED_SQUARE",
+      "unicode_scalar": 9634,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 580,
+      "label": "SQUARE_TARGET",
+      "unicode_scalar": 9635,
+      "coverage_quadrants": 43690,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 581,
+      "label": "DIAMOND_TARGET",
+      "unicode_scalar": 9672,
+      "coverage_quadrants": 43690,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 582,
+      "label": "DIAMOND_FILL",
+      "unicode_scalar": 9670,
+      "coverage_quadrants": 52428,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 583,
+      "label": "DOTTED_CIRCLE",
+      "unicode_scalar": 9676,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 584,
+      "label": "CIRCLE_FILL",
+      "unicode_scalar": 9679,
+      "coverage_quadrants": 52428,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 585,
+      "label": "LEFT_HALF_CIRCLE",
+      "unicode_scalar": 9680,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 586,
+      "label": "RIGHT_HALF_CIRCLE",
+      "unicode_scalar": 9681,
+      "coverage_quadrants": 43690,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 587,
+      "label": "LOWER_HALF_CIRCLE",
+      "unicode_scalar": 9682,
+      "coverage_quadrants": 255,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 588,
+      "label": "UPPER_HALF_CIRCLE",
+      "unicode_scalar": 9683,
+      "coverage_quadrants": 65280,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 589,
+      "label": "SMALL_UP_TRIANGLE",
+      "unicode_scalar": 9652,
+      "coverage_quadrants": 13056,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 590,
+      "label": "SMALL_DOWN_TRIANGLE",
+      "unicode_scalar": 9662,
+      "coverage_quadrants": 51,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 591,
+      "label": "SMALL_LEFT_TRIANGLE",
+      "unicode_scalar": 9666,
+      "coverage_quadrants": 4369,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 592,
+      "label": "SMALL_RIGHT_TRIANGLE",
+      "unicode_scalar": 9656,
+      "coverage_quadrants": 8738,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 593,
+      "label": "WHITE_LEFT_TRIANGLE",
+      "unicode_scalar": 9665,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 594,
+      "label": "WHITE_RIGHT_TRIANGLE",
+      "unicode_scalar": 9655,
+      "coverage_quadrants": 43690,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 595,
+      "label": "BLACK_LEFT_TRIANGLE",
+      "unicode_scalar": 9664,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 596,
+      "label": "BLACK_RIGHT_TRIANGLE",
+      "unicode_scalar": 9654,
+      "coverage_quadrants": 43690,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 597,
+      "label": "WHITE_UP_TRIANGLE",
+      "unicode_scalar": 9651,
+      "coverage_quadrants": 13056,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 598,
+      "label": "WHITE_DOWN_TRIANGLE",
+      "unicode_scalar": 9661,
+      "coverage_quadrants": 51,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 599,
+      "label": "LOZENGE",
+      "unicode_scalar": 9674,
+      "coverage_quadrants": 21845,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 600,
+      "label": "KATAKANA_A",
+      "unicode_scalar": 12450,
+      "coverage_quadrants": 25122,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 601,
+      "label": "KATAKANA_U",
+      "unicode_scalar": 12454,
+      "coverage_quadrants": 26180,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 602,
+      "label": "KATAKANA_E",
+      "unicode_scalar": 12456,
+      "coverage_quadrants": 58436,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 603,
+      "label": "KATAKANA_O",
+      "unicode_scalar": 12458,
+      "coverage_quadrants": 26210,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 604,
+      "label": "KATAKANA_KA",
+      "unicode_scalar": 12459,
+      "coverage_quadrants": 42598,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 605,
+      "label": "KATAKANA_KI",
+      "unicode_scalar": 12461,
+      "coverage_quadrants": 26214,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 606,
+      "label": "KATAKANA_KU",
+      "unicode_scalar": 12463,
+      "coverage_quadrants": 17476,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 607,
+      "label": "KATAKANA_KE",
+      "unicode_scalar": 12465,
+      "coverage_quadrants": 58982,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 608,
+      "label": "KATAKANA_KO",
+      "unicode_scalar": 12467,
+      "coverage_quadrants": 26214,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 609,
+      "label": "KATAKANA_SA",
+      "unicode_scalar": 12469,
+      "coverage_quadrants": 26212,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 610,
+      "label": "KATAKANA_SHI",
+      "unicode_scalar": 12471,
+      "coverage_quadrants": 8738,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 611,
+      "label": "KATAKANA_SU",
+      "unicode_scalar": 12473,
+      "coverage_quadrants": 26214,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 612,
+      "label": "KATAKANA_SE",
+      "unicode_scalar": 12475,
+      "coverage_quadrants": 58982,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 613,
+      "label": "KATAKANA_TA",
+      "unicode_scalar": 12479,
+      "coverage_quadrants": 58982,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 614,
+      "label": "KATAKANA_CHI",
+      "unicode_scalar": 12481,
+      "coverage_quadrants": 57890,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 615,
+      "label": "KATAKANA_TE",
+      "unicode_scalar": 12486,
+      "coverage_quadrants": 57344,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 616,
+      "label": "ARABIC_ALEF",
+      "unicode_scalar": 1575,
+      "coverage_quadrants": 43690,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 617,
+      "label": "ARABIC_BEH",
+      "unicode_scalar": 1576,
+      "coverage_quadrants": 61680,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 618,
+      "label": "ARABIC_TEH",
+      "unicode_scalar": 1578,
+      "coverage_quadrants": 61680,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 619,
+      "label": "ARABIC_THEH",
+      "unicode_scalar": 1579,
+      "coverage_quadrants": 61680,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 620,
+      "label": "ARABIC_JEEM",
+      "unicode_scalar": 1580,
+      "coverage_quadrants": 57072,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 621,
+      "label": "ARABIC_HAH",
+      "unicode_scalar": 1581,
+      "coverage_quadrants": 57072,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 622,
+      "label": "ARABIC_KHAH",
+      "unicode_scalar": 1582,
+      "coverage_quadrants": 57072,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 623,
+      "label": "ARABIC_DAL",
+      "unicode_scalar": 1583,
+      "coverage_quadrants": 26214,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 624,
+      "label": "ARABIC_REH",
+      "unicode_scalar": 1585,
+      "coverage_quadrants": 13107,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 625,
+      "label": "ARABIC_ZAIN",
+      "unicode_scalar": 1586,
+      "coverage_quadrants": 13107,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 626,
+      "label": "ARABIC_SEEN",
+      "unicode_scalar": 1587,
+      "coverage_quadrants": 60928,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 627,
+      "label": "ARABIC_SHEEN",
+      "unicode_scalar": 1588,
+      "coverage_quadrants": 60928,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 628,
+      "label": "ARABIC_SAD",
+      "unicode_scalar": 1589,
+      "coverage_quadrants": 61200,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 629,
+      "label": "ARABIC_DAD",
+      "unicode_scalar": 1590,
+      "coverage_quadrants": 61200,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 630,
+      "label": "ARABIC_TAH",
+      "unicode_scalar": 1591,
+      "coverage_quadrants": 61166,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    },
+    {
+      "glyph_id": 631,
+      "label": "ARABIC_ZAH",
+      "unicode_scalar": 1592,
+      "coverage_quadrants": 61166,
+      "status": "manifest_declared",
+      "source_fixture": "extended_glyph_material_additive_v1.json"
+    }
+  ]
+}

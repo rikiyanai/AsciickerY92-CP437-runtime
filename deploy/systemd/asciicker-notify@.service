@@ -1,0 +1,7 @@
+[Unit]
+Description=Crash notification for %i
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/bin/bash -c 'echo "[ALERT] Service %i failed at $(date -u +%%Y-%%m-%%dT%%H:%%M:%%SZ) exit=$SERVICE_RESULT" | tee -a /var/log/asciicker-alerts.log | systemd-cat -t asciicker-alert -p err'

@@ -1,0 +1,61 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "wolack_armor_regular",
+  "output_path": "assets/sprites/wolack-armor-regular.xp",
+  "output_sha256": "25749b4f472898ef9ba348983c26ec85b28cec709d445f1c7d1906d157f42347",
+  "output_dimensions": {
+    "width": 160,
+    "height": 104
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/wolack-1001.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/wolack-1001.xp",
+    "raw_layer_index": 4,
+    "upstream_xp_sha256": "13f57eb4521d52dc215ad08100c54147c0059d4083d2b4099e5f4dd301ded3e1",
+    "upstream_layer_count": 6,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 1,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 2,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 3,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 4,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 5,
+        "width": 160,
+        "height": 104
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "user interactive review 2026-05-19",
+    "method": "User visual call 2026-05-19: YES (chest overlay bit, in swinging motion context). wolack-1001 has 6 layers; L5 is swoosh; L4 = chest/armor overlay over mounted-attack body+rider. Pose-specific (mounted-attack swing).",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=wolack_armor_regular -> upstream_xp_path=sprites/wolack-1001.xp:raw_layer_index=4. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

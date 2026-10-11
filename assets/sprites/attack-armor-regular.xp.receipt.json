@@ -1,0 +1,56 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "attack_armor_regular",
+  "output_path": "assets/sprites/attack-armor-regular.xp",
+  "output_sha256": "2d789147987f936756f767932a68b891dd25d198e059cdfe76d17fdfd1bc3bf3",
+  "output_dimensions": {
+    "width": 144,
+    "height": 80
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/attack-1001.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/attack-1001.xp",
+    "raw_layer_index": 3,
+    "upstream_xp_sha256": "2081940ff3db46c53878beb7f4cff3ebe44808c35ce0a47c787f79935172bfd8",
+    "upstream_layer_count": 5,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 144,
+        "height": 80
+      },
+      {
+        "index": 1,
+        "width": 144,
+        "height": 80
+      },
+      {
+        "index": 2,
+        "width": 144,
+        "height": 80
+      },
+      {
+        "index": 3,
+        "width": 144,
+        "height": 80
+      },
+      {
+        "index": 4,
+        "width": 144,
+        "height": 80
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "user interactive review 2026-05-19",
+    "method": "User visual call 2026-05-19: YES (armor/chest overlay bit, sword-in-hand context). attack-1001 has 5 layers; L4 is swoosh; L3 = chest/armor overlay shown over attack-swinging body. Pose-specific (attack motion), not static.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=attack_armor_regular -> upstream_xp_path=sprites/attack-1001.xp:raw_layer_index=3. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

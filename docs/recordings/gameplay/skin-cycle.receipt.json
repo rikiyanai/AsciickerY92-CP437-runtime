@@ -1,0 +1,52 @@
+{
+  "mode": "cycle",
+  "gif": "docs/recordings/gameplay/skin-cycle.gif",
+  "commit": "cab03daa7fad1acb553da07aa43e0560f724ef0e",
+  "worktree_dirty": false,
+  "binaries": {
+    ".run/server": "88481733ba17e49eaa69355fdb708d31245ca1398854449ea9fa5bf6b515489a",
+    ".run/game_term": "35df1cacaa98c964b912737f949ebaff08fab4eefc11bf8631794e122f5bbd7c"
+  },
+  "server_cmd": "stdbuf -oL /home/user/int-wt/.run/server --port 56219",
+  "clients": {
+    "victim": "/home/user/int-wt/.run/game_term --skin wallace -url player@127.0.0.1:56219/ws/y8/"
+  },
+  "server_log": {
+    "join": [
+      "[skin-select] join name=player outcome=matched profile_id=201 skin=102 slug=wallace_player tick=8",
+      "[SPAWN-DECISION] ci=0 tick=8 spawn_pos=(-4.000,-74.000,242.000) phys_pos=(-4.000,-74.000,242.000) phys_vel=(0.000,0.000,0.000) terrain_z=242.000 spawn_terrain_z=242.000 spawn_fallback_z=0.000 in_water=0.000 has_physics=1",
+      "[tick] Player 'player' joined as ID 0 tick=8 stamp_us=11483918877",
+      "[skin-select] cycle applied ci=0 from=201 to=203 skin=104 slug=grandma_player revision=2 tick=220",
+      "[skin-select] cycle applied ci=0 from=203 to=204 skin=105 slug=dracula_player revision=3 tick=274",
+      "[skin-select] cycle applied ci=0 from=204 to=205 skin=106 slug=witch_player revision=4 tick=328",
+      "[skin-select] cycle applied ci=0 from=205 to=201 skin=102 slug=wallace_player revision=5 tick=382"
+    ],
+    "death": [],
+    "respawn": [],
+    "rapture": []
+  },
+  "client_log": {
+    "victim": [
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] All 9207 patches done, progress -> 3",
+      "[LOAD] progress=3: InitGame...",
+      "[LOAD] progress -> 0 (done)"
+    ]
+  },
+  "k_presses_s": [
+    1.23,
+    3.01,
+    4.85,
+    6.64
+  ],
+  "frames": 143,
+  "seconds": 9.46
+}

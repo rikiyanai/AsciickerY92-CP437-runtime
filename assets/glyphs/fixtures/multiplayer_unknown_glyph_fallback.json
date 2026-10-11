@@ -1,0 +1,48 @@
+{
+  "_comment": "FL-4131 Phase 7 — multiplayer_unknown_glyph_fallback_fixture. Input for the two-tab VPS proof of the fail-closed extended-glyph fallback. Server boots with `manifest_a`; client tabs boot with manifests that either mismatch on identity (reject path) or match on identity but have a strict-subset admission set (partial-admission fallback path). The fixture names what the two-tab proof MUST observe: the join-handshake reject reason, the fallback glyph id that renders in both tabs, and the absence of any silent CP437 truncation. This artifact is consumed by analyzer gates (Phase 7) once the wire migration in server/protocol/protocol_join.h is operator-approved. The fixture exists now so the gate moves from open to artifact_exists; promotion to proof_passed requires a real two-tab run receipt. FALLBACK CONTRACT (C1 review-response): manifest.fallback_glyph_id is REQUIRED by the Phase 2 validator (scripts/compile_glyph_manifest.py) to be NON-SENTINEL but is allowed to be either CP437 (<=255) or an admitted-extended id (>255). The two-tab proof must therefore observe the fallback render through the path matching its id range. For an extended fallback (id 256 below) the render path is the extended LUT (Phase 3 native shader / Phase 5 web shader) sampling the bound atlas page; AnsiCell.gl on the byte-domain path stays at the Phase 2 visible stub byte 0x3F ('?'), the real GlyphId carriage is the GlyphPlane sidecar. Neither path routes the extended id through the CP437 font_atlas as if it were a CP437 byte.",
+  "fixture_version": 1,
+  "schema": "multiplayer_unknown_glyph_fallback_v1",
+  "purpose": "two_tab_vps_proof_of_unknown_glyph_fallback",
+  "scenario": {
+    "server_manifest": {
+      "content_pack_id": "terrain.extended.v1",
+      "sha256_hex": "1ff4e22faf91a79fde8ae38c59d0736982a53aafef100d708651dd3f95c9d9cd",
+      "fallback_glyph_id": 256,
+      "fallback_glyph_id_range": "admitted_extended",
+      "fallback_render_path_when_extended": "extended_LUT_sampling_bound_atlas_page (Phase 3 native / Phase 5 web shader); AnsiCell.gl stays at Phase 2 visible stub byte 0x3F",
+      "admission_set_excerpt": [256, 257, 258, 259, 260],
+      "fixture_source": "assets/glyphs/fixtures/extended_glyph_terrain_v1.json"
+    },
+    "client_manifest_mismatch": {
+      "content_pack_id": "terrain.extended.alternate",
+      "sha256_hex_mismatches_server": true,
+      "expected_reject_path": "STRUCT_BRC_JOIN_REJECT_V2 with APPEARANCE_CONTRACT_REJECT_REASON::GLYPH_MANIFEST_MISMATCH (Phase 7 reserved enum slot, decoded by web/game_web.html:AppearanceContractRejectReasonFromCode case 8)"
+    },
+    "client_manifest_match_with_partial_admission": {
+      "content_pack_id": "terrain.extended.v1",
+      "sha256_hex": "1ff4e22faf91a79fde8ae38c59d0736982a53aafef100d708651dd3f95c9d9cd",
+      "admission_set_excerpt": [256, 257],
+      "note": "Manifest identity matches; admission set is a strict subset of the server's. Any server-emitted cell carrying GlyphPlane.cells[i] in {258, 259, 260} must render through manifest.fallback_glyph_id (256) on this client. Because 256 is admitted-extended, the visible render goes through the extended LUT in the bound atlas page; the AnsiCell.gl byte-domain stub stays 0x3F per Phase 2 sprite.cpp:1451-1452. Two-tab proof observes the fallback render in both client tabs."
+    }
+  },
+  "expected_observations": {
+    "join_handshake_mismatch": {
+      "tab_1": "REQ_JOIN_V2 sent with client_manifest_mismatch; receives STRUCT_BRC_JOIN_REJECT_V2 with reason_code == GLYPH_MANIFEST_MISMATCH; never enters gameplay; AppearanceContractRejectReasonFromCode case 8 surfaces the reason in the loading overlay; recorder records the reject reason and the surfaced reason string.",
+      "tab_2": "Same handshake reject path; never enters gameplay; same surfaced reason string."
+    },
+    "join_handshake_match_partial_admission": {
+      "tab_1": "REQ_JOIN_V2 sent with client_manifest_match_with_partial_admission; RSP_JOIN accepted; enters gameplay; cells carrying GlyphPlane.cells[i] in {258, 259, 260} render through fallback_glyph_id (256) via the extended LUT (NOT via the CP437 font atlas). AnsiCell.gl byte for those cells stays 0x3F per the Phase 2 sprite.cpp:1451-1452 stub contract.",
+      "tab_2": "Same fallback render observed; both tabs agree on the fallback glyph identity within sample tolerance."
+    },
+    "no_silent_truncation": "Neither tab renders glyph 0, glyph 32 (space), or the literal extended id modulo 256. The CP437 byte-domain path never samples the font_atlas with `extended_id & 0xFF`. Recorder captures the [FL-4131] fallback diagnostic emitted by the renderer on first encountering each unadmitted id."
+  },
+  "analyzer_gates": [
+    "scenario_two_tab_join_handshake_reject_observed",
+    "evidence_recorder_captured_reject_reason_code",
+    "evidence_recorder_captured_extended_fallback_render_event",
+    "gameplay_no_silent_glyph_truncation_in_either_tab",
+    "gameplay_fallback_render_agreement_between_tabs"
+  ],
+  "depends_on_phases": [2, 3, 5, 7],
+  "not_a_recipe": "This fixture is analyzer input. Input choreography (manual or scripted) lives in a recipe; success criteria live in analyzer gates over the full recording window (Law 13)."
+}

@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""
+scripts/fl — convenience shim for `python3 scripts/analyze_failure_log.py <args>`.
+
+Usage:
+    python3 scripts/fl audit <description>
+    python3 scripts/fl suggest-related <description>
+    python3 scripts/fl search <terms>
+    (any other fl subcommand)
+
+NOTE: `fl fix-attempt` does NOT append to the failure log. fix-attempt is not an
+analyze_failure_log.py command; the real ledger-append front door is
+`python3 scripts/analyze_runs.py fl fix-attempt FL-NNN "<what changed>"`.
+
+This shim exists so agents can use a shorter invocation.
+The always-safe form (no PATH setup required) is:
+    python3 scripts/fl <subcommand> <args>
+
+If you have scripts/ on your PATH you can also call:
+    fl <subcommand> <args>
+"""
+
+import subprocess
+import sys
+from pathlib import Path
+
+
+def main():
+    analyze = Path(__file__).parent / "analyze_failure_log.py"
+    if not analyze.exists():
+        print(f"ERROR: {analyze} not found", file=sys.stderr)
+        sys.exit(1)
+
+    # Intercept --help / -h to show shim identity before forwarding
+    if sys.argv[1:] in (["-h"], ["--help"]) or not sys.argv[1:]:
+        print(__doc__)
+        print("Subcommand help (from analyze_failure_log.py --help):")
+        print("-" * 50)
+        subprocess.run([sys.executable, str(analyze), "--help"])
+        return
+
+    result = subprocess.run(
+        [sys.executable, str(analyze)] + sys.argv[1:],
+    )
+    sys.exit(result.returncode)
+
+
+if __name__ == "__main__":
+    main()

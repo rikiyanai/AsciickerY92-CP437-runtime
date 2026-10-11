@@ -1,0 +1,91 @@
+{
+  "mode": "rapture",
+  "gif": "docs/recordings/gameplay/grandma-rapture.gif",
+  "commit": "cab03daa7fad1acb553da07aa43e0560f724ef0e",
+  "worktree_dirty": false,
+  "binaries": {
+    ".run/server": "88481733ba17e49eaa69355fdb708d31245ca1398854449ea9fa5bf6b515489a",
+    ".run/game_term": "35df1cacaa98c964b912737f949ebaff08fab4eefc11bf8631794e122f5bbd7c"
+  },
+  "server_cmd": "stdbuf -oL /home/user/int-wt/.run/server --port 35333 --map assets/a3d/game_map_y8.a3d.pre-npc-add",
+  "clients": {
+    "victim": "/home/user/int-wt/.run/game_term --skin grandma --map assets/a3d/game_map_y8.a3d.pre-npc-add -url player@127.0.0.1:35333/ws/y8/",
+    "decoy": "/home/user/int-wt/.run/game_term --skin default --map assets/a3d/game_map_y8.a3d.pre-npc-add -url decoy@127.0.0.1:35333/ws/y8/"
+  },
+  "server_log": {
+    "join": [
+      "[skin-select] join name=player outcome=matched profile_id=203 skin=104 slug=grandma_player tick=8",
+      "[SPAWN-DECISION] ci=0 tick=8 spawn_pos=(-2.800,-73.600,57.000) phys_pos=(-2.800,-73.600,57.000) phys_vel=(0.000,0.000,0.000) terrain_z=57.000 spawn_terrain_z=57.000 spawn_fallback_z=0.000 in_water=0.000 has_physics=1",
+      "[tick] Player 'player' joined as ID 0 tick=8 stamp_us=12924572048",
+      "[skin-select] join name=decoy outcome=default profile_id=201 skin=102 slug=wallace_player tick=15",
+      "[SPAWN-DECISION] ci=1 tick=15 spawn_pos=(-2.800,-73.600,57.000) phys_pos=(-2.800,-73.600,57.000) phys_vel=(0.000,0.000,0.000) terrain_z=57.000 spawn_terrain_z=57.000 spawn_fallback_z=0.000 in_water=0.000 has_physics=1",
+      "[tick] Player 'decoy' joined as ID 1 tick=15 stamp_us=12924804034"
+    ],
+    "death": [
+      "[death] tick=2709 target_id=0 target_kind=player target_index=0 attacker_id=50 hp_before=11 damage=18 pos=(26.737,-0.820,57.250)",
+      "[death] tick=2958 target_id=0 target_kind=player target_index=0 attacker_id=50 hp_before=22 damage=28 pos=(-2.725,-85.337,57.250)",
+      "[death] tick=3028 target_id=1 target_kind=player target_index=1 attacker_id=50 hp_before=15 damage=29 pos=(-26.047,-114.526,57.250)"
+    ],
+    "respawn": [
+      "[respawn] tick=2889 player_id=0 death_tick=2709 respawn_tick=2799 pos=(-2.800,-73.600,57.000)",
+      "[respawn] tick=3138 player_id=0 death_tick=2958 respawn_tick=3048 pos=(-2.800,-73.600,57.000)",
+      "[respawn] tick=3208 player_id=1 death_tick=3028 respawn_tick=3118 pos=(-2.800,-73.600,57.000)"
+    ],
+    "rapture": []
+  },
+  "client_log": {
+    "victim": [
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] All 9207 patches done, progress -> 3",
+      "[LOAD] progress=3: InitGame...",
+      "[LOAD] progress -> 0 (done)"
+    ],
+    "decoy": [
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] Processing 9207 patches incrementally (512/frame)...",
+      "[LOAD] All 9207 patches done, progress -> 3",
+      "[LOAD] progress=3: InitGame...",
+      "[LOAD] progress -> 0 (done)"
+    ]
+  },
+  "skin": "grandma",
+  "map": "assets/a3d/game_map_y8.a3d.pre-npc-add",
+  "killer_npc_eid": 50,
+  "death_seen_wall": 1791467475.9250169,
+  "window": "[death] -3.0 s .. +7.6 s (wall clock when the server log line appeared)",
+  "other_player_deaths": [],
+  "status_end": {
+    "victim": {
+      "x": -2.72,
+      "y": -85.34,
+      "z": 57.25,
+      "yaw": 86.0,
+      "dir": -102.4
+    },
+    "decoy": {
+      "x": -26.14,
+      "y": -106.7,
+      "z": 57.25,
+      "yaw": -57.4,
+      "dir": 167.6
+    }
+  },
+  "frames": 159,
+  "seconds": 10.53,
+  "recorded_from": "victim client"
+}

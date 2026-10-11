@@ -1,0 +1,26 @@
+[WATCHDOG 2026-10-10T19:49:40.896128+00:00 +00:00] [1/11 parse-config] INFO canonical run configured: run_id=manual-20261010-194939 mode=watchdog-only ssh= base_url=http://192.168.1.157:8765 ws=192.168.1.157:8080 commit_reset=0
+[WATCHDOG 2026-10-10T19:49:40.896167+00:00 +00:00] [2/11 worktree-and-commit] OK config status: worktree_clean=True non_canonical=False commit_all_and_reset=False controller=recipe
+[WATCHDOG 2026-10-10T19:49:40.897214+00:00 +00:00] [appearance-render-plan-preflight] OK retired source-era appearance preflight; FL-4162 authority verified
+[WATCHDOG 2026-10-10T19:49:40.897392+00:00 +00:00] [mounted-compose-preflight] OK retired source-era mounted compose preflight; FL-4162 authority verified
+[WATCHDOG 2026-10-10T19:49:41.068742+00:00 +00:00] [3/11 local-watchdog-checks] OK local playwright dependency ready
+[WATCHDOG 2026-10-10T19:49:41.068892+00:00 +00:00] [3/11 local-watchdog-checks] RUNNING Watchdog unit tests: command started
+[WATCHDOG 2026-10-10T19:49:41.114777+00:00 +00:00] [3/11 local-watchdog-checks] OK Watchdog unit tests: command exited rc=0
+[WATCHDOG 2026-10-10T19:49:41.114906+00:00 +00:00] [3/11 local-watchdog-checks] RUNNING Watchdog JS syntax check: command started
+[WATCHDOG 2026-10-10T19:49:41.156841+00:00 +00:00] [3/11 local-watchdog-checks] OK Watchdog JS syntax check: command exited rc=0
+[WATCHDOG 2026-10-10T19:49:41.156980+00:00 +00:00] [4/11 vps-health] WARN skipping VPS health for explicit local-only diagnostic proof
+[WATCHDOG 2026-10-10T19:49:41.157156+00:00 +00:00] [4/11 vps-health] RUNNING fetching pre-run slot manifest from http://192.168.1.157:8765
+[WATCHDOG 2026-10-10T19:49:41.171917+00:00 +00:00] [4/11 vps-health] OK pre-run slot manifest snapshot captured
+[WATCHDOG 2026-10-10T19:49:41.172402+00:00 +00:00] [5/11 reset-deploy] SKIP runtime reset/deploy skipped outside full mode
+[WATCHDOG 2026-10-10T19:49:41.172480+00:00 +00:00] [6/11 preflight] RUNNING Watchdog preflight: command started
+[WATCHDOG 2026-10-10T19:49:44.992384+00:00 +00:04] [6/11 preflight] OK Watchdog preflight: command exited rc=0
+[WATCHDOG 2026-10-10T19:49:44.993171+00:00 +00:04] [8/11 controller-setup] RUNNING controller attach enabled mode=recipe
+[WATCHDOG 2026-10-10T19:49:44.997991+00:00 +00:04] [8/11 controller-setup] OK controller attach setup done
+[WATCHDOG 2026-10-10T19:49:45.001644+00:00 +00:04] [9/11 launch-and-record] RUNNING Canonical watchdog launch: command started
+[WATCHDOG 2026-10-10T19:50:15.096862+00:00 +00:34] [9/11 launch-and-record] ALIVE Canonical watchdog launch: still running elapsed=30s
+[WATCHDOG 2026-10-10T19:50:45.101229+00:00 +01:04] [9/11 launch-and-record] ALIVE Canonical watchdog launch: still running elapsed=60s
+[WATCHDOG 2026-10-10T19:51:15.127302+00:00 +01:34] [9/11 launch-and-record] ALIVE Canonical watchdog launch: still running elapsed=90s
+[WATCHDOG 2026-10-10T19:51:45.141841+00:00 +02:04] [9/11 launch-and-record] ALIVE Canonical watchdog launch: still running elapsed=120s
+[WATCHDOG 2026-10-10T19:51:52.723037+00:00 +02:11] [9/11 launch-and-record] FAIL Canonical watchdog launch: command exited rc=1
+[WATCHDOG 2026-10-10T19:51:58.555239+00:00 +02:17] [10/11 analyze] RUNNING running post-run analyzer for manual-20261010-194939
+[WATCHDOG 2026-10-10T19:51:59.957224+00:00 +02:19] [10/11 analyze] OK post-run analyzer complete
+[WATCHDOG 2026-10-10T19:52:00.200508+00:00 +02:19] [11/11 receipt-summary] FAIL final summary ready verdict=fail exit_code=1

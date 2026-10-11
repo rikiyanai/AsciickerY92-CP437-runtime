@@ -1,0 +1,128 @@
+{
+  "schema": "actor_visual_custom_source_contract/v1",
+  "authority": true,
+  "source_owner": "target-authored standalone actor sheets",
+  "entry_count": 8,
+  "entries": [
+    {
+      "source_xp": "assets/sprites/2026-08-12-030327-wallace.xp",
+      "source_xp_id": "2026-08-12-030327-wallace",
+      "source_sha256": "0e2bd7823d3aab79007df8a1c6c58150b5bb3c7718a75ce0ae9df27e88adbc3a",
+      "source_commit": "f9ca59759fd46828e6cc320428ec7e6132dd4648",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "actor_body_wallace"
+      ],
+      "review_unit_id": "wallace-approved-sheet-L2"
+    },
+    {
+      "source_xp": "assets/sprites/2026-08-12-030327-gromit.xp",
+      "source_xp_id": "2026-08-12-030327-gromit",
+      "source_sha256": "e2e2a4212fb57c70ffc615c4c8539e336f7a9bc08b88e6c3648f37ec2a9b5bb5",
+      "source_commit": "f9ca59759fd46828e6cc320428ec7e6132dd4648",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "companion_body_gromit"
+      ],
+      "review_unit_id": "gromit-approved-sheet-L2"
+    },
+    {
+      "source_xp": "assets/sprites/2026-10-08-grandma-body.xp",
+      "source_xp_id": "2026-10-08-grandma-body",
+      "source_sha256": "4d7d910e784e4e74990050af4d4fd365013cec21fa540dfbdbaaa501214da180",
+      "source_commit": "fa40f3394497d2d445b75f946708d31f69b2fbc5",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "actor_body_grandma"
+      ],
+      "review_unit_id": "grandma-approved-body-sheet-L2"
+    },
+    {
+      "source_xp": "assets/sprites/2026-10-08-grandma-plydie.xp",
+      "source_xp_id": "2026-10-08-grandma-plydie",
+      "source_sha256": "37dde6a79feef7face4af96f8adc47d0b211ce3f26aa9413a1ea2c66b21c35dd",
+      "source_commit": "fa40f3394497d2d445b75f946708d31f69b2fbc5",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "actor_death_grandma"
+      ],
+      "review_unit_id": "grandma-approved-plydie-sheet-L2"
+    },
+    {
+      "source_xp": "assets/sprites/2026-10-08-dracula-body.xp",
+      "source_xp_id": "2026-10-08-dracula-body",
+      "source_sha256": "b3127c8dbc156a6acba65f9ecf82a2c323ff6e7ded76e51192fa35c1f9926205",
+      "source_commit": "fa40f3394497d2d445b75f946708d31f69b2fbc5",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "actor_body_dracula"
+      ],
+      "review_unit_id": "dracula-approved-body-sheet-L2"
+    },
+    {
+      "source_xp": "assets/sprites/2026-10-08-dracula-plydie.xp",
+      "source_xp_id": "2026-10-08-dracula-plydie",
+      "source_sha256": "5a60cf64d1a7a838efedbd5dfe30dd0da89954333f7ce09f427883422c6f3206",
+      "source_commit": "fa40f3394497d2d445b75f946708d31f69b2fbc5",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "actor_death_dracula"
+      ],
+      "review_unit_id": "dracula-approved-plydie-sheet-L2"
+    },
+    {
+      "source_xp": "assets/sprites/2026-10-08-witch-body.xp",
+      "source_xp_id": "2026-10-08-witch-body",
+      "source_sha256": "7ea87d660a9748e51988cf626b2b23b1bb3aac1507a57e4f5a4589465fdb30eb",
+      "source_commit": "fa40f3394497d2d445b75f946708d31f69b2fbc5",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "actor_body_witch"
+      ],
+      "review_unit_id": "witch-approved-body-sheet-L2"
+    },
+    {
+      "source_xp": "assets/sprites/2026-10-08-witch-plydie.xp",
+      "source_xp_id": "2026-10-08-witch-plydie",
+      "source_sha256": "84b45f1199374b29b65c7d2fdc2744e9b32c40b995a253961e916ee952b4fa65",
+      "source_commit": "fa40f3394497d2d445b75f946708d31f69b2fbc5",
+      "source_kind": "VERIFIED_STATE_LAYER",
+      "visual_layer_index": 2,
+      "render_operations": [
+        "seed_l2_base_accumulator"
+      ],
+      "semantic_contributions": [
+        "actor_death_witch"
+      ],
+      "review_unit_id": "witch-approved-plydie-sheet-L2"
+    }
+  ]
+}

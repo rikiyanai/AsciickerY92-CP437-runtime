@@ -1,0 +1,17 @@
+[project]
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (excluded by default via addopts)",
+    "gemini: marks Gemini AI provider tests (skip gracefully when GEMINI_API_KEY unset)",
+    "blender: marks Blender integration tests (skip gracefully when Blender unavailable)",
+    "e2e: browser-level end-to-end tests",
+    "real_asset_e2e: tests that validate behavior against real, checked-in assets",
+    "synthetic_unit: tests using generated/synthetic inputs for pure unit coverage only",
+]
+# IMPORTANT: Do NOT pass -m on the command line — it overrides this filter.
+# To run ALL tests including slow: pytest -o "addopts="
+addopts = "-v -m 'not slow'"
+testpaths = ["tests", "scripts"]
+norecursedirs = [".venv", "venv", ".mcp", "mcp_servers", "node_modules", ".git", "tests/blender"]

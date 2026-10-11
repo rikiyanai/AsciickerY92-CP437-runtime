@@ -1,0 +1,53 @@
+{
+  "authority_owner": "compiled_actor_visual_profile_table",
+  "compiler_cutover_complete": true,
+  "contract_authority": "reviewed_upstream_source_contract",
+  "coverage": {
+    "bound_source_ids": 120,
+    "compiled_rows": 205,
+    "frozen_raw_cells": 6807104,
+    "frozen_raw_layers": 573,
+    "pending_review_units": 0,
+    "server_reachable_keys": 205
+  },
+  "fl": "FL-4162",
+  "invariants": {
+    "composite_semantic_contribution_sets_first_class": true,
+    "local_ahsw_resolution_deleted": true,
+    "local_reachability_enumeration_deleted": true,
+    "per_key_legacy_merge_fallback_deleted": true,
+    "render_operation_separate_from_semantic_contributions": true,
+    "server_catalog_is_reachability_owner": true
+  },
+  "legacy_owner_deletion": {
+    "absent_compiler_symbols": [
+      "_ahs_digits",
+      "_resolve_source_xp",
+      "_enumerate_server_reachable_keys",
+      "merge_extra_layers=true"
+    ],
+    "absent_runtime_symbols": [
+      "ACTOR_VISUAL_LAYER_ROLE_",
+      "const bool merge_extra"
+    ],
+    "deleted_paths": [
+      "assets/actor_visual_profiles/source/layer_roles.json",
+      "scripts/promote_entries_to_layer_roles.py",
+      "scripts/lib/row_compose_policies.py",
+      "scripts/lib/semantic_roles.py"
+    ]
+  },
+  "rq": "RQ-200",
+  "runtime_authoritative": true,
+  "schema": "fl4162.compiler_cutover.v1",
+  "source_hashes": {
+    "cell_role_decisions_sha256": "8bb4417991204c47890488ddb6e73d350772023e901ae4842331070468cd9462",
+    "compiler_source_sha256": "1efd2d145127c1b3004f69fb16ae671fd4843ee6a0fd82c639560f28b3b270cd",
+    "custom_source_contract_sha256": "3af2ca057ccbf1ded194c08d44c9a7d81001e858a5b533f061cacdbeade81141",
+    "family_contract_freeze_sha256": "ab8490bd1c88bdbc0864a264af609b014733081b9fc0c65b905618162a4b1798",
+    "generated_provenance_sha256": "e9df42d78198a90f655bdfce6dd577d40a18f31603b7a1eba65888dba75893af",
+    "generated_table_sha256": "9ee8561a0aec0f5145b062d645486f02167ef9f7eb0debb42085f4cf9608b95d",
+    "profile_bindings_sha256": "d4b7da7126cf2b8d09bec379cb05e4aa8a585129aaf8a2302c2c0880c44c83e9",
+    "server_reachable_keys_sha256": "10099ae87c0e86465bd8be2b6114fb085ecd8b166836836375e13b87f7a9b123"
+  }
+}
