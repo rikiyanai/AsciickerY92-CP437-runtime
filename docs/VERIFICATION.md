@@ -1,31 +1,5 @@
 # Verification record
 
-## Standalone remote-player HP propagation (2026-10-10)
-
-The dropped remote-HP defect is Verified in a headed two-client local run; this
-does not promote the broader multiplayer surface to Accepted.
-
-- Run: `manual-20261010-194939`, two visible Chromium windows, active
-  `phase10-mounted-attack-death` controller, 36/36 recipe steps.
-- Both characters moved. Each client saw the other's body in 124/124 samples
-  and reported remote HP 100 in 124/124 samples, with zero HP-zero samples.
-- The earlier false standing-corpse signature was absent in all 248 combined
-  samples. Cross-tab HP/death mismatch and death-animation regression verdicts
-  were false.
-- The focused C++/pytest regression and the full 44-check standalone suite
-  pass; native server and web builds pass.
-- Full-candidate verdict remains FAIL (29/45): the recipe did not produce a
-  swing/damage/death surface, did not establish its mounted/pickup setup, and
-  did not meet the historical ten-position movement threshold. This run also
-  skipped VPS machine health and is local diagnostic evidence only.
-- FL-4162 compiled-table authority was checked directly. No deleted semantic
-  maps, phase-2 appearance fixtures, or standalone mount sprites were restored;
-  the replaced selector gate was retired for this run.
-
-Evidence is preserved under
-`docs/recordings/watchdog-cp437-active-two-tab-20261010/`; the detailed hashes
-and limitations are recorded in `docs/FAILURE_LOG.md`.
-
 ## Wallace/Gromit upright-rocket correction (2026-08-15)
 
 The current correction is Verified against the staged dirty source. It is not

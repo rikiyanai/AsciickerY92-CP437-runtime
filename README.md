@@ -21,8 +21,6 @@ The renderer keeps the original CP437 byte-cell path for glyph IDs `0..255`. Y9-
 
 ![Base, armor, helmet, sword, and movement transitions in the browser runtime](docs/recordings/armored-block-feature-gameplay.gif)
 
-[Detailed 956×386 layer-transition recording](docs/recordings/cp437-runtime-layer-transitions.gif)
-
 Many features added and refactored from Gumix's latest y9-2 release: 
 Bundle Refactor: Actor appearance is compiled from normalized REXPaint `.xp` source layers into runtime profiles. The server selects reachable appearance state, while the client resolves the corresponding layered presentation. The bundled data includes base sprites as well as equipment layers such as armor, helmets, and weapons.
 

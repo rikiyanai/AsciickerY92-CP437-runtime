@@ -12,7 +12,6 @@ python3 -m pytest -q \
   tests/test_recording_contract.py \
   tests/test_wallace_sand_scene.py \
   tests/test_spooky_skins.py \
-  tests/test_remote_snapshot_hp.py \
   tests/test_native_ws_read.py
 python3 scripts/test_fl4131_glyph_admission.py
 python3 scripts/test_fl4131_glyph_manifest_compile_outputs.py

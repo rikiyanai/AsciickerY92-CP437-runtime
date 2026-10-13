@@ -289,8 +289,6 @@ void AcceptRemoteActorPresentationSnapshot(
 	remote->mount_state = ent->mount_state;
 	remote->locomotion_state = ent->locomotion_state;
 	remote->combat_state = ent->combat_state;
-	remote->HP = ent->hp;
-	remote->MAX_HP = ent->max_hp;
 	remote->presentation_kind_id = ent->presentation_kind_id;
 	remote->presentation_selector_failure_reason = 0;
 	remote->presentation_started_tick = ent->presentation_started_tick;
