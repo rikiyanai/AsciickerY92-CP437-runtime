@@ -1574,7 +1574,7 @@ void Game::Render(uint64_t _stamp, AnsiCell* ptr, int width, int height)
 					(draw_h->inst && (!world || GetInstWorld(draw_h->inst) == world)) ? 1 : 0;
 				debug.dbg_remote0_inst_visible = remote_inst_visible ? 1 : 0;
 				debug.dbg_remote0_pid = remote_pid;
-				debug.dbg_remote0_hp = draw_h->HP;
+				debug.dbg_remote0_hp = 0;
 				debug.dbg_remote0_inst_cookie_match =
 					(draw_h->inst && GetInstSpriteData(draw_h->inst) == draw_h) ? 1 : 0;
 			}
@@ -2118,7 +2118,7 @@ void Game::Render(uint64_t _stamp, AnsiCell* ptr, int width, int height)
 
 			if (draw_h != &player && debug.dbg_remote0_pid < 0)
 			{
-				debug.dbg_remote0_hp = draw_h->HP;
+				debug.dbg_remote0_hp = 0;
 				debug.dbg_remote0_would_skip_death_check = 0;
 			}
 
@@ -2183,7 +2183,7 @@ void Game::Render(uint64_t _stamp, AnsiCell* ptr, int width, int height)
 				debug.dbg_remote0_has_inst = draw_h->inst ? 1 : 0;
 				debug.dbg_remote0_inst_world_match = (draw_h->inst && (!world || GetInstWorld(draw_h->inst) == world)) ? 1 : 0;
 				debug.dbg_remote0_inst_visible = (draw_h->inst && (GetInstFlags(draw_h->inst) & INST_VISIBLE)) ? 1 : 0;
-				debug.dbg_remote0_hp = draw_h->HP;
+				debug.dbg_remote0_hp = 0;
 				debug.dbg_remote0_inst_cookie_match =
 					(draw_h->inst && GetInstSpriteData(draw_h->inst) == draw_h) ? 1 : 0;
 				debug.dbg_remote0_would_skip_death_check = 0;
