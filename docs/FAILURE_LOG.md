@@ -2,6 +2,18 @@
 
 ## Numabe public saved-map/editor port — 2026-10-21
 
+- Recovery: the operator approved the single-branch exception. Ruleset
+  25459478 now also excludes only `refs/heads/numabe-publication` from its
+  non-main creation/update prohibition. Enforcement stays active, with no
+  bypass actors. The required attribution check and main integrity rules
+  are unchanged. Restore the original exclusion list (`refs/heads/main`
+  only) after the checked pull request is merged.
+- The first approved-rule command was intercepted by the local shell-source
+  materializer, which wrote a relative script under the Y9 checkout and then
+  failed to open it from the publication checkout. No API request ran in
+  that attempt. A reviewed, explicitly located Python helper applied the
+  exact single-branch exception and checked the returned rule state.
+
 - Publication commit `6c4ac3424e6d8b6fb6cf81d406b5b363f4cc490c`
   passed the local commit hooks. The ordinary push to `main` was rejected
   with GH013: required status check `AI attribution policy` is expected.
