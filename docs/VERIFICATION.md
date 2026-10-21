@@ -2,6 +2,14 @@
 
 ## Numabe saved-map/editor publication — 2026-10-21
 
+Publication is blocked by repository policy, not a file-size limit.
+Commit `6c4ac3424e6d8b6fb6cf81d406b5b363f4cc490c` exists locally and
+is resolvable on the server, but neither the protected-main push nor the
+publication-branch creation was accepted. The former requires a completed
+`AI attribution policy` check; the latter is prohibited for all non-main
+branches. No remote branch or README update is claimed. See the failure log
+for the exact rejected routes and pending narrow rule-exception approval.
+
 The public workspace is `numabe/`. It includes the current A3D world,3156
 map mesh basenames,19 sign XP files,2 train routes, the HTML editor and its
 Classic wasm bundle, all live Mapillary panorama references, aerial/reference

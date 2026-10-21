@@ -2,6 +2,23 @@
 
 ## Numabe public saved-map/editor port — 2026-10-21
 
+- Publication commit `6c4ac3424e6d8b6fb6cf81d406b5b363f4cc490c`
+  passed the local commit hooks. The ordinary push to `main` was rejected
+  with GH013: required status check `AI attribution policy` is expected.
+  A subsequent publication-branch transfer timed out with HTTP 408.
+  After connectivity recovered, the retry failed with GH013 because
+  repository rules restrict creation of every non-main branch. The server
+  can resolve the uploaded commit, but no branch points to it: this is not
+  publication. Main remains at `ab4ee1d8fc4c090d7ce4d4301c6075e66073edc1`.
+  Rule inspection confirmed no bypass actors for either policy. No rule
+  was changed, no check was fabricated, and no push was forced. Operator
+  approval is requested for a narrowly scoped temporary branch exception
+  so the real GitHub check can run before merging and restoring the rule.
+- Final local rerun: 60 tests passed, one historical fixture skipped and
+  the optional raw-acquisition test deselected. Exact staged-blob gate:
+  13,284 changed files, largest 51,971,284 bytes, all saved-map meshes
+  present, no raw surveys and the README GIF present. No sharding required.
+
 - Public export rerun:52 scoped tests passed,1 historical-build fixture
   skipped;8 ownership/portability/helper tests passed. Only the strict raw
   acquisition test is excluded from the default release suite and remains
