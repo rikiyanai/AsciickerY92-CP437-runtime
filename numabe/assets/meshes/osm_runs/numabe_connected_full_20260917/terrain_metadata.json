@@ -1,0 +1,15 @@
+{
+  "content_scale": 3.421334928531115,
+  "offset_x": 32.0,
+  "offset_y": 32.0,
+  "origin_easting": 379699.09478405997,
+  "origin_northing": 3938417.876643479,
+  "projection_kind": "epsg32654_affine",
+  "schema": "y92.classic_base_projection.v1",
+  "terrain_bounds": {
+    "max_x": 1488.0,
+    "max_y": 2208.0,
+    "min_x": 0,
+    "min_y": 0
+  }
+}

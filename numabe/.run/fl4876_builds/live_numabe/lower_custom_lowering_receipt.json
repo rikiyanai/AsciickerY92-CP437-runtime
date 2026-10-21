@@ -1,0 +1,43 @@
+{
+  "asset_plan": {
+    "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/custom_asset_plan.json",
+    "schema": "y92.custom_asset_plan.v1",
+    "sha256": "cb739834dd15bffb2dcecd7d92e1c3dc59b70d6be5d37bf913519d9161ccbedd"
+  },
+  "asset_specification_owner": "compile_custom_asset_plan.py",
+  "attached_to_building_face": 15,
+  "blank_sign_planes": 15,
+  "dispatch": {
+    "owner": "custom",
+    "placements_by_owner": {
+      "custom": 15,
+      "fixtures": 1487,
+      "linear": 1574,
+      "terminal": 26
+    },
+    "placements_for_owner": 15,
+    "placements_total": 3102,
+    "representation_plan_sha256": "6888b471904175469acad3d1dc62ff6e9803139577b85d489047653e98478ae6",
+    "schema": "y92.population_dispatch.v1",
+    "source_population_plan_sha256": "bc25c9ca67ca748a02ef38f335137bc5f867fd968ec2e667000071b78f0eee5f"
+  },
+  "instances_emitted": 15,
+  "lane": "lower_custom",
+  "mechanical_accounting": {
+    "consumed_placements": 15,
+    "emitted_instances": 15,
+    "planned_placements": 15,
+    "semantic_validation_owner": "compile_spatial_coherence_receipt.py"
+  },
+  "population_asset_plan": {
+    "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population_asset_plan.json",
+    "sha256": "b9d5a50dc09c47ee9185df467e8d1a9cff29717275ea50a60bda830384b95c05"
+  },
+  "spatial_provenance": {
+    "canonical_world_ir_sha256": "824004360e45596eee8146029adad07ffa2da1d66828d0ac0207089fd7ce0578",
+    "terrain_metadata_sha256": "52844db7aa2d97c5ebbe051b4ed1356099a803d6b470e3b86fba944d5d4592a6",
+    "world_units_per_metre": 5.1320023927966725
+  },
+  "unattached_count": 0,
+  "with_block_text": 0
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "y92.phase1_step1_official_road_bake.v1",
+  "scope_id": "numabe_connected_neighborhood_scope_20260915",
+  "pipeline_order": [
+    "official_road_map_classification",
+    "applicable_law_and_standard_selection",
+    "observed_feature_join",
+    "physical_registration",
+    "generation"
+  ],
+  "policy": "../../public_realm_corpora/jp/ota/doro_map_ota_phase1.json",
+  "classification": "official_road_classification.json",
+  "route": "connected_scope.geojson",
+  "receipt_name": "official_road_source_receipt.json",
+  "command": "python3 scripts/pipeline/official_road_source.py --policy assets/public_realm_corpora/jp/ota/doro_map_ota_phase1.json --classification assets/source_bundles/numabe_connected_neighborhood_scope_20260915/official_road_classification.json --route assets/source_bundles/numabe_connected_neighborhood_scope_20260915/connected_scope.geojson --out <run-root>/official_road_source_receipt.json",
+  "generation_gate": "No generation may start unless phase1_step1_gate.passed is true in a receipt fetched during the same run."
+}

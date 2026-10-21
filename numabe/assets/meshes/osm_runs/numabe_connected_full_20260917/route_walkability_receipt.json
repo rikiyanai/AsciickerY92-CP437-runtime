@@ -1,0 +1,65 @@
+{
+  "authority": {
+    "building_mass": "OSM footprints lowered to the A3D heightfield",
+    "clearance": "derived from the original Classic HUMAN collision radius",
+    "ground": "DEM-only terrain A3D",
+    "route": "Valhalla pedestrian routing over the frozen OSM network",
+    "runtime_acceptance": "FL-4816 headed Classic traversal remains required"
+  },
+  "code_refs": [
+    "engine/physics.cpp:1051",
+    "engine/physics.cpp:1054"
+  ],
+  "conflicting_building_sources": [],
+  "counts": {
+    "affected_building_masses": 0,
+    "corridor_samples": 36060,
+    "height_vertices_restored": 0,
+    "missing_samples": 0,
+    "post_blocked_samples": 0,
+    "pre_blocked_samples": 0,
+    "terrain_seam_mismatches": 0,
+    "visual_cells_restored": 13
+  },
+  "gates": {
+    "a3d_tail_preserved": true,
+    "collision_corridor_clear": true,
+    "route_inside_a3d_bounds": true,
+    "static_route_walkability_valid": true,
+    "terrain_seams_equal": true
+  },
+  "inputs": {
+    "building_map": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/output.a3d",
+    "building_map_sha256_before_clearance": "b4d0c11bce15326e770280a644d206fc8e49a6feeebd5afb5bf39e4c4f1586c9",
+    "building_specs": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/building_instances.json",
+    "route_source": "/Users/r/Downloads/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/valhalla_pedestrian_route.json",
+    "route_source_sha256": "51940b2d8bf273239805ab868dfdc242a47eb2bdf895ab52cbd2fcdf6874777b",
+    "terrain_map": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/terrain.a3d",
+    "terrain_map_sha256": "4a3f096af57571c9f4c9d85f90c8f941986f35c559e846e1866b8e1393018054",
+    "terrain_metadata": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/terrain_metadata.json"
+  },
+  "measurements": {
+    "max_centerline_grade": 0.31432933885981273,
+    "minimum_centerline_normal_z": 0.9539818123125616,
+    "post_max_building_rise_raw": 0.0,
+    "pre_max_building_rise_raw": 0.0,
+    "required_minimum_ground_normal_z": 0.8
+  },
+  "output": {
+    "map": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/output.a3d",
+    "map_sha256": "010cb238be93551876a018def16f8178d77f744439a37ee1b6bc81588e392f15"
+  },
+  "route": {
+    "classic_human_radius_m": 0.38971143170299744,
+    "classic_human_radius_world": 1.3333333333333333,
+    "encoded_points": 57,
+    "height_lattice_support_world": 4.161760458079524,
+    "length_m": 1041.7621157507763,
+    "length_world": 3564.217113838605,
+    "sample_step_world": 0.5,
+    "source_kind": "accepted_valhalla_pedestrian_route",
+    "source_reported_length_m": 1040.0
+  },
+  "schema": "y92.classic_route_walkability.v1",
+  "stage": "executed_static_artifact_attested"
+}

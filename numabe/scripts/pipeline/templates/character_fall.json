@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "name": "player_fall",
+  "type": "character",
+  "angles": 8,
+  "frames": [6],
+  "layout": {
+    "rows": "angles",
+    "cols": "sum(frames)"
+  },
+  "animations": [
+    {"name": "fall", "length": 6}
+  ],
+  "processing": {
+    "magenta_snap": true,
+    "palette_quantize": true,
+    "downscale": "box",
+    "normalization": true
+  },
+  "debug": {
+    "labels": true,
+    "label_format": "A{angle}-F{frame}",
+    "label_sheet": "debug/player_fall_labels.png"
+  }
+}

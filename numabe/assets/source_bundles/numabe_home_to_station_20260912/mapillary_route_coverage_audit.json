@@ -1,0 +1,121 @@
+{
+  "finding": "No surveyed Mapillary camera projects into the first 60 route metres; broadening lateral admission to 60m adds no home-end coverage. This audits the frozen survey only, not all possible providers or unseen imagery. Camera proximity is not facade visibility or accepted reconstruction coverage.",
+  "inputs": {
+    "numabe_home_to_station_aoi.geojson": "d11251e48929ddaf59a771c99ae14e7a6b111becda3f91d44a0a566820e5266d",
+    "route_imagery_survey.json": "17467b554fa8cc3e75e6c9b2b798704f3b9d51a1d539f1b81c3a5494116560ce"
+  },
+  "provider": "mapillary",
+  "route_bins": [
+    {
+      "chainage_interval_m": [
+        0,
+        60
+      ],
+      "nearest_candidates": [],
+      "within_25m": 0,
+      "within_60m": 0
+    },
+    {
+      "chainage_interval_m": [
+        60,
+        150
+      ],
+      "nearest_candidates": [
+        {
+          "chainage_m": 83.353,
+          "lateral_m": 1.598,
+          "picture_id": "924573248395982"
+        },
+        {
+          "chainage_m": 146.259,
+          "lateral_m": 127.647,
+          "picture_id": "2667804566851635"
+        },
+        {
+          "chainage_m": 148.776,
+          "lateral_m": 128.681,
+          "picture_id": "2216890255414540"
+        }
+      ],
+      "within_25m": 1,
+      "within_60m": 1
+    },
+    {
+      "chainage_interval_m": [
+        150,
+        240
+      ],
+      "nearest_candidates": [
+        {
+          "chainage_m": 196.084,
+          "lateral_m": 5.394,
+          "picture_id": "320465079646948"
+        },
+        {
+          "chainage_m": 218.56,
+          "lateral_m": 5.765,
+          "picture_id": "320855056383055"
+        },
+        {
+          "chainage_m": 200.024,
+          "lateral_m": 6.819,
+          "picture_id": "183098117015517"
+        }
+      ],
+      "within_25m": 3,
+      "within_60m": 3
+    },
+    {
+      "chainage_interval_m": [
+        240,
+        330
+      ],
+      "nearest_candidates": [
+        {
+          "chainage_m": 288.835,
+          "lateral_m": 0.011,
+          "picture_id": "1875914602747635"
+        },
+        {
+          "chainage_m": 288.835,
+          "lateral_m": 0.011,
+          "picture_id": "635302424935993"
+        },
+        {
+          "chainage_m": 289.783,
+          "lateral_m": 0.29,
+          "picture_id": "4132819600116881"
+        }
+      ],
+      "within_25m": 77,
+      "within_60m": 229
+    },
+    {
+      "chainage_interval_m": [
+        330,
+        430
+      ],
+      "nearest_candidates": [
+        {
+          "chainage_m": 404.356,
+          "lateral_m": 1.126,
+          "picture_id": "285356229796363"
+        },
+        {
+          "chainage_m": 408.038,
+          "lateral_m": 1.494,
+          "picture_id": "139010614903352"
+        },
+        {
+          "chainage_m": 390.837,
+          "lateral_m": 1.705,
+          "picture_id": "2897516127242020"
+        }
+      ],
+      "within_25m": 121,
+      "within_60m": 333
+    }
+  ],
+  "schema": "y92.imagery_coverage_audit.v1",
+  "survey_picture_count": 2324
+}

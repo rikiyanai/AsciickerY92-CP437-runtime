@@ -1,0 +1,90 @@
+{
+  "counts": {
+    "archetype_meshes_nonempty": 9,
+    "fixtures_emitted": 45,
+    "mesh_instances_embedded": 45,
+    "world_ir_crossings": 24,
+    "world_ir_fixtures": 17,
+    "world_ir_point_features": 45,
+    "world_ir_signs": 4,
+    "world_ir_utility_poles": 0
+  },
+  "fixtures_by_subtype": {
+    "bicycle_parking": 1,
+    "bollard": 1,
+    "bus_stop": 1,
+    "information_board": 4,
+    "pedestrian_crossing_marker": 24,
+    "post_box": 2,
+    "public_telephone": 2,
+    "stop_sign": 3,
+    "traffic_signal": 7
+  },
+  "instances": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/fixture_instances.json",
+  "locale_pack_chain": [
+    "common_global",
+    "japan",
+    "japan_urban",
+    "tokyo"
+  ],
+  "mesh_root": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/meshes",
+  "required_resolved_archetype_audit": [
+    {
+      "instances_attested": 7,
+      "passed": true,
+      "semantic_class": "traffic_signal",
+      "template_id": "jp.urban.traffic_signal_v1",
+      "visual_traits": [
+        "oriented_signal_face",
+        "road_edge_placement",
+        "three_aspect_signal"
+      ]
+    },
+    {
+      "instances_attested": 2,
+      "passed": true,
+      "semantic_class": "post_box",
+      "template_id": "jp.urban.post_box_v1",
+      "visual_traits": [
+        "pole_mounted_box",
+        "raised_mail_slot",
+        "red_jp_post_box"
+      ]
+    },
+    {
+      "instances_attested": 3,
+      "passed": true,
+      "semantic_class": "stop_sign",
+      "template_id": "jp.urban.stop_sign_v1",
+      "visual_traits": [
+        "inverted_triangle",
+        "road_edge_placement",
+        "white_border"
+      ]
+    },
+    {
+      "instances_attested": 4,
+      "passed": true,
+      "semantic_class": "information_board",
+      "template_id": "jp.urban.information_board_v1",
+      "visual_traits": [
+        "dual_wood_posts",
+        "pitched_gable_roof",
+        "wide_wooden_board"
+      ]
+    }
+  ],
+  "schema": "y92.world_ir_fixture_lowering.v1",
+  "selected_templates": {
+    "jp.urban.bicycle_parking_rack_v1": 1,
+    "jp.urban.bollard_v1": 1,
+    "jp.urban.bus_stop_v1": 1,
+    "jp.urban.information_board_v1": 4,
+    "jp.urban.pedestrian_crossing_marker_v1": 24,
+    "jp.urban.post_box_v1": 2,
+    "jp.urban.public_telephone_v1": 2,
+    "jp.urban.stop_sign_v1": 3,
+    "jp.urban.traffic_signal_v1": 7
+  },
+  "stage": "executed_artifact_attested"
+}

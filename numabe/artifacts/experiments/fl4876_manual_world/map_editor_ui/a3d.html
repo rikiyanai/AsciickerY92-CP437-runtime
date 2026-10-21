@@ -1,0 +1,497 @@
+<!doctype html>
+<!-- FL-4876 Numabe A3D editor. The Classic CP437 runtime (wasm, .web-classic/, served at /classic/) renders the
+     build's output.a3d; frames are presented with the exact Classic fragment shader
+     (platform/terminal_gl_present.cpp term_fs_src_classic) and the native font luminance->alpha conversion.
+     Editing UX lives in a 2D overlay + side panels; every operator action is written by map_editor.py into its
+     owner (queue.json / bookmarks.json / authored_*.json with journal) before the server replies.
+     Coordinates: classic world units; x,y = (E/N - origin) * content_scale + 32; z units = content_scale * 16 per m. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Numabe · CP437 Runtime Editor</title><link rel="icon" href="data:,">
+<style>
+:root{--bg:#000;--panel:#15151b;--ink:#e8e4da;--dim:#8f8a80;--acc:#ffd166;--cam:#55d8ef;--bad:#ff6b6b;--ok:#7bd88f;--note:#ff9f43}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:12px ui-monospace,Menlo,monospace;overflow:hidden}
+#bar{position:fixed;left:0;right:0;top:0;height:32px;display:flex;gap:5px;align-items:center;padding:0 6px;background:var(--panel);border-bottom:1px solid #333;z-index:5;white-space:nowrap;overflow-x:auto}
+#bar input[type=text]{width:260px;background:#0b0b0e;color:var(--ink);border:1px solid #444;font:inherit;padding:3px}
+button,select{background:#24242c;color:var(--ink);border:1px solid #4a4a55;font:inherit;padding:3px 7px;cursor:pointer}
+button.on{background:#5a4a12;border-color:var(--acc);color:#fff}.sep{color:#444}
+#stage{position:fixed;left:0;top:32px;bottom:22px;right:0}
+#gl,#ov{position:absolute;left:0;top:0;image-rendering:pixelated}#ov{pointer-events:none}
+#status{position:fixed;left:0;right:0;bottom:0;height:22px;background:var(--panel);border-top:1px solid #333;padding:3px 8px;color:var(--dim);z-index:5;white-space:nowrap;overflow:hidden}
+#where{position:fixed;left:8px;top:40px;background:#0d0d12e6;border:1px solid #333;padding:5px 8px;z-index:6;max-width:62vw;line-height:1.5}
+#where b{color:var(--acc)}#where a{color:var(--cam);margin-right:8px;cursor:pointer;text-decoration:underline}
+/* panels sit on the LEFT under the location box: the Classic minimap occupies the frame's top-right corner */
+.panel{position:fixed;top:118px;left:8px;width:340px;max-height:calc(100vh - 72px);overflow:auto;background:#15151bf2;border:1px solid #333;padding:8px;z-index:6;display:none}
+.panel h3{margin:6px 0 4px;color:var(--acc);font-size:12px}.panel label{display:block;padding:1px 0}
+.sw{display:inline-block;width:40px;height:18px;border:1px solid #555;vertical-align:middle;margin-right:4px}
+.chip{display:inline-block;width:22px;height:22px;margin:1px;border:1px solid #333;cursor:pointer}.chip:hover{outline:2px solid var(--acc)}
+.it{border-bottom:1px solid #2a2a30;padding:4px 0}.dim{color:var(--dim)}.bad{color:var(--bad)}
+.panel img{max-width:100%;border:1px solid #444;display:block;margin:4px 0}
+.acts button{margin:2px 2px 0 0}
+#dlg{position:fixed;left:50%;top:70px;transform:translateX(-50%);width:min(620px,94vw);background:var(--panel);border:1px solid var(--acc);padding:10px;display:none;z-index:9}
+#dlg textarea,#dlg input{width:100%;background:#0b0b0e;color:var(--ink);border:1px solid #444;font:inherit;margin-top:4px}
+#dlg textarea{height:90px}#dlg img{max-width:100%;max-height:220px;display:block;margin:6px 0;border:1px solid #444}
+#dlg .row{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+#drop{position:fixed;inset:32px 0 22px 0;border:3px dashed var(--acc);display:none;z-index:8;pointer-events:none;background:#ffd16614}
+#load{position:fixed;left:50%;top:45%;transform:translate(-50%,-50%);background:var(--panel);border:1px solid #444;padding:14px 18px;z-index:7;max-width:80vw}
+kbd{background:#2a2a33;border:1px solid #555;padding:0 3px}
+</style></head><body>
+<div id="bar">
+  <b style="color:var(--acc)" title="Owned by AsciickerY92-CP437-runtime/numabe; not the Y9 checkout">NUMABE · CP437</b>
+  <input id="goto" type="text" placeholder="go to: Maps/Street View URL · lat,lon · E N · x y · way id · mapillary id · bookmark">
+  <button id="bGo">Go</button><select id="bm" title="bookmarks"><option value="">★ bookmarks</option></select><button id="bBm" title="bookmark this view (B)">★+</button>
+  <span class="sep">|</span>
+  <button data-mode="select" class="on" title="select (1) — click / drag rect; shift adds">1 Select</button>
+  <button data-mode="rect" title="rect note (2)">2 Rect</button>
+  <button data-mode="draw" title="freehand note (3)">3 Draw</button>
+  <button data-mode="delete" title="click an object to delete (4)">4 Delete</button>
+  <button data-mode="measure" title="click two points (5)">5 Measure</button>
+  <span class="sep">|</span>
+  <button id="bPersp" title="perspective (T)">Persp</button>
+  <button id="bSyncIn" title="camera follows the Street View tab (relay extension) or the pano viewer">SV→A3D</button>
+  <button id="bSyncOut" title="the Street View tab follows this camera">A3D→SV</button>
+  <button id="bSV" title="open Street View at this camera">Street View ↗</button>
+  <button id="bPano" title="open the local panorama viewer (346 Mapillary panoramas)">Pano ↗</button>
+  <span class="sep">|</span>
+  <button id="bMini" class="on" title="Classic minimap (M)">Minimap</button>
+  <button id="bLayers" title="layers (L)">Layers</button><button id="bInsp" title="inspector (I)">Inspector</button>
+  <select id="font"></select><button id="bHelp">?</button>
+</div>
+<div id="stage"><canvas id="gl"></canvas><canvas id="ov"></canvas></div>
+<div id="where">locating…</div>
+<div id="layers" class="panel"><h3>Layers</h3>
+  <label><input type="checkbox" data-layer="panos" checked> panoramas (346; click → pano)</label>
+  <label><input type="checkbox" data-layer="fixtures" checked> authored fixtures — accepted</label>
+  <label><input type="checkbox" data-layer="rejected"> authored fixtures — rejected</label>
+  <label><input type="checkbox" data-layer="crops" checked> unresolved crops (camera → ray)</label>
+  <label><input type="checkbox" data-layer="notes" checked> my notes / queue</label>
+  <label><input type="checkbox" data-layer="labels"> building ids</label>
+  <label><input type="checkbox" data-layer="colours"> building wall / roof colours</label>
+  <label><input type="checkbox" data-layer="palette"> palette panel</label>
+  <div id="palette" style="display:none"><h3>Palette <span class="dim">(click = apply to selected building)</span></h3>
+    <label><input type="radio" name="prole" value="wall" checked> wall</label><label><input type="radio" name="prole" value="roof"> roof</label><label><input type="radio" name="prole" value="trim"> trim</label>
+    <div id="chips"></div></div>
+</div>
+<div id="insp" class="panel"><h3>Inspector</h3><div id="inspBody" class="dim">select something (mode 1)</div></div>
+<div id="help" class="panel" style="width:380px;line-height:1.6"><h3>Keys</h3>
+<kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move · <kbd>Q</kbd>/<kbd>E</kbd> turn · wheel zoom · right-drag or space-drag pan · <kbd>T</kbd> perspective · <kbd>R</kbd>/<kbd>F</kbd> height (persp) · <kbd>H</kbd> home<br>
+<kbd>1</kbd> select <kbd>2</kbd> rect note <kbd>3</kbd> draw <kbd>4</kbd> delete <kbd>5</kbd> measure · <kbd>Esc</kbd> back to select<br>
+<kbd>N</kbd> note on selection · <kbd>Del</kbd> delete selection · <kbd>B</kbd> bookmark · <kbd>G</kbd> go-to box · <kbd>L</kbd> layers · <kbd>I</kbd> inspector<br>
+Drag a screenshot or an image from another tab onto a building, or <kbd>⌘V</kbd> over it → label + instruction. <kbd>⌘V</kbd> of a Maps/Street View URL jumps there.<br>
+<b>Facade capture</b>: click a wall (the face outlines; ◀ ▶ in the inspector cycles faces) → <kbd>⌘V</kbd> a photo of it over the wall (or a queued image: <i>Facade capture from this image</i>) → drag the 4 corners → box sign / storefront / wall bands → it shows in the map live → Accept.<br>
+<b>Logo / sign graphic</b>: drag a picture from Google Images (e.g. "FamilyMart logo", a transparent PNG) onto the wall → it opens as <i>logo</i> (whole image into a box, transparent parts stay see-through) → move / resize the box on the face → Accept.<br>
+<b>Double-click</b> a building (select mode) → the camera stands square in front of that face; <i>Street View here</i> then opens the matching view. The location bar and the inspector copy lat,lon, the building id and its address.<br>
+Unresolved crop: select its orange marker → <i>Place</i> → click where the thing really is.<br>
+Street View → A3D: load the relay extension once (chrome://extensions → Developer mode → Load unpacked → artifacts/experiments/fl4876_manual_world/streetview_pose_extension), or paste the URL.</div>
+<div id="drop"></div><div id="status">loading…</div><div id="load">Loading the Classic runtime and the map…</div>
+<div id="dlg"><div id="dlgTitle"></div><img id="dlgImg" hidden><input id="dlgLabel" placeholder="label"><textarea id="dlgText" placeholder="what should I do here? (⌘Enter saves)"></textarea>
+<div class="row"><button id="dlgCancel">Cancel (Esc)</button><button id="dlgOk">Save (⌘Enter)</button></div></div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), gl=$('gl').getContext('webgl2',{antialias:false,preserveDrawingBuffer:true}), ov=$('ov'), octx=ov.getContext('2d');
+const chan=new BroadcastChannel('numabe-map-editor'), HOME_Q='725138644';
+const S={cam:{x:1190,y:1010,z:0,yaw:0,zoom:1,persp:0},font:{img:null,px:12},cols:0,rows:0,mode:'select',keys:new Set(),
+  notes:[],draft:null,dirty:true,ready:false,metaScale:3.4213,zs:3.4213*16,bakeLeft:-1,syncIn:false,syncOut:false,
+  layers:{panos:true,fixtures:true,rejected:false,crops:true,notes:true,labels:false,colours:false,palette:false},
+  L:null,zc:new Map(),sel:[],measure:[],placing:null,svMark:null,where:null,objs:null};
+// status(t): an action's message ("copied ...", "facing ...") stays up 6 s; hud(t) is the per-frame camera line and
+// only shows when no message is fresh (EDITOR-UX-02 browser check: present() used to overwrite every message at once)
+let msgUntil=0;const status=t=>{$('status').textContent=t;msgUntil=performance.now()+6000},hud=t=>{if(performance.now()>msgUntil)$('status').textContent=t}, esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const clog=(event,detail)=>{try{fetch('/api/client_log',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({page:'a3d',event,detail})})}catch(e){}};
+addEventListener('error',e=>clog('error',`${e.message} @${e.filename}:${e.lineno}`));addEventListener('unhandledrejection',e=>clog('rejection',String(e.reason)));
+async function api(u,b){const r=await fetch(u,b?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}:{});const j=await r.json();if(!r.ok)throw new Error(j.error||r.status);return j}
+// ---------------------------------------------------------------------------------------------
+// RT: the only place that touches the wasm exports (apps/game-classic/web_classic_main.cpp).
+// ROW0_BOTTOM: the AnsiCell buffer is bottom-up (row 0 = screen bottom; native cell_coord = uv * viewport).
+// Yaw: forward = (-sin yaw, cos yaw), world +x east / +y north, so classic yaw = -compass heading.
+// Perspective is the engine's 'architectural' camera: pos is the look TARGET, the eye is 2+max(cols,rows)
+// world units behind it and tan30 x that above it (render_scene.cpp focal + the fixed 30 degree tilt), and depth is
+// height (render_world_pass.cpp:849), so it cannot stand at street level (editor_views.js game view notes).
+// ---------------------------------------------------------------------------------------------
+const RT={ROW0_BOTTOM:true, YAW_OF_HEADING:h=>((-h%360)+360)%360, HEADING_OF_YAW:y=>((-y%360)+360)%360,
+  f:{}, init(){const M=window.Module,c=(n,r,a)=>{try{return M.cwrap(n,r,a)}catch(e){return null}};
+    this.f={load:c('ClassicLoadMap','number',['string','string']),cam:c('ClassicSetCamera',null,['number','number','number','number','number','number']),
+      render:c('ClassicRender','number',['number','number']),pick:c('ClassicPickJson','string',['number','number']),
+      proj:c('ClassicProjectJson','string',['number','number','number']),ground:c('ClassicGroundJson','string',['number','number']),
+      opts:c('ClassicSetLoadOptions',null,['number']),bake:c('ClassicBakeTerrainDark','number',['number']),minimap:c('ClassicSetMinimap',null,['number']),
+      pvAdd:c('ClassicPreviewSpriteAdd','number',['string','number','number','number','number']),pvRemove:c('ClassicPreviewSpriteRemove',null,['number']),
+      setVis:c('ClassicSetInstVisible','number',['string','number'])};},
+  setCam(c){this.f.cam(c.x,c.y,c.z,c.yaw,c.zoom,c.persp)}, render(w,h){return this.f.render(w,h)},
+  pick(cx,cyTop){const cy=this.ROW0_BOTTOM?S.rows-1-cyTop:cyTop;try{const h=JSON.parse(this.f.pick(cx,cy));return h&&h.hit?h:null}catch(e){return null}},
+  project(x,y,z){try{const p=JSON.parse(this.f.proj(x,y,z));if(!p||!p.visible)return null;return {cx:p.cx,cy:this.ROW0_BOTTOM?S.rows-1-p.cy:p.cy}}catch(e){return null}},
+  ground(x,y){try{const g=JSON.parse(this.f.ground(x,y));return g.hit?g:null}catch(e){return null}}};
+// ---------------------------------------------------------------------------------------------
+// Presenter: WebGL2 port of term_fs_src_classic (identical math; GLSL ES 3.00).
+// ---------------------------------------------------------------------------------------------
+const TERM_VS_SRC=`#version 300 es
+in vec2 uv; uniform ivec2 ansi_vp; out vec2 cell_coord;
+void main(){gl_Position=vec4(2.0*uv-vec2(1.0),0.0,1.0);cell_coord=uv*vec2(ansi_vp);}`;
+const TERM_FS_SRC=`#version 300 es
+precision highp float; out vec4 color; uniform sampler2D ansi; uniform sampler2D font; uniform ivec2 ansi_wh; in vec2 cell_coord;
+vec3 Pal(float p){p=clamp(floor(p-16.0+0.5),0.0,215.0);float blue=floor(p/36.0);p-=36.0*blue;float green=floor(p/6.0);float red=p-6.0*green;return vec3(blue,green,red)*0.2;}
+void main(){vec2 quot_cell=floor(cell_coord);vec2 frac_cell=fract(cell_coord);vec2 ansi_coord=(quot_cell+vec2(0.5))/vec2(ansi_wh);
+  vec4 cell=texture(ansi,ansi_coord);int glyph_idx=int(round(cell.b*255.0));frac_cell.y=1.0-frac_cell.y;
+  vec2 glyph_coord=(vec2(float(glyph_idx&0xF),float(glyph_idx>>4))+frac_cell)/vec2(16.0);
+  float glyph_alpha=texture(font,glyph_coord).a;vec3 fg_color=Pal(cell.x*255.0);vec3 bg_color=Pal(cell.y*255.0);
+  color=vec4(mix(bg_color,fg_color,glyph_alpha),1.0);}`;
+let prog,texAnsi,texFont,uVp,uWh;
+function sh(t,s){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(o));return o}
+function glInit(){prog=gl.createProgram();gl.attachShader(prog,sh(gl.VERTEX_SHADER,TERM_VS_SRC));gl.attachShader(prog,sh(gl.FRAGMENT_SHADER,TERM_FS_SRC));gl.linkProgram(prog);
+  if(!gl.getProgramParameter(prog,gl.LINK_STATUS))throw new Error(gl.getProgramInfoLog(prog));gl.useProgram(prog);
+  const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([0,0,1,0,0,1,1,1]),gl.STATIC_DRAW);
+  const a=gl.getAttribLocation(prog,'uv');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
+  uVp=gl.getUniformLocation(prog,'ansi_vp');uWh=gl.getUniformLocation(prog,'ansi_wh');
+  gl.uniform1i(gl.getUniformLocation(prog,'ansi'),0);gl.uniform1i(gl.getUniformLocation(prog,'font'),1);
+  texAnsi=gl.createTexture();texFont=gl.createTexture();
+  for(const t of [texAnsi,texFont]){gl.bindTexture(gl.TEXTURE_2D,t);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE)}}
+// cp437_*.png atlases are RGB; native MyFont::Load (game_app.cpp) -> ConvertLuminance_UI32_LLZZYYXX (rgba8.cpp):
+// alpha = (2R + 3G + B + 3) / 6, rgb = white. The shader reads glyph coverage from .a.
+// onload, not img.decode(): decode() stays pending while the tab is hidden (measured: boot stalled in a background tab)
+async function loadFont(name){const img=new Image();await new Promise((ok,bad)=>{img.onload=ok;img.onerror=()=>bad(new Error('font '+name));img.src='/fonts/'+name});S.font={img,px:img.width/16,name};
+  const cv=document.createElement('canvas');cv.width=img.width;cv.height=img.height;const x=cv.getContext('2d');x.drawImage(img,0,0);
+  const d=x.getImageData(0,0,img.width,img.height).data,lum=new Uint8Array(d.length);
+  for(let i=0;i<d.length;i+=4){lum[i]=lum[i+1]=lum[i+2]=255;lum[i+3]=Math.floor((d[i]*2+d[i+1]*3+d[i+2]+3)/6)}
+  gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,texFont);gl.pixelStorei(gl.UNPACK_ALIGNMENT,1);
+  gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,img.width,img.height,0,gl.RGBA,gl.UNSIGNED_BYTE,lum);
+  try{localStorage.setItem('numabe-a3d-font',name)}catch(e){}layout()}
+function layout(){const st=$('stage'),W=st.clientWidth,H=st.clientHeight,px=S.font.px||12;S.cols=Math.max(8,Math.floor(W/px));S.rows=Math.max(6,Math.floor(H/px));
+  const cw=S.cols*px,ch=S.rows*px,d=devicePixelRatio||1;for(const c of [$('gl'),ov]){c.style.width=cw+'px';c.style.height=ch+'px';c.width=Math.round(cw*d);c.height=Math.round(ch*d)}S.dirty=true}
+// blit: one AnsiCell frame (cols x rows) through the Classic presenter into #gl at its current size
+function blit(ptr,cols,rows){const cells=new Uint8Array(Module.HEAPU8.buffer,ptr,cols*rows*4);
+  gl.viewport(0,0,$('gl').width,$('gl').height);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texAnsi);
+  gl.pixelStorei(gl.UNPACK_ALIGNMENT,1);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,cols,rows,0,gl.RGBA,gl.UNSIGNED_BYTE,cells);
+  gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,texFont);gl.uniform2i(uVp,cols,rows);gl.uniform2i(uWh,cols,rows);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)}
+// Game view (FL-4876, operator 2026-10-18 "the first person view mode needs actual game mode"): editor_views.js first
+// person hands a panel rect [x,y,w,h] (CSS px in #stage) and the game camera; the Classic frame is rendered for that
+// panel and #gl is moved onto it. S.cols / S.rows follow the panel so RT.pick / RT.project stay consistent with the
+// frame on screen; gameEnd() puts #gl back on the full stage (layout()).
+let gameRect=null;
+function gamePresent(rect,cam){if(!S.ready||!S.font.img)return null;const px=S.font.px,d=devicePixelRatio||1,g=$('gl');
+  const cols=Math.max(8,Math.floor(rect[2]/px)),rows=Math.max(6,Math.floor(rect[3]/px)),cw=cols*px,ch=rows*px,L=rect[0]+Math.floor((rect[2]-cw)/2),T=rect[1]+Math.floor((rect[3]-ch)/2);
+  if(!gameRect){const dd=devicePixelRatio||1;octx.setTransform(dd,0,0,dd,0,0);octx.clearRect(0,0,ov.width,ov.height)} // no stale Classic markers in a note shot
+  g.style.left=L+'px';g.style.top=T+'px';g.style.width=cw+'px';g.style.height=ch+'px';const W=Math.round(cw*d),H=Math.round(ch*d);if(g.width!==W)g.width=W;if(g.height!==H)g.height=H;
+  S.cols=cols;S.rows=rows;gameRect=[L,T,cw,ch];RT.setCam(cam);const ptr=RT.render(cols,rows);if(!ptr)return null;blit(ptr,cols,rows);return {cols,rows,rect:gameRect}}
+function gameEnd(){if(!gameRect)return;gameRect=null;const g=$('gl');g.style.left=g.style.top='0px';layout();S.dirty=true}
+function present(){if(gameRect&&typeof EV!=='undefined'&&EV.active()){EV.redraw();return} // the game view owns #gl while it is on
+  if(!S.ready||!S.font.img)return;RT.setCam(S.cam);const ptr=RT.render(S.cols,S.rows);if(!ptr)return;blit(ptr,S.cols,S.rows);
+  drawOverlay();const c=S.cam;
+  hud(`target x ${c.x.toFixed(1)} y ${c.y.toFixed(1)} · heading ${RT.HEADING_OF_YAW(c.yaw).toFixed(0)}° · zoom ${c.zoom.toFixed(2)} · ${c.persp?'perspective':'classic'} · ${S.cols}×${S.rows} ${S.font.name} · mode ${S.mode}${S.placing?' (placing crop: click its true spot)':''}${S.syncIn?' · SV→A3D':''}${S.syncOut?' · A3D→SV':''}${S.bakeLeft>0?` · baking terrain shadows ${S.bakeLeft}`:''}`)}
+// ---------------------------------------------------------------------------------------------
+// Overlay layers. Markers are world points (z = cached terrain height) re-projected every frame and culled to
+// a radius around the camera target so 2000+ markers stay cheap.
+// ---------------------------------------------------------------------------------------------
+const cellCss=p=>[(p.cx+.5)*S.font.px,(p.cy+.5)*S.font.px];
+function zAt(x,y,top){const k=(x|0)+','+(y|0)+(top?'t':'');if(S.zc.has(k))return S.zc.get(k);const g=RT.ground(x,y);const z=g?(top?g.top_z:g.terrain_z):S.cam.z;S.zc.set(k,z);return z}
+function scr(x,y,z){const p=RT.project(x,y,z??zAt(x,y));return p?cellCss(p):null}
+const near=(o,R)=>Math.abs(o.x-S.cam.x)<R&&Math.abs(o.y-S.cam.y)<R;
+let hitList=[]; // [{kind,id,x,y(screen),data}] rebuilt per frame for select hit-testing
+function drawOverlay(){const d=devicePixelRatio||1;octx.setTransform(d,0,0,d,0,0);octx.clearRect(0,0,ov.width,ov.height);hitList=[];
+  const R=Math.max(S.cols,S.rows)*1.6/S.cam.zoom,L=S.L,isSel=(k,id)=>S.sel.some(s=>s.kind===k&&s.id===id);octx.font='bold 11px ui-monospace';
+  if(L){
+    if(S.layers.colours||S.layers.labels)for(const b of L.buildings){if(!near(b,R))continue;const p=scr(b.x,b.y,zAt(b.x,b.y,true));if(!p)continue;
+      if(S.layers.colours){if(b.wall){octx.fillStyle=`rgb(${b.wall})`;octx.fillRect(p[0]-10,p[1]-6,10,12)}if(b.roof){octx.fillStyle=`rgb(${b.roof})`;octx.fillRect(p[0],p[1]-6,10,12)}octx.strokeStyle='#000';octx.strokeRect(p[0]-10,p[1]-6,20,12)}
+      if(S.layers.labels){octx.fillStyle='#fff';octx.fillText(b.id.split('/').pop(),p[0]+12,p[1]+4)}}
+    if(S.layers.panos)for(const o of L.panoramas){if(!near(o,R))continue;const p=scr(o.x,o.y);if(!p)continue;const h=o.heading??o.compass,r=RT.YAW_OF_HEADING(h)*Math.PI/180;
+      const q=scr(o.x-Math.sin(r)*4*S.metaScale,o.y+Math.cos(r)*4*S.metaScale,zAt(o.x,o.y));octx.strokeStyle=octx.fillStyle=isSel('pano',o.id)?'#ffd166':o.heading==null?'#ff6b6b':'#55d8ef';
+      octx.lineWidth=2;octx.beginPath();octx.arc(p[0],p[1],4,0,7);octx.fill();if(q){octx.beginPath();octx.moveTo(...p);octx.lineTo(...q);octx.stroke()}hitList.push({kind:'pano',id:o.id,p,data:o})}
+    for(const o of L.fixtures){const acc=o.status==='accepted';if(acc?!S.layers.fixtures:!S.layers.rejected)continue;if(!near(o,R))continue;const p=scr(o.x,o.y);if(!p)continue;
+      octx.fillStyle=isSel('fixture',o.id)?'#ffd166':acc?'#ff6bd6':'#777';octx.fillRect(p[0]-3,p[1]-3,6,6);if(!acc){octx.strokeStyle='#bbb';octx.beginPath();octx.moveTo(p[0]-4,p[1]-4);octx.lineTo(p[0]+4,p[1]+4);octx.stroke()}
+      if(S.cam.zoom>1.6||isSel('fixture',o.id)){octx.fillStyle='#ddd';octx.fillText(o.module||'',p[0]+6,p[1]+4)}hitList.push({kind:'fixture',id:o.id,p,data:o})}
+    if(S.layers.crops){const by={};for(const o of L.crops){if(!near(o,R))continue;(by[o.capture]=by[o.capture]||[]).push(o)}
+      for(const list of Object.values(by)){const o0=list[0],p=scr(o0.x,o0.y);if(!p)continue;
+        list.forEach((o,i)=>{const r=RT.YAW_OF_HEADING(o.bearing)*Math.PI/180,L2=18*S.metaScale,q=scr(o.x-Math.sin(r)*L2,o.y+Math.cos(r)*L2,zAt(o.x,o.y));const on=isSel('crop',o.id);
+          if(q){octx.strokeStyle=on?'#ffd166':'#ff9f4388';octx.lineWidth=on?2:1;octx.setLineDash([3,3]);octx.beginPath();octx.moveTo(...p);octx.lineTo(...q);octx.stroke();octx.setLineDash([]);
+            octx.fillStyle=on?'#ffd166':'#ff9f43';octx.beginPath();octx.moveTo(q[0],q[1]-5);octx.lineTo(q[0]+4,q[1]+3);octx.lineTo(q[0]-4,q[1]+3);octx.fill();hitList.push({kind:'crop',id:o.id,p:q,data:o})}});
+        octx.fillStyle='#ff9f43';octx.fillText(list.length+' crop'+(list.length>1?'s':''),p[0]+6,p[1]-6)}}}
+  if(S.layers.notes)for(const n of S.notes){const pts=(n.world_points||[]).map(w=>RT.project(w[0],w[1],w[2]??0)).filter(Boolean).map(cellCss);if(!pts.length)continue;
+    octx.strokeStyle=octx.fillStyle=n.status==='open'?'#ff9f43':'#7bd88f';octx.lineWidth=2;
+    if(n.kind==='draw'&&pts.length>1){octx.beginPath();pts.forEach((p,i)=>i?octx.lineTo(...p):octx.moveTo(...p));octx.stroke()}
+    else if(n.kind==='rect'&&pts.length>=4){octx.beginPath();pts.slice(0,4).forEach((p,i)=>i?octx.lineTo(...p):octx.moveTo(...p));octx.closePath();octx.stroke()}
+    else{octx.beginPath();octx.arc(pts[0][0],pts[0][1],5,0,7);octx.fill()}
+    octx.fillText(((n.label||n.text||n.kind)+'').slice(0,40)+' '+n.id.slice(-4),pts[0][0]+7,pts[0][1]-6);hitList.push({kind:'note',id:n.id,p:pts[0],data:n})}
+  for(const s of S.sel)if(s.kind==='building'&&s.world){const p=scr(...s.world);if(p){octx.strokeStyle='#ffd166';octx.lineWidth=2;octx.strokeRect(p[0]-9,p[1]-9,18,18);octx.fillStyle='#ffd166';octx.fillText(s.id.split('/').pop(),p[0]+11,p[1]-8)}}
+  for(const s of S.sel)if(s.kind==='inst'&&s.world){const p=scr(...s.world);if(p){octx.strokeStyle='#ffd166';octx.lineWidth=2;octx.beginPath();octx.arc(p[0],p[1],8,0,7);octx.stroke()}}
+  if(S.svMark){const p=scr(S.svMark.x,S.svMark.y);if(p){octx.strokeStyle=octx.fillStyle='#55d8ef';octx.lineWidth=2;octx.beginPath();octx.arc(p[0],p[1],7,0,7);octx.stroke();octx.fillText((S.svMark.kind||'')+' camera '+Math.round(S.svMark.heading??0)+'°',p[0]+9,p[1]+4)}}
+  if(typeof FC!=='undefined')FC.drawOverlay(octx); // selected face outline + capture bands (facade_capture.js)
+  if(S.measure.length){const ps=S.measure.map(w=>scr(...w)).filter(Boolean);octx.strokeStyle=octx.fillStyle='#7bd88f';octx.lineWidth=2;octx.beginPath();ps.forEach((p,i)=>i?octx.lineTo(...p):octx.moveTo(...p));octx.stroke();
+    ps.forEach(p=>{octx.beginPath();octx.arc(p[0],p[1],3,0,7);octx.fill()});if(S.measure.length===2&&ps.length===2){const [a,b]=S.measure,h=Math.hypot(a[0]-b[0],a[1]-b[1])/S.metaScale,v=(b[2]-a[2])/S.zs;
+      octx.fillText(`${h.toFixed(2)} m horizontal · ${v>=0?'+':''}${v.toFixed(2)} m vertical`,ps[1][0]+8,ps[1][1]-8)}}
+  const dr=S.draft;if(dr){octx.strokeStyle='#ffd166';octx.lineWidth=2;octx.setLineDash(dr.kind==='draw'?[]:[5,3]);
+    if(dr.kind==='draw'){octx.beginPath();dr.css.forEach((p,i)=>i?octx.lineTo(...p):octx.moveTo(...p));octx.stroke()}
+    else{const [a,b]=dr.css;octx.strokeRect(Math.min(a[0],b[0]),Math.min(a[1],b[1]),Math.abs(a[0]-b[0]),Math.abs(a[1]-b[1]))}octx.setLineDash([])}}
+// ---------------------------------------------------------------------------------------------
+// Camera, location label, sync
+// ---------------------------------------------------------------------------------------------
+let LOOK_M=12; // replica looks at the point this far ahead of a Street View / pano camera (see RT note)
+function goPose(p,from){if(!p||!isFinite(p.x))return;const c=S.cam;if(p.heading_deg!=null)c.yaw=RT.YAW_OF_HEADING(p.heading_deg);
+  let tx=p.target_x??p.x,ty=p.target_y??p.y;
+  if(p.kind==='streetview'||p.kind==='panorama'){const r=c.yaw*Math.PI/180,d=LOOK_M*S.metaScale;tx=p.x-Math.sin(r)*d;ty=p.y+Math.cos(r)*d;S.svMark={x:p.x,y:p.y,heading:p.heading_deg,kind:p.kind}}
+  c.x=tx;c.y=ty;c.z=zAt(tx,ty);$('bPersp').classList.toggle('on',!!c.persp);S.dirty=true;camMoved(from)}
+// The Street View viewpoint for the current view: LOOK_M behind the target along the heading (inverse of goPose).
+function svPoint(){const c=S.cam,r=c.yaw*Math.PI/180,d=LOOK_M*S.metaScale;return [c.x+Math.sin(r)*d,c.y-Math.cos(r)*d]}
+async function goto(q){q=(q||'').trim();const bm=(S.bookmarks||[]).find(b=>b.name===q);
+  if(bm&&bm.q){q=bm.q}else if(bm){Object.assign(S.cam,bm.camera);S.dirty=true;camMoved();return}
+  try{const r=await api('/api/locate?q='+encodeURIComponent(q));goPose(r);status(`→ ${r.kind}${r.building_id?' '+r.building_id.split(':').pop():''}`);
+    if(r.kind==='building')selectThing({kind:'building',id:r.building_id,world:[r.target_x,r.target_y,zAt(r.target_x,r.target_y,true)],face:r.face_index})}catch(e){status('go to failed: '+e.message)}}
+let settleT=null;
+function camMoved(from){clearTimeout(settleT);settleT=setTimeout(async()=>{const c=S.cam;
+  try{S.where=await api(`/api/where?x=${c.x}&y=${c.y}`);showWhere()}catch(e){}
+  if(S.syncOut&&from!=='sv')openSV(true)},350)}
+function showWhere(){const w=S.where;if(!w)return;const h=RT.HEADING_OF_YAW(S.cam.yaw).toFixed(0);
+  $('where').innerHTML=`<b>${w.building_id?esc(w.building_id.split(':').pop()):'street / open ground'}</b>${w.place?` · near <b>${esc(w.place.name)}</b> <span class="dim">(${esc(w.place.kind)}, ${w.place.dist_m} m)</span>`:''}${w.road?` · ${esc(w.road.name)} <span class="dim">(${esc(w.road.kind)}, ${w.road.dist_m} m)</span>`:''}<br>
+   ${w.lat.toFixed(7)}, ${w.lon.toFixed(7)} <span class="dim">· E ${w.E} N ${w.N} · x ${w.x.toFixed(1)} y ${w.y.toFixed(1)} · facing ${h}°</span><br>
+   <a id="wCopy">copy lat,lon</a>${w.building_id?'<a id="wAddr">copy address</a><a id="wId">copy building id</a>':''}<a id="wSV">Street View here</a><a id="wBm">bookmark</a>`;
+  $('wCopy').onclick=()=>navigator.clipboard.writeText(`${w.lat.toFixed(7)}, ${w.lon.toFixed(7)}`).then(()=>status('copied '+w.lat+','+w.lon));
+  if(w.building_id){$('wAddr').onclick=()=>copyAddress(w.building_id);$('wId').onclick=()=>navigator.clipboard.writeText(w.building_id.split(':').pop()).then(()=>status('copied '+w.building_id.split(':').pop()))}
+  $('wSV').onclick=()=>openSV(false);$('wBm').onclick=bookmarkDlg}
+// Postal address of a building (map_editor.py World.address): a listing's exact address, else the GSI
+// residence-indication point (番-号) inside the footprint, else the nearest GSI block point (番, inferred).
+const ADDR_PREC={listing:'exact (shop listing)',go_point:'exact (GSI 番-号 point inside the building)',go_point_within_3m:'GSI 番-号 point at the building (within 3 m)',go_point_nearby:'nearest GSI 番-号 point (3-15 m away, inferred)',block:'block only (nearest GSI 番 point, inferred)',town:'town only'};
+async function copyAddress(bid){try{const a=await api('/api/address?building='+encodeURIComponent(bid));if(!a.address){status('no address known for '+bid.split('/').pop());return}
+  await navigator.clipboard.writeText(a.address);status(`copied ${a.address} · ${ADDR_PREC[a.precision]||a.precision}${a.alternatives&&a.alternatives.length?' · also '+a.alternatives.join(', '):''}`)}
+  catch(e){status('address lookup failed: '+e.message)}}
+// Street View tab: window.open with a fixed name reuses (navigates) the same tab, so a tab put in split view keeps following.
+async function openSV(follow){const [ex,ey]=svPoint();let w;try{w=await api(`/api/where?x=${ex}&y=${ey}`)}catch(e){return}
+  const url=`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${w.lat.toFixed(7)},${w.lon.toFixed(7)}&heading=${RT.HEADING_OF_YAW(S.cam.yaw).toFixed(1)}&pitch=0&fov=80`;
+  window.open(url,'numabe_streetview');if(!follow)status('Street View opened at '+w.lat.toFixed(6)+','+w.lon.toFixed(6))}
+function step(dt){const k=S.keys,c=S.cam,mv=(c.persp?14:40)*S.metaScale*dt/(c.persp?1:c.zoom),r=c.yaw*Math.PI/180,f=[-Math.sin(r),Math.cos(r)],s=[Math.cos(r),Math.sin(r)];
+  let m=false;const add=(v,sg)=>{c.x+=v[0]*mv*sg;c.y+=v[1]*mv*sg;m=true};
+  if(k.has('w'))add(f,1);if(k.has('s'))add(f,-1);if(k.has('d'))add(s,1);if(k.has('a'))add(s,-1);
+  if(k.has('q')){c.yaw=(c.yaw+90*dt+360)%360;m=true}if(k.has('e')){c.yaw=(c.yaw-90*dt+360)%360;m=true}
+  if(k.has('r')&&c.persp){c.z+=6*S.zs*dt;m=true}if(k.has('f')&&c.persp){c.z-=6*S.zs*dt;m=true}
+  if(m){S.dirty=true;camMoved()}}
+let last=performance.now(),idle=0;
+// first-person / top-down views (editor_views.js) take the frame while on; the Classic frame resumes after
+function loop(t){const dt=Math.min(.05,(t-last)/1000);last=t;const ev=typeof EV!=='undefined'&&EV.active();if(ev)EV.frame(dt);else step(dt);idle+=dt;
+  // terrain shadow bake (UpdateTerrainDark, ~5 ms/patch measured) in slices: 25 ms/frame idle, 6 ms while moving
+  if(S.bakeLeft!==0&&RT.f.bake){const t0=performance.now(),budget=S.keys.size||ev?6:25;while(performance.now()-t0<budget&&S.bakeLeft!==0)S.bakeLeft=RT.f.bake(2);if(S.bakeLeft===0||idle>1)S.dirty=true}
+  if(!ev&&(S.dirty||idle>.25)){S.dirty=false;idle=0;present()}requestAnimationFrame(loop)}
+// ---------------------------------------------------------------------------------------------
+// Selection + inspector
+// ---------------------------------------------------------------------------------------------
+const stageXY=e=>{const r=$('gl').getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]};
+const pickCss=(x,y)=>RT.pick(Math.floor(x/S.font.px),Math.floor(y/S.font.px));
+const worldOf=h=>h?[+h.x.toFixed(3),+h.y.toFixed(3),+(h.z??0).toFixed(3)]:null;
+function markerAt(p,tol=8){let best=null,bd=tol;for(const h of hitList){const d=Math.hypot(h.p[0]-p[0],h.p[1]-p[1]);if(d<bd){bd=d;best=h}}return best}
+async function thingAt(p){const m=markerAt(p);if(m)return {kind:m.kind,id:m.id,data:m.data,world:m.data&&m.data.x!=null?[m.data.x,m.data.y,zAt(m.data.x,m.data.y)]:null};
+  const h=pickCss(...p);if(!h)return null;const w=worldOf(h);
+  let bid=null;try{bid=(await api(`/api/building_at?x=${w[0]}&y=${w[1]}`)).building_id}catch(e){}
+  if(h.inst&&!/^building_mass|mass_way/.test(h.inst.mesh||'')&&!/^gameplay|building_mass/.test(h.inst.name||''))return {kind:'inst',id:h.inst.name||h.inst.mesh,data:h.inst,world:w,building:bid};
+  if(bid)return {kind:'building',id:bid,world:w};return {kind:'point',id:w.join(','),world:w}}
+function selectThing(t,add){if(!add)S.sel=[];if(t&&!S.sel.some(s=>s.kind===t.kind&&s.id===t.id))S.sel.push(t);S.dirty=true;renderInsp();
+  if(t&&t.kind==='building'&&typeof FC!=='undefined')FC.onSelect(t); // which face of the building: nearest the click
+}
+async function renderInsp(){const box=$('inspBody');if(!S.sel.length){box.innerHTML='<span class="dim">nothing selected</span>';return}$('insp').style.display='block';
+  const parts=[];for(const s of S.sel.slice(0,12)){
+    if(s.kind==='building'){let rec={};try{rec=await api('/api/building?id='+encodeURIComponent(s.id))}catch(e){}const a=rec.appearance||{},inf=rec.inferred||{};
+      const sw=(rgb,t)=>rgb?`<span class="sw" style="background:rgb(${rgb})"></span>${t}`:`<span class="dim">${t} —</span>`;
+      parts.push(`<div class="it"><b>${esc(s.id.split(':').pop())}</b><br>${sw(a.wall_rgb||inf.wall_rgb,'wall'+(a.wall_rgb?'':' ('+(inf.tier||'none')+')'))} ${sw(a.trim_rgb||inf.trim_rgb,'trim')} ${sw(a.roof_rgb,'roof')}
+        <div class="dim">${esc((a.wall_judgement&&(a.wall_judgement.basis||a.wall_judgement.text))||inf.basis||'')}</div>
+        <div class="dim">roof ${esc((a.roof_form&&a.roof_form.form)||'flat/unknown')} · attachments ${(a.attachments||[]).length} · facade photos ${(a.operator_facade_photos||[]).length}</div>
+        <div class="dim" data-addr="${esc(s.id)}">address …</div>
+        <div class="acts"><button data-a="note">Note</button><button data-a="front">Look at street face</button><button data-a="addr">Copy address</button><button data-a="bid">Copy id</button><button data-a="palette">Palette…</button></div>${typeof FC!=='undefined'?FC.inspHtml(s):''}</div>`)}
+    else if(s.kind==='fixture'){const o=s.data;parts.push(`<div class="it"><b>${esc(o.module)}</b> <span class="dim">${esc(o.id)} · ${esc(o.status)}</span><br><span class="dim">host ${esc((o.host||'').split(':').pop())}</span>
+        <div class="acts"><button data-a="del">Delete</button><button data-a="note">Note</button></div></div>`)}
+    else if(s.kind==='inst'){const o=s.data;parts.push(`<div class="it"><b>${esc(o.name||'(unnamed instance)')}</b><br><span class="dim">mesh ${esc(o.mesh)}${s.building?' · on '+esc(s.building.split('/').pop()):''}</span>
+        <div class="acts"><button data-a="del">Delete request</button><button data-a="note">Note</button></div></div>`)}
+    else if(s.kind==='pano'){const o=s.data;parts.push(`<div class="it"><b>${esc(o.id)}</b> <span class="dim">${o.heading==null?'UNALIGNED':'heading '+o.heading.toFixed(1)+'°'}</span><img src="/img?path=${encodeURIComponent(o.img)}">
+        <div class="acts"><button data-a="stand">View from here</button><button data-a="pano">Open in pano viewer</button></div></div>`)}
+    else if(s.kind==='crop'){const o=s.data;parts.push(`<div class="it"><b>${esc(o.module)}</b> <span class="dim">unresolved · ${esc(o.capture)}</span><img src="${esc(o.crop)}"><div class="dim">${esc(o.why||'')}</div>
+        <div class="acts"><button data-a="place">Place (then click its spot)</button><button data-a="stand">View from its camera</button></div></div>`)}
+    else if(s.kind==='note'){const o=s.data;parts.push(`<div class="it"><b>${esc(o.id)} ${esc(o.kind)}</b> <span class="dim">${esc(o.status)}</span><br>${esc(o.label||'')} ${esc(o.text||'')}${o.image?`<img src="/img?path=${encodeURIComponent(o.image)}">`:''}
+        ${o.image&&(o.building_ids||[]).length&&(o.world_points||[]).length?`<div class="acts"><button data-a="capnote">Facade capture from this image…</button></div>`:''}</div>`)}
+    else parts.push(`<div class="it">point ${esc(s.id)}<div class="acts"><button data-a="note">Note</button></div></div>`)}
+  box.innerHTML=parts.join('')+(S.sel.length>12?`<div class="dim">+${S.sel.length-12} more</div>`:'')+`<div class="acts" style="margin-top:6px"><button data-a="noteall">Note on all ${S.sel.length}</button><button data-a="clear">Clear</button></div>`;
+  box.querySelectorAll('.it').forEach((el,i)=>el.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>act(b.dataset.a,S.sel[i])));
+  box.querySelectorAll(':scope > .acts [data-a]').forEach(b=>b.onclick=()=>act(b.dataset.a,null));
+  if(typeof FC!=='undefined')FC.bindInsp(box);
+  box.querySelectorAll('[data-addr]').forEach(async el=>{try{const a=await api('/api/address?building='+encodeURIComponent(el.dataset.addr));
+    el.textContent=a.address?`${a.address} · ${ADDR_PREC[a.precision]||a.precision}`:'address unknown'}catch(e){el.textContent='address lookup failed'}})}
+async function act(a,s){
+  if(a==='clear'){selectThing(null);return}if(a==='note'||a==='noteall'){noteDlg(s?[s]:S.sel);return}
+  if(a==='del'){deleteDlg(s?[s]:S.sel);return}if(a==='front'){goto(s.id);return}
+  if(a==='addr'){copyAddress(s.id);return}if(a==='bid'){navigator.clipboard.writeText(s.id.split(':').pop()).then(()=>status('copied '+s.id.split(':').pop()));return}
+  if(a==='palette'){setLayer('palette',true);$('layers').style.display='block';return}
+  if(a==='stand'){const o=s.data;goPose({kind:'panorama',x:o.x,y:o.y,heading_deg:s.kind==='crop'?o.bearing:(o.heading??o.compass)});return}
+  if(a==='pano'){openPano(s.data.id);return}
+  if(a==='capnote'){FC.openFromNote(s.data);return}
+  if(a==='place'){S.placing=s.data;S.mode='place';status('click where the '+s.data.module+' really is');S.dirty=true}}
+// ---------------------------------------------------------------------------------------------
+// Modes and pointer
+// ---------------------------------------------------------------------------------------------
+function setMode(m){S.mode=m;S.draft=null;if(m!=='measure')S.measure=[];if(m!=='place')S.placing=null;
+  document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('on',b.dataset.mode===m));$('gl').style.cursor=m==='select'?'default':m==='delete'?'not-allowed':'crosshair';S.dirty=true}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>setMode(b.dataset.mode));
+let drag=null;
+$('gl').addEventListener('contextmenu',e=>e.preventDefault());
+$('gl').addEventListener('mousedown',e=>{const p=stageXY(e);
+  if(e.button!==0||S.keys.has(' ')){drag={pan:true,p,cam:{...S.cam}};return}
+  if(S.mode==='rect'||S.mode==='select')drag={pan:false,p,moved:false,shift:e.shiftKey};
+  else if(S.mode==='draw')S.draft={kind:'draw',css:[p]}});
+addEventListener('mousemove',e=>{const p=stageXY(e);mouseCss=p;if(S.draft&&S.draft.kind==='draw'){S.draft.css.push(p);S.dirty=true;return}if(!drag)return;
+  if(drag.pan){const px=S.font.px,dx=(p[0]-drag.p[0])/px,dy=(p[1]-drag.p[1])/px,c=S.cam,r=c.yaw*Math.PI/180,k=.5/c.zoom;
+    c.x=drag.cam.x-(Math.cos(r)*dx+Math.sin(r)*dy)*k*2;c.y=drag.cam.y-(Math.sin(r)*dx-Math.cos(r)*dy)*k*2;S.dirty=true;camMoved();return}
+  if(Math.hypot(p[0]-drag.p[0],p[1]-drag.p[1])>4){drag.moved=true;S.draft={kind:S.mode==='rect'?'rect':'selrect',css:[drag.p,p]};S.dirty=true}});
+addEventListener('mouseup',async e=>{const p=stageXY(e);
+  if(S.draft&&S.draft.kind==='draw'){const d=S.draft;S.draft=null;const css=d.css.filter((q,i,a)=>i%Math.max(1,Math.floor(a.length/48))===0);
+    const world=css.map(q=>worldOf(pickCss(...q))).filter(Boolean);if(world.length)openDlg({kind:'draw',world,draftCss:d.css},`Drawing pinned to ${world.length} world points`);return}
+  if(!drag)return;const d=drag;drag=null;if(d.pan)return;
+  if(d.moved&&S.draft){const [a,b]=S.draft.css,x0=Math.min(a[0],b[0]),x1=Math.max(a[0],b[0]),y0=Math.min(a[1],b[1]),y1=Math.max(a[1],b[1]);const kind=S.draft.kind;S.draft=null;
+    if(kind==='rect'){const css=[[x0,y0],[x1,y0],[x1,y1],[x0,y1],[(x0+x1)/2,(y0+y1)/2]],world=css.map(q=>worldOf(pickCss(...q))).filter(Boolean);
+      if(world.length)openDlg({kind:'rect',world,draftCss:[[x0,y0],[x1,y1]]},`Rect note pinned to ${world.length} world points`);return}
+    // select rect: every visible marker inside + buildings whose label point projects inside
+    if(!d.shift)S.sel=[];for(const h of hitList)if(h.p[0]>=x0&&h.p[0]<=x1&&h.p[1]>=y0&&h.p[1]<=y1)selectThing({kind:h.kind,id:h.id,data:h.data,world:[h.data.x,h.data.y,zAt(h.data.x,h.data.y)]},true);
+    if(S.L)for(const b of S.L.buildings){if(!near(b,400))continue;const q=scr(b.x,b.y,zAt(b.x,b.y,true));if(q&&q[0]>=x0&&q[0]<=x1&&q[1]>=y0&&q[1]<=y1)selectThing({kind:'building',id:b.id,world:[b.x,b.y,zAt(b.x,b.y,true)]},true)}
+    status(`selected ${S.sel.length}`);renderInsp();return}
+  // click
+  if(S.mode==='select'){const t=await thingAt(p);if(e.shiftKey&&t){const i=S.sel.findIndex(s=>s.kind===t.kind&&s.id===t.id);if(i>=0){S.sel.splice(i,1);renderInsp();S.dirty=true;return}}selectThing(t,e.shiftKey);return}
+  if(S.mode==='delete'){const t=await thingAt(p);if(t&&t.kind!=='point'&&t.kind!=='building')deleteDlg([t]);else status('no object there (buildings are not deletable here; select + note instead)');return}
+  if(S.mode==='measure'){const w=worldOf(pickCss(...p));if(!w)return;S.measure=S.measure.length>=2?[w]:[...S.measure,w];S.dirty=true;return}
+  if(S.mode==='place'&&S.placing){const w=worldOf(pickCss(...p));if(!w)return;const o=S.placing;
+    try{const it=await api('/api/place_crop',{annotation_id:o.id,module:o.module,world:w,camera:{...S.cam}});status(`placed ${o.module} → ${it.id} (queue)`);await loadNotes()}catch(err){status('place failed '+err.message)}setMode('select')}});
+// Double-click a building (select mode): stand square in front of the face you clicked, looking at it
+// (zoom 1 = signs at true size). 'Street View here' then opens Street View at the matching pose.
+$('gl').addEventListener('dblclick',async e=>{if(S.mode!=='select')return;e.preventDefault();const t=await thingAt(stageXY(e));
+  const bid=t&&(t.kind==='building'?t.id:t.building);if(!bid||!t.world){status('double-click a building wall to face it');return}
+  try{const f=await api(`/api/face?building=${encodeURIComponent(bid)}&x=${t.world[0]}&y=${t.world[1]}`);
+    const mx=(f.left_world[0]+f.right_world[0])/2,my=(f.left_world[1]+f.right_world[1])/2;S.cam.zoom=1;
+    goPose({x:mx,y:my,heading_deg:(f.bearing_deg+180)%360});
+    selectThing({kind:'building',id:bid,world:[mx,my,zAt(mx,my,true)],face:f.face_index});
+    status(`facing ${bid.split('/').pop()} face ${f.face_index+1}/${f.faces} (${f.length_m.toFixed(1)} m wide, faces ${f.bearing_deg}°) · Street View here matches this view`)}
+  catch(err){status('face lookup failed: '+err.message)}});
+$('gl').addEventListener('wheel',e=>{e.preventDefault();const c=S.cam;c.zoom=Math.max(.2,Math.min(8,c.zoom*Math.exp(-e.deltaY*.0015)));S.dirty=true},{passive:false});
+// ---------------------------------------------------------------------------------------------
+// Keys
+// ---------------------------------------------------------------------------------------------
+addEventListener('keydown',e=>{if($('dlg').style.display==='block'){if(e.key==='Escape')closeDlg();else if(e.key==='Enter'&&(e.metaKey||e.ctrlKey||dlg?.kind==='confirm')){e.preventDefault();okDlg()}return}
+  if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT'){if(e.key==='Enter'&&e.target.id==='goto'){goto(e.target.value);e.target.blur()}return}
+  if(e.metaKey||e.ctrlKey)return;const k=e.key.toLowerCase();
+  if((k.length===1&&'wasdqe '.includes(k))||((k==='r'||k==='f')&&S.cam.persp)){S.keys.add(k);e.preventDefault();return}
+  const modes={'1':'select','2':'rect','3':'draw','4':'delete','5':'measure'};if(modes[k]){setMode(modes[k]);return}
+  if(k==='escape'){setMode('select');S.sel=[];renderInsp();S.measure=[]}
+  else if(k==='n')noteDlg(S.sel);else if(k==='delete'||k==='backspace'){e.preventDefault();deleteDlg(S.sel)}
+  else if(k==='t')togglePersp();else if(k==='h')goto(HOME_Q);else if(k==='b')bookmarkDlg();else if(k==='g'){e.preventDefault();$('goto').focus()}
+  else if(k==='l')togglePanel('layers');else if(k==='i')togglePanel('insp');else if(k==='m')toggleMini()});
+let miniOn=true;function toggleMini(){miniOn=!miniOn;RT.f.minimap&&RT.f.minimap(miniOn?1:0);$('bMini').classList.toggle('on',miniOn);S.dirty=true}
+addEventListener('keyup',e=>S.keys.delete(e.key.toLowerCase()));addEventListener('blur',()=>S.keys.clear());
+function togglePersp(){S.cam.persp^=1;$('bPersp').classList.toggle('on',!!S.cam.persp);S.dirty=true}
+function togglePanel(id){const p=$(id);p.style.display=p.style.display==='block'?'none':'block';
+  // layers + inspector both open: inspector goes under the layers panel
+  $('insp').style.top=$('layers').style.display==='block'?(118+$('layers').offsetHeight+8)+'px':'118px'}
+$('bMini').onclick=toggleMini;
+$('bPersp').onclick=togglePersp;$('bGo').onclick=()=>goto($('goto').value);$('bLayers').onclick=()=>togglePanel('layers');$('bInsp').onclick=()=>togglePanel('insp');$('bHelp').onclick=()=>togglePanel('help');
+$('bSV').onclick=()=>openSV(false);$('bPano').onclick=()=>openPano(null);
+$('bSyncIn').onclick=()=>{S.syncIn=!S.syncIn;$('bSyncIn').classList.toggle('on',S.syncIn);if(S.syncIn&&lastPose)goPose(lastPose,'sv');
+  if(S.syncIn&&!lastPose)status('waiting for a pose: open Street View with the relay extension loaded, or move in the pano viewer')};
+$('bSyncOut').onclick=()=>{S.syncOut=!S.syncOut;$('bSyncOut').classList.toggle('on',S.syncOut);if(S.syncOut)openSV(true)};
+function openPano(id){const c=S.cam;window.open(`/pano${id?'?id='+encodeURIComponent(id):`?x=${c.x}&y=${c.y}&heading=${RT.HEADING_OF_YAW(c.yaw)}`}`,'numabe_pano')}
+// layers panel
+function setLayer(k,v){S.layers[k]=v;const cb=document.querySelector(`[data-layer="${k}"]`);if(cb)cb.checked=v;$('palette').style.display=S.layers.palette?'block':'none';S.dirty=true;try{localStorage.setItem('numabe-a3d-layers',JSON.stringify(S.layers))}catch(e){}}
+document.querySelectorAll('[data-layer]').forEach(cb=>cb.onchange=()=>setLayer(cb.dataset.layer,cb.checked));
+function renderPalette(){const P=(S.L&&S.L.palette)||[];$('chips').innerHTML=P.map((p,i)=>`<span class="chip" title="${esc(p.label||p.key)} ${esc(p.hex)} (${esc(p.role)})" style="background:${esc(p.hex)}" data-i="${i}"></span>`).join('');
+  $('chips').querySelectorAll('.chip').forEach(ch=>ch.onclick=async()=>{const p=P[+ch.dataset.i],b=S.sel.find(s=>s.kind==='building');if(!b){status('select a building first');return}
+    const role=document.querySelector('[name=prole]:checked').value,rgb=[1,3,5].map(i=>parseInt(p.hex.slice(i,i+2),16));
+    try{await api('/api/set_colour',{building_id:b.id,role,rgb,swatch:p.key});status(`${role} of ${b.id.split('/').pop()} = ${p.label||p.key} ${p.hex} (written; next build shows it)`);await loadLayers();renderInsp()}catch(e){status('colour failed '+e.message)}})}
+// bookmarks
+// built-in places (resolved by /api/locate from OSM names) + the operator's saved views
+const PLACES=[{name:'Home 17-16',q:'home'},{name:'FamilyMart ファミリーマート',q:'familymart'},{name:'Temple 有慶山東光院',q:'temple'},
+  {name:'Lawson ローソン',q:'lawson'},{name:'Numabe station 沼部',q:'station'}];
+async function loadBookmarks(){try{const r=await api('/api/bookmarks');S.bookmarks=[...PLACES,...(r.bookmarks||[])];$('bm').innerHTML='<option value="">★ bookmarks</option>'+S.bookmarks.map(b=>`<option>${esc(b.name)}</option>`).join('')}catch(e){}}
+$('bm').onchange=()=>{if($('bm').value)goto($('bm').value);$('bm').value=''};$('bBm').onclick=bookmarkDlg;
+function bookmarkDlg(){openDlg({kind:'bookmark'},'Bookmark this view — name it (e.g. FamilyMart corner)');$('dlgLabel').hidden=false;$('dlgText').style.display='none';setTimeout(()=>$('dlgLabel').focus(),0)}
+// ---------------------------------------------------------------------------------------------
+// Drop / paste
+// ---------------------------------------------------------------------------------------------
+let mouseCss=[0,0],dropDepth=0;
+addEventListener('dragenter',e=>{e.preventDefault();dropDepth++;$('drop').style.display='block'});
+addEventListener('dragleave',()=>{if(--dropDepth<=0){dropDepth=0;$('drop').style.display='none'}});
+addEventListener('dragover',e=>e.preventDefault());
+addEventListener('drop',async e=>{e.preventDefault();dropDepth=0;$('drop').style.display='none';const p=stageXY(e),img=await imageFromTransfer(e.dataTransfer);if(img)imageAt(p,img);else status('that drop had no image')});
+addEventListener('paste',async e=>{if($('dlg').style.display==='block'||e.target.tagName==='INPUT')return;
+  const txt=e.clipboardData&&e.clipboardData.getData('text/plain');if(txt&&/google\.[a-z.]+\/maps|@-?\d+\.\d+,-?\d+\.\d+/.test(txt)){e.preventDefault();goto(txt);return}
+  const img=await imageFromTransfer(e.clipboardData);if(img){e.preventDefault();imageAt(mouseCss,img)}});
+async function imageFromTransfer(dt){if(!dt)return null;
+  const f=[...(dt.files||[])].find(f=>f.type.startsWith('image/'))||[...(dt.items||[])].filter(i=>i.kind==='file'&&i.type.startsWith('image/')).map(i=>i.getAsFile())[0];
+  if(f)return await new Promise(r=>{const fr=new FileReader();fr.onload=()=>r({data_url:fr.result});fr.readAsDataURL(f)});
+  const html=dt.getData&&dt.getData('text/html'),uri=(dt.getData&&(dt.getData('text/uri-list')||dt.getData('text/plain')))||'';
+  const m=html&&html.match(/<img[^>]+src="([^"]+)"/i),src=(m&&m[1].replace(/&amp;/g,'&'))||uri.split('\n')[0].trim();
+  if(/^data:image\//.test(src))return {data_url:src};if(/^https?:\/\//.test(src)&&!/google\.[a-z.]+\/maps/.test(src))return {url:src};return null}
+async function imageAt(p,img){const t=await thingAt(p);if(!t||!t.world){status('nothing under the cursor to pin the image to');return}
+  const bid=t.kind==='building'?t.id:t.building||null;
+  // an image dragged in as a link (Google Images in the split-view tab): the server fetches it once so the
+  // capture can read its pixels (a page cannot read a cross-origin image)
+  if(!img.data_url&&img.url){status('fetching the dropped image…');try{const r=await api('/api/fetch_image?url='+encodeURIComponent(img.url));img={data_url:r.data_url,url:img.url,fromWeb:true}}
+    catch(e){status('could not fetch that image ('+e.message+'): drag the picture itself, or copy it (right click → Copy image) and ⌘V');return}}
+  // a photo pasted/dropped on a building wall opens the facade capture on the face under the cursor
+  if(bid&&img.data_url&&typeof FC!=='undefined'){FC.open({bid,x:t.world[0],y:t.world[1],image:{data_url:img.data_url},fromWeb:!!img.fromWeb,note:img.url?'source: '+img.url:''});return}
+  openDlg({kind:'image_drop',world:[t.world],image:img,building:bid},`Image on ${bid?bid.split(':').pop():t.kind+' '+t.id}`)}
+// ---------------------------------------------------------------------------------------------
+// Dialog -> owners
+// ---------------------------------------------------------------------------------------------
+let dlg=null;
+function openDlg(m,title){dlg=m;$('dlgTitle').textContent=title;$('dlgLabel').value='';$('dlgText').value='';$('dlgText').style.display=m.kind==='confirm'?'none':'block';
+  $('dlgLabel').hidden=!['image_drop','bookmark'].includes(m.kind);$('dlgLabel').placeholder=m.kind==='bookmark'?'name':'label (e.g. FamilyMart logo, sign above the door)';
+  const im=$('dlgImg');im.hidden=!m.image;if(m.image)im.src=m.image.data_url||m.image.url;$('dlg').style.display='block';
+  setTimeout(()=>(m.kind==='image_drop'||m.kind==='bookmark'?$('dlgLabel'):$('dlgText')).focus(),0)}
+function closeDlg(){$('dlg').style.display='none';$('dlgText').style.display='block';dlg=null;S.dirty=true}
+function frameShot(extraCss,closed){present();const c=document.createElement('canvas');c.width=$('gl').width;c.height=$('gl').height;const x=c.getContext('2d');x.drawImage($('gl'),0,0);x.drawImage(ov,0,0);
+  if(extraCss&&extraCss.length){const d=devicePixelRatio||1;x.strokeStyle='#ffd166';x.lineWidth=2*d;x.beginPath();extraCss.forEach((p,i)=>i?x.lineTo(p[0]*d,p[1]*d):x.moveTo(p[0]*d,p[1]*d));if(closed)x.closePath();x.stroke()}
+  return c.toDataURL('image/png')}
+function noteDlg(list){if(!list||!list.length){status('select something first (mode 1), or use 2 Rect / 3 Draw');return}
+  const world=list.map(s=>s.world).filter(Boolean);openDlg({kind:'note',world,sel:list},`Note on ${list.length} selected thing(s)`)}
+function deleteDlg(list){const del=(list||[]).filter(s=>['fixture','inst'].includes(s.kind));if(!del.length){status('select fixtures/objects to delete');return}
+  openDlg({kind:'confirm',del},`Delete ${del.length} object(s)? Authored fixtures are removed now (undo in the journal); generated objects become a delete request. Enter = yes`)}
+async function okDlg(){const m=dlg;if(!m)return;const label=$('dlgLabel').value.trim(),text=$('dlgText').value.trim();
+  if(m.kind==='bookmark'){closeDlg();if(!label)return;try{await api('/api/bookmarks',{name:label,camera:{...S.cam}});await loadBookmarks();status('bookmarked '+label)}catch(e){status('bookmark failed '+e.message)}return}
+  if(m.kind==='confirm'){closeDlg();const fx=m.del.filter(s=>s.kind==='fixture').map(s=>({fixture_id:s.id,id:s.id})),ins=m.del.filter(s=>s.kind==='inst');
+    try{if(fx.length){const r=await api('/api/delete',{objects:fx});status(`removed ${r.removed.length} authored fixture(s)`)}
+      if(ins.length)await api('/api/note',{kind:'delete_request',text:'delete '+ins.map(s=>s.id).join(', '),world:ins.map(s=>s.world),object_ids:ins.map(s=>s.id),camera:{...S.cam},shot:frameShot()});
+      S.sel=[];renderInsp();await loadLayers();await loadNotes()}catch(e){status('DELETE FAILED '+e.message)}return}
+  const shape=m.kind==='rect'?(()=>{const [a,b]=m.draftCss;return [[a[0],a[1]],[b[0],a[1]],[b[0],b[1]],[a[0],b[1]]]})():m.draftCss;
+  const shot=frameShot(shape,m.kind==='rect');closeDlg();
+  const body={kind:m.kind,text,label,world:m.world,camera:{...S.cam,heading_deg:RT.HEADING_OF_YAW(S.cam.yaw),font:S.font.name,cols:S.cols,rows:S.rows,where:S.where},shot,
+    building_ids:[...(m.building?[m.building]:[]),...(m.sel||[]).filter(s=>s.kind==='building').map(s=>s.id)],
+    object_ids:(m.sel||[]).filter(s=>s.kind!=='building'&&s.kind!=='point').map(s=>s.kind+':'+s.id)};
+  if(m.image?.data_url)body.image=m.image.data_url;if(m.image?.url)body.image_url=m.image.url;
+  try{const it=await api('/api/note',body);status(`saved ${it.id} (${it.kind}) → queue`);await loadNotes()}catch(e){status('SAVE FAILED: '+e.message)}}
+$('dlgOk').onclick=okDlg;$('dlgCancel').onclick=closeDlg;
+async function loadNotes(){try{const q=await api('/api/queue');S.notes=q.items.filter(i=>i.world_points&&i.world_points.length);S.dirty=true}catch(e){}}
+async function loadLayers(){try{S.L=await api('/api/layers');S.metaScale=S.L.meta.content_scale;S.zs=S.metaScale*16;renderPalette();S.dirty=true}catch(e){clog('error','layers '+e.message)}}
+// ---------------------------------------------------------------------------------------------
+// Street View relay (SSE), pano viewer tab (BroadcastChannel)
+// ---------------------------------------------------------------------------------------------
+let lastPose=null;const es=new EventSource('/api/events');
+es.addEventListener('pose',e=>{lastPose=JSON.parse(e.data);clog('pose_in',lastPose.kind+' '+lastPose.heading_deg);if(S.syncIn)goPose(lastPose,'sv');else status('Street View pose received — press SV→A3D to follow')});
+es.addEventListener('queue',loadNotes);
+chan.onmessage=e=>{const m=e.data;if(m.from==='a3d')return;
+  // the pano tab's own 'drive A3D' toggle decides; no second switch needed here
+  if(m.type==='pano_pose'){lastPose={kind:'panorama',x:m.x,y:m.y,heading_deg:m.heading};goPose(lastPose,'sv')}};
+// ---------------------------------------------------------------------------------------------
+// Boot
+// ---------------------------------------------------------------------------------------------
+async function boot(){try{clog('runtime_ready','wasm initialised');glInit();RT.init();clog('exports',Object.entries(RT.f).filter(([k,v])=>!v).map(([k])=>k).join(',')||'all present');
+  try{const l=JSON.parse(localStorage.getItem('numabe-a3d-layers')||'null');if(l)Object.assign(S.layers,l)}catch(e){}
+  for(const [k,v] of Object.entries(S.layers))setLayer(k,v);
+  const fonts=['cp437_8x8.png','cp437_10x10.png','cp437_12x12.png','cp437_14x14.png','cp437_16x16.png','cp437_18x18.png','cp437_20x20.png','cp437_24x24.png'];
+  let fname='cp437_12x12.png';try{fname=localStorage.getItem('numabe-a3d-font')||fname}catch(e){}
+  $('font').innerHTML=fonts.map(f=>`<option ${f===fname?'selected':''}>${f}</option>`).join('');$('font').onchange=()=>loadFont($('font').value);await loadFont(fname);
+  $('load').textContent='Downloading map bundle…';const buf=new Uint8Array(await (await fetch('/api/map_bundle')).arrayBuffer()),dv=new DataView(buf.buffer);
+  let o=8;const n=dv.getUint32(4,true),dec=new TextDecoder(),made=new Set();Module.FS.mkdirTree('/numabe/meshes');
+  for(let i=0;i<n;i++){const L=dv.getUint16(o,true);o+=2;const name=dec.decode(buf.subarray(o,o+L));o+=L;const sz=dv.getUint32(o,true);o+=4;
+    const dir=name.includes('/')?'/numabe/'+name.slice(0,name.lastIndexOf('/')):null;if(dir&&!made.has(dir)){Module.FS.mkdirTree(dir);made.add(dir)}
+    Module.FS.writeFile('/numabe/'+name,buf.subarray(o,o+sz));o+=sz}
+  clog('bundle',`${n} files`);$('load').textContent=`Loading the map + ${n-1} files into the Classic runtime…`;await new Promise(r=>setTimeout(r,30));
+  RT.f.opts(1); // defer the terrain shadow bake; loop() bakes it in slices
+  if(!RT.f.load('/numabe/output.a3d','/numabe/meshes'))throw new Error('ClassicLoadMap failed (see console)');
+  $('load').remove();S.ready=true;await loadLayers();await loadNotes();await loadBookmarks();if(typeof FC!=='undefined')await FC.loadAccepted();await goto(new URLSearchParams(location.search).get('q')||HOME_Q); // /a3d?q=familymart opens there
+  // draw once now: requestAnimationFrame does not run while the window is off screen / the tab hidden
+  present();requestAnimationFrame(loop);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden){S.dirty=true;present();camMoved()}});
+  setTimeout(()=>{const px=new Uint8Array(4);gl.readPixels($('gl').width>>1,$('gl').height>>1,1,1,gl.RGBA,gl.UNSIGNED_BYTE,px);
+    clog('first_frame',`cells ${S.cols}x${S.rows} font ${S.font.name} centre px ${[...px]} layers ${S.L?Object.entries(S.L).map(([k,v])=>k+':'+(v.length??'')).join(' '):'none'} scale ${S.metaScale}`)},1500);
+  }catch(e){$('load').textContent='BOOT FAILED: '+e.message;console.error(e);clog('boot_failed',e.stack||e.message)}}
+addEventListener('resize',layout);
+window.Module={locateFile:p=>'/classic/'+p,onRuntimeInitialized:boot,print:t=>console.log('[classic]',t),printErr:t=>console.warn('[classic]',t),noInitialRun:true};
+clog('page_load',navigator.userAgent);
+const s=document.createElement('script');s.src='/classic/index.js';s.onerror=()=>{clog('boot_failed','index.js missing');$('load').textContent='Classic wasm not built yet: run make web-classic'};document.head.appendChild(s);
+</script><script src="/ui/facade_capture.js"></script><script src="/ui/editor_views.js"></script><script src="/ui/street_view_overlay.js"></script></body></html>

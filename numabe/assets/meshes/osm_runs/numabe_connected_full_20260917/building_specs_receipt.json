@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "height_provenance": {
+      "derived": 4,
+      "synthesized": 646
+    },
+    "specs_emitted": 650,
+    "world_ir_buildings": 650
+  },
+  "height_contract": {
+    "explicit_height": "OSM height metres",
+    "fallback_height_m": 9.0,
+    "fallback_provenance": "synthesized",
+    "ground_owner": "DEM terrain sampled by bake_osm_building_footprints.py",
+    "levels": "building:levels × 3 m"
+  },
+  "input_world_ir": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/osm.world_ir.json",
+  "output": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/building_instances.json",
+  "schema": "y92.world_ir_building_specs.v1",
+  "terrain_metadata": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/terrain_metadata.json"
+}

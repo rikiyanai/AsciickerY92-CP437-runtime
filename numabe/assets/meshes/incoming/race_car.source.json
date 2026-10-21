@@ -1,0 +1,34 @@
+{
+  "title": "Race car (Kenney Car Kit 3.1)",
+  "author": "Kenney (www.kenney.nl)",
+  "source_url": "https://kenney.nl/assets/car-kit",
+  "license": "CC0 (Creative Commons Zero, http://creativecommons.org/publicdomain/zero/1.0/)",
+  "original_zip": "/tmp/kenney-car/kenney_car-kit.zip",
+  "original_zip_bytes": 4814237,
+  "model_path_in_zip": "Models/GLB format/race.glb",
+  "texture_path_in_zip": "Models/GLB format/Textures/colormap.png",
+  "download_date": "2026-09-24",
+  "retained_original": "godot_project/assets/props/models/race_car.glb",
+  "retained_original_bytes": 167272,
+  "retained_original_sha256": "e1408c4c6e135f5a39c5f34cbfbcac9ae21c5c491e793fdee74bccac8334d942",
+  "license_text": "Car Kit (3.1)\nCreated/distributed by Kenney (www.kenney.nl)\nCreation date: 02-04-2026 14:03\nLicense: (Creative Commons Zero, CC0)\nhttp://creativecommons.org/publicdomain/zero/1.0/\nYou can use this content for personal, educational, and commercial purposes.\nSupport by crediting 'Kenney' or 'www.kenney.nl' (this is not a requirement)",
+  "license_note": "License.txt ships loose in the kit zip (no per-model file); full text embedded here because the placement policy forbids loose .txt surfaces. Retained GLB carries no embedded license.",
+  "conversion": "GLB references external Textures/colormap.png, so scripts/glb_to_akm.py alone fails with 'No texture found in GLTF material' (it only unpacks embedded images). Staged colormap.png from the kit zip beside the repo unpack triplet in /tmp, then per-node: python3 scripts/picocad_to_akm.py /tmp/race_stage/part_<node>.gltf --merge --output <akm> (pruned with glb_to_akm._prune_gltf_to_node). Geometry preserved exactly; color reduced to 15 snapped palette colors (converter warning, expected for non-picoCAD sources).",
+  "conversions": [
+    "body -> assets/meshes/incoming/race_car_body.akm (718 verts, 624 faces)",
+    "wheel-front-left -> assets/meshes/incoming/race_car_wheel_fl.akm (288 verts, 332 faces)",
+    "wheel-front-right -> assets/meshes/incoming/race_car_wheel_fr.akm (288 verts, 332 faces)",
+    "wheel-back-left -> assets/meshes/incoming/race_car_wheel_rl.akm (288 verts, 332 faces)",
+    "wheel-back-right -> assets/meshes/incoming/race_car_wheel_rr.akm (288 verts, 332 faces)"
+  ],
+  "bake": "python3 scripts/bake_akm_to_static_world_faces.py <part>.akm --mode airframe --up-axis +z --forward-axis +z (per-part, then merged with /tmp/race_stage/merge_race.js). --up-axis +z because picocad_to_akm.py emits Z-up AKMs (AKM=(GLB.x,-GLB.z,GLB.y)). --forward-axis +z VERIFIED from geometry: nose (low, maxH 0.200) at GLB +Z / AKM -Y, spoiler tail (maxH 0.536) at GLB -Z; wheels: front z=+0.64, rear z=-0.88. Body baked --target-size 4.0 (scale 1.5625); wheels baked --target-size 0.9375 for the IDENTICAL uniform scale (their forward span is 0.6). Single output godot_project/assets/world_mesh/race_car_faces.json carries per-part face ranges + pivots + edge tables (face/run indices re-based per part).",
+  "node_translations_glb_model_space": {
+    "body": [0.0, 0.1, 0.0],
+    "wheel-front-left": [0.35, 0.3, 0.6398862],
+    "wheel-front-right": [-0.35, 0.3, 0.6398862],
+    "wheel-back-left": [0.35, 0.3, -0.8801137],
+    "wheel-back-right": [-0.35, 0.3, -0.8801137]
+  },
+  "faces_json": ["godot_project/assets/world_mesh/race_car_faces.json"],
+  "runtime_owner": "FL-4831 server slice (runtime wiring pending; intake + bake only)"
+}

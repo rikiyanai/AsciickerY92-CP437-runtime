@@ -1,0 +1,2873 @@
+{
+  "aoi_bbox_lonlat": [
+    139.6722376,
+    35.5819619,
+    139.6746123,
+    35.5834444
+  ],
+  "aoi_note": "AOI polygon and corridor centerline are frozen in numabe_corridor_aoi.geojson; both are unchanged by this survey.",
+  "blocks": {
+    "FL-4812_IMPLEMENTATION": {
+      "blocked": false,
+      "reason": "Implementation is the pipeline that turns a multi-view corpus plus facade appearance evidence into geometry and materials. It is corridor-independent and can be built and proven on any corpus. It must not be gated on Numabe source availability.",
+      "would_block_it": "nothing in this survey"
+    },
+    "FL-4812_NUMABE_ACCEPTANCE": {
+      "absolute_registration_gate": "FAILED",
+      "reconstruction_convergence_gate": "SETTLED_NEGATIVE_FOR_THE_FULL_NINE",
+      "remaining_gates_before_acceptance_can_be_claimed": [
+        "widen the solver anchor path beyond building ways and consume the existing 765-anchor set",
+        "pin the ~147 degree yaw with an absolute constraint, then report the anchor residual in metres",
+        "reproject accepted World IR geometry back into every contributing source frame"
+      ],
+      "settling_test_result": {
+        "absolute_registration": {
+          "anchor_constraints": 0,
+          "cause": "camera_solve/osm_anchors.py accepts building ways only, and the Numabe station entrance is not traced as a building (nearest facade way/225369224 at 7.46 m), so no anchor can form. The 765 anchors of five kinds emitted by world_ir_ingest_osm_extract.py are not consumable by the solver.",
+          "facade_anchor_selected": false,
+          "reading": "a CONSISTENT global yaw offset of about -147 degrees, not noise: relative orientation is self-consistent and only the block's absolute yaw is unpinned",
+          "signed_azimuth_residual_deg": [
+            -149.64,
+            -145.13,
+            -148.68,
+            -145.77
+          ],
+          "spread_deg": 4.51
+        },
+        "all_nine_exhaustive": "2 of 9 register; match graph is 3 components plus a reverse-facing orphan",
+        "failure_bucket": "LOCAL_SFM_PASS_ABSOLUTE_ANCHOR_FAIL (island 0134); COMMONS_ENTRANCE_SET_INSUFFICIENT_OVERLAP (all nine together)",
+        "largest_island_0134_as_its_own_subset": {
+          "gps_forced": false,
+          "gps_residual_m": {
+            "max": 9.34,
+            "median": 5.58
+          },
+          "points": 125,
+          "registered": "4 of 4",
+          "reprojection_px": {
+            "max": 2.0683,
+            "mean": 0.3009,
+            "median": 0.2054,
+            "n": 257
+          },
+          "tracks_in_3_or_more_images": 29,
+          "triangulation_angle_deg": {
+            "max": 22.05,
+            "median": 5.44,
+            "min": 3.04
+          },
+          "verdict": "LOCAL multi-view reconstruction CONVERGED on this island"
+        },
+        "run_utc": "2026-09-12"
+      },
+      "state": "CANDIDATE_MULTI_VIEW_SET_FOUND",
+      "terminology_note": "This entry previously said the SOURCE gate was met, which read as progress toward acceptance. Nine geographically distinct photographs are not automatically nine useful SfM viewpoints; they become reconstruction-grade only after the shared-feature and camera-solve test succeeds. The correct phrasing is: candidate multi-view set found, viewpoint-count gate met, reconstruction/convergence gate tested.",
+      "viewpoint_count_gate": "MET"
+    }
+  },
+  "evidence_classes": {
+    "A": [
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Numabe_Station_2024_May_30_various_16_15_53_422000.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:11:08",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 4.9,
+        "focal_35mm": 24.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 160.0338,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_15_53_422000.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various 16 15 53 422000.jpeg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/9/92/Numabe_Station_2024_May_30_various_16_16_02_216000.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:11:06",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 7.0,
+        "focal_35mm": 24.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 149.0364,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_02_216000.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various 16 16 02 216000.jpeg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Numabe_Station_2024_May_30_various_16_15_44_456000.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:11:36",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 18.0,
+        "focal_35mm": 24.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 165.4405,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_15_44_456000.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various 16 15 44 456000.jpeg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/2/28/Numabe_Station_2024_May_30_various_16_16_22_375000.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:10:42",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 21.8,
+        "focal_35mm": 24.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 129.2201,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_22_375000.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various 16 16 22 375000.jpeg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Numabe_Station_2024_May_30_various_16_16_11_891000.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:10:49",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 22.1,
+        "focal_35mm": 24.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 127.0799,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_11_891000.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various 16 16 11 891000.jpeg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/8/87/Numabe_Station_2024_May_30_various_16_16_31_330000.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:10:32",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 23.4,
+        "focal_35mm": 24.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 348.5293,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_31_330000.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various 16 16 31 330000.jpeg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Numabe_Station_2024_May_30_various.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:11:48",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 24.1,
+        "focal_35mm": 48.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 155.8648,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various.jpeg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/6/65/Numabe_Station_2024_May_30_various_16_16_42_050000.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:10:07",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 27.0,
+        "focal_35mm": 48.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 129.4137,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_42_050000.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various 16 16 42 050000.jpeg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Numabe_Station_2024_May_30_various_16_16_51_330000.jpeg",
+        "author": "Nesnad",
+        "camera": "Apple iPhone 14 Pro",
+        "capture_date": "2024-05-30 16:09:38",
+        "class": "A",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 34.6,
+        "focal_35mm": 48.0,
+        "focal_length_mm": 6.86,
+        "heading_deg": 136.4859,
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_51_330000.jpeg",
+        "pixels": [
+          4032,
+          3024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Numabe Station 2024 May 30 various 16 16 51 330000.jpeg"
+      }
+    ],
+    "B": [
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/0/08/Tokyu_Numabe_sta_002.jpg",
+        "author": "東京特許許可局",
+        "camera": "NIKON CORPORATION NIKON D850",
+        "capture_date": "Taken on 29 August 2021, 09:34:21",
+        "class": "B",
+        "content_visually_verified": true,
+        "distance_from_entrance_m": 8.4,
+        "focal_35mm": 15.0,
+        "focal_length_mm": 15.0,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATokyu_Numabe_sta_002.jpg",
+        "pixels": [
+          2508,
+          1672
+        ],
+        "retained_scratch_path": "/private/tmp/claude-501/-Users-r-Downloads-asciicker-Y9-2/7c815c93-bea8-4f4e-a616-c7ed9c9d19a8/scratchpad/fl4810b/retained/wikimedia_commons_109970195_Tokyu_Numabe_sta_002.jpg",
+        "retained_sha256": "d97c9ae1fc46ef1da44903e6926c02e17aa6ab5c8794baedb5a0a2def99384ea",
+        "title": "File:Tokyu Numabe sta 002.jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Tokyu_Numabe_sta_001.jpg",
+        "author": "東京特許許可局",
+        "camera": "NIKON CORPORATION NIKON D850",
+        "capture_date": "Taken on 29 August 2021, 09:32:52",
+        "class": "B",
+        "content_visually_verified": true,
+        "distance_from_entrance_m": 18.5,
+        "focal_35mm": 26.0,
+        "focal_length_mm": 26.0,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATokyu_Numabe_sta_001.jpg",
+        "pixels": [
+          2889,
+          1926
+        ],
+        "retained_scratch_path": "/private/tmp/claude-501/-Users-r-Downloads-asciicker-Y9-2/7c815c93-bea8-4f4e-a616-c7ed9c9d19a8/scratchpad/fl4810b/retained/wikimedia_commons_109970196_Tokyu_Numabe_sta_001.jpg",
+        "retained_sha256": "3db1a68c0c2bcd7652215ce5f68003db0ee42d4a249314792b3f506536ac1e8a",
+        "title": "File:Tokyu Numabe sta 001.jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/d/db/Tokyo_Route_11_-05.jpg",
+        "author": "Aimaimyi",
+        "camera": "Canon Canon PowerShot SX100 IS",
+        "capture_date": "2011-05-08",
+        "class": "B",
+        "content_visually_verified": true,
+        "distance_from_entrance_m": 42.0,
+        "focal_35mm": null,
+        "focal_length_mm": 6.0,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATokyo_Route_11_-05.jpg",
+        "pixels": [
+          2592,
+          1944
+        ],
+        "retained_scratch_path": "/private/tmp/claude-501/-Users-r-Downloads-asciicker-Y9-2/7c815c93-bea8-4f4e-a616-c7ed9c9d19a8/scratchpad/fl4810b/retained/wikimedia_commons_15274732_Tokyo_Route_11_-05.jpg",
+        "retained_sha256": "277fe99fe55b0106aab239f30d0ce0500842ce9bc36a369164ea08dc43066bf8",
+        "title": "File:Tokyo Route 11 -05.jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Tokyo_Route_11_-03.jpg",
+        "author": "Aimaimyi",
+        "camera": "Canon Canon PowerShot SX100 IS",
+        "capture_date": "2011-04-08",
+        "class": "B",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 43.9,
+        "focal_35mm": null,
+        "focal_length_mm": 7.3,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATokyo_Route_11_-03.jpg",
+        "pixels": [
+          2592,
+          1944
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Tokyo Route 11 -03.jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Tokyu_Numabe_sta_003.jpg",
+        "author": "東京特許許可局",
+        "camera": "NIKON CORPORATION NIKON D850",
+        "capture_date": "2021-08-29 09:37:30",
+        "class": "B",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": 63.1,
+        "focal_35mm": 15.0,
+        "focal_length_mm": 15.0,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATokyu_Numabe_sta_003.jpg",
+        "pixels": [
+          2871,
+          1914
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:Tokyu Numabe sta 003.jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/0/03/Numabe_Station_Exit1.jpg",
+        "author": "RGB256",
+        "camera": "Canon Canon EOS Kiss X2",
+        "capture_date": "2010-03-14",
+        "class": "B",
+        "content_visually_verified": true,
+        "distance_from_entrance_m": null,
+        "focal_35mm": null,
+        "focal_length_mm": 12.0,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_Exit1.jpg",
+        "pixels": [
+          4272,
+          2848
+        ],
+        "retained_scratch_path": "/private/tmp/claude-501/-Users-r-Downloads-asciicker-Y9-2/7c815c93-bea8-4f4e-a616-c7ed9c9d19a8/scratchpad/fl4810b/retained/wikimedia_commons_9734067_Numabe_Station_Exit1.jpg",
+        "retained_sha256": "c75f05fa672bb7bc73e5fdb6d32e04b052597c13fb4de137aeb026323a80c223",
+        "title": "File:Numabe Station Exit1.jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/8/89/Numabe_Station_Exit2.jpg",
+        "author": "RGB256",
+        "camera": "Canon Canon EOS Kiss X2",
+        "capture_date": "2010-03-14",
+        "class": "B",
+        "content_visually_verified": true,
+        "distance_from_entrance_m": null,
+        "focal_35mm": null,
+        "focal_length_mm": 10.0,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_Exit2.jpg",
+        "pixels": [
+          4272,
+          2848
+        ],
+        "retained_scratch_path": "/private/tmp/claude-501/-Users-r-Downloads-asciicker-Y9-2/7c815c93-bea8-4f4e-a616-c7ed9c9d19a8/scratchpad/fl4810b/retained/wikimedia_commons_9734072_Numabe_Station_Exit2.jpg",
+        "retained_sha256": "9fd17cecea0a684caa52d27af8f1f322005306a8cf154d95f9c94476285adcd6",
+        "title": "File:Numabe Station Exit2.jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/9/97/TM-02_station_number.png",
+        "author": "CrossHatch",
+        "camera": null,
+        "capture_date": "2016-12-16",
+        "class": "B",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": null,
+        "focal_35mm": null,
+        "focal_length_mm": null,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATM-02_station_number.png",
+        "pixels": [
+          1024,
+          1024
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:TM-02 station number.png"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/0/09/TokyuNumabeSta-KamataGates_%282010-03-14%29.jpg",
+        "author": "RGB256",
+        "camera": "Canon Canon EOS Kiss X2",
+        "capture_date": "Taken on 14 March 2010",
+        "class": "B",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": null,
+        "focal_35mm": null,
+        "focal_length_mm": 10.0,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATokyuNumabeSta-KamataGates_%282010-03-14%29.jpg",
+        "pixels": [
+          4272,
+          2848
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:TokyuNumabeSta-KamataGates (2010-03-14).jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/c/ce/TokyuNumabeSta-KamataGates.jpg",
+        "author": "yaguchi",
+        "camera": "CASIO COMPUTER CO.,LTD  EX-P600",
+        "capture_date": "2006-11-12",
+        "class": "B",
+        "content_visually_verified": false,
+        "distance_from_entrance_m": null,
+        "focal_35mm": 33.0,
+        "focal_length_mm": 7.1,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATokyuNumabeSta-KamataGates.jpg",
+        "pixels": [
+          2816,
+          2112
+        ],
+        "retained_scratch_path": null,
+        "retained_sha256": null,
+        "title": "File:TokyuNumabeSta-KamataGates.jpg"
+      },
+      {
+        "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/0/0a/TokyuNumabeSta-TamagawaGates.jpg",
+        "author": "Yaguchi",
+        "camera": "CASIO COMPUTER CO.,LTD  EX-P600",
+        "capture_date": "12 November 2006 (according to Exif data)",
+        "class": "B",
+        "content_visually_verified": true,
+        "distance_from_entrance_m": null,
+        "focal_35mm": 33.0,
+        "focal_length_mm": 7.1,
+        "heading_deg": null,
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "page_uri": "https://commons.wikimedia.org/wiki/File%3ATokyuNumabeSta-TamagawaGates.jpg",
+        "pixels": [
+          2816,
+          2112
+        ],
+        "retained_scratch_path": "/private/tmp/claude-501/-Users-r-Downloads-asciicker-Y9-2/7c815c93-bea8-4f4e-a616-c7ed9c9d19a8/scratchpad/fl4810b/retained/wikimedia_commons_1362147_TokyuNumabeSta-TamagawaGates.jpg",
+        "retained_sha256": "0c4135b1a33ca5fb8122c5fce99ff64bd06772d04e600eec4958a7edeac7fdfe",
+        "title": "File:TokyuNumabeSta-TamagawaGates.jpg"
+      }
+    ],
+    "C_summary": {
+      "content": "Tama river, Maruko bridge, Sakurazaka, the Rokugo aqueduct promenade, neighbourhood panoramio uploads and station-platform/rolling-stock shots",
+      "count": 39,
+      "titles": [
+        "File:Rokugo yosui -01.jpg",
+        "File:Along Tamagawa river near Tamagawa station, homeless dwelling.jpg",
+        "File:六郷用水Bv.jpg",
+        "File:Denenchofuhoncho, Ota, Tokyo 145-0072, Japan - panoramio (1).jpg",
+        "File:Denenchofuhoncho, Ota, Tokyo 145-0072, Japan - panoramio.jpg",
+        "File:Maruko Bridge seen from the southeast - Sep 22, 2012.jpg",
+        "File:丸子橋 - panoramio.jpg",
+        "File:Tama river 2024 Sep 08 10-57AM.jpeg",
+        "File:Tank Attack Point in Shin Godzilla.jpg",
+        "File:Sakurazaka 02.jpg",
+        "File:さくら坂（４月） - panoramio.jpg",
+        "File:Former Rokugō Aqueduct Promenade.jpg",
+        "File:Marukobashi bridge - panoramio (1).jpg",
+        "File:Sakurazaka 03.jpg",
+        "File:Tokyo Route 2 -04.jpg",
+        "File:Bus facing Maruko Bridge.jpg",
+        "File:丸子橋東詰(Maruko Bridge East) - panoramio.jpg",
+        "File:Shinkansen Tamagawa bridge - panoramio.jpg",
+        "File:丸子橋 - panoramio (1).jpg",
+        "File:多摩川 - panoramio (11).jpg",
+        "File:Maruko Bridge.jpg",
+        "File:Sakurazaka 04.jpg",
+        "File:Maruko Bridge 2.jpg",
+        "File:Tama River in Kanagawa - 2022 6 13.jpeg",
+        "File:Sakurazaka 01.jpg",
+        "File:Tamagawa sunset (29504002483).jpg",
+        "File:Tama river (30048672211).jpg",
+        "File:Tamagawa riverbed (30048572241).jpg",
+        "File:Tama river (30097911486).jpg",
+        "File:Marukobashi bridge - panoramio - Kaz Ish.jpg",
+        "File:Marukobashi bridge - panoramio - Kaz Ish (1).jpg",
+        "File:Marukobashi bridge - panoramio - Kaz Ish (3).jpg",
+        "File:Numabe Station Platform.jpg",
+        "File:Numabe(Shimogawara) Bi 01.jpg",
+        "File:Numabe(Shimogawara) Bi 02.jpg",
+        "File:Numabestation.jpg",
+        "File:Tokyu station TM-02.svg",
+        "File:Tokyu-railway-tokyu-tamagawa-line-Numabe-station-platform.jpg",
+        "File:目黒蒲田電鉄開通直前の重役一行.jpg"
+      ]
+    },
+    "class_A_assessment": {
+      "camera": "Apple iPhone 14 Pro, 4032x3024, EXIF FocalLengthIn35mmFilm 24 mm on six frames and 48 mm on three",
+      "geometry_from_metadata": {
+        "all_nine_carry_GPSImgDirection": true,
+        "at_least_2": true,
+        "at_least_3": true,
+        "distance_from_entrance_m": [
+          4.9,
+          7.0,
+          18.0,
+          21.8,
+          22.1,
+          23.4,
+          24.1,
+          27.0,
+          34.6
+        ],
+        "distinct_viewpoints_within_80_m_of_the_entrance": 9,
+        "frames_pointing_at_the_entrance_within_20_deg": 6,
+        "heading_verified_viewpoints": 4,
+        "max_baseline_m": 101.8,
+        "median_baseline_m": 34.2
+      },
+      "set": "the nine CC-BY-4.0 'Numabe Station 2024 May 30 various*' files by Wikimedia Commons user Nesnad",
+      "single_session": "2024-05-30, 16:09:38 to 16:11:48 local, one walk",
+      "test_that_would_settle_it": "download the nine files, run COLMAP exhaustive matcher + mapper (or equivalent), and report registered-image count, mean reprojection error and sparse point count",
+      "what_is_NOT_proven": "Feature-match convergence. No SfM run was performed and no image pixels beyond the six retained class-B probes were inspected. Handheld phone GPS at +/- 5-10 m and mixed 24/48 mm framing may or may not yield a usable bundle.",
+      "what_is_PROVEN": "Nine open-licence views of the station entrance exist, from at least nine distinct positions, four of them with a compass heading confirming the entrance is in frame. The >=2 and >=3 viewpoint tests are met."
+    },
+    "counts": {
+      "A": 9,
+      "B": 11,
+      "C": 39
+    },
+    "definition": {
+      "A": "reconstruction-grade multi-view source: several views of the same surfaces, with enough baseline and metadata to feed SfM / bundle adjustment",
+      "B": "single-view facade / sign appearance evidence: colour, sign layout, materials, equipment. Load-bearing for how the corridor LOOKS. Not SfM input.",
+      "C": "visual acceptance / reference only: in the surveyed radius but not depicting the corridor's facades"
+    },
+    "retention": {
+      "all_class": "B",
+      "bytes_in_repo": 0,
+      "bytes_location": "/private/tmp/claude-501/-Users-r-Downloads-asciicker-Y9-2/7c815c93-bea8-4f4e-a616-c7ed9c9d19a8/scratchpad/fl4810b/retained (session scratchpad; NOT in this repository)",
+      "licences": [
+        "CC-BY-SA-4.0",
+        "CC-BY-SA-4.0",
+        "CC-BY-SA-3.0",
+        "CC-BY-SA-3.0",
+        "CC-BY-SA-3.0",
+        "CC-BY-SA-3.0"
+      ],
+      "retained_count": 6,
+      "rule": "at most six class-B/C images, and only on an explicitly open licence, into the scratchpad only",
+      "visual_verification": "all six were opened and inspected. They show: the entrance ref=1 facade (pale grey ribbed siding, corrugated roof, white 沼部駅 sign with the red Tokyu mark and a blue TM-02 badge), the entrance ref=2 canopy, the ticket gate hall from both sides, the 2006 state of the Tamagawa-side gate sign, and the 多摩堤通り street approach with the level crossing."
+    }
+  },
+  "mapillary_evidence_phrasing": "The two in-AOI OSM mapillary= ids are evidence that Mapillary imagery was ASSOCIATED with features in this AOI during 2022 surveys. That is not proof the images are presently retrievable, nor proof of current coverage.",
+  "metadata_only": "Coverage discovery only. No provider's imagery was bulk-downloaded. The only bytes fetched are six explicitly open-licensed Wikimedia Commons probe images, held in the session scratchpad and NOT in this bundle.",
+  "other_open_pools": {
+    "openverse": {
+      "anonymous_cap_verbatim": "page_size may not exceed 20 for anonymous requests (HTTP 401 when exceeded)",
+      "api_openverse_org_note": "https://api.openverse.org/v1/images/ timed out after 40 s (curl exit 28); the .engineering host answered",
+      "endpoint": "https://api.openverse.engineering/v1/images/?q=Numabe+Station&page_size=20",
+      "http": [
+        200,
+        200
+      ],
+      "matching_numabe": 19,
+      "new_beyond_commons": {
+        "class": "C",
+        "count": 4,
+        "creator": "ykanazawa1999",
+        "licence": "CC BY-NC-SA 2.0",
+        "retention": "NOT retained: NonCommercial is not an open licence under the retention rule in scripts/pipeline/source_manifest.py",
+        "source": "flickr",
+        "titles": [
+          "Tokyu Tamagawa Line 7000 Series Train and 1000 Series Train at Numabe Station",
+          "Tokyu Tamagawa Line 7000 Series Train Arriving at Numabe Station",
+          "Tokyu Tamagawa Line at the South of Numabe Station"
+        ]
+      },
+      "note": "every other Openverse hit is the same Wikimedia Commons file already recorded above",
+      "result_count": 23,
+      "state": "PRESENT"
+    },
+    "osm_image_tags_in_extract": {
+      "image": 0,
+      "mapillary": 2,
+      "method": "regex + xml.etree scan of the retained numabe_corridor_aoi.osm",
+      "panoramax": 0,
+      "reading": "the AOI carries no direct image= or wikimedia_commons= tag; the two mapillary= tags are recorded under the Mapillary provider above",
+      "wikidata": "34 tag instances (10 distinct items)",
+      "wikimedia_commons": 0,
+      "wikipedia": "40 tag instances (10 distinct articles, including ja:沼部駅)"
+    }
+  },
+  "providers": {
+    "google_street_view": {
+      "access": {
+        "credential_required": true,
+        "key_supplied": false,
+        "metadata_endpoint": "https://maps.googleapis.com/maps/api/streetview/metadata",
+        "refusal": "REQUEST_DENIED: You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account",
+        "retention_policy": "Street View imagery must not be prefetched, cached or stored; panorama IDs and metadata may be referenced."
+      },
+      "control_query": {
+        "http": [
+          200
+        ],
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "pictures": 0,
+        "purpose": "proves the endpoint and its parameters work, so a zero at the target is a real absence and not a request error",
+        "radius_m": 50,
+        "refused": "REQUEST_DENIED: You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+      },
+      "control_query_meaning": "the Paris control was refused identically, so the refusal is credential-driven, not location-driven",
+      "counts": {
+        "capture_dates_free_text": 0,
+        "capture_dates_max": null,
+        "capture_dates_min": null,
+        "farthest_m": null,
+        "nearest_m": null,
+        "pictures": 0,
+        "pictures_inside_aoi_polygon": 0,
+        "sequences": 0,
+        "with_capture_date": 0,
+        "with_heading": 0
+      },
+      "exact_operator_action_required": {
+        "note": "This determines whether panoramas EXIST. It does not create any right to retain them.",
+        "steps": [
+          "1. In the Google Cloud console, select or create a project with billing enabled.",
+          "2. Enable the 'Street View Static API' for that project.",
+          "3. APIs & Services -> Credentials -> Create credentials -> API key.",
+          "4. Restrict the key to the Street View Static API.",
+          "5. Supply it as providers.google_street_view.api_key in the probe spec."
+        ]
+      },
+      "http_statuses_verbatim": [
+        {
+          "api_code": "REQUEST_DENIED",
+          "api_message": "You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account",
+          "bytes": 217,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.083,
+          "http": 200,
+          "method": "GET",
+          "note": "streetview metadata radius 50 m (NO api key, deliberately)",
+          "url": "https://maps.googleapis.com/maps/api/streetview/metadata?location=35.5828560,139.6730398&radius=50"
+        },
+        {
+          "api_code": "REQUEST_DENIED",
+          "api_message": "You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account",
+          "bytes": 217,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.04,
+          "http": 200,
+          "method": "GET",
+          "note": "streetview metadata radius 250 m (NO api key, deliberately)",
+          "url": "https://maps.googleapis.com/maps/api/streetview/metadata?location=35.5828560,139.6730398&radius=250"
+        },
+        {
+          "api_code": "REQUEST_DENIED",
+          "api_message": "You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account",
+          "bytes": 217,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.043,
+          "http": 200,
+          "method": "GET",
+          "note": "streetview metadata radius 1000 m (NO api key, deliberately)",
+          "url": "https://maps.googleapis.com/maps/api/streetview/metadata?location=35.5828560,139.6730398&radius=1000"
+        },
+        {
+          "api_code": "REQUEST_DENIED",
+          "api_message": "You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account",
+          "bytes": 217,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.04,
+          "http": 200,
+          "method": "GET",
+          "note": "streetview metadata radius 50 m (NO api key, deliberately)",
+          "url": "https://maps.googleapis.com/maps/api/streetview/metadata?location=48.8566000,2.3522000&radius=50"
+        }
+      ],
+      "licence": {
+        "attribution": null,
+        "counts": {},
+        "licence_uri": null
+      },
+      "policy": "Street View imagery may be referenced by panorama id and metadata only. Prefetching, caching or storing Street View imagery is prohibited. No imagery was requested. Even a PRESENT verdict here could never become a retained reconstruction corpus; it could only support on-screen visual comparison.",
+      "queried": [
+        "radius 50 m about 35.5828560,139.6730398",
+        "radius 250 m about 35.5828560,139.6730398",
+        "radius 1000 m about 35.5828560,139.6730398"
+      ],
+      "radius_ladder": [
+        {
+          "http": [
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 50.0,
+          "refused": "REQUEST_DENIED: You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+        },
+        {
+          "http": [
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 250.0,
+          "refused": "REQUEST_DENIED: You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+        },
+        {
+          "http": [
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 1000.0,
+          "refused": "REQUEST_DENIED: You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+        }
+      ],
+      "refusal_verbatim": {
+        "error_message": "You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account",
+        "http": 200,
+        "status": "REQUEST_DENIED"
+      },
+      "state": "UNKNOWN_PENDING_ACCESS",
+      "viewpoint_multiplicity": {
+        "at_least_2": false,
+        "at_least_3": false,
+        "distinct_viewpoints": 0,
+        "heading_verified_viewpoints": 0,
+        "max_baseline_m": 0.0,
+        "median_baseline_m": 0.0,
+        "nearest_m": null,
+        "params": {
+          "half_fov_deg": 40.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 5.0
+        },
+        "pictures_in_range": 0,
+        "viewpoint_ids": []
+      },
+      "what_would_change_the_verdict": [
+        "a credential that clears the refusal: REQUEST_DENIED: You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account"
+      ]
+    },
+    "kartaview": {
+      "access": {
+        "credential_required": false,
+        "hosts_probed": [
+          "https://api.kartaview.org",
+          "https://api.openstreetcam.org"
+        ],
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "stated_licence": "CC-BY-SA-4.0"
+      },
+      "also_known_as": "OpenStreetCam",
+      "control_query": {
+        "http": [
+          200,
+          200
+        ],
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "pictures": 890,
+        "purpose": "proves the endpoint and its parameters work, so a zero at the target is a real absence and not a request error",
+        "radius_m": 500,
+        "refused": null
+      },
+      "counts": {
+        "capture_dates_free_text": 0,
+        "capture_dates_max": "2018-05-04 04:21:20.000",
+        "capture_dates_min": "2016-09-30 06:57:22.000",
+        "farthest_m": 3931.3,
+        "nearest_m": 417.0,
+        "pictures": 1358,
+        "pictures_inside_aoi_polygon": 0,
+        "sequences": 8,
+        "with_capture_date": 1358,
+        "with_heading": 1358
+      },
+      "distance_field_warning": "The API's own `distance` field is NOT metres: the nearest record reports distance=\"22.49\" while its coordinates are 417.0 m from the entrance. Every metre figure in this file is computed from the returned lat/lng, never from that field.",
+      "endpoint_discovery": {
+        "docs_page": {
+          "finding": "JavaScript shell, 2159 bytes, no API text served to a plain GET; endpoint shapes were discovered by probing instead",
+          "http": 200,
+          "url": "https://kartaview.org/doc/photos"
+        },
+        "endpoints_that_answered": [
+          {
+            "behaviour": "returns the full page of photos inside the radius plus totalFilteredItems",
+            "endpoint": "POST /1.0/list/nearby-photos/",
+            "params": "lat, lng, radius (m), zoom, page"
+          },
+          {
+            "behaviour": "returns the single NEAREST photo only; radius is capped",
+            "cap_http": 400,
+            "cap_message_verbatim": "invalid GetPhotosV2Request.Radius: value must be inside range [1, 500]",
+            "endpoint": "GET /2.0/photo/?lat&lng&radius"
+          },
+          {
+            "behaviour": "single photo detail, HTTP 200",
+            "endpoint": "GET /2.0/photo/{id}"
+          },
+          {
+            "behaviour": "sequence detail, HTTP 200",
+            "endpoint": "GET /2.0/sequence/{id}"
+          },
+          {
+            "behaviour": "ordered photo list for one sequence, HTTP 200",
+            "endpoint": "POST /1.0/sequence/photo-list/",
+            "params": "sequenceId"
+          }
+        ],
+        "endpoints_that_refused": [
+          {
+            "api_code": 400,
+            "api_message_verbatim": "Restricted access!",
+            "endpoint": "GET /2.0/photo/?bbTopLeft&bbBottomRight",
+            "http": 200
+          },
+          {
+            "api_message_verbatim": "A required argument is missing ([sequenceId])",
+            "endpoint": "POST /1.0/sequence/photo-list/ without sequenceId",
+            "http": 400
+          }
+        ],
+        "host_field_capitalisation_differs": "api.openstreetcam.org sends `heading`/`headers`; api.kartaview.org sends `Heading`/`Headers` for the same field. A case-sensitive reader loses every compass angle from one host and would report 'no headings exist'.",
+        "hosts_that_answer": [
+          "https://api.kartaview.org",
+          "https://api.openstreetcam.org"
+        ],
+        "legacy_host_still_live": true
+      },
+      "http_statuses_verbatim": [
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 196,
+          "content_type": "application/json",
+          "elapsed_s": 1.172,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 100 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": "600",
+          "api_message": "The request has been processed without incidents",
+          "bytes": 182,
+          "content_type": "application/json",
+          "elapsed_s": 1.282,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 100 m | totalFilteredItems=0",
+          "url": "https://api.openstreetcam.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 198,
+          "content_type": "application/json",
+          "elapsed_s": 1.151,
+          "http": 200,
+          "method": "GET",
+          "note": "2.0/photo radius 100 m | data=0",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=35.5828560&lng=139.6730398&radius=100"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 196,
+          "content_type": "application/json",
+          "elapsed_s": 1.177,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 250 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": "600",
+          "api_message": "The request has been processed without incidents",
+          "bytes": 182,
+          "content_type": "application/json",
+          "elapsed_s": 1.206,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 250 m | totalFilteredItems=0",
+          "url": "https://api.openstreetcam.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 198,
+          "content_type": "application/json",
+          "elapsed_s": 1.144,
+          "http": 200,
+          "method": "GET",
+          "note": "2.0/photo radius 250 m | data=0",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=35.5828560&lng=139.6730398&radius=250"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 4269,
+          "content_type": "application/json",
+          "elapsed_s": 1.162,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 500 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 2444,
+          "content_type": "application/json",
+          "elapsed_s": 1.172,
+          "http": 200,
+          "method": "GET",
+          "note": "2.0/photo radius 500 m | data=1",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=35.5828560&lng=139.6730398&radius=500"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 67442,
+          "content_type": "application/json",
+          "elapsed_s": 1.624,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 1000 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 400,
+          "api_message": "invalid GetPhotosV2Request.Radius: value must be inside range [1, 500]",
+          "bytes": 130,
+          "content_type": "application/json",
+          "elapsed_s": 1.15,
+          "error": "{\"code\":400,\"reason\":\"VALIDATOR\",\"message\":\"invalid GetPhotosV2Request.Radius: value must be inside range [1, 500]\",\"metadata\":{}}",
+          "http": 400,
+          "method": "GET",
+          "note": "2.0/photo radius 1000 m (expected to exceed the documented cap)",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=35.5828560&lng=139.6730398&radius=1000"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 286994,
+          "content_type": "application/json",
+          "elapsed_s": 2.066,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 2000 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 400,
+          "api_message": "invalid GetPhotosV2Request.Radius: value must be inside range [1, 500]",
+          "bytes": 130,
+          "content_type": "application/json",
+          "elapsed_s": 1.159,
+          "error": "{\"code\":400,\"reason\":\"VALIDATOR\",\"message\":\"invalid GetPhotosV2Request.Radius: value must be inside range [1, 500]\",\"metadata\":{}}",
+          "http": 400,
+          "method": "GET",
+          "note": "2.0/photo radius 2000 m (expected to exceed the documented cap)",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=35.5828560&lng=139.6730398&radius=2000"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 920490,
+          "content_type": "application/json",
+          "elapsed_s": 2.638,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 4000 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 400,
+          "api_message": "invalid GetPhotosV2Request.Radius: value must be inside range [1, 500]",
+          "bytes": 130,
+          "content_type": "application/json",
+          "elapsed_s": 1.152,
+          "error": "{\"code\":400,\"reason\":\"VALIDATOR\",\"message\":\"invalid GetPhotosV2Request.Radius: value must be inside range [1, 500]\",\"metadata\":{}}",
+          "http": 400,
+          "method": "GET",
+          "note": "2.0/photo radius 4000 m (expected to exceed the documented cap)",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=35.5828560&lng=139.6730398&radius=4000"
+        },
+        {
+          "bytes": 0,
+          "elapsed_s": 1.152,
+          "error": "non-JSON body: JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+          "http": 404,
+          "method": "GET",
+          "note": "3D/point-cloud endpoint guess: /2.0/pointcloud/ | body head: ",
+          "url": "https://api.kartaview.org/2.0/pointcloud/?lat=35.582856&lng=139.6730398&radius=500"
+        },
+        {
+          "bytes": 0,
+          "elapsed_s": 1.148,
+          "error": "non-JSON body: JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+          "http": 404,
+          "method": "GET",
+          "note": "next-generation API guess: /3.0/photo/ | body head: ",
+          "url": "https://api.kartaview.org/3.0/photo/?lat=35.582856&lng=139.6730398&radius=500"
+        },
+        {
+          "bytes": 0,
+          "elapsed_s": 1.146,
+          "error": "non-JSON body: JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+          "http": 404,
+          "method": "GET",
+          "note": "map-feature detections endpoint guess | body head: ",
+          "url": "https://api.kartaview.org/2.0/detection/?lat=35.582856&lng=139.6730398&radius=500"
+        },
+        {
+          "bytes": 183,
+          "content_type": "text/html",
+          "elapsed_s": 1.141,
+          "error": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>Microsoft-Azure-Application-Gateway/v2</center>\r\n</body>\r\n</html>\r\n",
+          "http": 502,
+          "method": "GET",
+          "note": "KartaView 3D host | body head: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>Microsoft-Azure-Application-Gateway/v2</center>\r\n</body>\r\n</html>\r\n",
+          "url": "https://3d.kartaview.org/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 604922,
+          "content_type": "application/json",
+          "elapsed_s": 2.36,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 500 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 26860,
+          "content_type": "application/json",
+          "elapsed_s": 2.263,
+          "http": 200,
+          "method": "GET",
+          "note": "2.0/photo radius 500 m | data=11",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=48.8566000&lng=2.3522000&radius=500"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 237689,
+          "content_type": "application/json",
+          "elapsed_s": 2.128,
+          "http": 200,
+          "method": "POST",
+          "note": "sequence 379661 photo-list",
+          "url": "https://api.kartaview.org/1.0/sequence/photo-list/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 670363,
+          "content_type": "application/json",
+          "elapsed_s": 2.337,
+          "http": 200,
+          "method": "POST",
+          "note": "sequence 466141 photo-list",
+          "url": "https://api.kartaview.org/1.0/sequence/photo-list/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 76661,
+          "content_type": "application/json",
+          "elapsed_s": 1.621,
+          "http": 200,
+          "method": "POST",
+          "note": "sequence 23574 photo-list",
+          "url": "https://api.kartaview.org/1.0/sequence/photo-list/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 747236,
+          "content_type": "application/json",
+          "elapsed_s": 2.299,
+          "http": 200,
+          "method": "POST",
+          "note": "sequence 379665 photo-list",
+          "url": "https://api.kartaview.org/1.0/sequence/photo-list/"
+        }
+      ],
+      "in_aoi": {
+        "nearest_picture_m": 417.0,
+        "pictures_inside_aoi_polygon": 0,
+        "pictures_within_100_m": 0,
+        "pictures_within_250_m": 0,
+        "verdict": "KartaView covers this part of Ota City but no capture enters the AOI or the corridor."
+      },
+      "licence": {
+        "attribution": "(c) KartaView contributors, CC-BY-SA-4.0",
+        "counts": {
+          "CC-BY-SA-4.0": 1358
+        },
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "nearest_picture": {
+        "capture_date": "2017-05-28 04:14:51.000",
+        "distance_m": 417.0,
+        "heading_deg": 272.01,
+        "id": "38868211",
+        "lat": 35.586485,
+        "lon": 139.671876,
+        "page_uri": "https://kartaview.org/details/379661/76",
+        "sequence_id": "379661"
+      },
+      "point_cloud_source_class": {
+        "kind": "point_cloud",
+        "per_photo_depth_flag": "The photo-list records carry a `hasDepth` boolean. It is false on all 268 photos of the nearest sequence and on every sequence profiled (with_depth = 0).",
+        "queried": [
+          {
+            "http": 404,
+            "url": "https://api.kartaview.org/2.0/pointcloud/?lat=35.582856&lng=139.6730398&radius=500"
+          },
+          {
+            "http": 404,
+            "url": "https://api.kartaview.org/3.0/photo/?lat=35.582856&lng=139.6730398&radius=500"
+          },
+          {
+            "http": 404,
+            "url": "https://api.kartaview.org/2.0/detection/?lat=35.582856&lng=139.6730398&radius=500"
+          },
+          {
+            "body_verbatim": "502 Bad Gateway (Microsoft-Azure-Application-Gateway/v2)",
+            "http": 502,
+            "url": "https://3d.kartaview.org/"
+          }
+        ],
+        "state": "ABSENT_IN_SURVEYED_RADIUS",
+        "verdict": "No KartaView 3D or point-cloud evidence is retrievable for this AOI. Logged as its own source class, not folded into the imagery count."
+      },
+      "queried": [
+        "radius 100 m about 35.5828560,139.6730398",
+        "radius 250 m about 35.5828560,139.6730398",
+        "radius 500 m about 35.5828560,139.6730398",
+        "radius 1000 m about 35.5828560,139.6730398",
+        "radius 2000 m about 35.5828560,139.6730398",
+        "radius 4000 m about 35.5828560,139.6730398"
+      ],
+      "radius_ladder": [
+        {
+          "http": [
+            200,
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 100.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 250.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            200
+          ],
+          "pictures": 6,
+          "radius_m": 500.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            400
+          ],
+          "pictures": 99,
+          "radius_m": 1000.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            400
+          ],
+          "pictures": 423,
+          "radius_m": 2000.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            400
+          ],
+          "pictures": 1358,
+          "radius_m": 4000.0,
+          "refused": null
+        }
+      ],
+      "sequences_profiled": {
+        "23574": {
+          "capture_date_first": "2016-09-30 06:57:22.000",
+          "capture_date_last": "2016-09-30 07:00:44.000",
+          "headings_present": 87,
+          "nearest_approach_to_target_m": 821.7,
+          "pictures": 87,
+          "spacing_m": {
+            "fraction_in_2_to_4_m_band": 0.0,
+            "fraction_le_4_m": 0.0,
+            "max": 33.32,
+            "median": 22.18,
+            "min": 5.45,
+            "p25": 17.54,
+            "p75": 26.07,
+            "pairs": 86,
+            "path_length_m": 1872.85
+          },
+          "with_depth": 0
+        },
+        "379661": {
+          "capture_date_first": "2017-05-28 04:11:40.000",
+          "capture_date_last": "2017-05-28 04:24:30.000",
+          "headings_present": 268,
+          "nearest_approach_to_target_m": 417.0,
+          "pictures": 268,
+          "spacing_m": {
+            "fraction_in_2_to_4_m_band": 0.007,
+            "fraction_le_4_m": 0.007,
+            "max": 114.4,
+            "median": 15.23,
+            "min": 3.7,
+            "p25": 11.72,
+            "p75": 20.33,
+            "pairs": 267,
+            "path_length_m": 4590.17
+          },
+          "with_depth": 0
+        },
+        "379665": {
+          "capture_date_first": "2017-05-28 03:37:59.000",
+          "capture_date_last": "2017-05-28 04:10:45.000",
+          "headings_present": 843,
+          "nearest_approach_to_target_m": 1455.4,
+          "pictures": 843,
+          "spacing_m": {
+            "fraction_in_2_to_4_m_band": 0.0,
+            "fraction_le_4_m": 0.0,
+            "max": 172.11,
+            "median": 16.78,
+            "min": 4.28,
+            "p25": 13.54,
+            "p75": 27.35,
+            "pairs": 842,
+            "path_length_m": 17899.46
+          },
+          "with_depth": 0
+        },
+        "466141": {
+          "capture_date_first": "2017-06-10 03:54:03.000",
+          "capture_date_last": "2017-06-10 04:32:07.000",
+          "headings_present": 756,
+          "nearest_approach_to_target_m": 696.2,
+          "pictures": 756,
+          "spacing_m": {
+            "fraction_in_2_to_4_m_band": 0.003,
+            "fraction_le_4_m": 0.004,
+            "max": 172.62,
+            "median": 16.41,
+            "min": 0.0,
+            "p25": 12.48,
+            "p75": 22.4,
+            "pairs": 755,
+            "path_length_m": 14452.99
+          },
+          "with_depth": 0
+        }
+      },
+      "spacing_verdict": "Even where KartaView covers, the capture is far too sparse for 2-4 m keyframes: the nearest sequence (379661, 268 pictures) has median spacing 15.23 m and only 0.7% of gaps in the 2-4 m band.",
+      "state": "PRESENT",
+      "terms": {
+        "bulk_download": "the same page states 'As of June 2020, there are no batch downloading possibilities available'",
+        "operator": "built by Telenav, transferred to Grab in December 2019",
+        "quote": "The images on KartaView can be used under the Creative Commons Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0).",
+        "source_quoted": "https://wiki.openstreetmap.org/wiki/KartaView",
+        "stated_licence": "CC-BY-SA-4.0",
+        "what_this_survey_did": "metadata only; no KartaView image bytes were requested"
+      },
+      "viewpoint_multiplicity": {
+        "at_least_2": false,
+        "at_least_3": false,
+        "distinct_viewpoints": 0,
+        "heading_verified_viewpoints": 0,
+        "max_baseline_m": 0.0,
+        "median_baseline_m": 0.0,
+        "nearest_m": null,
+        "params": {
+          "half_fov_deg": 40.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 5.0
+        },
+        "pictures_in_range": 0,
+        "viewpoint_ids": []
+      },
+      "what_would_change_the_verdict": [
+        "nothing; coverage was returned and is recorded"
+      ]
+    },
+    "mapillary": {
+      "access": {
+        "credential_required": true,
+        "graph_endpoint": "https://graph.mapillary.com/images",
+        "refusal": "graph.mapillary.com HTTP 500: Invalid OAuth 2.0 Access Token",
+        "tile_endpoint": "https://tiles.mapillary.com/maps/vtp/{tileset}/2/{z}/{x}/{y}",
+        "token_supplied": false
+      },
+      "control_query": {
+        "http": [
+          500,
+          403,
+          403,
+          403,
+          403
+        ],
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "pictures": 0,
+        "purpose": "proves the endpoint and its parameters work, so a zero at the target is a real absence and not a request error",
+        "radius_m": 500,
+        "refused": "graph.mapillary.com HTTP 500: Invalid OAuth 2.0 Access Token"
+      },
+      "control_query_meaning": "The Paris control was refused identically (graph 500, tiles 403). The refusal is therefore proven to be credential-driven and not location-driven, which is exactly why the state is UNKNOWN_PENDING_ACCESS and not ABSENT.",
+      "counts": {
+        "capture_dates_free_text": 0,
+        "capture_dates_max": null,
+        "capture_dates_min": null,
+        "farthest_m": null,
+        "nearest_m": null,
+        "pictures": 0,
+        "pictures_inside_aoi_polygon": 0,
+        "sequences": 0,
+        "with_capture_date": 0,
+        "with_heading": 0
+      },
+      "coverage_is_not_zero": {
+        "independent_in_aoi_evidence": "OSM features INSIDE the AOI carry Mapillary image ids",
+        "method": "xml.etree scan of the retained numabe_corridor_aoi.osm extract for tag k='mapillary'",
+        "osm_tags_found": [
+          {
+            "first_vertex_lonlat": [
+              139.6729365,
+              35.5827897
+            ],
+            "note": "the footway at station entrance ref=2 (OSM node 9865199049), 20.4 m from the selected entrance",
+            "osm_id": 1087430625,
+            "osm_type": "way",
+            "tags": {
+              "highway": "footway",
+              "mapillary": "1483647582082015",
+              "surface": "asphalt",
+              "survey:date": "2022-07-17"
+            }
+          },
+          {
+            "first_vertex_lonlat": [
+              139.6725014,
+              35.5830403
+            ],
+            "osm_id": 1087430627,
+            "osm_type": "way",
+            "tags": {
+              "highway": "footway",
+              "mapillary": "124814976773862",
+              "surface": "concrete",
+              "survey:date": "2022-02-25"
+            }
+          }
+        ],
+        "reading": "Two OSM surveyors cited Mapillary images at this station in 2022 as the source for footway geometry and surface. That is source-backed evidence that Mapillary holds imagery at the entrance. It is NOT a measurement of density, date coverage or viewpoint multiplicity, which stay UNKNOWN until a token is used."
+      },
+      "documented_reason": {
+        "conclusion": "There is no no-token route to Mapillary coverage discovery. This is a documented access rule, not an endpoint mistake.",
+        "quote": "All requests against https://graph.mapillary.com and https://tiles.mapillary.com must be authorized. They require a client or user access tokens.",
+        "source": "https://www.mapillary.com/developer/api-documentation"
+      },
+      "exact_operator_action_required": {
+        "page": "https://www.mapillary.com/dashboard/developers",
+        "scope": "read",
+        "steps": [
+          "1. Sign in to Mapillary at https://www.mapillary.com/ (a Mapillary account; Facebook sign-in also works).",
+          "2. Open https://www.mapillary.com/dashboard/developers .",
+          "3. Click 'Register Application'. Name it (for example 'asciicker-Y9-2 FL-4810 coverage probe').",
+          "4. Grant ONLY the 'read' scope. Mapillary defines three scopes - read, write, upload - and coverage discovery needs read alone. Do not grant write or upload.",
+          "5. Open the registered application and copy its CLIENT TOKEN (format 'MLY|<app_id>|<client_token>'). A client token, not a user OAuth token, is sufficient for both graph.mapillary.com and tiles.mapillary.com.",
+          "6. Hand the token over as an environment variable, then re-run: set providers.mapillary.access_token in the probe spec and run scripts/pipeline/street_imagery_probe.py again. No other account action is needed."
+        ],
+        "token_type": "client token (application-scoped)",
+        "why": "every no-token route above was tried and refused; the API documentation states authorization is mandatory"
+      },
+      "http_statuses_verbatim": [
+        {
+          "api_code": 190,
+          "api_message": "Invalid OAuth 2.0 Access Token",
+          "bytes": 145,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.102,
+          "error": "{\"error\":{\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"MLYApiException\",\"code\":190,\"error_data\":{},\"fbtrace_id\":\"ASmW6PEHUZdqU23Bo9E99jn\"}}",
+          "http": 500,
+          "method": "GET",
+          "note": "graph images bbox, radius 100 m (NO token, deliberately)",
+          "url": "https://graph.mapillary.com/images?bbox=139.6719340,35.5819567,139.6741456,35.5837553&limit=500&fields=id,geometry,captured_at,compass_angle,camera_type,sequence,thumb_1024_url"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.082,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_public z14/14548/6457 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/14/14548/6457"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.077,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_public z17/116389/51657 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/17/116389/51657"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.081,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z14/14548/6457 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/14/14548/6457"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.073,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z17/116389/51657 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/17/116389/51657"
+        },
+        {
+          "api_code": 190,
+          "api_message": "Invalid OAuth 2.0 Access Token",
+          "bytes": 145,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.069,
+          "error": "{\"error\":{\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"MLYApiException\",\"code\":190,\"error_data\":{},\"fbtrace_id\":\"AFJA3wux_uI8w2-SUUzhDvV\"}}",
+          "http": 500,
+          "method": "GET",
+          "note": "graph images bbox, radius 500 m (NO token, deliberately)",
+          "url": "https://graph.mapillary.com/images?bbox=139.6675108,35.5783594,139.6785688,35.5873526&limit=500&fields=id,geometry,captured_at,compass_angle,camera_type,sequence,thumb_1024_url"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.082,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_public z14/14548/6457 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/14/14548/6457"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.081,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_public z17/116389/51657 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/17/116389/51657"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.078,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z14/14548/6457 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/14/14548/6457"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.079,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z17/116389/51657 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/17/116389/51657"
+        },
+        {
+          "api_code": 190,
+          "api_message": "Invalid OAuth 2.0 Access Token",
+          "bytes": 145,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.094,
+          "error": "{\"error\":{\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"MLYApiException\",\"code\":190,\"error_data\":{},\"fbtrace_id\":\"AfyxeAv_4Ow6M7iImeeEPEh\"}}",
+          "http": 500,
+          "method": "GET",
+          "note": "graph images bbox, radius 1000 m (NO token, deliberately)",
+          "url": "https://graph.mapillary.com/images?bbox=139.6619818,35.5738628,139.6840978,35.5918492&limit=500&fields=id,geometry,captured_at,compass_angle,camera_type,sequence,thumb_1024_url"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.087,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_public z14/14548/6457 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/14/14548/6457"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.082,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_public z17/116389/51657 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/17/116389/51657"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.077,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z14/14548/6457 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/14/14548/6457"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.104,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z17/116389/51657 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/17/116389/51657"
+        },
+        {
+          "api_code": 190,
+          "api_message": "Invalid OAuth 2.0 Access Token",
+          "bytes": 145,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.074,
+          "error": "{\"error\":{\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"MLYApiException\",\"code\":190,\"error_data\":{},\"fbtrace_id\":\"AAIzcQ3Y1RCmprHoSIzgdg0\"}}",
+          "http": 500,
+          "method": "GET",
+          "note": "graph images bbox, radius 500 m (NO token, deliberately)",
+          "url": "https://graph.mapillary.com/images?bbox=2.3453657,48.8521034,2.3590343,48.8610966&limit=500&fields=id,geometry,captured_at,compass_angle,camera_type,sequence,thumb_1024_url"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.086,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_public z14/8299/5636 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/14/8299/5636"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.078,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_public z17/66392/45092 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/17/66392/45092"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.078,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z14/8299/5636 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/14/8299/5636"
+        },
+        {
+          "bytes": 0,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "elapsed_s": 0.084,
+          "http": 403,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z17/66392/45092 (NO token, deliberately)",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/17/66392/45092"
+        }
+      ],
+      "licence": {
+        "attribution": null,
+        "counts": {},
+        "licence_uri": null
+      },
+      "no_token_routes_exhausted": [
+        {
+          "body_verbatim": "{\"error\":{\"message\":\"Invalid OAuth 2.0 Access Token\",\"type\":\"MLYApiException\",\"code\":190}}",
+          "http": 500,
+          "route": "GET https://graph.mapillary.com/images?bbox=..."
+        },
+        {
+          "body_verbatim": "Invalid OAuth 2.0 Access Token (MLYApiException code 190)",
+          "http": 500,
+          "route": "GET https://graph.mapillary.com/{image_id}"
+        },
+        {
+          "http": 403,
+          "note": "public coverage tileset, correct tile for the AOI, zero-byte body",
+          "route": "GET https://tiles.mapillary.com/maps/vtp/mly1_public/2/14/14548/6457"
+        },
+        {
+          "http": 403,
+          "route": "GET https://tiles.mapillary.com/maps/vtp/mly1_public/2/17/116389/51657"
+        },
+        {
+          "http": 403,
+          "route": "GET https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/14/14548/6457"
+        },
+        {
+          "http": 403,
+          "route": "GET https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/17/116389/51657"
+        },
+        {
+          "http": 403,
+          "route": "GET https://tiles.mapillary.com/maps/vtp/mly1_public/2/14/14548/6457?access_token= (empty)"
+        },
+        {
+          "error_verbatim": "curl: (6) Could not resolve host: a.mapillary.com",
+          "http": null,
+          "note": "the v3 host no longer resolves in DNS; the v3 client_id route is gone, not merely refused",
+          "route": "GET https://a.mapillary.com/v3/images?bbox=... (retired v3 API)"
+        }
+      ],
+      "queried": [
+        "radius 100 m about 35.5828560,139.6730398",
+        "radius 500 m about 35.5828560,139.6730398",
+        "radius 1000 m about 35.5828560,139.6730398"
+      ],
+      "radius_ladder": [
+        {
+          "http": [
+            500,
+            403,
+            403,
+            403,
+            403
+          ],
+          "pictures": 0,
+          "radius_m": 100.0,
+          "refused": "graph.mapillary.com HTTP 500: Invalid OAuth 2.0 Access Token"
+        },
+        {
+          "http": [
+            500,
+            403,
+            403,
+            403,
+            403
+          ],
+          "pictures": 0,
+          "radius_m": 500.0,
+          "refused": "graph.mapillary.com HTTP 500: Invalid OAuth 2.0 Access Token"
+        },
+        {
+          "http": [
+            500,
+            403,
+            403,
+            403,
+            403
+          ],
+          "pictures": 0,
+          "radius_m": 1000.0,
+          "refused": "graph.mapillary.com HTTP 500: Invalid OAuth 2.0 Access Token"
+        }
+      ],
+      "state": "UNKNOWN_PENDING_ACCESS",
+      "terms_read": {
+        "caveat_quote": "may provide access to certain User Content ... under a separate set of license terms (such as the Creative Commons Attribution NonCommercial Share Alike (CC BY-NC-SA license)",
+        "explicit_prohibition_quote": "any attempt to re-identify or unblur any aspect of any Content",
+        "licences_help_page": {
+          "http": 403,
+          "note": "the help-centre licence article refused an unauthenticated read; the platform terms above were readable",
+          "url": "https://help.mapillary.com/hc/en-us/articles/115001770409-Licenses"
+        },
+        "licensing_is_not_a_coverage_question": "None of the above is needed to answer 'does coverage exist'. Coverage discovery is blocked by a token, not by a licence.",
+        "platform_terms_url": "https://www.mapillary.com/terms",
+        "quote": "Your use of any User Content provided by other users is subject to the Creative Commons Share Alike (CC BY-SA) license",
+        "what_must_be_audited_before_retaining_or_compiling_derivatives": [
+          "which of the two licences (CC-BY-SA or CC-BY-NC-SA) applies to each specific image id, since the terms allow both",
+          "whether an SfM mesh or texture atlas built from CC-BY-SA imagery is a derivative that must itself ship CC-BY-SA",
+          "per-image attribution capture (author, image id, capture date) at ingest, because ShareAlike attribution cannot be reconstructed later",
+          "the re-identification/unblurring prohibition, which constrains any super-resolution or inpainting step applied to blurred regions"
+        ]
+      },
+      "viewpoint_multiplicity": {
+        "at_least_2": false,
+        "at_least_3": false,
+        "distinct_viewpoints": 0,
+        "heading_verified_viewpoints": 0,
+        "max_baseline_m": 0.0,
+        "median_baseline_m": 0.0,
+        "nearest_m": null,
+        "params": {
+          "half_fov_deg": 40.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 5.0
+        },
+        "pictures_in_range": 0,
+        "viewpoint_ids": []
+      },
+      "what_would_change_the_verdict": [
+        "a credential that clears the refusal: graph.mapillary.com HTTP 500: Invalid OAuth 2.0 Access Token"
+      ]
+    },
+    "panoramax": {
+      "access": {
+        "credential_required": false,
+        "endpoints": [
+          "https://api.panoramax.xyz/api/search",
+          "https://panoramax.openstreetmap.fr/api/search"
+        ],
+        "stated_licence": "CC-BY-SA-4.0"
+      },
+      "control_query": {
+        "http": [
+          200,
+          200
+        ],
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "pictures": 1000,
+        "purpose": "proves the endpoint and its parameters work, so a zero at the target is a real absence and not a request error",
+        "radius_m": 500,
+        "refused": null
+      },
+      "counts": {
+        "capture_dates_free_text": 0,
+        "capture_dates_max": null,
+        "capture_dates_min": null,
+        "farthest_m": null,
+        "nearest_m": null,
+        "pictures": 0,
+        "pictures_inside_aoi_polygon": 0,
+        "sequences": 0,
+        "with_capture_date": 0,
+        "with_heading": 0
+      },
+      "http_statuses_verbatim": [
+        {
+          "bytes": 26,
+          "content_type": "application/json",
+          "elapsed_s": 0.268,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 100 m bbox",
+          "url": "https://api.panoramax.xyz/api/search?bbox=139.6719340,35.5819567,139.6741456,35.5837553&limit=500"
+        },
+        {
+          "bytes": 170,
+          "content_type": "application/geo+json",
+          "elapsed_s": 0.275,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 100 m bbox",
+          "url": "https://panoramax.openstreetmap.fr/api/search?bbox=139.6719340,35.5819567,139.6741456,35.5837553&limit=500"
+        },
+        {
+          "bytes": 26,
+          "content_type": "application/json",
+          "elapsed_s": 0.267,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 250 m bbox",
+          "url": "https://api.panoramax.xyz/api/search?bbox=139.6702753,35.5806077,139.6758043,35.5851043&limit=500"
+        },
+        {
+          "bytes": 170,
+          "content_type": "application/geo+json",
+          "elapsed_s": 0.279,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 250 m bbox",
+          "url": "https://panoramax.openstreetmap.fr/api/search?bbox=139.6702753,35.5806077,139.6758043,35.5851043&limit=500"
+        },
+        {
+          "bytes": 26,
+          "content_type": "application/json",
+          "elapsed_s": 0.267,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 500 m bbox",
+          "url": "https://api.panoramax.xyz/api/search?bbox=139.6675108,35.5783594,139.6785688,35.5873526&limit=500"
+        },
+        {
+          "bytes": 170,
+          "content_type": "application/geo+json",
+          "elapsed_s": 0.268,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 500 m bbox",
+          "url": "https://panoramax.openstreetmap.fr/api/search?bbox=139.6675108,35.5783594,139.6785688,35.5873526&limit=500"
+        },
+        {
+          "bytes": 26,
+          "content_type": "application/json",
+          "elapsed_s": 0.27,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 1000 m bbox",
+          "url": "https://api.panoramax.xyz/api/search?bbox=139.6619818,35.5738628,139.6840978,35.5918492&limit=500"
+        },
+        {
+          "bytes": 170,
+          "content_type": "application/geo+json",
+          "elapsed_s": 0.274,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 1000 m bbox",
+          "url": "https://panoramax.openstreetmap.fr/api/search?bbox=139.6619818,35.5738628,139.6840978,35.5918492&limit=500"
+        },
+        {
+          "bytes": 3306884,
+          "content_type": "application/json",
+          "elapsed_s": 1.057,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 500 m bbox",
+          "url": "https://api.panoramax.xyz/api/search?bbox=2.3453657,48.8521034,2.3590343,48.8610966&limit=500"
+        },
+        {
+          "bytes": 3252864,
+          "content_type": "application/geo+json",
+          "elapsed_s": 2.021,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 500 m bbox",
+          "url": "https://panoramax.openstreetmap.fr/api/search?bbox=2.3453657,48.8521034,2.3590343,48.8610966&limit=500"
+        }
+      ],
+      "instances_queried": [
+        "https://api.panoramax.xyz/api/search",
+        "https://panoramax.openstreetmap.fr/api/search"
+      ],
+      "licence": {
+        "attribution": null,
+        "counts": {},
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "note": "v1 additionally queried panoramax.ign.fr and panoramax.osm.tw and found zero on both; that result is not re-litigated here. This run reproduces the central and osm-fr zeros against a Paris control that returned 1000 pictures.",
+      "queried": [
+        "radius 100 m about 35.5828560,139.6730398",
+        "radius 250 m about 35.5828560,139.6730398",
+        "radius 500 m about 35.5828560,139.6730398",
+        "radius 1000 m about 35.5828560,139.6730398"
+      ],
+      "radius_ladder": [
+        {
+          "http": [
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 100.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 250.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 500.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 1000.0,
+          "refused": null
+        }
+      ],
+      "reproduces_v1": true,
+      "state": "ABSENT_IN_SURVEYED_RADIUS",
+      "viewpoint_multiplicity": {
+        "at_least_2": false,
+        "at_least_3": false,
+        "distinct_viewpoints": 0,
+        "heading_verified_viewpoints": 0,
+        "max_baseline_m": 0.0,
+        "median_baseline_m": 0.0,
+        "nearest_m": null,
+        "params": {
+          "half_fov_deg": 40.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 5.0
+        },
+        "pictures_in_range": 0,
+        "viewpoint_ids": []
+      },
+      "what_would_change_the_verdict": [
+        "new uploads inside the surveyed radius, or a wider radius rung"
+      ]
+    },
+    "wikimedia_commons": {
+      "access": {
+        "api": "https://commons.wikimedia.org/w/api.php",
+        "credential_required": false,
+        "note": "per-file licence is authoritative; Commons hosts several distinct licences"
+      },
+      "control_query": {
+        "http": [
+          200
+        ],
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "pictures": 300,
+        "purpose": "proves the endpoint and its parameters work, so a zero at the target is a real absence and not a request error",
+        "radius_m": 250,
+        "refused": null
+      },
+      "counts": {
+        "capture_dates_free_text": 32,
+        "capture_dates_max": "2026-03-28",
+        "capture_dates_min": "2006-11-12",
+        "farthest_m": 495.5,
+        "nearest_m": 4.9,
+        "pictures": 59,
+        "pictures_inside_aoi_polygon": 15,
+        "sequences": 0,
+        "with_capture_date": 58,
+        "with_heading": 10
+      },
+      "http_statuses_verbatim": [
+        {
+          "bytes": 2171,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.939,
+          "http": 200,
+          "method": "GET",
+          "note": "geosearch radius 100 m",
+          "url": "https://commons.wikimedia.org/w/api.php?list=geosearch&gscoord=35.582856%7C139.6730398&gsradius=100&gslimit=300&gsnamespace=6&action=query&format=json"
+        },
+        {
+          "bytes": 3245,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.836,
+          "http": 200,
+          "method": "GET",
+          "note": "geosearch radius 250 m",
+          "url": "https://commons.wikimedia.org/w/api.php?list=geosearch&gscoord=35.582856%7C139.6730398&gsradius=250&gslimit=300&gsnamespace=6&action=query&format=json"
+        },
+        {
+          "bytes": 6548,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.682,
+          "http": 200,
+          "method": "GET",
+          "note": "geosearch radius 500 m",
+          "url": "https://commons.wikimedia.org/w/api.php?list=geosearch&gscoord=35.582856%7C139.6730398&gsradius=500&gslimit=300&gsnamespace=6&action=query&format=json"
+        },
+        {
+          "bytes": 2206,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.157,
+          "http": 200,
+          "method": "GET",
+          "note": "categorymembers Category:Numabe Station",
+          "url": "https://commons.wikimedia.org/w/api.php?list=categorymembers&cmtitle=Category%3ANumabe+Station&cmtype=file&cmlimit=500&action=query&format=json"
+        },
+        {
+          "bytes": 66423,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.185,
+          "http": 200,
+          "method": "GET",
+          "note": "imageinfo batch 0",
+          "url": "https://commons.wikimedia.org/w/api.php?prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata%7Cuser%7Ccommonmetadata&iiextmetadatafilter=License%7CLicenseShortName%7CLicenseUrl%7CArtist%7CCredit%7CDateTimeOriginal%7CUsageTerms%7CGPSLatitude%7CGPSLongitude&titles=File%3ANumabe+Station+2024+May+30+various+16+15+53+422000.jpeg%7CFile%3ANumabe+Station+2024+May+30+various+16+16+02+216000.jpeg%7CFile%3ATokyu+Numabe+sta+002.jpg%7CFile%3ANumabe+Station+2024+May+30+various+16+15+44+456000.jpeg%7CFile%3ATokyu+Numabe+sta+001.jpg%7CFile%3ANumabe+Station+2024+May+30+various+16+16+22+375000.jpeg%7CFile%3ANumabe+Station+2024+May+30+various+16+16+11+891000.jpeg%7CFile%3ANumabe+Station+2024+May+30+various+16+16+31+330000.jpeg%7CFile%3ANumabe+Station+2024+May+30+various.jpeg%7CFile%3ANumabe+Station+2024+May+30+various+16+16+42+050000.jpeg%7CFile%3ANumabe+Station+2024+May+30+various+16+16+51+330000.jpeg%7CFile%3ATokyo+Route+11+-05.jpg%7CFile%3ATokyo+Route+11+-03.jpg%7CFile%3ATokyu+Numabe+sta+003.jpg%7CFile%3ARokugo+yosui+-01.jpg%7CFile%3AAlong+Tamagawa+river+near+Tamagawa+station%2C+homeless+dwelling.jpg%7CFile%3A%E5%85%AD%E9%83%B7%E7%94%A8%E6%B0%B4Bv.jpg%7CFile%3ADenenchofuhoncho%2C+Ota%2C+Tokyo+145-0072%2C+Japan+-+panoramio+%281%29.jpg%7CFile%3ADenenchofuhoncho%2C+Ota%2C+Tokyo+145-0072%2C+Japan+-+panoramio.jpg%7CFile%3AMaruko+Bridge+seen+from+the+southeast+-+Sep+22%2C+2012.jpg&action=query&format=json"
+        },
+        {
+          "bytes": 59057,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.167,
+          "http": 200,
+          "method": "GET",
+          "note": "imageinfo batch 1",
+          "url": "https://commons.wikimedia.org/w/api.php?prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata%7Cuser%7Ccommonmetadata&iiextmetadatafilter=License%7CLicenseShortName%7CLicenseUrl%7CArtist%7CCredit%7CDateTimeOriginal%7CUsageTerms%7CGPSLatitude%7CGPSLongitude&titles=File%3A%E4%B8%B8%E5%AD%90%E6%A9%8B+-+panoramio.jpg%7CFile%3ATama+river+2024+Sep+08+10-57AM.jpeg%7CFile%3ATank+Attack+Point+in+Shin+Godzilla.jpg%7CFile%3ASakurazaka+02.jpg%7CFile%3A%E3%81%95%E3%81%8F%E3%82%89%E5%9D%82%EF%BC%88%EF%BC%94%E6%9C%88%EF%BC%89+-+panoramio.jpg%7CFile%3AFormer+Rokug%C5%8D+Aqueduct+Promenade.jpg%7CFile%3AMarukobashi+bridge+-+panoramio+%281%29.jpg%7CFile%3ASakurazaka+03.jpg%7CFile%3ATokyo+Route+2+-04.jpg%7CFile%3ABus+facing+Maruko+Bridge.jpg%7CFile%3A%E4%B8%B8%E5%AD%90%E6%A9%8B%E6%9D%B1%E8%A9%B0%28Maruko+Bridge+East%29+-+panoramio.jpg%7CFile%3AShinkansen+Tamagawa+bridge+-+panoramio.jpg%7CFile%3A%E4%B8%B8%E5%AD%90%E6%A9%8B+-+panoramio+%281%29.jpg%7CFile%3A%E5%A4%9A%E6%91%A9%E5%B7%9D+-+panoramio+%2811%29.jpg%7CFile%3AMaruko+Bridge.jpg%7CFile%3ASakurazaka+04.jpg%7CFile%3AMaruko+Bridge+2.jpg%7CFile%3ATama+River+in+Kanagawa+-+2022+6+13.jpeg%7CFile%3ASakurazaka+01.jpg%7CFile%3ATamagawa+sunset+%2829504002483%29.jpg&action=query&format=json"
+        },
+        {
+          "bytes": 48792,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.227,
+          "http": 200,
+          "method": "GET",
+          "note": "imageinfo batch 2",
+          "url": "https://commons.wikimedia.org/w/api.php?prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata%7Cuser%7Ccommonmetadata&iiextmetadatafilter=License%7CLicenseShortName%7CLicenseUrl%7CArtist%7CCredit%7CDateTimeOriginal%7CUsageTerms%7CGPSLatitude%7CGPSLongitude&titles=File%3ATama+river+%2830048672211%29.jpg%7CFile%3ATamagawa+riverbed+%2830048572241%29.jpg%7CFile%3ATama+river+%2830097911486%29.jpg%7CFile%3AMarukobashi+bridge+-+panoramio+-+Kaz+Ish.jpg%7CFile%3AMarukobashi+bridge+-+panoramio+-+Kaz+Ish+%281%29.jpg%7CFile%3AMarukobashi+bridge+-+panoramio+-+Kaz+Ish+%283%29.jpg%7CFile%3ANumabe+Station+Exit1.jpg%7CFile%3ANumabe+Station+Exit2.jpg%7CFile%3ANumabe+Station+Platform.jpg%7CFile%3ANumabe%28Shimogawara%29+Bi+01.jpg%7CFile%3ANumabe%28Shimogawara%29+Bi+02.jpg%7CFile%3ANumabestation.jpg%7CFile%3ATM-02+station+number.png%7CFile%3ATokyu+station+TM-02.svg%7CFile%3ATokyu-railway-tokyu-tamagawa-line-Numabe-station-platform.jpg%7CFile%3ATokyuNumabeSta-KamataGates+%282010-03-14%29.jpg%7CFile%3ATokyuNumabeSta-KamataGates.jpg%7CFile%3ATokyuNumabeSta-TamagawaGates.jpg%7CFile%3A%E7%9B%AE%E9%BB%92%E8%92%B2%E7%94%B0%E9%9B%BB%E9%89%84%E9%96%8B%E9%80%9A%E7%9B%B4%E5%89%8D%E3%81%AE%E9%87%8D%E5%BD%B9%E4%B8%80%E8%A1%8C.jpg&action=query&format=json"
+        },
+        {
+          "bytes": 43729,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.734,
+          "http": 200,
+          "method": "GET",
+          "note": "geosearch radius 250 m",
+          "url": "https://commons.wikimedia.org/w/api.php?list=geosearch&gscoord=48.8566%7C2.3522&gsradius=250&gslimit=300&gsnamespace=6&action=query&format=json"
+        }
+      ],
+      "in_aoi": {
+        "nearest_m": 4.9,
+        "pictures_inside_aoi_polygon": 15,
+        "within_100_m": 15
+      },
+      "licence": {
+        "attribution": null,
+        "counts": {
+          "CC-BY-2.0": 5,
+          "CC-BY-3.0": 5,
+          "CC-BY-4.0": 11,
+          "CC-BY-SA-3.0": 23,
+          "CC-BY-SA-4.0": 9,
+          "CC0-1.0": 4,
+          "public-domain": 2
+        },
+        "licence_uri": "https://commons.wikimedia.org/wiki/Commons:Licensing"
+      },
+      "licence_note": "per-file licence is authoritative; every in-corridor hit carries an explicitly open licence",
+      "queried": [
+        "radius 100 m about 35.5828560,139.6730398",
+        "radius 250 m about 35.5828560,139.6730398",
+        "radius 500 m about 35.5828560,139.6730398",
+        "category Category:Numabe Station"
+      ],
+      "queries": [
+        "list=geosearch gscoord=35.582856|139.6730398 gsradius=100/250/500 gsnamespace=6",
+        "list=categorymembers cmtitle=Category:Numabe Station cmtype=file",
+        "prop=imageinfo iiprop=url|size|mime|extmetadata|user|commonmetadata (batched, 20 titles per request)"
+      ],
+      "radius_ladder": [
+        {
+          "http": [
+            200
+          ],
+          "pictures": 15,
+          "radius_m": 100.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200
+          ],
+          "pictures": 22,
+          "radius_m": 250.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200
+          ],
+          "pictures": 46,
+          "radius_m": 500.0,
+          "refused": null
+        }
+      ],
+      "state": "PRESENT",
+      "viewpoint_multiplicity": {
+        "at_least_2": true,
+        "at_least_3": true,
+        "distinct_viewpoints": 9,
+        "heading_verified_viewpoints": 4,
+        "max_baseline_m": 101.8,
+        "median_baseline_m": 34.2,
+        "nearest_m": 4.9,
+        "params": {
+          "half_fov_deg": 40.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 5.0
+        },
+        "pictures_in_range": 11,
+        "viewpoint_ids": [
+          "148872187",
+          "109970195",
+          "109970196",
+          "148872207",
+          "148872228",
+          "148872235",
+          "15274732",
+          "15121076",
+          "109970193"
+        ]
+      },
+      "what_would_change_the_verdict": [
+        "nothing; coverage was returned and is recorded"
+      ],
+      "why_probed": "'is there open imagery of this place' and 'is there a street-level capture sequence of this place' are different questions. Only the second is what Panoramax, KartaView and Mapillary answer."
+    }
+  },
+  "radius_ladder_m": [
+    100,
+    250,
+    500,
+    1000,
+    2000,
+    4000
+  ],
+  "reconstruction_grade_corpus_acquired": false,
+  "reconstruction_grade_corpus_note": "A class-A candidate corpus is IDENTIFIED and open-licensed, but it was not downloaded and no reconstruction was attempted, so nothing has been acquired. This flag is about acquisition, not about existence.",
+  "schema_version": "imagery-survey/2",
+  "source_manifest_rows": {
+    "record_count": 20,
+    "rows": [
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:11:08",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Numabe_Station_2024_May_30_various_16_15_53_422000.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 4.9,
+          "evidence_class": "A",
+          "focal_35mm": 24.0,
+          "heading_deg": 160.0338,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_16_15_53_422000_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various 16 15 53 422000.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_15_53_422000.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:11:06",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/9/92/Numabe_Station_2024_May_30_various_16_16_02_216000.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 7.0,
+          "evidence_class": "A",
+          "focal_35mm": 24.0,
+          "heading_deg": 149.0364,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_16_16_02_216000_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various 16 16 02 216000.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_02_216000.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:11:36",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Numabe_Station_2024_May_30_various_16_15_44_456000.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 18.0,
+          "evidence_class": "A",
+          "focal_35mm": 24.0,
+          "heading_deg": 165.4405,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_16_15_44_456000_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various 16 15 44 456000.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_15_44_456000.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:10:42",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/2/28/Numabe_Station_2024_May_30_various_16_16_22_375000.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 21.8,
+          "evidence_class": "A",
+          "focal_35mm": 24.0,
+          "heading_deg": 129.2201,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_16_16_22_375000_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various 16 16 22 375000.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_22_375000.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:10:49",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Numabe_Station_2024_May_30_various_16_16_11_891000.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 22.1,
+          "evidence_class": "A",
+          "focal_35mm": 24.0,
+          "heading_deg": 127.0799,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_16_16_11_891000_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various 16 16 11 891000.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_11_891000.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:10:32",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/8/87/Numabe_Station_2024_May_30_various_16_16_31_330000.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 23.4,
+          "evidence_class": "A",
+          "focal_35mm": 24.0,
+          "heading_deg": 348.5293,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_16_16_31_330000_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various 16 16 31 330000.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_31_330000.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:11:48",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Numabe_Station_2024_May_30_various.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 24.1,
+          "evidence_class": "A",
+          "focal_35mm": 48.0,
+          "heading_deg": 155.8648,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:10:07",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/6/65/Numabe_Station_2024_May_30_various_16_16_42_050000.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 27.0,
+          "evidence_class": "A",
+          "focal_35mm": 48.0,
+          "heading_deg": 129.4137,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_16_16_42_050000_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various 16 16 42 050000.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_42_050000.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Nesnad / Wikimedia Commons, CC-BY-4.0",
+        "capture_date": "2024-05-30 16:09:38",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Numabe_Station_2024_May_30_various_16_16_51_330000.jpeg",
+          "camera": "Apple iPhone 14 Pro",
+          "distance_from_entrance_m": 34.6,
+          "evidence_class": "A",
+          "focal_35mm": 48.0,
+          "heading_deg": 136.4859,
+          "pixels": [
+            4032,
+            3024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_a_numabe_station_2024_may_30_various_16_16_51_330000_jpeg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Numabe Station 2024 May 30 various 16 16 51 330000.jpeg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_2024_May_30_various_16_16_51_330000.jpeg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "東京特許許可局 / Wikimedia Commons, CC-BY-SA-4.0",
+        "capture_date": "Taken on 29 August 2021, 09:34:21",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0",
+        "notes": "visually verified from the retained scratch copy",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/0/08/Tokyu_Numabe_sta_002.jpg",
+          "camera": "NIKON CORPORATION NIKON D850",
+          "distance_from_entrance_m": 8.4,
+          "evidence_class": "B",
+          "focal_35mm": 15.0,
+          "heading_deg": null,
+          "pixels": [
+            2508,
+            1672
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tokyu_numabe_sta_002_jpg",
+        "retention": "not_retained",
+        "seed": null,
+        "sha256": "d97c9ae1fc46ef1da44903e6926c02e17aa6ab5c8794baedb5a0a2def99384ea",
+        "size_bytes": 1788148,
+        "source_id": "File:Tokyu Numabe sta 002.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyu_Numabe_sta_002.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "東京特許許可局 / Wikimedia Commons, CC-BY-SA-4.0",
+        "capture_date": "Taken on 29 August 2021, 09:32:52",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0",
+        "notes": "visually verified from the retained scratch copy",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Tokyu_Numabe_sta_001.jpg",
+          "camera": "NIKON CORPORATION NIKON D850",
+          "distance_from_entrance_m": 18.5,
+          "evidence_class": "B",
+          "focal_35mm": 26.0,
+          "heading_deg": null,
+          "pixels": [
+            2889,
+            1926
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tokyu_numabe_sta_001_jpg",
+        "retention": "not_retained",
+        "seed": null,
+        "sha256": "3db1a68c0c2bcd7652215ce5f68003db0ee42d4a249314792b3f506536ac1e8a",
+        "size_bytes": 2482897,
+        "source_id": "File:Tokyu Numabe sta 001.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyu_Numabe_sta_001.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Aimaimyi / Wikimedia Commons, CC-BY-SA-3.0",
+        "capture_date": "2011-05-08",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+        "notes": "visually verified from the retained scratch copy",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/d/db/Tokyo_Route_11_-05.jpg",
+          "camera": "Canon Canon PowerShot SX100 IS",
+          "distance_from_entrance_m": 42.0,
+          "evidence_class": "B",
+          "focal_35mm": null,
+          "heading_deg": null,
+          "pixels": [
+            2592,
+            1944
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tokyo_route_11__05_jpg",
+        "retention": "not_retained",
+        "seed": null,
+        "sha256": "277fe99fe55b0106aab239f30d0ce0500842ce9bc36a369164ea08dc43066bf8",
+        "size_bytes": 1133763,
+        "source_id": "File:Tokyo Route 11 -05.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyo_Route_11_-05.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Aimaimyi / Wikimedia Commons, CC-BY-SA-3.0",
+        "capture_date": "2011-04-08",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Tokyo_Route_11_-03.jpg",
+          "camera": "Canon Canon PowerShot SX100 IS",
+          "distance_from_entrance_m": 43.9,
+          "evidence_class": "B",
+          "focal_35mm": null,
+          "heading_deg": null,
+          "pixels": [
+            2592,
+            1944
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tokyo_route_11__03_jpg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Tokyo Route 11 -03.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyo_Route_11_-03.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "東京特許許可局 / Wikimedia Commons, CC-BY-SA-4.0",
+        "capture_date": "2021-08-29 09:37:30",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Tokyu_Numabe_sta_003.jpg",
+          "camera": "NIKON CORPORATION NIKON D850",
+          "distance_from_entrance_m": 63.1,
+          "evidence_class": "B",
+          "focal_35mm": 15.0,
+          "heading_deg": null,
+          "pixels": [
+            2871,
+            1914
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tokyu_numabe_sta_003_jpg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:Tokyu Numabe sta 003.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyu_Numabe_sta_003.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "RGB256 / Wikimedia Commons, CC-BY-SA-3.0",
+        "capture_date": "2010-03-14",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+        "notes": "visually verified from the retained scratch copy",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/0/03/Numabe_Station_Exit1.jpg",
+          "camera": "Canon Canon EOS Kiss X2",
+          "distance_from_entrance_m": null,
+          "evidence_class": "B",
+          "focal_35mm": null,
+          "heading_deg": null,
+          "pixels": [
+            4272,
+            2848
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_numabe_station_exit1_jpg",
+        "retention": "not_retained",
+        "seed": null,
+        "sha256": "c75f05fa672bb7bc73e5fdb6d32e04b052597c13fb4de137aeb026323a80c223",
+        "size_bytes": 2032747,
+        "source_id": "File:Numabe Station Exit1.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_Exit1.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "RGB256 / Wikimedia Commons, CC-BY-SA-3.0",
+        "capture_date": "2010-03-14",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+        "notes": "visually verified from the retained scratch copy",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/8/89/Numabe_Station_Exit2.jpg",
+          "camera": "Canon Canon EOS Kiss X2",
+          "distance_from_entrance_m": null,
+          "evidence_class": "B",
+          "focal_35mm": null,
+          "heading_deg": null,
+          "pixels": [
+            4272,
+            2848
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_numabe_station_exit2_jpg",
+        "retention": "not_retained",
+        "seed": null,
+        "sha256": "9fd17cecea0a684caa52d27af8f1f322005306a8cf154d95f9c94476285adcd6",
+        "size_bytes": 1975486,
+        "source_id": "File:Numabe Station Exit2.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ANumabe_Station_Exit2.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "CrossHatch / Wikimedia Commons, CC-BY-SA-4.0",
+        "capture_date": "2016-12-16",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-4.0",
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/9/97/TM-02_station_number.png",
+          "camera": null,
+          "distance_from_entrance_m": null,
+          "evidence_class": "B",
+          "focal_35mm": null,
+          "heading_deg": null,
+          "pixels": [
+            1024,
+            1024
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tm_02_station_number_png",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:TM-02 station number.png",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATM-02_station_number.png",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "RGB256 / Wikimedia Commons, CC-BY-SA-3.0",
+        "capture_date": "Taken on 14 March 2010",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/0/09/TokyuNumabeSta-KamataGates_%282010-03-14%29.jpg",
+          "camera": "Canon Canon EOS Kiss X2",
+          "distance_from_entrance_m": null,
+          "evidence_class": "B",
+          "focal_35mm": null,
+          "heading_deg": null,
+          "pixels": [
+            4272,
+            2848
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tokyunumabesta_kamatagates__2010_03_14__jpg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:TokyuNumabeSta-KamataGates (2010-03-14).jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyuNumabeSta-KamataGates_%282010-03-14%29.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "yaguchi / Wikimedia Commons, CC-BY-SA-3.0",
+        "capture_date": "2006-11-12",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "notes": "classified from geotag, compass heading, category and title; pixels not inspected",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/c/ce/TokyuNumabeSta-KamataGates.jpg",
+          "camera": "CASIO COMPUTER CO.,LTD  EX-P600",
+          "distance_from_entrance_m": null,
+          "evidence_class": "B",
+          "focal_35mm": 33.0,
+          "heading_deg": null,
+          "pixels": [
+            2816,
+            2112
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tokyunumabesta_kamatagates_jpg",
+        "retention": "metadata_only",
+        "seed": null,
+        "sha256": null,
+        "size_bytes": null,
+        "source_id": "File:TokyuNumabeSta-KamataGates.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyuNumabeSta-KamataGates.jpg",
+        "tool_version": "street_imagery_probe/1"
+      },
+      {
+        "acquired_utc": "2026-09-12T03:21Z",
+        "artifact_path": null,
+        "attribution": "Yaguchi / Wikimedia Commons, CC-BY-SA-3.0",
+        "capture_date": "12 November 2006 (according to Exif data)",
+        "crs": "EPSG:4326",
+        "kind": "imagery",
+        "licence": "CC-BY-SA-3.0",
+        "licence_uri": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "notes": "visually verified from the retained scratch copy",
+        "parameters": {
+          "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/0/0a/TokyuNumabeSta-TamagawaGates.jpg",
+          "camera": "CASIO COMPUTER CO.,LTD  EX-P600",
+          "distance_from_entrance_m": null,
+          "evidence_class": "B",
+          "focal_35mm": 33.0,
+          "heading_deg": null,
+          "pixels": [
+            2816,
+            2112
+          ]
+        },
+        "provider": "Wikimedia Commons",
+        "record_id": "commons_b_tokyunumabesta_tamagawagates_jpg",
+        "retention": "not_retained",
+        "seed": null,
+        "sha256": "0c4135b1a33ca5fb8122c5fce99ff64bd06772d04e600eec4958a7edeac7fdfe",
+        "size_bytes": 2330731,
+        "source_id": "File:TokyuNumabeSta-TamagawaGates.jpg",
+        "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyuNumabeSta-TamagawaGates.jpg",
+        "tool_version": "street_imagery_probe/1"
+      }
+    ],
+    "schema": "source-manifest/1 (scripts/pipeline/source_manifest.py SourceRecord); rows validated by SourceRecord.validate()"
+  },
+  "state_tokens": {
+    "ABSENT_IN_SURVEYED_RADIUS": "every queried radius answered and all returned zero, with a control query that returned pictures",
+    "NOT_SURVEYED": "no query was issued",
+    "PRESENT": "at least one picture was returned and is recorded",
+    "UNKNOWN_PENDING_ACCESS": "the provider answered with a credential refusal; coverage is undetermined, NOT zero"
+  },
+  "supersedes": {
+    "file": "imagery_survey.json",
+    "what_still_stands": "The Panoramax result is re-run here and reproduces exactly: zero pictures at 100, 250, 500 and 1000 m on both queried instances, against a Paris control that returned 1000.",
+    "what_was_wrong": "v1 surveyed Panoramax only and concluded 'Corridor is NOT reconstructable from open street-level imagery today'. That sentence generalised one provider's zero to every provider. KartaView was never queried; Mapillary and Google Street View answered with credential refusals, which is UNKNOWN coverage, not zero coverage; Wikimedia Commons and other open photo pools were never searched."
+  },
+  "survey_id": "numabe_corridor_20260911_imagery_v2",
+  "surveyed_utc": "2026-09-12T03:21Z",
+  "target": {
+    "lat": 35.582856,
+    "lon": 139.6730398,
+    "osm_node": 9865199050,
+    "role": "selected_station_entrance (ref=1)"
+  },
+  "tool": {
+    "invocation": "python3 -m scripts.pipeline.street_imagery_probe --spec <spec>.json --out <survey>.json",
+    "note": "The prober is provider-agnostic and carries no Numabe constants. The AOI, the entrance node and the radius ladder arrive through the spec.",
+    "owner": "scripts/pipeline/street_imagery_probe.py",
+    "spec_kept_at": "/private/tmp/claude-501/-Users-r-Downloads-asciicker-Y9-2/7c815c93-bea8-4f4e-a616-c7ed9c9d19a8/scratchpad/fl4810b/probe_spec_numabe.json",
+    "tool_version": "street_imagery_probe/1"
+  },
+  "user_agent": "asciicker-Y9-2-FL4810/1.0 (source acquisition research; info@yuuz.co)",
+  "verdict": "Open street-level CAPTURE-PLATFORM coverage of the corridor is absent on Panoramax (ABSENT_IN_SURVEYED_RADIUS, control 1000) and absent inside the AOI on KartaView (PRESENT regionally, nearest capture 417.0 m away, control 890). Mapillary and Google Street View are UNKNOWN_PENDING_ACCESS: both refused every no-token route, including at the control location, so neither zero is established - and two OSM footways inside the AOI cite Mapillary image ids from 2022 surveys. Open PHOTOGRAPHIC coverage of the corridor is PRESENT and substantial: 15 openly licensed Wikimedia Commons images lie inside the AOI polygon, the nearest 4.9 m from the selected entrance, including a nine-frame CC-BY-4.0 single-session walk with compass headings that satisfies both the >=2 and >=3 viewpoint tests. The v1 sentence 'this corridor is not reconstructable from open street-level imagery today' is withdrawn: it was never tested against KartaView, Mapillary, Google or any open photo pool."
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "y92.generic_morphology_vocabulary.v1",
+  "locale": "JP-urban",
+  "classes": [
+    {"semantic_class":"rail_corridor_fence","display":"rail fence","carrier":"railway_boundary","placement_rule":"parallel_to_mapped_rail_corridor","repeatable":true,"implementation_state":"implemented"},
+    {"semantic_class":"rail_retaining_edge","display":"rail retaining edge","carrier":"railway_boundary","placement_rule":"parallel_to_rail_grade_edge","repeatable":true,"implementation_state":"partial"},
+    {"semantic_class":"sidewalk_raised_curb","display":"raised sidewalk + curb","carrier":"road","placement_rule":"road_edge_surface_band","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"painted_road_shoulder","display":"painted road shoulder","carrier":"road","placement_rule":"road_edge_surface_band","repeatable":true,"implementation_state":"partial"},
+    {"semantic_class":"shared_street_edge","display":"flush shared-street edge","carrier":"road","placement_rule":"road_edge_surface_transition","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"pedestrian_path_variant","display":"pedestrian path variant","carrier":"sidewalk","placement_rule":"mapped_pedestrian_way_surface","repeatable":true,"implementation_state":"partial"},
+    {"semantic_class":"roadside_drain_channel","display":"roadside drain / gutter","carrier":"road","placement_rule":"parallel_to_road_edge","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"property_boundary_block_wall","display":"residential block wall","carrier":"building_frontage","placement_rule":"between_road_edge_and_building_setback","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"property_boundary_fence","display":"property fence","carrier":"building_frontage","placement_rule":"between_road_edge_and_building_setback","repeatable":true,"implementation_state":"partial"},
+    {"semantic_class":"property_boundary_hedge","display":"property hedge","carrier":"building_frontage","placement_rule":"between_road_edge_and_building_setback","repeatable":true,"implementation_state":"partial"},
+    {"semantic_class":"property_gate","display":"residential gate","carrier":"building_frontage","placement_rule":"opening_in_property_boundary","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"building_setback_strip","display":"building setback strip","carrier":"building_frontage","placement_rule":"road_boundary_to_building_footprint","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"frontage_planting_strip","display":"frontage planting strip","carrier":"building_frontage","placement_rule":"inside_property_boundary_before_building","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"frontage_paved_apron","display":"frontage paved apron","carrier":"building_frontage","placement_rule":"inside_property_boundary_before_building","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"ivy_wall","display":"ivy-covered wall","carrier":"wall","placement_rule":"wall_surface_variant","repeatable":true,"implementation_state":"missing"},
+    {"semantic_class":"exterior_air_conditioner","display":"outdoor AC unit","carrier":"building_facade","placement_rule":"facade_or_setback_service_strip","repeatable":true,"implementation_state":"missing"}
+  ],
+  "policy": {
+    "population_role": "generic_morphology",
+    "custom_extraction_required": false,
+    "observation_use": "reviewed locale grammar evidence; not an exact world-position claim",
+    "identity_exception": "Named station, store, building, and business signs remain custom_authoring."
+  }
+}

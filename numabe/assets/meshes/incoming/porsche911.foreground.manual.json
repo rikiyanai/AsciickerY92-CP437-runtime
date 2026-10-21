@@ -1,0 +1,25 @@
+{
+  "schema": "asciicker.car.native_foreground_binding.v1",
+  "subject": "porsche911",
+  "status": "MANUAL_INTEGRATION_IN_REVIEW_NOT_RUNTIME_ACCEPTANCE",
+  "mechanical_contract": "assets/meshes/incoming/approved_car_foreground.mechanics.json",
+  "construction": "articles/fl4831-aahub-car-turntables-20261019/revision-04/porsche911/construction.json",
+  "construction_sha256": "f32f14ec75e2c4ca68fe2d1832b257cd9bdebdfb4356cfb39fdc89cb310be11c",
+  "authorship": "Retain the full approved96view native drawing, especially the revision04 roof/body correction. Manual semantic binding, not a generic car or newly hand-typed source art.",
+  "inspected_native_samples": [0],
+  "sequence": {"first": 0, "last": 95, "retain": "All original neighboring glyph passages, curved-body punctuation, advances and pane gaps through the whole GIF."},
+  "bindings": [
+    {"prefix": "911.", "part": 0, "retain": "Characteristic arched roof flowing into backlight, raked windscreen, door/quarter glazing, A-pillars, gutters and attached mirrors. Preserve every source curved-glazing void; never restore the rejected box roof."},
+    {"prefix": "body.", "part": 0, "retain": "Low rounded nose, broad front/rear haunches and continuous sill/arch relationships; not straight sedan sidewalls."},
+    {"prefix": "bonnet.", "part": 0, "retain": "Paired bonnet seams running between the raised lamp/fender forms."},
+    {"prefix": "wing.", "part": 0, "retain": "Existing source fender/wing form lines and their bounded surface-roll punctuation."},
+    {"prefix": "engine-lid.", "part": 0, "retain": "Rear engine-lid grille passages, physically on the rear deck; never on the bonnet."},
+    {"prefix": "door.", "part": 0, "retain": "Source coupe door seam and short handle, attached to the curved flank."},
+    {"prefix": "front.", "part": 0, "retain": "Round upright lamp forms, low bumper and physical fictional ﾈ88-75 plate; do not substitute rectangular sedan lamps."},
+    {"prefix": "rear.", "part": 0, "retain": "Rounded tail, source lamp/bumper spacing and physical ﾈ88-75 plate."},
+    {"prefix": "form.", "part": 0, "retain": "Sparse original curvature/tone marks explaining rounded body volume, not panel filler."}
+  ],
+  "wheel_character": "Five original petal passages per wheel rotate physically with the valve and tread; tire/rim/hub circles remain optical outlines.",
+  "output": "godot_project/assets/world_mesh/foreground/porsche911.native.json",
+  "open": ["Runtime continuous rotation", "Player walk-around", "Scale and occlusion transitions"]
+}

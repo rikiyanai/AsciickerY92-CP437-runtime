@@ -1,0 +1,40 @@
+{
+ "archetypes": [
+  "advertising_sign",
+  "banner_sign",
+  "bicycle_parking",
+  "bollard",
+  "bus_stop",
+  "catch_basin_grate",
+  "generic_sign_plate",
+  "information_board",
+  "manhole_cover",
+  "pedestrian_crossing_marker",
+  "pedestrian_gate",
+  "post_box",
+  "public_telephone",
+  "stop_sign",
+  "store_signboard",
+  "street_cabinet",
+  "street_lamp",
+  "traffic_sign",
+  "traffic_signal",
+  "warning_sign",
+  "waste_basket",
+  "water_valve_cover"
+ ],
+ "counts": {
+  "attachment_not_resolved": 0,
+  "building_ring_absent": 0,
+  "carrier_geometry_absent": 0,
+  "chainage_off_carrier": 0,
+  "envelope_conflicts_mass": 0,
+  "face_unresolvable": 0,
+  "freestanding_unresolvable": 0,
+  "no_resolvable_template": 0,
+  "placements": 337,
+  "unsupported_anchor_kind": 0
+ },
+ "schema": "y92.representation_fixture_placements.v1",
+ "skipped": {}
+}

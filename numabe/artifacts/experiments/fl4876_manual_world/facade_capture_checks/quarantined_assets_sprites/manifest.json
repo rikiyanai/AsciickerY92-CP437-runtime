@@ -1,0 +1,102 @@
+{
+ "moved_from": "assets/sprites (untracked; all written 2026-10-13 08:03:20 by an unidentified process)",
+ "why": "same names as build_reg_73 output.sprites signs but the old 1x size (FamilyMart 14x5 vs 21x8); registered first by LoadSprites, so RegisterMapSprites skipped every build's own sign",
+ "moved_at": "2026-10-14",
+ "files": [
+  {
+   "name": "sign_front_11404946450_e25f285476.xp",
+   "sha256": "d8cdde2631b5199f",
+   "bytes": 181
+  },
+  {
+   "name": "sign_front_2684634174_35a97af6f0.xp",
+   "sha256": "c2caa94276b2a402",
+   "bytes": 264
+  },
+  {
+   "name": "sign_front_2929215092_c8f9b1fa2e.xp",
+   "sha256": "961664de8aca548f",
+   "bytes": 282
+  },
+  {
+   "name": "sign_front_2929222223_ea8c34048c.xp",
+   "sha256": "072c5bba3f7d333b",
+   "bytes": 196
+  },
+  {
+   "name": "sign_obs-inst-0229_eaa02def24.xp",
+   "sha256": "96fb3f0beb25e8c2",
+   "bytes": 258
+  },
+  {
+   "name": "sign_obs-inst-0414_c784ab3c64.xp",
+   "sha256": "3a42d9b2b84344a1",
+   "bytes": 152
+  },
+  {
+   "name": "sign_obs-inst-0429_635c8fef2e.xp",
+   "sha256": "edf5cb0d2f4c5a68",
+   "bytes": 224
+  },
+  {
+   "name": "sign_obs-inst-0557_1d75088101.xp",
+   "sha256": "4f12681de3ee2117",
+   "bytes": 324
+  },
+  {
+   "name": "sign_obs-manual-business_cleaner_799d2c3195.xp",
+   "sha256": "e074a7ee62a3ea6e",
+   "bytes": 257
+  },
+  {
+   "name": "sign_obs-manual-business_damassa_639aa1e471.xp",
+   "sha256": "831dc826543354d9",
+   "bytes": 100
+  },
+  {
+   "name": "sign_obs-manual-business_ebara_musen_7a997d6052.xp",
+   "sha256": "5488e0bd1b7ea6b1",
+   "bytes": 218
+  },
+  {
+   "name": "sign_obs-manual-business_fukasawa_03528a3735.xp",
+   "sha256": "3b316313637d2e6d",
+   "bytes": 134
+  },
+  {
+   "name": "sign_obs-manual-business_mikasa_c18d0f628b.xp",
+   "sha256": "903c7af0f5a213de",
+   "bytes": 241
+  },
+  {
+   "name": "sign_obs-manual-business_miyoshiya_269571b93a.xp",
+   "sha256": "4198b88bbc805194",
+   "bytes": 219
+  },
+  {
+   "name": "sign_obs-manual-business_nabin_6511f435f7.xp",
+   "sha256": "cd5ad158e37837fe",
+   "bytes": 230
+  },
+  {
+   "name": "sign_obs-manual-business_respa_70217d3eac.xp",
+   "sha256": "4d0be05da4aaad76",
+   "bytes": 133
+  },
+  {
+   "name": "sign_obs-manual-business_shige_5880b824e7.xp",
+   "sha256": "d569295b12735902",
+   "bytes": 171
+  },
+  {
+   "name": "sign_obs-manual-business_tenrokuen_e7f2614558.xp",
+   "sha256": "ed318ab9695590b3",
+   "bytes": 233
+  },
+  {
+   "name": "sign_obs-manual-business_unagi_tempura_47996a6af5.xp",
+   "sha256": "5e804efc5937e031",
+   "bytes": 288
+  }
+ ]
+}

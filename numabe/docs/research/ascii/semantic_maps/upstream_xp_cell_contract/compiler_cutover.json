@@ -1,0 +1,55 @@
+{
+  "authority_owner": "compiled_actor_visual_profile_table",
+  "compiler_cutover_complete": true,
+  "contract_authority": "reviewed_upstream_source_contract",
+  "coverage": {
+    "bound_source_ids": 120,
+    "compiled_rows": 205,
+    "frozen_raw_cells": 6807104,
+    "frozen_raw_layers": 573,
+    "pending_review_units": 0,
+    "server_reachable_keys": 205
+  },
+  "fl": "FL-4162",
+  "invariants": {
+    "composite_semantic_contribution_sets_first_class": true,
+    "local_ahsw_resolution_deleted": true,
+    "local_reachability_enumeration_deleted": true,
+    "per_key_legacy_merge_fallback_deleted": true,
+    "render_operation_separate_from_semantic_contributions": true,
+    "runtime_contract_hash_admission": true,
+    "server_catalog_is_reachability_owner": true
+  },
+  "legacy_owner_deletion": {
+    "absent_compiler_symbols": [
+      "_ahs_digits",
+      "_resolve_source_xp",
+      "_enumerate_server_reachable_keys",
+      "merge_extra_layers=true"
+    ],
+    "absent_runtime_symbols": [
+      "ACTOR_VISUAL_LAYER_ROLE_",
+      "const bool merge_extra"
+    ],
+    "deleted_paths": [
+      "assets/actor_visual_profiles/source/layer_roles.json",
+      "scripts/promote_entries_to_layer_roles.py",
+      "scripts/lib/row_compose_policies.py",
+      "scripts/lib/semantic_roles.py"
+    ]
+  },
+  "rq": "RQ-200",
+  "runtime_authoritative": true,
+  "schema": "fl4162.compiler_cutover.v1",
+  "source_hashes": {
+    "cell_role_decisions_sha256": "8bb4417991204c47890488ddb6e73d350772023e901ae4842331070468cd9462",
+    "compiler_source_sha256": "d8c024e33d6b2a87642b56f3fb8194ac3e5bfa48a2ae45158a4f0dee966d2f33",
+    "custom_source_contract_sha256": "3af2ca057ccbf1ded194c08d44c9a7d81001e858a5b533f061cacdbeade81141",
+    "deploy_identity_sha256": "d1b5d084155b3b496f737c31f75fbe27a3486433e0cada2795323b6f6620cd16",
+    "family_contract_freeze_sha256": "be1042863d0a91859a949bb378587743822910b979530926530f30818ff2558c",
+    "generated_provenance_sha256": "ae817e38aa72c7ff7f533caa3b8eca98a591944059688f24df39175953c4f426",
+    "generated_table_sha256": "57cac69ec7873b37f90f0b970fdc3515ee1154b4a20dcabb6b924a962c6bc5cd",
+    "profile_bindings_sha256": "4f988260519e8b93e0d387328d780da6f9fd52ef58778ea33a1a8a584608ecb3",
+    "server_reachable_keys_sha256": "fbfba763508b412a9c41151f415d05288608357038eb19537478d82d4f1515b0"
+  }
+}

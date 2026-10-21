@@ -1,0 +1,25 @@
+ply
+format ascii 1.0
+comment FL-4131 shape lab fixture mesh
+element vertex 5
+property float x
+property float y
+property float z
+property uchar red
+property uchar green
+property uchar blue
+property uchar alpha
+element face 6
+property list uchar uint vertex_indices
+end_header
+-1.000 -1.000 0.000 204 153 51 0
+1.000 -1.000 0.000 204 153 51 0
+1.000 1.000 0.000 153 102 51 0
+-1.000 1.000 0.000 153 102 51 0
+0.000 0.000 1.400 255 204 102 0
+3 0 1 2
+3 0 2 3
+3 0 1 4
+3 1 2 4
+3 2 3 4
+3 3 0 4

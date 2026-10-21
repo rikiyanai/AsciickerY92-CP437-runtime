@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asciicker.local/schemas/glyph_shape_catalog.schema.json",
+  "title": "FL-4131 Extended Glyph Shape Catalog",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "content_pack_id",
+    "manifest_hash",
+    "cell_px",
+    "shape6_region_model",
+    "shape6_region_centers",
+    "shape6_region_radius",
+    "page_hash",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "content_pack_id": { "type": "string", "minLength": 1 },
+    "manifest_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "cell_px": { "type": "integer", "minimum": 1 },
+    "shape6_region_model": { "const": "harri6_internal6_regions_v1" },
+    "shape6_region_centers": {
+      "const": [
+        [0.25, 0.25],
+        [0.75, 0.25],
+        [0.25, 0.5],
+        [0.75, 0.5],
+        [0.25, 0.75],
+        [0.75, 0.75]
+      ]
+    },
+    "shape6_region_radius": {
+      "const": {
+        "x_cell_fraction": 0.22,
+        "y_cell_fraction": 0.18
+      }
+    },
+    "page_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "glyph_id",
+          "label",
+          "unicode",
+          "unicode_scalar",
+          "repertoire",
+          "density",
+          "top_weight",
+          "mid_weight",
+          "bottom_weight",
+          "left_weight",
+          "right_weight",
+          "diag_ne_sw",
+          "diag_nw_se",
+          "curve_score",
+          "corner_score",
+          "stroke_class",
+          "roles"
+        ],
+        "properties": {
+          "glyph_id": { "type": "integer", "minimum": 256 },
+          "label": { "type": "string" },
+          "unicode": { "type": "string" },
+          "unicode_scalar": { "type": "integer", "minimum": 0 },
+          "repertoire": { "type": "string" },
+          "density": { "type": "number", "minimum": 0, "maximum": 1 },
+          "top_weight": { "type": "number", "minimum": 0, "maximum": 1 },
+          "mid_weight": { "type": "number", "minimum": 0, "maximum": 1 },
+          "bottom_weight": { "type": "number", "minimum": 0, "maximum": 1 },
+          "left_weight": { "type": "number", "minimum": 0, "maximum": 1 },
+          "right_weight": { "type": "number", "minimum": 0, "maximum": 1 },
+          "diag_ne_sw": { "type": "number", "minimum": 0, "maximum": 1 },
+          "diag_nw_se": { "type": "number", "minimum": 0, "maximum": 1 },
+          "curve_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "corner_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "stroke_class": {
+            "enum": [
+              "curve",
+              "line",
+              "corner",
+              "block",
+              "dot",
+              "bowl",
+              "vertical",
+              "horizontal",
+              "diagonal",
+              "cross"
+            ]
+          },
+          "roles": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

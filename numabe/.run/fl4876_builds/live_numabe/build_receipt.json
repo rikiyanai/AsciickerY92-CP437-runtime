@@ -1,0 +1,11 @@
+{
+  "schema": "cp437.numabe.saved_map.v1",
+  "runtime_product": "classic_cp437",
+  "path_basis": "relative to numabe workspace, never the original developer checkout",
+  "map_path": ".run/fl4876_builds/live_numabe/output.a3d",
+  "mesh_root": ".run/fl4876_builds/live_numabe/meshes",
+  "train_routes": ".run/fl4876_builds/live_numabe/output.trains.json",
+  "map_sha256_at_export": "9779fbc2063f793f5547331ff2276f9116b923d879b8eb34e49082e8ff6eeab8",
+  "historical_component_receipt_sha256": "1cecac16dcbcdfc39d87b0b94fa8e94a743020f4be9fe8cd69c3d592fe44e4d5",
+  "full_reconstruction_inputs": "Raw CityGML/point clouds remain local; source_manifest.json retains acquisition URLs and hashes"
+}

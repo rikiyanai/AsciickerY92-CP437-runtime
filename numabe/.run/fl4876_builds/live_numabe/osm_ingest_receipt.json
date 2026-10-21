@@ -1,0 +1,5870 @@
+{
+  "anchor_count": 3563,
+  "anchor_count_by_type": {
+    "building_corner": 3408,
+    "crossing_corner": 42,
+    "railway_vertex": 33,
+    "road_intersection": 78,
+    "station_entrance": 2,
+    "wall_fence_endpoint": 0
+  },
+  "anchor_count_inside_aoi": 3335,
+  "anchor_count_outside_aoi": 228,
+  "anchor_types_with_no_members": {
+    "wall_fence_endpoint": "the AOI extract yields none: candidates come from endpoints of kept wall/fence ways, and the clipped extract has no such element"
+  },
+  "aoi_clip": {
+    "aoi_ring_vertices": 221,
+    "clipped_away_fraction_of_ways": 0.425826,
+    "predicate": "a way is in the AOI when any vertex is inside the AOI ring or any edge crosses it; a node is in when it is inside the ring",
+    "relations_contributing_area_features": 1,
+    "relations_note": "the extract carries no type=multipolygon relation, so no AOI area feature is relation-built and no building hole is lost",
+    "relations_read": 60,
+    "tagged_nodes_clipped_away": 202,
+    "tagged_nodes_kept": 70,
+    "untagged_geometry_carrier_nodes": 7053,
+    "ways_clipped_away": 554,
+    "ways_kept": 747,
+    "ways_kept_with_centroid_inside_aoi": 666,
+    "ways_with_no_resolvable_geometry": 0
+  },
+  "bundle": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915",
+  "extract": {
+    "duplicate_node_elements_merged": 0,
+    "duplicate_relation_elements_merged": 0,
+    "duplicate_way_elements_merged": 0,
+    "multipolygon_relations": 1,
+    "node_elements_read": 7325,
+    "relation_elements_read": 60,
+    "tagged_nodes": 272,
+    "tagged_ways": 1301,
+    "unique_nodes": 7325,
+    "unique_relations": 60,
+    "unique_ways": 1301,
+    "way_elements_read": 1301
+  },
+  "features_by_class": {
+    "bridge_deck": 1,
+    "building_footprint": 650,
+    "crossing": 35,
+    "fixture": 17,
+    "place": 18,
+    "railway_boundary": 13,
+    "road": 57,
+    "sidewalk": 10,
+    "sign": 4,
+    "station_entrance": 2,
+    "terrain": 7
+  },
+  "features_by_gameplay_authority": {
+    "collision": 650,
+    "presentation_only": 160,
+    "walkability": 4
+  },
+  "features_emitted": 814,
+  "observations_emitted": 814,
+  "source": {
+    "acquired_utc": "2026-09-15T18:25:00Z",
+    "artifact_path": "numabe_connected_neighborhood_aoi.osm",
+    "attribution": "© OpenStreetMap contributors",
+    "capture_date": "2026-09-15",
+    "crs": "EPSG:4326",
+    "licence": "ODbL-1.0",
+    "licence_uri": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "provider": "OpenStreetMap API",
+    "sha256": "12467a39bae46a19e19e9a6d726c00a41bb4212856c36ab1db3325cdec93c463",
+    "size_bytes": 3942671,
+    "source_id": "connected_neighborhood_osm_extract",
+    "source_uri": "https://api.openstreetmap.org/api/0.6/map"
+  },
+  "triage": {
+    "by_group": [
+      {
+        "class": "bridge_deck",
+        "debt_owed": null,
+        "feature_id": "feature:bridge_deck:way/1304205921",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1297867492",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398008",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398009",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398010",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398011",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398012",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398013",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398014",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398015",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398016",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398017",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398018",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398020",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398021",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398022",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398023",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398024",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398025",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398026",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398027",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398028",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398029",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398030",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398031",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398032",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398033",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398034",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398035",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398044",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398045",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398046",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398047",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398048",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398049",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398050",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398051",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398052",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398053",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398054",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398055",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398056",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398057",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398058",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398062",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507398063",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403501",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403510",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403511",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403512",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403513",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403514",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403515",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403516",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403517",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403518",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403519",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403520",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403521",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403522",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403523",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403524",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403525",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403526",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403527",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403528",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403529",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403530",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403531",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403532",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403533",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403534",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403535",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403536",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403537",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403538",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403539",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403540",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403541",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403542",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403543",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403544",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403545",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403546",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403547",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403548",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403549",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403550",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403551",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403552",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403553",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403554",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403555",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403556",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403557",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403558",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403559",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403560",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403561",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403562",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403567",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403568",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403569",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403570",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403594",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403595",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403596",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403605",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403606",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403607",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403608",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403609",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403610",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403611",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403612",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403613",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403614",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403615",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403616",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403617",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403618",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403619",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403620",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403621",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403622",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403632",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403633",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403634",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403635",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403636",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403637",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403638",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403639",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403640",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403641",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403642",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403643",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403644",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403645",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403646",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403647",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403648",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403649",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403650",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403651",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403653",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403654",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403655",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403656",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403657",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403658",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403659",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403660",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403661",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403662",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403663",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403664",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403665",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403666",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403667",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403668",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403669",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403670",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403671",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403672",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403673",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403674",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403675",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403676",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403677",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403678",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403679",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403680",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403681",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403682",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403683",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403684",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403685",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403686",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403687",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403688",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403689",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403690",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403691",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403692",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403693",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403694",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403695",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403696",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403697",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403698",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403699",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403700",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403701",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403702",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403703",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403704",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403705",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403706",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403707",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403708",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403709",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403710",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403711",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403712",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403713",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403714",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403715",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403716",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403717",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403718",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403719",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403720",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403721",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403722",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403723",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403724",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403725",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403726",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403727",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403728",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403729",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403730",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403731",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403732",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403733",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403734",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403735",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403736",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403737",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403738",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403739",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403740",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403741",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403742",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403743",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403744",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403745",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403746",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403747",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403748",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403749",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403750",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403751",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403752",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403753",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403754",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403755",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403756",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403757",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403758",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403759",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403760",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403761",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403762",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403763",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403764",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403765",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403766",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403767",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403768",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403769",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403770",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403771",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403772",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403773",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403774",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403775",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403776",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403777",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403778",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403779",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403780",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403781",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403782",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403783",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403784",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403785",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403786",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403787",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403788",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403789",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403790",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403791",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403792",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403793",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403794",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403795",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403796",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403797",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403798",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403805",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403808",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403812",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403814",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403815",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403816",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/1507403819",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225101048",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225101288",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225101505",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225101506",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197357",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197478",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197535",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197536",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197883",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197884",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197885",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197886",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197887",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225197888",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225198068",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225198069",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225198100",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225198101",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225198151",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225198199",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367798",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367799",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367800",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367801",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367802",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367803",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367804",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367805",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367806",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367807",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225367852",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369223",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369224",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369225",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369226",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369227",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369228",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369229",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369230",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369231",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369232",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369233",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369234",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369235",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369236",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369237",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369238",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225369239",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225482963",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225482968",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562518",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562519",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562520",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562521",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562522",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562523",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562525",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562527",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562528",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225562531",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563351",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563354",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563355",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563357",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563359",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563361",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563756",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563757",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563758",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563759",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/225563760",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/289193022",
+        "group": "A",
+        "label": "クレセント 田園調布"
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/289194874",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/289194875",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/441951068",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/441951069",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/441951070",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/441951081",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599544",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599545",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599546",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599547",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599548",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599549",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599550",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599554",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599555",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477599556",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477645418",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477645419",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477645420",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477645421",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477645425",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477645435",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477645436",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/477645438",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137825",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137836",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137850",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137858",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137859",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137861",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137862",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137869",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137874",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137881",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137886",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137895",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137902",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137908",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137912",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137913",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137914",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137923",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137927",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137943",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137944",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137950",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137951",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137956",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137957",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137960",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137965",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137971",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137975",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137987",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137989",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137990",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137996",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725137997",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138000",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138002",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138006",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138007",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138010",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138014",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138015",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138019",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138021",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138024",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138025",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138026",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138027",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138028",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138030",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138033",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138034",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138036",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138038",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138039",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138041",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138045",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138046",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138049",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138050",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138055",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138057",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138059",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138061",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138062",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138067",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138078",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138080",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138085",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138088",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138095",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138100",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138107",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138111",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138113",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138116",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138125",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138126",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138129",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138130",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138136",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138143",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138146",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138150",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138153",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138157",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138158",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138164",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138174",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138175",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138177",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138179",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138195",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138198",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138202",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138216",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138222",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138223",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138230",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138234",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138236",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138239",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138242",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138253",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138263",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138270",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138272",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138281",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138291",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138293",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138297",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138313",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138316",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138322",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138323",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138329",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138331",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138333",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138336",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138346",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138352",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138356",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138357",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138365",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138367",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138370",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138373",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138376",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138377",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138378",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138380",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138381",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138384",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138385",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138388",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138389",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138390",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138396",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138399",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138402",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138404",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138407",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138409",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138410",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138413",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138416",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138417",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138418",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138421",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138424",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138426",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138428",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138431",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138432",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138436",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138437",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138442",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138443",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138447",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138449",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138450",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138451",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138452",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138453",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138455",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138457",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138458",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138460",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138465",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138466",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138467",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138473",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138477",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138478",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138479",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138481",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138482",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138485",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138491",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138492",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138493",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138494",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138495",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138496",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138500",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138502",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138503",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138507",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138508",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138509",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138510",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138513",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138515",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138516",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138517",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138518",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138523",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138524",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138525",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138526",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138528",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138529",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138530",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138532",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138533",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138534",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138538",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138539",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138544",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138546",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138547",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138548",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138550",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138553",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138556",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138559",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138562",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138563",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138564",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138565",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138570",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138575",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138578",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138579",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138580",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138582",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138584",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138586",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138589",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138591",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138592",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138593",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138595",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138597",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138598",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138600",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138604",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138605",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138608",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138609",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138612",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138613",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138616",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138617",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138619",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138623",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138625",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138627",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138629",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138631",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138632",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138634",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138635",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138637",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138638",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138642",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138644",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "building_footprint",
+        "debt_owed": null,
+        "feature_id": "feature:building_footprint:way/725138645",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/13343542747",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/13343542748",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/13441692983",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/13441692984",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/13441692985",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/13441692986",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2145028052",
+        "group": "A",
+        "label": "多摩川2号踏切"
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2145028053",
+        "group": "A",
+        "label": "多摩川2号踏切"
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391077838",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391077840",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391077846",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391077850",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391077852",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391082562",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391082563",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391082564",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391082572",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391082573",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/2391082579",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9144072735",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9963411819",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9963411823",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9963411825",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9963411830",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9963411831",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9963411832",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9963411837",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:node/9963411838",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:way/1087430626",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:way/1087430628",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:way/1087430629",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:way/1087430631",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:way/1455022087",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:way/1455022097",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "crossing",
+        "debt_owed": null,
+        "feature_id": "feature:crossing:way/1455022107",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/10669964997",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/10669964998",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/13441692978",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/13441692979",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/13441692982",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/2339219650",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/2339232435",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/2684631067",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/2887270554",
+        "group": "A",
+        "label": "Den-en-chofu-honcho"
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/2925408644",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/302046711",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/354761385",
+        "group": "A",
+        "label": "Sakurazaka"
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/441509765",
+        "group": "A",
+        "label": "Sakurazaka-ue"
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/442165549",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/442291348",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:node/9985945729",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "fixture",
+        "debt_owed": null,
+        "feature_id": "feature:fixture:way/1304205919",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "place",
+        "debt_owed": null,
+        "feature_id": "feature:place:node/8410683299",
+        "group": "A",
+        "label": "Denenchofu-honcho"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/1038001322",
+        "group": "A",
+        "label": "Tokyu Tamagawa Line"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/1038001323",
+        "group": "A",
+        "label": "Tokyu Tamagawa Line"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/1038001324",
+        "group": "A",
+        "label": "Tokyu Tamagawa Line"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/1126040241",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/1304205922",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/152855008",
+        "group": "A",
+        "label": "Tokaido Main Line (Hinkaku Line)"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/24475081",
+        "group": "A",
+        "label": "Tokyu Tamagawa Line"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/796878138",
+        "group": "A",
+        "label": "Tokaido Shinkansen"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/796878139",
+        "group": "A",
+        "label": "Tokaido Shinkansen"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/796878140",
+        "group": "A",
+        "label": "Tokaido Shinkansen"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/796878141",
+        "group": "A",
+        "label": "Tokaido Shinkansen"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/796878144",
+        "group": "A",
+        "label": "Tokaido Shinkansen"
+      },
+      {
+        "class": "railway_boundary",
+        "debt_owed": null,
+        "feature_id": "feature:railway_boundary:way/796878145",
+        "group": "A",
+        "label": "Tokaido Shinkansen"
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/1059458086",
+        "group": "A",
+        "label": "Nakahara-kaido Ave."
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/1090211362",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/1115662463",
+        "group": "A",
+        "label": "Tamazutsumi-dori"
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/114097315",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/126233940",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/126233952",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/126233956",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/126233962",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/126233970",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/126234006",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/126234012",
+        "group": "A",
+        "label": "おいと坂"
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/1465498421",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/1465498422",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/1465498423",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/196858614",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/199578447",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/199578448",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/200087061",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/225098134",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/225098135",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/225098962",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/225104982",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/225194669",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/225201667",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/225201822",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/229865708",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/233636148",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/233636150",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/23990281",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/264238102",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/264753664",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/264753665",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/264844671",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/264844672",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/27073255",
+        "group": "A",
+        "label": "Tamazutsumi-dori"
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/285885323",
+        "group": "A",
+        "label": "Nakahara-kaido Ave."
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/285885337",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/288994921",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/289192819",
+        "group": "A",
+        "label": "Ace Park"
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/289197221",
+        "group": "A",
+        "label": "Ecolo Park"
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/31706445",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/31993395",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/31993399",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/31993400",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/37661730",
+        "group": "A",
+        "label": "桜坂"
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/37661731",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/37661732",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/37708746",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/37708747",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/37708748",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/456475366",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/456475384",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/456475385",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/456475386",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/670892441",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/670892442",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "road",
+        "debt_owed": null,
+        "feature_id": "feature:road:way/989310374",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/1087430624",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/1087430625",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/1087430627",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/1087430630",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/1455022086",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/1455022088",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/1455022108",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/200087062",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/225100142",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sidewalk",
+        "debt_owed": null,
+        "feature_id": "feature:sidewalk:way/264847040",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sign",
+        "debt_owed": null,
+        "feature_id": "feature:sign:node/2340149659",
+        "group": "A",
+        "label": "六郷用水物語"
+      },
+      {
+        "class": "sign",
+        "debt_owed": null,
+        "feature_id": "feature:sign:node/6282556210",
+        "group": "A",
+        "label": "ジャバラ"
+      },
+      {
+        "class": "sign",
+        "debt_owed": null,
+        "feature_id": "feature:sign:node/6282556211",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "sign",
+        "debt_owed": null,
+        "feature_id": "feature:sign:node/6282556212",
+        "group": "A",
+        "label": "雑木林のみち"
+      },
+      {
+        "class": "station_entrance",
+        "debt_owed": null,
+        "feature_id": "feature:station_entrance:node/9865199049",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "station_entrance",
+        "debt_owed": null,
+        "feature_id": "feature:station_entrance:node/9865199050",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "terrain",
+        "debt_owed": null,
+        "feature_id": "feature:terrain:way/1268595560",
+        "group": "A",
+        "label": "六郷用水"
+      },
+      {
+        "class": "terrain",
+        "debt_owed": null,
+        "feature_id": "feature:terrain:way/1268595561",
+        "group": "A",
+        "label": "六郷用水"
+      },
+      {
+        "class": "terrain",
+        "debt_owed": null,
+        "feature_id": "feature:terrain:way/1268595562",
+        "group": "A",
+        "label": "六郷用水"
+      },
+      {
+        "class": "terrain",
+        "debt_owed": null,
+        "feature_id": "feature:terrain:way/1268595563",
+        "group": "A",
+        "label": "六郷用水"
+      },
+      {
+        "class": "terrain",
+        "debt_owed": null,
+        "feature_id": "feature:terrain:way/225198783",
+        "group": "A",
+        "label": "六郷用水"
+      },
+      {
+        "class": "terrain",
+        "debt_owed": null,
+        "feature_id": "feature:terrain:way/264846635",
+        "group": "A",
+        "label": null
+      },
+      {
+        "class": "terrain",
+        "debt_owed": null,
+        "feature_id": "feature:terrain:way/266759693",
+        "group": "A",
+        "label": "六郷用水"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family station_stop_place_front (no match in tokyo/common_global place_front_profiles); facade capture of the station/stop face; place-front profile for public_transport=stop_position; site-identity capture still owed (no brand/operator/tenancy name)",
+        "feature_id": "feature:place:node/2145028048",
+        "group": "B",
+        "label": "Numabe"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family station_stop_place_front (no match in tokyo/common_global place_front_profiles); facade capture of the station/stop face; place-front profile for public_transport=stop_position; site-identity capture still owed (no brand/operator/tenancy name)",
+        "feature_id": "feature:place:node/266085809",
+        "group": "B",
+        "label": "Numabe"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family station_stop_place_front (no match in tokyo/common_global place_front_profiles); facade capture of the station/stop face; place-front profile for public_transport=station; site-identity capture still owed (no brand/operator/tenancy name)",
+        "feature_id": "feature:place:node/7834193975",
+        "group": "B",
+        "label": "Numabe"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family small_commercial_front (cf. tokyo.generic_small_commercial_front); facade capture of the host building face; place-front profile for healthcare=dentist; identity fixed by amenity=dentist",
+        "feature_id": "feature:place:node/11404946449",
+        "group": "C",
+        "label": "田園歯科医院"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family pharmacy_front (cf. tokyo.pharmacy_front); facade capture of the host building face; place-front profile for shop=chemist; identity fixed by brand=ココカラファイン",
+        "feature_id": "feature:place:node/11404946450",
+        "group": "C",
+        "label": "Cocokara Fine"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family small_commercial_front (cf. tokyo.generic_small_commercial_front); facade capture of the host building face; place-front profile for amenity=bicycle_rental; identity fixed by brand=ドコモ・バイクシェア",
+        "feature_id": "feature:place:node/13726789786",
+        "group": "C",
+        "label": "Docomo Bike Share"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family small_commercial_front (cf. tokyo.generic_small_commercial_front); facade capture of the host building face; place-front profile for amenity=post_office; identity fixed by operator=日本郵便",
+        "feature_id": "feature:place:node/1420789979",
+        "group": "C",
+        "label": "田園調布本町郵便局"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family buddhist_place_entry_gate (cf. jp.urban.buddhist_place_entry_gate); facade capture of the host building face; place-front profile for amenity=place_of_worship; identity fixed by amenity=place_of_worship",
+        "feature_id": "feature:place:node/2339243972",
+        "group": "C",
+        "label": "有慶山東光院"
+      },
+      {
+        "class": "place",
+        "debt_owed": "landmark marker profile for historic=memorial (template family landmark_marker; no commercial front owed: minimap landmark, not a storefront; no facade capture owed: no building face; identity fixed by historic=memorial)",
+        "feature_id": "feature:place:node/2340152791",
+        "group": "C",
+        "label": "六郷用水跡"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family neighborhood_supermarket_front (cf. tokyo.mybasket_front); facade capture of the host building face; place-front profile for shop=supermarket; identity fixed by brand=まいばすけっと",
+        "feature_id": "feature:place:node/2684634174",
+        "group": "C",
+        "label": "My Basket"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family small_commercial_front (cf. tokyo.generic_small_commercial_front); facade capture of the host building face; place-front profile for amenity=bank; identity fixed by brand=芝信用金庫",
+        "feature_id": "feature:place:node/2927455660",
+        "group": "C",
+        "label": "Shiba Shinkin Bank"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family small_commercial_front (cf. tokyo.generic_small_commercial_front); facade capture of the host building face; place-front profile for shop=hairdresser; identity fixed by shop=hairdresser",
+        "feature_id": "feature:place:node/2927461370",
+        "group": "C",
+        "label": "Tanaka Hair Salon"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family convenience_store_front (cf. tokyo.familymart_front); facade capture of the host building face; place-front profile for shop=convenience; identity fixed by brand=FamilyMart",
+        "feature_id": "feature:place:node/2929215092",
+        "group": "C",
+        "label": "FamilyMart"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family small_commercial_front (cf. tokyo.generic_small_commercial_front); facade capture of the host building face; place-front profile for amenity=pub; identity fixed by amenity=pub",
+        "feature_id": "feature:place:node/2929220302",
+        "group": "C",
+        "label": "やきとり とんぼ"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family small_commercial_front (cf. tokyo.generic_small_commercial_front); facade capture of the host building face; place-front profile for amenity=restaurant; identity fixed by amenity=restaurant",
+        "feature_id": "feature:place:node/2929222223",
+        "group": "C",
+        "label": "割烹浜蝶"
+      },
+      {
+        "class": "place",
+        "debt_owed": "template family convenience_store_front (cf. tokyo.familymart_front); facade capture of the host building face; place-front profile for shop=convenience; identity fixed by brand=LAWSON+スリーエフ",
+        "feature_id": "feature:place:node/441523546",
+        "group": "C",
+        "label": "Lawson Three F"
+      },
+      {
+        "class": "place",
+        "debt_owed": "place-identity landmark profile for tourism=attraction (template family route_landmark; no storefront front owed: a named slope, not a tenancy; no facade capture owed: no building face; identity fixed by tourism=attraction)",
+        "feature_id": "feature:place:node/4651760389",
+        "group": "C",
+        "label": "Sakurazaka"
+      }
+    ],
+    "counts_by_group": {
+      "A": 797,
+      "B": 3,
+      "C": 14
+    },
+    "unmapped_with_reason": [
+      {
+        "element": "node",
+        "reason": "junction=yes topology annotation on a shared node",
+        "rule_gap": "junction=yes is topology annotation on a shared node; no site key, so _place_class does not fire",
+        "source_ref": "node/10669964996",
+        "tags": {
+          "junction": "yes"
+        }
+      },
+      {
+        "element": "node",
+        "reason": "junction=yes topology annotation on a shared node",
+        "rule_gap": "junction=yes is topology annotation on a shared node; no site key, so _place_class does not fire",
+        "source_ref": "node/297026604",
+        "tags": {
+          "junction": "yes",
+          "name": "田園調布本町",
+          "name:en": "Den-enchohu honcho",
+          "name:ja": "田園調布本町"
+        }
+      },
+      {
+        "element": "way",
+        "reason": "administrative boundary: an legal line, not a physical world feature",
+        "rule_gap": "boundary=administrative is a legal line, not a physical world feature; no registry class",
+        "source_ref": "way/1315640319",
+        "tags": {
+          "admin_level": "9",
+          "boundary": "administrative"
+        }
+      }
+    ]
+  },
+  "unmapped": [
+    {
+      "element": "node",
+      "reason": "junction=yes topology annotation on a shared node",
+      "source_ref": "node/10669964996",
+      "tags": {
+        "junction": "yes"
+      }
+    },
+    {
+      "element": "node",
+      "reason": "junction=yes topology annotation on a shared node",
+      "source_ref": "node/297026604",
+      "tags": {
+        "junction": "yes",
+        "name": "田園調布本町",
+        "name:en": "Den-enchohu honcho",
+        "name:ja": "田園調布本町"
+      }
+    },
+    {
+      "element": "way",
+      "reason": "administrative boundary: an legal line, not a physical world feature",
+      "source_ref": "way/1315640319",
+      "tags": {
+        "admin_level": "9",
+        "boundary": "administrative"
+      }
+    }
+  ],
+  "unmapped_by_reason": {
+    "administrative boundary: an legal line, not a physical world feature": 1,
+    "junction=yes topology annotation on a shared node": 2
+  },
+  "unmapped_count": 3,
+  "validation_findings": 0,
+  "y9_frame": {
+    "anchor_easting_m": 379774.0766625035,
+    "anchor_lonlat": [
+      139.6730398,
+      35.58285600000001
+    ],
+    "anchor_northing_m": 3938492.8768877345,
+    "anchor_source": "OSM node/9865199050 (selected station entrance)",
+    "bake_height_zero": 128.0,
+    "bake_units_per_metre": 82.11203828474676,
+    "bake_units_per_world_unit": 16.0,
+    "projected_crs": "EPSG:32654",
+    "world_units_per_metre": 5.1320023927966725
+  }
+}

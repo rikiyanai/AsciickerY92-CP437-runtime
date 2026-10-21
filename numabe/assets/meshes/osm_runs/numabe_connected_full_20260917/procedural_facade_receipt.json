@@ -1,0 +1,11 @@
+{
+  "schema": "y92.procedural_facade_receipt.deleted",
+  "counts": {
+    "building_specs": 0,
+    "facade_instances_embedded": 0,
+    "facade_meshes_nonempty": 0,
+    "facades_procedural_fallback": 0,
+    "skipped": 0
+  },
+  "note": "procedural facade fallback deleted (FL-4814); facades come from the population plan"
+}

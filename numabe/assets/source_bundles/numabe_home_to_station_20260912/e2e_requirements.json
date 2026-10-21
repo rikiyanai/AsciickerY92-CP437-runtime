@@ -1,0 +1,107 @@
+{
+  "schema": "y92.world_e2e_requirements.v1",
+  "profile_id": "numabe_home_to_station",
+  "compiler_inputs": {
+    "official_road_classification": "official_road_classification.json",
+    "official_road_source_policy": "../../public_realm_corpora/jp/ota/doro_map_ota_phase1.json",
+    "osm_source": "numabe_home_to_station_aoi.osm",
+    "route_source": "valhalla_pedestrian_route.json"
+  },
+  "locale_contexts": {
+    "route_default": {
+      "country_code": "JP",
+      "region": "Tokyo",
+      "municipality": "Ota",
+      "site_contexts": [
+        "urban_residential"
+      ],
+      "operator_ids": [],
+      "template_pack_chain": [
+        "common_global",
+        "japan",
+        "japan_urban",
+        "tokyo"
+      ]
+    },
+    "numabe_station": {
+      "country_code": "JP",
+      "region": "Tokyo",
+      "municipality": "Ota",
+      "site_contexts": [
+        "urban_residential",
+        "railway_station"
+      ],
+      "operator_ids": [
+        "tokyu"
+      ],
+      "template_pack_chain": [
+        "common_global",
+        "japan",
+        "japan_urban",
+        "tokyo",
+        "tokyo_station_small",
+        "tokyu"
+      ]
+    }
+  },
+  "fl4813_observation_artifacts": {
+    "station_capture_index": "station_capture_source_index.json",
+    "camera_registration": "station_camera_solve_receipt.json",
+    "camera_sparse_reconstruction": "station_sparse_reconstruction.json",
+    "object_detections": "station_object_observations.json",
+    "object_masks": "station_mask_observations.json",
+    "object_tracks": "station_object_tracks.json",
+    "track_triangulation": "station_track_triangulation.json",
+    "sign_ocr": "station_sign_ocr_observations.json",
+    "station_facade_reconstruction": "station_facade_reconstruction.json",
+    "station_facade_world_ir": "station_facade.world_ir.json",
+    "station_identity_plane": "station_identity_sign_plane.json",
+    "template_candidates": "station_template_candidates.json"
+  },
+  "home_start_marker": "home_start",
+  "minimap_labels": [
+    "17-16 Den-en-chōfu Honchō",
+    "沼部駅"
+  ],
+  "hero_facades": [
+    {
+      "id": "home_block",
+      "requirement": "street_derived",
+      "source_coverage": false
+    },
+    {
+      "id": "mid_route_landmark",
+      "requirement": "street_derived",
+      "source_coverage": false
+    },
+    {
+      "id": "numabe_station_entrance",
+      "requirement": "street_derived",
+      "source_coverage": true
+    }
+  ],
+  "required_signs": [
+    {
+      "id": "numabe_station_identity",
+      "requirement": "source_derived",
+      "source_coverage": true
+    }
+  ],
+  "fl4813_image_corpora": [
+    {
+      "id": "route_forward",
+      "capture_index": "mapillary_rectilinear_capture_source_index.json",
+      "detections": "mapillary_route_object_observations.json",
+      "masks": "mapillary_route_mask_observations.json"
+    },
+    {
+      "id": "route_facades",
+      "capture_index": "mapillary_facade_capture_source_index.json",
+      "detections": "mapillary_facade_object_observations.json",
+      "masks": "mapillary_facade_mask_observations.json",
+      "planar_tracks": "mapillary_facade_tracks_IThCrth270.json",
+      "camera_registration": "mapillary_lateral_camera_solve_receipt.json",
+      "frozen_planar_candidates": "mapillary_facade_shared_sfm_surfaces.json"
+    }
+  ]
+}

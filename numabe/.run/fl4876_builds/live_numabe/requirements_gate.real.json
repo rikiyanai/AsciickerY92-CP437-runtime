@@ -1,0 +1,304 @@
+{
+ "counts": {
+  "kind:fixture_archetype": 4,
+  "kind:front_archetype": 2,
+  "kind:hero_facade": 3,
+  "kind:home_start": 1,
+  "kind:infrastructure_count": 4,
+  "kind:input_file": 3,
+  "kind:minimap_label": 4,
+  "kind:required_place": 4,
+  "kind:required_sign": 1,
+  "kind:station_labels": 1,
+  "kind:station_span": 1,
+  "kind:streetscape_coverage": 3,
+  "met": 29,
+  "not_evaluable": 1,
+  "rows": 31,
+  "suspicious_empty": false,
+  "unmet": 1
+ },
+ "rows": [
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "information_board",
+   "kind": "fixture_archetype",
+   "reason": "planned template emitted with all declared traits",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "post_box",
+   "kind": "fixture_archetype",
+   "reason": "planned template emitted with all declared traits",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "stop_sign",
+   "kind": "fixture_archetype",
+   "reason": "planned template emitted with all declared traits",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "traffic_signal",
+   "kind": "fixture_archetype",
+   "reason": "planned template emitted with all declared traits",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "feature:place:node/2684634174",
+   "kind": "front_archetype",
+   "reason": "profile selected upstream and emitted",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "feature:place:node/2929215092",
+   "kind": "front_archetype",
+   "reason": "profile selected upstream and emitted",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json"
+   ],
+   "id": "home_block",
+   "kind": "hero_facade",
+   "reason": "source_coverage false in requirements",
+   "state": "unmet:evidence_missing"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json"
+   ],
+   "id": "mid_route_landmark",
+   "kind": "hero_facade",
+   "reason": "source_coverage true; ref present",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json"
+   ],
+   "id": "numabe_station_entrance",
+   "kind": "hero_facade",
+   "reason": "source_coverage true",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/classic_base_receipt.json"
+   ],
+   "id": "home_start",
+   "kind": "home_start",
+   "reason": "spawn source matches marker; point recorded as basis (35.584866, 139.675919)",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "rail_corridor_fence_proposal",
+   "kind": "infrastructure_count",
+   "reason": "1 present, 1 required",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "railway_crossing_equipment_proposal",
+   "kind": "infrastructure_count",
+   "reason": "1 present, 1 required",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "station_entrance_assembly_proposal",
+   "kind": "infrastructure_count",
+   "reason": "2 present, 2 required",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "station_platform_proposal",
+   "kind": "infrastructure_count",
+   "reason": "1 present, 1 required",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json"
+   ],
+   "id": "compiler_inputs",
+   "kind": "input_file",
+   "reason": "7/7 references present",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json"
+   ],
+   "id": "fl4813_image_corpora",
+   "kind": "input_file",
+   "reason": "8/8 references present",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json"
+   ],
+   "id": "fl4813_observation_artifacts",
+   "kind": "input_file",
+   "reason": "12/12 references present",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "build_reg_88_temple:minimap marker home_start"
+   ],
+   "id": "17-16 Den-en-chōfu Honchō",
+   "kind": "minimap_label",
+   "reason": "label text carried by minimap marker home_start",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "build_reg_88_temple:emitted instance sign_sprite:sign_front_2929215092_c8f9b1fa2e.xp"
+   ],
+   "id": "FamilyMart",
+   "kind": "minimap_label",
+   "reason": "label text carried by emitted instance sign_sprite:sign_front_2929215092_c8f9b1fa2e.xp",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "build_reg_88_temple:emitted instance place_front_feature_place_node_2684634174"
+   ],
+   "id": "My Basket",
+   "kind": "minimap_label",
+   "reason": "label text carried by emitted instance place_front_feature_place_node_2684634174",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "build_reg_88_temple:station label"
+   ],
+   "id": "沼部駅",
+   "kind": "minimap_label",
+   "reason": "label text carried by station label",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "feature:place:node/11404946450",
+   "kind": "required_place",
+   "reason": "label, offset and kind within requirements",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "feature:place:node/2339243972",
+   "kind": "required_place",
+   "reason": "label, offset and kind within requirements",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "feature:place:node/2684634174",
+   "kind": "required_place",
+   "reason": "label, offset and kind within requirements",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "feature:place:node/2929215092",
+   "kind": "required_place",
+   "reason": "label, offset and kind within requirements",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "numabe_station_identity",
+   "kind": "required_sign",
+   "reason": "1 station identity emissions",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json",
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/infrastructure_receipt.json"
+   ],
+   "id": "station_identity_labels",
+   "kind": "station_labels",
+   "reason": "3 identity emissions (1 station facade, 2 entrance assemblies with identity text), minimum 2",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/emission_manifest.json"
+   ],
+   "id": "station_assembly_span",
+   "kind": "station_span",
+   "reason": "station member span 0.000m within 80.000m",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/route_streetscape_inventory.json"
+   ],
+   "id": "street_lamp",
+   "kind": "streetscape_coverage",
+   "reason": "1.000 over 3 bins, minimum 0.625 (groups ['poles_and_lamps'])",
+   "state": "met"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/route_streetscape_inventory.json"
+   ],
+   "id": "tree",
+   "kind": "streetscape_coverage",
+   "reason": "no observed bins for mapped groups ['vegetation']",
+   "state": "not_evaluable:missing_input"
+  },
+  {
+   "evidence": [
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/route_streetscape_inventory.json"
+   ],
+   "id": "utility_pole",
+   "kind": "streetscape_coverage",
+   "reason": "1.000 over 3 bins, minimum 0.750 (groups ['poles_and_lamps'])",
+   "state": "met"
+  }
+ ],
+ "schema": "y92.requirements_gate.v1"
+}

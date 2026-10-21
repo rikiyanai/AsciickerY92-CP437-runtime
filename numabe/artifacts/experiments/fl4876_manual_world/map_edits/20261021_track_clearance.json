@@ -1,0 +1,8 @@
+[
+ {
+  "inst": "facade_feature_facade_plane_numabe_station_entrance_1",
+  "op": "delete",
+  "basis": "Operator 2026-10-21: giant billboard card still cuts through the tracks. The obsolete 7.15m x5.8m reconstructed opaque facade backing spans rail route0 after the 2026-10-18 translation. Earlier lateral/normal moves traded rail obstruction for lane obstruction. Remove this obsolete presentation-only facade, not the railway, entrance infrastructure, station signs or walking corridor. Before owner: transferred output.a3d d40d35d440b00493ce646710dc5b07b3486fa5fab3c65fa4690c80fbe751bdf5; old rendered slab evidence assess/card_review_20261016/station_track/crops/runtime_reg87_frame3_facade_slab.png. The original mesh, transfer snapshot and pre-edit map stay recoverable. Actual station entrance infrastructure and independent signs remain.",
+  "by": "codex operator-directed CP437 Numabe correction 2026-10-21"
+ }
+]

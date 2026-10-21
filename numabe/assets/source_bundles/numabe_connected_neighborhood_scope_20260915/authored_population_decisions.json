@@ -1,0 +1,64 @@
+{
+  "decisions": [
+    {
+      "against_cause": "observed_point_inside_canonical_mass",
+      "decided_by": "operator",
+      "decided_on": "2026-09-25",
+      "decision_id": "DEC-4876-001",
+      "decision_record": "Operator instruction in session_01MF4NmhzorUcjervkD9U5ju, verbatim: \"HUH. ONLY 3 UJUST FIX MANUAL\" -- given after being shown that exactly 3 placements blocked the build and that 7413 instances were otherwise emitted with 0 errors.",
+      "disposition_decided": "intentional_omission",
+      "placement_id": "obs-inst-0110",
+      "proposed_by": "agent:claude-opus-5 session_01MF4NmhzorUcjervkD9U5ju",
+      "proposed_on": "2026-09-25",
+      "reason": "MEASURED. A street light (pole_streetlight, ann-1789503518977-88b8c8) triangulated at E 379775.37 N 3938501.87, which falls 0.71 m INSIDE the outline of building way/225369224, and 3.00 m from road 264753665. The observation's own sigma is 0.250 m, so the nearest clear position is 2.8x its uncertainty away and no lawful move exists. WHY NEITHER SIDE IS OBVIOUSLY WRONG. way/225369224 is an untouched OSM footprint: footprint_source 'osm', and its canonical ring is byte-identical to the ingest ring, so the PLATEAU rewrite did not cause this. A hand-traced building outline carries its own tracing error, and this pipeline models observation uncertainty but declares no footprint uncertainty anywhere. The 0.71 m discrepancy is comfortably inside normal OSM outline error and well outside the observation's sigma, so the contradiction most likely lies in the footprint, which this lane has no authority to move. WHAT IS GIVEN UP. One street light is not built. The sighting remains on the record and this decision asserts no absence.",
+      "status": "decided"
+    },
+    {
+      "against_cause": "observed_point_inside_canonical_mass",
+      "decided_by": "operator",
+      "decided_on": "2026-09-25",
+      "decision_id": "DEC-4876-002",
+      "decision_record": "Operator instruction in session_01MF4NmhzorUcjervkD9U5ju, verbatim: \"HUH. ONLY 3 UJUST FIX MANUAL\" -- same instruction as DEC-4876-001.",
+      "disposition_decided": "intentional_omission",
+      "placement_id": "obs-inst-0444",
+      "proposed_by": "agent:claude-opus-5 session_01MF4NmhzorUcjervkD9U5ju",
+      "proposed_on": "2026-09-25",
+      "reason": "MEASURED. A local sign cluster (custom identity candidate_local_sign_cluster_307, ann-1789451439919-b64c37) triangulated at E 379771.91 N 3938505.03, 0.71 m INSIDE the same untouched OSM building way/225369224 and 3.00 m from road 264753665, with sigma 0.250 m. Same contradiction and same reasoning as DEC-4876-001, on the same building edge: two independent sightings landing just inside one hand-traced outline is itself evidence about the outline rather than about the sightings. WHAT IS GIVEN UP. One sign cluster is not built. The sighting remains.",
+      "status": "decided"
+    },
+    {
+      "against_cause": "nearest_face_beyond_resolve_tolerance",
+      "decided_by": "operator",
+      "decided_on": "2026-09-25",
+      "decision_id": "DEC-4876-003",
+      "decision_record": "Operator instruction in session_01MF4NmhzorUcjervkD9U5ju, verbatim: \"HUH. ONLY 3 UJUST FIX MANUAL\" -- same instruction as DEC-4876-001.",
+      "disposition_decided": "intentional_omission",
+      "placement_id": "obs-inst-0245",
+      "proposed_by": "agent:claude-opus-5 session_01MF4NmhzorUcjervkD9U5ju",
+      "proposed_on": "2026-09-25",
+      "reason": "MEASURED. A roller shutter (roller_shutter_facade, ann-1789450146067-22db65) at E 379922.13 N 3938431.96. Nearest canonical building face is way/1507403663 at 30.37 m against a 6.0 m face_resolve_m. THE HOST IS NOT MAPPED, NOT MISSING FROM THIS RUN. The nearest building in the RAW OSM ingest document is 28.88 m away, so no building was lost to the AOI clip or to conflation. What is actually around the sighting is trackside: a railway_boundary at 5.60 m, terrain at 2.30 m, road 27073255 at 8.47 m, and three utility poles within 8.5 m. This is a shutter on a trackside structure that OpenStreetMap does not carry as a building. WHY NOT A TOLERANCE CHANGE. Widening face_resolve_m from 6.0 m to beyond 30.37 m would attach this shutter to a building 30 m away that it is not on, and would silently re-host facades across the whole lane. The tolerance is correct and the host genuinely does not exist in the sources. WHAT IS GIVEN UP. One roller shutter is not built. The sighting remains, and the unmapped trackside structure stays a known source gap. CAUSE BINDING. Written first against 'unfilled_facade_slot:nearest_face_beyond_resolve_tolerance', which is the ATTACHMENT record's reason. The disposition this decision settles carries category 'unfilled_facade_slot' and cause 'nearest_face_beyond_resolve_tolerance' separately, so the binding is the bare cause. The mismatch was refused rather than applied, which is the guard behaving correctly.",
+      "status": "decided"
+    },
+    {
+      "against_cause": "nearest_face_beyond_resolve_tolerance",
+      "decided_by": "operator",
+      "decided_on": "2026-10-10",
+      "decision_id": "DEC-4876-004",
+      "decision_record": "Operator instruction in session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03, verbatim: \"check both low and hgih confidence answers and show me te png, i bet most of them are obvious from manual check..\" -- the agent made the visual judgement under that instruction.",
+      "disposition_decided": "intentional_omission",
+      "placement_id": "obs-inst-0577",
+      "proposed_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03",
+      "proposed_on": "2026-10-10",
+      "reason": "VISUAL. Mapped as independent_storefront_awning (ann-1789452377019-fa0c1b, photo mapillary_599902518548270, heading 143). The box frames the long girder of the railway viaduct across the road ahead, not a storefront awning: no shopfront lies under it. With the box-centre ray (FL-4876 REG-EDGE-01) it registers at the viaduct, about 62 m from the camera, where no building face exists within face_resolve_m, so the facade module cannot attach. The 2eb536f648 corner ray had put it on a building it does not belong to. WHAT IS GIVEN UP. One awning that is not an awning is not built. The sighting remains; the right owner is a viaduct girder or rail-bridge module, not a facade. Evidence: artifacts/experiments/fl4876_fixture_visual/visual_queue_01/owed-inst-0577.png.",
+      "status": "decided"
+    }
+  ],
+  "derivation_boundary": [
+    "A decision settles an accounting outcome. It never places geometry, moves an observed point, or asserts the feature is absent from the world.",
+    "A decision names one placement id and the one cause it was made against. If the planner computes a different cause, the decision does not apply and the placement returns to owed.",
+    "A decision lowers no threshold. face_resolve_m, the observation sigmas and every budget are untouched by this document.",
+    "The observation survives. Each placement below keeps its Mapillary annotation and its measured position on the record."
+  ],
+  "schema": "y92.authored_population_decisions.v1",
+  "scope": "numabe_connected_neighborhood"
+}

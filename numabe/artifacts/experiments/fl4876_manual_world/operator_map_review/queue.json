@@ -1,0 +1,64 @@
+{
+ "schema": "y92.fl4876.operator_map_queue.v1",
+ "owner": "artifacts/experiments/fl4876_manual_world/map_editor.py (operator intent; the agent resolves items)",
+ "items": [
+  {
+   "id": "OPQ-4876-0001",
+   "created": "2026-10-14T01:43:57Z",
+   "status": "open",
+   "kind": "image_drop",
+   "text": "lets say i want to transform the screen shot paste as best i can to the wall here since this is the closest i can get. to matching angles .",
+   "rect_EN": null,
+   "building_ids": [
+    "feature:building_footprint:way/725137997"
+   ],
+   "object_ids": [],
+   "panorama_ids": [],
+   "world_points": [
+    [
+     1616.508,
+     2863.112,
+     1638.021
+    ]
+   ],
+   "points_EN": [
+    [
+     380004.7275332188,
+     3938966.417307441,
+     1638.021
+    ]
+   ],
+   "camera": {
+    "x": 1633.3466625767421,
+    "y": 2871.784365116594,
+    "z": 1537,
+    "yaw": 297.70000000000005,
+    "zoom": 1.869296370439331,
+    "persp": 0,
+    "heading_deg": 62.299999999999955,
+    "font": "cp437_12x12.png",
+    "cols": 141,
+    "rows": 178,
+    "where": {
+     "x": 1633.3466625767421,
+     "y": 2871.784365116594,
+     "E": 380008.01,
+     "N": 3938968.11,
+     "lat": 35.5871682,
+     "lon": 139.6755506,
+     "building_id": "feature:building_footprint:way/725137997",
+     "road": null,
+     "place": {
+      "name": "ローソン・スリーエフ",
+      "kind": "convenience",
+      "dist_m": 0.5
+     },
+     "streetview_url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=35.5871682,139.6755506"
+    }
+   },
+   "label": "",
+   "shot": "artifacts/experiments/fl4876_manual_world/operator_map_review/shots/ffba532327a87b09.png",
+   "image": "artifacts/experiments/fl4876_manual_world/operator_map_review/shots/a3caa18e6d617dd1.png"
+  }
+ ]
+}

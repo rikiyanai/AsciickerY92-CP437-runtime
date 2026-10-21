@@ -1,0 +1,328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fl4683.scene_fact_handshake.v1.schema.json",
+  "title": "FL-4683 typed SceneFact to GlyphProgram handshake contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "version",
+    "contract_kind",
+    "status",
+    "identity",
+    "scene_fact_v1",
+    "route_families",
+    "glyph_program_v1",
+    "selector_input_v1",
+    "selector_output_v1",
+    "rejection_reasons",
+    "runtime_rights",
+    "frame_ordering",
+    "adapters",
+    "non_activation"
+  ],
+  "properties": {
+    "schema": { "const": "fl4683.scene_fact_handshake.v1" },
+    "version": { "const": 1 },
+    "contract_kind": { "const": "typed_handshake_contract" },
+    "status": { "const": "defined_unwired" },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "native_header",
+        "scene_fact_schema_id",
+        "glyph_program_schema_id",
+        "selector_input_schema_id",
+        "final_output_type",
+        "compiler_artifact_schema",
+        "compiler_artifact_path"
+      ],
+      "properties": {
+        "native_header": { "const": "platform/fl4683_scene_fact_handshake.h" },
+        "scene_fact_schema_id": { "const": "SceneFactV1" },
+        "glyph_program_schema_id": { "const": "GlyphProgramV1" },
+        "selector_input_schema_id": { "const": "Fl4683SelectorInputV1" },
+        "final_output_type": { "const": "FinalGlyphResultV2" },
+        "compiler_artifact_schema": { "const": "fl4676.glyph_fact.v1" },
+        "compiler_artifact_path": { "const": "assets/glyphs/generated/fl4676.glyph_fact.v1.json" }
+      }
+    },
+    "scene_fact_v1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "schema_version", "fields", "forbidden_fields"],
+      "properties": {
+        "owner": { "const": "renderer" },
+        "schema_version": { "const": 1 },
+        "fields": {
+          "type": "array",
+          "minItems": 25,
+          "items": { "$ref": "#/$defs/field" }
+        },
+        "forbidden_fields": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "glyph_record_id",
+              "glyph_intrinsic_metadata",
+              "membership_weight",
+              "relation_edge",
+              "compiled_cost_weight"
+            ]
+          }
+        }
+      }
+    },
+    "route_families": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "discriminator_field",
+        "discriminator_owner",
+        "why",
+        "legal_masks",
+        "families"
+      ],
+      "properties": {
+        "discriminator_field": { "const": "route_family_mask" },
+        "discriminator_owner": { "const": "renderer" },
+        "why": { "type": "string", "minLength": 1 },
+        "legal_masks": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "enum": ["single_family_bit", "ramp_density_tonal_pair"]
+          }
+        },
+        "families": {
+          "type": "array",
+          "minItems": 7,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["route_key", "bit", "lane_field"],
+            "properties": {
+              "route_key": {
+                "enum": [
+                  "ramp.v1",
+                  "density.v1",
+                  "edge.v1",
+                  "direction.v1",
+                  "flow.v1",
+                  "filled.field.v1",
+                  "mesh_feature.bundle.v1"
+                ]
+              },
+              "bit": { "enum": [1, 2, 4, 8, 16, 32, 64] },
+              "lane_field": {
+                "oneOf": [
+                  { "type": "null" },
+                  {
+                    "enum": [
+                      "ramp_bin",
+                      "density_bin",
+                      "edge_bin",
+                      "direction_bin",
+                      "flow_bin"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "glyph_program_v1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "schema_version", "artifact_view", "required_identities"],
+      "properties": {
+        "owner": { "const": "offline_compiler" },
+        "schema_version": { "const": 1 },
+        "artifact_view": {
+          "type": "array",
+          "minItems": 9,
+          "items": { "$ref": "#/$defs/field" }
+        },
+        "required_identities": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "artifact_sha256",
+              "artifact_content_sha256",
+              "glyph_universe_sha256",
+              "scene_fact_schema_sha256"
+            ]
+          }
+        }
+      }
+    },
+    "selector_input_v1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "fields", "allowed_evaluation"],
+      "properties": {
+        "owner": { "const": "single_native_selector" },
+        "fields": {
+          "type": "array",
+          "minItems": 7,
+          "items": { "$ref": "#/$defs/field" }
+        },
+        "allowed_evaluation": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "select_fact_id_from_scene_fact",
+              "score_compiler_emitted_costs"
+            ]
+          }
+        }
+      }
+    },
+    "selector_output_v1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "owner_after_selection", "absence_publication"],
+      "properties": {
+        "type": { "const": "FinalGlyphResultV2" },
+        "owner_after_selection": { "const": "u6_final_tuple_writer" },
+        "absence_publication": { "const": "named_rejection_visible_absence_tuple" }
+      }
+    },
+    "rejection_reasons": {
+      "type": "array",
+      "minItems": 14,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "runtime_rights_blocked",
+          "missing_artifact",
+          "artifact_sha_mismatch",
+          "glyph_universe_mismatch",
+          "scene_schema_mismatch",
+          "unknown_glyph_fact",
+          "unknown_glyph_record",
+          "missing_compiled_address",
+          "empty_legal_row",
+          "unadmitted_glyph",
+          "missing_scene_fact",
+          "malformed_scene_fact",
+          "frame_order_violation",
+          "adapter_abi_mismatch"
+        ]
+      }
+    },
+    "runtime_rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runtime_consumption_allowed_now", "allowed_after_fl4683", "forbidden_authorities"],
+      "properties": {
+        "runtime_consumption_allowed_now": { "const": false },
+        "allowed_after_fl4683": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "select_fact_id_from_scene_fact",
+              "score_compiler_emitted_costs"
+            ]
+          }
+        },
+        "forbidden_authorities": {
+          "type": "array",
+          "minItems": 7,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "derive_glyph_metadata_at_runtime",
+              "derive_relation_edges_at_runtime",
+              "invent_membership_at_runtime",
+              "synthesize_replacement_rows",
+              "substitute_missing_fact",
+              "mutate_compiled_artifact",
+              "treat_scene_fact_as_glyph_metadata"
+            ]
+          }
+        }
+      }
+    },
+    "frame_ordering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lifetime", "ordering"],
+      "properties": {
+        "lifetime": { "const": "one_render_frame" },
+        "ordering": {
+          "type": "array",
+          "minItems": 5,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "adapters": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["adapter_kind", "platform", "rights"],
+        "properties": {
+          "adapter_kind": {
+            "enum": [
+              "desktop_term_plus_plus",
+              "webassembly_webgl_transport"
+            ]
+          },
+          "platform": { "enum": ["desktop", "webassembly"] },
+          "rights": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "transport_scene_fact_bytes",
+                "transport_final_tuple_bytes",
+                "present_final_tuple_without_reselection"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "non_activation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["installs_loader", "installs_selector", "installs_presenter", "activates_runtime_consumption"],
+      "properties": {
+        "installs_loader": { "const": false },
+        "installs_selector": { "const": false },
+        "installs_presenter": { "const": false },
+        "activates_runtime_consumption": { "const": false }
+      }
+    }
+  },
+  "$defs": {
+    "field": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "type", "owner"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "type": { "type": "string", "minLength": 1 },
+        "owner": { "type": "string", "minLength": 1 },
+        "quantization": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

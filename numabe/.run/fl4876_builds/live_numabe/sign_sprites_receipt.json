@@ -1,0 +1,999 @@
+{
+ "schema": "y92.sign_sprites.v1",
+ "sprite_dir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/output.sprites",
+ "signs": [
+  {
+   "placement_id": "place_front:feature:place:node/2929215092",
+   "label": "FamilyMart",
+   "sprite": "sign_front_2929215092_c8f9b1fa2e.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789451279735-ccaabf.png",
+   "annotation_id": "ann-1789451279735-ccaabf",
+   "cells": [
+    21,
+    8
+   ],
+   "slot_m": [
+    5.072,
+    2.02,
+    3.22
+   ],
+   "pos": [
+    511.813,
+    680.279,
+    398.803
+   ],
+   "kind": "brand_front_logo",
+   "normal": [
+    0.713812945,
+    -0.700336404
+   ],
+   "height_above_street_m": 2.02,
+   "wall_snap": {
+    "wall_offset_m": -0.9,
+    "moved_along_normal_m": 0.19999999999999996,
+    "height_above_street_m": 2.02,
+    "source_pos": [
+     511.08,
+     680.998,
+     397.904
+    ]
+   },
+   "on_carriageway": false,
+   "plane": {
+    "mesh": "signplane_front_2929215092_c8f9b1fa2e.akm",
+    "pos": [
+     511.026,
+     681.051,
+     398.803
+    ],
+    "normal": [
+     0.7138,
+     -0.7003
+    ],
+    "width_m": 2.728,
+    "height_m": 1.2,
+    "cells": [
+     21,
+     8
+    ],
+    "moved_from_sprite_m": -0.215,
+    "wall_basis": "front surface of place_front_feature_place_node_2929215092 on feature:building_footprint:way/225198068"
+   }
+  },
+  {
+   "placement_id": "place_front:feature:place:node/11404946450",
+   "label": "Cocokara Fine",
+   "sprite": "sign_front_11404946450_e25f285476.xp",
+   "crop": "artifacts/experiments/fl4810_aoi_street_network_boxing_20260915/crops/ann-1789503533890-aedfdf.png",
+   "annotation_id": "ann-1789503533890-aedfdf",
+   "cells": [
+    16,
+    8
+   ],
+   "slot_m": [
+    5.311,
+    2.02,
+    3.22
+   ],
+   "pos": [
+    392.535,
+    557.679,
+    379.917
+   ],
+   "kind": "brand_front_logo",
+   "normal": [
+    0.604710326,
+    -0.796445492
+   ],
+   "height_above_street_m": 2.02,
+   "wall_snap": {
+    "wall_offset_m": -0.7,
+    "moved_along_normal_m": 0.5,
+    "height_above_street_m": 2.02,
+    "source_pos": [
+     390.983,
+     559.723,
+     378.803
+    ]
+   },
+   "on_carriageway": false,
+   "plane": {
+    "mesh": "signplane_front_11404946450_e25f285476.akm",
+    "pos": [
+     390.875,
+     559.865,
+     379.917
+    ],
+    "normal": [
+     0.6047,
+     -0.7964
+    ],
+    "width_m": 2.078,
+    "height_m": 1.2,
+    "cells": [
+     16,
+     8
+    ],
+    "moved_from_sprite_m": -0.535,
+    "wall_basis": "front surface of place_front_feature_place_node_11404946450 on feature:building_footprint:way/225198199"
+   }
+  },
+  {
+   "placement_id": "place_front:feature:place:node/2684634174",
+   "label": "My Basket",
+   "sprite": "sign_front_2684634174_35a97af6f0.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789452109673-ec011b.png",
+   "annotation_id": "ann-1789452109673-ec011b",
+   "cells": [
+    29,
+    8
+   ],
+   "slot_m": [
+    7.2,
+    2.02,
+    3.22
+   ],
+   "pos": [
+    548.886,
+    391.144,
+    353.48
+   ],
+   "kind": "brand_front_logo",
+   "normal": [
+    -0.605641252,
+    -0.795737817
+   ],
+   "height_above_street_m": 2.02,
+   "wall_snap": {
+    "wall_offset_m": -0.7,
+    "moved_along_normal_m": 0.5,
+    "height_above_street_m": 2.02,
+    "source_pos": [
+     550.44,
+     393.186,
+     353.072
+    ]
+   },
+   "on_carriageway": false,
+   "plane": {
+    "mesh": "signplane_front_2684634174_35a97af6f0.akm",
+    "pos": [
+     550.487,
+     393.247,
+     353.48
+    ],
+    "normal": [
+     -0.6056,
+     -0.7957
+    ],
+    "width_m": 3.767,
+    "height_m": 1.2,
+    "cells": [
+     29,
+     8
+    ],
+    "moved_from_sprite_m": -0.515,
+    "wall_basis": "front surface of place_front_feature_place_node_2684634174 on feature:building_footprint:way/225369230"
+   }
+  },
+  {
+   "placement_id": "place_front:feature:place:node/2929222223",
+   "label": "割烹浜蝶",
+   "sprite": "sign_front_2929222223_ea8c34048c.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789452040564-1abf97.png",
+   "annotation_id": "ann-1789452040564-1abf97",
+   "cells": [
+    15,
+    8
+   ],
+   "slot_m": [
+    3.263,
+    2.02,
+    3.22
+   ],
+   "pos": [
+    473.656,
+    553.111,
+    384.313
+   ],
+   "kind": "brand_front_logo",
+   "normal": [
+    0.148568877,
+    0.988902062
+   ],
+   "height_above_street_m": 2.02,
+   "wall_snap": {
+    "wall_offset_m": -0.8,
+    "moved_along_normal_m": 0.30000000000000004,
+    "height_above_street_m": 2.02,
+    "source_pos": [
+     473.427,
+     551.588,
+     384.465
+    ]
+   },
+   "on_carriageway": false,
+   "plane": {
+    "mesh": "signplane_front_2929222223_ea8c34048c.akm",
+    "pos": [
+     473.339,
+     551.004,
+     384.313
+    ],
+    "normal": [
+     0.1486,
+     0.9889
+    ],
+    "width_m": 1.949,
+    "height_m": 1.2,
+    "cells": [
+     15,
+     8
+    ],
+    "moved_from_sprite_m": -0.415,
+    "wall_basis": "front surface of place_front_feature_place_node_2929222223 on feature:building_footprint:way/225369239"
+   }
+  },
+  {
+   "placement_id": "obs-inst-0429",
+   "label": "storefront_sign_cafe_bit",
+   "sprite": "sign_obs-inst-0429_635c8fef2e.xp",
+   "crop": "artifacts/experiments/fl4876_identity_adjudication/logos/cafe_bit.png",
+   "cells": [
+    28,
+    6
+   ],
+   "pos": [
+    418.973,
+    584.302,
+    367.28
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    0.7240394506443942,
+    -0.6897585620422293
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.77,
+    "source_pos": [
+     416.372,
+     586.78,
+     367.28
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-inst-0429_635c8fef2e.akm",
+    "pos": [
+     417.189,
+     586.002,
+     367.28
+    ],
+    "normal": [
+     0.724,
+     -0.6898
+    ],
+    "width_m": 3.637,
+    "height_m": 0.9,
+    "cells": [
+     28,
+     6
+    ],
+    "moved_from_sprite_m": -0.48,
+    "wall_basis": "front surface of lower_fixtures_obs-authored-SF-4876-S401-078 on feature:building_footprint:way/225198100"
+   }
+  },
+  {
+   "placement_id": "obs-inst-0414",
+   "label": "storefront_sign_iijima",
+   "sprite": "sign_obs-inst-0414_c784ab3c64.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789451177568-b2f197.png",
+   "cells": [
+    9,
+    16
+   ],
+   "pos": [
+    534.597,
+    647.718,
+    381.578
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.7200305165759089,
+    0.6939424004911573
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.8,
+    "source_pos": [
+     537.184,
+     645.225,
+     381.578
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-inst-0414_c784ab3c64.akm",
+    "pos": [
+     537.884,
+     644.55,
+     381.578
+    ],
+    "normal": [
+     -0.72,
+     0.6939
+    ],
+    "width_m": 1.169,
+    "height_m": 2.4,
+    "cells": [
+     9,
+     16
+    ],
+    "moved_from_sprite_m": -0.89,
+    "wall_basis": "mass mesh wall / facade panel on footprint face of feature:building_footprint:way/225367798"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:mikasa",
+   "label": "storefront_sign_mikasa",
+   "sprite": "sign_obs-manual-business_mikasa_c18d0f628b.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789450621635-16c6fb.png",
+   "cells": [
+    23,
+    10
+   ],
+   "pos": [
+    644.071,
+    501.375,
+    406.603
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.4971556944979241,
+    -0.8676613483544641
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.4,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.79,
+    "source_pos": [
+     645.857,
+     504.492,
+     406.603
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_mikasa_c18d0f628b.akm",
+    "pos": [
+     646.469,
+     505.561,
+     406.603
+    ],
+    "normal": [
+     -0.4972,
+     -0.8677
+    ],
+    "width_m": 2.988,
+    "height_m": 1.5,
+    "cells": [
+     23,
+     10
+    ],
+    "moved_from_sprite_m": -0.94,
+    "wall_basis": "terrain wall foot of feature:building_footprint:way/225367802"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:ebara_musen",
+   "label": "storefront_sign_ebara_musen",
+   "sprite": "sign_obs-manual-business_ebara_musen_7a997d6052.xp",
+   "crop": "artifacts/experiments/fl4810_aoi_street_network_boxing_20260915/crops/ann-1789503037906-e8ddc9.png",
+   "cells": [
+    9,
+    18
+   ],
+   "pos": [
+    619.806,
+    708.836,
+    444.769
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    0.7290164160484541,
+    0.6844962126497612
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.81,
+    "source_pos": [
+     617.187,
+     706.377,
+     444.769
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_ebara_musen_7a997d6052.akm",
+    "pos": [
+     617.599,
+     706.764,
+     444.769
+    ],
+    "normal": [
+     0.729,
+     0.6845
+    ],
+    "width_m": 1.169,
+    "height_m": 2.7,
+    "cells": [
+     9,
+     18
+    ],
+    "moved_from_sprite_m": -0.59,
+    "wall_basis": "mass mesh wall / facade panel on footprint face of feature:building_footprint:way/225367803"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:fukasawa",
+   "label": "storefront_sign_fukasawa",
+   "sprite": "sign_obs-manual-business_fukasawa_03528a3735.xp",
+   "crop": "artifacts/experiments/fl4876_identity_adjudication/logos/fukasawa.png",
+   "cells": [
+    20,
+    4
+   ],
+   "pos": [
+    609.22,
+    529.775,
+    401.43
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.8603330650016633,
+    -0.5097322996091614
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.79,
+    "source_pos": [
+     612.311,
+     531.606,
+     401.43
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_fukasawa_03528a3735.akm",
+    "pos": [
+     612.266,
+     531.58,
+     401.43
+    ],
+    "normal": [
+     -0.8603,
+     -0.5097
+    ],
+    "width_m": 2.598,
+    "height_m": 0.6,
+    "cells": [
+     20,
+     4
+    ],
+    "moved_from_sprite_m": -0.69,
+    "wall_basis": "mass mesh wall / facade panel on footprint face of feature:building_footprint:way/225367805"
+   }
+  },
+  {
+   "placement_id": "obs-inst-0557",
+   "label": "storefront_sign_komatsuya",
+   "sprite": "sign_obs-inst-0557_1d75088101.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789452256109-007aaf.png",
+   "cells": [
+    27,
+    10
+   ],
+   "pos": [
+    738.154,
+    443.272,
+    423.802
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.515995218465954,
+    -0.8565914630208922
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.8,
+    "source_pos": [
+     740.007,
+     446.35,
+     423.802
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-inst-0557_1d75088101.akm",
+    "pos": [
+     740.643,
+     447.404,
+     423.802
+    ],
+    "normal": [
+     -0.516,
+     -0.8566
+    ],
+    "width_m": 3.507,
+    "height_m": 1.5,
+    "cells": [
+     27,
+     10
+    ],
+    "moved_from_sprite_m": -0.94,
+    "wall_basis": "terrain wall foot of feature:building_footprint:way/225367852"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:cleaner",
+   "label": "storefront_sign_cleaner",
+   "sprite": "sign_obs-manual-business_cleaner_799d2c3195.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789452227813-73ff05.png",
+   "cells": [
+    28,
+    8
+   ],
+   "pos": [
+    408.053,
+    522.124,
+    348.048
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.5738480459135581,
+    0.8189617941034801
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.4,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.53,
+    "source_pos": [
+     410.114,
+     519.182,
+     348.048
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_cleaner_799d2c3195.akm",
+    "pos": [
+     409.789,
+     519.647,
+     348.048
+    ],
+    "normal": [
+     -0.5738,
+     0.819
+    ],
+    "width_m": 3.637,
+    "height_m": 1.2,
+    "cells": [
+     28,
+     8
+    ],
+    "moved_from_sprite_m": -0.589,
+    "wall_basis": "mass mesh wall / facade panel on footprint face of feature:building_footprint:way/225369224"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:unagi_tempura",
+   "label": "storefront_sign_unagi_tempura",
+   "sprite": "sign_obs-manual-business_unagi_tempura_47996a6af5.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789450373923-71d1e8.png",
+   "cells": [
+    23,
+    9
+   ],
+   "pos": [
+    675.962,
+    431.602,
+    408.984
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    0.7220138633362542,
+    0.6918785884461643
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.4,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.83,
+    "source_pos": [
+     673.368,
+     429.117,
+     408.984
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_unagi_tempura_47996a6af5.akm",
+    "pos": [
+     672.479,
+     428.264,
+     408.984
+    ],
+    "normal": [
+     0.722,
+     0.6919
+    ],
+    "width_m": 2.988,
+    "height_m": 1.35,
+    "cells": [
+     23,
+     9
+    ],
+    "moved_from_sprite_m": -0.94,
+    "wall_basis": "terrain wall foot of feature:building_footprint:way/225369228"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:nabin",
+   "label": "storefront_sign_nabin",
+   "sprite": "sign_obs-manual-business_nabin_6511f435f7.xp",
+   "crop": "artifacts/experiments/fl4876_identity_adjudication/logos/nabin.png",
+   "cells": [
+    25,
+    6
+   ],
+   "pos": [
+    587.383,
+    362.165,
+    321.802
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.6056412518070753,
+    -0.7957378174433831
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.59,
+    "source_pos": [
+     589.559,
+     365.024,
+     321.802
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_nabin_6511f435f7.akm",
+    "pos": [
+     589.188,
+     364.536,
+     321.802
+    ],
+    "normal": [
+     -0.6056,
+     -0.7957
+    ],
+    "width_m": 3.248,
+    "height_m": 0.9,
+    "cells": [
+     25,
+     6
+    ],
+    "moved_from_sprite_m": -0.581,
+    "wall_basis": "front surface of lower_fixtures_obs-authored-SF-4876-S402-024 on feature:building_footprint:way/225369230"
+   }
+  },
+  {
+   "placement_id": "obs-inst-0229",
+   "label": "storefront_sign_sakurazaka_bal",
+   "sprite": "sign_obs-inst-0229_eaa02def24.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789452076314-ec68e9.png",
+   "cells": [
+    23,
+    8
+   ],
+   "pos": [
+    509.79,
+    421.869,
+    338.757
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.6056412518070753,
+    -0.7957378174433831
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.79,
+    "source_pos": [
+     511.966,
+     424.727,
+     338.757
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-inst-0229_eaa02def24.akm",
+    "pos": [
+     511.623,
+     424.278,
+     338.757
+    ],
+    "normal": [
+     -0.6056,
+     -0.7957
+    ],
+    "width_m": 2.988,
+    "height_m": 1.2,
+    "cells": [
+     23,
+     8
+    ],
+    "moved_from_sprite_m": -0.59,
+    "wall_basis": "mass mesh wall / facade panel on footprint face of feature:building_footprint:way/225369230"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:shige",
+   "label": "storefront_sign_shige",
+   "sprite": "sign_obs-manual-business_shige_5880b824e7.xp",
+   "crop": "artifacts/experiments/fl4876_identity_adjudication/logos/shige.png",
+   "cells": [
+    9,
+    22
+   ],
+   "pos": [
+    520.915,
+    412.112,
+    339.066
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.6056412518070753,
+    -0.7957378174433831
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.6,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.78,
+    "source_pos": [
+     523.091,
+     414.971,
+     339.066
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_shige_5880b824e7.akm",
+    "pos": [
+     523.37,
+     415.337,
+     339.066
+    ],
+    "normal": [
+     -0.6056,
+     -0.7957
+    ],
+    "width_m": 1.169,
+    "height_m": 3.3,
+    "cells": [
+     9,
+     22
+    ],
+    "moved_from_sprite_m": -0.79,
+    "wall_basis": "mass mesh wall / facade panel on footprint face of feature:building_footprint:way/225369230"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:tenrokuen",
+   "label": "storefront_sign_tenrokuen",
+   "sprite": "sign_obs-manual-business_tenrokuen_e7f2614558.xp",
+   "crop": "artifacts/experiments/fl4876_identity_adjudication/logos/tenrokuen.png",
+   "cells": [
+    26,
+    6
+   ],
+   "pos": [
+    572.68,
+    373.358,
+    324.802
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.6056412518070753,
+    -0.7957378174433831
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.8,
+    "source_pos": [
+     574.855,
+     376.217,
+     324.802
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_tenrokuen_e7f2614558.akm",
+    "pos": [
+     574.484,
+     375.728,
+     324.802
+    ],
+    "normal": [
+     -0.6056,
+     -0.7957
+    ],
+    "width_m": 3.377,
+    "height_m": 0.9,
+    "cells": [
+     26,
+     6
+    ],
+    "moved_from_sprite_m": -0.58,
+    "wall_basis": "front surface of lower_fixtures_obs-authored-SF-4876-S402-024 on feature:building_footprint:way/225369230"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:miyoshiya",
+   "label": "storefront_sign_miyoshiya",
+   "sprite": "sign_obs-manual-business_miyoshiya_269571b93a.xp",
+   "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789450287612-06169d.png",
+   "cells": [
+    31,
+    7
+   ],
+   "pos": [
+    700.936,
+    418.385,
+    410.685
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    0.5129271022582998,
+    0.8584321684145485
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.78,
+    "source_pos": [
+     699.094,
+     415.302,
+     410.685
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_miyoshiya_269571b93a.akm",
+    "pos": [
+     699.752,
+     416.403,
+     410.685
+    ],
+    "normal": [
+     0.5129,
+     0.8584
+    ],
+    "width_m": 4.027,
+    "height_m": 1.05,
+    "cells": [
+     31,
+     7
+    ],
+    "moved_from_sprite_m": -0.45,
+    "wall_basis": "front surface of lower_fixtures_obs-authored-SF-4876-S403-109 on feature:building_footprint:way/225369232"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:respa",
+   "label": "storefront_sign_respa",
+   "sprite": "sign_obs-manual-business_respa_70217d3eac.xp",
+   "crop": "artifacts/experiments/fl4876_identity_adjudication/logos/respa.png",
+   "cells": [
+    28,
+    4
+   ],
+   "pos": [
+    815.659,
+    270.073,
+    351.442
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    -0.6450043284180966,
+    0.7641789164337892
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.8,
+    "source_pos": [
+     817.976,
+     267.328,
+     351.442
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_respa_70217d3eac.akm",
+    "pos": [
+     817.91,
+     267.407,
+     351.442
+    ],
+    "normal": [
+     -0.645,
+     0.7642
+    ],
+    "width_m": 3.637,
+    "height_m": 0.6,
+    "cells": [
+     28,
+     4
+    ],
+    "moved_from_sprite_m": -0.68,
+    "wall_basis": "front surface of lower_fixtures_obs-authored-SF-4876-S403-060 on feature:building_footprint:way/225562520"
+   }
+  },
+  {
+   "placement_id": "obs-manual-business:damassa",
+   "label": "storefront_sign_damassa",
+   "sprite": "sign_obs-manual-business_damassa_639aa1e471.xp",
+   "crop": "artifacts/experiments/fl4876_identity_adjudication/logos/damassa.png",
+   "cells": [
+    12,
+    5
+   ],
+   "pos": [
+    626.902,
+    305.948,
+    317.444
+   ],
+   "kind": "custom_identity",
+   "normal": [
+    0.6088721960976602,
+    0.7932683334277326
+   ],
+   "wall_snap": {
+    "wall_offset_m": -0.5,
+    "moved_along_normal_m": 0.7,
+    "height_above_street_m": 1.73,
+    "source_pos": [
+     624.715,
+     303.098,
+     317.444
+    ]
+   },
+   "plane": {
+    "mesh": "signplane_obs-manual-business_damassa_639aa1e471.akm",
+    "pos": [
+     623.965,
+     302.121,
+     317.444
+    ],
+    "normal": [
+     0.6089,
+     0.7933
+    ],
+    "width_m": 1.559,
+    "height_m": 0.75,
+    "cells": [
+     12,
+     5
+    ],
+    "moved_from_sprite_m": -0.94,
+    "wall_basis": "terrain wall foot of feature:building_footprint:way/225563758"
+   }
+  }
+ ],
+ "skipped": [],
+ "provenance": {
+  "image": "capture-review crop (observation_module_mapping.jsonl); brand fronts from place_front_logo_sources.v1.json; operator facade captures (cells as authored) from operator_facade_captures.v1.json",
+  "position": "brand: place_front_instances anchor + outward normal, fascia band z; custom: lower_custom_instances transform + outward normal",
+  "density": {
+   "cols_per_world_unit": 1.5,
+   "z_per_row": 12.3168,
+   "source": "engine/render/render_sprite_blit.cpp ds, dz_dy"
+  },
+  "encoding": "CP437 half-block 223, fg upper / bg lower, 6-level cube"
+ }
+}

@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branch Viewer - Asciicker Asset Pipeline</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="themes/sacred.css">
+  <style>
+    .branch-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .branch-header {
+      background: var(--bg, #1a1a2e);
+      padding: 16px 20px;
+      border-radius: var(--radius, 8px);
+      margin-bottom: 12px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .branch-title {
+      color: var(--fg-strong, #eee);
+      margin: 0;
+      font-size: 20px;
+    }
+    .branch-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .branch-controls label {
+      color: var(--fg-muted, #888);
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .branch-controls button {
+      border: none;
+      padding: 6px 14px;
+      border-radius: var(--radius, 4px);
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .branch-controls button:hover { opacity: 0.9; }
+    .btn-refresh { background: var(--accent-secondary, #7c83ff); color: var(--fg-on-accent, #fff); }
+    .btn-download-all { background: var(--success, #27ae60); color: var(--fg-on-accent, #fff); }
+
+    /* Explanation panel */
+    .branch-explainer {
+      background: var(--bg-surface, #111827);
+      border: 1px solid var(--border-subtle, #1f2937);
+      border-radius: var(--radius, 8px);
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      color: var(--fg-muted, #9ca3af);
+      line-height: 1.5;
+    }
+    .branch-explainer summary {
+      cursor: pointer;
+      color: var(--fg-strong, #d1d5db);
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .branch-explainer summary:hover { color: var(--fg-strong, #fff); }
+    .track-legend {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+      margin-top: 10px;
+    }
+    .track-legend dt {
+      color: var(--accent-secondary, #7c83ff);
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .track-legend dd {
+      margin: 0 0 4px 0;
+      font-size: 12px;
+      color: var(--fg-dim, #6b7280);
+    }
+
+    .branch-tree {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding: 16px 0;
+    }
+    .tree-stage {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 240px;
+    }
+    .tree-stage-label {
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: var(--radius, 4px);
+      text-align: center;
+    }
+    .stage-upload { background: var(--stage-upload, #444); color: var(--fg, #ccc); }
+    .stage-extract { background: var(--stage-extract, #e94560); color: var(--fg-on-accent, #fff); }
+    .stage-generate { background: var(--stage-generate, #f39c12); color: var(--fg-on-accent, #fff); }
+    .stage-slice { background: var(--stage-slice, #16a085); color: var(--fg-on-accent, #fff); }
+    .stage-process { background: var(--stage-process, #2980b9); color: var(--fg-on-accent, #fff); }
+    .stage-assemble { background: var(--stage-assemble, #8e44ad); color: var(--fg-on-accent, #fff); }
+    .branch-card {
+      background: var(--bg-panel, #16213e);
+      border: 2px solid var(--bg-input, #0f3460);
+      border-radius: var(--radius, 8px);
+      padding: 12px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .branch-card:hover { border-color: var(--accent-secondary, #7c83ff); }
+    .branch-card.promoted { border-color: var(--stage-assemble, #8e44ad); box-shadow: 0 0 8px rgba(142,68,173,0.3); }
+    .branch-card.pruned { opacity: 0.5; }
+    .branch-card.selected { border-color: var(--accent-secondary, #7c83ff); box-shadow: 0 0 10px rgba(124,131,255,0.4); }
+    .card-thumb {
+      width: 100%;
+      height: 120px;
+      background: var(--bg-deep, #0a0a1a);
+      border-radius: var(--radius, 4px);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .card-thumb img {
+      max-width: 100%;
+      max-height: 120px;
+      image-rendering: pixelated;
+    }
+    .card-thumb .no-thumb {
+      color: var(--fg-dim, #555);
+      font-size: 11px;
+    }
+    .card-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .card-track {
+      color: var(--fg-strong, #fff);
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .card-score {
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: var(--radius, 8px);
+      font-weight: 600;
+    }
+    .score-high { background: var(--score-high, #27ae60); color: var(--fg-on-accent, #fff); }
+    .score-mid { background: var(--score-mid, #f39c12); color: var(--fg-on-accent, #fff); }
+    .score-low { background: var(--score-low, #c0392b); color: var(--fg-on-accent, #fff); }
+    .card-status {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .status-active { color: var(--success, #27ae60); }
+    .status-pruned { color: var(--error, #c0392b); }
+    .status-promoted { color: var(--stage-assemble, #8e44ad); }
+    .card-track-desc {
+      font-size: 11px;
+      color: var(--fg-dim, #6b7280);
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+    .lineage-chip {
+      display: inline-block;
+      font-size: 10px;
+      color: var(--fg-muted, #9ca3af);
+      background: var(--bg-elevated, #1f2937);
+      padding: 1px 6px;
+      border-radius: var(--radius, 3px);
+      margin-bottom: 4px;
+    }
+    .run-math-summary {
+      background: var(--bg-surface, #111827);
+      border: 1px solid var(--border-subtle, #1f2937);
+      border-radius: var(--radius, 6px);
+      padding: 10px 16px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: var(--fg-strong, #d1d5db);
+    }
+    .run-math-summary .stage-count {
+      color: var(--accent-secondary, #7c83ff);
+      font-weight: 600;
+    }
+    .run-math-summary .arrow {
+      color: var(--fg-dim, #4b5563);
+      margin: 0 4px;
+    }
+    .card-details {
+      font-size: 11px;
+      color: var(--fg-dim, #777);
+      margin-bottom: 8px;
+    }
+    .card-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .card-actions button {
+      font-size: 11px;
+      padding: 3px 8px;
+      border: 1px solid var(--border, #333);
+      border-radius: var(--radius, 3px);
+      cursor: pointer;
+      background: none;
+      color: var(--fg-muted, #aaa);
+    }
+    .card-actions button:hover { background: var(--border, #333); color: var(--fg-strong, #fff); }
+    .card-actions button.promote-btn { border-color: var(--stage-assemble, #8e44ad); color: var(--stage-assemble, #8e44ad); }
+    .card-actions button.promote-btn:hover { background: var(--stage-assemble, #8e44ad); color: var(--fg-on-accent, #fff); }
+    .card-actions button.prune-btn { border-color: var(--error, #c0392b); color: var(--error, #c0392b); }
+    .card-actions button.prune-btn:hover { background: var(--error, #c0392b); color: var(--fg-on-accent, #fff); }
+    .card-actions button.download-btn { border-color: var(--success, #27ae60); color: var(--success, #27ae60); }
+    .card-actions button.download-btn:hover { background: var(--success, #27ae60); color: var(--fg-on-accent, #fff); }
+    .card-actions button.workbench-btn { border-color: var(--stage-process, #2980b9); color: var(--stage-process, #2980b9); }
+    .card-actions button.workbench-btn:hover { background: var(--stage-process, #2980b9); color: var(--fg-on-accent, #fff); }
+    .branch-status-bar {
+      margin-top: 12px;
+      padding: 8px 16px;
+      background: var(--bg, #1a1a2e);
+      border-radius: var(--radius, 4px);
+      font-size: 12px;
+      color: var(--fg-muted, #888);
+    }
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--fg-dim, #666);
+    }
+    .empty-state p { margin: 8px 0; }
+  </style>
+</head>
+<body>
+<script>
+(function(){var p=new URLSearchParams(location.search);
+var t=p.get('theme')||localStorage.getItem('asciicker-theme')||'sacred';
+document.body.classList.add('theme-'+t);
+localStorage.setItem('asciicker-theme',t);})();
+</script>
+  <div class="branch-container">
+    <div class="branch-header">
+      <div class="header-top">
+        <h1 class="branch-title">Branch Viewer</h1>
+        <div class="branch-controls">
+          <label>
+            <input type="checkbox" id="showPruned" />
+            Show pruned
+          </label>
+          <button id="refreshBtn" class="btn-refresh">Refresh</button>
+          <button id="downloadAllBtn" class="btn-download-all">Download All</button>
+        </div>
+      </div>
+    </div>
+
+    <details class="branch-explainer" open>
+      <summary>How the 4-Track Pipeline Works</summary>
+      <p>
+        The pipeline ran your image through <strong>multiple detection and processing strategies in parallel</strong>.
+        Each column below is a pipeline stage. Each card is one branch &mdash; a different result from a different strategy.
+        Compare the thumbnails, then click <strong>Use this result</strong> on the one you like best, or <strong>Download</strong> any artifact directly.
+      </p>
+      <p>
+        <strong>Download All</strong> grabs every branch output as a ZIP so you can compare them side-by-side in your own tools.
+      </p>
+      <dl class="track-legend">
+        <dt>pp_fft</dt>
+        <dd>Grid detected via FFT (frequency analysis) &mdash; best for regular, uniform grids</dd>
+        <dt>pp_gradient</dt>
+        <dd>Grid detected via gradient edges &mdash; best for hand-drawn or irregular grids</dd>
+        <dt>extractor_flood</dt>
+        <dd>Sprites extracted via flood-fill segmentation &mdash; finds connected color regions</dd>
+        <dt>extractor_bbox</dt>
+        <dd>Sprites extracted via bounding-box detection &mdash; finds rectangular sprite bounds</dd>
+        <dt>standard</dt>
+        <dd>Standard pixel-to-cell conversion &mdash; balanced quality/speed</dd>
+        <dt>quality</dt>
+        <dd>Subcell dithering with error diffusion &mdash; highest fidelity, slower</dd>
+        <dt>literal</dt>
+        <dd>1:1 pixel-to-cell mapping &mdash; only works when source is already 1px per cell</dd>
+      </dl>
+    </details>
+
+    <div style="display:flex;gap:16px;">
+      <div style="flex:1;min-width:0;">
+        <div id="branchTree" class="branch-tree"></div>
+      </div>
+      <div id="viewerSidebar" style="width:min(48vw,720px);min-height:520px;display:none;flex-shrink:0;">
+        <div style="background:var(--bg,#1a1a2e);border-radius:var(--radius,8px);padding:12px;height:100%;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <span style="color:var(--fg,#ccc);font-size:13px;font-weight:600;">Preview</span>
+            <button id="closeViewer" style="border:none;background:none;color:var(--fg-dim,#666);cursor:pointer;font-size:16px;">&times;</button>
+          </div>
+          <div id="viewerPanelMount" style="height:min(72vh,760px);"></div>
+        </div>
+      </div>
+    </div>
+    <div id="statusBar" class="branch-status-bar"></div>
+  </div>
+
+  <script src="sprite_viewer/frame_sequence.js"></script>
+  <script src="sprite_viewer_panel.js"></script>
+
+  <script>
+    (function() {
+      "use strict";
+
+      var API_BASE = window.ASSET_API_BASE || "/api";
+      var jobId = new URLSearchParams(window.location.search).get("job_id") || "";
+      var showPruned = false;
+      var treeData = null;
+
+      var STAGE_ORDER = ["upload", "extract", "generate", "slice", "process", "assemble"];
+
+      var STAGE_DESCRIPTIONS = {
+        upload:   "Original input image",
+        extract:  "Sprite detection / grid analysis",
+        generate: "Frame generation from source",
+        slice:    "Sheet sliced into individual frames",
+        process:  "Pixel-to-cell conversion (CP437)",
+        assemble: "Final .xp sprite file"
+      };
+
+      var TRACK_DESCRIPTIONS = {
+        upload:           "Source image",
+        pp_fft:           "FFT grid detection",
+        pp_gradient:      "Gradient grid detection",
+        extractor_flood:  "Flood-fill extraction",
+        extractor_bbox:   "Bounding-box extraction",
+        standard:         "Standard processor",
+        quality:          "Subcell dithering",
+        literal:          "1:1 pixel mapping"
+      };
+
+      var WHY_TEXT = {
+        pp_fft:           "Best for sprites with uniform pixel grids (detected via frequency analysis)",
+        pp_gradient:      "Best for sprites with clear edge boundaries between cells",
+        extractor_flood:  "Extracted individual sprites by flood-filling connected regions",
+        extractor_bbox:   "Extracted sprites by bounding box around contiguous pixel groups",
+        standard:         "Standard 12px glyph matching (good general-purpose quality)",
+        quality:          "Subcell dithering with perceptual color (best visual quality, slower)",
+        literal:          "1:1 pixel-to-cell mapping (preserves exact pixel art, requires 1px cells)"
+      };
+
+      var SCORE_TOOLTIPS = {
+        pp_fft:           "FFT peak strength for grid regularity",
+        pp_gradient:      "Gradient edge strength at detected cell boundaries",
+        extractor_flood:  "Sprite count heuristic (more sprites = higher score, capped at 10)",
+        extractor_bbox:   "Bounding-box count heuristic (more sprites = higher score, capped at 10)",
+        standard:         "Fixed heuristic score for standard glyph matching",
+        quality:          "Fixed heuristic score for subcell dithering quality",
+        literal:          "Fixed heuristic score for 1:1 pixel-to-cell mapping",
+        upload:           "Source image (always 100%)"
+      };
+
+      function fetchBranches() {
+        if (!jobId) {
+          renderEmpty("No job_id specified. Use ?job_id=... in the URL.");
+          return;
+        }
+        updateStatus("Loading branches...");
+        fetch(API_BASE + "/branches/" + encodeURIComponent(jobId))
+          .then(function(r) {
+            if (r.status === 404) throw new Error("No branch manifest for this job. Did the pipeline run with enable_branch_loop enabled?");
+            return r.json();
+          })
+          .then(function(data) {
+            treeData = data;
+            renderTree(data.branch_tree);
+            var nodes = data.branch_tree.nodes || [];
+            var active = nodes.filter(function(n) { return n.status !== "pruned"; }).length;
+            var pruned = nodes.filter(function(n) { return n.status === "pruned"; }).length;
+            updateStatus(
+              "Job: " + data.job_id.substring(0, 8) + "... | " +
+              active + " active, " + pruned + " pruned | " +
+              nodes.length + " total branches"
+            );
+          })
+          .catch(function(err) {
+            renderEmpty(err.message || "Failed to load branches.");
+            updateStatus("Error: " + err.message);
+          });
+      }
+
+      // Node lookup map for parent resolution (populated in renderTree)
+      var _nodeMap = {};
+
+      function renderRunMathSummary(nodes) {
+        var existing = document.getElementById("runMathSummary");
+        if (existing) existing.remove();
+
+        // Check if branch loop is enabled (more than 1 non-upload node)
+        var nonUpload = nodes.filter(function(n) { return n.stage !== "upload"; });
+        if (nonUpload.length === 0) return;
+
+        var div = document.createElement("div");
+        div.id = "runMathSummary";
+        div.className = "run-math-summary";
+
+        // Count nodes per stage (excluding pruned unless showing)
+        var visible = showPruned ? nodes : nodes.filter(function(n) { return n.status !== "pruned"; });
+        var counts = {};
+        STAGE_ORDER.forEach(function(s) { counts[s] = 0; });
+        visible.forEach(function(n) {
+          var s = n.stage || "upload";
+          counts[s] = (counts[s] || 0) + 1;
+        });
+
+        if (nonUpload.length <= 1) {
+          div.textContent = "1 branch (linear pipeline, no branching)";
+        } else {
+          // Detect auto-mode forks (process nodes with same parent but different track_id)
+          var processNodes = visible.filter(function(n) { return n.stage === "process"; });
+          var autoForks = {};
+          processNodes.forEach(function(n) {
+            if (n.parent_id) {
+              if (!autoForks[n.parent_id]) autoForks[n.parent_id] = [];
+              autoForks[n.parent_id].push(n.track_id);
+            }
+          });
+          var hasAutoFork = Object.keys(autoForks).some(function(pid) {
+            return autoForks[pid].length > 1;
+          });
+
+          var parts = [];
+          var stagesWithNodes = STAGE_ORDER.filter(function(s) { return counts[s] > 0; });
+          stagesWithNodes.forEach(function(s, idx) {
+            var label = '<span class="stage-count">' + counts[s] + " " + s + "</span>";
+            if (s === "process" && hasAutoFork) {
+              // Describe auto fork breakdown
+              var stdCount = processNodes.filter(function(n) { return n.track_id.indexOf("standard") !== -1; }).length;
+              var qualCount = processNodes.filter(function(n) { return n.track_id.indexOf("quality") !== -1; }).length;
+              if (stdCount > 0 && qualCount > 0) {
+                label += " (auto: " + stdCount + " standard + " + qualCount + " quality)";
+              }
+            }
+            parts.push(label);
+          });
+          div.innerHTML = parts.join('<span class="arrow">\u2192</span>');
+        }
+
+        // Insert before branch tree
+        var container = document.getElementById("branchTree");
+        container.parentNode.insertBefore(div, container);
+      }
+
+      function renderTree(tree) {
+        var container = document.getElementById("branchTree");
+        container.innerHTML = "";
+        var nodes = tree.nodes || [];
+
+        if (nodes.length === 0) {
+          renderEmpty("No branches in this job yet.");
+          return;
+        }
+
+        // Build node lookup map for parent resolution
+        _nodeMap = {};
+        nodes.forEach(function(n) { _nodeMap[n.id] = n; });
+
+        // Render run math summary above the tree
+        renderRunMathSummary(nodes);
+
+        // Group nodes by stage
+        var byStage = {};
+        STAGE_ORDER.forEach(function(s) { byStage[s] = []; });
+
+        nodes.forEach(function(node) {
+          var stage = node.stage || "upload";
+          if (!byStage[stage]) byStage[stage] = [];
+          if (!showPruned && node.status === "pruned") return;
+          byStage[stage].push(node);
+        });
+
+        STAGE_ORDER.forEach(function(stage) {
+          var stageNodes = byStage[stage];
+          if (stageNodes.length === 0) return;
+
+          var col = document.createElement("div");
+          col.className = "tree-stage";
+
+          var label = document.createElement("div");
+          label.className = "tree-stage-label stage-" + stage;
+          label.textContent = stage + " (" + stageNodes.length + ")";
+          label.title = STAGE_DESCRIPTIONS[stage] || stage;
+          col.appendChild(label);
+
+          stageNodes.forEach(function(node) {
+            col.appendChild(renderCard(node));
+          });
+
+          container.appendChild(col);
+        });
+      }
+
+      function renderCard(node) {
+        var card = document.createElement("div");
+        card.className = "branch-card";
+        if (node.status === "promoted") card.className += " promoted";
+        if (node.status === "pruned") card.className += " pruned";
+
+        // Thumbnail — always attempt lazy generation via endpoint
+        var thumbDiv = document.createElement("div");
+        thumbDiv.className = "card-thumb";
+        var img = document.createElement("img");
+        img.src = API_BASE + "/branches/" + encodeURIComponent(jobId) + "/" + encodeURIComponent(node.id) + "/thumbnail";
+        img.alt = node.track_id;
+        img.onerror = function() {
+          this.style.display = "none";
+          var icon = document.createElement("span");
+          icon.className = "no-thumb";
+          icon.textContent = "\u25A1";  // hollow square placeholder
+          thumbDiv.appendChild(icon);
+        };
+        thumbDiv.appendChild(img);
+        card.appendChild(thumbDiv);
+
+        // Info row: track_id + score
+        var info = document.createElement("div");
+        info.className = "card-info";
+        var track = document.createElement("span");
+        track.className = "card-track";
+        track.textContent = node.track_id;
+        var score = document.createElement("span");
+        var scoreVal = parseFloat(node.quality_score || 0);
+        score.className = "card-score " + (scoreVal >= 0.8 ? "score-high" : scoreVal >= 0.5 ? "score-mid" : "score-low");
+        var scoreLabel = (node.score_type === "confidence") ? "Confidence" : "Heuristic";
+        score.textContent = scoreLabel + ": " + (scoreVal * 100).toFixed(0) + "%";
+        score.title = SCORE_TOOLTIPS[node.track_id] || ("Score: " + (scoreVal * 100).toFixed(0) + "%");
+        info.appendChild(track);
+        info.appendChild(score);
+        card.appendChild(info);
+
+        // Track description
+        var trackDesc = document.createElement("div");
+        trackDesc.className = "card-track-desc";
+        trackDesc.textContent = TRACK_DESCRIPTIONS[node.track_id] || node.artifact_kind;
+        card.appendChild(trackDesc);
+
+        // "Why this branch" one-liner
+        var baseTrack = node.track_id.replace(/_standard$/, "").replace(/_quality$/, "");
+        var whyKey = WHY_TEXT[baseTrack] ? baseTrack : node.track_id;
+        var whyMsg = WHY_TEXT[whyKey];
+        if (whyMsg) {
+          var whyP = document.createElement("p");
+          whyP.className = "card-track-desc";
+          whyP.style.color = "#6b7280"; /* TODO(THEME) */
+          whyP.style.fontSize = "10px";
+          whyP.style.margin = "0 0 4px 0";
+          whyP.textContent = whyMsg;
+          card.appendChild(whyP);
+        }
+
+        // Lineage chip
+        var lineage = document.createElement("span");
+        lineage.className = "lineage-chip";
+        if (node.parent_id) {
+          var parentTrack = _nodeMap[node.parent_id] ? _nodeMap[node.parent_id].track_id : node.parent_id;
+          lineage.textContent = "\u2192 Derived from: " + parentTrack;
+        } else {
+          lineage.textContent = "Source: upload";
+        }
+        card.appendChild(lineage);
+
+        // Status
+        var statusDiv = document.createElement("div");
+        statusDiv.className = "card-status status-" + node.status;
+        statusDiv.textContent = node.status;
+        card.appendChild(statusDiv);
+
+        // Details
+        var details = document.createElement("div");
+        details.className = "card-details";
+        var parts = [node.artifact_kind];
+        if (node.source_cell_px) parts.push(node.source_cell_px + "px grid");
+        if (node.child_count > 0) parts.push(node.child_count + " sprites");
+        details.textContent = parts.join(" | ");
+        card.appendChild(details);
+
+        // Actions
+        var actions = document.createElement("div");
+        actions.className = "card-actions";
+
+        // Download button (always present)
+        var dlBtn = document.createElement("button");
+        dlBtn.className = "download-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.addEventListener("click", function(e) {
+          e.stopPropagation();
+          window.location.href = API_BASE + "/branches/" + encodeURIComponent(jobId) + "/" + encodeURIComponent(node.id) + "/artifact";
+        });
+        actions.appendChild(dlBtn);
+
+        if (node.status !== "promoted") {
+          var promoteBtn = document.createElement("button");
+          promoteBtn.className = "promote-btn";
+          promoteBtn.textContent = "Use this result";
+          promoteBtn.addEventListener("click", function(e) {
+            e.stopPropagation();
+            promoteBranch(node.id);
+          });
+          actions.appendChild(promoteBtn);
+        }
+
+        if (node.status === "active") {
+          var pruneBtn = document.createElement("button");
+          pruneBtn.className = "prune-btn";
+          pruneBtn.textContent = "Prune";
+          pruneBtn.addEventListener("click", function(e) {
+            e.stopPropagation();
+            pruneBranch(node.id);
+          });
+          actions.appendChild(pruneBtn);
+        }
+
+        // "Edit in Workbench" button (non-pruned branches)
+        if (node.status !== "pruned") {
+          var wbBtn = document.createElement("button");
+          wbBtn.className = "workbench-btn";
+          wbBtn.textContent = "Edit in Workbench";
+          wbBtn.addEventListener("click", function(e) {
+            e.stopPropagation();
+            openInWorkbench(node);
+          });
+          actions.appendChild(wbBtn);
+        }
+
+        card.appendChild(actions);
+
+        // Click card to open viewer sidebar
+        card.addEventListener("click", function() {
+          openViewerForNode(node, card);
+        });
+
+        return card;
+      }
+
+      function promoteBranch(branchId) {
+        updateStatus("Promoting " + branchId + "...");
+        fetch(API_BASE + "/branches/" + encodeURIComponent(jobId) + "/promote/" + encodeURIComponent(branchId), { method: "POST" })
+          .then(function(r) { return r.json(); })
+          .then(function() { fetchBranches(); })
+          .catch(function(err) { updateStatus("Promote failed: " + err.message); });
+      }
+
+      function pruneBranch(branchId) {
+        updateStatus("Pruning " + branchId + "...");
+        fetch(API_BASE + "/branches/" + encodeURIComponent(jobId) + "/prune/" + encodeURIComponent(branchId), { method: "POST" })
+          .then(function(r) { return r.json(); })
+          .then(function() { fetchBranches(); })
+          .catch(function(err) { updateStatus("Prune failed: " + err.message); });
+      }
+
+      function downloadAll() {
+        if (!jobId) return;
+        var url = API_BASE + "/branches/" + encodeURIComponent(jobId) + "/download-all";
+        if (showPruned) url += "?include_pruned=true";
+        window.location.href = url;
+      }
+
+      function getRootSettingsSnapshot() {
+        if (!treeData || !treeData.branch_tree) return null;
+        var nodes = treeData.branch_tree.nodes || [];
+        for (var i = 0; i < nodes.length; i++) {
+          if (!nodes[i].parent_id) return nodes[i].settings_snapshot || null;
+        }
+        return null;
+      }
+
+      function openInWorkbench(node) {
+        var params = [];
+        params.push("job_id=" + encodeURIComponent(jobId));
+
+        // Image path from manifest
+        if (treeData && treeData.input_path) {
+          params.push("image_path=" + encodeURIComponent(treeData.input_path));
+        }
+
+        // Try to extract angles/frames from root node's settings snapshot
+        var rootSnap = getRootSettingsSnapshot();
+        if (rootSnap) {
+          if (rootSnap.angles) params.push("angles=" + encodeURIComponent(rootSnap.angles));
+          if (rootSnap.frames) params.push("frames=" + encodeURIComponent(rootSnap.frames));
+        }
+
+        // Name from input filename
+        if (treeData && treeData.input_path) {
+          var pathParts = treeData.input_path.replace(/\\/g, "/").split("/");
+          var filename = pathParts[pathParts.length - 1] || "";
+          var name = filename.replace(/\.[^.]+$/, "");
+          if (name) params.push("name=" + encodeURIComponent(name));
+        }
+
+        window.location.href = "/workbench?" + params.join("&");
+      }
+
+      function renderEmpty(msg) {
+        var container = document.getElementById("branchTree");
+        container.innerHTML = '<div class="empty-state"><p>' + msg + '</p></div>';
+      }
+
+      function updateStatus(msg) {
+        var bar = document.getElementById("statusBar");
+        if (bar) bar.textContent = msg;
+      }
+
+      // --- Viewer sidebar ---
+      var viewerPanel = null;
+      var selectedCardEl = null;
+
+      function findAssembledChild(node) {
+        if (!treeData || !treeData.branch_tree || !Array.isArray(treeData.branch_tree.nodes)) {
+          return null;
+        }
+        var children = treeData.branch_tree.nodes.filter(function(n) {
+          return n.parent_id === node.id && n.artifact_kind === "xp_file" && n.status !== "pruned";
+        });
+        if (children.length === 0) return null;
+        children.sort(function(a, b) { return (b.quality_score || 0) - (a.quality_score || 0); });
+        return children[0];
+      }
+
+      function resolvePreviewNode(node) {
+        if (node.artifact_kind === "xp_file" && node.artifact_path) {
+          return node;
+        }
+        var assembled = findAssembledChild(node);
+        return assembled || node;
+      }
+
+      function openViewerForNode(node, cardEl) {
+        var sidebar = document.getElementById("viewerSidebar");
+        var mount = document.getElementById("viewerPanelMount");
+        sidebar.style.display = "block";
+
+        // Highlight selected card
+        if (selectedCardEl) selectedCardEl.classList.remove("selected");
+        cardEl.classList.add("selected");
+        selectedCardEl = cardEl;
+
+        // Create or reuse viewer panel
+        if (!viewerPanel) {
+          viewerPanel = createViewerPanel(mount, { mode: "preview", fitOnLoad: true });
+        }
+
+        var previewNode = resolvePreviewNode(node);
+
+        // Load artifact based on type
+        var artifactUrl = API_BASE + "/branches/" + encodeURIComponent(jobId) + "/" + encodeURIComponent(previewNode.id) + "/artifact";
+        var thumbUrl = API_BASE + "/branches/" + encodeURIComponent(jobId) + "/" + encodeURIComponent(previewNode.id) + "/thumbnail";
+
+        if (previewNode.artifact_kind === "xp_file" && previewNode.artifact_path) {
+          // XP files: load with animation support via server-side path
+          viewerPanel.loadXPFromPath(previewNode.artifact_path);
+        } else if (previewNode.artifact_kind === "image" || previewNode.artifact_kind === "sprite_list") {
+          viewerPanel.loadImage(artifactUrl);
+        } else {
+          // For grid_data and unknown types, use thumbnail
+          viewerPanel.loadImage(thumbUrl);
+        }
+      }
+
+      document.getElementById("closeViewer").addEventListener("click", function() {
+        document.getElementById("viewerSidebar").style.display = "none";
+        if (selectedCardEl) selectedCardEl.classList.remove("selected");
+        selectedCardEl = null;
+      });
+
+      // Wire controls
+      document.getElementById("showPruned").addEventListener("change", function() {
+        showPruned = this.checked;
+        if (treeData) renderTree(treeData.branch_tree);
+      });
+
+      document.getElementById("refreshBtn").addEventListener("click", fetchBranches);
+      document.getElementById("downloadAllBtn").addEventListener("click", downloadAll);
+
+      // Initial load
+      fetchBranches();
+    })();
+  </script>
+</body>
+</html>

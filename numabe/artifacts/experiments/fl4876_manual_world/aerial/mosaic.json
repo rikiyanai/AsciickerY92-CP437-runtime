@@ -1,0 +1,9 @@
+{
+ "source": "\u56fd\u571f\u5730\u7406\u9662 \u30b7\u30fc\u30e0\u30ec\u30b9\u7a7a\u4e2d\u5199\u771f (seamlessphoto), CC BY 4.0",
+ "zoom": 18,
+ "tile_x0": 232778,
+ "tile_y0": 103310,
+ "tiles_x": 4,
+ "tiles_y": 6,
+ "pixel_of_lonlat": "px = (tile_x(lon) - tile_x0) * 256, py = (tile_y(lat) - tile_y0) * 256 (web mercator)"
+}

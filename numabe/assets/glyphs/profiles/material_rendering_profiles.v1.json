@@ -1,0 +1,2042 @@
+{
+	"generated_by": "scripts/seed_material_rendering_profiles.py",
+	"note": "DURABLE Law-1 owner of PROFILE colors/shade. RQ-154 broad live profile set: terrain:1 GRASS is the frozen live thin slice; other non-WATER materials seeded from their own renderable (<=671) v2 candidates. >671 candidates deferred to RQ-153c.",
+	"profiles": [{
+			"profile_state": "live",
+			"colors": {
+				"bg_palette": [],
+				"fallback_bytes": {
+					"ramp:fall_lower": 44,
+					"ramp:flat_low": 44,
+					"ramp:high": 44,
+					"ramp:rise": 44
+				},
+				"fg_palette": [],
+				"per_row": [{
+						"fg_strength": 210,
+						"bg_strength": 150,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 210,
+						"bg_strength": 150,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 210,
+						"bg_strength": 150,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 210,
+						"bg_strength": 150,
+						"shade_contrast": 6
+					}],
+				"shade_band_thresholds": [3, 7, 11, 12],
+				"elevation_rows": {
+					"fall_lower": {
+						"fg": [223, 142, 140],
+						"bg": [105, 24, 22]
+					},
+					"high": {
+						"fg": [255, 184, 180],
+						"bg": [255, 66, 62]
+					},
+					"rise": {
+						"fg": [255, 159, 156],
+						"bg": [180, 41, 38]
+					},
+					"flat_low": {
+						"fg": [255, 168, 165],
+						"bg": [220, 50, 47]
+					}
+				}
+			},
+			"display_name": "Grass Tops",
+			"glyph_pools": {
+				"glyph_ids": [512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639]
+			},
+			"idempotency_marker": "fl4260-rq147-grass-tops-0001",
+			"material_id": "terrain:1",
+			"no_match_policy": {
+				"structural_degenerate_declines": true,
+				"structural_decline_fallback": "tonal",
+				"tonal_constant_operand_legal": true,
+				"max_error_q": {
+					"structural": 700000,
+					"tonal": 700000
+				}
+			},
+			"preset_seed_id": "grass_tops",
+			"review_receipt_id": null,
+			"role_buckets": {
+				"accent": [{
+						"reviewed": false,
+						"candidates": [],
+						"frequency": 0,
+						"reject": "accent lane disabled in first slice",
+						"seed": 0
+					}],
+				"density": [{
+						"reviewed": false,
+						"bucket": "D0",
+						"fallback": 46,
+						"reject": null,
+						"candidates": [512, 513, 514, 515, 528, 529, 530, 531, 544, 545, 546, 547, 560, 561, 562, 563]
+					}, {
+						"reviewed": false,
+						"bucket": "D1",
+						"fallback": 44,
+						"reject": null,
+						"candidates": [516, 517, 518, 519, 532, 533, 534, 535, 548, 549, 550, 551, 564, 565, 566, 567]
+					}, {
+						"reviewed": false,
+						"bucket": "D2",
+						"fallback": 58,
+						"reject": null,
+						"candidates": [520, 521, 522, 523, 536, 537, 538, 539, 552, 553, 554, 555, 568, 569, 570, 571]
+					}, {
+						"reviewed": false,
+						"bucket": "D3",
+						"fallback": 59,
+						"reject": null,
+						"candidates": [524, 525, 526, 527, 540, 541, 542, 543, 556, 557, 558, 559, 572, 573, 574, 575]
+					}],
+				"ramp": [{
+						"reviewed": false,
+						"elevation_row": "fall_lower",
+						"elv": 0,
+						"fallback": 46,
+						"reject": null,
+						"candidates": [512, 516, 520, 524, 528, 532, 536, 540, 544, 548, 552, 556, 560, 564, 568, 572]
+					}, {
+						"reviewed": false,
+						"elevation_row": "high",
+						"elv": 1,
+						"fallback": 44,
+						"reject": null,
+						"candidates": [513, 517, 521, 525, 529, 533, 537, 541, 545, 549, 553, 557, 561, 565, 569, 573]
+					}, {
+						"reviewed": false,
+						"elevation_row": "rise",
+						"elv": 2,
+						"fallback": 58,
+						"reject": null,
+						"candidates": [514, 518, 522, 526, 530, 534, 538, 542, 546, 550, 554, 558, 562, 566, 570, 574]
+					}, {
+						"reviewed": false,
+						"elevation_row": "flat_low",
+						"elv": 3,
+						"fallback": 59,
+						"reject": null,
+						"candidates": [515, 519, 523, 527, 531, 535, 539, 543, 547, 551, 555, 559, 563, 567, 571, 575]
+					}],
+				"edge": [{
+						"fact": "flat",
+						"reviewed": false,
+						"candidates": [556, 559, 560, 561, 562, 563, 600, 601, 604, 605, 612, 613]
+					}, {
+						"fact": "rise",
+						"reviewed": false,
+						"candidates": [556, 559, 560, 561, 562, 563, 571, 572, 573, 574, 579, 581, 600, 601, 604, 605]
+					}, {
+						"fact": "fall",
+						"reviewed": false,
+						"candidates": [556, 559, 560, 561, 562, 563, 571, 572, 573, 574, 579, 581, 600, 601, 604, 605]
+					}, {
+						"fact": "ridge",
+						"reviewed": false,
+						"candidates": [556, 559, 560, 561, 562, 563, 571, 572, 573, 574, 579, 581, 600, 601, 604, 605]
+					}, {
+						"fact": "valley",
+						"reviewed": false,
+						"candidates": [556, 559, 560, 561, 562, 563, 571, 572, 573, 574, 579, 581, 600, 601, 604, 605]
+					}, {
+						"fact": "wall",
+						"reviewed": false,
+						"candidates": [556, 559, 560, 561, 562, 563, 571, 572, 573, 574, 579, 581, 600, 601, 604, 605]
+					}, {
+						"fact": "overhang",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until source-fact proof exists"
+					}],
+				"direction": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": []
+					}],
+				"flow": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}],
+				"mesh_bundle": {
+					"role": "mesh_feature",
+					"route_key": "mesh_feature.bundle.v1",
+					"lane_id": 0,
+					"lane_name": "mesh_bundle",
+					"descriptor_version": "mesh_projected_feature.v1"
+				}
+			},
+			"runtime_profile_live": true,
+			"scoring": {
+				"detail_contrast": 50,
+				"tone_contrast": 50,
+				"density_bias": 0,
+				"role_weights": {
+					"curve": 1,
+					"diagonal": 1,
+					"horizontal": 1,
+					"vertical": 1,
+					"sparse": 1,
+					"dense": 1
+				}
+			},
+			"seed_provenance": "e0e199c7387b8de21f509432f1e9ab6c145ecade9261f4abec0db10fb8e6d52e",
+			"source_class": "terrain",
+			"source_table_hash": "e0e199c7387b8de21f509432f1e9ab6c145ecade9261f4abec0db10fb8e6d52e"
+		}, {
+			"profile_state": "live",
+			"colors": {
+				"bg_palette": [],
+				"fallback_bytes": {
+					"ramp:fall_lower": 44,
+					"ramp:flat_low": 44,
+					"ramp:high": 44,
+					"ramp:rise": 44
+				},
+				"fg_palette": [],
+				"per_row": [{
+						"fg_strength": 210,
+						"bg_strength": 150,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 210,
+						"bg_strength": 150,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 210,
+						"bg_strength": 150,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 210,
+						"bg_strength": 150,
+						"shade_contrast": 6
+					}],
+				"shade_band_thresholds": [3, 7, 11, 12],
+				"elevation_rows": {
+					"fall_lower": {
+						"fg": [234, 184, 198],
+						"bg": [116, 66, 80]
+					},
+					"high": {
+						"fg": [183, 111, 149],
+						"bg": [255, 183, 221]
+					},
+					"rise": {
+						"fg": [127, 41, 65],
+						"bg": [199, 113, 137]
+					},
+					"flat_low": {
+						"fg": [171, 67, 96],
+						"bg": [243, 139, 168]
+					}
+				}
+			},
+			"display_name": "Dirt",
+			"glyph_pools": {
+				"glyph_ids": [521, 523, 524, 525, 526, 532, 533, 534, 535, 539, 541, 546, 548, 549, 550, 551, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 568, 569, 570, 571, 572, 573, 574, 575, 576, 580, 583, 584, 585, 586, 587, 588, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 618, 619, 620, 621, 622, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 636, 637, 638, 639, 641, 643, 646, 648, 649, 650, 653, 656, 658, 659, 660, 662, 663, 666, 668, 669, 671, 32, 46, 58, 64, 79, 111]
+			},
+			"idempotency_marker": "fl4260-rq154-dirt-0001",
+			"material_id": "terrain:2",
+			"no_match_policy": {
+				"structural_degenerate_declines": true,
+				"structural_decline_fallback": "tonal",
+				"tonal_constant_operand_legal": true,
+				"max_error_q": {
+					"structural": 0,
+					"tonal": 0
+				}
+			},
+			"preset_seed_id": "dirt",
+			"review_receipt_id": null,
+			"role_buckets": {
+				"accent": [{
+						"reviewed": false,
+						"candidates": [],
+						"frequency": 0,
+						"reject": "accent lane disabled in first slice",
+						"seed": 0
+					}],
+				"density": [{
+						"reviewed": false,
+						"bucket": "D0",
+						"fallback": 46,
+						"reject": null,
+						"candidates": [524, 525, 669, 549, 550, 555, 568, 668, 523, 569, 548, 616, 570, 546, 624, 534]
+					}, {
+						"reviewed": false,
+						"bucket": "D1",
+						"fallback": 58,
+						"reject": null,
+						"candidates": [526, 648, 583, 666, 521, 618, 656, 628, 598, 556, 621, 558, 619, 629, 551, 620]
+					}, {
+						"reviewed": false,
+						"bucket": "D2",
+						"fallback": 111,
+						"reject": null,
+						"candidates": [650, 560, 585, 586, 587, 588, 599, 610, 557, 562, 561, 541, 584, 627, 663, 563]
+					}, {
+						"reviewed": false,
+						"bucket": "D3",
+						"fallback": 79,
+						"reject": null,
+						"candidates": [580, 613, 658, 614, 615, 671, 603, 612, 609, 659, 605, 604, 638, 662, 637, 660]
+					}],
+				"ramp": [{
+						"reviewed": false,
+						"elevation_row": "fall_lower",
+						"elv": 0,
+						"fallback": 46,
+						"reject": null,
+						"candidates": [524, 525, 669, 549, 550, 555, 568, 668, 523, 569, 548, 616, 570, 546, 624, 534]
+					}, {
+						"reviewed": false,
+						"elevation_row": "high",
+						"elv": 1,
+						"fallback": 58,
+						"reject": null,
+						"candidates": [526, 648, 583, 666, 521, 618, 656, 628, 598, 556, 621, 558, 619, 629, 551, 620]
+					}, {
+						"reviewed": false,
+						"elevation_row": "rise",
+						"elv": 2,
+						"fallback": 111,
+						"reject": null,
+						"candidates": [650, 560, 585, 586, 587, 588, 599, 610, 557, 562, 561, 541, 584, 627, 663, 563]
+					}, {
+						"reviewed": false,
+						"elevation_row": "flat_low",
+						"elv": 3,
+						"fallback": 79,
+						"reject": null,
+						"candidates": [580, 613, 658, 614, 615, 671, 603, 612, 609, 659, 605, 604, 638, 662, 637, 660]
+					}],
+				"edge": [{
+						"fact": "flat",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "rise",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "fall",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "ridge",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "valley",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "wall",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "overhang",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until source-fact proof exists"
+					}],
+				"direction": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": [541, 548, 558, 560, 561, 562, 563, 568, 569, 570, 583, 584, 585, 586, 587, 588],
+						"blocked": "not exposed in Material Look until direction source-fact proof exists"
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": [523, 535, 541, 583, 584, 586, 587, 588, 633, 636, 668],
+						"blocked": "not exposed in Material Look until direction source-fact proof exists"
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": [525, 624, 629, 633, 668],
+						"blocked": "not exposed in Material Look until direction source-fact proof exists"
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": [625, 629],
+						"blocked": "not exposed in Material Look until direction source-fact proof exists"
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": [526, 532, 625, 627, 629, 638, 641, 656, 659, 660],
+						"blocked": "not exposed in Material Look until direction source-fact proof exists"
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": [532, 602, 612, 622, 638, 656, 660],
+						"blocked": "not exposed in Material Look until direction source-fact proof exists"
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": [524, 551, 557, 558, 559, 560, 564, 571, 572, 573, 574, 575, 576, 601, 602, 603],
+						"blocked": "not exposed in Material Look until direction source-fact proof exists"
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": [549, 550, 551, 555, 557, 558, 560, 564, 568, 569, 599, 600, 601, 603, 605, 606],
+						"blocked": "not exposed in Material Look until direction source-fact proof exists"
+					}],
+				"flow": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}]
+			},
+			"runtime_profile_live": true,
+			"scoring": {
+				"detail_contrast": 50,
+				"tone_contrast": 50,
+				"density_bias": 0,
+				"role_weights": {
+					"curve": 1,
+					"diagonal": 1,
+					"horizontal": 1,
+					"vertical": 1,
+					"sparse": 1,
+					"dense": 1
+				}
+			},
+			"seed_provenance": "c8f7850f38d325596b176fdaabef995a89b05832b33415686495a6887ffe4b9f",
+			"source_class": "terrain",
+			"source_table_hash": "c8f7850f38d325596b176fdaabef995a89b05832b33415686495a6887ffe4b9f"
+		}, {
+			"profile_state": "live",
+			"colors": {
+				"bg_palette": [],
+				"elevation_rows": {
+					"fall_lower": {
+						"fg": [150, 150, 150],
+						"bg": [90, 90, 90]
+					},
+					"flat_low": {
+						"fg": [160, 160, 160],
+						"bg": [95, 95, 95]
+					},
+					"high": {
+						"fg": [190, 190, 190],
+						"bg": [120, 120, 120]
+					},
+					"rise": {
+						"fg": [175, 175, 175],
+						"bg": [105, 105, 105]
+					}
+				},
+				"fallback_bytes": {
+					"ramp:fall_lower": 44,
+					"ramp:flat_low": 44,
+					"ramp:high": 44,
+					"ramp:rise": 44
+				},
+				"fg_palette": [],
+				"per_row": [{
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}],
+				"shade_band_thresholds": [3, 7, 11, 12]
+			},
+			"display_name": "Rock",
+			"glyph_pools": {
+				"glyph_ids": [616, 623, 624, 625, 512, 617, 626, 627, 620, 622, 628, 629, 633, 634, 632, 628]
+			},
+			"idempotency_marker": "fl4260-rq154-rock-0001",
+			"material_id": "terrain:3",
+			"no_match_policy": {
+				"structural_degenerate_declines": true,
+				"structural_decline_fallback": "tonal",
+				"tonal_constant_operand_legal": true,
+				"max_error_q": {
+					"structural": 0,
+					"tonal": 0
+				}
+			},
+			"preset_seed_id": "rock",
+			"review_receipt_id": null,
+			"role_buckets": {
+				"accent": [{
+						"reviewed": false,
+						"candidates": [],
+						"frequency": 0,
+						"reject": "accent lane disabled in first slice",
+						"seed": 0
+					}],
+				"density": [{
+						"reviewed": false,
+						"bucket": "D0",
+						"candidates": [525, 549, 550, 555, 522, 568, 668, 523, 548, 645, 570, 624, 534, 635],
+						"fallback": 46,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D1",
+						"candidates": [636, 535, 633, 634, 532, 533, 625, 643, 527, 526, 648, 583, 666],
+						"fallback": 61,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D2",
+						"candidates": [521, 656, 598, 644, 629, 551, 641, 585, 586, 541, 584, 663, 658, 671],
+						"fallback": 35,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D3",
+						"candidates": [659, 638, 662, 637, 660, 639, 576, 646, 575, 573, 571, 572, 574],
+						"fallback": 37,
+						"reject": null
+					}],
+				"ramp": [{
+						"reviewed": false,
+						"candidates": [525, 549, 550, 555, 522, 568, 668, 523, 548, 645, 570, 624, 534, 635],
+						"elevation_row": "fall_lower",
+						"elv": 0,
+						"fallback": 46,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [636, 535, 633, 634, 532, 533, 625, 643, 527, 526, 648, 583, 666],
+						"elevation_row": "high",
+						"elv": 1,
+						"fallback": 61,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [521, 656, 598, 644, 629, 551, 641, 585, 586, 541, 584, 663, 658, 671],
+						"elevation_row": "rise",
+						"elv": 2,
+						"fallback": 35,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [659, 638, 662, 637, 660, 639, 576, 646, 575, 573, 571, 572, 574],
+						"elevation_row": "flat_low",
+						"elv": 3,
+						"fallback": 37,
+						"reject": null
+					}],
+				"edge": [{
+						"fact": "flat",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "rise",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "fall",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "ridge",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "valley",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "wall",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "overhang",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until source-fact proof exists"
+					}],
+				"direction": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": []
+					}],
+				"flow": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}],
+				"mesh_bundle": {
+					"role": "mesh_feature",
+					"route_key": "mesh_feature.bundle.v1",
+					"lane_id": 0,
+					"lane_name": "mesh_bundle",
+					"descriptor_version": "mesh_projected_feature.v1"
+				}
+			},
+			"runtime_profile_live": true,
+			"scoring": {
+				"density_bias": 0,
+				"detail_contrast": 0,
+				"role_weights": {
+				},
+				"tone_contrast": 0
+			},
+			"seed_provenance": "a7d7ac0d6e4c26950cbcb536f76f05100649b3c43a50d715b1f3e59f338da430",
+			"source_class": "terrain",
+			"source_table_hash": "a7d7ac0d6e4c26950cbcb536f76f05100649b3c43a50d715b1f3e59f338da430"
+		}, {
+			"profile_state": "live",
+			"colors": {
+				"bg_palette": [],
+				"fallback_bytes": {
+					"ramp:fall_lower": 44,
+					"ramp:flat_low": 44,
+					"ramp:high": 44,
+					"ramp:rise": 44
+				},
+				"fg_palette": [],
+				"per_row": [{
+						"fg_strength": 0,
+						"bg_strength": 0,
+						"shade_contrast": 0
+					}, {
+						"fg_strength": 0,
+						"bg_strength": 0,
+						"shade_contrast": 0
+					}, {
+						"fg_strength": 0,
+						"bg_strength": 0,
+						"shade_contrast": 0
+					}, {
+						"fg_strength": 132,
+						"bg_strength": 0,
+						"shade_contrast": 0
+					}],
+				"shade_band_thresholds": [0, 0, 0, 0],
+				"elevation_rows": {
+					"fall_lower": {
+						"fg": [0, 0, 0],
+						"bg": [0, 0, 0]
+					},
+					"high": {
+						"fg": [0, 0, 0],
+						"bg": [0, 0, 0]
+					},
+					"rise": {
+						"fg": [0, 0, 0],
+						"bg": [0, 0, 0]
+					},
+					"flat_low": {
+						"fg": [0, 0, 0],
+						"bg": [0, 0, 0]
+					}
+				}
+			},
+			"display_name": "Sand",
+			"glyph_pools": {
+				"glyph_ids": [544, 545, 542, 543, 626, 627, 628, 629, 512, 632, 568, 569, 520, 521, 546, 617]
+			},
+			"idempotency_marker": "fl4260-rq154-sand-0001",
+			"material_id": "terrain:4",
+			"no_match_policy": {
+				"structural_degenerate_declines": true,
+				"structural_decline_fallback": "tonal",
+				"tonal_constant_operand_legal": true,
+				"max_error_q": {
+					"structural": 0,
+					"tonal": 0
+				}
+			},
+			"preset_seed_id": "sand",
+			"review_receipt_id": null,
+			"role_buckets": {
+				"accent": [{
+						"reviewed": false,
+						"candidates": [],
+						"frequency": 0,
+						"reject": "accent lane disabled in first slice",
+						"seed": 0
+					}],
+				"density": [{
+						"reviewed": false,
+						"bucket": "D0",
+						"fallback": 46,
+						"reject": null,
+						"candidates": [544, 626, 512, 520]
+					}, {
+						"reviewed": false,
+						"bucket": "D1",
+						"fallback": 44,
+						"reject": null,
+						"candidates": [545, 627, 632, 521]
+					}, {
+						"reviewed": false,
+						"bucket": "D2",
+						"fallback": 58,
+						"reject": null,
+						"candidates": [542, 628, 568, 546]
+					}, {
+						"reviewed": false,
+						"bucket": "D3",
+						"fallback": 115,
+						"reject": null,
+						"candidates": [543, 629, 569, 617]
+					}],
+				"ramp": [{
+						"reviewed": false,
+						"elevation_row": "fall_lower",
+						"elv": 0,
+						"fallback": 46,
+						"reject": null,
+						"candidates": [544, 545, 542, 543]
+					}, {
+						"reviewed": false,
+						"elevation_row": "high",
+						"elv": 1,
+						"fallback": 44,
+						"reject": null,
+						"candidates": [626, 627, 628, 629]
+					}, {
+						"reviewed": false,
+						"elevation_row": "rise",
+						"elv": 2,
+						"fallback": 58,
+						"reject": null,
+						"candidates": [512, 632, 568, 569]
+					}, {
+						"reviewed": false,
+						"elevation_row": "flat_low",
+						"elv": 3,
+						"fallback": 115,
+						"reject": null,
+						"candidates": [520, 521, 546, 617]
+					}],
+				"edge": [{
+						"fact": "flat",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "rise",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "fall",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "ridge",
+						"reviewed": false,
+						"candidates": [627]
+					}, {
+						"fact": "valley",
+						"reviewed": false,
+						"candidates": [626, 627]
+					}, {
+						"fact": "wall",
+						"reviewed": false,
+						"candidates": [626, 627]
+					}, {
+						"fact": "overhang",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until source-fact proof exists"
+					}],
+				"direction": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": []
+					}],
+				"flow": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}],
+				"mesh_bundle": {
+					"role": "mesh_feature",
+					"route_key": "mesh_feature.bundle.v1",
+					"lane_id": 0,
+					"lane_name": "mesh_bundle",
+					"descriptor_version": "mesh_projected_feature.v1"
+				}
+			},
+			"runtime_profile_live": true,
+			"scoring": {
+				"detail_contrast": 77,
+				"tone_contrast": 100,
+				"density_bias": 48,
+				"role_weights": {
+					"curve": 1,
+					"diagonal": 1,
+					"horizontal": 1,
+					"vertical": 1,
+					"sparse": 1,
+					"dense": 1
+				}
+			},
+			"seed_provenance": "4633e83c22fb9fe4e4489517d2f8262409a4650ea10c0ec1319f03457946147d",
+			"source_class": "terrain",
+			"source_table_hash": "4633e83c22fb9fe4e4489517d2f8262409a4650ea10c0ec1319f03457946147d"
+		}, {
+			"profile_state": "live",
+			"colors": {
+				"bg_palette": [],
+				"elevation_rows": {
+					"fall_lower": {
+						"fg": [220, 225, 235],
+						"bg": [175, 185, 205]
+					},
+					"flat_low": {
+						"fg": [235, 240, 248],
+						"bg": [190, 200, 220]
+					},
+					"high": {
+						"fg": [255, 255, 255],
+						"bg": [230, 240, 255]
+					},
+					"rise": {
+						"fg": [245, 248, 255],
+						"bg": [210, 220, 240]
+					}
+				},
+				"fallback_bytes": {
+					"ramp:fall_lower": 44,
+					"ramp:flat_low": 44,
+					"ramp:high": 44,
+					"ramp:rise": 44
+				},
+				"fg_palette": [],
+				"per_row": [{
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}],
+				"shade_band_thresholds": [3, 7, 11, 12]
+			},
+			"display_name": "Snow",
+			"glyph_pools": {
+				"cp437": [32, 35, 42, 43, 46, 64],
+				"extended": [524, 525, 526, 532, 537, 538, 539, 540, 541, 546, 554, 556, 557, 558, 559, 560, 563, 564, 565, 566, 567, 568, 569, 570, 577, 578, 579, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 602, 607, 610, 617, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 632, 633, 636, 641, 643, 647, 648, 650, 653, 654, 656, 665, 668, 669]
+			},
+			"idempotency_marker": "fl4260-rq154-snow-0001",
+			"material_id": "terrain:5",
+			"no_match_policy": {
+				"structural_degenerate_declines": true,
+				"structural_decline_fallback": "tonal",
+				"tonal_constant_operand_legal": true,
+				"max_error_q": {
+					"structural": 0,
+					"tonal": 0
+				}
+			},
+			"preset_seed_id": "snow",
+			"review_receipt_id": null,
+			"role_buckets": {
+				"accent": [{
+						"reviewed": false,
+						"candidates": [],
+						"frequency": 0,
+						"reject": "accent lane disabled in first slice",
+						"seed": 0
+					}],
+				"density": [{
+						"reviewed": false,
+						"bucket": "D0",
+						"candidates": [554, 565, 524, 525, 669, 568, 668, 569, 570, 590, 546, 591, 592, 624, 564, 578, 589, 636, 633, 567],
+						"fallback": 46,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D1",
+						"candidates": [532, 566, 617, 623, 625, 643, 526, 648, 583, 656, 628, 598, 647, 665, 556, 593, 594, 621, 558],
+						"fallback": 42,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D2",
+						"candidates": [577, 597, 619, 654, 595, 596, 629, 537, 540, 581, 582, 620, 626, 630, 622, 653, 559, 579, 641],
+						"fallback": 43,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D3",
+						"candidates": [650, 560, 585, 586, 587, 588, 599, 610, 557, 538, 541, 584, 627, 563, 632, 600, 607, 602, 539],
+						"fallback": 35,
+						"reject": null
+					}],
+				"direction": [{
+						"reviewed": false,
+						"fact": "north",
+						"candidates": [541, 563, 565, 568, 569, 570, 578, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 597, 598, 599, 600],
+						"fallback": 44,
+						"lane": 0
+					}, {
+						"reviewed": false,
+						"fact": "north_east",
+						"candidates": [537, 540, 541, 581, 582, 583, 584, 586, 587, 588, 593, 595, 633, 636],
+						"fallback": 44,
+						"lane": 1
+					}, {
+						"reviewed": false,
+						"fact": "east",
+						"candidates": [525, 567, 593, 595, 624, 629, 633, 647, 654, 668],
+						"fallback": 44,
+						"lane": 2
+					}, {
+						"reviewed": false,
+						"fact": "south_east",
+						"candidates": [625, 629, 647],
+						"fallback": 44,
+						"lane": 3
+					}, {
+						"reviewed": false,
+						"fact": "south",
+						"candidates": [526, 532, 625, 627, 629, 641, 647, 656, 665],
+						"fallback": 44,
+						"lane": 4
+					}, {
+						"reviewed": false,
+						"fact": "south_west",
+						"candidates": [532, 602, 622, 656, 665],
+						"fallback": 44,
+						"lane": 5
+					}, {
+						"reviewed": false,
+						"fact": "west",
+						"candidates": [524, 558, 559, 560, 564, 566, 589, 592, 594, 596, 602, 607, 610, 620, 621, 622, 630, 648, 650, 653, 669],
+						"fallback": 44,
+						"lane": 6
+					}, {
+						"reviewed": false,
+						"fact": "north_west",
+						"candidates": [557, 558, 560, 563, 564, 568, 569, 589, 590, 592, 594, 597, 599, 600, 607],
+						"fallback": 44,
+						"lane": 7
+					}],
+				"edge": [{
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "ridge"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "valley"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "wall"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "overhang"
+					}],
+				"flow": [{
+						"reviewed": false,
+						"candidates": [],
+						"class": "wave",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}, {
+						"reviewed": false,
+						"candidates": [],
+						"class": "wind",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}, {
+						"reviewed": false,
+						"candidates": [],
+						"class": "grass_stroke",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}],
+				"ramp": [{
+						"reviewed": false,
+						"candidates": [554, 565, 524, 525, 669, 568, 668, 569, 570, 590, 546, 591, 592, 624, 564, 578, 589, 636, 633, 567],
+						"elevation_row": "fall_lower",
+						"elv": 0,
+						"fallback": 46,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [532, 566, 617, 623, 625, 643, 526, 648, 583, 656, 628, 598, 647, 665, 556, 593, 594, 621, 558],
+						"elevation_row": "high",
+						"elv": 1,
+						"fallback": 42,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [577, 597, 619, 654, 595, 596, 629, 537, 540, 581, 582, 620, 626, 630, 622, 653, 559, 579, 641],
+						"elevation_row": "rise",
+						"elv": 2,
+						"fallback": 43,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [650, 560, 585, 586, 587, 588, 599, 610, 557, 538, 541, 584, 627, 563, 632, 600, 607, 602, 539],
+						"elevation_row": "flat_low",
+						"elv": 3,
+						"fallback": 35,
+						"reject": null
+					}]
+			},
+			"runtime_profile_live": true,
+			"scoring": {
+				"density_bias": 0,
+				"detail_contrast": 0,
+				"role_weights": {
+				},
+				"tone_contrast": 0
+			},
+			"seed_provenance": "5695d36e26ffefbaf56b1f08cc3354cf2137a8134d296b978531e502d74a815a",
+			"source_class": "terrain",
+			"source_table_hash": "5695d36e26ffefbaf56b1f08cc3354cf2137a8134d296b978531e502d74a815a"
+		}, {
+			"profile_state": "live",
+			"colors": {
+				"bg_palette": [],
+				"elevation_rows": {
+					"fall_lower": {
+						"fg": [72, 52, 35],
+						"bg": [42, 30, 20]
+					},
+					"flat_low": {
+						"fg": [82, 60, 40],
+						"bg": [50, 36, 24]
+					},
+					"high": {
+						"fg": [112, 82, 54],
+						"bg": [72, 52, 34]
+					},
+					"rise": {
+						"fg": [96, 70, 46],
+						"bg": [64, 46, 30]
+					}
+				},
+				"fallback_bytes": {
+					"ramp:fall_lower": 44,
+					"ramp:flat_low": 44,
+					"ramp:high": 44,
+					"ramp:rise": 44
+				},
+				"fg_palette": [],
+				"per_row": [{
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}],
+				"shade_band_thresholds": [3, 7, 11, 12]
+			},
+			"display_name": "Mud",
+			"glyph_pools": {
+				"cp437": [32, 37, 38, 46, 58, 64],
+				"extended": [556, 557, 558, 559, 560, 561, 562, 563, 564, 571, 572, 573, 574, 575, 576, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 637, 638, 639, 646, 647, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 662, 671]
+			},
+			"idempotency_marker": "fl4260-rq154-mud-0001",
+			"material_id": "terrain:6",
+			"no_match_policy": {
+				"structural_degenerate_declines": true,
+				"structural_decline_fallback": "tonal",
+				"tonal_constant_operand_legal": true,
+				"max_error_q": {
+					"structural": 0,
+					"tonal": 0
+				}
+			},
+			"preset_seed_id": "mud",
+			"review_receipt_id": null,
+			"role_buckets": {
+				"accent": [{
+						"reviewed": false,
+						"candidates": [],
+						"frequency": 0,
+						"reject": "accent lane disabled in first slice",
+						"seed": 0
+					}],
+				"density": [{
+						"reviewed": false,
+						"bucket": "D0",
+						"candidates": [657, 651, 652, 616, 624, 564, 617, 623, 625, 655, 618, 656, 628, 647, 556, 621],
+						"fallback": 46,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D1",
+						"candidates": [558, 619, 654, 629, 620, 626, 630, 622, 653, 559, 631, 560, 610, 557, 562, 561],
+						"fallback": 58,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D2",
+						"candidates": [627, 563, 600, 607, 602, 608, 611, 601, 606, 613, 658, 614, 615, 671, 603, 612],
+						"fallback": 38,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D3",
+						"candidates": [609, 659, 605, 604, 638, 662, 637, 660, 639, 576, 646, 575, 573, 571, 572, 574],
+						"fallback": 37,
+						"reject": null
+					}],
+				"direction": [{
+						"reviewed": false,
+						"fact": "north",
+						"candidates": [557, 558, 560, 561, 562, 563, 600, 605, 606, 608, 609, 611, 613, 614, 615, 616, 618, 631, 639, 651, 652, 654, 655, 657],
+						"fallback": 44,
+						"lane": 0
+					}, {
+						"reviewed": false,
+						"fact": "north_east",
+						"candidates": [654],
+						"fallback": 44,
+						"lane": 1
+					}, {
+						"reviewed": false,
+						"fact": "east",
+						"candidates": [576, 600, 610, 624, 629, 647, 654],
+						"fallback": 44,
+						"lane": 2
+					}, {
+						"reviewed": false,
+						"fact": "south_east",
+						"candidates": [625, 629, 647],
+						"fallback": 44,
+						"lane": 3
+					}, {
+						"reviewed": false,
+						"fact": "south",
+						"candidates": [625, 627, 629, 638, 647, 656, 659, 660],
+						"fallback": 44,
+						"lane": 4
+					}, {
+						"reviewed": false,
+						"fact": "south_west",
+						"candidates": [602, 612, 622, 638, 656, 660],
+						"fallback": 44,
+						"lane": 5
+					}, {
+						"reviewed": false,
+						"fact": "west",
+						"candidates": [557, 558, 559, 560, 564, 571, 572, 573, 574, 575, 576, 601, 602, 603, 604, 605, 607, 608, 609, 610, 611, 612, 613, 614, 615, 620, 621, 622, 630, 631, 638, 639],
+						"fallback": 44,
+						"lane": 6
+					}, {
+						"reviewed": false,
+						"fact": "north_west",
+						"candidates": [557, 558, 560, 564, 600, 601, 603, 605, 606, 607, 608, 609, 611, 613, 614, 615, 630, 631, 639, 646, 651, 652, 655, 657],
+						"fallback": 44,
+						"lane": 7
+					}],
+				"edge": [{
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "ridge"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "valley"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "wall"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "overhang"
+					}],
+				"flow": [{
+						"reviewed": false,
+						"candidates": [],
+						"class": "wave",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}, {
+						"reviewed": false,
+						"candidates": [],
+						"class": "wind",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}, {
+						"reviewed": false,
+						"candidates": [],
+						"class": "grass_stroke",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}],
+				"ramp": [{
+						"reviewed": false,
+						"candidates": [657, 651, 652, 616, 624, 564, 617, 623, 625, 655, 618, 656, 628, 647, 556, 621],
+						"elevation_row": "fall_lower",
+						"elv": 0,
+						"fallback": 46,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [558, 619, 654, 629, 620, 626, 630, 622, 653, 559, 631, 560, 610, 557, 562, 561],
+						"elevation_row": "high",
+						"elv": 1,
+						"fallback": 58,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [627, 563, 600, 607, 602, 608, 611, 601, 606, 613, 658, 614, 615, 671, 603, 612],
+						"elevation_row": "rise",
+						"elv": 2,
+						"fallback": 38,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [609, 659, 605, 604, 638, 662, 637, 660, 639, 576, 646, 575, 573, 571, 572, 574],
+						"elevation_row": "flat_low",
+						"elv": 3,
+						"fallback": 37,
+						"reject": null
+					}]
+			},
+			"runtime_profile_live": true,
+			"scoring": {
+				"density_bias": 0,
+				"detail_contrast": 0,
+				"role_weights": {
+				},
+				"tone_contrast": 0
+			},
+			"seed_provenance": "9bee35b77da8e106149e369b025ab52ab418628ecd4ef3491256ba63a02b8376",
+			"source_class": "terrain",
+			"source_table_hash": "9bee35b77da8e106149e369b025ab52ab418628ecd4ef3491256ba63a02b8376"
+		}, {
+			"profile_state": "live",
+			"colors": {
+				"bg_palette": [],
+				"elevation_rows": {
+					"fall_lower": {
+						"fg": [165, 165, 165],
+						"bg": [125, 125, 125]
+					},
+					"flat_low": {
+						"fg": [175, 175, 175],
+						"bg": [135, 135, 135]
+					},
+					"high": {
+						"fg": [205, 205, 205],
+						"bg": [165, 165, 165]
+					},
+					"rise": {
+						"fg": [190, 190, 190],
+						"bg": [150, 150, 150]
+					}
+				},
+				"fallback_bytes": {
+					"ramp:fall_lower": 44,
+					"ramp:flat_low": 44,
+					"ramp:high": 44,
+					"ramp:rise": 44
+				},
+				"fg_palette": [],
+				"per_row": [{
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}, {
+						"bg_strength": 150,
+						"fg_strength": 210,
+						"shade_contrast": 6
+					}],
+				"shade_band_thresholds": [3, 7, 11, 12]
+			},
+			"display_name": "Gravel",
+			"glyph_pools": {
+				"cp437": [32, 35, 46, 64, 111],
+				"extended": [521, 522, 523, 525, 526, 527, 532, 533, 534, 535, 541, 548, 549, 550, 551, 555, 568, 570, 571, 572, 573, 574, 575, 576, 583, 584, 585, 586, 598, 624, 625, 629, 633, 634, 635, 636, 637, 638, 639, 641, 643, 644, 645, 646, 648, 656, 658, 659, 660, 662, 663, 666, 668, 671]
+			},
+			"idempotency_marker": "fl4260-rq154-gravel-0001",
+			"material_id": "terrain:8",
+			"no_match_policy": {
+				"structural_degenerate_declines": true,
+				"structural_decline_fallback": "tonal",
+				"tonal_constant_operand_legal": true,
+				"max_error_q": {
+					"structural": 0,
+					"tonal": 0
+				}
+			},
+			"preset_seed_id": "gravel",
+			"review_receipt_id": null,
+			"role_buckets": {
+				"accent": [{
+						"reviewed": false,
+						"candidates": [],
+						"frequency": 0,
+						"reject": "accent lane disabled in first slice",
+						"seed": 0
+					}],
+				"density": [{
+						"reviewed": false,
+						"bucket": "D0",
+						"candidates": [525, 549, 550, 555, 522, 568, 668, 523, 548, 645, 570, 624, 534, 635],
+						"fallback": 46,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D1",
+						"candidates": [636, 535, 633, 634, 532, 533, 625, 643, 527, 526, 648, 583, 666],
+						"fallback": 111,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D2",
+						"candidates": [521, 656, 598, 644, 629, 551, 641, 585, 586, 541, 584, 663, 658, 671],
+						"fallback": 111,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"bucket": "D3",
+						"candidates": [659, 638, 662, 637, 660, 639, 576, 646, 575, 573, 571, 572, 574],
+						"fallback": 35,
+						"reject": null
+					}],
+				"direction": [{
+						"reviewed": false,
+						"fact": "north",
+						"candidates": [527, 535, 541, 548, 549, 550, 551, 555, 568, 570, 583, 584, 585, 586, 598, 633, 634, 635, 636, 639, 644, 645, 663],
+						"fallback": 44,
+						"lane": 0
+					}, {
+						"reviewed": false,
+						"fact": "north_east",
+						"candidates": [523, 535, 541, 583, 584, 586, 633, 636, 668],
+						"fallback": 44,
+						"lane": 1
+					}, {
+						"reviewed": false,
+						"fact": "east",
+						"candidates": [525, 624, 629, 633, 668],
+						"fallback": 44,
+						"lane": 2
+					}, {
+						"reviewed": false,
+						"fact": "south_east",
+						"candidates": [625, 629],
+						"fallback": 44,
+						"lane": 3
+					}, {
+						"reviewed": false,
+						"fact": "south",
+						"candidates": [526, 532, 625, 629, 638, 641, 656, 659, 660],
+						"fallback": 44,
+						"lane": 4
+					}, {
+						"reviewed": false,
+						"fact": "south_west",
+						"candidates": [532, 638, 660],
+						"fallback": 44,
+						"lane": 5
+					}, {
+						"reviewed": false,
+						"fact": "west",
+						"candidates": [551, 571, 572, 573, 574, 575, 576, 634, 638, 639, 646, 648, 658, 660, 662, 663, 666, 671],
+						"fallback": 44,
+						"lane": 6
+					}, {
+						"reviewed": false,
+						"fact": "north_west",
+						"candidates": [522, 549, 550, 551, 555, 568, 634, 635, 639, 646, 662, 663, 666],
+						"fallback": 44,
+						"lane": 7
+					}],
+				"edge": [{
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "ridge"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "valley"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "wall"
+					}, {
+						"reviewed": false,
+						"blocked": "no vertical_relation fact producer",
+						"candidates": [],
+						"fact": "overhang"
+					}],
+				"flow": [{
+						"reviewed": false,
+						"candidates": [],
+						"class": "wave",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}, {
+						"reviewed": false,
+						"candidates": [],
+						"class": "wind",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}, {
+						"reviewed": false,
+						"candidates": [],
+						"class": "grass_stroke",
+						"dir_sensitivity": 0,
+						"reject": "flow lane disabled in first slice"
+					}],
+				"ramp": [{
+						"reviewed": false,
+						"candidates": [525, 549, 550, 555, 522, 568, 668, 523, 548, 645, 570, 624, 534, 635],
+						"elevation_row": "fall_lower",
+						"elv": 0,
+						"fallback": 46,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [636, 535, 633, 634, 532, 533, 625, 643, 527, 526, 648, 583, 666],
+						"elevation_row": "high",
+						"elv": 1,
+						"fallback": 111,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [521, 656, 598, 644, 629, 551, 641, 585, 586, 541, 584, 663, 658, 671],
+						"elevation_row": "rise",
+						"elv": 2,
+						"fallback": 111,
+						"reject": null
+					}, {
+						"reviewed": false,
+						"candidates": [659, 638, 662, 637, 660, 639, 576, 646, 575, 573, 571, 572, 574],
+						"elevation_row": "flat_low",
+						"elv": 3,
+						"fallback": 35,
+						"reject": null
+					}]
+			},
+			"runtime_profile_live": true,
+			"scoring": {
+				"density_bias": 0,
+				"detail_contrast": 0,
+				"role_weights": {
+				},
+				"tone_contrast": 0
+			},
+			"seed_provenance": "55f502623a021ed7ddb21a333e5b2c09deaefe63c74b5ba75fb59c46a544c64b",
+			"source_class": "terrain",
+			"source_table_hash": "55f502623a021ed7ddb21a333e5b2c09deaefe63c74b5ba75fb59c46a544c64b"
+		}, {
+			"profile_state": "live",
+			"colors": {
+				"bg_palette": [],
+				"fallback_bytes": {
+					"ramp:fall_lower": 44,
+					"ramp:flat_low": 44,
+					"ramp:high": 44,
+					"ramp:rise": 44
+				},
+				"fg_palette": [],
+				"per_row": [{
+						"fg_strength": 200,
+						"bg_strength": 140,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 200,
+						"bg_strength": 140,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 200,
+						"bg_strength": 140,
+						"shade_contrast": 6
+					}, {
+						"fg_strength": 200,
+						"bg_strength": 140,
+						"shade_contrast": 6
+					}],
+				"shade_band_thresholds": [3, 7, 11, 12],
+				"elevation_rows": {
+					"fall_lower": {
+						"fg": [200, 40, 40],
+						"bg": [10, 20, 10]
+					},
+					"high": {
+						"fg": [120, 200, 80],
+						"bg": [20, 40, 15]
+					},
+					"rise": {
+						"fg": [80, 150, 55],
+						"bg": [15, 30, 12]
+					},
+					"flat_low": {
+						"fg": [60, 120, 45],
+						"bg": [12, 25, 11]
+					}
+				}
+			},
+			"display_name": "Object Mesh (Bone/Prop)",
+			"glyph_pools": {
+				"glyph_ids": [512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639]
+			},
+			"idempotency_marker": "fl4512-slice4-object-mesh-0200",
+			"material_id": "mesh:200",
+			"no_match_policy": {
+				"structural_degenerate_declines": true,
+				"structural_decline_fallback": "tonal",
+				"tonal_constant_operand_legal": true,
+				"max_error_q": {
+					"structural": 0,
+					"tonal": 0
+				}
+			},
+			"preset_seed_id": "grass_tops",
+			"review_receipt_id": null,
+			"projected_feature_extent_admission": {
+				"schema": "fl4512.projected_feature_extent_admission.v2",
+				"extent_quantization_version": 1,
+				"mesh_thresholds": {
+					"silhouette": {
+						"enter_q": 32768,
+						"exit_q": 24576
+					},
+					"crease": {
+						"enter_q": 65536,
+						"exit_q": 49152
+					},
+					"material_boundary": {
+						"enter_q": 49152,
+						"exit_q": 40960
+					},
+					"suggestive_contour": {
+						"enter_q": 49152,
+						"exit_q": 40960
+					}
+				},
+				"filled_threshold": {
+						"enter_q": 8192,
+						"exit_q": 4096
+				},
+				"suggestive_contour": {
+					"estimator_id": "fl4512.cubic_monge_qr.v1",
+					"derivative_enter_q16": 1024,
+					"stability_angle_min_q16": 51472,
+					"suggestive_claim_enabled": true
+				}
+			},
+			"active_stroke_topology": {
+				"schema": "fl4512.active_stroke_topology.v2",
+				"alpha_q0_16": 66,
+				"beta_q0_16": 66,
+				"attraction_lambda_q0_16": 16384,
+				"temporal_lambda_q0_16": 8192,
+				"step_q0_16": 16384,
+				"gaussian_sigma_q16_16": 65536,
+				"gaussian_distance2_step_q16_16": 4096,
+				"gaussian_table_count": 145,
+				"relaxation_iterations": 8,
+				"resample_min_q16_16": 32768,
+				"resample_max_q16_16": 49152,
+				"coverage_radius_q16_16": 81920,
+				"trim_radius_q16_16": 40960,
+				"extend_radius_q16_16": 163840,
+				"merge_radius_q16_16": 163840,
+				"coverage_tangent_dot_min_q1_15": 27853,
+				"merge_tangent_dot_min_q1_15": 27853,
+				"split_tangent_dot_max_q1_15": 16384,
+				"topology_balance_q0_16": 52429,
+				"spring_stiffness_q1_15": 32768,
+				"extension_step_q16_16": 49152,
+				"extension_max_steps": 4,
+				"trim_support_min": 1,
+				"max_topology_passes": 8,
+				"max_tracks": 4096,
+				"max_controls_per_track": 4096,
+				"max_controls_per_owner": 65536,
+				"max_samples_per_owner": 65536,
+				"quantization_version": 2,
+				"content_sha256": "e5f1d66d8c01da64035aae2a930063b0ea1020153bf1efc4cfb70c6084796b90"
+			},
+			"role_buckets": {
+				"filled": {
+					"role": "filled",
+					"route_key": "filled.field.v1",
+					"lane_id": 0,
+					"lane_name": "filled_field",
+					"region_class": 7,
+					"priority_u16": 140,
+					"candidates": [520, 521]
+				},
+				"accent": [{
+						"reviewed": false,
+						"candidates": [],
+						"frequency": 0,
+						"reject": "accent lane disabled in first slice",
+						"seed": 0
+					}],
+				"density": [{
+						"reviewed": false,
+						"bucket": "D0",
+						"fallback": 630,
+						"reject": null,
+						"candidates": [630, 622, 579, 631, 585, 586]
+					}, {
+						"reviewed": false,
+						"bucket": "D1",
+						"fallback": 587,
+						"reject": null,
+						"candidates": [587, 588, 599, 610, 584, 627]
+					}, {
+						"reviewed": false,
+						"bucket": "D2",
+						"fallback": 632,
+						"reject": null,
+						"candidates": [632, 600, 608, 611, 601, 606, 580, 613, 614]
+					}, {
+						"reviewed": false,
+						"bucket": "D3",
+						"fallback": 615,
+						"reject": null,
+						"candidates": [615, 603, 612, 609, 605, 604, 638, 637, 639]
+					}],
+				"ramp": [{
+						"reviewed": false,
+						"elevation_row": "fall_lower",
+						"elv": 0,
+						"fallback": 630,
+						"reject": null,
+						"candidates": [630]
+					}, {
+						"reviewed": false,
+						"elevation_row": "high",
+						"elv": 1,
+						"fallback": 588,
+						"reject": null,
+						"candidates": [588]
+					}, {
+						"reviewed": false,
+						"elevation_row": "rise",
+						"elv": 2,
+						"fallback": 608,
+						"reject": null,
+						"candidates": [608]
+					}, {
+						"reviewed": false,
+						"elevation_row": "flat_low",
+						"elv": 3,
+						"fallback": 615,
+						"reject": null,
+						"candidates": [615]
+					}],
+				"edge": [{
+						"fact": "flat",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "rise",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "fall",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "ridge",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "valley",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "wall",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "overhang",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until source-fact proof exists"
+					}],
+				"direction": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": []
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": []
+					}],
+				"flow": [{
+						"fact": "north",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_east",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "south_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}, {
+						"fact": "north_west",
+						"reviewed": false,
+						"candidates": [],
+						"blocked": "not exposed in Material Look until flow source-fact proof exists"
+					}],
+				"mesh_bundle": {
+					"role": "mesh_feature",
+					"route_key": "mesh_feature.bundle.v1",
+					"lane_id": 0,
+					"lane_name": "mesh_bundle",
+					"descriptor_version": "mesh_projected_feature.v1"
+				}
+			},
+			"runtime_profile_live": true,
+			"scoring": {
+				"detail_contrast": 50,
+				"tone_contrast": 50,
+				"density_bias": 0,
+				"role_weights": {
+					"curve": 1,
+					"diagonal": 1,
+					"horizontal": 1,
+					"vertical": 1,
+					"sparse": 1,
+					"dense": 1
+				}
+			},
+			"seed_provenance": "e0e199c7387b8de21f509432f1e9ab6c145ecade9261f4abec0db10fb8e6d52e",
+			"source_class": "mesh",
+			"source_table_hash": "e0e199c7387b8de21f509432f1e9ab6c145ecade9261f4abec0db10fb8e6d52e"
+		}],
+	"schema": "material_rendering_profiles.v1"
+}

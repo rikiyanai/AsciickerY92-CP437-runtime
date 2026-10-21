@@ -1,0 +1,45 @@
+{
+  "expected_target": {
+    "boundary8_u64_le_hex": "00060e0000000000",
+    "detail_u16": 65535,
+    "filled_region_class": 7,
+    "mask8_u64_le_hex": "00060e0000000000",
+    "occupancy_mask8_u64_le_hex": "00060e0000000000",
+    "primitive_ref_bundle_sha256": "c44656a3f070702a03759d4756c82c88ed3d231744ede1e93c681f4239a130f0",
+    "primitive_ref_ids": [256, 257],
+    "schema": "fl4512.primitive_field.target.v1",
+    "state": "live",
+    "target_priority_u16": 140
+  },
+  "primitive_ref_schema": "fl4512.primitive_ref.v1",
+  "primitive_refs": [
+    {
+      "primitive_ref_id": 256,
+      "owner_surface_id": 4097,
+      "occupancy_mask8": 394752,
+      "region_class": 7,
+      "priority_u16": 100,
+      "depth_q16": 42,
+      "visible": true
+    },
+    {
+      "primitive_ref_id": 257,
+      "owner_surface_id": 4098,
+      "occupancy_mask8": 786432,
+      "region_class": 7,
+      "priority_u16": 200,
+      "depth_q16": 17,
+      "visible": true
+    },
+    {
+      "primitive_ref_id": 258,
+      "owner_surface_id": 4099,
+      "occupancy_mask8": 1,
+      "region_class": 99,
+      "priority_u16": 65535,
+      "depth_q16": 0,
+      "visible": false
+    }
+  ],
+  "schema": "fl4512.primitive_field.fixture.v1"
+}

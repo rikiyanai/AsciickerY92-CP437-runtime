@@ -1,0 +1,181 @@
+{
+  "blockers": [],
+  "counts": {
+    "authored_waiver_claims": 1,
+    "blockers": 0,
+    "building_facades": 715,
+    "building_specs": 715,
+    "canonical_features": 1454,
+    "population_by_owner": {
+      "custom": 15,
+      "fixtures": 1487,
+      "linear": 1574,
+      "terminal": 26
+    },
+    "population_placements": 3102,
+    "primary_representations": 1457,
+    "representation_by_disposition": {
+      "intentional_omission": 182,
+      "mesh_facade": 10,
+      "mesh_fixture": 423,
+      "minimap_only": 5,
+      "surface_decal": 122,
+      "terrain_mass": 715
+    },
+    "surface_rows": 122,
+    "terminal_placements": 26,
+    "triage_unmapped_rows": 3
+  },
+  "infrastructure_owned_requirements": [
+    {
+      "emitter": "scripts.pipeline.compile_world_ir_fixtures.compile_world_ir_infrastructure",
+      "owner_stage": "infrastructure",
+      "required": 2,
+      "semantic": "station_entrance_assembly_proposal"
+    },
+    {
+      "emitter": "scripts.pipeline.compile_world_ir_fixtures.compile_world_ir_infrastructure",
+      "owner_stage": "infrastructure",
+      "required": 1,
+      "semantic": "station_platform_proposal"
+    }
+  ],
+  "inputs": {
+    "authored_waivers_sha256": "c78d67e8ea3f9a29b14bec0296807765798440d6f93b77569fa491c61c7cf63d",
+    "building_specs_sha256": "6ee34017c77687f4c42cd808261936a73f7b87b15b85995728eb6589d399f274",
+    "canonical_sha256": "bcc806ee1998931ba4bc8d2f8dfe046f83f1060ed35820b059c5183f37787b03",
+    "custom_asset_plan_sha256": "cb739834dd15bffb2dcecd7d92e1c3dc59b70d6be5d37bf913519d9161ccbedd",
+    "population_asset_plan_sha256": "b9d5a50dc09c47ee9185df467e8d1a9cff29717275ea50a60bda830384b95c05",
+    "representation_plan_sha256": "6888b471904175469acad3d1dc62ff6e9803139577b85d489047653e98478ae6",
+    "requirements_sha256": "cbd1325e35fed7e67add0737a0a7d6351dbe66aa80f45602424de0522c65aee7",
+    "route_sha256": "51940b2d8bf273239805ab868dfdc242a47eb2bdf895ab52cbd2fcdf6874777b",
+    "source_palette_sha256": "73330c53a63bdb2778bfc382ba05ead2a113213106225ed50fb3c116e5dd8615",
+    "station_facade_plan_sha256": "9ce11169e644aa2feaad225c3a79e6220f3db4e992ebead6624e9f39c2e0d70a",
+    "surface_stamp_plan_sha256": "820905ac4b2354c807e56dc4ff026eadb98b4c351ec8c7606dcec5fb0102d892",
+    "terrain_metadata_sha256": "2b96f3aa2495a09c15a5ddc07f3c2bca243ed67c26be2df9b4e27f828fac2a3d"
+  },
+  "invocation": {
+    "argv": [
+      "/Users/r/Projects/asciicker-Y9-2/scripts/sbu_e2e_run.py",
+      "--map-build-backend",
+      "direct",
+      "--profile",
+      "world_ir",
+      "--runtime-product",
+      "classic_cp437",
+      "--osm-world-ir",
+      ".run/fl4876_inputs/osm.world_ir.json",
+      "--dem-world-ir",
+      ".run/fl4876_inputs/dem5a.world_ir.json",
+      "--aoi-geojson",
+      "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/connected_scope.geojson",
+      "--requirements",
+      "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json",
+      "--capture-manifest",
+      "assets/source_bundles/numabe_home_to_station_20260912/route_capture_manifest.json",
+      "--mapillary-objects-ir",
+      ".run/fl4876_inputs/mapillary_objects.world_ir.json",
+      "--allow-custom-output",
+      "--run-root",
+      "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple",
+      "--lidar-roof-summary",
+      "artifacts/experiments/fl4930_tmg_building_existence/roof_field_summary.json",
+      "--lidar-road-corridors",
+      "artifacts/experiments/fl4934_road_corridor/road_corridors_v4.json",
+      "--lidar-roof-field-dir",
+      "artifacts/experiments/fl4876_manual_world/roof_fields_fitted_s15_v2"
+    ],
+    "cwd": "/Users/r/Projects/asciicker-Y9-2"
+  },
+  "ready_for_a3d_assembly": true,
+  "schema": "y92.preassembly_candidate.v1",
+  "streetscape_route_coverage": [
+    {
+      "candidate_count_near_route": 39,
+      "covered_bins": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "covered_fraction": 0.777778,
+      "minimum_covered_fraction": 0.625,
+      "module_ids": [
+        "pole_streetlight"
+      ],
+      "route_bins": 18,
+      "semantic_class": "street_lamp"
+    },
+    {
+      "candidate_count_near_route": 63,
+      "covered_bins": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "covered_fraction": 0.944444,
+      "minimum_covered_fraction": 0.625,
+      "module_ids": [
+        "potted_frontage_plant",
+        "small_tree",
+        "street_tree"
+      ],
+      "route_bins": 18,
+      "semantic_class": "tree"
+    },
+    {
+      "candidate_count_near_route": 152,
+      "covered_bins": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "covered_fraction": 0.944444,
+      "minimum_covered_fraction": 0.75,
+      "module_ids": [
+        "transformer_drum_cluster",
+        "utility_pole_wire_cluster"
+      ],
+      "route_bins": 18,
+      "semantic_class": "utility_pole"
+    }
+  ]
+}

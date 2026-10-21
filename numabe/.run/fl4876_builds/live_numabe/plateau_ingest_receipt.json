@@ -1,0 +1,2981 @@
+{
+  "counts": {
+    "buildings_clipped_away": 11257,
+    "buildings_in_aoi": 710,
+    "buildings_read": 11967,
+    "features_emitted": 710,
+    "non_building_members": 0,
+    "observations_emitted": 710,
+    "rings_repaired": 0,
+    "skipped_degenerate": 0,
+    "skipped_no_footprint_ring": 0,
+    "tiles_read": 4,
+    "with_lod2": 0,
+    "with_measured_height": 710,
+    "with_storeys": 710
+  },
+  "coverage": {
+    "buildings_in_aoi": 710,
+    "with_lod2": 0,
+    "with_measured_height": 710,
+    "with_storeys": 710
+  },
+  "crs": {
+    "datum_note": "JGD2011 coordinates are fed numerically to the shared Kruger path; the static-vs-dynamic datum shift survives as a rigid offset, inside the IoU margin",
+    "heights": "metres (bldg:measuredHeight uom=m)",
+    "projected": "EPSG:32654 zone 54N via scripts/pipeline/geo_frames.py Kruger n-series, then the run-projection affine",
+    "source": "EPSG:6697 (JGD2011 geographic, lat/lon order in GML)"
+  },
+  "generated_at": "2026-09-19T00:00:00Z",
+  "ir_id": "numabe_plateau",
+  "licence": {
+    "attribution": "出典：大田区 3D都市モデル（Project PLATEAU）大田区（2025年度）",
+    "copyright": "Ota City (3D city-model open data copyright belongs to the local government)",
+    "title": "PLATEAU Site Policy (public-data licence PDL1.0 compatible, CC BY 4.0 compatible; attribution required)",
+    "url": "https://www.mlit.go.jp/plateau/site-policy/"
+  },
+  "match": {
+    "largest_unmatched": [
+      {
+        "area_m2": 484.413,
+        "ref": "way/725138234",
+        "side": "osm_only"
+      },
+      {
+        "area_m2": 388.172,
+        "ref": "bldg_65fc97db-a31a-44a8-a374-12ebaf7d4d73",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 270.063,
+        "ref": "way/1507403659",
+        "side": "osm_only"
+      },
+      {
+        "area_m2": 268.546,
+        "ref": "bldg_c1a1424a-66f4-4edf-867b-d94c433d14e5",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 240.97,
+        "ref": "bldg_ce6b8692-77f7-47ab-9eef-d2e2c8d88866",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 229.039,
+        "ref": "bldg_b36eac76-8ba2-4c1a-814d-bd6db8734590",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 226.742,
+        "ref": "bldg_b3153710-a4fa-4a81-865d-f5f3cbc4a334",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 194.607,
+        "ref": "bldg_23ff3d75-63ca-44e5-8296-0cc29c0f1d71",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 187.324,
+        "ref": "way/1507403681",
+        "side": "osm_only"
+      },
+      {
+        "area_m2": 183.135,
+        "ref": "bldg_f4ddaf34-7478-439d-93b8-dd66c395ce91",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 174.744,
+        "ref": "bldg_5603a503-35d4-4de2-989b-fcf160b0d65c",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 164.238,
+        "ref": "way/225367798",
+        "side": "osm_only"
+      },
+      {
+        "area_m2": 159.593,
+        "ref": "way/1507403772",
+        "side": "osm_only"
+      },
+      {
+        "area_m2": 159.327,
+        "ref": "bldg_a63f82d9-a534-4264-9899-891f4aac2e6f",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 140.259,
+        "ref": "bldg_8f8b33d0-a537-4000-bac1-eb9a354e77a9",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 137.333,
+        "ref": "bldg_9ce30eeb-952f-42ae-b59f-4a6527f00509",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 126.577,
+        "ref": "way/477645438",
+        "side": "osm_only"
+      },
+      {
+        "area_m2": 124.3,
+        "ref": "bldg_ce933d27-b40e-49b4-b60b-2e1759d407b8",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 123.7,
+        "ref": "bldg_3e7164e9-2425-4fbe-98a7-b69ce0b4f386",
+        "side": "plateau_only"
+      },
+      {
+        "area_m2": 121.305,
+        "ref": "way/725138329",
+        "side": "osm_only"
+      }
+    ],
+    "matched": 556,
+    "matches": [
+      {
+        "iou": 0.8726,
+        "osm_source_ref": "way/1507403614",
+        "plateau_gml_id": "bldg_005393a6-cdf1-4c2d-b137-e1545d340862"
+      },
+      {
+        "iou": 0.6137,
+        "osm_source_ref": "way/1507403797",
+        "plateau_gml_id": "bldg_007d780c-70cd-44fd-bfbd-2d4b22e60a38"
+      },
+      {
+        "iou": 0.8161,
+        "osm_source_ref": "way/1507403644",
+        "plateau_gml_id": "bldg_011c108c-6807-4617-8501-cce039b40d42"
+      },
+      {
+        "iou": 0.9164,
+        "osm_source_ref": "way/725138041",
+        "plateau_gml_id": "bldg_01d028ea-b64f-4744-baaa-5dd6185054c8"
+      },
+      {
+        "iou": 0.7206,
+        "osm_source_ref": "way/1507403689",
+        "plateau_gml_id": "bldg_021b3a26-5fd0-4424-b23d-b43a362f6c10"
+      },
+      {
+        "iou": 0.8824,
+        "osm_source_ref": "way/725138538",
+        "plateau_gml_id": "bldg_02bbd5a9-6e5f-4196-b962-c76a567adfa2"
+      },
+      {
+        "iou": 0.5978,
+        "osm_source_ref": "way/225198100",
+        "plateau_gml_id": "bldg_031ae932-8096-4b66-894c-29f36fd1b982"
+      },
+      {
+        "iou": 0.5536,
+        "osm_source_ref": "way/225367803",
+        "plateau_gml_id": "bldg_0363ffa5-7ac1-4d4b-ad97-7ee05a75fa42"
+      },
+      {
+        "iou": 0.8712,
+        "osm_source_ref": "way/725138627",
+        "plateau_gml_id": "bldg_03656bf7-d319-4422-9251-fad9dfe18162"
+      },
+      {
+        "iou": 0.7779,
+        "osm_source_ref": "way/1507403778",
+        "plateau_gml_id": "bldg_038c95ba-384e-4583-9b1d-fd64e58f2d97"
+      },
+      {
+        "iou": 0.6443,
+        "osm_source_ref": "way/1507398063",
+        "plateau_gml_id": "bldg_03ae0a72-b00e-4ea1-afe3-e50715ab0dff"
+      },
+      {
+        "iou": 0.7845,
+        "osm_source_ref": "way/1507403767",
+        "plateau_gml_id": "bldg_03dd86fe-ebd8-45e1-974e-2bdc0bb6c838"
+      },
+      {
+        "iou": 0.8699,
+        "osm_source_ref": "way/725138432",
+        "plateau_gml_id": "bldg_040398d7-668e-4ab3-b18c-3ded1b025501"
+      },
+      {
+        "iou": 0.6034,
+        "osm_source_ref": "way/725138046",
+        "plateau_gml_id": "bldg_04cf937b-4400-47a0-91b4-5f4b22d59115"
+      },
+      {
+        "iou": 0.8187,
+        "osm_source_ref": "way/1507403548",
+        "plateau_gml_id": "bldg_04ddbdef-536c-4935-bd01-0f3c2f8773b9"
+      },
+      {
+        "iou": 0.6243,
+        "osm_source_ref": "way/225101505",
+        "plateau_gml_id": "bldg_04fa1876-4e4a-445b-98ae-9c2f081ff9f0"
+      },
+      {
+        "iou": 0.9055,
+        "osm_source_ref": "way/725138616",
+        "plateau_gml_id": "bldg_05695d06-6a2e-4f5b-bc91-80ac787a6666"
+      },
+      {
+        "iou": 0.9365,
+        "osm_source_ref": "way/725138381",
+        "plateau_gml_id": "bldg_0653d914-1125-469c-b89f-df957db27390"
+      },
+      {
+        "iou": 0.5788,
+        "osm_source_ref": "way/1507398034",
+        "plateau_gml_id": "bldg_066ee483-eae6-4023-8285-cc5d89d7d7f4"
+      },
+      {
+        "iou": 0.6876,
+        "osm_source_ref": "way/1507403782",
+        "plateau_gml_id": "bldg_068e93b4-3879-4069-a5a2-a6bc8c9fe353"
+      },
+      {
+        "iou": 0.7868,
+        "osm_source_ref": "way/725138038",
+        "plateau_gml_id": "bldg_06b1a11d-696b-4721-bdef-9200cb1e4eca"
+      },
+      {
+        "iou": 0.9174,
+        "osm_source_ref": "way/1507398057",
+        "plateau_gml_id": "bldg_071e94d7-a2c8-47dc-bbcd-5c5ddc93f4b0"
+      },
+      {
+        "iou": 0.8488,
+        "osm_source_ref": "way/725138589",
+        "plateau_gml_id": "bldg_074b11ae-73d6-4329-a330-e1827571d88e"
+      },
+      {
+        "iou": 0.8563,
+        "osm_source_ref": "way/1507403728",
+        "plateau_gml_id": "bldg_07943f11-e1c6-4a98-99da-ad34aa422935"
+      },
+      {
+        "iou": 0.9445,
+        "osm_source_ref": "way/725138352",
+        "plateau_gml_id": "bldg_07b42801-4d6c-401d-bb8f-daf12cabdf24"
+      },
+      {
+        "iou": 0.9161,
+        "osm_source_ref": "way/725137862",
+        "plateau_gml_id": "bldg_087b9f1b-9904-4f5c-bd7c-9361afc0be35"
+      },
+      {
+        "iou": 0.8106,
+        "osm_source_ref": "way/1507403557",
+        "plateau_gml_id": "bldg_08aa24cb-a637-45bf-b4bf-70ef903b8024"
+      },
+      {
+        "iou": 0.7671,
+        "osm_source_ref": "way/725138179",
+        "plateau_gml_id": "bldg_08c18514-544d-4af0-80ee-cadfacd3c4ea"
+      },
+      {
+        "iou": 0.7928,
+        "osm_source_ref": "way/1507398027",
+        "plateau_gml_id": "bldg_08c68eb9-5015-403f-826e-1f8a8526e602"
+      },
+      {
+        "iou": 0.8591,
+        "osm_source_ref": "way/725137861",
+        "plateau_gml_id": "bldg_090d6896-0998-400b-9dfb-64cb537ce812"
+      },
+      {
+        "iou": 0.8424,
+        "osm_source_ref": "way/725138458",
+        "plateau_gml_id": "bldg_0a05b2d6-bde8-4fc1-8b44-1f79fdedca40"
+      },
+      {
+        "iou": 0.9132,
+        "osm_source_ref": "way/725138465",
+        "plateau_gml_id": "bldg_0b017fa2-b5f5-4f86-9ef6-f1f4f5616dad"
+      },
+      {
+        "iou": 0.8466,
+        "osm_source_ref": "way/441951070",
+        "plateau_gml_id": "bldg_0c4ef9dd-8b8e-4728-8398-858a93b57ded"
+      },
+      {
+        "iou": 0.8027,
+        "osm_source_ref": "way/1507403773",
+        "plateau_gml_id": "bldg_0c90929e-75ff-4ae2-a4e4-667399cbbe20"
+      },
+      {
+        "iou": 0.7983,
+        "osm_source_ref": "way/725138116",
+        "plateau_gml_id": "bldg_0c9a063c-9ed4-489c-a992-0ec8cc7c3310"
+      },
+      {
+        "iou": 0.8002,
+        "osm_source_ref": "way/1507403729",
+        "plateau_gml_id": "bldg_0cc22f1a-1259-4851-8230-f5dce1dbb7b2"
+      },
+      {
+        "iou": 0.9203,
+        "osm_source_ref": "way/725138153",
+        "plateau_gml_id": "bldg_0d0d8e18-3ae8-48eb-b963-37434e112381"
+      },
+      {
+        "iou": 0.9074,
+        "osm_source_ref": "way/1507403739",
+        "plateau_gml_id": "bldg_0d81fac0-b4c4-43fc-8541-19958e255e92"
+      },
+      {
+        "iou": 0.9235,
+        "osm_source_ref": "way/725138575",
+        "plateau_gml_id": "bldg_0dbe75c1-02b0-4a5f-99b1-2aeafbfe068c"
+      },
+      {
+        "iou": 0.7496,
+        "osm_source_ref": "way/1507403594",
+        "plateau_gml_id": "bldg_0dbf36c2-f0da-41bb-b00f-6491bffbb9b2"
+      },
+      {
+        "iou": 0.7776,
+        "osm_source_ref": "way/1507403744",
+        "plateau_gml_id": "bldg_0f030249-570e-40f2-bbfd-7bc44cf7fa56"
+      },
+      {
+        "iou": 0.5799,
+        "osm_source_ref": "way/725138067",
+        "plateau_gml_id": "bldg_0f283bb1-75e4-433d-b55c-e5ea0a9feb05"
+      },
+      {
+        "iou": 0.8569,
+        "osm_source_ref": "way/725137943",
+        "plateau_gml_id": "bldg_10646c5d-fd1a-4bb2-ba04-217be5016b00"
+      },
+      {
+        "iou": 0.6875,
+        "osm_source_ref": "way/1507403668",
+        "plateau_gml_id": "bldg_10926458-2efc-4404-8dda-94ab157d4055"
+      },
+      {
+        "iou": 0.7671,
+        "osm_source_ref": "way/225369224",
+        "plateau_gml_id": "bldg_10b9f94c-dbb9-408b-8ad1-ebaa84ee0237"
+      },
+      {
+        "iou": 0.7888,
+        "osm_source_ref": "way/1507403750",
+        "plateau_gml_id": "bldg_10dda3c7-b85f-4b13-9592-ce2946c347aa"
+      },
+      {
+        "iou": 0.6819,
+        "osm_source_ref": "way/725137927",
+        "plateau_gml_id": "bldg_115331d9-e29c-489c-b7f7-7c89d9b177a5"
+      },
+      {
+        "iou": 0.7945,
+        "osm_source_ref": "way/1507403683",
+        "plateau_gml_id": "bldg_11b31c7a-33b4-41bb-bf99-43e6d50c790e"
+      },
+      {
+        "iou": 0.8532,
+        "osm_source_ref": "way/1507403762",
+        "plateau_gml_id": "bldg_11b42e74-4dff-4613-9d02-ee92d72bab03"
+      },
+      {
+        "iou": 0.8121,
+        "osm_source_ref": "way/1507403531",
+        "plateau_gml_id": "bldg_121f4c30-8a4e-43d2-b51c-0e640ba9e155"
+      },
+      {
+        "iou": 0.7252,
+        "osm_source_ref": "way/1507403556",
+        "plateau_gml_id": "bldg_13026969-febe-4fee-93fa-53d6ee6640d9"
+      },
+      {
+        "iou": 0.7915,
+        "osm_source_ref": "way/1507403693",
+        "plateau_gml_id": "bldg_139f497c-6f05-4b47-90fd-4e4122ce9d37"
+      },
+      {
+        "iou": 0.9084,
+        "osm_source_ref": "way/725138039",
+        "plateau_gml_id": "bldg_14078df7-7880-4646-b74f-8ae628c29aa2"
+      },
+      {
+        "iou": 0.8524,
+        "osm_source_ref": "way/1507403621",
+        "plateau_gml_id": "bldg_142e6b65-58c1-4107-b793-85e0c0eb801e"
+      },
+      {
+        "iou": 0.8082,
+        "osm_source_ref": "way/1507403768",
+        "plateau_gml_id": "bldg_1476dd68-8703-4ba4-9116-8721a318423f"
+      },
+      {
+        "iou": 0.8235,
+        "osm_source_ref": "way/1507398028",
+        "plateau_gml_id": "bldg_160bbea5-a282-4c5a-b641-426f6e1d9635"
+      },
+      {
+        "iou": 0.7933,
+        "osm_source_ref": "way/1507403685",
+        "plateau_gml_id": "bldg_163fdd4c-90d8-4bf7-a971-734e249373d7"
+      },
+      {
+        "iou": 0.7635,
+        "osm_source_ref": "way/1507403543",
+        "plateau_gml_id": "bldg_166d9a25-a044-43aa-832a-ef253b1064b6"
+      },
+      {
+        "iou": 0.7035,
+        "osm_source_ref": "way/225482968",
+        "plateau_gml_id": "bldg_16c5dfa7-295a-40e6-843f-344e3de0a167"
+      },
+      {
+        "iou": 0.6592,
+        "osm_source_ref": "way/1507403792",
+        "plateau_gml_id": "bldg_17103a34-960f-4685-9433-db9be7e29606"
+      },
+      {
+        "iou": 0.9296,
+        "osm_source_ref": "way/725138637",
+        "plateau_gml_id": "bldg_174f8a3b-67b0-46cd-9bfd-aa87ff97b658"
+      },
+      {
+        "iou": 0.6564,
+        "osm_source_ref": "way/1507403789",
+        "plateau_gml_id": "bldg_176ee085-8e26-490f-998d-00b11eabcc5b"
+      },
+      {
+        "iou": 0.9298,
+        "osm_source_ref": "way/1507403552",
+        "plateau_gml_id": "bldg_1842e6b4-67f1-4b9d-86d3-ef1a3aa5896f"
+      },
+      {
+        "iou": 0.7442,
+        "osm_source_ref": "way/1507403636",
+        "plateau_gml_id": "bldg_186a044f-abf0-4cea-bc56-9bb8708f7292"
+      },
+      {
+        "iou": 0.8876,
+        "osm_source_ref": "way/725138598",
+        "plateau_gml_id": "bldg_186f3fd1-f635-41f9-80a2-d1499848b653"
+      },
+      {
+        "iou": 0.8903,
+        "osm_source_ref": "way/725138600",
+        "plateau_gml_id": "bldg_192c7bc7-c667-40cb-b9d8-50e53d918e5b"
+      },
+      {
+        "iou": 0.8436,
+        "osm_source_ref": "way/1507403608",
+        "plateau_gml_id": "bldg_193ff929-162e-43f8-b718-b8b8177a129f"
+      },
+      {
+        "iou": 0.9067,
+        "osm_source_ref": "way/725138322",
+        "plateau_gml_id": "bldg_1a7080cb-4f22-4efa-9ef5-1c8ae5196128"
+      },
+      {
+        "iou": 0.5709,
+        "osm_source_ref": "way/477645421",
+        "plateau_gml_id": "bldg_1b3b0ad2-07bd-458f-8a50-653bf590dcf0"
+      },
+      {
+        "iou": 0.7881,
+        "osm_source_ref": "way/1507403791",
+        "plateau_gml_id": "bldg_1ba607ff-fc73-4dfa-ae07-710587432c43"
+      },
+      {
+        "iou": 0.6339,
+        "osm_source_ref": "way/1507398009",
+        "plateau_gml_id": "bldg_1c04498b-4dd4-461a-8b7e-dbaa1c3de3fc"
+      },
+      {
+        "iou": 0.7279,
+        "osm_source_ref": "way/725137990",
+        "plateau_gml_id": "bldg_1c8531df-f835-46b7-aaee-90422a38c22b"
+      },
+      {
+        "iou": 0.6485,
+        "osm_source_ref": "way/1507403518",
+        "plateau_gml_id": "bldg_1cf51f00-097e-40b6-b7c4-fb9dd99dd86d"
+      },
+      {
+        "iou": 0.8926,
+        "osm_source_ref": "way/725138443",
+        "plateau_gml_id": "bldg_1cfb152e-8365-49d3-9ecb-a631e313f77d"
+      },
+      {
+        "iou": 0.5319,
+        "osm_source_ref": "way/225562520",
+        "plateau_gml_id": "bldg_1d16aa12-e51e-44b5-b345-c63bfdd0354c"
+      },
+      {
+        "iou": 0.8469,
+        "osm_source_ref": "way/1507403777",
+        "plateau_gml_id": "bldg_1e8792c9-6656-4521-a635-30507c480924"
+      },
+      {
+        "iou": 0.7814,
+        "osm_source_ref": "way/1507403570",
+        "plateau_gml_id": "bldg_1f15fa29-4bb1-43b2-bbf3-60d95f4ad4c5"
+      },
+      {
+        "iou": 0.7982,
+        "osm_source_ref": "way/1507403756",
+        "plateau_gml_id": "bldg_2015485e-bff7-4615-9ae0-cc213286db8d"
+      },
+      {
+        "iou": 0.6208,
+        "osm_source_ref": "way/725138198",
+        "plateau_gml_id": "bldg_205ce421-4257-4cac-90b9-61028626b038"
+      },
+      {
+        "iou": 0.881,
+        "osm_source_ref": "way/725138579",
+        "plateau_gml_id": "bldg_22635aa6-fc13-4d5b-8fae-b203a9c4c50f"
+      },
+      {
+        "iou": 0.6988,
+        "osm_source_ref": "way/725138563",
+        "plateau_gml_id": "bldg_231915e0-dcea-436c-9cc4-cffbc151d2b2"
+      },
+      {
+        "iou": 0.84,
+        "osm_source_ref": "way/725138496",
+        "plateau_gml_id": "bldg_237fba30-d899-423a-8736-981b366d55ef"
+      },
+      {
+        "iou": 0.9516,
+        "osm_source_ref": "way/725138508",
+        "plateau_gml_id": "bldg_23c42b07-72f6-4da6-82b9-a92597a2e2fd"
+      },
+      {
+        "iou": 0.71,
+        "osm_source_ref": "way/225563760",
+        "plateau_gml_id": "bldg_23d3ee48-c3cb-477e-8029-4a807d923aa6"
+      },
+      {
+        "iou": 0.6784,
+        "osm_source_ref": "way/1507403722",
+        "plateau_gml_id": "bldg_23f99713-6932-4511-bfc1-3718a9591ea5"
+      },
+      {
+        "iou": 0.8428,
+        "osm_source_ref": "way/1507403645",
+        "plateau_gml_id": "bldg_23fa6ac8-76e3-459a-be72-8eae139b6f72"
+      },
+      {
+        "iou": 0.828,
+        "osm_source_ref": "way/1507398023",
+        "plateau_gml_id": "bldg_26946b56-02d9-4e19-8cec-02409db6d2e1"
+      },
+      {
+        "iou": 0.8845,
+        "osm_source_ref": "way/725138437",
+        "plateau_gml_id": "bldg_26bf0d1a-95b5-4bae-a307-083fca8897e1"
+      },
+      {
+        "iou": 0.6953,
+        "osm_source_ref": "way/225367852",
+        "plateau_gml_id": "bldg_26c8afd4-efee-440a-8b71-6e5d196434aa"
+      },
+      {
+        "iou": 0.9404,
+        "osm_source_ref": "way/725138479",
+        "plateau_gml_id": "bldg_26e8c29f-904e-422d-9b12-efeb17dda937"
+      },
+      {
+        "iou": 0.7951,
+        "osm_source_ref": "way/1507403690",
+        "plateau_gml_id": "bldg_26f0e77a-aea6-491c-874f-24e8805ae384"
+      },
+      {
+        "iou": 0.7974,
+        "osm_source_ref": "way/1507403701",
+        "plateau_gml_id": "bldg_26f283cd-5826-4809-acd9-dc7cdf76f182"
+      },
+      {
+        "iou": 0.7886,
+        "osm_source_ref": "way/1507403536",
+        "plateau_gml_id": "bldg_271ac302-32a6-42c3-962d-ef5ca3f586bb"
+      },
+      {
+        "iou": 0.638,
+        "osm_source_ref": "way/725137914",
+        "plateau_gml_id": "bldg_271baa71-2831-4534-bf7c-ba705bfe8734"
+      },
+      {
+        "iou": 0.7316,
+        "osm_source_ref": "way/1507403616",
+        "plateau_gml_id": "bldg_2a75b7dd-3e91-4e83-89eb-ece4f9d7a93c"
+      },
+      {
+        "iou": 0.8747,
+        "osm_source_ref": "way/725138530",
+        "plateau_gml_id": "bldg_2a9d485e-c3b9-4dcb-96b1-cd7b7415edd1"
+      },
+      {
+        "iou": 0.8263,
+        "osm_source_ref": "way/477599546",
+        "plateau_gml_id": "bldg_2be5698f-bdda-4d80-aaa8-e12dc02c9711"
+      },
+      {
+        "iou": 0.7777,
+        "osm_source_ref": "way/1507403742",
+        "plateau_gml_id": "bldg_2bea5c80-fcdf-40a9-91dd-0a0485e35353"
+      },
+      {
+        "iou": 0.5781,
+        "osm_source_ref": "way/225563757",
+        "plateau_gml_id": "bldg_2beb6b27-1cb5-452f-9f26-d020f23f227c"
+      },
+      {
+        "iou": 0.7615,
+        "osm_source_ref": "way/225197478",
+        "plateau_gml_id": "bldg_2c12cf83-07b1-4164-96e7-8d970c2aef23"
+      },
+      {
+        "iou": 0.8948,
+        "osm_source_ref": "way/1507403607",
+        "plateau_gml_id": "bldg_2c1bbd64-fb5e-47d0-964d-eae97e14a9e8"
+      },
+      {
+        "iou": 0.8177,
+        "osm_source_ref": "way/725137989",
+        "plateau_gml_id": "bldg_2c88298b-f1ab-4fc0-acb4-313ffc7be6a4"
+      },
+      {
+        "iou": 0.7664,
+        "osm_source_ref": "way/1507403694",
+        "plateau_gml_id": "bldg_2d2232a8-f0f6-46fe-88b0-82a86f021fc6"
+      },
+      {
+        "iou": 0.8048,
+        "osm_source_ref": "way/1507398016",
+        "plateau_gml_id": "bldg_2d7d3fd3-ee1d-403f-b81c-93fc9775fe84"
+      },
+      {
+        "iou": 0.7614,
+        "osm_source_ref": "way/1507403655",
+        "plateau_gml_id": "bldg_2db5111c-9f53-4060-9d75-4f3f473cb8a4"
+      },
+      {
+        "iou": 0.8268,
+        "osm_source_ref": "way/1507403723",
+        "plateau_gml_id": "bldg_2e371936-c9ce-4031-8243-2d018f2cc031"
+      },
+      {
+        "iou": 0.8462,
+        "osm_source_ref": "way/1507403661",
+        "plateau_gml_id": "bldg_2e8678d1-4d34-44b2-987f-0793b8d8c0b7"
+      },
+      {
+        "iou": 0.5384,
+        "osm_source_ref": "way/225101506",
+        "plateau_gml_id": "bldg_2f654fcb-c0c1-412c-822a-8e40c5e8ef8a"
+      },
+      {
+        "iou": 0.8266,
+        "osm_source_ref": "way/1507403677",
+        "plateau_gml_id": "bldg_2fc57aef-fa84-4010-b21f-9d4549256557"
+      },
+      {
+        "iou": 0.7463,
+        "osm_source_ref": "way/1507398012",
+        "plateau_gml_id": "bldg_3014061a-419d-487e-bc93-60efcf12f80d"
+      },
+      {
+        "iou": 0.9091,
+        "osm_source_ref": "way/725137836",
+        "plateau_gml_id": "bldg_302850db-228f-44e2-9f50-a5df1fb11170"
+      },
+      {
+        "iou": 0.9365,
+        "osm_source_ref": "way/1507403794",
+        "plateau_gml_id": "bldg_30806e41-2e7d-4224-b8ee-403324fd92dc"
+      },
+      {
+        "iou": 0.9472,
+        "osm_source_ref": "way/725138107",
+        "plateau_gml_id": "bldg_309157c0-ff19-4b68-b294-65ed02341783"
+      },
+      {
+        "iou": 0.8583,
+        "osm_source_ref": "way/725138388",
+        "plateau_gml_id": "bldg_309f4b4e-3660-4005-980c-df78832d44e4"
+      },
+      {
+        "iou": 0.7856,
+        "osm_source_ref": "way/1507403706",
+        "plateau_gml_id": "bldg_30bf2314-d1d8-4941-b629-c3e107be62bb"
+      },
+      {
+        "iou": 0.9464,
+        "osm_source_ref": "way/725138452",
+        "plateau_gml_id": "bldg_30c3087d-4b4f-4a01-a89c-885e59dc05fd"
+      },
+      {
+        "iou": 0.7087,
+        "osm_source_ref": "way/1507398010",
+        "plateau_gml_id": "bldg_30d55b7c-af29-43eb-b25a-5663af5ac1a1"
+      },
+      {
+        "iou": 0.6763,
+        "osm_source_ref": "way/1507398021",
+        "plateau_gml_id": "bldg_30ddae86-302b-440b-8b5c-291047dd39d1"
+      },
+      {
+        "iou": 0.8765,
+        "osm_source_ref": "way/1507403642",
+        "plateau_gml_id": "bldg_320fe26e-a2ac-4c46-9b39-0b00c1c0103a"
+      },
+      {
+        "iou": 0.5868,
+        "osm_source_ref": "way/725138431",
+        "plateau_gml_id": "bldg_323e1d7e-b9f6-4b00-8cfd-47ee76296582"
+      },
+      {
+        "iou": 0.9014,
+        "osm_source_ref": "way/725137850",
+        "plateau_gml_id": "bldg_3274a394-e2d5-4b1c-8832-41c61a72c192"
+      },
+      {
+        "iou": 0.5363,
+        "osm_source_ref": "way/225563759",
+        "plateau_gml_id": "bldg_329f6e9f-ffa0-42b3-81ba-bba599773a2d"
+      },
+      {
+        "iou": 0.6301,
+        "osm_source_ref": "way/1507398011",
+        "plateau_gml_id": "bldg_32d8aa7f-4b22-47bf-8928-e985bf69260f"
+      },
+      {
+        "iou": 0.861,
+        "osm_source_ref": "way/725138447",
+        "plateau_gml_id": "bldg_33539854-d4de-438b-a2da-f0acc3fa4097"
+      },
+      {
+        "iou": 0.699,
+        "osm_source_ref": "way/1507403533",
+        "plateau_gml_id": "bldg_339ba118-f0c7-431c-a458-f8efae9cca39"
+      },
+      {
+        "iou": 0.6972,
+        "osm_source_ref": "way/725138377",
+        "plateau_gml_id": "bldg_345e75c0-721f-48e3-86af-7db9f2a96a76"
+      },
+      {
+        "iou": 0.6739,
+        "osm_source_ref": "way/725138416",
+        "plateau_gml_id": "bldg_346cf265-ed20-4647-ad73-026a0ef5e080"
+      },
+      {
+        "iou": 0.7847,
+        "osm_source_ref": "way/1507403697",
+        "plateau_gml_id": "bldg_3596c68e-7368-4c19-a081-aaa6045cfa70"
+      },
+      {
+        "iou": 0.8914,
+        "osm_source_ref": "way/725138202",
+        "plateau_gml_id": "bldg_3714dfcb-b0bc-4f5c-9eda-d913fe4b48ef"
+      },
+      {
+        "iou": 0.6199,
+        "osm_source_ref": "way/1507403771",
+        "plateau_gml_id": "bldg_37daabdd-80a3-4802-b51f-1ce839947683"
+      },
+      {
+        "iou": 0.5991,
+        "osm_source_ref": "way/1507398045",
+        "plateau_gml_id": "bldg_383015c7-ef6d-4fd8-b557-691afdcffb96"
+      },
+      {
+        "iou": 0.6606,
+        "osm_source_ref": "way/225369238",
+        "plateau_gml_id": "bldg_3831c43d-d64c-4ac2-a6f0-c2f6853292b1"
+      },
+      {
+        "iou": 0.7997,
+        "osm_source_ref": "way/1507403544",
+        "plateau_gml_id": "bldg_3871dec0-9a44-4f1c-bdc4-f3ba945da7ef"
+      },
+      {
+        "iou": 0.8035,
+        "osm_source_ref": "way/1507403688",
+        "plateau_gml_id": "bldg_38912241-4c8f-4390-9a1f-09192b0354ca"
+      },
+      {
+        "iou": 0.8402,
+        "osm_source_ref": "way/1507403741",
+        "plateau_gml_id": "bldg_3acd0085-b983-4d89-b245-390428ca9bd7"
+      },
+      {
+        "iou": 0.9368,
+        "osm_source_ref": "way/725138546",
+        "plateau_gml_id": "bldg_3b390e3f-53ac-4960-a7d0-5f0872823675"
+      },
+      {
+        "iou": 0.9068,
+        "osm_source_ref": "way/725138236",
+        "plateau_gml_id": "bldg_3c0ebe24-88e8-4ffe-90bc-274e0d5f2cc9"
+      },
+      {
+        "iou": 0.6318,
+        "osm_source_ref": "way/1507403663",
+        "plateau_gml_id": "bldg_3d66dcfa-d4b6-46c2-9fcc-a2e2da881c0f"
+      },
+      {
+        "iou": 0.7437,
+        "osm_source_ref": "way/1507403523",
+        "plateau_gml_id": "bldg_3dc2a5a3-671b-4db1-b543-37966ee577a5"
+      },
+      {
+        "iou": 0.6986,
+        "osm_source_ref": "way/1507398058",
+        "plateau_gml_id": "bldg_3df0b72a-d710-4b5e-aafa-530a24cb3d24"
+      },
+      {
+        "iou": 0.9166,
+        "osm_source_ref": "way/725138556",
+        "plateau_gml_id": "bldg_3e17d585-ab25-4eb7-9fb1-29564c32ae81"
+      },
+      {
+        "iou": 0.565,
+        "osm_source_ref": "way/225562525",
+        "plateau_gml_id": "bldg_3f3e3b4d-7294-4753-9a10-feba780d4dbd"
+      },
+      {
+        "iou": 0.7883,
+        "osm_source_ref": "way/1507403654",
+        "plateau_gml_id": "bldg_3f4543f4-5034-4121-9151-1f5581a6a90e"
+      },
+      {
+        "iou": 0.8808,
+        "osm_source_ref": "way/725138424",
+        "plateau_gml_id": "bldg_3f5590ef-b4da-414c-bbe0-d294175fa7a4"
+      },
+      {
+        "iou": 0.8983,
+        "osm_source_ref": "way/725138270",
+        "plateau_gml_id": "bldg_3f6ac4ac-e5ac-48c5-847f-8041edf64268"
+      },
+      {
+        "iou": 0.8269,
+        "osm_source_ref": "way/1507403738",
+        "plateau_gml_id": "bldg_3f7d1143-f31c-4d53-99e8-ca88d3d35ed3"
+      },
+      {
+        "iou": 0.6079,
+        "osm_source_ref": "way/1507398008",
+        "plateau_gml_id": "bldg_40dca8ee-3827-4541-a6d1-6f4ab7a8335e"
+      },
+      {
+        "iou": 0.8466,
+        "osm_source_ref": "way/1507403680",
+        "plateau_gml_id": "bldg_4114a2a8-df09-4473-9614-25ea8e9ae5e8"
+      },
+      {
+        "iou": 0.8687,
+        "osm_source_ref": "way/725137957",
+        "plateau_gml_id": "bldg_419ef7c3-7136-476f-b8f4-9017d67a0ce4"
+      },
+      {
+        "iou": 0.8128,
+        "osm_source_ref": "way/1507403696",
+        "plateau_gml_id": "bldg_4230c193-e44a-4e6d-baf8-989fff4c368d"
+      },
+      {
+        "iou": 0.8362,
+        "osm_source_ref": "way/1507403725",
+        "plateau_gml_id": "bldg_43872021-56b2-4b51-bd9f-10faa8771154"
+      },
+      {
+        "iou": 0.7729,
+        "osm_source_ref": "way/1507403714",
+        "plateau_gml_id": "bldg_4419d468-267c-4ee0-8867-bd7a69aa975c"
+      },
+      {
+        "iou": 0.9005,
+        "osm_source_ref": "way/725138177",
+        "plateau_gml_id": "bldg_445e904c-d65f-44fe-8af5-a784f7ce6eeb"
+      },
+      {
+        "iou": 0.7,
+        "osm_source_ref": "way/1507403781",
+        "plateau_gml_id": "bldg_449dc823-dc9f-43cf-af84-16008ff86e66"
+      },
+      {
+        "iou": 0.8597,
+        "osm_source_ref": "way/725138026",
+        "plateau_gml_id": "bldg_44ddab15-214c-4da7-860d-1c4d81ef7b32"
+      },
+      {
+        "iou": 0.5576,
+        "osm_source_ref": "way/725138222",
+        "plateau_gml_id": "bldg_45472be0-d65b-4195-8a88-ac9eeabae665"
+      },
+      {
+        "iou": 0.8727,
+        "osm_source_ref": "way/477599554",
+        "plateau_gml_id": "bldg_463fa6c4-4a10-4e28-8840-bd8493270390"
+      },
+      {
+        "iou": 0.8502,
+        "osm_source_ref": "way/725138638",
+        "plateau_gml_id": "bldg_472eb0e5-4c87-45ba-983d-f419d767eb43"
+      },
+      {
+        "iou": 0.8271,
+        "osm_source_ref": "way/725138380",
+        "plateau_gml_id": "bldg_4752f6de-6adc-4e93-a1da-3f896a63bcd7"
+      },
+      {
+        "iou": 0.9311,
+        "osm_source_ref": "way/725138449",
+        "plateau_gml_id": "bldg_477ebe5a-d150-4eeb-93e1-61e3fe6edfd9"
+      },
+      {
+        "iou": 0.9142,
+        "osm_source_ref": "way/1507398035",
+        "plateau_gml_id": "bldg_47bab7ed-0c0f-4545-9689-9f156e455c44"
+      },
+      {
+        "iou": 0.7637,
+        "osm_source_ref": "way/477599556",
+        "plateau_gml_id": "bldg_47c7fa7a-4ebc-4b79-99c8-5fd3e879d8ee"
+      },
+      {
+        "iou": 0.8893,
+        "osm_source_ref": "way/725138565",
+        "plateau_gml_id": "bldg_4848d934-3fdb-4ef3-8cda-6b8ed195a591"
+      },
+      {
+        "iou": 0.8938,
+        "osm_source_ref": "way/1507403613",
+        "plateau_gml_id": "bldg_489522a1-5bd4-4e1b-ae22-0dc5e2434cb7"
+      },
+      {
+        "iou": 0.8993,
+        "osm_source_ref": "way/1507398062",
+        "plateau_gml_id": "bldg_4a2e536b-5806-4f04-a692-37480984361b"
+      },
+      {
+        "iou": 0.8673,
+        "osm_source_ref": "way/1507403535",
+        "plateau_gml_id": "bldg_4aed2178-c4e5-45fe-8ed2-29bc307f6351"
+      },
+      {
+        "iou": 0.7412,
+        "osm_source_ref": "way/1507403610",
+        "plateau_gml_id": "bldg_4b421276-0519-495a-b249-c3ec50001153"
+      },
+      {
+        "iou": 0.7929,
+        "osm_source_ref": "way/1507403709",
+        "plateau_gml_id": "bldg_4c9057d4-3cc0-49f9-9dfd-2c2889c759e4"
+      },
+      {
+        "iou": 0.907,
+        "osm_source_ref": "way/725138632",
+        "plateau_gml_id": "bldg_4cadb061-d6d4-4265-b489-6a31a8895be2"
+      },
+      {
+        "iou": 0.824,
+        "osm_source_ref": "way/1507403516",
+        "plateau_gml_id": "bldg_4d2c425b-e548-4878-815a-b8dca2dc6fb3"
+      },
+      {
+        "iou": 0.9558,
+        "osm_source_ref": "way/725137951",
+        "plateau_gml_id": "bldg_4dbc9ecb-e4fb-494a-9cd0-efbeb0f5a9fc"
+      },
+      {
+        "iou": 0.8456,
+        "osm_source_ref": "way/1507403528",
+        "plateau_gml_id": "bldg_4e033861-058d-4ed9-a150-f3c9e53863c5"
+      },
+      {
+        "iou": 0.8549,
+        "osm_source_ref": "way/1507403660",
+        "plateau_gml_id": "bldg_4e911d6c-8ead-4ee8-9f2e-0ba97eeb39fd"
+      },
+      {
+        "iou": 0.8982,
+        "osm_source_ref": "way/1507403567",
+        "plateau_gml_id": "bldg_4e9e0f7a-2836-4655-b343-7987d7738457"
+      },
+      {
+        "iou": 0.7673,
+        "osm_source_ref": "way/1507403527",
+        "plateau_gml_id": "bldg_4f1fa1f0-29d0-4445-8a88-3671eff7960d"
+      },
+      {
+        "iou": 0.9359,
+        "osm_source_ref": "way/725138015",
+        "plateau_gml_id": "bldg_4f2d1668-d83e-40a9-8006-96314a29fa9b"
+      },
+      {
+        "iou": 0.7253,
+        "osm_source_ref": "way/1507403511",
+        "plateau_gml_id": "bldg_4f4636d3-9d5e-458c-a918-4192e060fa4d"
+      },
+      {
+        "iou": 0.7791,
+        "osm_source_ref": "way/1507398046",
+        "plateau_gml_id": "bldg_4f51361f-a783-4161-a74b-f1793af5f0f9"
+      },
+      {
+        "iou": 0.9269,
+        "osm_source_ref": "way/725137869",
+        "plateau_gml_id": "bldg_4f97d636-34ca-43f5-a425-9231232a6bea"
+      },
+      {
+        "iou": 0.737,
+        "osm_source_ref": "way/1507403763",
+        "plateau_gml_id": "bldg_4fb1466a-7cc1-4f0a-8aa7-22a14d0592e2"
+      },
+      {
+        "iou": 0.7865,
+        "osm_source_ref": "way/1507403526",
+        "plateau_gml_id": "bldg_4fe76edf-ac98-4a3a-94b0-fdc43208b15d"
+      },
+      {
+        "iou": 0.8,
+        "osm_source_ref": "way/725138525",
+        "plateau_gml_id": "bldg_4ff6b7de-b8ce-4b9c-81b7-34751e13af5f"
+      },
+      {
+        "iou": 0.7577,
+        "osm_source_ref": "way/225197535",
+        "plateau_gml_id": "bldg_5148f923-090e-41b0-b9dc-973c1ca447ab"
+      },
+      {
+        "iou": 0.525,
+        "osm_source_ref": "way/225197887",
+        "plateau_gml_id": "bldg_51ee6856-ba05-4410-a8e8-31e491e9e986"
+      },
+      {
+        "iou": 0.9211,
+        "osm_source_ref": "way/1507403812",
+        "plateau_gml_id": "bldg_549ef3f7-6fe8-4b89-8a79-d5ecfe97b5f1"
+      },
+      {
+        "iou": 0.8979,
+        "osm_source_ref": "way/1507403764",
+        "plateau_gml_id": "bldg_55454830-1186-48fd-9280-02356a3780aa"
+      },
+      {
+        "iou": 0.5487,
+        "osm_source_ref": "way/1507403752",
+        "plateau_gml_id": "bldg_55d8b55e-298e-4666-bfa7-43e10a31875f"
+      },
+      {
+        "iou": 0.9149,
+        "osm_source_ref": "way/725138609",
+        "plateau_gml_id": "bldg_5702133e-214b-4867-9c6c-e0bce28ab76b"
+      },
+      {
+        "iou": 0.7329,
+        "osm_source_ref": "way/477645418",
+        "plateau_gml_id": "bldg_5704613a-bf04-4519-beae-31e403dc5295"
+      },
+      {
+        "iou": 0.9038,
+        "osm_source_ref": "way/725138584",
+        "plateau_gml_id": "bldg_5714ea89-f03f-4c67-bf52-fda3102094d3"
+      },
+      {
+        "iou": 0.7919,
+        "osm_source_ref": "way/725138544",
+        "plateau_gml_id": "bldg_57728d27-1c1f-4adb-aa7b-4f6e6c82949e"
+      },
+      {
+        "iou": 0.794,
+        "osm_source_ref": "way/1507403784",
+        "plateau_gml_id": "bldg_57a87689-d878-4b49-9bb7-c3d93c274c26"
+      },
+      {
+        "iou": 0.766,
+        "osm_source_ref": "way/725138272",
+        "plateau_gml_id": "bldg_580164ef-dded-457d-b3a3-1d1277b4d6ae"
+      },
+      {
+        "iou": 0.8414,
+        "osm_source_ref": "way/725138507",
+        "plateau_gml_id": "bldg_581bcb55-82d3-4dae-836a-ba351b4e3d14"
+      },
+      {
+        "iou": 0.6903,
+        "osm_source_ref": "way/1507403686",
+        "plateau_gml_id": "bldg_585a060a-1f20-492f-b370-9a605717a5ed"
+      },
+      {
+        "iou": 0.7845,
+        "osm_source_ref": "way/1507403700",
+        "plateau_gml_id": "bldg_58b089ff-c1b6-4a86-8031-d3a1bbdedd01"
+      },
+      {
+        "iou": 0.8478,
+        "osm_source_ref": "way/1507403735",
+        "plateau_gml_id": "bldg_58fbf189-3ee8-411a-919c-420e5a871b81"
+      },
+      {
+        "iou": 0.9042,
+        "osm_source_ref": "way/725138125",
+        "plateau_gml_id": "bldg_59ca8749-be2f-4ec4-b8de-5466a6fb8ed1"
+      },
+      {
+        "iou": 0.8048,
+        "osm_source_ref": "way/1507403520",
+        "plateau_gml_id": "bldg_59e2f6d3-f4b4-42dd-9bb4-07660e1a0303"
+      },
+      {
+        "iou": 0.8568,
+        "osm_source_ref": "way/725138404",
+        "plateau_gml_id": "bldg_5a48fe66-ba9b-4380-8782-7d722e84ad03"
+      },
+      {
+        "iou": 0.5936,
+        "osm_source_ref": "way/725138378",
+        "plateau_gml_id": "bldg_5b462724-8028-4ea0-9ad1-9dc03d257081"
+      },
+      {
+        "iou": 0.755,
+        "osm_source_ref": "way/1507398022",
+        "plateau_gml_id": "bldg_5c3fdb4c-1a5d-4337-af37-80159fa0c89f"
+      },
+      {
+        "iou": 0.7568,
+        "osm_source_ref": "way/1507403695",
+        "plateau_gml_id": "bldg_5d37a023-16f4-4fc2-a621-bc5151f30277"
+      },
+      {
+        "iou": 0.8737,
+        "osm_source_ref": "way/225369230",
+        "plateau_gml_id": "bldg_5d7cf351-2e58-405c-8840-3b9e7ce85e6d"
+      },
+      {
+        "iou": 0.6555,
+        "osm_source_ref": "way/225367806",
+        "plateau_gml_id": "bldg_5fa9a736-6fa0-4785-bdd0-af9fcdea0569"
+      },
+      {
+        "iou": 0.8133,
+        "osm_source_ref": "way/1507403717",
+        "plateau_gml_id": "bldg_5fd56a32-cb25-4132-b6dc-2894a0f34d21"
+      },
+      {
+        "iou": 0.7298,
+        "osm_source_ref": "way/1507403569",
+        "plateau_gml_id": "bldg_5fff6e34-2014-47b9-898f-49227e537aa4"
+      },
+      {
+        "iou": 0.8687,
+        "osm_source_ref": "way/725138000",
+        "plateau_gml_id": "bldg_60f2a429-77aa-4226-931f-9a23b3369bd4"
+      },
+      {
+        "iou": 0.6794,
+        "osm_source_ref": "way/725138085",
+        "plateau_gml_id": "bldg_61f57b1c-1e25-4f06-a3e8-63464377e42b"
+      },
+      {
+        "iou": 0.7482,
+        "osm_source_ref": "way/1507403650",
+        "plateau_gml_id": "bldg_62a24ac7-687c-45ff-8307-f8dc9a133111"
+      },
+      {
+        "iou": 0.8521,
+        "osm_source_ref": "way/1507403726",
+        "plateau_gml_id": "bldg_637cc378-98c1-4715-acbe-40a6595addf1"
+      },
+      {
+        "iou": 0.9211,
+        "osm_source_ref": "way/725138376",
+        "plateau_gml_id": "bldg_63d04a99-da71-4efd-aee3-a104d116d406"
+      },
+      {
+        "iou": 0.912,
+        "osm_source_ref": "way/725138644",
+        "plateau_gml_id": "bldg_64a43fe2-e31f-43a9-80fe-4fbfe85c3039"
+      },
+      {
+        "iou": 0.5281,
+        "osm_source_ref": "way/225369228",
+        "plateau_gml_id": "bldg_65b7ca1f-ae9a-483f-ab4d-1ca20a1591b6"
+      },
+      {
+        "iou": 0.8838,
+        "osm_source_ref": "way/725137987",
+        "plateau_gml_id": "bldg_65ea74f1-3ebb-4b51-a37b-c7ce6aab01a4"
+      },
+      {
+        "iou": 0.5561,
+        "osm_source_ref": "way/725138346",
+        "plateau_gml_id": "bldg_662a71e2-25c9-4a87-8613-b6c6b68a3c22"
+      },
+      {
+        "iou": 0.7489,
+        "osm_source_ref": "way/1507403561",
+        "plateau_gml_id": "bldg_67158582-73e7-476b-8d0c-cc6312a78d7b"
+      },
+      {
+        "iou": 0.5944,
+        "osm_source_ref": "way/1507403675",
+        "plateau_gml_id": "bldg_686c0532-2484-431d-88df-a6f57d91b720"
+      },
+      {
+        "iou": 0.6447,
+        "osm_source_ref": "way/725138402",
+        "plateau_gml_id": "bldg_68907c2d-f6ad-42b2-81a4-c31090bd0aa0"
+      },
+      {
+        "iou": 0.7948,
+        "osm_source_ref": "way/725138570",
+        "plateau_gml_id": "bldg_68dca1e3-1c91-4443-abc8-715b0c72c947"
+      },
+      {
+        "iou": 0.6046,
+        "osm_source_ref": "way/1507403790",
+        "plateau_gml_id": "bldg_692d7a6b-1110-4dbc-840a-c385526b6712"
+      },
+      {
+        "iou": 0.8506,
+        "osm_source_ref": "way/725138539",
+        "plateau_gml_id": "bldg_69315095-e917-49f7-8609-ee0a3598cbe7"
+      },
+      {
+        "iou": 0.7331,
+        "osm_source_ref": "way/725138078",
+        "plateau_gml_id": "bldg_69df2abd-dfcd-4aa5-8f10-b30ad45d62fa"
+      },
+      {
+        "iou": 0.8266,
+        "osm_source_ref": "way/1507398020",
+        "plateau_gml_id": "bldg_6b107fb0-231e-4775-a573-bcad8231de61"
+      },
+      {
+        "iou": 0.5766,
+        "osm_source_ref": "way/225369237",
+        "plateau_gml_id": "bldg_6b7b9119-a0ed-4f99-975f-87181997fa37"
+      },
+      {
+        "iou": 0.6876,
+        "osm_source_ref": "way/1507403692",
+        "plateau_gml_id": "bldg_6c1fb699-9f23-40d8-95bc-dc3587f84a58"
+      },
+      {
+        "iou": 0.7855,
+        "osm_source_ref": "way/1507403521",
+        "plateau_gml_id": "bldg_6c2f2e33-083a-4b47-80ec-141cca18860c"
+      },
+      {
+        "iou": 0.8462,
+        "osm_source_ref": "way/1507403615",
+        "plateau_gml_id": "bldg_6c4af713-5138-4845-b6c1-ec8e4022e8f7"
+      },
+      {
+        "iou": 0.7221,
+        "osm_source_ref": "way/1507403540",
+        "plateau_gml_id": "bldg_6c818cd7-ee5b-4e01-8819-9c90d3c026cd"
+      },
+      {
+        "iou": 0.5732,
+        "osm_source_ref": "way/225197884",
+        "plateau_gml_id": "bldg_6cb16507-6b93-454e-99fd-b45332edf5f9"
+      },
+      {
+        "iou": 0.5653,
+        "osm_source_ref": "way/725138136",
+        "plateau_gml_id": "bldg_6e71178c-1a6f-4b9f-8893-033c25001011"
+      },
+      {
+        "iou": 0.8217,
+        "osm_source_ref": "way/1507403721",
+        "plateau_gml_id": "bldg_6ed7315b-3a6e-4ea8-adbe-73dfbd7213d4"
+      },
+      {
+        "iou": 0.8548,
+        "osm_source_ref": "way/1507403808",
+        "plateau_gml_id": "bldg_6f3f7b19-3f5f-48a6-a544-a96e9d8afc29"
+      },
+      {
+        "iou": 0.8794,
+        "osm_source_ref": "way/725138436",
+        "plateau_gml_id": "bldg_6f867ba2-565b-42c6-b0aa-8e9eaab722a1"
+      },
+      {
+        "iou": 0.7284,
+        "osm_source_ref": "way/477599555",
+        "plateau_gml_id": "bldg_6fa4636c-e2dd-4ef4-b87a-d651f80c42c1"
+      },
+      {
+        "iou": 0.9205,
+        "osm_source_ref": "way/725137886",
+        "plateau_gml_id": "bldg_6fea2729-5513-4082-aa87-cce953dd9054"
+      },
+      {
+        "iou": 0.8709,
+        "osm_source_ref": "way/1507403740",
+        "plateau_gml_id": "bldg_70009504-5f1f-4be8-88f9-d097df51a9f3"
+      },
+      {
+        "iou": 0.8957,
+        "osm_source_ref": "way/725138529",
+        "plateau_gml_id": "bldg_70095d11-2368-44a8-871d-f43d24f55b6f"
+      },
+      {
+        "iou": 0.8414,
+        "osm_source_ref": "way/725138612",
+        "plateau_gml_id": "bldg_71371cdc-a07b-421d-b2be-0e7987852a80"
+      },
+      {
+        "iou": 0.7395,
+        "osm_source_ref": "way/1507398054",
+        "plateau_gml_id": "bldg_7283b89e-af77-4afa-be39-86f0d080c2f7"
+      },
+      {
+        "iou": 0.7183,
+        "osm_source_ref": "way/1507403724",
+        "plateau_gml_id": "bldg_72a68922-75f3-4a7c-9fea-fccaaf010d92"
+      },
+      {
+        "iou": 0.8068,
+        "osm_source_ref": "way/1507398013",
+        "plateau_gml_id": "bldg_731dabf2-028f-4a39-911c-c431f0e26c0d"
+      },
+      {
+        "iou": 0.853,
+        "osm_source_ref": "way/1507403748",
+        "plateau_gml_id": "bldg_7395ad8f-87f1-4ec1-af6b-df6693639911"
+      },
+      {
+        "iou": 0.6877,
+        "osm_source_ref": "way/725138390",
+        "plateau_gml_id": "bldg_7436e0a4-63b1-49ac-8521-5083270e017a"
+      },
+      {
+        "iou": 0.8208,
+        "osm_source_ref": "way/1507403665",
+        "plateau_gml_id": "bldg_74950991-c970-45ae-befd-ff43235f62d2"
+      },
+      {
+        "iou": 0.7794,
+        "osm_source_ref": "way/725138428",
+        "plateau_gml_id": "bldg_75dc3b67-1ff4-474b-9f9c-a15b84822f88"
+      },
+      {
+        "iou": 0.8645,
+        "osm_source_ref": "way/1507403620",
+        "plateau_gml_id": "bldg_75eab40c-7ea7-4b8e-8eb9-479494718a2d"
+      },
+      {
+        "iou": 0.9299,
+        "osm_source_ref": "way/725138482",
+        "plateau_gml_id": "bldg_761146d5-c4fa-411b-aa87-0ff66a9441dd"
+      },
+      {
+        "iou": 0.7579,
+        "osm_source_ref": "way/1507398026",
+        "plateau_gml_id": "bldg_76f4cd9d-bdc7-4c0d-95f3-8731b51c8bf0"
+      },
+      {
+        "iou": 0.8527,
+        "osm_source_ref": "way/1507403550",
+        "plateau_gml_id": "bldg_770694e3-112e-42ad-8580-3e1e6d03a524"
+      },
+      {
+        "iou": 0.7853,
+        "osm_source_ref": "way/1507403731",
+        "plateau_gml_id": "bldg_77414212-810c-4ecb-9c5e-de9bea708c3a"
+      },
+      {
+        "iou": 0.8901,
+        "osm_source_ref": "way/1507403547",
+        "plateau_gml_id": "bldg_7757850e-ee5f-4895-ac09-b45fd34cedc5"
+      },
+      {
+        "iou": 0.7627,
+        "osm_source_ref": "way/1507403519",
+        "plateau_gml_id": "bldg_787799a7-fa8a-47ca-83df-1f9d97fbf44c"
+      },
+      {
+        "iou": 0.8662,
+        "osm_source_ref": "way/1507403524",
+        "plateau_gml_id": "bldg_7927ca5a-a796-4f63-a20a-c0c9b323f449"
+      },
+      {
+        "iou": 0.7359,
+        "osm_source_ref": "way/725138045",
+        "plateau_gml_id": "bldg_792933ea-2b7b-4481-9ed4-1a3c1ead5013"
+      },
+      {
+        "iou": 0.689,
+        "osm_source_ref": "way/1507403676",
+        "plateau_gml_id": "bldg_79529474-6c30-4715-b2f1-f20db1543ceb"
+      },
+      {
+        "iou": 0.6629,
+        "osm_source_ref": "way/1507403501",
+        "plateau_gml_id": "bldg_7ab74a5f-e4d5-4ed8-baf2-43dda0640ae9"
+      },
+      {
+        "iou": 0.7858,
+        "osm_source_ref": "way/725138413",
+        "plateau_gml_id": "bldg_7b0e5e53-20f8-435d-a542-de959732e87a"
+      },
+      {
+        "iou": 0.7162,
+        "osm_source_ref": "way/1507403713",
+        "plateau_gml_id": "bldg_7b172bb4-45cd-4b01-9853-a18e1f2d1421"
+      },
+      {
+        "iou": 0.7285,
+        "osm_source_ref": "way/1507403783",
+        "plateau_gml_id": "bldg_7c284d34-eaa7-4dc9-b46d-c13db6d54fad"
+      },
+      {
+        "iou": 0.7528,
+        "osm_source_ref": "way/1507403611",
+        "plateau_gml_id": "bldg_7c58a300-e236-4e2b-86ce-a7e09daab2e5"
+      },
+      {
+        "iou": 0.9082,
+        "osm_source_ref": "way/725138619",
+        "plateau_gml_id": "bldg_7cba345a-a517-4835-b9e2-5a7b14a9ef36"
+      },
+      {
+        "iou": 0.7517,
+        "osm_source_ref": "way/1507403816",
+        "plateau_gml_id": "bldg_7d37f620-36f1-4dd4-a781-9958abbbc38d"
+      },
+      {
+        "iou": 0.7586,
+        "osm_source_ref": "way/1507403522",
+        "plateau_gml_id": "bldg_7d546abe-b05f-4426-a676-bbe11ba4f09a"
+      },
+      {
+        "iou": 0.6794,
+        "osm_source_ref": "way/725138442",
+        "plateau_gml_id": "bldg_7f88a335-6c0d-459e-af94-2d4557e330ec"
+      },
+      {
+        "iou": 0.8324,
+        "osm_source_ref": "way/477645420",
+        "plateau_gml_id": "bldg_7f94ea0f-2b81-4ef9-b827-043a07b4afe3"
+      },
+      {
+        "iou": 0.6876,
+        "osm_source_ref": "way/1507403666",
+        "plateau_gml_id": "bldg_7fd86d5d-f23d-4e33-b6c6-f8055e73062f"
+      },
+      {
+        "iou": 0.7817,
+        "osm_source_ref": "way/1507398015",
+        "plateau_gml_id": "bldg_809db142-a813-4d08-ae78-008b970a7342"
+      },
+      {
+        "iou": 0.9214,
+        "osm_source_ref": "way/725138230",
+        "plateau_gml_id": "bldg_80a95d89-59e4-4e82-8a45-98f0a2b44874"
+      },
+      {
+        "iou": 0.884,
+        "osm_source_ref": "way/725137996",
+        "plateau_gml_id": "bldg_80b31161-d84b-4279-baa0-ab32fef7fb87"
+      },
+      {
+        "iou": 0.7217,
+        "osm_source_ref": "way/1507403780",
+        "plateau_gml_id": "bldg_81c575cb-2049-43f5-b9bc-aee2b014e11f"
+      },
+      {
+        "iou": 0.7747,
+        "osm_source_ref": "way/1507403562",
+        "plateau_gml_id": "bldg_82982db0-514c-4360-a287-ecb3f09e0bd6"
+      },
+      {
+        "iou": 0.6134,
+        "osm_source_ref": "way/1507398047",
+        "plateau_gml_id": "bldg_830c8185-1ea1-4925-bb51-1bd0a0cf29ea"
+      },
+      {
+        "iou": 0.9126,
+        "osm_source_ref": "way/1507403814",
+        "plateau_gml_id": "bldg_835e89d0-12d4-4b85-a979-46a78b02957e"
+      },
+      {
+        "iou": 0.6801,
+        "osm_source_ref": "way/1507403775",
+        "plateau_gml_id": "bldg_8441bd2d-66fe-4034-b881-c57b45350016"
+      },
+      {
+        "iou": 0.7421,
+        "osm_source_ref": "way/1507403606",
+        "plateau_gml_id": "bldg_8470e797-351a-4946-a8e1-a86e159d1732"
+      },
+      {
+        "iou": 0.6375,
+        "osm_source_ref": "way/1507403786",
+        "plateau_gml_id": "bldg_8488fb31-a246-4749-ae06-947374aa524f"
+      },
+      {
+        "iou": 0.8488,
+        "osm_source_ref": "way/725138396",
+        "plateau_gml_id": "bldg_84afbec6-4053-47ff-8471-6614b55cbe5f"
+      },
+      {
+        "iou": 0.885,
+        "osm_source_ref": "way/1507403596",
+        "plateau_gml_id": "bldg_84e9db04-19ba-41c8-a305-86260d4545b6"
+      },
+      {
+        "iou": 0.9071,
+        "osm_source_ref": "way/725138399",
+        "plateau_gml_id": "bldg_84f82875-f95a-4de3-8405-71c5f02be418"
+      },
+      {
+        "iou": 0.9237,
+        "osm_source_ref": "way/725137912",
+        "plateau_gml_id": "bldg_853f0d05-c02c-45b5-924e-61c4616bb28c"
+      },
+      {
+        "iou": 0.7832,
+        "osm_source_ref": "way/1507403734",
+        "plateau_gml_id": "bldg_858d4316-e639-497b-bc3f-fcc251959b89"
+      },
+      {
+        "iou": 0.6225,
+        "osm_source_ref": "way/1507403776",
+        "plateau_gml_id": "bldg_86a431b0-8b2f-43be-9858-9a2e6cccecb5"
+      },
+      {
+        "iou": 0.5931,
+        "osm_source_ref": "way/725138113",
+        "plateau_gml_id": "bldg_86c81c24-4508-4fed-b32e-6e6c4ca920be"
+      },
+      {
+        "iou": 0.6968,
+        "osm_source_ref": "way/1507403517",
+        "plateau_gml_id": "bldg_86dde90d-48e9-4878-bde4-b56869e154f4"
+      },
+      {
+        "iou": 0.9091,
+        "osm_source_ref": "way/725138533",
+        "plateau_gml_id": "bldg_877c3093-9a25-4e6b-aeb1-b2565681b924"
+      },
+      {
+        "iou": 0.9024,
+        "osm_source_ref": "way/725138336",
+        "plateau_gml_id": "bldg_87da79a1-837d-4196-aa6d-3140bfa7e687"
+      },
+      {
+        "iou": 0.6835,
+        "osm_source_ref": "way/1507398055",
+        "plateau_gml_id": "bldg_880e3cb5-6d40-467a-a018-126e0da3a7c3"
+      },
+      {
+        "iou": 0.7229,
+        "osm_source_ref": "way/1507403711",
+        "plateau_gml_id": "bldg_893e9c13-5aa7-42e6-b2ab-4e41a65401a4"
+      },
+      {
+        "iou": 0.7638,
+        "osm_source_ref": "way/725138553",
+        "plateau_gml_id": "bldg_89bb5f96-1c04-4846-964a-8b9a6af3ee54"
+      },
+      {
+        "iou": 0.7862,
+        "osm_source_ref": "way/477599545",
+        "plateau_gml_id": "bldg_8a4877da-2a44-449f-bfc6-e8fae00b8d07"
+      },
+      {
+        "iou": 0.6826,
+        "osm_source_ref": "way/1507403560",
+        "plateau_gml_id": "bldg_8a4c158c-0f84-42c0-b4a2-34fb5dcc34a2"
+      },
+      {
+        "iou": 0.7704,
+        "osm_source_ref": "way/1507403618",
+        "plateau_gml_id": "bldg_8a8e1c42-9239-4dea-ab29-89da2626f762"
+      },
+      {
+        "iou": 0.8001,
+        "osm_source_ref": "way/1507403708",
+        "plateau_gml_id": "bldg_8aae0b34-bf54-4cf8-b956-dc78e65ed6dc"
+      },
+      {
+        "iou": 0.7459,
+        "osm_source_ref": "way/1507403525",
+        "plateau_gml_id": "bldg_8ad46bec-afeb-43c6-9121-3b55e8e28064"
+      },
+      {
+        "iou": 0.6433,
+        "osm_source_ref": "way/1507403787",
+        "plateau_gml_id": "bldg_8af66f64-ce00-4047-97b1-4a165a730407"
+      },
+      {
+        "iou": 0.5932,
+        "osm_source_ref": "way/725138293",
+        "plateau_gml_id": "bldg_8af8c64b-c3da-4e11-bcbb-e3de00e74cf6"
+      },
+      {
+        "iou": 0.9022,
+        "osm_source_ref": "way/1507403632",
+        "plateau_gml_id": "bldg_8b03daeb-76f0-4a8c-bcad-19a3f96330e5"
+      },
+      {
+        "iou": 0.8571,
+        "osm_source_ref": "way/725138604",
+        "plateau_gml_id": "bldg_8b0d0c8e-236a-41b9-8ef7-ded3a103bcd7"
+      },
+      {
+        "iou": 0.8321,
+        "osm_source_ref": "way/725138367",
+        "plateau_gml_id": "bldg_8baecab7-3d88-4092-be2c-0267dedbea19"
+      },
+      {
+        "iou": 0.8006,
+        "osm_source_ref": "way/1507403545",
+        "plateau_gml_id": "bldg_8c2cd847-a193-4f79-b3d9-ef0b78ee1bcf"
+      },
+      {
+        "iou": 0.8515,
+        "osm_source_ref": "way/1507403633",
+        "plateau_gml_id": "bldg_8c61379c-917e-4734-a8c4-d24759fbf01e"
+      },
+      {
+        "iou": 0.8059,
+        "osm_source_ref": "way/1507403512",
+        "plateau_gml_id": "bldg_8cce6be2-0c33-4115-bb2f-44cd2dcfb4d0"
+      },
+      {
+        "iou": 0.8187,
+        "osm_source_ref": "way/1507403595",
+        "plateau_gml_id": "bldg_8decbdcf-c650-47c2-9a16-1cc969ed22d1"
+      },
+      {
+        "iou": 0.7866,
+        "osm_source_ref": "way/1507403679",
+        "plateau_gml_id": "bldg_8e4b05e4-c6c6-4f85-b4e9-c2877a73a87c"
+      },
+      {
+        "iou": 0.6785,
+        "osm_source_ref": "way/477645435",
+        "plateau_gml_id": "bldg_8e932dc5-f801-420a-bbc9-71b0900279e3"
+      },
+      {
+        "iou": 0.9023,
+        "osm_source_ref": "way/1507403691",
+        "plateau_gml_id": "bldg_8f046f73-0505-496f-8dea-6bb77736fe93"
+      },
+      {
+        "iou": 0.8823,
+        "osm_source_ref": "way/725138625",
+        "plateau_gml_id": "bldg_8fb71b54-6e11-4251-9271-6840dc743478"
+      },
+      {
+        "iou": 0.8379,
+        "osm_source_ref": "way/725138002",
+        "plateau_gml_id": "bldg_9063615e-3dbb-45fc-b16e-6650d21b5179"
+      },
+      {
+        "iou": 0.9159,
+        "osm_source_ref": "way/725138239",
+        "plateau_gml_id": "bldg_90b9c972-842d-4522-8b1d-4d06bc6801e1"
+      },
+      {
+        "iou": 0.9516,
+        "osm_source_ref": "way/725138150",
+        "plateau_gml_id": "bldg_90c55b4c-447f-40ea-a0e0-afca39aa36cd"
+      },
+      {
+        "iou": 0.7408,
+        "osm_source_ref": "way/1507403720",
+        "plateau_gml_id": "bldg_90d25ca3-7d7c-427d-ab2c-34ac9fbb8beb"
+      },
+      {
+        "iou": 0.8655,
+        "osm_source_ref": "way/725138019",
+        "plateau_gml_id": "bldg_915e6a1a-c83d-4a6a-92e7-16e3f2a764d9"
+      },
+      {
+        "iou": 0.6202,
+        "osm_source_ref": "way/725138033",
+        "plateau_gml_id": "bldg_92574d57-05c1-410d-9e98-574f68ba4c7c"
+      },
+      {
+        "iou": 0.8154,
+        "osm_source_ref": "way/1507403619",
+        "plateau_gml_id": "bldg_9263d79a-81f8-48d0-bdf0-e489a360193d"
+      },
+      {
+        "iou": 0.9153,
+        "osm_source_ref": "way/1507403546",
+        "plateau_gml_id": "bldg_92afe96a-6010-4c1f-a853-ffa4ad4ac218"
+      },
+      {
+        "iou": 0.7635,
+        "osm_source_ref": "way/225101288",
+        "plateau_gml_id": "bldg_9301830d-8649-4452-9589-fe2fdaffa220"
+      },
+      {
+        "iou": 0.8388,
+        "osm_source_ref": "way/725137825",
+        "plateau_gml_id": "bldg_93d87902-1fc5-4268-b4fe-668ac7286a9a"
+      },
+      {
+        "iou": 0.8313,
+        "osm_source_ref": "way/1507403793",
+        "plateau_gml_id": "bldg_960002e2-a7fb-4af5-9d1a-35404b2859f2"
+      },
+      {
+        "iou": 0.7847,
+        "osm_source_ref": "way/477599544",
+        "plateau_gml_id": "bldg_9682c494-b0ab-46fc-b5c5-9f724fd4764a"
+      },
+      {
+        "iou": 0.8463,
+        "osm_source_ref": "way/1507403736",
+        "plateau_gml_id": "bldg_97069d82-ccd3-45fb-88bd-49799adc4ee8"
+      },
+      {
+        "iou": 0.6037,
+        "osm_source_ref": "way/725137960",
+        "plateau_gml_id": "bldg_978eed40-498c-4aea-8670-6c5ace01a479"
+      },
+      {
+        "iou": 0.8022,
+        "osm_source_ref": "way/1507403674",
+        "plateau_gml_id": "bldg_9833ee6d-5eaf-4ce8-99cb-175d56070a82"
+      },
+      {
+        "iou": 0.8083,
+        "osm_source_ref": "way/725138421",
+        "plateau_gml_id": "bldg_985a3eb4-c649-4382-b1d1-72355e44c9ee"
+      },
+      {
+        "iou": 0.556,
+        "osm_source_ref": "way/1507398017",
+        "plateau_gml_id": "bldg_99084b4a-0877-4325-888d-e842f2dd988a"
+      },
+      {
+        "iou": 0.8882,
+        "osm_source_ref": "way/725138580",
+        "plateau_gml_id": "bldg_992462d0-6920-4bfe-814f-f01284b439ca"
+      },
+      {
+        "iou": 0.6929,
+        "osm_source_ref": "way/1507403727",
+        "plateau_gml_id": "bldg_9995217e-07f6-4621-b247-f2979145e9e9"
+      },
+      {
+        "iou": 0.5665,
+        "osm_source_ref": "way/725138451",
+        "plateau_gml_id": "bldg_99c2e993-4f6d-45bb-9e89-3f317be6adcc"
+      },
+      {
+        "iou": 0.8172,
+        "osm_source_ref": "way/1507403719",
+        "plateau_gml_id": "bldg_99d86d87-d2ac-4c97-a185-fcb573d78b7c"
+      },
+      {
+        "iou": 0.8923,
+        "osm_source_ref": "way/1507398051",
+        "plateau_gml_id": "bldg_9a375a6e-d6c7-4636-8600-e8d5da0beb81"
+      },
+      {
+        "iou": 0.8428,
+        "osm_source_ref": "way/1507403682",
+        "plateau_gml_id": "bldg_9ae08a2a-5d81-4f5d-9888-8361c1ebbb41"
+      },
+      {
+        "iou": 0.8918,
+        "osm_source_ref": "way/725137975",
+        "plateau_gml_id": "bldg_9c38c6c2-49ee-4c4a-b89c-98c16fc5bfab"
+      },
+      {
+        "iou": 0.7001,
+        "osm_source_ref": "way/441951069",
+        "plateau_gml_id": "bldg_9ce09afc-089d-4f47-a8e6-0f4fa6d81208"
+      },
+      {
+        "iou": 0.8339,
+        "osm_source_ref": "way/1507403542",
+        "plateau_gml_id": "bldg_9cedb3c7-5d98-434f-bbfa-8ef7006773ec"
+      },
+      {
+        "iou": 0.9113,
+        "osm_source_ref": "way/725138453",
+        "plateau_gml_id": "bldg_9cf5e13d-3c51-4992-9254-46f113be0580"
+      },
+      {
+        "iou": 0.6282,
+        "osm_source_ref": "way/1507403515",
+        "plateau_gml_id": "bldg_9dcd72bb-726f-48ef-812f-6f0c4ccfd765"
+      },
+      {
+        "iou": 0.6081,
+        "osm_source_ref": "way/725138313",
+        "plateau_gml_id": "bldg_9e31f369-c3a4-4b58-bc62-2df35a739b96"
+      },
+      {
+        "iou": 0.8334,
+        "osm_source_ref": "way/1507403617",
+        "plateau_gml_id": "bldg_9e8ebb8f-61ab-47e1-b45c-a94f521afc84"
+      },
+      {
+        "iou": 0.6565,
+        "osm_source_ref": "way/1507398053",
+        "plateau_gml_id": "bldg_9edde908-0be8-4659-bf1c-811da6d8d88e"
+      },
+      {
+        "iou": 0.8461,
+        "osm_source_ref": "way/1507403730",
+        "plateau_gml_id": "bldg_9f200a38-a9d1-40ba-ae0a-f66275ec8aad"
+      },
+      {
+        "iou": 0.7086,
+        "osm_source_ref": "way/1507398029",
+        "plateau_gml_id": "bldg_9f2c52cb-1668-4df7-be67-140e162c3fec"
+      },
+      {
+        "iou": 0.8673,
+        "osm_source_ref": "way/725137895",
+        "plateau_gml_id": "bldg_a00edfae-945c-4cc6-a067-aabea6320f49"
+      },
+      {
+        "iou": 0.9162,
+        "osm_source_ref": "way/725138550",
+        "plateau_gml_id": "bldg_a09dced8-e719-4dfe-ab4c-58eb9c8e8dce"
+      },
+      {
+        "iou": 0.5646,
+        "osm_source_ref": "way/225197536",
+        "plateau_gml_id": "bldg_a0bf4c0e-aa88-4888-a9a3-ab4f074bcd44"
+      },
+      {
+        "iou": 0.7773,
+        "osm_source_ref": "way/225369227",
+        "plateau_gml_id": "bldg_a0ef5d2e-460f-43cf-bf07-864207de6eb5"
+      },
+      {
+        "iou": 0.7989,
+        "osm_source_ref": "way/1507403761",
+        "plateau_gml_id": "bldg_a338a9f1-2d44-45cf-bf0d-6bb25b004c10"
+      },
+      {
+        "iou": 0.859,
+        "osm_source_ref": "way/1507403702",
+        "plateau_gml_id": "bldg_a3576758-548e-4dfe-9fec-c2141d5cb7c7"
+      },
+      {
+        "iou": 0.8324,
+        "osm_source_ref": "way/1507403653",
+        "plateau_gml_id": "bldg_a384244c-1561-4861-a80b-118d833362b5"
+      },
+      {
+        "iou": 0.9021,
+        "osm_source_ref": "way/725138473",
+        "plateau_gml_id": "bldg_a3bbc5d7-2edb-47e3-8021-94ab1975130d"
+      },
+      {
+        "iou": 0.8531,
+        "osm_source_ref": "way/725138524",
+        "plateau_gml_id": "bldg_a3fb9488-3834-4e09-a9c8-6c1f8b941f9b"
+      },
+      {
+        "iou": 0.7331,
+        "osm_source_ref": "way/1507403555",
+        "plateau_gml_id": "bldg_a50c3fba-2620-4221-b1f7-8d2bdd6e60ea"
+      },
+      {
+        "iou": 0.8998,
+        "osm_source_ref": "way/725138613",
+        "plateau_gml_id": "bldg_a52f2365-54c6-4da1-aaed-46561f08fa4c"
+      },
+      {
+        "iou": 0.836,
+        "osm_source_ref": "way/1507403712",
+        "plateau_gml_id": "bldg_a55df138-5e54-4da1-93b1-e4d604606552"
+      },
+      {
+        "iou": 0.5765,
+        "osm_source_ref": "way/1507403678",
+        "plateau_gml_id": "bldg_a57046c9-913f-4c6f-8656-8407f170c285"
+      },
+      {
+        "iou": 0.8891,
+        "osm_source_ref": "way/725138605",
+        "plateau_gml_id": "bldg_a59ca11c-6fb1-4a7d-b4c4-bed972f24854"
+      },
+      {
+        "iou": 0.6919,
+        "osm_source_ref": "way/477645436",
+        "plateau_gml_id": "bldg_a6d0301b-7e18-4a1a-a803-93fb819f8f6e"
+      },
+      {
+        "iou": 0.8628,
+        "osm_source_ref": "way/725138467",
+        "plateau_gml_id": "bldg_a6d2d879-0528-48ee-a3ea-4a8b38cbd61b"
+      },
+      {
+        "iou": 0.8977,
+        "osm_source_ref": "way/1507403537",
+        "plateau_gml_id": "bldg_a6e7d145-cbc2-43e2-b245-b63515ea04be"
+      },
+      {
+        "iou": 0.7844,
+        "osm_source_ref": "way/1507403687",
+        "plateau_gml_id": "bldg_a6e926fb-2129-4be5-abeb-f52b65f88a79"
+      },
+      {
+        "iou": 0.716,
+        "osm_source_ref": "way/441951081",
+        "plateau_gml_id": "bldg_a73a8162-8bab-4e6c-80bd-2ca3f937f2b4"
+      },
+      {
+        "iou": 0.714,
+        "osm_source_ref": "way/1507403673",
+        "plateau_gml_id": "bldg_a7d0670e-ae9c-4f52-a346-90093bac4c25"
+      },
+      {
+        "iou": 0.637,
+        "osm_source_ref": "way/1507403774",
+        "plateau_gml_id": "bldg_a8117ed8-4203-43d0-bb73-97e8640e30b5"
+      },
+      {
+        "iou": 0.8437,
+        "osm_source_ref": "way/1507403747",
+        "plateau_gml_id": "bldg_a8553213-0dd4-4a1e-a41b-757643cf16dc"
+      },
+      {
+        "iou": 0.8515,
+        "osm_source_ref": "way/1507403549",
+        "plateau_gml_id": "bldg_a9208148-3d3b-469a-9116-bdbf24114f17"
+      },
+      {
+        "iou": 0.8778,
+        "osm_source_ref": "way/725138007",
+        "plateau_gml_id": "bldg_a97d93d2-7b77-410a-a4e5-4a906a578f99"
+      },
+      {
+        "iou": 0.8834,
+        "osm_source_ref": "way/1507403769",
+        "plateau_gml_id": "bldg_a9d2175e-a9f3-4968-884f-14b3b232d121"
+      },
+      {
+        "iou": 0.6696,
+        "osm_source_ref": "way/1507403671",
+        "plateau_gml_id": "bldg_a9da919e-0737-4086-98a1-76f2f7105b10"
+      },
+      {
+        "iou": 0.7687,
+        "osm_source_ref": "way/1507403513",
+        "plateau_gml_id": "bldg_aa8d5b68-f1b8-47ac-b85a-df7113071b97"
+      },
+      {
+        "iou": 0.8887,
+        "osm_source_ref": "way/725137858",
+        "plateau_gml_id": "bldg_aa9b53c5-7455-4a8d-a9b8-9287fffcb6c6"
+      },
+      {
+        "iou": 0.6927,
+        "osm_source_ref": "way/1507403749",
+        "plateau_gml_id": "bldg_ab2d1ead-66e5-4ffd-a853-bc4cee411aff"
+      },
+      {
+        "iou": 0.8546,
+        "osm_source_ref": "way/1507398024",
+        "plateau_gml_id": "bldg_ac26aeae-b514-4f5d-9b38-c4c3ffb0cb26"
+      },
+      {
+        "iou": 0.8335,
+        "osm_source_ref": "way/1507403732",
+        "plateau_gml_id": "bldg_ac35a3ea-c60e-4baf-8505-43658e6e68fb"
+      },
+      {
+        "iou": 0.8925,
+        "osm_source_ref": "way/725138466",
+        "plateau_gml_id": "bldg_acb0aa6d-7cd7-4216-80e3-9d61a4ca9ca9"
+      },
+      {
+        "iou": 0.9017,
+        "osm_source_ref": "way/725138502",
+        "plateau_gml_id": "bldg_acbbf7d8-096e-42ba-b1c5-35fd31577412"
+      },
+      {
+        "iou": 0.9286,
+        "osm_source_ref": "way/725138223",
+        "plateau_gml_id": "bldg_ad43affd-853c-4b13-a543-0d8dab6175fd"
+      },
+      {
+        "iou": 0.689,
+        "osm_source_ref": "way/477599548",
+        "plateau_gml_id": "bldg_ad87b64d-ba5c-4a5d-a22c-edf65aae546b"
+      },
+      {
+        "iou": 0.9081,
+        "osm_source_ref": "way/225482963",
+        "plateau_gml_id": "bldg_ae2dba83-48c7-498f-b5cf-58dbed277bab"
+      },
+      {
+        "iou": 0.649,
+        "osm_source_ref": "way/225101048",
+        "plateau_gml_id": "bldg_aeaf0dc7-084f-47a7-9da5-21c63fdc6bb2"
+      },
+      {
+        "iou": 0.5768,
+        "osm_source_ref": "way/725138548",
+        "plateau_gml_id": "bldg_aee500b7-a549-4d0b-9373-129661767d23"
+      },
+      {
+        "iou": 0.7515,
+        "osm_source_ref": "way/725138407",
+        "plateau_gml_id": "bldg_af8c494e-2c62-4e1e-935b-82a7bb238f7c"
+      },
+      {
+        "iou": 0.7035,
+        "osm_source_ref": "way/1507403641",
+        "plateau_gml_id": "bldg_afdce1ee-ec00-46f4-903d-90f7a98dde9c"
+      },
+      {
+        "iou": 0.832,
+        "osm_source_ref": "way/725138559",
+        "plateau_gml_id": "bldg_b045f0d9-c772-4977-b0bc-8365453b82e5"
+      },
+      {
+        "iou": 0.8222,
+        "osm_source_ref": "way/725138291",
+        "plateau_gml_id": "bldg_b09ac13f-6db6-40ac-a266-14087ef093ef"
+      },
+      {
+        "iou": 0.9004,
+        "osm_source_ref": "way/725138593",
+        "plateau_gml_id": "bldg_b0e341b2-15c3-4d88-af7d-62b951a0c4ad"
+      },
+      {
+        "iou": 0.5947,
+        "osm_source_ref": "way/225367807",
+        "plateau_gml_id": "bldg_b1322992-dd8d-4a8a-9837-adfd6e310dcf"
+      },
+      {
+        "iou": 0.8619,
+        "osm_source_ref": "way/725138516",
+        "plateau_gml_id": "bldg_b13ee561-83f7-43ca-9fbd-ea93759e6f5a"
+      },
+      {
+        "iou": 0.8363,
+        "osm_source_ref": "way/1507403532",
+        "plateau_gml_id": "bldg_b1843e4f-c558-4eb9-960f-e726c2560a52"
+      },
+      {
+        "iou": 0.8856,
+        "osm_source_ref": "way/725138515",
+        "plateau_gml_id": "bldg_b35e7ffc-7876-42ed-a18a-7c26781297f4"
+      },
+      {
+        "iou": 0.6459,
+        "osm_source_ref": "way/725138057",
+        "plateau_gml_id": "bldg_b3830307-a453-4e8e-9c9e-3e30dc756157"
+      },
+      {
+        "iou": 0.8431,
+        "osm_source_ref": "way/725138457",
+        "plateau_gml_id": "bldg_b495b82a-5ff7-49f0-a600-c8ee74e78e17"
+      },
+      {
+        "iou": 0.916,
+        "osm_source_ref": "way/725138510",
+        "plateau_gml_id": "bldg_b49f888c-e5b9-406c-9477-5d18b3b4c44e"
+      },
+      {
+        "iou": 0.9328,
+        "osm_source_ref": "way/725138034",
+        "plateau_gml_id": "bldg_b63859a7-2810-4a29-9227-857c7d60aa89"
+      },
+      {
+        "iou": 0.7195,
+        "osm_source_ref": "way/1507403672",
+        "plateau_gml_id": "bldg_b754bf3a-f0f4-4665-8409-7970d3f0b7e1"
+      },
+      {
+        "iou": 0.7722,
+        "osm_source_ref": "way/725138006",
+        "plateau_gml_id": "bldg_b79db89c-c261-4e1b-bb01-cbdfde7825d9"
+      },
+      {
+        "iou": 0.7342,
+        "osm_source_ref": "way/1507403815",
+        "plateau_gml_id": "bldg_b7bb1c86-6baa-477e-834c-f3c207448d02"
+      },
+      {
+        "iou": 0.9129,
+        "osm_source_ref": "way/725138111",
+        "plateau_gml_id": "bldg_b8dcba4f-caf1-4294-8680-94f205a876da"
+      },
+      {
+        "iou": 0.8878,
+        "osm_source_ref": "way/477599549",
+        "plateau_gml_id": "bldg_b99307eb-d390-446b-9400-ec35a586989b"
+      },
+      {
+        "iou": 0.8753,
+        "osm_source_ref": "way/725138174",
+        "plateau_gml_id": "bldg_ba878051-9032-486f-9fae-4d8af1b365c0"
+      },
+      {
+        "iou": 0.8619,
+        "osm_source_ref": "way/1507403733",
+        "plateau_gml_id": "bldg_ba953995-193c-44fa-8540-cea727ede9f8"
+      },
+      {
+        "iou": 0.5593,
+        "osm_source_ref": "way/225562528",
+        "plateau_gml_id": "bldg_bac2e90c-cf81-4b5b-b79d-9595a5b6616c"
+      },
+      {
+        "iou": 0.8882,
+        "osm_source_ref": "way/725138157",
+        "plateau_gml_id": "bldg_bb99ce6c-3b7e-4c44-8305-8ec788d0fc10"
+      },
+      {
+        "iou": 0.733,
+        "osm_source_ref": "way/1507403530",
+        "plateau_gml_id": "bldg_bc1a49df-96dd-4805-9b8d-76b8b98644de"
+      },
+      {
+        "iou": 0.823,
+        "osm_source_ref": "way/1507403795",
+        "plateau_gml_id": "bldg_bcfd36fb-9413-4ccf-ac5e-d5641db56770"
+      },
+      {
+        "iou": 0.8612,
+        "osm_source_ref": "way/725138528",
+        "plateau_gml_id": "bldg_bd0b0254-2e68-42c1-93dd-56a52dca8b27"
+      },
+      {
+        "iou": 0.7969,
+        "osm_source_ref": "way/1507403534",
+        "plateau_gml_id": "bldg_bd38f7b4-9e7c-4822-9cd1-9e79669c21ec"
+      },
+      {
+        "iou": 0.5983,
+        "osm_source_ref": "way/725138333",
+        "plateau_gml_id": "bldg_bd8a422e-aaee-4136-9f79-551a09b83e1d"
+      },
+      {
+        "iou": 0.9172,
+        "osm_source_ref": "way/725138242",
+        "plateau_gml_id": "bldg_bdc85d0a-a408-4424-8c89-3e4bdbf8c7d9"
+      },
+      {
+        "iou": 0.8974,
+        "osm_source_ref": "way/725138634",
+        "plateau_gml_id": "bldg_bdcf6411-13d1-4212-94fe-d25f1e3ceee5"
+      },
+      {
+        "iou": 0.9,
+        "osm_source_ref": "way/725138409",
+        "plateau_gml_id": "bldg_bdfd2c33-5c2d-47ab-824b-f49321fe665c"
+      },
+      {
+        "iou": 0.9167,
+        "osm_source_ref": "way/725138370",
+        "plateau_gml_id": "bldg_be4bdb0a-c434-4f83-8873-f9412dceebaa"
+      },
+      {
+        "iou": 0.7663,
+        "osm_source_ref": "way/1507403637",
+        "plateau_gml_id": "bldg_be516ff4-7fe6-4b86-a481-5049b63f6f3f"
+      },
+      {
+        "iou": 0.7825,
+        "osm_source_ref": "way/225369233",
+        "plateau_gml_id": "bldg_befad126-9b3e-4129-876a-b5d1affdda62"
+      },
+      {
+        "iou": 0.6457,
+        "osm_source_ref": "way/725137956",
+        "plateau_gml_id": "bldg_bf1924f3-0b8e-4948-a955-3fcbff5e5b6a"
+      },
+      {
+        "iou": 0.8639,
+        "osm_source_ref": "way/1507403639",
+        "plateau_gml_id": "bldg_bf1d9452-54df-41c6-a79c-a39c57c20ce4"
+      },
+      {
+        "iou": 0.9263,
+        "osm_source_ref": "way/725138513",
+        "plateau_gml_id": "bldg_bfaa4e6c-898a-40b2-8d19-6929b1d76fe8"
+      },
+      {
+        "iou": 0.6011,
+        "osm_source_ref": "way/289194874",
+        "plateau_gml_id": "bldg_bfc9c080-52d0-4f74-98a2-d4168d88f56d"
+      },
+      {
+        "iou": 0.5433,
+        "osm_source_ref": "way/725138216",
+        "plateau_gml_id": "bldg_bffaf627-8ba2-492d-b74f-41b5e0caab7f"
+      },
+      {
+        "iou": 0.8411,
+        "osm_source_ref": "way/1507403554",
+        "plateau_gml_id": "bldg_c06afd4f-595e-4624-8f69-66ccf3f27885"
+      },
+      {
+        "iou": 0.6731,
+        "osm_source_ref": "way/725138297",
+        "plateau_gml_id": "bldg_c076a85a-1470-4810-b18d-62d5ec7ee1b8"
+      },
+      {
+        "iou": 0.6727,
+        "osm_source_ref": "way/225198101",
+        "plateau_gml_id": "bldg_c07bb114-24f1-4f45-8108-6dfc98788396"
+      },
+      {
+        "iou": 0.7557,
+        "osm_source_ref": "way/1507403705",
+        "plateau_gml_id": "bldg_c07bd28d-5343-43f9-a824-8172a3233cd2"
+      },
+      {
+        "iou": 0.8494,
+        "osm_source_ref": "way/1507403737",
+        "plateau_gml_id": "bldg_c07fefc2-8bea-4425-a812-ed25e3863eb4"
+      },
+      {
+        "iou": 0.573,
+        "osm_source_ref": "way/225367805",
+        "plateau_gml_id": "bldg_c1222f0e-33af-4977-8394-43fe82ade22e"
+      },
+      {
+        "iou": 0.5746,
+        "osm_source_ref": "way/1507403538",
+        "plateau_gml_id": "bldg_c1306f50-99db-4367-9b3b-f85287f54daf"
+      },
+      {
+        "iou": 0.5739,
+        "osm_source_ref": "way/725138010",
+        "plateau_gml_id": "bldg_c261d593-8711-4b8c-ba1f-d58916ab4a1f"
+      },
+      {
+        "iou": 0.6867,
+        "osm_source_ref": "way/1507403640",
+        "plateau_gml_id": "bldg_c2943f89-bad3-4c2f-8e02-529494e72a51"
+      },
+      {
+        "iou": 0.8482,
+        "osm_source_ref": "way/1507403605",
+        "plateau_gml_id": "bldg_c454b39a-3a19-4451-83d0-2a2178e2c332"
+      },
+      {
+        "iou": 0.9218,
+        "osm_source_ref": "way/725138365",
+        "plateau_gml_id": "bldg_c4f7809f-b172-444e-81ab-9449fb5a37ed"
+      },
+      {
+        "iou": 0.9043,
+        "osm_source_ref": "way/725138532",
+        "plateau_gml_id": "bldg_c56f5b47-0180-411d-adf1-8996802d2ca1"
+      },
+      {
+        "iou": 0.8241,
+        "osm_source_ref": "way/477645425",
+        "plateau_gml_id": "bldg_c6cdd09a-493d-4cb5-bcb9-7019ee123391"
+      },
+      {
+        "iou": 0.8834,
+        "osm_source_ref": "way/725138385",
+        "plateau_gml_id": "bldg_c6e1dc96-a0e1-4284-8d58-73900e705584"
+      },
+      {
+        "iou": 0.7775,
+        "osm_source_ref": "way/1507403670",
+        "plateau_gml_id": "bldg_c73403bc-cd40-4e06-b068-fdfbfaedca39"
+      },
+      {
+        "iou": 0.8709,
+        "osm_source_ref": "way/725138635",
+        "plateau_gml_id": "bldg_c74182b1-2d55-46ae-abfe-3d5bef6c58e1"
+      },
+      {
+        "iou": 0.9418,
+        "osm_source_ref": "way/725138175",
+        "plateau_gml_id": "bldg_c8af69d8-8500-4763-8192-cb817b02bc35"
+      },
+      {
+        "iou": 0.8713,
+        "osm_source_ref": "way/725138503",
+        "plateau_gml_id": "bldg_c8c8af33-5916-4337-8c98-f7b17bbbf333"
+      },
+      {
+        "iou": 0.7751,
+        "osm_source_ref": "way/725138608",
+        "plateau_gml_id": "bldg_c9804614-6c22-4ba9-965a-e64d241d6068"
+      },
+      {
+        "iou": 0.79,
+        "osm_source_ref": "way/725138426",
+        "plateau_gml_id": "bldg_ca387228-2953-4200-a740-5ddbb4f84e8e"
+      },
+      {
+        "iou": 0.872,
+        "osm_source_ref": "way/725138562",
+        "plateau_gml_id": "bldg_cac61123-2bfb-4544-9b6c-bde1f0b16319"
+      },
+      {
+        "iou": 0.8379,
+        "osm_source_ref": "way/1507403662",
+        "plateau_gml_id": "bldg_cb5d57b9-f9ca-454a-8420-52883c1d1f62"
+      },
+      {
+        "iou": 0.8947,
+        "osm_source_ref": "way/725138143",
+        "plateau_gml_id": "bldg_cb90d278-3322-4413-85bc-8a12fe8637d0"
+      },
+      {
+        "iou": 0.8627,
+        "osm_source_ref": "way/725138129",
+        "plateau_gml_id": "bldg_cbeb4e75-41af-407d-8cf3-fb4ac177daa2"
+      },
+      {
+        "iou": 0.9249,
+        "osm_source_ref": "way/725138263",
+        "plateau_gml_id": "bldg_cca1fb6c-fefe-447c-91d7-c2a542212f96"
+      },
+      {
+        "iou": 0.8456,
+        "osm_source_ref": "way/1507403718",
+        "plateau_gml_id": "bldg_ccb1fe94-7e7a-4bd8-bb2a-fa2e7aeaa09c"
+      },
+      {
+        "iou": 0.6824,
+        "osm_source_ref": "way/1507403647",
+        "plateau_gml_id": "bldg_cd333ca5-dc2d-4d3f-b7ee-605a85589f9b"
+      },
+      {
+        "iou": 0.8888,
+        "osm_source_ref": "way/725138642",
+        "plateau_gml_id": "bldg_cd5f12fa-5184-49c6-bdc7-ce2912d57fa7"
+      },
+      {
+        "iou": 0.8655,
+        "osm_source_ref": "way/1507403635",
+        "plateau_gml_id": "bldg_cd63e5ff-f071-4a4b-906e-22f525ec5dad"
+      },
+      {
+        "iou": 0.7767,
+        "osm_source_ref": "way/1507403798",
+        "plateau_gml_id": "bldg_cd8877a8-d01f-4255-8592-acf64ff58939"
+      },
+      {
+        "iou": 0.8137,
+        "osm_source_ref": "way/1507403634",
+        "plateau_gml_id": "bldg_cdda2bbe-0435-4f90-8789-b72a0c9d5bfe"
+      },
+      {
+        "iou": 0.7632,
+        "osm_source_ref": "way/225198069",
+        "plateau_gml_id": "bldg_ce05121d-3d2b-41cd-96c6-2d711e457108"
+      },
+      {
+        "iou": 0.5765,
+        "osm_source_ref": "way/725138164",
+        "plateau_gml_id": "bldg_ce1cb365-4380-40b3-b44b-3df7665981ab"
+      },
+      {
+        "iou": 0.8937,
+        "osm_source_ref": "way/725138629",
+        "plateau_gml_id": "bldg_cf0c3fa4-f9be-4695-9088-9641f0a6e324"
+      },
+      {
+        "iou": 0.8132,
+        "osm_source_ref": "way/1507403646",
+        "plateau_gml_id": "bldg_cfffe90b-1634-468b-876f-9f5ceb3a96c1"
+      },
+      {
+        "iou": 0.8967,
+        "osm_source_ref": "way/1507403745",
+        "plateau_gml_id": "bldg_d066099a-f518-42b9-bf94-f118da2a58b8"
+      },
+      {
+        "iou": 0.8188,
+        "osm_source_ref": "way/1507403529",
+        "plateau_gml_id": "bldg_d2618dcc-8bf4-42ee-9118-9e397eb38fe3"
+      },
+      {
+        "iou": 0.7811,
+        "osm_source_ref": "way/225198151",
+        "plateau_gml_id": "bldg_d2c42711-cb38-4df9-b636-261eafd249cf"
+      },
+      {
+        "iou": 0.7969,
+        "osm_source_ref": "way/1507403785",
+        "plateau_gml_id": "bldg_d30d35e7-d392-47b7-a432-dc0eb05f8bd1"
+      },
+      {
+        "iou": 0.878,
+        "osm_source_ref": "way/477599547",
+        "plateau_gml_id": "bldg_d3195b51-67b1-4d37-a68e-441032833e07"
+      },
+      {
+        "iou": 0.5565,
+        "osm_source_ref": "way/1507403760",
+        "plateau_gml_id": "bldg_d3a210b2-7a7e-4d99-900e-bb1bc17b9a21"
+      },
+      {
+        "iou": 0.8901,
+        "osm_source_ref": "way/725137874",
+        "plateau_gml_id": "bldg_d3cd881e-cd2f-4dd4-a22b-90e4a56fdd3d"
+      },
+      {
+        "iou": 0.9297,
+        "osm_source_ref": "way/725138460",
+        "plateau_gml_id": "bldg_d43f6775-6a0e-4557-ae77-af2810ec0032"
+      },
+      {
+        "iou": 0.9144,
+        "osm_source_ref": "way/725138049",
+        "plateau_gml_id": "bldg_d4832f86-2978-446f-a165-ca86851b539a"
+      },
+      {
+        "iou": 0.8015,
+        "osm_source_ref": "way/1507403664",
+        "plateau_gml_id": "bldg_d4afb15a-abf8-4122-851c-fa55988dca79"
+      },
+      {
+        "iou": 0.8418,
+        "osm_source_ref": "way/725138500",
+        "plateau_gml_id": "bldg_d5223ae4-f495-49e2-9651-86a3bdefd100"
+      },
+      {
+        "iou": 0.896,
+        "osm_source_ref": "way/725137881",
+        "plateau_gml_id": "bldg_d65bb265-5d54-41e7-87cc-d7068c835d03"
+      },
+      {
+        "iou": 0.916,
+        "osm_source_ref": "way/725137997",
+        "plateau_gml_id": "bldg_d66977e1-8aa6-42a9-9cb2-2b77e1c3f02a"
+      },
+      {
+        "iou": 0.8545,
+        "osm_source_ref": "way/725138158",
+        "plateau_gml_id": "bldg_d6e8f138-a31c-4d24-b0f4-e266a3b7451f"
+      },
+      {
+        "iou": 0.9128,
+        "osm_source_ref": "way/725138623",
+        "plateau_gml_id": "bldg_d72f0bb0-72a9-4f2a-9686-5356f59912ce"
+      },
+      {
+        "iou": 0.9022,
+        "osm_source_ref": "way/725138578",
+        "plateau_gml_id": "bldg_d74ef98b-f618-4477-bd74-b1831c1d124d"
+      },
+      {
+        "iou": 0.888,
+        "osm_source_ref": "way/725138526",
+        "plateau_gml_id": "bldg_d75c3098-545b-4b90-87ec-4fe0126683e0"
+      },
+      {
+        "iou": 0.5502,
+        "osm_source_ref": "way/225367800",
+        "plateau_gml_id": "bldg_d78fbf62-fcbc-4f8b-81c4-67070718013f"
+      },
+      {
+        "iou": 0.7555,
+        "osm_source_ref": "way/1507403669",
+        "plateau_gml_id": "bldg_d7e81208-a6bd-40b5-b784-6985051dad94"
+      },
+      {
+        "iou": 0.8625,
+        "osm_source_ref": "way/725138478",
+        "plateau_gml_id": "bldg_d846923d-1f8e-4fd5-bc1e-3b204367fc66"
+      },
+      {
+        "iou": 0.9159,
+        "osm_source_ref": "way/725138030",
+        "plateau_gml_id": "bldg_d8aafadb-259c-4585-8d3a-0064c0ac1be0"
+      },
+      {
+        "iou": 0.9318,
+        "osm_source_ref": "way/725138080",
+        "plateau_gml_id": "bldg_d8bbda83-93af-4219-a6b6-611117353090"
+      },
+      {
+        "iou": 0.7438,
+        "osm_source_ref": "way/1507403703",
+        "plateau_gml_id": "bldg_d9153029-692d-4fc3-8e40-4096dcc1612c"
+      },
+      {
+        "iou": 0.7914,
+        "osm_source_ref": "way/1507403751",
+        "plateau_gml_id": "bldg_d96c2e8c-941f-417c-aa62-b0c292343069"
+      },
+      {
+        "iou": 0.5891,
+        "osm_source_ref": "way/725138357",
+        "plateau_gml_id": "bldg_d9ce5238-9b10-4166-a7fd-091019e98cff"
+      },
+      {
+        "iou": 0.9071,
+        "osm_source_ref": "way/1507403568",
+        "plateau_gml_id": "bldg_da1decdf-9de3-4f8e-a2cd-d42dc0a6dd47"
+      },
+      {
+        "iou": 0.8151,
+        "osm_source_ref": "way/225198068",
+        "plateau_gml_id": "bldg_da320c88-0849-4b78-a1fc-f52ba230a33b"
+      },
+      {
+        "iou": 0.6177,
+        "osm_source_ref": "way/1507403541",
+        "plateau_gml_id": "bldg_dbddeb32-8cee-4ce6-ab18-a10702e1fd9d"
+      },
+      {
+        "iou": 0.8217,
+        "osm_source_ref": "way/1507403770",
+        "plateau_gml_id": "bldg_dd0e5b0b-ee66-45a3-a4e6-27c2e6d75945"
+      },
+      {
+        "iou": 0.8058,
+        "osm_source_ref": "way/1507403699",
+        "plateau_gml_id": "bldg_dee103fb-c760-4d44-a9a7-7960e69125fe"
+      },
+      {
+        "iou": 0.8579,
+        "osm_source_ref": "way/1507398050",
+        "plateau_gml_id": "bldg_df224016-1805-468d-8d93-f7fbaec3a0b0"
+      },
+      {
+        "iou": 0.8508,
+        "osm_source_ref": "way/1507403622",
+        "plateau_gml_id": "bldg_dfb676d1-94ba-4a56-9385-3f9c2da4993d"
+      },
+      {
+        "iou": 0.8162,
+        "osm_source_ref": "way/1507403638",
+        "plateau_gml_id": "bldg_dfdb6dbe-c17c-4f31-a797-b955ccb533b1"
+      },
+      {
+        "iou": 0.9166,
+        "osm_source_ref": "way/725138586",
+        "plateau_gml_id": "bldg_e0902641-79ad-45c6-b8a1-fec3a37b52f0"
+      },
+      {
+        "iou": 0.8467,
+        "osm_source_ref": "way/725138582",
+        "plateau_gml_id": "bldg_e0a03fdc-823a-4374-bea5-8f20d30e1945"
+      },
+      {
+        "iou": 0.6932,
+        "osm_source_ref": "way/725138491",
+        "plateau_gml_id": "bldg_e0cca4b7-6c53-4280-afb9-39ba22f2749a"
+      },
+      {
+        "iou": 0.6776,
+        "osm_source_ref": "way/1507398056",
+        "plateau_gml_id": "bldg_e0e993da-b596-4e79-a010-4963df1f330e"
+      },
+      {
+        "iou": 0.7592,
+        "osm_source_ref": "way/725138373",
+        "plateau_gml_id": "bldg_e102df35-8bde-4f5f-8863-eb46baeda7b5"
+      },
+      {
+        "iou": 0.8433,
+        "osm_source_ref": "way/1507403819",
+        "plateau_gml_id": "bldg_e1a398bc-4181-4247-8aa6-8c4a34e4085d"
+      },
+      {
+        "iou": 0.613,
+        "osm_source_ref": "way/441951068",
+        "plateau_gml_id": "bldg_e2044623-e5fc-4eab-a697-c5cf7864fb67"
+      },
+      {
+        "iou": 0.9236,
+        "osm_source_ref": "way/1507403667",
+        "plateau_gml_id": "bldg_e2b80fcb-921b-4023-b079-2288275c6cf8"
+      },
+      {
+        "iou": 0.6002,
+        "osm_source_ref": "way/1507403558",
+        "plateau_gml_id": "bldg_e2e91d5b-1b8c-459c-92ca-46db2cc1b7bf"
+      },
+      {
+        "iou": 0.8588,
+        "osm_source_ref": "way/1507403779",
+        "plateau_gml_id": "bldg_e2f17043-6954-4e9f-a0bf-7d60e9234c71"
+      },
+      {
+        "iou": 0.8692,
+        "osm_source_ref": "way/1507403805",
+        "plateau_gml_id": "bldg_e2fe2769-897e-4cec-ab7b-5a4b96783150"
+      },
+      {
+        "iou": 0.8566,
+        "osm_source_ref": "way/725137913",
+        "plateau_gml_id": "bldg_e379cf17-da07-4b51-8bc5-ac2999f67eca"
+      },
+      {
+        "iou": 0.8839,
+        "osm_source_ref": "way/725137859",
+        "plateau_gml_id": "bldg_e3d31cd1-dc3b-4747-86c9-9b825c4e3223"
+      },
+      {
+        "iou": 0.8435,
+        "osm_source_ref": "way/725138450",
+        "plateau_gml_id": "bldg_e41d1883-1bab-414f-9eae-684fe5ea4925"
+      },
+      {
+        "iou": 0.5951,
+        "osm_source_ref": "way/1507403514",
+        "plateau_gml_id": "bldg_e4499173-ca01-4d68-bf60-1533226a9f95"
+      },
+      {
+        "iou": 0.8181,
+        "osm_source_ref": "way/1507398044",
+        "plateau_gml_id": "bldg_e4608c89-93d0-4631-942c-9d399603f822"
+      },
+      {
+        "iou": 0.809,
+        "osm_source_ref": "way/225198199",
+        "plateau_gml_id": "bldg_e46cb3a9-d08e-44a1-b38f-6cb0a7afe07e"
+      },
+      {
+        "iou": 0.7013,
+        "osm_source_ref": "way/225563351",
+        "plateau_gml_id": "bldg_e4aed4e4-7f7f-4e76-8c4b-1ef6f89a35c3"
+      },
+      {
+        "iou": 0.9101,
+        "osm_source_ref": "way/725138645",
+        "plateau_gml_id": "bldg_e4e88437-6859-4830-8ca5-2a2301d4e59a"
+      },
+      {
+        "iou": 0.7987,
+        "osm_source_ref": "way/1507403788",
+        "plateau_gml_id": "bldg_e4eb1f64-f5fb-4510-b3b3-5f9f671f81bf"
+      },
+      {
+        "iou": 0.6334,
+        "osm_source_ref": "way/725138592",
+        "plateau_gml_id": "bldg_e59f6944-e1a1-4ab8-b14c-c30325885d12"
+      },
+      {
+        "iou": 0.8987,
+        "osm_source_ref": "way/725138100",
+        "plateau_gml_id": "bldg_e5a16e1f-71d2-47d3-99d8-842d674463a1"
+      },
+      {
+        "iou": 0.9202,
+        "osm_source_ref": "way/725138509",
+        "plateau_gml_id": "bldg_e646cd25-f33d-49f7-bc54-2453d1a9930c"
+      },
+      {
+        "iou": 0.8085,
+        "osm_source_ref": "way/1507403704",
+        "plateau_gml_id": "bldg_e6a886f2-624f-4279-aa2f-5777f3bdac3c"
+      },
+      {
+        "iou": 0.8877,
+        "osm_source_ref": "way/725138036",
+        "plateau_gml_id": "bldg_e71cd75b-400e-4209-a0bb-28cd6e98961f"
+      },
+      {
+        "iou": 0.5386,
+        "osm_source_ref": "way/725138055",
+        "plateau_gml_id": "bldg_e7974aa4-2a24-429c-a80e-0b1214dff205"
+      },
+      {
+        "iou": 0.666,
+        "osm_source_ref": "way/1507398052",
+        "plateau_gml_id": "bldg_e87b4b39-e66d-404c-ac72-0ca4a742cc19"
+      },
+      {
+        "iou": 0.8623,
+        "osm_source_ref": "way/1507403559",
+        "plateau_gml_id": "bldg_e87bfa7c-06db-44fa-aad9-e3e9e9984ed5"
+      },
+      {
+        "iou": 0.8842,
+        "osm_source_ref": "way/725138389",
+        "plateau_gml_id": "bldg_e8b86ed0-dd17-43c0-9e92-64e908e36582"
+      },
+      {
+        "iou": 0.9189,
+        "osm_source_ref": "way/725138597",
+        "plateau_gml_id": "bldg_e93cba4c-8418-4907-bb33-eb57103d12f3"
+      },
+      {
+        "iou": 0.8788,
+        "osm_source_ref": "way/1507403684",
+        "plateau_gml_id": "bldg_e95d40d5-095f-4dca-9f72-2d82696f945a"
+      },
+      {
+        "iou": 0.556,
+        "osm_source_ref": "way/289193022",
+        "plateau_gml_id": "bldg_e9744dd0-fee6-4050-a6cd-104043d1faf3"
+      },
+      {
+        "iou": 0.8293,
+        "osm_source_ref": "way/1297867492",
+        "plateau_gml_id": "bldg_ea1e5ebe-c8f7-429e-b9ec-da5c84241ec0"
+      },
+      {
+        "iou": 0.8173,
+        "osm_source_ref": "way/1507403612",
+        "plateau_gml_id": "bldg_ec2f9855-2c7c-4bc5-be53-d6032017f3c8"
+      },
+      {
+        "iou": 0.9235,
+        "osm_source_ref": "way/725138323",
+        "plateau_gml_id": "bldg_ec59615f-1d4d-4ecf-8bff-2a1cb00d3236"
+      },
+      {
+        "iou": 0.7065,
+        "osm_source_ref": "way/1507403649",
+        "plateau_gml_id": "bldg_ece1e4e6-048f-4776-b6de-b20370eb233d"
+      },
+      {
+        "iou": 0.7583,
+        "osm_source_ref": "way/1507403743",
+        "plateau_gml_id": "bldg_ed10584d-f589-4431-ab0f-5899fd61a87b"
+      },
+      {
+        "iou": 0.8931,
+        "osm_source_ref": "way/725138477",
+        "plateau_gml_id": "bldg_ee1303d8-78ca-41fc-ab06-6a8e6ff0a23c"
+      },
+      {
+        "iou": 0.8844,
+        "osm_source_ref": "way/477645419",
+        "plateau_gml_id": "bldg_ee37fec2-4b07-4367-9308-387dd119006e"
+      },
+      {
+        "iou": 0.8928,
+        "osm_source_ref": "way/1507403553",
+        "plateau_gml_id": "bldg_ee488b19-70be-46cb-86ce-5562db37b229"
+      },
+      {
+        "iou": 0.5694,
+        "osm_source_ref": "way/1507403715",
+        "plateau_gml_id": "bldg_ee68bf8d-fc7a-401b-8054-3650f2814398"
+      },
+      {
+        "iou": 0.865,
+        "osm_source_ref": "way/725137965",
+        "plateau_gml_id": "bldg_ef22bfbf-c912-49e1-ab42-f461300a98a1"
+      },
+      {
+        "iou": 0.8456,
+        "osm_source_ref": "way/477599550",
+        "plateau_gml_id": "bldg_ef33f532-0e27-459f-8a6c-fa4d8bc2bd44"
+      },
+      {
+        "iou": 0.8008,
+        "osm_source_ref": "way/1507403643",
+        "plateau_gml_id": "bldg_ef899f53-e0df-4724-b9f1-26eebc3b42c7"
+      },
+      {
+        "iou": 0.5248,
+        "osm_source_ref": "way/725138417",
+        "plateau_gml_id": "bldg_f0da19d2-3da1-42f4-8bca-55a926213d3a"
+      },
+      {
+        "iou": 0.7385,
+        "osm_source_ref": "way/1507403746",
+        "plateau_gml_id": "bldg_f17cfc49-b11c-455e-984e-0ffb0e423a96"
+      },
+      {
+        "iou": 0.8497,
+        "osm_source_ref": "way/725138455",
+        "plateau_gml_id": "bldg_f1a7d354-1503-446e-8ac4-6c7675dcfc22"
+      },
+      {
+        "iou": 0.9012,
+        "osm_source_ref": "way/725138564",
+        "plateau_gml_id": "bldg_f1d47c62-1112-4456-957e-e0cc8dd7d6b1"
+      },
+      {
+        "iou": 0.8813,
+        "osm_source_ref": "way/725138095",
+        "plateau_gml_id": "bldg_f270daee-af35-4a6e-90c4-4b30c3954ac8"
+      },
+      {
+        "iou": 0.7365,
+        "osm_source_ref": "way/1507398018",
+        "plateau_gml_id": "bldg_f2c84f3c-609a-48d8-a6e7-b06280655aff"
+      },
+      {
+        "iou": 0.8639,
+        "osm_source_ref": "way/725138547",
+        "plateau_gml_id": "bldg_f30ba25e-324c-4e0f-91a6-fde9dcb7d3b6"
+      },
+      {
+        "iou": 0.8379,
+        "osm_source_ref": "way/1507403707",
+        "plateau_gml_id": "bldg_f43c5404-b093-4e65-8b24-3bf4459ecaf9"
+      },
+      {
+        "iou": 0.9278,
+        "osm_source_ref": "way/725138253",
+        "plateau_gml_id": "bldg_f4fa522a-8204-4dd0-b199-aadec7bbb126"
+      },
+      {
+        "iou": 0.8153,
+        "osm_source_ref": "way/1507403796",
+        "plateau_gml_id": "bldg_f5726830-8977-4ffc-99fe-a04f5634ada5"
+      },
+      {
+        "iou": 0.7491,
+        "osm_source_ref": "way/1507403551",
+        "plateau_gml_id": "bldg_f5cd5be9-b32c-4132-8cc5-7405f73c5910"
+      },
+      {
+        "iou": 0.7209,
+        "osm_source_ref": "way/1507398049",
+        "plateau_gml_id": "bldg_f6ce1f86-4937-46dd-b91c-c18289df98fa"
+      },
+      {
+        "iou": 0.7804,
+        "osm_source_ref": "way/1507398025",
+        "plateau_gml_id": "bldg_f6e6cb3d-8209-4d9e-8dd1-0d56e86a2232"
+      },
+      {
+        "iou": 0.8465,
+        "osm_source_ref": "way/1507403710",
+        "plateau_gml_id": "bldg_f7b081d9-6277-4399-b431-73a2ef909bf3"
+      },
+      {
+        "iou": 0.6651,
+        "osm_source_ref": "way/225562521",
+        "plateau_gml_id": "bldg_f8dfbf2f-bdf8-4dc5-9535-961627ddf120"
+      },
+      {
+        "iou": 0.7425,
+        "osm_source_ref": "way/725138631",
+        "plateau_gml_id": "bldg_f96a52b9-351c-47d2-8509-c88d21af6805"
+      },
+      {
+        "iou": 0.8405,
+        "osm_source_ref": "way/725138591",
+        "plateau_gml_id": "bldg_fa5e965a-3f3d-4bd5-a43f-17d638bd9227"
+      },
+      {
+        "iou": 0.8635,
+        "osm_source_ref": "way/725137971",
+        "plateau_gml_id": "bldg_fab97d59-4f1e-4389-98fb-51382447c0a7"
+      },
+      {
+        "iou": 0.6426,
+        "osm_source_ref": "way/1507398048",
+        "plateau_gml_id": "bldg_fad82f6a-c696-4e58-846a-a71ae95ccca0"
+      },
+      {
+        "iou": 0.8578,
+        "osm_source_ref": "way/1507403609",
+        "plateau_gml_id": "bldg_fb2a393a-2a47-4250-9425-53a519ada1e4"
+      },
+      {
+        "iou": 0.9277,
+        "osm_source_ref": "way/725138534",
+        "plateau_gml_id": "bldg_fb7a401d-eef6-40a5-b4c1-4e55e055c1c6"
+      },
+      {
+        "iou": 0.7345,
+        "osm_source_ref": "way/725138088",
+        "plateau_gml_id": "bldg_fbb12619-093c-480b-bc0f-5d96ae71ab4b"
+      },
+      {
+        "iou": 0.831,
+        "osm_source_ref": "way/1507403539",
+        "plateau_gml_id": "bldg_fd3e10de-6b75-44bc-8514-317060a8fdb8"
+      },
+      {
+        "iou": 0.603,
+        "osm_source_ref": "way/1507398014",
+        "plateau_gml_id": "bldg_fd4db533-b093-49ff-9f2a-9467f381dcdf"
+      },
+      {
+        "iou": 0.9127,
+        "osm_source_ref": "way/725138493",
+        "plateau_gml_id": "bldg_fe42430c-9850-40a8-a809-a802f94072f0"
+      },
+      {
+        "iou": 0.6194,
+        "osm_source_ref": "way/225369229",
+        "plateau_gml_id": "bldg_fe64088e-9992-43a0-b397-dc9552688898"
+      },
+      {
+        "iou": 0.8533,
+        "osm_source_ref": "way/1507403698",
+        "plateau_gml_id": "bldg_fe9907a7-5174-4e3a-8f9d-dbc0b56bbadf"
+      }
+    ],
+    "mean_matched_iou": 0.7908,
+    "osm_buildings_in_aoi": 650,
+    "osm_only": 94,
+    "osm_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/osm.world_ir.json",
+    "plateau_buildings_in_aoi": 710,
+    "plateau_only": 154,
+    "predicate": "greedy one-to-one IoU in the UTM plane; IoU >= 0.5 is matched"
+  },
+  "projection": {
+    "content_scale": 5.1320023927966725,
+    "offset": [
+      48.0,
+      48.0
+    ],
+    "origin_easting": 379699.09478405997,
+    "origin_northing": 3938417.876643479
+  },
+  "release": {
+    "ckan_id": "plateau-13111-ota-ku-2025",
+    "dataset_created": "2026-03-16",
+    "dataset_modified": "2026-04-03",
+    "spec": "3D都市モデル標準製品仕様書第5.0版 (CityGML 2.0 + uro 3.2)",
+    "title": "3D都市モデル（Project PLATEAU）大田区（2025年度）",
+    "url": "https://www.geospatial.jp/ckan/dataset/plateau-13111-ota-ku-2025"
+  },
+  "schema": "y92.plateau_ingest.v1",
+  "skipped": [],
+  "tiles": [
+    {
+      "kind": "bldg",
+      "mesh": "53392593",
+      "path": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/plateau/udx/bldg/53392593_bldg_6697_op.gml",
+      "sha256": "6c5cd38b6fe47250fdd980cadb96aadd085c09fb81089a720fc797f1d33374eb",
+      "size_bytes": 7739581
+    },
+    {
+      "kind": "bldg",
+      "mesh": "53392594",
+      "path": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/plateau/udx/bldg/53392594_bldg_6697_op.gml",
+      "sha256": "d894f5ed1987313e83a56c1c0de7b3d2b65d7ee42b3268f7e3530216de217323",
+      "size_bytes": 60879984
+    },
+    {
+      "kind": "bldg",
+      "mesh": "53393503",
+      "path": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/plateau/udx/bldg/53393503_bldg_6697_op.gml",
+      "sha256": "d4131a7ad42e6705963c7488c082ffa033ee38108a201d03f71e50dd3a300bf8",
+      "size_bytes": 24730623
+    },
+    {
+      "kind": "bldg",
+      "mesh": "53393504",
+      "path": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/plateau/udx/bldg/53393504_bldg_6697_op.gml",
+      "sha256": "043b97d08bf8329dd7a1e00104a0346d76ee3fa68c82741f5a36bf2684e5d735",
+      "size_bytes": 58115124
+    }
+  ],
+  "validation_findings": 0
+}

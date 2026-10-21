@@ -1,0 +1,1069 @@
+{
+  "commercial_place_fronts_emitted": 0,
+  "counts": {
+    "buried": 0,
+    "map_embedded": true,
+    "place_fronts_emitted": 10
+  },
+  "excluded": [
+    {
+      "feature_id": "feature:place:node/11404946449",
+      "reason": "no plan row for owner_stage place_fronts"
+    },
+    {
+      "feature_id": "feature:place:node/13726789786",
+      "reason": "no plan row for owner_stage place_fronts"
+    },
+    {
+      "feature_id": "feature:place:node/2145028048",
+      "reason": "no plan row for owner_stage place_fronts"
+    },
+    {
+      "feature_id": "feature:place:node/2340152791",
+      "reason": "no plan row for owner_stage place_fronts"
+    },
+    {
+      "feature_id": "feature:place:node/266085809",
+      "reason": "no plan row for owner_stage place_fronts"
+    },
+    {
+      "feature_id": "feature:place:node/4651760389",
+      "reason": "no plan row for owner_stage place_fronts"
+    },
+    {
+      "feature_id": "feature:place:node/7834193975",
+      "reason": "no plan row for owner_stage place_fronts"
+    },
+    {
+      "feature_id": "feature:place:node/8410683299",
+      "reason": "no plan row for owner_stage place_fronts"
+    }
+  ],
+  "instances": [
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "shop=chemist",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/11404946450",
+      "fitted_width_m": 5.901,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        390.052044,
+        560.948926
+      ],
+      "front_edge_index": 9,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        0.604710326,
+        -0.796445492
+      ],
+      "front_presentation_normal_xy": [
+        0.60470924,
+        -0.796446316
+      ],
+      "front_road_distance_m": 4.049,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 0.649400745,
+      "identity_sign": {
+        "fascia_height_m": 0.66,
+        "label_height_m": 0.44,
+        "label_width_fraction": 0.96
+      },
+      "inst_name": "place_front_feature_place_node_11404946450",
+      "label": "Cocokara Fine",
+      "mesh_name": "place_front_feature_place_node_11404946450.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/225198199",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "declarative regional pharmacy archetype prior",
+        "collision": "none; presentation only",
+        "geometry": "declarative regional pharmacy archetype prior",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+debt:infra01",
+        "text": "OSM name:en rendered with synthesized 5x7 block glyphs"
+      },
+      "rendered_text": "COCOKARA FINE",
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/11404946450",
+      "representation_kind": "observed_physical",
+      "resolved_profile_id": "tokyo.pharmacy_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [],
+      "route_offset_m": 7.362,
+      "route_progress_m": 26.57,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        390.05204389580484,
+        560.9489259182466,
+        212.937,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "shop=supermarket",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/2684634174",
+      "fitted_width_m": 8.0,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        551.372938,
+        394.411599
+      ],
+      "front_edge_index": 2,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        -0.605641252,
+        -0.795737817
+      ],
+      "front_presentation_normal_xy": [
+        -0.605637858,
+        -0.795740401
+      ],
+      "front_road_distance_m": 2.424,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 5.632618094,
+      "identity_sign": {
+        "fascia_height_m": 1.2,
+        "label_height_m": 0.76,
+        "label_width_fraction": 0.9
+      },
+      "inst_name": "place_front_feature_place_node_2684634174",
+      "label": "My Basket",
+      "mesh_name": "place_front_feature_place_node_2684634174.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/225369230",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "OSM brand identity plus licensed Mapillary storefront observation mapillary_773000440270518",
+        "collision": "none; presentation only",
+        "geometry": "OSM brand identity plus licensed Mapillary storefront observation mapillary_773000440270518",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+debt:infra01",
+        "text": "OSM name:en rendered with synthesized 5x7 block glyphs"
+      },
+      "rendered_text": "MY BASKET",
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/2684634174",
+      "representation_kind": "observed_physical",
+      "resolved_profile_id": "tokyo.mybasket_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [
+        "green_white_green_fascia",
+        "warm_lit_glazing",
+        "source_named_frontage"
+      ],
+      "route_offset_m": 24.051,
+      "route_progress_m": 0.0,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        551.3729379666347,
+        394.41159934549637,
+        187.206,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "shop=hairdresser",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/2927461370",
+      "fitted_width_m": 2.656,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        1794.295899,
+        2736.002764
+      ],
+      "front_edge_index": 0,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        -0.735009277,
+        0.67805705
+      ],
+      "front_presentation_normal_xy": [
+        -0.735009849,
+        0.67805643
+      ],
+      "front_road_distance_m": 17.395,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 3.96727386,
+      "identity_sign": {
+        "fascia_height_m": 0.66,
+        "label_height_m": 0.44,
+        "label_width_fraction": 0.96
+      },
+      "inst_name": "place_front_feature_place_node_2927461370",
+      "label": "Tanaka Hair Salon",
+      "mesh_name": "place_front_feature_place_node_2927461370.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/289194875",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "declarative regional small-commercial archetype prior",
+        "collision": "none; presentation only",
+        "geometry": "declarative regional small-commercial archetype prior",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+canonical:claims",
+        "text": "not rendered; no Latin source label"
+      },
+      "rendered_text": null,
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/2927461370",
+      "representation_kind": "synthetic_identity_proxy",
+      "resolved_profile_id": "tokyo.generic_small_commercial_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [],
+      "route_offset_m": 24.026,
+      "route_progress_m": 1004.315,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        1794.2958985317928,
+        2736.0027639612117,
+        1470.852,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "shop=convenience",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/2929215092",
+      "fitted_width_m": 5.396,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        509.98149,
+        682.076388
+      ],
+      "front_edge_index": 5,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        0.713812945,
+        -0.700336404
+      ],
+      "front_presentation_normal_xy": [
+        0.713817081,
+        -0.700332189
+      ],
+      "front_road_distance_m": 5.0,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 0.794933566,
+      "identity_sign": {
+        "fascia_height_m": 1.2,
+        "label_height_m": 0.7,
+        "label_width_fraction": 0.94
+      },
+      "inst_name": "place_front_feature_place_node_2929215092",
+      "label": "FamilyMart",
+      "mesh_name": "place_front_feature_place_node_2929215092.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/225198068",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "OSM brand identity plus declarative operator colour prior",
+        "collision": "none; presentation only",
+        "geometry": "OSM brand identity plus declarative operator colour prior",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+canonical:claims",
+        "text": "OSM name:en rendered with synthesized 5x7 block glyphs"
+      },
+      "rendered_text": "FAMILY MART",
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/2929215092",
+      "representation_kind": "synthetic_identity_proxy",
+      "resolved_profile_id": "tokyo.familymart_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [
+        "green_white_blue_fascia",
+        "warm_lit_glazing",
+        "source_named_frontage"
+      ],
+      "route_offset_m": 5.009,
+      "route_progress_m": 67.883,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        509.9814903718332,
+        682.0763875418846,
+        232.038,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "shop=convenience",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/441523546",
+      "fitted_width_m": 3.4,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        1663.115544,
+        2860.909583
+      ],
+      "front_edge_index": 0,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        0.453648344,
+        -0.891180778
+      ],
+      "front_presentation_normal_xy": [
+        0.453649525,
+        -0.891180178
+      ],
+      "front_road_distance_m": 13.636,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 0.47085625,
+      "identity_sign": {
+        "fascia_height_m": 0.66,
+        "label_height_m": 0.44,
+        "label_width_fraction": 0.96
+      },
+      "inst_name": "place_front_feature_place_node_441523546",
+      "label": "Lawson Three F",
+      "mesh_name": "place_front_feature_place_node_441523546.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/725137997",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "declarative regional small-commercial archetype prior",
+        "collision": "none; presentation only",
+        "geometry": "declarative regional small-commercial archetype prior",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+canonical:claims",
+        "text": "OSM name:en rendered with synthesized 5x7 block glyphs"
+      },
+      "rendered_text": "LAWSON THREE F",
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/441523546",
+      "representation_kind": "synthetic_identity_proxy",
+      "resolved_profile_id": "tokyo.generic_small_commercial_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [],
+      "route_offset_m": 13.592,
+      "route_progress_m": 1036.607,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        1663.115543937216,
+        2860.9095826452176,
+        1541.455,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "amenity=post_office",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/1420789979",
+      "fitted_width_m": 2.6,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        691.315883,
+        860.049477
+      ],
+      "front_edge_index": 5,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        -0.904417917,
+        0.426647667
+      ],
+      "front_presentation_normal_xy": [
+        -0.904419959,
+        0.426643338
+      ],
+      "front_road_distance_m": 2.842,
+      "front_wall_shift_m": -0.701,
+      "front_yaw_rad": 4.271610865,
+      "identity_sign": {
+        "fascia_height_m": 0.66,
+        "label_height_m": 0.44,
+        "label_width_fraction": 0.96
+      },
+      "inst_name": "place_front_feature_place_node_1420789979",
+      "label": "田園調布本町郵便局",
+      "mesh_name": "place_front_feature_place_node_1420789979.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/1507403794",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "declarative regional small-commercial archetype prior",
+        "collision": "none; presentation only",
+        "geometry": "declarative regional small-commercial archetype prior",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+debt:infra01",
+        "text": "not rendered; no Latin source label"
+      },
+      "rendered_text": null,
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/1420789979",
+      "representation_kind": "observed_physical",
+      "resolved_profile_id": "tokyo.generic_small_commercial_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [],
+      "route_offset_m": 2.859,
+      "route_progress_m": 116.864,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        691.3158828960893,
+        860.0494772330626,
+        310.0,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:jp.urban.buddhist_place_entry_gate",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "amenity=place_of_worship",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/2339243972",
+      "fitted_width_m": 3.739,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        553.997217,
+        1033.768584
+      ],
+      "front_edge_index": 7,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        0.646909571,
+        0.762566723
+      ],
+      "front_presentation_normal_xy": [
+        0.646907469,
+        0.762568506
+      ],
+      "front_road_distance_m": 3.357,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 2.438070643,
+      "identity_sign": null,
+      "inst_name": "place_front_feature_place_node_2339243972",
+      "label": "有慶山東光院",
+      "mesh_name": "place_front_feature_place_node_2339243972.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/225101288",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "declarative locale place-entry archetype; OSM identity; source review required",
+        "collision": "none; presentation only",
+        "geometry": "declarative locale place-entry archetype; OSM identity; source review required",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+debt:infra01",
+        "text": "not rendered; no Latin source label"
+      },
+      "rendered_text": null,
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/2339243972",
+      "representation_kind": "observed_physical",
+      "resolved_profile_id": "jp.urban.buddhist_place_entry_gate",
+      "resolved_profile_pack": "japan_urban",
+      "resolved_visual_traits": [],
+      "route_offset_m": 36.443,
+      "route_progress_m": 133.611,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        553.9972165986579,
+        1033.7685837963359,
+        420.999,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "amenity=bank",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/2927455660",
+      "fitted_width_m": 4.8,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        1751.304044,
+        2651.262173
+      ],
+      "front_edge_index": 2,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        -0.649288775,
+        -0.760541969
+      ],
+      "front_presentation_normal_xy": [
+        -0.649288948,
+        -0.760541822
+      ],
+      "front_road_distance_m": 8.317,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 5.576536173,
+      "identity_sign": {
+        "fascia_height_m": 0.66,
+        "label_height_m": 0.44,
+        "label_width_fraction": 0.96
+      },
+      "inst_name": "place_front_feature_place_node_2927455660",
+      "label": "Shiba Shinkin Bank",
+      "mesh_name": "place_front_feature_place_node_2927455660.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/289194874",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "declarative regional small-commercial archetype prior",
+        "collision": "none; presentation only",
+        "geometry": "declarative regional small-commercial archetype prior",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+canonical:claims",
+        "text": "OSM name:en rendered with synthesized 5x7 block glyphs"
+      },
+      "rendered_text": "SHIBA SHINKIN BANK",
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/2927455660",
+      "representation_kind": "synthetic_identity_proxy",
+      "resolved_profile_id": "tokyo.generic_small_commercial_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [],
+      "route_offset_m": 8.284,
+      "route_progress_m": 992.989,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        1751.3040442774745,
+        2651.262172926962,
+        1479.348,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "amenity=pub",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/2929220302",
+      "fitted_width_m": 2.6,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        550.307093,
+        720.708833
+      ],
+      "front_edge_index": 1,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        0.775572872,
+        -0.631258046
+      ],
+      "front_presentation_normal_xy": [
+        0.775574487,
+        -0.631256062
+      ],
+      "front_road_distance_m": 3.711,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 0.887624656,
+      "identity_sign": {
+        "fascia_height_m": 0.66,
+        "label_height_m": 0.44,
+        "label_width_fraction": 0.96
+      },
+      "inst_name": "place_front_feature_place_node_2929220302",
+      "label": "やきとり とんぼ",
+      "mesh_name": "place_front_feature_place_node_2929220302.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/225197888",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "declarative regional small-commercial archetype prior",
+        "collision": "none; presentation only",
+        "geometry": "declarative regional small-commercial archetype prior",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+canonical:claims",
+        "text": "not rendered; no Latin source label"
+      },
+      "rendered_text": null,
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/2929220302",
+      "representation_kind": "synthetic_identity_proxy",
+      "resolved_profile_id": "tokyo.generic_small_commercial_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [],
+      "route_offset_m": 3.725,
+      "route_progress_m": 78.754,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        550.3070926533003,
+        720.7088334754839,
+        251.508,
+        1
+      ]
+    },
+    {
+      "asserts_physical_presence": true,
+      "asset_match": "catalog:narrow_mixed_use",
+      "association": "plan_building_face",
+      "association_distance_m": null,
+      "category": "amenity=restaurant",
+      "clearance_cells": 0.0,
+      "feature_id": "feature:place:node/2929222223",
+      "fitted_width_m": 3.626,
+      "flags": 3,
+      "front_anchor_world_xy": [
+        473.197937,
+        550.065481
+      ],
+      "front_edge_index": 0,
+      "front_edge_selection": "plan_face_index",
+      "front_outward_normal_xy": [
+        0.148568877,
+        0.988902062
+      ],
+      "front_presentation_normal_xy": [
+        0.148569405,
+        0.988901983
+      ],
+      "front_road_distance_m": 5.355,
+      "front_wall_shift_m": -0.7,
+      "front_yaw_rad": 2.992471189,
+      "identity_sign": {
+        "fascia_height_m": 0.66,
+        "label_height_m": 0.44,
+        "label_width_fraction": 0.96
+      },
+      "inst_name": "place_front_feature_place_node_2929222223",
+      "label": "割烹浜蝶",
+      "mesh_name": "place_front_feature_place_node_2929222223.akm",
+      "parent_building_feature_id": "feature:building_footprint:way/225369239",
+      "proposal_status": "synthesized_candidate_pending_source_sign_review",
+      "provenance": {
+        "appearance": "declarative regional small-commercial archetype prior",
+        "collision": "none; presentation only",
+        "geometry": "declarative regional small-commercial archetype prior",
+        "ground": "compiled DEM",
+        "identity": "measured OSM place name/category",
+        "parent": "plan attachment building_face resolved against canonical rules:representation_policy+debt:infra01",
+        "text": "not rendered; no Latin source label"
+      },
+      "rendered_text": null,
+      "representation": "mesh-place",
+      "representation_id": "place_front:feature:place:node/2929222223",
+      "representation_kind": "observed_physical",
+      "resolved_profile_id": "tokyo.generic_small_commercial_front",
+      "resolved_profile_pack": "tokyo",
+      "resolved_visual_traits": [],
+      "route_offset_m": 0.111,
+      "route_progress_m": 39.693,
+      "story_id": -1,
+      "transform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        16.0,
+        0,
+        473.19793658740883,
+        550.065480801316,
+        218.599,
+        1
+      ]
+    }
+  ],
+  "not_claimed": "source-derived sign layout/typeface, exact storefront dimensions, Japanese text where no supported source label exists, collision authority",
+  "place_entry_gate_proposals": 0,
+  "place_fronts_emitted": 10,
+  "place_identity_labels_emitted": 5,
+  "places_considered": 18,
+  "plan": {
+    "built": 10,
+    "consumed": 10,
+    "skipped_by_state": [],
+    "width_fitted": [
+      {
+        "conflicting_mass_id": "feature:building_footprint:way/725138014",
+        "face_index": 0,
+        "feature_id": "feature:place:node/441523546",
+        "fitted_width_m": 3.4,
+        "full_width_m": 4.8,
+        "host_id": "feature:building_footprint:way/725137997",
+        "outward_offset_m": 0.7,
+        "representation_id": "place_front:feature:place:node/441523546",
+        "route_distance_m": 13.592125494294471
+      }
+    ]
+  },
+  "representation": {
+    "debt": [
+      {
+        "feature_id": "feature:place:node/11404946450",
+        "front_height_m": 2.94,
+        "label": "Cocokara Fine",
+        "parent": "feature:building_footprint:way/225198199",
+        "parent_height_m": 15.3,
+        "resolved_profile_id": "tokyo.pharmacy_front"
+      },
+      {
+        "feature_id": "feature:place:node/1420789979",
+        "front_height_m": 2.94,
+        "label": "田園調布本町郵便局",
+        "parent": "feature:building_footprint:way/1507403794",
+        "parent_height_m": 11.1,
+        "resolved_profile_id": "tokyo.generic_small_commercial_front"
+      },
+      {
+        "feature_id": "feature:place:node/2339243972",
+        "front_height_m": 2.83,
+        "label": "有慶山東光院",
+        "parent": "feature:building_footprint:way/225101288",
+        "parent_height_m": 10.7,
+        "resolved_profile_id": "jp.urban.buddhist_place_entry_gate"
+      },
+      {
+        "feature_id": "feature:place:node/2684634174",
+        "front_height_m": 3.34,
+        "label": "My Basket",
+        "parent": "feature:building_footprint:way/225369230",
+        "parent_height_m": 23.4,
+        "resolved_profile_id": "tokyo.mybasket_front"
+      },
+      {
+        "feature_id": "feature:place:node/2929215092",
+        "front_height_m": 3.34,
+        "label": "FamilyMart",
+        "parent": "feature:building_footprint:way/225198068",
+        "parent_height_m": 12.3,
+        "resolved_profile_id": "tokyo.familymart_front"
+      },
+      {
+        "feature_id": "feature:place:node/2929222223",
+        "front_height_m": 2.94,
+        "label": "割烹浜蝶",
+        "parent": "feature:building_footprint:way/225369239",
+        "parent_height_m": 12.348,
+        "resolved_profile_id": "tokyo.generic_small_commercial_front"
+      }
+    ],
+    "offset_fact": {
+      "source": "DEFAULT:authoring (FL-4809 REPRESENT-01: one full terrain cell plus half the deepest front depth, so mesh-placed fronts clear the baked parent mass; moved from compile_world_ir_fixtures.py literals; no ordinance basis)",
+      "unit": "m",
+      "value": 0.7
+    },
+    "per_instance": [
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/11404946450",
+        "front_rows": 32,
+        "label": "Cocokara Fine",
+        "mass_rows": 214,
+        "parent": "feature:building_footprint:way/225198199"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/1420789979",
+        "front_rows": 22,
+        "label": "田園調布本町郵便局",
+        "mass_rows": 100,
+        "parent": "feature:building_footprint:way/1507403794"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/2339243972",
+        "front_rows": 30,
+        "label": "有慶山東光院",
+        "mass_rows": 206,
+        "parent": "feature:building_footprint:way/225101288"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/2684634174",
+        "front_rows": 42,
+        "label": "My Basket",
+        "mass_rows": 209,
+        "parent": "feature:building_footprint:way/225369230"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/2927455660",
+        "front_rows": 29,
+        "label": "Shiba Shinkin Bank",
+        "mass_rows": 138,
+        "parent": "feature:building_footprint:way/289194874"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/2927461370",
+        "front_rows": 19,
+        "label": "Tanaka Hair Salon",
+        "mass_rows": 86,
+        "parent": "feature:building_footprint:way/289194875"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/2929215092",
+        "front_rows": 34,
+        "label": "FamilyMart",
+        "mass_rows": 133,
+        "parent": "feature:building_footprint:way/225198068"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/2929220302",
+        "front_rows": 20,
+        "label": "やきとり とんぼ",
+        "mass_rows": 87,
+        "parent": "feature:building_footprint:way/225197888"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/2929222223",
+        "front_rows": 10,
+        "label": "割烹浜蝶",
+        "mass_rows": 98,
+        "parent": "feature:building_footprint:way/225369239"
+      },
+      {
+        "buried": false,
+        "clearance_cells": 0.0,
+        "feature_id": "feature:place:node/441523546",
+        "front_rows": 17,
+        "label": "Lawson Three F",
+        "mass_rows": 110,
+        "parent": "feature:building_footprint:way/725137997"
+      }
+    ],
+    "rule_source": "scripts/pipeline/compile_rules_resolved.py:ROAD_CLASS_DEFAULTS[place_front_outward_offset_m]"
+  },
+  "required_resolved_archetype_audit": [
+    {
+      "feature_id": "feature:place:node/2929215092",
+      "passed": true,
+      "profile_id": "tokyo.familymart_front",
+      "state": "emitted",
+      "visual_traits": [
+        "green_white_blue_fascia",
+        "source_named_frontage",
+        "warm_lit_glazing"
+      ]
+    },
+    {
+      "feature_id": "feature:place:node/2684634174",
+      "passed": true,
+      "profile_id": "tokyo.mybasket_front",
+      "state": "emitted",
+      "visual_traits": [
+        "green_white_green_fascia",
+        "source_named_frontage",
+        "warm_lit_glazing"
+      ]
+    }
+  ],
+  "route_place_sequence": [
+    {
+      "feature_id": "feature:place:node/2684634174",
+      "label": "My Basket",
+      "representation_kind": "observed_physical",
+      "route_offset_m": 24.051,
+      "route_progress_m": 0.0
+    },
+    {
+      "feature_id": "feature:place:node/11404946450",
+      "label": "Cocokara Fine",
+      "representation_kind": "observed_physical",
+      "route_offset_m": 7.362,
+      "route_progress_m": 26.57
+    },
+    {
+      "feature_id": "feature:place:node/2929222223",
+      "label": "割烹浜蝶",
+      "representation_kind": "observed_physical",
+      "route_offset_m": 0.111,
+      "route_progress_m": 39.693
+    },
+    {
+      "feature_id": "feature:place:node/2929215092",
+      "label": "FamilyMart",
+      "representation_kind": "synthetic_identity_proxy",
+      "route_offset_m": 5.009,
+      "route_progress_m": 67.883
+    },
+    {
+      "feature_id": "feature:place:node/2929220302",
+      "label": "やきとり とんぼ",
+      "representation_kind": "synthetic_identity_proxy",
+      "route_offset_m": 3.725,
+      "route_progress_m": 78.754
+    },
+    {
+      "feature_id": "feature:place:node/1420789979",
+      "label": "田園調布本町郵便局",
+      "representation_kind": "observed_physical",
+      "route_offset_m": 2.859,
+      "route_progress_m": 116.864
+    },
+    {
+      "feature_id": "feature:place:node/2339243972",
+      "label": "有慶山東光院",
+      "representation_kind": "observed_physical",
+      "route_offset_m": 36.443,
+      "route_progress_m": 133.611
+    },
+    {
+      "feature_id": "feature:place:node/2927455660",
+      "label": "Shiba Shinkin Bank",
+      "representation_kind": "synthetic_identity_proxy",
+      "route_offset_m": 8.284,
+      "route_progress_m": 992.989
+    },
+    {
+      "feature_id": "feature:place:node/2927461370",
+      "label": "Tanaka Hair Salon",
+      "representation_kind": "synthetic_identity_proxy",
+      "route_offset_m": 24.026,
+      "route_progress_m": 1004.315
+    },
+    {
+      "feature_id": "feature:place:node/441523546",
+      "label": "Lawson Three F",
+      "representation_kind": "synthetic_identity_proxy",
+      "route_offset_m": 13.592,
+      "route_progress_m": 1036.607
+    }
+  ],
+  "schema": "y92.place_front_lowering.v1",
+  "stage": "executed_artifact_attested"
+}

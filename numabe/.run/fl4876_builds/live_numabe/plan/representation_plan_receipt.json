@@ -1,0 +1,207 @@
+{
+ "asset_vocabulary": {
+  "facade_archetype_modules": 8,
+  "fixture_archetypes": 6,
+  "module_catalog": "/Users/r/Projects/asciicker-Y9-2/artifacts/experiments/fl4813_capture_review_20260915/preserved/numabe_full_727_mapping_20260915/generic_module_catalog.json",
+  "module_count": 87,
+  "modules_by_domain": {
+   "facade_archetype": 8,
+   "generic_storefront": 11,
+   "property_frontage": 10,
+   "rail_edge": 10,
+   "road_cross_section": 12,
+   "street_fixture": 28,
+   "utility_network": 5,
+   "vegetation": 3
+  },
+  "pack_files": [
+   "/Users/r/Projects/asciicker-Y9-2/assets/world_templates/japan_urban/pack.json",
+   "/Users/r/Projects/asciicker-Y9-2/assets/world_templates/japan/pack.json",
+   "/Users/r/Projects/asciicker-Y9-2/assets/world_templates/common_global/pack.json"
+  ],
+  "pack_templates": 44,
+  "place_front_profiles": 2,
+  "railway_crossing_profiles": 1
+ },
+ "crosstab_disposition_x_reconstruction": {
+  "intentional_omissionxA": 11,
+  "intentional_omissionxB": 170,
+  "intentional_omissionxC": 1,
+  "mesh_facadexA": 650,
+  "mesh_facadexB": 65,
+  "mesh_facadexC": 10,
+  "mesh_fixturexA": 51,
+  "mesh_fixturexB": 371,
+  "mesh_fixturexC": 1,
+  "minimap_onlyxA": 1,
+  "minimap_onlyxB": 2,
+  "minimap_onlyxC": 2,
+  "surface_decalxA": 84,
+  "surface_decalxB": 38,
+  "terrain_massxA": 650,
+  "terrain_massxB": 65
+ },
+ "evidence_complete_by_class": {
+  "complete": {
+   "bridge_deck": 1,
+   "building_footprint": 1430,
+   "crossing": 35,
+   "fixture": 269,
+   "place": 18,
+   "railway_boundary": 13,
+   "road": 57,
+   "road_marking": 49,
+   "sidewalk": 10,
+   "sign": 176,
+   "station_entrance": 2,
+   "terrain": 7,
+   "unmapped": 3,
+   "utility_pole": 102
+  },
+  "incomplete": {}
+ },
+ "histogram_anchor_kind": {
+  "building_face": 853,
+  "carrier_chainage": 326,
+  "freestanding": 17,
+  "spatial_reconciliation_debt": 79,
+  "terrain_mass": 715
+ },
+ "histogram_asset_match": {
+  "catalog:jp.traffic.regulatory_family_v1": 29,
+  "catalog:jp.urban.advertising_sign_v1": 44,
+  "catalog:jp.urban.banner_sign_v1": 12,
+  "catalog:jp.urban.bicycle_parking_rack_v1": 1,
+  "catalog:jp.urban.bollard_v1": 1,
+  "catalog:jp.urban.buddhist_place_entry_gate": 1,
+  "catalog:jp.urban.bus_stop_v1": 1,
+  "catalog:jp.urban.catch_basin_grate_v1": 8,
+  "catalog:jp.urban.generic_sign_plate_v1": 5,
+  "catalog:jp.urban.information_board_v1": 8,
+  "catalog:jp.urban.manhole_cover_v1": 41,
+  "catalog:jp.urban.pedestrian_crossing_marker_v1": 24,
+  "catalog:jp.urban.pedestrian_gate_v1": 2,
+  "catalog:jp.urban.post_box_v1": 1,
+  "catalog:jp.urban.public_telephone_v1": 1,
+  "catalog:jp.urban.railway_grade_crossing": 4,
+  "catalog:jp.urban.stop_sign_v1": 4,
+  "catalog:jp.urban.store_signboard_v1": 52,
+  "catalog:jp.urban.street_cabinet_v1": 12,
+  "catalog:jp.urban.street_lamp_v1": 31,
+  "catalog:jp.urban.traffic_cone_v1": 25,
+  "catalog:jp.urban.traffic_sign_v1": 27,
+  "catalog:jp.urban.traffic_signal_v1": 37,
+  "catalog:jp.urban.utility_pole_concrete_v1": 81,
+  "catalog:jp.urban.warning_sign_v1": 2,
+  "catalog:jp.urban.waste_basket_v1": 4,
+  "catalog:jp.urban.water_valve_cover_v1": 1,
+  "catalog:narrow_mixed_use": 9,
+  "catalog:residential_facade_roofed_entry": 715,
+  "new_asset_required": 36,
+  "none": 949,
+  "observation_debt": 1,
+  "procedural:surface_decal": 2,
+  "station_composition:jp.tokyo.small_station_side_platform": 1
+ },
+ "histogram_attachment_state": {
+  "resolved": 1990,
+  "unattached": 182
+ },
+ "histogram_disposition": {
+  "intentional_omission": 182,
+  "mesh_facade": 725,
+  "mesh_fixture": 423,
+  "minimap_only": 5,
+  "surface_decal": 122,
+  "terrain_mass": 715
+ },
+ "histogram_jev_route": {
+  "decided": 452,
+  "human_review": 1,
+  "none": 1719
+ },
+ "histogram_kind": {
+  "map_only": 5,
+  "observed_physical": 1135,
+  "omitted": 182,
+  "surface": 122,
+  "synthetic_identity_proxy": 13,
+  "terrain": 715
+ },
+ "histogram_owner": {
+  "bake": 715,
+  "fixtures": 337,
+  "infrastructure": 5,
+  "minimap": 5,
+  "none": 182,
+  "place_fronts": 10,
+  "population_fixtures": 715,
+  "population_linear": 81,
+  "stamp": 122
+ },
+ "inputs": {
+  "authored_waivers": "c78d67e8ea3f9a29b14bec0296807765798440d6f93b77569fa491c61c7cf63d",
+  "canonical": "bcc806ee1998931ba4bc8d2f8dfe046f83f1060ed35820b059c5183f37787b03",
+  "debt": "e5ad0e156ee0047059ad72a34428af76002b43a7e263350429960704d8e7bd3f",
+  "entities": "0688bf0fa2c1b75886cd5a204b7e3f75f7ba328b2d48cea47015a90e215933a0",
+  "fusion_reviews": "666f475a60adef79a2ee00274f7020e98d2abb70fccd47d952acd1f5fcd6c1ee",
+  "jev_decisions": "b3c0e3c7a6e17d29d255d15aa3aa42483112df37612fbd026a0de7d37b9b0b13",
+  "module_catalog": "939de87ef4e3041cb039ae19cb90c43da936bba4d483399194e63d5064eac6af",
+  "osm_ir": "86d0333f70e978caa8ea3779786c3a6507d1b38769647958d76e0cd11f9d49ab",
+  "pack": "f75c946ae7ee346c55d4af1cd81e4433eb5f3b5efdc855378cfa557730ca3eb7",
+  "route": "51940b2d8bf273239805ab868dfdc242a47eb2bdf895ab52cbd2fcdf6874777b",
+  "route_importance": "8877895b6547a020e225f6ef661fef9561418435bc5f3dd87baf3217fdded8e1",
+  "rules": "7bfdb5e6173fa79c49b16c16d9cd6417575ba7d2de70cd05195bcf56e48c10d6",
+  "terrain_metadata": "2b96f3aa2495a09c15a5ddc07f3c2bca243ed67c26be2df9b4e27f828fac2a3d",
+  "triage_receipt": "0293ce535efd8a713e426d901e06d61d49370f20f8c0a68dc3af5da2c769e741"
+ },
+ "policy_fact_hash": "5b0af17b40aa932d4982e5a35c268d9a7847df4c2a5bef3cfa25836f5f4c8547",
+ "provenance": {
+  "planner_context": {
+   "content_scale_source": "terrain_metadata.content_scale",
+   "coordinate_frame": {
+    "name": "EPSG:32654",
+    "units": "metre"
+   }
+  },
+  "planner_version": "y92.representation_plan.v2:R-STREET-TYPED-JEV:R-STREET-MARKING:R-SPATIAL-OWNER-V3",
+  "world_units_per_metre": 5.1320023927966725
+ },
+ "reconciliation": {
+  "duplicate_primary": [],
+  "expected_primary": 1457,
+  "facade_rows": 715,
+  "primary_rows": 1457,
+  "rows_without_reason": []
+ },
+ "rules_applied": {
+  "below_grade_omission": 3,
+  "building_facade": 715,
+  "commit:1b16a64c58c35ad8deee159e7f28f772a5fc7e58": 1,
+  "cone_evidence_frames_min": 25,
+  "debt_policy_by_importance:background_A": 1,
+  "debt_policy_by_importance:route_visible_C": 4,
+  "debt_policy_by_importance:route_visible_C_rule_backed_facade": 5,
+  "elevated_surface_omission": 7,
+  "fusion_merge": 11,
+  "observed_defaults:ground_surface_classes": 84,
+  "observed_defaults:mass_class": 397,
+  "observed_defaults:mass_class:mesh_shell": 318,
+  "observed_defaults:physical_fixture_classes": 37,
+  "outside_declared_aoi": 130,
+  "semantic_identity_proxy:attraction_map_only": 1,
+  "semantic_identity_proxy:bicycle_rental_map_only": 1,
+  "semantic_identity_proxy:entrance_gate": 2,
+  "semantic_identity_proxy:locality_map_only": 1,
+  "semantic_identity_proxy:memorial": 1,
+  "semantic_identity_proxy:rail_crossing": 4,
+  "semantic_identity_proxy:station_platform": 1,
+  "semantic_identity_proxy:station_stop": 2,
+  "sighting": 380,
+  "street_marking:R-STREET-MARKING": 36,
+  "temporal_surface_mass_conflict": 1,
+  "unmapped_rule": 3,
+  "upper_storey_tenancy": 1
+ },
+ "schema": "y92.representation_plan_receipt.v2"
+}

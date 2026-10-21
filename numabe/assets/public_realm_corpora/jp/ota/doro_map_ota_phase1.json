@@ -1,0 +1,161 @@
+{
+  "schema": "y92.official_road_source_policy.v1",
+  "adapter_id": "jp.tokyo.ota.doro_map.phase1.v1",
+  "jurisdiction": {
+    "country_code": "JP",
+    "region": "Tokyo",
+    "municipality": "Ota"
+  },
+  "portal_url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/",
+  "update_feed_endpoint_id": "official_layer_update_feed",
+  "phase1_required_layers": [
+    "GH",
+    "RM"
+  ],
+  "update_labels": {
+    "道路台帳現況平面図": "GH",
+    "道路・水路網図": "RM",
+    "土地境界図": "KK",
+    "地籍調査成果": "CS",
+    "街区・公共基準点": "KJ"
+  },
+  "refresh_endpoints": [
+    {
+      "id": "ota_city_doro_map_description",
+      "url": "https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html",
+      "role": "municipal_publication_scope_and_counter_escalation"
+    },
+    {
+      "id": "official_layer_update_feed",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/xml/update.xml",
+      "role": "live_layer_version_authority"
+    },
+    {
+      "id": "common_terms",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/terms/terms_common.html",
+      "role": "use_and_claim_boundary"
+    },
+    {
+      "id": "gh_terms",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/terms/terms_GH.html",
+      "role": "road_ledger_current_condition_meaning"
+    },
+    {
+      "id": "rm_terms",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/terms/terms_RM.html",
+      "role": "road_management_and_route_name_meaning"
+    },
+    {
+      "id": "kk_terms",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/terms/terms_KK.html",
+      "role": "land_boundary_evidence_meaning"
+    },
+    {
+      "id": "cs_terms",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/terms/terms_CS.html",
+      "role": "cadastral_evidence_meaning"
+    },
+    {
+      "id": "kj_terms",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/terms/terms_KJ.html",
+      "role": "coordinate_control_meaning"
+    },
+    {
+      "id": "gh_layer_contract",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.MAP/settings/layers_GH.txt",
+      "role": "active_road_ledger_layer_contract"
+    },
+    {
+      "id": "rm_layer_contract",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.MAP/settings/layers_RM.txt",
+      "role": "active_road_network_layer_contract"
+    },
+    {
+      "id": "kk_layer_contract",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.MAP/settings/layers_KK.txt",
+      "role": "active_land_boundary_layer_contract"
+    },
+    {
+      "id": "cs_layer_contract",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.MAP/settings/layers_CS.txt",
+      "role": "active_cadastral_layer_contract"
+    },
+    {
+      "id": "kj_layer_contract",
+      "url": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.MAP/settings/layers_KJ.txt",
+      "role": "active_coordinate_control_layer_contract"
+    }
+  ],
+  "phase1_extractable_rules": [
+    {
+      "rule_id": "ota.rm.named_route_is_ota_managed",
+      "input": "RM route-name presence",
+      "output": "ota_managed",
+      "strength": "official_management_classification",
+      "site_truth_effect": "classification_constraint_only"
+    },
+    {
+      "rule_id": "ota.rm.unnamed_route_is_not_ota_managed",
+      "input": "RM route-name absence",
+      "output": "not_ota_managed",
+      "strength": "negative_ota_management_classification_only",
+      "site_truth_effect": "classification_constraint_only"
+    },
+    {
+      "rule_id": "ota.gh.width_is_survey_time_current_condition",
+      "input": "GH width label",
+      "output": "survey_time_current_condition_width_observation",
+      "strength": "reference_observation",
+      "site_truth_effect": "classification_constraint_only"
+    },
+    {
+      "rule_id": "ota.gh.structure_position_is_reference_observation",
+      "input": "GH side-gutter or structure position",
+      "output": "observed_structure_carrier_candidate",
+      "strength": "reference_observation",
+      "site_truth_effect": "classification_constraint_only"
+    },
+    {
+      "rule_id": "ota.kk_cs.boundary_state_is_evidence_not_geometry",
+      "input": "KK or CS confirmation state",
+      "output": "boundary_evidence_state",
+      "strength": "constraint_only",
+      "site_truth_effect": "classification_constraint_only"
+    },
+    {
+      "rule_id": "ota.kj.control_point_declares_reference_system",
+      "input": "KJ point metadata",
+      "output": "coordinate_reference_and_manager",
+      "strength": "official_control_metadata",
+      "site_truth_effect": "classification_constraint_only"
+    }
+  ],
+  "prohibited_inferences": [
+    "Do not treat the background map as a road area or land boundary.",
+    "Do not treat GH current-condition width as certified, recognized, or management width.",
+    "Do not infer Building Standards Act Article 42 road status from Doro Map Ota.",
+    "Do not infer the authority that manages a road merely from not_ota_managed.",
+    "Do not infer a speed limit, sign type, sign location, gutter ratio, sidewalk type, or rail fence from these layers.",
+    "Do not treat portal geometry as exact current physical geometry.",
+    "Do not retain, edit, process, or reproduce municipal map drawings or tiles in a build artifact."
+  ],
+  "required_external_joins": [
+    {
+      "claim": "Building Standards Act road category",
+      "source": "Machimap Ota building-code road map or competent-office confirmation"
+    },
+    {
+      "claim": "recognized or management width",
+      "source": "competent Ota office or another currently active official source"
+    },
+    {
+      "claim": "traffic sign and marking family",
+      "source": "national road-sign order plus observed physical instance"
+    },
+    {
+      "claim": "current physical object existence and position",
+      "source": "dated imagery, field survey, or accepted physical registration"
+    }
+  ],
+  "source_reviewed_on": "2026-09-16"
+}

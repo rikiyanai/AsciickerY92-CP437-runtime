@@ -1,0 +1,44 @@
+ply
+format ascii 1.0
+comment Branchless slim OSM tree fixture for SBU map-local placement
+element vertex 16
+property float x
+property float y
+property float z
+property uchar red
+property uchar green
+property uchar blue
+property uchar alpha
+element face 14
+property list uchar uint vertex_indices
+end_header
+-0.12 -0.12 0.00 73 49 28 255
+0.12 -0.12 0.00 73 49 28 255
+0.12 0.12 0.00 73 49 28 255
+-0.12 0.12 0.00 73 49 28 255
+-0.10 -0.10 2.80 96 64 36 255
+0.10 -0.10 2.80 96 64 36 255
+0.10 0.10 2.80 96 64 36 255
+-0.10 0.10 2.80 96 64 36 255
+-0.42 -0.42 2.25 31 96 18 255
+0.42 -0.42 2.25 34 112 20 255
+0.42 0.42 2.25 25 82 15 255
+-0.42 0.42 2.25 38 128 24 255
+-0.26 -0.26 6.10 18 74 12 255
+0.26 -0.26 6.10 28 104 18 255
+0.26 0.26 6.10 16 66 10 255
+-0.26 0.26 6.10 30 118 20 255
+4 0 1 2 3
+4 4 7 6 5
+4 0 4 5 1
+4 1 5 6 2
+4 2 6 7 3
+4 3 7 4 0
+4 8 9 10 11
+4 12 15 14 13
+4 8 12 13 9
+4 9 13 14 10
+4 10 14 15 11
+4 11 15 12 8
+4 4 8 11 7
+4 5 6 10 9

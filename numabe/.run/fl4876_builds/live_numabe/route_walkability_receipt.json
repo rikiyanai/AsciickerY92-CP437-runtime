@@ -1,0 +1,65 @@
+{
+  "authority": {
+    "building_mass": "OSM footprints lowered to the A3D heightfield",
+    "clearance": "derived from the original Classic HUMAN collision radius",
+    "ground": "DEM-only terrain A3D",
+    "route": "Valhalla pedestrian routing over the frozen OSM network",
+    "runtime_acceptance": "FL-4816 headed Classic traversal remains required"
+  },
+  "code_refs": [
+    "engine/physics.cpp:1051",
+    "engine/physics.cpp:1054"
+  ],
+  "conflicting_building_sources": [],
+  "counts": {
+    "affected_building_masses": 0,
+    "corridor_samples": 53860,
+    "height_vertices_restored": 0,
+    "missing_samples": 0,
+    "post_blocked_samples": 0,
+    "pre_blocked_samples": 0,
+    "terrain_seam_mismatches": 0,
+    "visual_cells_restored": 11
+  },
+  "gates": {
+    "a3d_tail_preserved": true,
+    "collision_corridor_clear": true,
+    "route_inside_a3d_bounds": true,
+    "static_route_walkability_valid": true,
+    "terrain_seams_equal": true
+  },
+  "inputs": {
+    "building_map": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/output.a3d",
+    "building_map_sha256_before_clearance": "f489a7ecf17cceef53b2a2c465df4e69ca3c8847485531e182ad52ea091538fd",
+    "building_specs": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/building_instances.json",
+    "route_source": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/valhalla_pedestrian_route.json",
+    "route_source_sha256": "51940b2d8bf273239805ab868dfdc242a47eb2bdf895ab52cbd2fcdf6874777b",
+    "terrain_map": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/terrain.a3d",
+    "terrain_map_sha256": "da31a997a02b0fda5d703c3a02f8c92c41232dada48f935a49ca783dbc73f7f6",
+    "terrain_metadata": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/terrain_metadata.json"
+  },
+  "measurements": {
+    "max_centerline_grade": 0.3973890697255524,
+    "minimum_centerline_normal_z": 0.9293110127912159,
+    "post_max_building_rise_raw": 0.0,
+    "pre_max_building_rise_raw": 0.0,
+    "required_minimum_ground_normal_z": 0.8
+  },
+  "output": {
+    "map": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/output.a3d",
+    "map_sha256": "e4bc9166fcd2da55df478bcca4d9d1b7e311169d177cec5ccb7bf45eea06a5aa"
+  },
+  "route": {
+    "classic_human_radius_m": 0.38971143170299744,
+    "classic_human_radius_world": 1.3333333333333333,
+    "encoded_points": 57,
+    "height_lattice_support_world": 4.161760458079524,
+    "length_m": 1041.762115750776,
+    "length_world": 5346.325670757907,
+    "sample_step_world": 0.5,
+    "source_kind": "accepted_valhalla_pedestrian_route",
+    "source_reported_length_m": 1040.0
+  },
+  "schema": "y92.classic_route_walkability.v1",
+  "stage": "executed_static_artifact_attested"
+}

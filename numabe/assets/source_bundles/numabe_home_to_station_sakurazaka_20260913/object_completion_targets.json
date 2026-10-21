@@ -1,0 +1,44 @@
+{
+  "schema": "y92.object_completion_targets.v1",
+  "targets": [
+    {
+      "schema": "y92.object_completion_target.v1",
+      "target_id": "numabe_route_street_cluster_380824489761280_p270",
+      "backend": "fire3d_single_image_v1",
+      "placement_mode": "model_local_proposal",
+      "capture_id": "mapillary_380824489761280__yaw_p270",
+      "source_root": "assets/source_bundles/numabe_home_to_station_sakurazaka_20260913",
+      "capture_selection": "artifacts/experiments/fl4813_parent_facade_20260913/capture_selection.json",
+      "geometry_npz": "artifacts/experiments/fl4813_parent_facade_20260913/da3_output_intrinsics/geometry.npz",
+      "geometry_receipt": "artifacts/experiments/fl4813_parent_facade_20260913/da3_output_intrinsics/proposal_receipt.json",
+      "camera_registration": "assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/mapillary_lateral_camera_solve_receipt.json",
+      "semantic_targets": [
+        "vending_machine",
+        "utility_pole",
+        "storefront_front",
+        "roadside_fixture_cluster"
+      ],
+      "cheap_baseline": {
+        "owners": [
+          "scripts/pipeline/compile_world_ir_fixtures.py",
+          "assets/world_templates"
+        ],
+        "required_comparison": [
+          "visible silhouette retained after PS1 simplification",
+          "source colour identity",
+          "additional route-readable information",
+          "manual cleanup minutes",
+          "AKM triangle and palette budget"
+        ],
+        "retain_fire3d_only_if": "proposal adds route-readable identity that the reusable archetype cannot"
+      },
+      "budget": {
+        "currency": "USD",
+        "expected_job_usd": 10.0,
+        "maximum_job_usd": 10.0,
+        "intervention_total_usd": 20.0,
+        "absolute_pipeline_cap_usd": 40.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,741 @@
+{
+  "counts": {
+    "by_importance": {
+      "background": 2,
+      "landmark": 1,
+      "route_visible": 14
+    },
+    "by_state": {
+      "frame_available_unboxed": 7,
+      "observation_owed": 7,
+      "observed_boxed": 3
+    },
+    "features": 17
+  },
+  "defaults_used": {
+    "observation_default_hfov_deg": {
+      "source": "DEFAULT:authoring (FL-4809 OBSERVE-01: repo perspective-frame fallback 60 deg per register_observations.py and lower_plan_custom.py; no measured intrinsics basis)",
+      "unit": "deg",
+      "value": 60.0
+    }
+  },
+  "features": [
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/11404946449",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An84L4EOPySEYglmOHsv-Xg3ZjAupM5l5Jtwllnk6LpbkypEpStLMq0njcLTapnMIunq-OMzsR2aSXITww-zsF-4pWqnrXT9yrwUHBlr5SWwDLyyZN7RfemjzmZK5xuGGjO8JuLMv_XibsuEjM0NQA?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdokCEUXpLoj4rvXzBwAim45rbJs0SFG1X6-rGdyR3hhMsPOaIsdXG9vkuRKdHcFuA5jduUheYViaLYeWdTqAQRY&ccb=10-5&oh=00_AQIaTA06NBd-DDpGnj3Tskh1ooZXSHAU20HFPjvraHflpg&oe=6AD106F6&_nc_sid=201bca",
+          "bearing_residual_deg": 1.058,
+          "capture_time": "2025-08-02T05:43:11.308000+00:00",
+          "distance_m": 6.688,
+          "frame_id": "2217966788704208",
+          "heading_deg": 90.0,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.5832171,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.6726894,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An_O_R1jlPToDGhKBUXgRfHQ7GVen_jnX9-ANlgITANCHY7GRMeXP3bLZqJJLzQroqeKUbYqeaapuThwGgp6FxZtdb1OFtUPrrOQYajyZksH03Y3nalhzO27H9sM0_hYvYNjQvWA-wB3t59qt35ZYmU?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=Adrtnp2hNDgw54YKOKoJgwNohX6lWt48POb7uCrNPyJHqbR2ENGpsNrgBZV08TxcXU4Nv_A08JNLxXqQ9ORZnDZ5&ccb=10-5&oh=00_AQLtGuHjCfn2mvM9w0Z-E9E1SAjVIlgvkCuqKZxY5unYDQ&oe=6AD0F2BE&_nc_sid=201bca",
+          "bearing_residual_deg": 3.058,
+          "capture_time": "2025-08-02T05:43:11.983000+00:00",
+          "distance_m": 6.688,
+          "frame_id": "1048138590440937",
+          "heading_deg": 88.0,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.5832171,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.6726894,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8-E-w0kJQFQfkDdhx4yK4FKQTWByWu3B45QE01GrR-zrJJh-xGm_YMKMrTp09QxAU3UPulz8xs1SwbtkkWXqvBDL63TkiMqAg4E1BscucvCaOppRVM0QpSQVdh6u0oRYyMQOiYXXS3nIFjn_xk3g?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdpfIQ-HcR3RVA3GqPyvGfIRglZv0i_qmj_K3MUUZseccG3Tny9U1d2ufgI_vhH2Asnu3F09xrJ1QcfDGZaxfw1z&ccb=10-5&oh=00_AQK6kxAc1DB2wQG16HI1geV0hyvfDt8f0xyL9LW9KrCv9Q&oe=6AD11648&_nc_sid=201bca",
+          "bearing_residual_deg": 29.675,
+          "capture_time": "2022-07-17T15:57:39.910000+00:00",
+          "distance_m": 16.511,
+          "frame_id": "539610181278462",
+          "heading_deg": 322.99215686275,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583069444444,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67278888889,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "C",
+      "importance": "background",
+      "label": "田園歯科医院",
+      "observation_state": "frame_available_unboxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [
+        {
+          "frame_id": "mapillary_511885063313009",
+          "kind": "facade_view",
+          "ref": "mapillary_511885063313009__yaw_p090.jpg",
+          "via": "capture_id"
+        },
+        {
+          "frame_id": "mapillary_511885063313009",
+          "kind": "facade_view",
+          "ref": "mapillary_511885063313009__yaw_p270.jpg",
+          "via": "capture_id"
+        }
+      ],
+      "feature_id": "feature:place:node/11404946450",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An9Pxq86ZgCB7KsjowtCT7X_abgmy-_iHM0Qd2ofo9DMBfh8PLem4tpbBcMUKGJhL2EWyyLfrgGcoZL-Ja5hPozCF78I3F8YkQHadNDNDj-o-DPKcz-x-NiqX6TGGCxn7hrvnAFNP6hofP3WYvQbYA?stp=s1024x512&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdqATiXJpCV-iFQ8c8O9PQXElIQjxyV3Yb55bFIM5nVX2u8AqWSra1A8iu6VtwblT8yyD0v36Fi3MkneN984k5g_&ccb=10-5&oh=00_AQJVy_B0tnpWr74ZKgRj5wBTXap2LKgD4yozBC9BJ5v_6w&oe=6AD10A8E&_nc_sid=201bca",
+          "bearing_residual_deg": 0.274,
+          "capture_time": "2019-02-16T12:56:24.434000+00:00",
+          "distance_m": 8.66,
+          "frame_id": "511885063313009",
+          "heading_deg": 19.3,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.6729,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t6/An9Pxq86ZgCB7KsjowtCT7X_abgmy-_iHM0Qd2ofo9DMBfh8PLem4tpbBcMUKGJhL2EWyyLfrgGcoZL-Ja5hPozCF78I3F8YkQHadNDNDj-o-DPKcz-x-NiqX6TGGCxn7hrvnAFNP6hofP3WYvQbYA?stp=s1024x512&_nc_gid=BjOsxtDAtgHScRkEYldqUQ&_nc_oc=AdoeOCphG0UVsuLiKSEr84yr1_Aco7GCFQlrus728Zqahv3vnRrw_g3FAp_zNY8VI9Fvb3_fgFlF1ehmOxmBS8FQ&ccb=10-5&oh=00_AQI5EZnMR3MkSpaC0TiDPSf9tXFksggRClqukns0QMLb-Q&oe=6ACD4E4E&_nc_sid=201bca",
+          "bearing_residual_deg": 0.274,
+          "capture_time": "2019-02-16T12:56:24.434000+00:00",
+          "distance_m": 8.66,
+          "frame_id": "mapillary_511885063313009",
+          "heading_deg": 19.3,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.6729,
+          "los_clear": true,
+          "on_disk_path": "captures/mapillary/mapillary_511885063313009.jpg",
+          "source": "route_capture"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An_Cd7O0wffKOwq7FaQjOQgqRry0Om_9MQK6GWxyzHE4pf4loPZUqWl9GJqEdLh8j-MsM5gy-nW2kOzBOdxQHivtTUL7oKoilckUWbv2Cns-hh5Kasohg_FzsdmpF_xRLxMH1IE9WDML2RZahYT1kw?stp=s1024x512&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdptB0YJ5yMk7q4HWd8FOX44SMEPCru1QR4_wsHRAncFJCrW5XU4svW722Qg_VR6Wks5f3vy8IVtw2Xtle0Ng_cf&ccb=10-5&oh=00_AQKtOLcZsGPp22MOC3fw7oJ6Gazos1vW3F7-tk4Efo6umg&oe=6AD118DC&_nc_sid=201bca",
+          "bearing_residual_deg": 14.472,
+          "capture_time": "2019-02-16T13:00:48.916000+00:00",
+          "distance_m": 15.314,
+          "frame_id": "200221161739799",
+          "heading_deg": 230.8,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583133333333,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67308333333,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "Cocokara Fine",
+      "observation_state": "observed_boxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/13726789786",
+      "frames": [],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "Docomo Bike Share",
+      "observation_state": "observation_owed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/1420789979",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8slabcRMyZ7DFVT5pdaW53GldFEwui44CHfmfKT66jfav82c7lxXTcnSoBV9QrOSOtAyA9-xJvIsLv0Y4xBtPCviSFZ2_A64D9uEdDsVkyClCj4QBJDOfSik9YOgcFpY-oges6fuXehxs8NG2yUw?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdrA7vez-0HHkXBEwXoIG-Arg625Xb4dAIC7iBWngKz0ssUjdhdyZjF6yVkgfGAOZ6UNEnHFLhrN3U2iBHVCXVB6&ccb=10-5&oh=00_AQJLg-a-3N6MjuMuxYTRVgk3h85Rnq9SLyjN0hCkShTYcg&oe=6AD11755&_nc_sid=201bca",
+          "bearing_residual_deg": 11.194,
+          "capture_time": "2022-10-29T06:24:39.616000+00:00",
+          "distance_m": 23.615,
+          "frame_id": "125723550282820",
+          "heading_deg": 58.752380371094,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583504312705,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67339641428,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8x91zkW7GxPQnshwCIT_99HQbxUucB3te1K7aCSRF5iuSJcRvMmj2prW5GNk1vYYIVNQscMeILNoNgOt1vjbwBDtpUAYje9imF93TMGo9i6QTEt40ymUMDglJ1CNd8jV6_BkKtJlcUj-viGMkOeQ?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdoQ0HrCRppIiGFLX_SbGjQR1uJKy-KWroJ1E14ieCw0tGsNSwEYT9I2MfCgR2gigd9OjCjxld8qpPVr9lDicIJc&ccb=10-5&oh=00_AQIFbaAuK0gczhZggjUVKB3dxlX7ENJhAPYGZJolQtaEOg&oe=6AD0E458&_nc_sid=201bca",
+          "bearing_residual_deg": 11.194,
+          "capture_time": "2022-10-29T06:24:40.054000+00:00",
+          "distance_m": 23.615,
+          "frame_id": "689061126179809",
+          "heading_deg": 58.752380371094,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583504312705,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67339641428,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An_VXqjRperWzdw4-AVYzrZ5ASdRCod-l45c0EKFcQLtSaK770H2E0mUbLRmyyCPErCeHwFjLmcl_FwRy_aHwGGBgbJzhkRfrVvN9kp2dx2Q31D6LwRnDBkmoCrcrWk7I8GP51lQkNjDZ80NEV4z-w?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdpPRasNSO8mAMSaw2dTAeRODE6MKPNmM22l7S6IlwxRKwhlLOFqTGbwX1FmQFTIeL-WOsKJ5M57jbqOdwlOin4x&ccb=10-5&oh=00_AQLbeFmXwlwqmBQk2qNQ03jET_EVQxxp2vdzjZ6aO-4VCw&oe=6AD0E857&_nc_sid=201bca",
+          "bearing_residual_deg": 4.035,
+          "capture_time": "2022-10-29T06:24:38.279000+00:00",
+          "distance_m": 24.78,
+          "frame_id": "477630801006038",
+          "heading_deg": 66.703979492188,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583503474515,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67338308705,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "田園調布本町郵便局",
+      "observation_state": "frame_available_unboxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/2145028048",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8ZLVqwaP7aoOkiegfLS5tCch28ysb4xbZ92QjZlbhmml3n4q4qwwdgTZH6mRM9hTim3S7ZDUrX47CIvYjaoIIhyas-3d7ujYmOclU5jmWzUS3ywb8hpShZ9EIs3nGcXupaB8oPA7Juf8-xXW2iSw?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=Adq786hWegL5BpQetGWsPoLStKbnF2TdCrCTiwF6tjcBdAtx8v9J0wClQ31QgwGx78lsOYe7rSO38yYpfD5XWOg-&ccb=10-5&oh=00_AQJg1JgzPEA5iHjDZEZTg2MsZ4f_GvMy14VuDOFl6LdHiA&oe=6AD10E78&_nc_sid=201bca",
+          "bearing_residual_deg": 3.817,
+          "capture_time": "2022-06-08T15:09:42.860000+00:00",
+          "distance_m": 10.661,
+          "frame_id": "2933972563566993",
+          "heading_deg": 325.9472345836,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582672222222,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67311111111,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t6/An8ZLVqwaP7aoOkiegfLS5tCch28ysb4xbZ92QjZlbhmml3n4q4qwwdgTZH6mRM9hTim3S7ZDUrX47CIvYjaoIIhyas-3d7ujYmOclU5jmWzUS3ywb8hpShZ9EIs3nGcXupaB8oPA7Juf8-xXW2iSw?stp=s1024x768&_nc_gid=BjOsxtDAtgHScRkEYldqUQ&_nc_oc=AdrHOBc8dk4fwElvO_8YHlnigIY5T9cgqQ3ZAsuETEAZpKJTXH2nODvp4oPgw-5d0c08Cda7N_BydAQysbk3mdW4&ccb=10-5&oh=00_AQII4O6ZDcqI7h5o-Dtq_0R9SR1Ci0lLWFgNKTQqgNhUag&oe=6ACD5238&_nc_sid=201bca",
+          "bearing_residual_deg": 3.817,
+          "capture_time": "2022-06-08T15:09:42.860000+00:00",
+          "distance_m": 10.661,
+          "frame_id": "mapillary_2933972563566993",
+          "heading_deg": 325.9472345836,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582672222222,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67311111111,
+          "los_clear": true,
+          "on_disk_path": "captures/mapillary/mapillary_2933972563566993.jpg",
+          "source": "route_capture"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8MTmdgS-9aeZ0WPLAVhG6cApkggimC5G9XKFgrdga8Ig81QHQoPSdRmpQkkGA02fWFY9T-BrQW2V0hLFSbo6NXUNIEige8pmf6Xa9rgNq6tPNn_TDO-YDQiyDE0UEiQJnH_pER8nW30RiWB3HgKg?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdoVzgyncSj23hu6gZ5MhRsveegGlkibI4uktslNik182eazwv2r06Mb1G1XLPmHHGWjqC1jVBvX4Km4BRHgnXHz&ccb=10-5&oh=00_AQIHl-pRAhuOWEZ2Zd6t0bRyiUlKcNsF40pgbOihm5Fkvg&oe=6AD0F2B7&_nc_sid=201bca",
+          "bearing_residual_deg": 7.221,
+          "capture_time": "2020-08-25T01:58:03.016000+00:00",
+          "distance_m": 11.817,
+          "frame_id": "626009842129321",
+          "heading_deg": 320.54092407227,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582665264945,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67312154677,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "B",
+      "importance": "route_visible",
+      "label": "Numabe",
+      "observation_state": "frame_available_unboxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/2339243972",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An9lpxw0ETokduuW5TCcQDZJjJUxx3FJEufGxEsEOHjfVXotK0Zf-ZwTO2wNR-zsYlqZc8qLJG9VxOfoR-oMmYSgV_oI3ZW3JFEw8FqwrapxmsjyDVmDaptHgtOJ612ifdh5r-bTjuHMon7y84s3Ug?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=Adrj20YznJiPLNX43m-W9f7y0tW79K_ZKDZ-b1vdlBPPhwFUXcrMKIyK-1eSPD-kM3iK2JLKwa8PFr66pF7yFUbx&ccb=10-5&oh=00_AQJMsuIn65vCgKmBE2SH-RVe9F6OKrycBmtESA39KmEhZQ&oe=6AD0FF19&_nc_sid=201bca",
+          "bearing_residual_deg": 1.975,
+          "capture_time": "2022-10-29T06:25:20.443000+00:00",
+          "distance_m": 20.803,
+          "frame_id": "1150690485863616",
+          "heading_deg": 307.40463256836,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.58370987888,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67333120307,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An9L1Ro6v8d_yVFhp3Urn1DQtsGsMY8r9OcTXkrBH7OZMA511F0dPyy6vZuAqBtqWnQ5Gl2LZMxiWMDeBsy7KkkXoJGpPQjtkmiU8oXfmeO2xCQ8d35W8oDOmWJ2oRO1Bg7oRbWsoTFirLNEkZnh9Q?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdrvtVsfnaRVZDmMosIjB8vbUFOQApEG6sbjLO6Eft0G1woYUlbE81IslBrawLTH6uAiyF3Naxq6b-AMTD3FLMVV&ccb=10-5&oh=00_AQL99udW0D0m4XqKeBynJr1qtVMOqnHqKti7e8XmiKRZ5Q&oe=6AD10DAB&_nc_sid=201bca",
+          "bearing_residual_deg": -10.968,
+          "capture_time": "2020-05-24T03:38:09.223000+00:00",
+          "distance_m": 22.478,
+          "frame_id": "375845807131433",
+          "heading_deg": 16.520708084106,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583624970201,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67313112704,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An9EVQVT2ox_HOtYdnMaFozaGr4lSWXzhTEILhuD7YOtWGJOA2E9XyF6rZ-EkiZEE4vMo_uz0xIIb3XFcndrPtjnBtcwz95Sr0D-z6vmn61VLK16iaucvS7ZexVoS2HyasU9HRJXkz28T6mBc_mEEg?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdpuzX5p22W6aTus4N1vpkkVmx0ZfJ5tOEtUciXEv8Z4StluUJS0V26k5hdY-lleYfSWxyN4Rd9R9BArV1aYUg30&ccb=10-5&oh=00_AQI_ojoYzgjWBVhQNsk8gDnsZ3ULeckw8D2Es0li_suA2Q&oe=6AD1151F&_nc_sid=201bca",
+          "bearing_residual_deg": 20.809,
+          "capture_time": "2020-05-24T03:38:06.692000+00:00",
+          "distance_m": 22.478,
+          "frame_id": "4044270652352825",
+          "heading_deg": 344.74401855469,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583624970201,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67313112704,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "C",
+      "importance": "background",
+      "label": "有慶山東光院",
+      "observation_state": "frame_available_unboxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/2340152791",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8ISLmhDUeMU9ppoM65yyPC90bZRxz44_ET4u7hhITZ03k-GVRjVHJE2h0FCRFWDV-_M_2sfAnyHerNYNS0tW46dOleyLYcAh4LcM69MDvYMG-ca8bis5SVQdBqf2Lv-axs2ZWg8wLnjYpPvJ6hfQ?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=Adq2-P2UHCWEfPXOd1A7tyfwvNjIwfA811Lr3ljjjaG_qP4I-98j3X2c2K7OGqEOBRWZ5PI5LD3wT5lIZo6kGasp&ccb=10-5&oh=00_AQICgliX-dfXhGh2LN06zBSlelMdgnvp9bB5SdLelIf8PQ&oe=6AD1196A&_nc_sid=201bca",
+          "bearing_residual_deg": -28.286,
+          "capture_time": "2019-02-16T12:54:28.496000+00:00",
+          "distance_m": 0.215,
+          "frame_id": "2993141324144189",
+          "heading_deg": 22.059326171875,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583552777778,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67326388889,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An99_C8o2aYMhr40MObrgmGx6JKtx8XLLZGmO-F47g3_JLUB0kPWgPGbZoMODSq0EtUV1rvJWXD6nTckaGSfFu7mC6jxnZMwMz_3OWseEYhGb9RdgcfpEGSS35SFVoBQYftSP4nyh4kta8-sHNCj7A?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdpIeY-Nf2wHTlmXVVNkFazOETIIPNfOWKIbC8SSUMAbIMSuHgPHripws21U1-HWvETIRauvH0szVxU-Qt6v9XPS&ccb=10-5&oh=00_AQLjDQSDokj1FP_ZGZsJPPbmZwMmdco5HWRp34OWVavirg&oe=6AD0FBD1&_nc_sid=201bca",
+          "bearing_residual_deg": -2.018,
+          "capture_time": "2022-10-29T06:24:21.111000+00:00",
+          "distance_m": 4.322,
+          "frame_id": "667241551661893",
+          "heading_deg": 140.68877410889,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583583605509,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67323162606,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An87l1QXGEo7Ht4TmMyBer8hqce-AnYi3QDZ2puvJhr9Ot0-eZs4e7dRN3qf8fE8J5Xesb73wij04FlD7A0ZNhzG0-ZsiMq5XR4k-LTdfaEYmI3q-wiFWewub394MpfFMEjmxFIa7kC_VldOVvLYRw?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=Adr70bnnhjC1Jm1AGSmBh1BnsbtdxEIxoFZWAD-a2vaoibRHJCh4W2C4lq_-9IjCajvPtqx6chTSD0IL81AQJXI3&ccb=10-5&oh=00_AQLp40qKGZF2jGM1NBRIULpNm3yUF8uiD8BgR2H--7Zt3w&oe=6AD0E57A&_nc_sid=201bca",
+          "bearing_residual_deg": -16.461,
+          "capture_time": "2022-10-29T06:24:19.738000+00:00",
+          "distance_m": 4.701,
+          "frame_id": "1496214250845794",
+          "heading_deg": 143.89338302612,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.58358000129,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67322198687,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "六郷用水跡",
+      "observation_state": "frame_available_unboxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/266085809",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8rwnhsQ0e3pNdD0SZHyfoOK1v0C0YZhPMWZWgf4Q_RRlywB6milSfaTssj0rm3_lf1SXDsLdFWqsII3dz-fMdcj1Zols-M6gkKjn9kUGPMxwv0M8sw_ukvfgVm1GzlndW8Y2IMLChOQF3nX54Rr0k?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdrAYL1lEZJG-ioKz3OW6m87wPXbm04Hg-9oWi1k5pw3xMZC1LRg9PsFTPDi1Gjc84pytWrA-H29hCKbfBcPHwf0&ccb=10-5&oh=00_AQKW0Ze-tsfvHGO4gXBvD9gXj3avm6GQJljW8vXr7BiLuw&oe=6AD0F5FE&_nc_sid=201bca",
+          "bearing_residual_deg": 26.62,
+          "capture_time": "2022-02-25T11:47:08.119000+00:00",
+          "distance_m": 0.471,
+          "frame_id": "256431616637662",
+          "heading_deg": 147.02598187311,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582786111111,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67308055556,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An-YB95sdMemrI-85-PIaZU71S_-oxKAM4BDEWKWyDfl9GC0jlX-PTOtC_I74JqrowD4NjAd4jl7mvn300n8hq3bhiWWlS17Fw6pJf77BBGi_1f9a1fit6FfUNXMSAR_p51jziXLoHQuf9rCaBmsjg?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdrBobcQeXExqmTHUe9giuGydMTEBgxmvOOR4GsulU6HR-r--istivgcSCMHiJCVI-Z4ZlxpVduOsjc7AWLPcQ0s&ccb=10-5&oh=00_AQK5oEpOPtc3-ZV_rQpQNYeOStkhFr534ci-dj9dfM5WWQ&oe=6AD0EA6C&_nc_sid=201bca",
+          "bearing_residual_deg": 26.62,
+          "capture_time": "2022-02-25T11:47:08.119000+00:00",
+          "distance_m": 0.471,
+          "frame_id": "311049030906878",
+          "heading_deg": 147.02598187311,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582786111111,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67308055556,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t6/An8rwnhsQ0e3pNdD0SZHyfoOK1v0C0YZhPMWZWgf4Q_RRlywB6milSfaTssj0rm3_lf1SXDsLdFWqsII3dz-fMdcj1Zols-M6gkKjn9kUGPMxwv0M8sw_ukvfgVm1GzlndW8Y2IMLChOQF3nX54Rr0k?stp=s1024x768&_nc_gid=BjOsxtDAtgHScRkEYldqUQ&_nc_oc=Adp_1gBQls7WWlAUduM0dsggJn5CxSwTT81Mv37cYtTOrtm6qtVTGOmZBNdCSUvKNusLvsfpqNUH-YvI7c2_9PMu&ccb=10-5&oh=00_AQLWQ7sIrTe_hTWpqSilfUKBKawOcuK_S6azTn3z0KTURA&oe=6ACD71FE&_nc_sid=201bca",
+          "bearing_residual_deg": 26.62,
+          "capture_time": "2022-02-25T11:47:08.119000+00:00",
+          "distance_m": 0.471,
+          "frame_id": "mapillary_256431616637662",
+          "heading_deg": 147.02598187311,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582786111111,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67308055556,
+          "los_clear": true,
+          "on_disk_path": "captures/mapillary/mapillary_256431616637662.jpg",
+          "source": "route_capture"
+        }
+      ],
+      "group": "B",
+      "importance": "route_visible",
+      "label": "Numabe",
+      "observation_state": "frame_available_unboxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [
+        {
+          "frame_id": "mapillary_138974158240453",
+          "kind": "facade_view",
+          "ref": "mapillary_138974158240453__yaw_p090.jpg",
+          "via": "capture_id"
+        },
+        {
+          "frame_id": "mapillary_138974158240453",
+          "kind": "facade_view",
+          "ref": "mapillary_138974158240453__yaw_p270.jpg",
+          "via": "capture_id"
+        }
+      ],
+      "feature_id": "feature:place:node/2684634174",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8SVNbuSJRV9LYcZIs4fzDjTyRoCvKtvwVNMiaX5FfE31MeVL8luWwTweEcXFpFjTsglYaBkOGYfrFTvCoggt7RQNCzAMLi9ziz8LWGj5vTRPPktPwC_XxbzQx2Z3cwEPRsiBHrtsPQsskFtHjc_A?stp=s1024x512&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdrcdKeyU2huC5Ti1DJVYmt_4GCANfhMzcL9ehoVne2cJDpmgzeyVeDfZT7dRw_bgpXN_ItIJRFqd3DYIlmQg_xL&ccb=10-5&oh=00_AQKdQCoS-wFs2REpuHidi_vViVFfb-9c7ZN4FPTJ1asz1g&oe=6AD0FF4D&_nc_sid=201bca",
+          "bearing_residual_deg": -25.418,
+          "capture_time": "2019-02-16T12:58:34.932000+00:00",
+          "distance_m": 6.375,
+          "frame_id": "138974158240453",
+          "heading_deg": 90.0,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582833333333,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67326666667,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t6/An8SVNbuSJRV9LYcZIs4fzDjTyRoCvKtvwVNMiaX5FfE31MeVL8luWwTweEcXFpFjTsglYaBkOGYfrFTvCoggt7RQNCzAMLi9ziz8LWGj5vTRPPktPwC_XxbzQx2Z3cwEPRsiBHrtsPQsskFtHjc_A?stp=s1024x512&_nc_gid=BjOsxtDAtgHScRkEYldqUQ&_nc_oc=AdombRrpB4sYMlTogkcX5QI-8EjUjy3rH3VpI3dP8N2iZCLBDGmIae-4Qm-Q9jxfSsaOdhd5vqyA_txOASltJDxd&ccb=10-5&oh=00_AQLkV3yDFvuTlD0Di5WOD1L3aXz_cirWLqCNjFaRgUUPIg&oe=6ACD7B4D&_nc_sid=201bca",
+          "bearing_residual_deg": -25.418,
+          "capture_time": "2019-02-16T12:58:34.932000+00:00",
+          "distance_m": 6.375,
+          "frame_id": "mapillary_138974158240453",
+          "heading_deg": 90.0,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582833333333,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67326666667,
+          "los_clear": true,
+          "on_disk_path": "captures/mapillary/mapillary_138974158240453.jpg",
+          "source": "route_capture"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An_UnbZTNn6sYh5EJ8sy5sUUSVPK8Fcsiqif1_1ziAO9gvscSAyYdee0JyhTzaN_zMZwVAECCrDslQjaHHqlRDb0cz0ICapOj4n1jMBYNZ5PdqQgHY0WVdeOl7W-pCR0mu9iTG63vuGnHRF4fZlSMg?stp=s1024x512&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdqVgOkWd7WR9zo3fzZPUcYxM496Zui_VOyScr2gw6x_jXIFdBhaTjjb6XsWvsNKXwKNqkAD5sYVWwwlAfTF3snk&ccb=10-5&oh=00_AQKCtP-dLwvQcvW7ngv2OrITjFVct3u4Hmfxn2IQb7KOSw&oe=6AD0EF1C&_nc_sid=201bca",
+          "bearing_residual_deg": 0.791,
+          "capture_time": "2019-02-16T12:58:36.914000+00:00",
+          "distance_m": 7.38,
+          "frame_id": "161019379271957",
+          "heading_deg": 50.8,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582816666667,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67326666667,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "My Basket",
+      "observation_state": "observed_boxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/2927455660",
+      "frames": [],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "Shiba Shinkin Bank",
+      "observation_state": "observation_owed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/2927461370",
+      "frames": [],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "Tanaka Hair Salon",
+      "observation_state": "observation_owed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/2929215092",
+      "frames": [],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "FamilyMart",
+      "observation_state": "observation_owed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/2929220302",
+      "frames": [],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "やきとり とんぼ",
+      "observation_state": "observation_owed",
+      "waiver": null
+    },
+    {
+      "box_refs": [
+        {
+          "frame_id": "mapillary_490164805458248",
+          "kind": "facade_view",
+          "ref": "mapillary_490164805458248__yaw_p090.jpg",
+          "via": "capture_id"
+        },
+        {
+          "frame_id": "mapillary_490164805458248",
+          "kind": "facade_view",
+          "ref": "mapillary_490164805458248__yaw_p270.jpg",
+          "via": "capture_id"
+        }
+      ],
+      "feature_id": "feature:place:node/2929222223",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An96PuBl4ypTfe94AbathmxII4aDpYQeNAFvSvD3brEXuB3tLF0pfoNmQXTNl_4NsPttRbqCw7IbT00Dv78rawDTBT-zGGjuakdZFkdkKDvWCVBwbphMYbaKyQJJ367pUqg-bHxcwKElUqVFS3Nqhg?stp=s1024x512&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdpdfZtjfgx8CD16FXGBKdPAwvtbwQNyyZU9-Q_igb0HSjtCl_Gs2dAYcwJtAXHfcQDlCaB7w1epka3f70L1cz-D&ccb=10-5&oh=00_AQJ4dM1eGM6FNvmMHw3j0mURC-7ySvXw41lf-E4PKtSM3g&oe=6AD102B6&_nc_sid=201bca",
+          "bearing_residual_deg": -19.554,
+          "capture_time": "2019-02-16T13:00:32.922000+00:00",
+          "distance_m": 8.422,
+          "frame_id": "490164805458248",
+          "heading_deg": 230.8,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583083333333,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67323333333,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t6/An96PuBl4ypTfe94AbathmxII4aDpYQeNAFvSvD3brEXuB3tLF0pfoNmQXTNl_4NsPttRbqCw7IbT00Dv78rawDTBT-zGGjuakdZFkdkKDvWCVBwbphMYbaKyQJJ367pUqg-bHxcwKElUqVFS3Nqhg?stp=s1024x512&_nc_gid=BjOsxtDAtgHScRkEYldqUQ&_nc_oc=AdqicUFbpbDh6ImfUsvcCzukgbEcwkSO7ujUzCvuV8rlWg3i9S9WE3lCv0Fq0uOQFYhQNbOS2MgzTzmuQ8si-lYv&ccb=10-5&oh=00_AQJ5j4Bsn4mB2DMllv6bMb-WXUA6yzDVF1cnqnieZDmfjg&oe=6ACD7EB6&_nc_sid=201bca",
+          "bearing_residual_deg": -19.554,
+          "capture_time": "2019-02-16T13:00:32.922000+00:00",
+          "distance_m": 8.422,
+          "frame_id": "mapillary_490164805458248",
+          "heading_deg": 230.8,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.583083333333,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67323333333,
+          "los_clear": true,
+          "on_disk_path": "captures/mapillary/mapillary_490164805458248.jpg",
+          "source": "route_capture"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An_zQYwsjq1W_msvfwT0XxaKAxTK84gDpSuvAPrtSVrP_hR5N9MFwf7mfrGnj4Nv4jmzUpdcRJEbfkFIF6AvWxWvpVubiuel_hfEAt-M5v3NAiWyRN1Gnr-qMwNEv8qWSR5wEDIapNyJ6RyE2RFJuA?stp=s1024x512&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdraWAq0vAUT_rUBkRkPKfbZmJ7xNn7Cz7zHSweLBIJiIAKFHARsR_VvbEIxFxfT_fgfCT7x8pInTLegKlN5y8A3&ccb=10-5&oh=00_AQLcXJ6FVYin2TkQ1CBGdRg2IJESYx2MUiaTNhhioRDUSg&oe=6AD0FFE6&_nc_sid=201bca",
+          "bearing_residual_deg": -13.822,
+          "capture_time": "2019-02-16T12:56:08.448000+00:00",
+          "distance_m": 8.584,
+          "frame_id": "263587128824320",
+          "heading_deg": 129.1,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.58305,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.6731,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "割烹浜蝶",
+      "observation_state": "observed_boxed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/441523546",
+      "frames": [],
+      "group": "C",
+      "importance": "route_visible",
+      "label": "Lawson Three F",
+      "observation_state": "observation_owed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/4651760389",
+      "frames": [],
+      "group": "C",
+      "importance": "landmark",
+      "label": "Sakurazaka",
+      "observation_state": "observation_owed",
+      "waiver": null
+    },
+    {
+      "box_refs": [],
+      "feature_id": "feature:place:node/7834193975",
+      "frames": [
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8ZLVqwaP7aoOkiegfLS5tCch28ysb4xbZ92QjZlbhmml3n4q4qwwdgTZH6mRM9hTim3S7ZDUrX47CIvYjaoIIhyas-3d7ujYmOclU5jmWzUS3ywb8hpShZ9EIs3nGcXupaB8oPA7Juf8-xXW2iSw?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=Adq786hWegL5BpQetGWsPoLStKbnF2TdCrCTiwF6tjcBdAtx8v9J0wClQ31QgwGx78lsOYe7rSO38yYpfD5XWOg-&ccb=10-5&oh=00_AQJg1JgzPEA5iHjDZEZTg2MsZ4f_GvMy14VuDOFl6LdHiA&oe=6AD10E78&_nc_sid=201bca",
+          "bearing_residual_deg": 13.501,
+          "capture_time": "2022-06-08T15:09:42.860000+00:00",
+          "distance_m": 11.441,
+          "frame_id": "2933972563566993",
+          "heading_deg": 325.9472345836,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582672222222,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67311111111,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        },
+        {
+          "asset_uri": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t6/An8ZLVqwaP7aoOkiegfLS5tCch28ysb4xbZ92QjZlbhmml3n4q4qwwdgTZH6mRM9hTim3S7ZDUrX47CIvYjaoIIhyas-3d7ujYmOclU5jmWzUS3ywb8hpShZ9EIs3nGcXupaB8oPA7Juf8-xXW2iSw?stp=s1024x768&_nc_gid=BjOsxtDAtgHScRkEYldqUQ&_nc_oc=AdrHOBc8dk4fwElvO_8YHlnigIY5T9cgqQ3ZAsuETEAZpKJTXH2nODvp4oPgw-5d0c08Cda7N_BydAQysbk3mdW4&ccb=10-5&oh=00_AQII4O6ZDcqI7h5o-Dtq_0R9SR1Ci0lLWFgNKTQqgNhUag&oe=6ACD5238&_nc_sid=201bca",
+          "bearing_residual_deg": 13.501,
+          "capture_time": "2022-06-08T15:09:42.860000+00:00",
+          "distance_m": 11.441,
+          "frame_id": "mapillary_2933972563566993",
+          "heading_deg": 325.9472345836,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582672222222,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67311111111,
+          "los_clear": true,
+          "on_disk_path": "captures/mapillary/mapillary_2933972563566993.jpg",
+          "source": "route_capture"
+        },
+        {
+          "asset_uri": "https://scontent-lga3-2.xx.fbcdn.net/m1/v/t6/An8MTmdgS-9aeZ0WPLAVhG6cApkggimC5G9XKFgrdga8Ig81QHQoPSdRmpQkkGA02fWFY9T-BrQW2V0hLFSbo6NXUNIEige8pmf6Xa9rgNq6tPNn_TDO-YDQiyDE0UEiQJnH_pER8nW30RiWB3HgKg?stp=s1024x768&_nc_gid=T91IrTvq8tSH-udT9yXwWA&_nc_oc=AdoVzgyncSj23hu6gZ5MhRsveegGlkibI4uktslNik182eazwv2r06Mb1G1XLPmHHGWjqC1jVBvX4Km4BRHgnXHz&ccb=10-5&oh=00_AQIHl-pRAhuOWEZ2Zd6t0bRyiUlKcNsF40pgbOihm5Fkvg&oe=6AD0F2B7&_nc_sid=201bca",
+          "bearing_residual_deg": 16.159,
+          "capture_time": "2020-08-25T01:58:03.016000+00:00",
+          "distance_m": 12.518,
+          "frame_id": "626009842129321",
+          "heading_deg": 320.54092407227,
+          "hfov_basis": "default",
+          "hfov_deg": 60.0,
+          "lat": 35.582665264945,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.67312154677,
+          "los_clear": true,
+          "on_disk_path": null,
+          "source": "survey"
+        }
+      ],
+      "group": "B",
+      "importance": "route_visible",
+      "label": "Numabe",
+      "observation_state": "frame_available_unboxed",
+      "waiver": null
+    }
+  ],
+  "frame_stats": {
+    "frames_indexed": 2023,
+    "frames_skipped_no_pose": 1,
+    "manifest_captures": 212,
+    "survey_pictures": 1812
+  },
+  "generated_at": "2026-09-19T00:00:00Z",
+  "inputs": {
+    "facade_views": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_20260912/mapillary_facade_views",
+    "instances": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/observation_registration/registered_instances.json",
+    "landmarks": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/required_landmarks.json",
+    "manifest": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_20260912/route_capture_manifest.json",
+    "route": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/valhalla_pedestrian_route.json",
+    "survey": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/added_route_imagery_survey.json",
+    "triage_receipt": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/osm_ingest_receipt.json",
+    "world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical.world_ir.json"
+  },
+  "schema": "y92.observation_debt.v1"
+}

@@ -1,0 +1,363 @@
+{
+  "crs": {
+    "geographic": "EPSG:4326",
+    "metric_working": "EPSG:32654"
+  },
+  "crs_note": "RFC 7946 GeoJSON: all coordinates are WGS84 geographic (EPSG:4326), ordinate order [longitude, latitude], decimal degrees. Metric construction CRS was EPSG:32654 (WGS84 / UTM zone 54N); all metre figures below were computed in EPSG:32654.",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              139.6722376,
+              35.5827592
+            ],
+            [
+              139.6722461,
+              35.582671
+            ],
+            [
+              139.6722687,
+              35.5825845
+            ],
+            [
+              139.6723049,
+              35.5825012
+            ],
+            [
+              139.6723541,
+              35.5824224
+            ],
+            [
+              139.6724154,
+              35.5823495
+            ],
+            [
+              139.6724879,
+              35.5822838
+            ],
+            [
+              139.6725702,
+              35.5822264
+            ],
+            [
+              139.6726611,
+              35.5821783
+            ],
+            [
+              139.6727588,
+              35.5821402
+            ],
+            [
+              139.6728618,
+              35.5821129
+            ],
+            [
+              139.6737769,
+              35.5819619
+            ],
+            [
+              139.6743981,
+              35.5823136
+            ],
+            [
+              139.6745827,
+              35.5826353
+            ],
+            [
+              139.6745892,
+              35.5827341
+            ],
+            [
+              139.6746123,
+              35.5831328
+            ],
+            [
+              139.6732686,
+              35.5834237
+            ],
+            [
+              139.6731622,
+              35.5834398
+            ],
+            [
+              139.673054,
+              35.5834444
+            ],
+            [
+              139.6729461,
+              35.5834374
+            ],
+            [
+              139.6728402,
+              35.583419
+            ],
+            [
+              139.6727382,
+              35.5833894
+            ],
+            [
+              139.6726417,
+              35.5833492
+            ],
+            [
+              139.6725525,
+              35.5832991
+            ],
+            [
+              139.6724721,
+              35.5832399
+            ],
+            [
+              139.6724018,
+              35.5831726
+            ],
+            [
+              139.6723429,
+              35.5830984
+            ],
+            [
+              139.6722963,
+              35.5830186
+            ],
+            [
+              139.6722629,
+              35.5829345
+            ],
+            [
+              139.6722432,
+              35.5828475
+            ],
+            [
+              139.6722376,
+              35.5827592
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "aoi_polygon",
+      "properties": {
+        "area_m2": 26871.3,
+        "bbox_extent_m": [
+          215.0,
+          165.0
+        ],
+        "includes": [
+          "first-depth buildings on both sides of the corridor",
+          "side-street mouths at the 多摩堤通り (way 1115662463) junction and way 196858614",
+          "station-adjacent geometry: both entrances (nodes 9865199050, 9865199049), stop positions (nodes 266085809, 2145028048), station node 7834193975",
+          "rail boundary: 東急多摩川線 (ways 1038001323, 1038001324) and 多摩川2号踏切 level crossing (nodes 2145028052, 2145028053)"
+        ],
+        "lateral_buffer_m": 55.0,
+        "method": "convex hull of (corridor centerline offset +/-55 m) UNION (48-gon of radius 75 m about station node 7834193975), computed in EPSG:32654",
+        "role": "aoi",
+        "station_radius_m": 75.0
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            139.6741098,
+            35.5828547
+          ],
+          [
+            139.6739819,
+            35.5827839
+          ],
+          [
+            139.6739822,
+            35.582732
+          ],
+          [
+            139.6739823,
+            35.5827078
+          ],
+          [
+            139.6739701,
+            35.5826651
+          ],
+          [
+            139.6736638,
+            35.582449
+          ],
+          [
+            139.6735201,
+            35.5825954
+          ],
+          [
+            139.6733979,
+            35.5826942
+          ],
+          [
+            139.6733145,
+            35.5827448
+          ],
+          [
+            139.673171,
+            35.5828319
+          ],
+          [
+            139.6730232,
+            35.5829215
+          ],
+          [
+            139.6730398,
+            35.582856
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "corridor_centerline",
+      "properties": {
+        "composition": [
+          "14.00 m interpolated along OSM way 264753664 (highway=residential) from shared junction node 442165546 toward that way's next vertex",
+          "128.67 m along OSM way 264753665 (highway=residential) vertices 0..9, node 442165546 -> node 2145028049",
+          "7.42 m spur from node 2145028049 to entrance node 9865199050"
+        ],
+        "direction": "east/south-east -> west/north-west, ending at the station entrance",
+        "length_m": 150.09,
+        "osm_nodes": [
+          442165546,
+          2145028049,
+          9865199050
+        ],
+        "osm_ways": [
+          264753664,
+          264753665
+        ],
+        "role": "walking_corridor",
+        "segment_lengths_m": [
+          14.0,
+          5.76,
+          2.68,
+          4.86,
+          36.67,
+          20.82,
+          15.58,
+          9.41,
+          16.2,
+          16.68,
+          7.42
+        ]
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          139.6730398,
+          35.582856
+        ],
+        "type": "Point"
+      },
+      "id": "selected_entrance",
+      "properties": {
+        "gsi_dem5a_elevation_m": 7.28,
+        "osm_id": 9865199050,
+        "osm_type": "node",
+        "role": "selected_station_entrance",
+        "selection_reason": "OSM maps two entrances for 沼部; ref=1 is the entrance the corridor's street (way 264753665) terminates at, 7.42 m from its last vertex node 2145028049. ref=2 (node 9865199049) is 20.4 m further west on the level-crossing side.",
+        "tags": {
+          "railway": "train_station_entrance",
+          "ref": "1"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          139.6729365,
+          35.5827897
+        ],
+        "type": "Point"
+      },
+      "id": "alternate_entrance",
+      "properties": {
+        "osm_id": 9865199049,
+        "osm_type": "node",
+        "role": "unselected_station_entrance",
+        "tags": {
+          "railway": "train_station_entrance",
+          "ref": "2"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          139.6730652,
+          35.5827683
+        ],
+        "type": "Point"
+      },
+      "id": "station",
+      "properties": {
+        "admin": "大田区 (Ota City), 東京都 (Tokyo)",
+        "line": "東急多摩川線 / Tokyu Tamagawa Line",
+        "nominatim_display_name": "沼部, 多摩堤通り, 田園調布本町, 大田区, 東京都, 145-0072, 日本",
+        "operator": "東急電鉄",
+        "osm_id": 7834193975,
+        "osm_type": "node",
+        "role": "station",
+        "tags": {
+          "name": "沼部",
+          "name:en": "Numabe",
+          "public_transport": "station",
+          "railway": "station",
+          "ref": "TM02"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              139.6722376,
+              35.5819619
+            ],
+            [
+              139.6746123,
+              35.5819619
+            ],
+            [
+              139.6746123,
+              35.5834444
+            ],
+            [
+              139.6722376,
+              35.5834444
+            ],
+            [
+              139.6722376,
+              35.5819619
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "extract_bbox",
+      "properties": {
+        "bbox_lonlat": [
+          139.6722376,
+          35.5819619,
+          139.6746123,
+          35.5834444
+        ],
+        "overpass_order": "min_lat,min_lon,max_lat,max_lon = 35.5819619,139.6722376,35.5834444,139.6746123",
+        "role": "overpass_bbox"
+      },
+      "type": "Feature"
+    }
+  ],
+  "name": "numabe_corridor_aoi_20260911",
+  "source": "OpenStreetMap via Overpass API 0.7.62.11, osm_base 2026-09-12T02:11:13Z. (c) OpenStreetMap contributors, ODbL 1.0.",
+  "type": "FeatureCollection"
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "y92.authored_place_tenancy.v1",
+  "owner": "scripts/pipeline/compile_representation_plan.py (FL-4876 SLOT-OWNER-01)",
+  "derivation_boundary": [
+    "A row states the storey of a mapped tenancy when OSM carries no level tag. level 0 is the street storey; level 1 is the Japanese 2F.",
+    "Only status 'approved' with decided_by 'operator' and a verbatim decision_record is read. A proposal discharges nothing.",
+    "A tenancy above the street storey gets no street storefront; the street slot belongs to the ground-floor tenancy. Its identity stays a canonical place (minimap, labels); its upper-storey sign is representation debt until a source sign is resolved."
+  ],
+  "tenancies": [
+    {
+      "tenancy_id": "TEN-4876-001",
+      "place_feature_id": "feature:place:node/11404946449",
+      "label": "田園歯科医院",
+      "level": 1,
+      "status": "approved",
+      "decided_by": "operator",
+      "decided_on": "2026-10-11",
+      "decision_record": "Operator statement in session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03, verbatim: \"THE FUCKIGN DENTIST IS ON THE SECOND GODDMAN FUCKIGN FLOOR\" -- given in reply to the finding that the dentist and Cocokara Fine place fronts shared one anchor on way/225198199 face 9.",
+      "corroborating_evidence": "Capture mapillary_24268363212816577: the blue vertical sign reading 田園歯科 hangs on the upper storeys of the building whose ground floor carries the Cocokara Fine sign band (annotation ann-1789503539060-a3b41d, mislabelled custom_cocokara_fine_storefront_signage in the capture review).",
+      "proposed_by": "agent:claude session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03"
+    }
+  ]
+}

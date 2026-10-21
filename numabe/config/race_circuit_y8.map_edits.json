@@ -1,0 +1,203 @@
+{
+  "$schema": "fl4839_map_edits.v1",
+  "ops": [
+    {
+      "op": "replace_race_markers",
+      "markers": [
+        {
+          "name": "race_path_0",
+          "label": "route.v1|profile=road|width=16.000|elevation=0.150|bank=-0.000",
+          "world_xz": [
+            -8.682,
+            40.136
+          ]
+        },
+        {
+          "name": "race_path_1",
+          "label": "route.v1|profile=road|width=16.000|elevation=0.150|bank=-0.000",
+          "world_xz": [
+            36.318,
+            31.136
+          ]
+        },
+        {
+          "name": "race_path_2",
+          "label": "route.v1|profile=road|width=16.000|elevation=1.000|bank=-0.000",
+          "world_xz": [
+            72.318,
+            26.636
+          ]
+        },
+        {
+          "name": "race_path_3",
+          "label": "route.v1|profile=road|width=16.000|elevation=5.000|bank=1.938",
+          "world_xz": [
+            108.318,
+            32.636
+          ]
+        },
+        {
+          "name": "race_path_4",
+          "label": "route.v1|profile=road|width=16.000|elevation=9.000|bank=2.761",
+          "world_xz": [
+            135.318,
+            50.636
+          ]
+        },
+        {
+          "name": "race_path_5",
+          "label": "route.v1|profile=road|width=16.000|elevation=13.000|bank=3.020",
+          "world_xz": [
+            147.318,
+            80.636
+          ]
+        },
+        {
+          "name": "race_path_6",
+          "label": "route.v1|profile=road|width=16.000|elevation=13.000|bank=1.858",
+          "world_xz": [
+            138.318,
+            112.136
+          ]
+        },
+        {
+          "name": "race_path_7",
+          "label": "route.v1|profile=road|width=16.000|elevation=9.000|bank=5.000",
+          "world_xz": [
+            105.318,
+            152.636
+          ]
+        },
+        {
+          "name": "race_path_8",
+          "label": "route.v1|profile=road|width=16.000|elevation=5.000|bank=-4.068",
+          "world_xz": [
+            57.318,
+            133.136
+          ]
+        },
+        {
+          "name": "race_path_9",
+          "label": "route.v1|profile=road|width=16.000|elevation=1.000|bank=-0.000",
+          "world_xz": [
+            10.818,
+            158.636
+          ]
+        },
+        {
+          "name": "race_path_10",
+          "label": "route.v1|profile=road|width=16.000|elevation=0.150|bank=-0.000",
+          "world_xz": [
+            -17.682,
+            113.636
+          ]
+        },
+        {
+          "name": "race_gate_0",
+          "world_xz": [
+            -8.682,
+            40.136
+          ]
+        },
+        {
+          "name": "race_gate_1",
+          "world_xz": [
+            36.318,
+            31.136
+          ]
+        },
+        {
+          "name": "race_gate_2",
+          "world_xz": [
+            72.318,
+            26.636
+          ]
+        },
+        {
+          "name": "race_gate_3",
+          "world_xz": [
+            108.318,
+            32.636
+          ]
+        },
+        {
+          "name": "race_gate_4",
+          "world_xz": [
+            135.318,
+            50.636
+          ]
+        },
+        {
+          "name": "race_gate_5",
+          "world_xz": [
+            147.318,
+            80.636
+          ]
+        },
+        {
+          "name": "race_gate_6",
+          "world_xz": [
+            138.318,
+            112.136
+          ]
+        },
+        {
+          "name": "race_gate_7",
+          "world_xz": [
+            105.318,
+            152.636
+          ]
+        },
+        {
+          "name": "race_gate_8",
+          "world_xz": [
+            57.318,
+            133.136
+          ]
+        },
+        {
+          "name": "race_gate_9",
+          "world_xz": [
+            10.818,
+            158.636
+          ]
+        },
+        {
+          "name": "race_gate_10",
+          "world_xz": [
+            -17.682,
+            113.636
+          ]
+        },
+        {
+          "name": "race_grid_0",
+          "world_xz": [
+            -16.182,
+            49.136
+          ]
+        },
+        {
+          "name": "race_grid_1",
+          "world_xz": [
+            -12.432,
+            52.136
+          ]
+        },
+        {
+          "name": "race_grid_2",
+          "world_xz": [
+            -19.932,
+            53.636
+          ]
+        },
+        {
+          "name": "race_grid_3",
+          "world_xz": [
+            -16.182,
+            56.636
+          ]
+        }
+      ]
+    }
+  ]
+}

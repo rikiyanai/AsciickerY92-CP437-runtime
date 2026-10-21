@@ -1,0 +1,187 @@
+{
+  "checks": [
+    {
+      "expected_m": 1040.0,
+      "got_m": 1041.762115750776,
+      "id": "route_length_agreement",
+      "residual_m": 1.7621157507760472,
+      "source": "valhalla_pedestrian_route trip.summary.length vs compiled corridor",
+      "tolerance_m": 10.4,
+      "verdict": true
+    },
+    {
+      "corridor_samples": 53860,
+      "got_radius_m": 0.38971143170299744,
+      "id": "avatar_corridor_plausibility",
+      "missing_samples": 0,
+      "post_blocked_samples": 0,
+      "radius_bounds_m": [
+        0.3,
+        0.5
+      ],
+      "source": "anthropometric envelope + compiled corridor blockage",
+      "verdict": true
+    },
+    {
+      "expected_source_range_m": 18.06,
+      "got_compiled_range_m": 18.06068916298579,
+      "id": "vertical_range_agreement",
+      "residual_m": 0.000689162985789693,
+      "source": "gsi_dem5a source range vs compiled bake range",
+      "tolerance_m": 1.56,
+      "verdict": true
+    },
+    {
+      "anchor_pairs": 32,
+      "id": "anchor_metrology",
+      "max_residual_m": 5.81756864903582e-14,
+      "source": "osm anchor EPSG32654 chords vs y9_world chords",
+      "tolerance_m": 1.3833333333333333,
+      "verdict": true
+    },
+    {
+      "gate_pass": true,
+      "id": "gravity_level_record",
+      "readings_deg": [],
+      "source": "fl4812 gravity alignment (orientation evidence only)",
+      "threshold_deg": 2.5,
+      "verdict": true
+    }
+  ],
+  "inputs": {
+    "anchor_set": {
+      "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/osm.anchor_set.json",
+      "sha256": "76ee56d4a771aefaffda8090f5e952162e014c4983a5216ce7fc2c7169e0d364"
+    },
+    "camera_registration": {
+      "path": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/station_camera_solve_receipt.json",
+      "sha256": "916f88ade800b71ad4e0d54a6718b01f73f21183d29c2118f0e772c8c07beda3"
+    },
+    "dem_receipt": {
+      "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/dem_lowering_receipt.json",
+      "sha256": "f3547ffd39766245c0f73681414d4ae7ba542995639927121a3fa339973ae76a"
+    },
+    "route_walkability_receipt": {
+      "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/route_walkability_receipt.json",
+      "sha256": "eed7d942059999493f7391ac35698fd5bc407038bcbfe82816bab0f8961b5ca8"
+    },
+    "terrain_metadata": {
+      "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/terrain_metadata.json",
+      "sha256": "2b96f3aa2495a09c15a5ddc07f3c2bca243ed67c26be2df9b4e27f828fac2a3d"
+    }
+  },
+  "pass": false,
+  "projected_proportion": {
+    "cells_per_metre": 7.698003589195009,
+    "comparisons": [
+      {
+        "expected_raw_per_metre": 82.11203828474676,
+        "got_raw_per_metre": 75.7956923076923,
+        "id": "baked_mass_scale",
+        "residual_rel": 0.07692350730779249,
+        "tolerance_rel": 0.05,
+        "verdict": false
+      },
+      {
+        "band_m": [
+          1.6,
+          2.0
+        ],
+        "got_m": 1.8000000000000003,
+        "id": "player_height",
+        "verdict": true
+      },
+      {
+        "band": [
+          3.0,
+          6.0
+        ],
+        "got_ratio": 4.999997668749457,
+        "id": "numabe_house_proportion",
+        "verdict": true
+      },
+      {
+        "band": [
+          2.0,
+          4.0
+        ],
+        "got_ratio": 2.673511227020629,
+        "id": "y8_house_proportion",
+        "verdict": true
+      },
+      {
+        "band": [
+          4.5,
+          10.5
+        ],
+        "got_ratio": 6.928203230275509,
+        "id": "road_proportion",
+        "verdict": true
+      },
+      {
+        "gap_ratio_points": 0.6598205521456757,
+        "id": "crossmap_agreement",
+        "tolerance_ratio_points": 1.5,
+        "verdict": true
+      }
+    ],
+    "id": "projected_proportion",
+    "mass_probe": {
+      "masses": 715,
+      "matched": 686,
+      "median_baked_raw": 492.672,
+      "median_raw_per_metre": 75.7956923076923
+    },
+    "numabe_house_player_ratio": 4.999997668749457,
+    "numabe_house_rows": 39.99998134999566,
+    "operator_map_scale": 1.5,
+    "player_cells": 5,
+    "player_implied_height_m": 1.8000000000000003,
+    "player_rows": 8,
+    "rates": {
+      "cells_per_world_unit_horizontal": 1.5,
+      "ds": 0.375,
+      "rows_per_raw_z_step": 0.08118988160479113,
+      "rows_per_world_unit_vertical": 1.299038105676658,
+      "zoom_eff": 1.5
+    },
+    "road_cells": 34.64101615137754,
+    "road_player_ratio": 6.928203230275509,
+    "rows_per_metre": 6.666666666666665,
+    "six_metre_mass_rows": 39.99999999999999,
+    "sources": {
+      "content_scale": "scripts/pipeline/geo_frames.py:86-94",
+      "height_constants": "engine/terrain.h:54,60,66",
+      "human_collision": "engine/physics.cpp:1050-1060",
+      "projection_matrix": "engine/render/render_scene.cpp:826-840",
+      "renderer_scale": "engine/render/render_scene.cpp:596-601",
+      "sprite_bbox": "engine/sprite.cpp:1632-1645",
+      "sprite_sheet": "/Users/r/Projects/asciicker-Y9-2/assets/sprites/player-body.xp"
+    },
+    "sprite_frame": {
+      "angles": 8,
+      "anim_lens": [
+        1,
+        8
+      ],
+      "fr_num_x": 18,
+      "fr_num_y": 8,
+      "frame_height_rows": 9,
+      "frame_width_cells": 7,
+      "projs": 2,
+      "sheet_height": 72,
+      "sheet_width": 126
+    },
+    "verdict": false,
+    "y8_house": {
+      "baked_raw": 263.43294747338183,
+      "instances": 11,
+      "rows": 21.38808981616503,
+      "width_cells": 23.312972608676073
+    },
+    "y8_house_player_ratio": 2.673511227020629
+  },
+  "schema": "y92.scale_receipt.v1",
+  "stage": "executed_scale_cross_check",
+  "world_units_per_metre_quoted": 5.1320023927966725
+}

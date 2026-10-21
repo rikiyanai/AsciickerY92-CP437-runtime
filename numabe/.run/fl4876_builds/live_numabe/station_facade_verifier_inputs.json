@@ -1,0 +1,10 @@
+{
+  "build_dir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple",
+  "facade_lowering_receipt": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/station_facade_lowering_receipt.json",
+  "facades_emitted": 1,
+  "lowered_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/station_facade.lowered.world_ir.json",
+  "map_path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/output.a3d",
+  "meshes_dir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/meshes",
+  "station_facade_instances": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/station_facade_instances.json",
+  "terrain_metadata": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/terrain_metadata.json"
+}

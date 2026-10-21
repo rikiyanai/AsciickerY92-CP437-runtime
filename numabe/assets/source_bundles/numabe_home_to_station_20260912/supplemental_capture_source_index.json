@@ -1,0 +1,41 @@
+{
+  "captures": [
+    {
+      "altitude_m": null,
+      "asset_uri": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Tokyo_Route_11_-03.jpg",
+      "attribution": "Aimaimyi / Wikimedia Commons, CC-BY-SA-3.0",
+      "camera_model": "Canon Canon PowerShot SX100 IS",
+      "capture_id": "commons_15121076",
+      "focal_35mm": null,
+      "focal_length_mm": 7.3,
+      "heading_deg": null,
+      "height": 1944,
+      "horizontal_accuracy_m": null,
+      "horizontal_fov_deg": null,
+      "intrinsics_state": "prior_sensor_width_unavailable",
+      "lat": 35.583225,
+      "license": "CC-BY-SA-3.0",
+      "license_uri": "https://creativecommons.org/licenses/by-sa/3.0",
+      "local_path": "captures/commons_15121076_Tokyo_Route_11_-03.jpg",
+      "lon": 139.673213,
+      "orientation_state": "unavailable",
+      "pitch_deg": null,
+      "provider": "Wikimedia Commons",
+      "provider_detection_state": "provider_does_not_supply",
+      "provider_detections": [],
+      "retention_permitted": true,
+      "roll_deg": null,
+      "sequence_id": "commons_single_15121076",
+      "sequence_index": 0,
+      "sha256": "5c7479d68f7559d4506f11e62f229d7956fa02d5c7978b04a376cb31d99e9cb7",
+      "size_bytes": 1124768,
+      "source_uri": "https://commons.wikimedia.org/wiki/File%3ATokyo_Route_11_-03.jpg",
+      "timestamp": "2011-04-08T00:00:00Z",
+      "timestamp_precision": "date",
+      "vertical_accuracy_m": null,
+      "width": 2592
+    }
+  ],
+  "schema": "y92.capture_source_index.v1",
+  "source_index_id": "numabe_route_supplemental_commons"
+}

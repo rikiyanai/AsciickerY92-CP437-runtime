@@ -1,0 +1,61 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "wolfie_armor_regular",
+  "output_path": "assets/sprites/wolfie-armor-regular.xp",
+  "output_sha256": "495b4924e1c8f35b7973593ca54a51ef58e070fa583cc595cbc4e819ecbbbea7",
+  "output_dimensions": {
+    "width": 180,
+    "height": 96
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/wolfie-1010.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/wolfie-1010.xp",
+    "raw_layer_index": 4,
+    "upstream_xp_sha256": "96cf7653b115027ea93d5d7fb02dcc1ea465d5da76c470eb8c1b3b07fd92f695",
+    "upstream_layer_count": 6,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 1,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 2,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 3,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 4,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 5,
+        "width": 180,
+        "height": 96
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "user interactive review 2026-05-19",
+    "method": "User visual call 2026-05-19: 'CHEST ARMOUR OVERLAY BITS FOR MOUNTED'. L4 of wolfie-1010 is the chest-armor overlay; row 1 wolf-ears bg colored for context (when rider has shield+chest).",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=wolfie_armor_regular -> upstream_xp_path=sprites/wolfie-1010.xp:raw_layer_index=4. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490690,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

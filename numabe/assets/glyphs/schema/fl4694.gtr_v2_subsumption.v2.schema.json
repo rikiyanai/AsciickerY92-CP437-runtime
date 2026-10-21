@@ -1,0 +1,455 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fl4694.gtr_v2_subsumption.v2",
+  "title": "FL-4694 GTR v2 subsumption measurement",
+  "description": "Shape contract for the FL-4694 GlyphTransformRelation v2 subsumption measurement, generation 2. Reports coverage in unique relation rows and per axis examinations separately so the two units can never be confused, and bounds its conclusion to the single projection actually tested. The frozen v1 artifact remains as historical evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "version",
+    "artifact_kind",
+    "owning_fl",
+    "generated_by",
+    "what_this_is",
+    "runtime_consumption_allowed",
+    "no_runtime_linkage",
+    "predeclared_contract",
+    "inputs",
+    "measurement",
+    "result",
+    "artifact_sha256"
+  ],
+  "properties": {
+    "schema": {
+      "description": "Identifier of this artifact shape.",
+      "const": "fl4694.gtr_v2_subsumption.v1"
+    },
+    "version": {
+      "description": "Revision of this artifact shape.",
+      "const": 1
+    },
+    "artifact_kind": {
+      "description": "States plainly what kind of file this is: a measurement taken away from the running game, not a piece of game data.",
+      "const": "offline_subsumption_measurement"
+    },
+    "owning_fl": {
+      "description": "The failure-log entry that owns this question. FL-4694 owns the relation family and therefore owns whether GTR v2 duplicates it.",
+      "const": "FL-4694"
+    },
+    "generated_by": {
+      "description": "Repository-relative path of the only script permitted to write this file.",
+      "const": "scripts/measure_fl4694_gtr_v2_subsumption.py"
+    },
+    "what_this_is": {
+      "description": "One paragraph of plain English explaining the file to a reader who has never seen the lane.",
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_consumption_allowed": {
+      "description": "Always false. This restates, and never amends, the standing rule that no compiled relation data may reach a rendered frame yet.",
+      "const": false
+    },
+    "no_runtime_linkage": {
+      "description": "Explicit statement that neither the artifact nor its generator is wired into any product build.",
+      "type": "string",
+      "minLength": 1
+    },
+    "predeclared_contract": {
+      "description": "The comparison rule, copied verbatim from the generator. It is stored here so a reader can confirm the rule was fixed before the numbers existed rather than reshaped to suit them.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contract_id",
+        "written_before_measurement",
+        "what_is_being_asked",
+        "candidate_projection",
+        "axes",
+        "disposition_rule",
+        "exactly_one_disposition",
+        "no_runtime_linkage",
+        "amended_after_first_run",
+        "supersedes_contract_id",
+        "amendment_reason"
+      ],
+      "properties": {
+        "contract_id": {
+          "description": "Stable name for this version of the comparison rule.",
+          "const": "fl4694.gtr_v2_subsumption_contract.v2"
+        },
+        "written_before_measurement": {
+          "description": "Always true. The contract lives in the generator as a constant, above the measurement code.",
+          "const": true
+        },
+        "what_is_being_asked": {
+          "description": "The question in one sentence.",
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_projection": {
+          "description": "The named stand-in. A subsumption question is meaningless without saying WHICH view of the newer surface is supposed to replace the older one, so that view is named, described, and bounded here.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "projection_id",
+            "plain_english",
+            "carries_an_aspect_axis",
+            "scalars_supplied_per_row",
+            "why_this_projection_and_not_another"
+          ],
+          "properties": {
+            "projection_id": {
+              "description": "Citable name of the projection under test.",
+              "type": "string",
+              "minLength": 1
+            },
+            "plain_english": {
+              "description": "How to compute the projection, described without jargon.",
+              "type": "string",
+              "minLength": 1
+            },
+            "carries_an_aspect_axis": {
+              "description": "Whether the projection can give different answers for different viewing situations. An 'aspect' is one of 64 pre-computed viewing situations. GTR v2 has this axis; the FL-4694 family does not.",
+              "type": "boolean"
+            },
+            "scalars_supplied_per_row": {
+              "description": "How many separate numbers the projection can supply for one GTR v2 row.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "why_this_projection_and_not_another": {
+              "description": "Justification that no richer projection is available without inventing data the family does not hold.",
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "axes": {
+          "description": "The six comparison axes. Each states its own pass condition before any number exists.",
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "axis_id",
+              "plain_english",
+              "pass_condition"
+            ],
+            "properties": {
+              "axis_id": {
+                "description": "Stable identifier for the axis.",
+                "enum": [
+                  "A1_static_components",
+                  "A2_affine_components",
+                  "A3_confidence",
+                  "A4_compiled_transform_cost",
+                  "A5_directionality",
+                  "A6_tie_behaviour"
+                ]
+              },
+              "plain_english": {
+                "description": "What this axis is about, for a non-specialist reader.",
+                "type": "string",
+                "minLength": 1
+              },
+              "pass_condition": {
+                "description": "Exactly what would have to be true for the axis to pass. Always a zero-mismatch condition, never a tolerance.",
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "disposition_rule": {
+          "description": "The verdict rule, stated before the verdict exists.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "EXACT_SUBSUMPTION",
+            "DISTINCT_TRUTH",
+            "UNMEASURED",
+            "NOT_SUBSUMED_BY_THIS_PROJECTION"
+          ],
+          "properties": {
+            "EXACT_SUBSUMPTION": {
+              "type": "string",
+              "minLength": 1
+            },
+            "DISTINCT_TRUTH": {
+              "type": "string",
+              "minLength": 1
+            },
+            "UNMEASURED": {
+              "type": "string",
+              "minLength": 1
+            },
+            "NOT_SUBSUMED_BY_THIS_PROJECTION": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "exactly_one_disposition": {
+          "description": "Always true. The file declares one verdict, never two and never none.",
+          "const": true
+        },
+        "no_runtime_linkage": {
+          "description": "Restatement inside the contract that this is offline work.",
+          "type": "string",
+          "minLength": 1
+        },
+        "amended_after_first_run": {
+          "description": "True when this contract was changed after a measurement had already been run under an earlier version. Predeclaration protects against fitting the rule to the answer; once amended, that protection is replaced by mandatory disclosure.",
+          "type": "boolean"
+        },
+        "supersedes_contract_id": {
+          "description": "The contract version this one replaces.",
+          "type": "string",
+          "minLength": 1
+        },
+        "amendment_reason": {
+          "description": "Why the rule changed, in plain language, so a reader can judge whether the change was a correctness fix or a convenience.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "inputs": {
+      "description": "Exactly which bytes were read. Every input carries a fingerprint so the numbers below can be traced to specific file contents.",
+      "type": "object",
+      "required": [
+        "available"
+      ],
+      "properties": {
+        "available": {
+          "description": "False when a required input was missing or failed its fingerprint check. When false, no comparison was performed and the verdict must be UNMEASURED.",
+          "type": "boolean"
+        },
+        "reason": {
+          "description": "Present only when available is false: what was missing and how to recreate it.",
+          "type": "string",
+          "minLength": 1
+        },
+        "gtr_v2": {
+          "description": "Identity of the committed 65,536-row table under measurement.",
+          "type": "object",
+          "required": [
+            "path",
+            "schema",
+            "version",
+            "content_sha256",
+            "relation_sha256",
+            "descriptor_count",
+            "aspect_count",
+            "glyph_id_count",
+            "relation_count"
+          ]
+        },
+        "fl4694_family": {
+          "description": "Identity of the FL-4694 relation family. Its data files are deliberately never committed, so what is recorded here is the committed pointer manifest, the fingerprint the manifest pins, and confirmation that the on-disk cache matched that pin.",
+          "type": "object",
+          "required": [
+            "pointer_manifest",
+            "manifest_sha256",
+            "cache_path",
+            "cache_sha256_pinned",
+            "cache_sha256_verified",
+            "form",
+            "k",
+            "record_count",
+            "self_edges_excluded",
+            "neighbor_order",
+            "distance_definition_id"
+          ]
+        },
+        "gtr_glyph_ids_present_as_fl4694_records": {
+          "description": "Which of GTR v2's characters exist at all in the newer family. A character missing here could not be compared even in principle.",
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "gtr_glyph_ids_absent_from_fl4694_records": {
+          "description": "Which of GTR v2's characters have no record in the newer family.",
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "measurement": {
+      "description": "The counted results of the six axes, or null when the inputs were unavailable. Every value is a whole number or a short string, so the file stays readable in a diff and the verdict stays mechanical.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "gtr_v2_rows_compared",
+            "gtr_v2_rows_covered_by_projection",
+            "A1_static_components",
+            "A2_affine_components",
+            "A3_confidence",
+            "A4_compiled_transform_cost",
+            "A5_directionality",
+            "A6_tie_behaviour"
+          ],
+          "properties": {
+            "gtr_v2_rows_compared": {
+              "description": "How many GTR v2 rows were examined. Expected to be every row: 32 source characters x 64 viewing situations x 32 target characters.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "gtr_v2_rows_covered_by_projection": {
+              "description": "How many of those rows the named projection could supply any value for at all.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "A1_static_components": {
+              "description": "Shape-difference vector comparison. 'pairs_whose_value_depends_on_aspect' counts character pairs whose value changes with the viewing situation; any non-zero count means an aspect-free source could never have reproduced them.",
+              "type": "object",
+              "required": [
+                "axis_id",
+                "rows_reproduced_exactly",
+                "rows_mismatched",
+                "why"
+              ]
+            },
+            "A2_affine_components": {
+              "description": "Geometric-transform vector comparison, plus the aspect-dependence count that decides whether an aspect-free source is structurally capable of the job.",
+              "type": "object",
+              "required": [
+                "axis_id",
+                "rows_reproduced_exactly",
+                "rows_mismatched",
+                "why"
+              ]
+            },
+            "A3_confidence": {
+              "description": "Comparison of GTR v2's compiler confidence against the projection's membership weight.",
+              "type": "object",
+              "required": [
+                "axis_id",
+                "rows_reproduced_exactly",
+                "rows_mismatched",
+                "why"
+              ]
+            },
+            "A4_compiled_transform_cost": {
+              "description": "Comparison of the single cost number a runtime selector would consult against the projection's compiled distance.",
+              "type": "object",
+              "required": [
+                "axis_id",
+                "rows_reproduced_exactly",
+                "rows_mismatched",
+                "why"
+              ]
+            },
+            "A5_directionality": {
+              "description": "Whether every directed address, including self-relations where a character relates to itself, is representable at all in a bounded neighbour list that excludes self-edges.",
+              "type": "object",
+              "required": [
+                "axis_id",
+                "gtr_v2_rows_total",
+                "rows_representable_in_projection",
+                "rows_unrepresentable",
+                "gtr_v2_self_relation_rows",
+                "why"
+              ]
+            },
+            "A6_tie_behaviour": {
+              "description": "Whether both sides break an exact scoring tie the same way. If they do not, they select different characters from identical input.",
+              "type": "object",
+              "required": [
+                "axis_id",
+                "gtr_v2_tie_groups",
+                "tie_groups_ordered_identically",
+                "tie_groups_disagreeing",
+                "why"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "result": {
+      "description": "Exactly one verdict. EXACT_SUBSUMPTION means GTR v2 is a duplicate owner and its FL-4686 delete-list entry E8 becomes a mandatory deletion. DISTINCT_TRUTH means GTR v2 holds truth the named projection cannot supply and may not be deleted as a duplicate. UNMEASURED means the inputs were unavailable, nothing was compared, and no claim is made in either direction.",
+      "type": "object",
+      "required": [
+        "disposition"
+      ],
+      "properties": {
+        "disposition": {
+          "description": "The single verdict.",
+          "enum": [
+            "EXACT_SUBSUMPTION",
+            "DISTINCT_TRUTH",
+            "NOT_SUBSUMED_BY_THIS_PROJECTION",
+            "UNMEASURED"
+          ]
+        },
+        "named_projection_that_fell_short": {
+          "description": "Present for DISTINCT_TRUTH: which projection was tried and found insufficient. Naming it is what turns a negative result into a buildable specification.",
+          "type": "string",
+          "minLength": 1
+        },
+        "mismatch_counts_per_axis": {
+          "description": "How many rows (or tie groups, for A6) each axis failed to reproduce.",
+          "type": "object"
+        },
+        "total_mismatches": {
+          "description": "Sum of the per-axis counts. Zero is a precondition of EXACT_SUBSUMPTION.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "reason": {
+          "description": "Present for UNMEASURED: what was missing.",
+          "type": "string",
+          "minLength": 1
+        },
+        "consequence": {
+          "description": "What this verdict obliges the FL-4686 cutover to do about delete-list entry E8.",
+          "type": "string",
+          "minLength": 1
+        },
+        "unique_relation_rows_addressable": {
+          "description": "Count of addresses in the 65536 row GTR v2 table that the tested projection can supply a value for. UNIT: relation rows.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "unique_relation_rows_not_addressable": {
+          "description": "Count of addresses the tested projection holds nothing for. UNIT: relation rows. Absence, not disagreement.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_axis_row_disagreements": {
+          "description": "Per axis disagreement columns added together. UNIT: axis rows, up to six per relation row. NOT a count of relations.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_axis_row_noncoverage": {
+          "description": "Per axis noncoverage columns added together. UNIT: axis rows. NOT a count of relations.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "units_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "artifact_sha256": {
+      "description": "Fingerprint of this file's own contents, computed over the canonical compact serialisation with this field removed. Same convention as the FL-4694 pointer manifest.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "superseded_by_amendment": {
+      "type": "object",
+      "description": "The verdict the superseded v1 contract produced from these same axis numbers, kept so the post-hoc amendment can be audited rather than trusted."
+    }
+  }
+}

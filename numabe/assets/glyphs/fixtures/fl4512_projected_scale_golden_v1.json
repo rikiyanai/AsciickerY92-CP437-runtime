@@ -1,0 +1,94 @@
+{
+  "schema": "fl4512.projected_scale_golden_vectors.v1",
+  "scale_schema": "fl4512.projected_scale.v1",
+  "scale_quantization_version": 1,
+  "numeric_contract": "fl4512.strict_binary64.v1",
+  "projected_scale_format": "unsigned_q16_16_term_cells_per_canonical_asset_unit",
+  "asset_metric_preimage": "canonical Euclidean asset coordinates after M=diag(asset_metric_q24_8)/256",
+  "matrix_order": "row_major",
+  "cases": [
+    {
+      "id": "perspective_near_z_half",
+      "ladder": "near_to_far",
+      "projection_kind": "DIRECT_PERSPECTIVE",
+      "anchor_camera": [0.0, 0.0, 0.5],
+      "focal_cells": [1.0, 1.0],
+      "asset_to_camera_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+      "expected": {
+        "jacobian_asset_to_cell": [2.0, 0.0, 0.0, 0.0, 2.0, 0.0],
+        "projected_scale_q": 131072
+      }
+    },
+    {
+      "id": "perspective_z_one",
+      "ladder": "near_to_far",
+      "projection_kind": "DIRECT_PERSPECTIVE",
+      "anchor_camera": [0.0, 0.0, 1.0],
+      "focal_cells": [1.0, 1.0],
+      "asset_to_camera_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+      "expected": {
+        "jacobian_asset_to_cell": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0],
+        "projected_scale_q": 65536
+      }
+    },
+    {
+      "id": "perspective_z_two",
+      "ladder": "near_to_far",
+      "projection_kind": "DIRECT_PERSPECTIVE",
+      "anchor_camera": [0.0, 0.0, 2.0],
+      "focal_cells": [1.0, 1.0],
+      "asset_to_camera_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+      "expected": {
+        "jacobian_asset_to_cell": [0.5, 0.0, 0.0, 0.0, 0.5, 0.0],
+        "projected_scale_q": 32768
+      }
+    },
+    {
+      "id": "perspective_z_four",
+      "ladder": "near_to_far",
+      "projection_kind": "DIRECT_PERSPECTIVE",
+      "anchor_camera": [0.0, 0.0, 4.0],
+      "focal_cells": [1.0, 1.0],
+      "asset_to_camera_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+      "expected": {
+        "jacobian_asset_to_cell": [0.25, 0.0, 0.0, 0.0, 0.25, 0.0],
+        "projected_scale_q": 16384
+      }
+    },
+    {
+      "id": "perspective_far_z_eight",
+      "ladder": "near_to_far",
+      "projection_kind": "DIRECT_PERSPECTIVE",
+      "anchor_camera": [0.0, 0.0, 8.0],
+      "focal_cells": [1.0, 1.0],
+      "asset_to_camera_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+      "expected": {
+        "jacobian_asset_to_cell": [0.125, 0.0, 0.0, 0.0, 0.125, 0.0],
+        "projected_scale_q": 8192
+      }
+    },
+    {
+      "id": "orthographic_distance_invariant",
+      "projection_kind": "DIRECT_ORTHOGRAPHIC",
+      "scale_cells": [0.5, 0.25],
+      "asset_to_camera_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+      "expected": {
+        "jacobian_asset_to_cell": [0.5, 0.0, 0.0, 0.0, 0.25, 0.0],
+        "projected_scale_q": 32768
+      }
+    },
+    {
+      "id": "perspective_nonpositive_depth",
+      "projection_kind": "DIRECT_PERSPECTIVE",
+      "anchor_camera": [0.0, 0.0, 0.0],
+      "focal_cells": [1.0, 1.0],
+      "asset_to_camera_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+      "expected": {"cause": "nonpositive_scale_depth"}
+    },
+    {
+      "id": "unsupported_non_euclidean",
+      "projection_kind": "NON_EUCLIDEAN",
+      "expected": {"cause": "unsupported_scale_projection"}
+    }
+  ]
+}

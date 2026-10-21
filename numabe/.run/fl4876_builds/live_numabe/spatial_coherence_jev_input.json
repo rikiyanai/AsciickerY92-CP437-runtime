@@ -1,0 +1,33 @@
+{
+  "action_vocabulary": {
+    "accept_current": "Placement is visually correct; classify the named check as inapplicable.",
+    "change_host": "Bind the object to a different reviewed canonical host.",
+    "delete_duplicate": "Remove a proven duplicate while preserving its source evidence.",
+    "offset_facade_normal": "Move a facade outward along its already-authored normal.",
+    "offset_from_mass_boundary": "Move a ground object outward from a named building boundary.",
+    "orientation_axis_180": "Treat the object's long axis as undirected modulo 180 degrees.",
+    "reclassify": "Change the semantic module before placement is recomputed.",
+    "set_carrier_lateral_offset": "Use an evidence-backed signed distance from the named carrier.",
+    "set_minimum_span_endpoint_lateral": "Move the span endpoint nearest its carrier to a reviewed roadside offset.",
+    "unresolved": "Evidence is insufficient; require human review or more evidence."
+  },
+  "counts": {
+    "authored_decisions_excluded": 0,
+    "coherence_jobs": 0,
+    "jobs": 0,
+    "plan_anomaly_jobs": 0
+  },
+  "excluded_authored_decision_ids": [],
+  "inputs": {
+    "authored_decisions": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/authored_spatial_coherence_decisions.json",
+    "authored_decisions_sha256": "64bbefcbe99991081ff850ac8c44e9736bda35fb477f79c499fdb95a4ee95ebb",
+    "population_plan": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population/population_plan.json",
+    "population_plan_sha256": "290dee051588e6a400cb833d78559c240587fa6effcebcb67a6f87580442231b",
+    "spatial_candidate_evidence": null,
+    "spatial_candidate_evidence_sha256": null,
+    "spatial_coherence": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/spatial_coherence.json",
+    "spatial_coherence_sha256": "51a8a502432e99468fdf731b98bf13918b37043460819ae3c8a92c3f817b257c"
+  },
+  "jobs": [],
+  "schema": "y92.spatial_coherence_jev_input.v1"
+}

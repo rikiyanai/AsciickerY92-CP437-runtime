@@ -1,0 +1,358 @@
+{
+  "schema": "fl4512.mesh_asset_metric.v1",
+  "assets": [
+    {
+      "geometry_path": "assets/meshes/brick-1.akm",
+      "geometry_sha256": "11bf3f72b6ca0e9419463bc299d14eb952c33ef464529291960a2155a91ae9ce",
+      "anchor_q24_8": [
+        0,
+        0,
+        391
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        735,
+        1169,
+        782
+      ],
+      "asset_id": "01e3a3db7254f5cfd0e1d0e2656160ca73b100b457fde8e9300a9d9c13df5f41"
+    },
+    {
+      "geometry_path": "assets/meshes/sac_and_math_color.akm",
+      "geometry_sha256": "ddd59224a922992b4557b68d66633b748e0a0dbdff18fe0cd5631c97e3cfbc81",
+      "anchor_q24_8": [
+        10625,
+        -20474,
+        4762
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        186887,
+        230369,
+        10497
+      ],
+      "asset_id": "0214f693bb22ca504bd042a23bb31992b862ec4c693e5d054e39410ef66fa493"
+    },
+    {
+      "geometry_path": "assets/meshes/pieta_shaded.akm",
+      "geometry_sha256": "cb3b717c7c15738d0467223e72b9e2fc7b2140c8085dc51b43040cbc28ea2f18",
+      "anchor_q24_8": [
+        1,
+        -4,
+        68
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        61440,
+        61440,
+        245760
+      ],
+      "asset_id": "268dfb206f1bddf5063d9fd6dbe09ffc232eca6d17aecdc361385fae82c8d7c6"
+    },
+    {
+      "geometry_path": "assets/meshes/fl4131_shape_lab_triangle_pyramid.akm",
+      "geometry_sha256": "cd869afaddc0a4578382418bbc502a5aede7a4bf3f2ec7bda2bf3791b64555a0",
+      "anchor_q24_8": [
+        0,
+        0,
+        179
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        512,
+        512,
+        358
+      ],
+      "asset_id": "2defad69d50c5ca762f2dee356c9510a396a965af1e333836bfa84a24c081800"
+    },
+    {
+      "geometry_path": "assets/meshes/house-3.akm",
+      "geometry_sha256": "d3a7147c98999428294c9f7a98e4729f472816f897ef5ac7ee41c0a3057afded",
+      "anchor_q24_8": [
+        7,
+        0,
+        772
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        1988,
+        1854,
+        1723
+      ],
+      "asset_id": "3c757b41cab85791d16713d5d368357dd6a91ebc336d5e39126c362ec338f141"
+    },
+    {
+      "geometry_path": "assets/meshes/torus.akm",
+      "geometry_sha256": "c783c75d756bb51ec43e8eb820f5bfcecd615123de271cae0f7f7eb2a98d8746",
+      "anchor_q24_8": [
+        -1,
+        503,
+        124
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        1678,
+        1785,
+        797
+      ],
+      "asset_id": "48ce4b9c6ee3f6a0e737dbe895ca0bb89db52c5bd88350b0fd0870db1eb2f677"
+    },
+    {
+      "geometry_path": "assets/meshes/bridge-2.akm",
+      "geometry_sha256": "324bb8615ddef56817cf0155a48e7fe84fd0b3344ba1c9b11a63f61b957536ae",
+      "anchor_q24_8": [
+        -7,
+        -72,
+        48
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        1739,
+        943,
+        117
+      ],
+      "asset_id": "6b52ea18fc67d06e9290ad36d3f8c097a40ab96923b1682ca53da5607bee8a48"
+    },
+    {
+      "geometry_path": "assets/meshes/old-tree-2.akm",
+      "geometry_sha256": "d134268c39f47d450ab331af90777003cfbeacfcec9af763f30717e5623bc6dc",
+      "anchor_q24_8": [
+        -421,
+        -352,
+        3461
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        4545,
+        4965,
+        7171
+      ],
+      "asset_id": "6c39ab252364ec7fd6bc6b8d736e0a23cf379b963c24834576af69ac103ba957"
+    },
+    {
+      "geometry_path": "assets/meshes/fl4131_shape_lab_sphere.akm",
+      "geometry_sha256": "f1603f9d62ba97cb75b65a8521fdd1cd265718a6dd1aa7322b8129bf7089c1c5",
+      "anchor_q24_8": [
+        0,
+        0,
+        0
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        512,
+        512,
+        512
+      ],
+      "asset_id": "6df362dc515aa5aa73090a7a2061fba67c1560096613ad247103abf906e9ac69"
+    },
+    {
+      "geometry_path": "assets/meshes/laundry-1.akm",
+      "geometry_sha256": "7ef8a1e4d63a44317f37c6aa2580c37bf920d25aa39a18f3afc55eeb874e5da7",
+      "anchor_q24_8": [
+        0,
+        26,
+        313
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        62,
+        2361,
+        779
+      ],
+      "asset_id": "71ed28ba79acf078639824d8cfb625a790d8ebd81c3e9e8d909680e3829e8df0"
+    },
+    {
+      "geometry_path": "assets/meshes/tree-3.akm",
+      "geometry_sha256": "d47a2c633fa1b0408dbdf5391c2b65d38df957697270756f8468f96c80d8142d",
+      "anchor_q24_8": [
+        -104,
+        96,
+        1055
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        1448,
+        1453,
+        2128
+      ],
+      "asset_id": "83c2ef9b2290d21f82ceea9acca73f8d1f0fe449dd38772eec4192b7fe27c186"
+    },
+    {
+      "geometry_path": "assets/meshes/tree-2.akm",
+      "geometry_sha256": "06a27186def34adc8b3a28d9d0ff40ae485ea495c7ab878965d62a942487f079",
+      "anchor_q24_8": [
+        450,
+        144,
+        3061
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        6487,
+        5667,
+        7906
+      ],
+      "asset_id": "89a2b07eac76981df3d358b5a8801aab841c6abab7e7409ab016d43543afbf2a"
+    },
+    {
+      "geometry_path": "assets/meshes/tree-1.akm",
+      "geometry_sha256": "842b499b8dccff79ea88ca4d0c638ae840df858bba3312a1d990d7dfb97c38c4",
+      "anchor_q24_8": [
+        65,
+        -24,
+        4799
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        4257,
+        4260,
+        11429
+      ],
+      "asset_id": "97a1d32feb3def9cba7f560e38a84716590f221e1de503ed071e029bf6dd68c6"
+    },
+    {
+      "geometry_path": "assets/meshes/ship-1.akm",
+      "geometry_sha256": "aedb683fa07916f1abcbd9ada01ca28dd3cea3480fd3e7e5f7649338a3d91186",
+      "anchor_q24_8": [
+        1,
+        469,
+        1351
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        1526,
+        3942,
+        2711
+      ],
+      "asset_id": "9bfcf6f3499528146efaa338f7f767f422ce53597a62aee4f4777913be3802ea"
+    },
+    {
+      "geometry_path": "assets/meshes/bush-1.akm",
+      "geometry_sha256": "9d66eaf845bf52988192af123bf8f0c0f71aac0e32e1f092b2318ba6cf7350b1",
+      "anchor_q24_8": [
+        -53,
+        32,
+        363
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        902,
+        931,
+        976
+      ],
+      "asset_id": "b9d0495cbcc902e8ad9a68d108a43cd6cef97f12c446a7977c970e243b658b6e"
+    },
+    {
+      "geometry_path": "assets/meshes/bridge-1.akm",
+      "geometry_sha256": "3f0b6e9aa7c50566696319ff05ac18568166316956ee11821e5df056f5f1a087",
+      "anchor_q24_8": [
+        106,
+        35,
+        365
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        6796,
+        2695,
+        3024
+      ],
+      "asset_id": "cc9d7ab4e586c941a6361eb326dc5562f2f3820fb762d1a91cc7335fb4367692"
+    },
+    {
+      "geometry_path": "assets/meshes/rock-1.akm",
+      "geometry_sha256": "aee19f8eed5427ebf8cfbce8b50dfbb51b9b09072f914614326aa2f12a570054",
+      "anchor_q24_8": [
+        30,
+        -57,
+        437
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        1463,
+        1464,
+        1366
+      ],
+      "asset_id": "d2da4a4009a11de4334e1e7e924bfe0435ddcabb9bac943d0c9f319a132a9df5"
+    },
+    {
+      "geometry_path": "assets/meshes/pieta.akm",
+      "geometry_sha256": "ee81a66aa2d550da3252319ddc8bc7c328935e5334221262659ee61edfd5fad5",
+      "anchor_q24_8": [
+        1,
+        -4,
+        68
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        61440,
+        61440,
+        245760
+      ],
+      "asset_id": "d5077621c2d4e9ed6c1a8c629e760f56ba9d0cf3087b6a9dc7f02259ec8c909e"
+    },
+    {
+      "geometry_path": "assets/meshes/skull.akm",
+      "geometry_sha256": "10ab8b9d22531dea64b54fdfde271e4f56ded42a1720ded410a0cb8d011afca3",
+      "anchor_q24_8": [
+        -4,
+        101,
+        200
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        1578,
+        2489,
+        1524
+      ],
+      "asset_id": "d90363ae6839b674e792199f6fac4c6b3e0d9fae472346ce8df9118ecad1d447"
+    },
+    {
+      "geometry_path": "assets/meshes/old-tree-1.akm",
+      "geometry_sha256": "7f2ca85f8e94e6bd66c72bbc146b79e299e6234d0c8b703c1902f333426949d0",
+      "anchor_q24_8": [
+        -15,
+        674,
+        3473
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        6642,
+        5867,
+        7339
+      ],
+      "asset_id": "daa4f3ee555f02c20c9859c8286de5a5d7f1605ac3f4b1148d7940e583236db6"
+    },
+    {
+      "geometry_path": "assets/meshes/fl4131_shape_lab_skull_like.akm",
+      "geometry_sha256": "6afc68a44738ac6fd8a97e9b403f3c98befb7f106bbc606c4a27a92a072a8f6e",
+      "anchor_q24_8": [
+        0,
+        -32,
+        -51
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        461,
+        422,
+        461
+      ],
+      "asset_id": "eddacd1971d47dbac34182e05b11ce88475654cf8bfa431a5b50f0612b10e3df"
+    },
+    {
+      "geometry_path": "assets/meshes/fence.akm",
+      "geometry_sha256": "11cae63e4c7c1b25007e9a5c282a9a59360cf6c6c8457e37917bbef518ddd7d5",
+      "anchor_q24_8": [
+        12,
+        13,
+        180
+      ],
+      "axis_convention": "akm.right_handed.xyz.v1",
+      "asset_metric_q24_8": [
+        92,
+        2446,
+        512
+      ],
+      "asset_id": "f592f70532bbd0911c316b974165f5565ab1914ce93cbec5e6ff53b8a3a7d472"
+    }
+  ],
+  "registry_sha256": "cac0302a61dc3fb0f06fed1e310dfee88e4274c107d6acc06f49f9c36246e8ae"
+}

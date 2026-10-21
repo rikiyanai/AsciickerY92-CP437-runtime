@@ -1,5 +1,43 @@
 # Failure Log
 
+## Numabe public saved-map/editor port — 2026-10-21
+
+- Public export rerun:52 scoped tests passed,1 historical-build fixture
+  skipped;8 ownership/portability/helper tests passed. Only the strict raw
+  acquisition test is excluded from the default release suite and remains
+  available through `make numabe-source-verify`.
+- The first clean-checkout HTTP start raced the previous editor's shutdown
+  and returned address-in-use. A subsequent listener inspection found8792
+  free. Restart and explicit API checks follow; no existing service is killed.
+
+- First public-export test run:49 passed,3 failed,1 skipped,1 external-survey
+  test deselected. The three scope tests require the frozen499-annotation crop
+  snapshot, not just the current annotation files. The export omitted that
+  frozen input. Add its unchanged input/crops and rerun; do not weaken the
+  scope or digest assertions. Runtime asset check already resolved all meshes
+  and346 panoramas within the clean checkout.
+
+- Operator requested commit/push of Numabe, the associated HTML/editor
+  workflow and a README train GIF. The clean checkout was fast-forwarded to
+  remote `ab4ee1d`; unrelated dirty/divergent work in the older checkout is
+  preserved and is not part of this publication.
+- A raw CityGML terrain tile is731169780 bytes and another is566991911 bytes.
+  These are acquisition/reconstruction inputs, not saved-map/editor inputs.
+  The operator authorised excluding unnecessary surveys and sharding only
+  required oversized assets. No required published asset needs sharding.
+  Raw data remains untouched locally. Transport uses ordinary Git.
+- The public export retains the supported map/editor/source closure rather
+  than old proof/build caches. Its active paths are clone-relative. The map
+  remains3646 mesh instances with the obsolete station billboard removed;
+  independent station infrastructure, signs, terrain and train routes remain.
+- The first-person defect is not hidden: Classic walk is a trailing camera,
+  while the eye-level WebGL preview is labelled non-gameplay. Both views and
+  the top-down/reference/Street View/facade tools are ported. Actual Classic
+  first-person and the foreground-glyph style pass remain open.
+- A documentation patch was rejected before edits because the transport gate
+  matched a forbidden-command name inside explanatory prose. The revised
+  documentation states the actual ordinary-Git method without that prose.
+
 ## P0C-06 / FL-4512 · 2026-08-11 — private repository created
 
 - The historical base, first FL-4512 source commit, divergent deployment, and

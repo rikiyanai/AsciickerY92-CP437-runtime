@@ -1,0 +1,88 @@
+{
+  "axis_values": {
+    "convexity_bucket": [
+      "flat",
+      "outward",
+      "inward"
+    ],
+    "density_bucket": [
+      "sparse",
+      "medium",
+      "dense"
+    ],
+    "direction_bucket": [
+      "neutral",
+      "left",
+      "right",
+      "vertical"
+    ],
+    "role": [
+      "stem",
+      "tip",
+      "leaf_left",
+      "leaf_right",
+      "flower",
+      "accent"
+    ],
+    "source_owner": [
+      "FL-4184",
+      "FL-4208",
+      "FL-4131-consumed"
+    ],
+    "terminal_shape": [
+      "simple",
+      "split",
+      "branch",
+      "voided"
+    ]
+  },
+  "contract": {
+    "candidate_receipt_input": "assets/glyphs/generated/fl4208_role_scoring.jsonl",
+    "candidate_receipt_required_rules": {
+      "false": "current locked fallback baseline glyph rows already present in the runtime",
+      "true": "any extended candidate whose runtime binding depends on rendered bitmap scoring"
+    },
+    "candidate_receipt_required_runtime_rule": "Runtime selector must not bind candidate-only extended rows (candidate_receipt_required=true) when the receipts file at candidate_receipt_input is absent. Locked fallback baseline rows (candidate_receipt_required=false) remain bindable in the absence of the receipts file. FL-4208 step #24 forbids adding FL-4131 atlas admission code as part of this contract; admission is gated downstream by the FL-4131 pipeline.",
+    "description": "Foliage-only FL-4208 palette schema consumed by the FL-4184 compositor foliage owner.",
+    "emoji_presentation_allowed": false,
+    "no_script_family_intuition": "No palette row may bind a glyph from script-family intuition; every binding must trace either to a locked fallback baseline (candidate_receipt_required=false) or to a rendered-bitmap scoring receipt (candidate_receipt_required=true, candidate_receipt_id set).",
+    "palette_entry_id": {
+      "max": 65535,
+      "min": 1,
+      "required_on_every_row": true,
+      "type": "u16"
+    },
+    "schema_version": 1
+  },
+  "forbidden_direction_tokens": [
+    "curl",
+    "lean",
+    "arch",
+    "split",
+    "convex",
+    "concave",
+    "sparse",
+    "medium",
+    "dense",
+    "heavy"
+  ],
+  "required_palette_row_fields": [
+    "palette_entry_id",
+    "source_owner",
+    "role",
+    "density_bucket",
+    "direction_bucket",
+    "convexity_bucket",
+    "terminal_shape",
+    "glyph_id",
+    "fallback_baseline_id",
+    "accent_allowed",
+    "default_head_allowed",
+    "candidate_receipt_required",
+    "candidate_receipt_id",
+    "rejected_combo_status",
+    "visible_scale_note"
+  ],
+  "schema_name": "fl4208_foliage_palette_schema_v1",
+  "schema_version": 1
+}

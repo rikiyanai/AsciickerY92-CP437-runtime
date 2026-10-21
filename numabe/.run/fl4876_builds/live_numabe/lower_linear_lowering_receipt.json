@@ -1,0 +1,96 @@
+{
+  "counts": {
+    "akm_files_referenced": 1968,
+    "akm_files_written": 0,
+    "continuous_run_segments": 228,
+    "instances_emitted": 1968,
+    "logical_instances_emitted": 1968,
+    "placements_assigned": 1574,
+    "placements_consumed": 1574,
+    "placements_per_module": {
+      "bollard_curb_island": 568,
+      "concrete_block_wall": 19,
+      "concrete_retaining_edge": 17,
+      "crosswalk_and_edge_guardrail": 2,
+      "curb_and_open_gutter": 3,
+      "curb_edge_line": 266,
+      "green_cycle_or_walk_band": 3,
+      "lattice_boundary_fence": 4,
+      "level_crossing_equipment": 7,
+      "manhole_and_grate": 85,
+      "mesh_fence": 12,
+      "metal_boundary_fence": 5,
+      "metal_fence": 18,
+      "meter_and_service_cabinet": 37,
+      "open_and_covered_drain": 5,
+      "overhead_gantry_wire": 29,
+      "pedestrian_guardrail_continuous": 9,
+      "pedestrian_guardrail_vertical_bar_continuous": 5,
+      "picket_fence": 4,
+      "platform_railing": 17,
+      "pole_streetlight": 45,
+      "potted_frontage_plant": 33,
+      "rail_corridor_fence": 23,
+      "rail_corridor_mesh_fence": 6,
+      "road_surface_text_marking": 3,
+      "road_text_arrow_30": 6,
+      "sidewalk_paver_surface": 304,
+      "small_tree": 21,
+      "stone_cobble_wall": 7,
+      "stone_lined_water_channel": 5,
+      "street_tree": 50,
+      "trimmed_hedge": 25,
+      "utility_pole_wire_cluster": 288,
+      "water_control_structure": 2,
+      "waterway_bridge_railing": 4,
+      "white_railguard": 9,
+      "zebra_crossing": 22
+    },
+    "span_segments": 120
+  },
+  "dispatch": {
+    "owner": "linear",
+    "placements_by_owner": {
+      "custom": 15,
+      "fixtures": 1487,
+      "linear": 1574,
+      "terminal": 26
+    },
+    "placements_for_owner": 1574,
+    "placements_total": 3102,
+    "representation_plan_sha256": "6888b471904175469acad3d1dc62ff6e9803139577b85d489047653e98478ae6",
+    "schema": "y92.population_dispatch.v1",
+    "source_population_plan_sha256": "bc25c9ca67ca748a02ef38f335137bc5f867fd968ec2e667000071b78f0eee5f"
+  },
+  "lane": "lower_linear",
+  "mechanical_accounting": {
+    "consumed_placements": 1574,
+    "emitted_instances": 1968,
+    "planned_placements": 1574,
+    "semantic_validation_owner": "compile_spatial_coherence_receipt.py"
+  },
+  "origin": {
+    "easting": 379699.09478405997,
+    "northing": 3938417.876643479,
+    "offset_x": 48.0,
+    "offset_y": 48.0
+  },
+  "population_asset_plan": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population_asset_plan.json",
+  "runs": {
+    "plan_rule_run_total_length_m": 14175.714,
+    "plan_run_count": 869,
+    "plan_run_total_length_m": 14175.714,
+    "run_placements_consumed": 869,
+    "run_segments_emitted": 1143,
+    "run_total_length_m": 14175.714
+  },
+  "scale": 5.1320023927966725,
+  "spatial_provenance": {
+    "canonical_world_ir_sha256": "824004360e45596eee8146029adad07ffa2da1d66828d0ac0207089fd7ce0578",
+    "rules_sha256": "7bfdb5e6173fa79c49b16c16d9cd6417575ba7d2de70cd05195bcf56e48c10d6",
+    "terrain_metadata_sha256": "52844db7aa2d97c5ebbe051b4ed1356099a803d6b470e3b86fba944d5d4592a6",
+    "world_units_per_metre": 5.1320023927966725
+  },
+  "stage": "lowered",
+  "z_mode": "ground_plan"
+}

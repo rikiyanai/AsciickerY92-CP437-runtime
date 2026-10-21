@@ -1,5 +1,39 @@
 # Asciicker Y9-2 Runtime
 
+## Numabe map and HTML editor
+
+![Numabe station train in the Classic CP437 runtime](docs/recordings/numabe-train.gif)
+
+The Numabe workspace includes the current hand-edited A3D map, map-owned
+meshes, sign sprites, train routes, HTML authoring UI, Classic walk view,
+eye-level geometry preview, top-down view and street-view/reference overlays.
+Run from this repository:
+
+```bash
+python3 -m pip install -r numabe/requirements-editor.txt
+make numabe-check
+make numabe-editor
+# Open http://127.0.0.1:8792/
+```
+
+The GIF is a historical native-runtime capture, not a post-correction test.
+Classic's walk camera is a trailing camera; the eye-level geometry preview is
+not first-person CP437 gameplay. The obsolete station billboard was removed
+from the saved map. Further first-person and foreground-glyph work remains open.
+
+Numabe's newer Classic dependencies live in an explicit `numabe/` workspace;
+the root engine is not silently replaced. See `docs/VERIFICATION.md` for the
+port's test boundaries and source-data requirements.
+
+Raw PLATEAU terrain surveys and airborne LiDAR/point clouds are **not needed
+to load or edit this saved map**. They stay local rather than bloating this
+repository. Their acquisition URLs and hashes remain in the source manifest
+for a full reconstruction from measurements. No required runtime/editor file
+needs sharding; each published file is below 100 MB.
+
+`make numabe-test` checks the published map/editor closure. The optional
+`make numabe-source-verify` also requires those local raw acquisitions.
+
 A fork of [msokalski/asciicker](https://github.com/msokalski/asciicker), a CP437 3D ASCII engine.
 
 This repository contains the full playable C++ runtime used by the Y9-2 branch: an authoritative server, native terminal client, browser/WebAssembly client, maps, meshes, audio, sprites, and the actor-appearance tooling used by the runtime. At the time of this release, I am in the middle of a complete refactor of the 3D glyph rendering engine. 

@@ -1,0 +1,674 @@
+{
+  "jurisdictions": [
+    "japan_national",
+    "tokyo_metropolitan",
+    "ota_ward",
+    "railway_operator"
+  ],
+  "provenance": "FL-4813 extraction 2026-09-16 (retrieval windows 06:38-06:41 UTC and 09:30-09:44 UTC): e-Gov lawdata API XML hashed per statute and independently re-fetched 2026-09-16T09:30Z with byte-identical hashes (landing pages are SPA shells); MLIT sign portal landing plus both linked PDFs re-fetched with identical hashes and Last-Modified/ETag; Tokyo reiki ordinance page re-fetched byte-identical; Tokyo road-occupation standards PDF re-fetched byte-identical; Ota Article 42(2) page re-fetched byte-identical. Ota g-reiki ordinance endpoints re-verified HTTP 403 (bot protection) via curl 2026-09-16T09:44Z with identical 150-byte body hash; MLIT railway interpretation PDF returned HTTP 404 twice. No passage is copied beyond concise interpretation; locators and parameters are recorded per rule.",
+  "rules": [
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "span is newly constructed or reconstructed; class tables in Article 3 scope which parameter rows apply",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": [
+          "new_construction",
+          "reconstruction"
+        ]
+      },
+      "article_table_figure_or_page": "Article 1 (purpose: new-construction/reconstruction general technical standards; prefectural/municipal roads limited to Road Act Art 30(1)(i),(iii),(xii) plus reference standards for the rest); Article 3 (road classes 1-4 with grade tables by planned traffic volume); Article 5 (lane counts and lane-width table); Article 8 (shoulder-width tables); Article 9-2/9-3/10 (bicycle lanes/paths: Art 10 width 2 m, 1.5 m terrain exception); Article 11 (sidewalk 3.5 m high-volume / 2 m otherwise, furniture addons); Article 12 (clearance Figures 1-2 with H/a/b/c/d/e tables); Article 13 (design-speed table); Article 23 (paving duty for carriageway/shoulder/bicycle/pedestrian); Article 24 (cross-slope: compliant pavement 1.5-2.0 percent, other 3-5 percent, sidewalk/bicycle 2.0 percent standard); Article 26 (drainage: side gutters, street gutters, catch basins and equivalents only where necessary for drainage); Article 29 (at-grade railway/rail-track crossing: angle, 30 m straight sections, grade, sight-distance table); Article 31 (traffic safety facilities incl. fences only where necessary); Article 42 (application to prefectural/municipal roads with rereading table)",
+      "concise_interpretation": "National structural baseline for roads. Supplies conditional cross-section parameters only after new-construction or reconstruction status is proven for the span. Drainage (Art 26), railway crossings (Art 29), and safety facilities incl. fences (Art 31) are conditional duties, never universal ratios or every-span fences. Never proves an existing street width.",
+      "confidence": "high",
+      "effective_or_revision_date": "1970-10-29 enacted as Showa 45 Cabinet Order No. 320; enforced 1971-04-01 per Supplementary Provisions; consolidated text as retrieved 2026-09-16; latest-amendment delta not verified",
+      "exceptions": [
+        "Article 36 (appurtenant-work exception), Article 37 (changed-class exception), Article 38 (short-section reconstruction exception) relax Articles 3-35 on stated conditions",
+        "Article 42 rereading table narrows sidewalk/lane rows for municipal roads (e.g. Article 11(1) reads fourth-class excluding grade 4)",
+        "Article 10(1)-(2) bicycle-lane duty excepts unavoidable terrain/special reasons; Article 11(1)-(2) sidewalk duty excepts unavoidable terrain/special reasons",
+        "Article 26 drainage duty applies only where necessary for drainage; Article 31 safety-facility duty applies only where necessary for accident prevention",
+        "Article 29 crossing clauses carry low-traffic/terrain/safety-equipment provisos per item"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Government of Japan via e-Gov (Cabinet Order)",
+      "jurisdiction": "japan_national",
+      "official_https_url": "https://laws.e-gov.go.jp/law/345CO0000000320",
+      "official_title": "Road Structure Order",
+      "original_language_term": "道路構造令",
+      "parameters_and_units": {
+        "bike_lane_width_exception_min_m": 1.5,
+        "bike_lane_width_standard_m": 2.0,
+        "carriageway_width_grade5_or_lowest_m": 4.0,
+        "carriageway_width_grade5_or_lowest_reduced_m": 3.0,
+        "clearance_height_H_standard_ordinary_m": 4.5,
+        "clearance_height_H_standard_important_logistics_ordinary_m": 4.8,
+        "clearance_height_H_standard_small_m": 3.0,
+        "cross_slope_other_pavement_max_percent": 5.0,
+        "cross_slope_other_pavement_min_percent": 3.0,
+        "cross_slope_paved_carriageway_max_percent": 2.0,
+        "cross_slope_paved_carriageway_min_percent": 1.5,
+        "cross_slope_sidewalk_bike_standard_percent": 2.0,
+        "design_speed_by_class_kph": "table: class 1 grade 1 120/100 down to class 4 grade 3 50/40/30 or 20; sub-road 40/30/20",
+        "design_traffic_volume_thresholds_vehicles_per_day": "tables: class/grade/terrain bands from 500 to 30000",
+        "lane_width_by_class_m": "table: 3.5 down to 2.75 with +0.25/-0.25 conditional adjustments",
+        "lane_width_adjustment_conditional_m": 0.25,
+        "level_crossing_angle_note": "Article 29 item 1: crossing angle at least 45 degrees (angular threshold kept as text; no degree unit suffix exists)",
+        "level_crossing_longitudinal_grade_max_percent": 2.5,
+        "level_crossing_sight_distance_by_train_speed_m": "table: train speed bands map to sight lengths 110/160/200/230/260/300/350 m; safety-equipment and very-low-traffic provisos apply",
+        "level_crossing_straight_section_each_side_m": 30.0,
+        "shoulder_width_left_by_class_m": "tables: 2.5 down to 0.5 with conditional reductions",
+        "shoulder_width_right_by_class_m": "tables: 1.25 down to 0.5",
+        "sidewalk_width_high_pedestrian_volume_m": 3.5,
+        "sidewalk_width_other_m": 2.0,
+        "sidewalk_addon_for_street_furniture_m": 0.5,
+        "sidewalk_addon_for_bench_m": 1.0,
+        "sidewalk_addon_for_trees_m": 1.5,
+        "sidewalk_addon_for_bench_shelter_m": 2.0,
+        "sidewalk_addon_for_pedestrian_bridge_m": 3.0
+      },
+      "rule_id": "JP-ROAD-STRUCT-ORDER",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:7e0f67102bae262b7cdac04639142b7c89ebda20498142bf3c664b0768935c21 e-Gov lawdata API XML https://laws.e-gov.go.jp/api/1/lawdata/345CO0000000320 retrieved 2026-09-16T06:38Z (494726 bytes) and independently re-fetched byte-identical 2026-09-16T09:30Z; Arts 10, 11, 23, 24, 26, 29, 31 text inspected in the verified bytes for this closure; landing page is a JS shell (800 bytes) so the API response is the receipt; Last-Modified/ETag not supplied (cache-control no-cache)",
+      "subject_families": [
+        "road_structure"
+      ],
+      "unresolved_notes": [
+        "latest-amendment delta after the retrieved consolidation not verified",
+        "per-span project class (new_construction vs reconstruction) unresolved",
+        "Articles 26/29/31 duties are conditional (where necessary / at-grade crossing / where necessary); they never support universal gutter ratios or every-boundary fences"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "superseded parent locator retained as alias; see granular children JP-SIGN-MARK-ORDER-SIGNS and JP-SIGN-MARK-ORDER-MARKINGS",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "superseded by children; parent articles redistributed, not re-extracted here",
+      "concise_interpretation": "Alias only. Defines standardized national sign and marking families with standard face geometry, symbols, and colors. Derives legal form only; presence and position at Numabe require sign-observation or authority-inventory evidence.",
+      "confidence": "medium",
+      "effective_or_revision_date": null,
+      "exceptions": [
+        "local regulation content requires posted-sign evidence or police/authority record"
+      ],
+      "extraction_state": "locator_only",
+      "issuing_authority": "Government of Japan via e-Gov",
+      "jurisdiction": "japan_national",
+      "official_https_url": "https://laws.e-gov.go.jp/law/335M50004002003",
+      "official_title": "Order on Road Signs, Road Markings, and Road Surface Markings",
+      "original_language_term": "道路標識、区画線及び道路標示に関する命令",
+      "parameters_and_units": {},
+      "rule_id": "JP-SIGN-MARK-ORDER",
+      "selection_role": "alias_only",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "superseded parent alias; receipts live on children JP-SIGN-MARK-ORDER-SIGNS and JP-SIGN-MARK-ORDER-MARKINGS",
+      "subject_families": [
+        "sign_form",
+        "marking_form"
+      ],
+      "superseded_by": [
+        "JP-SIGN-MARK-ORDER-SIGNS",
+        "JP-SIGN-MARK-ORDER-MARKINGS"
+      ],
+      "unresolved_notes": [
+        "parent retained as alias; technical content owned by granular children"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "evaluating the legal form or installer of any sign family proposed for a span; form only",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "Article 1 (classes: main signs guide/warning/regulatory/instruction plus auxiliary); Article 2 (sign types and locations per Appended Table 1); Article 3 (forms per Appended Table 2); Article 3-2 (dimension-by-ordinance signs: guide, warning, attached auxiliaries except posts); Article 4 (installer split: road manager installs guide, warning, and listed regulatory signs; prefectural public safety commission installs the rest)",
+      "concise_interpretation": "Standardizes sign families, their appendix-defined types/locations/forms, and which installer (road manager vs public safety commission) owns each family. Derives legal form only; presence and position require observation or authority-inventory evidence.",
+      "confidence": "high",
+      "effective_or_revision_date": "1960-12-17 enacted as Showa 35 Prime Minister/CML Ordinance No. 3; consolidated text as retrieved 2026-09-16; latest-amendment delta not verified",
+      "exceptions": [
+        "Article 4 installer split: regulatory signs outside the listed set are police-installed, so road-manager records alone cannot evidence them",
+        "Article 3-2 post portions are excluded from dimension-by-ordinance treatment",
+        "local regulation content requires posted-sign evidence or police/authority record"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Government of Japan via e-Gov (Prime Minister Office / Construction Ministry Ordinance)",
+      "jurisdiction": "japan_national",
+      "official_https_url": "https://laws.e-gov.go.jp/law/335M50004002003",
+      "official_title": "Order on Road Signs, Road Markings, and Road Surface Markings (sign chapters)",
+      "original_language_term": "道路標識、区画線及び道路標示に関する命令",
+      "parameters_and_units": {},
+      "rule_id": "JP-SIGN-MARK-ORDER-SIGNS",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:411d1d013327bdebc693ae319e32bca15549ffa34000603891b9963a9de6f061 e-Gov lawdata API XML https://laws.e-gov.go.jp/api/1/lawdata/335M50004002003 retrieved 2026-09-16T06:38Z (8864667 bytes); Last-Modified/ETag not supplied",
+      "subject_families": [
+        "sign_form"
+      ],
+      "unresolved_notes": [
+        "per-sign-type face dimensions (mm) live in Appended Table 2 pending granular per-type split",
+        "latest-amendment delta after the retrieved consolidation not verified"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "evaluating the legal form of any marking or road-surface-marking family proposed for a span; form only",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "Article 5 (marking types and locations per Appended Table 3); Article 6 (marking forms per Appended Table 4); Article 7 (deeming table: center-line and outer-line markings deemed Central Line / Roadside Strip road surface markings under the Traffic Act); Article 8 (surface-marking classes regulatory/instruction); Article 9 (types per Appended Table 5); Article 10 (forms per Appended Table 6)",
+      "concise_interpretation": "Standardizes marking and surface-marking families with appendix-defined forms, plus the Article 7 table deeming specified markings as surface markings for Traffic Act purposes. Derives legal form only; presence requires observation or authority-inventory evidence.",
+      "confidence": "high",
+      "effective_or_revision_date": "1960-12-17 enacted as Showa 35 Prime Minister/CML Ordinance No. 3; consolidated text as retrieved 2026-09-16; latest-amendment delta not verified",
+      "exceptions": [
+        "Article 7 deeming is limited to the two listed marking rows; other markings are not surface markings",
+        "local regulation content requires posted-marking evidence or police/authority record"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Government of Japan via e-Gov (Prime Minister Office / Construction Ministry Ordinance)",
+      "jurisdiction": "japan_national",
+      "official_https_url": "https://laws.e-gov.go.jp/law/335M50004002003",
+      "official_title": "Order on Road Signs, Road Markings, and Road Surface Markings (marking chapters)",
+      "original_language_term": "道路標識、区画線及び道路標示に関する命令",
+      "parameters_and_units": {},
+      "rule_id": "JP-SIGN-MARK-ORDER-MARKINGS",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:411d1d013327bdebc693ae319e32bca15549ffa34000603891b9963a9de6f061 e-Gov lawdata API XML https://laws.e-gov.go.jp/api/1/lawdata/335M50004002003 retrieved 2026-09-16T06:38Z (8864667 bytes); Last-Modified/ETag not supplied",
+      "subject_families": [
+        "marking_form"
+      ],
+      "unresolved_notes": [
+        "per-marking-type dimensions live in Appended Tables 4 and 6 pending granular per-type split",
+        "latest-amendment delta after the retrieved consolidation not verified"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "superseded portal locator retained as alias; see granular children JP-MLIT-SIGN-CATALOG and JP-MLIT-SIGN-INSTALL-STD",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "portal landing plus linked sign catalog (ichiran.pdf) and installation standard (setiingbase.pdf); technical content owned by children",
+      "concise_interpretation": "Alias only. MLIT portal confirms the national sign catalog and installation standard exist as the authoritative face-geometry source. No per-span sign presence is derivable from this portal.",
+      "confidence": "medium",
+      "effective_or_revision_date": null,
+      "exceptions": [
+        "portal is a form reference, not site evidence"
+      ],
+      "extraction_state": "locator_only",
+      "issuing_authority": "Ministry of Land, Infrastructure, Transport and Tourism",
+      "jurisdiction": "japan_national",
+      "official_https_url": "https://www.mlit.go.jp/road/sign/sign/",
+      "official_title": "MLIT road-sign portal and sign installation standard",
+      "original_language_term": "道路標識等",
+      "parameters_and_units": {},
+      "rule_id": "JP-MLIT-SIGN-PORTAL",
+      "selection_role": "alias_only",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:4442d43093b10f2066616e6afeab4b0f702c2fd2f46d5b146a305edf01b740d0 last-modified:Thu, 12 Sep 2024 11:03:01 GMT; etag:\"3bc7-621ea0ccba340\"; landing bytes hashed 2026-09-16 (15303 bytes; independent re-fetch reproduced identical bytes); portal landing hash alone is not a technical rule",
+      "subject_families": [
+        "sign_form"
+      ],
+      "superseded_by": [
+        "JP-MLIT-SIGN-CATALOG",
+        "JP-MLIT-SIGN-INSTALL-STD"
+      ],
+      "unresolved_notes": [
+        "parent retained as alias; technical content owned by granular children"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "resolving which standardized sign face (numbered 101 and following) a proposed sign corresponds to; face identity only",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "ichiran.pdf single A3 sheet: guide signs 101-11x, warning 201-, regulatory 301-, instruction, auxiliary and English-supplement rows with numbered face specimens",
+      "concise_interpretation": "Pictorial catalog mapping sign numbers to face specimens. Identifies legal face identity only; dimensions, installation geometry, and any site presence come from the Sign Order appendices, the installation standard, and observation evidence.",
+      "confidence": "medium",
+      "effective_or_revision_date": "PDF ModDate 2026-08-06 per file metadata; catalog edition statement not printed on sheet",
+      "exceptions": [
+        "pictorial catalog carries no installation dimensions or placement rules"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Ministry of Land, Infrastructure, Transport and Tourism",
+      "jurisdiction": "japan_national",
+      "official_https_url": "https://www.mlit.go.jp/road/sign/sign/douro/ichiran.pdf",
+      "official_title": "Road sign catalog (道路標識一覧)",
+      "original_language_term": "道路標識一覧",
+      "parameters_and_units": {},
+      "rule_id": "JP-MLIT-SIGN-CATALOG",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:ea44489d2449ec7577efe8d31f8f939db79184602078695936d4664408d81853 retrieved 2026-09-16T06:39Z (1098123 bytes, 1 page A3); last-modified:Thu, 13 Aug 2026 05:30:48 GMT; etag:\"10c18b-658e701a3618c\"",
+      "subject_families": [
+        "sign_form"
+      ],
+      "unresolved_notes": [
+        "sheet is pictorial; per-face dimensions reference Appended Table 2 of the Sign Order",
+        "catalog edition statement not printed; re-verify against portal on reuse"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "a road manager installs road signs on a Road Act road; installation geometry only",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "setiingbase.pdf (道路標識設置基準, 28 pp): ch.1-2 scope (applies when a road manager equips signs on a Road Act road); ch.3(2) roadside mounting heights and positions; ch.3(2) cantilever/gantry heights; ch.3-1-5 co-location avoidance; ch.3-2 advance-guide distances (300 m / 150 m); ch.4 structure/durability; ch.5 maintenance",
+      "concise_interpretation": "General technical standard for sign installation geometry: mounting heights, lateral positions, structural safety, and maintenance. Bounds lawful installation form only; never evidences that a sign exists at a span.",
+      "confidence": "high",
+      "effective_or_revision_date": "standard text as retrieved 2026-09-16 (28 pp, PDF ModDate 2023-11-21); formal edition/revision date not printed",
+      "exceptions": [
+        "snow-region heights follow local snow depth at 1.8 m minimum instead of the 1.80 m standard",
+        "114-B famous-spot guide signs may drop to 1.0 m where pedestrian flow is unobstructed",
+        "attached-mount heights follow the host facility under roadside/cantilever/gantry rules"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Ministry of Land, Infrastructure, Transport and Tourism",
+      "jurisdiction": "japan_national",
+      "official_https_url": "https://www.mlit.go.jp/road/sign/sign/douro/setiingbase.pdf",
+      "official_title": "Road sign installation standard (道路標識設置基準)",
+      "original_language_term": "道路標識設置基準",
+      "parameters_and_units": {
+        "advance_guide_intersection_near_m": 150.0,
+        "advance_guide_intersection_far_m": 300.0,
+        "cantilever_gantry_board_height_important_logistics_desired_m": 5.0,
+        "cantilever_gantry_board_height_standard_m": 5.0,
+        "cantilever_gantry_board_height_minimum_desired_m": 4.7,
+        "roadside_board_height_standard_m": 1.8,
+        "roadside_board_height_reduced_114B_m": 1.0,
+        "roadside_board_height_sidewalk_no_reserve_min_m": 2.5,
+        "roadside_board_height_snow_region_min_m": 1.8,
+        "roadside_post_offset_from_boundary_or_median_cm": 25.0,
+        "roadside_post_offset_from_boundary_class1_grade1_2_cm": 50.0,
+        "roadside_post_offset_inside_shoulder_from_non_carriageway_edge_cm": 50.0
+      },
+      "rule_id": "JP-MLIT-SIGN-INSTALL-STD",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:7f3b9c67d2a0197c66b7ee77444cb9000078a67ff74d3a36aa310cca5230231e retrieved 2026-09-16T06:39Z (579005 bytes, 28 pp A4); last-modified:Thu, 12 Sep 2024 11:02:59 GMT; etag:\"8d5bd-621ea0cad1ec0\"",
+      "subject_families": [
+        "sign_form"
+      ],
+      "unresolved_notes": [
+        "formal edition/revision date not printed in PDF; re-verify against portal on reuse",
+        "per-sign-type placement chapters beyond the extracted clauses not individually cited"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "a span is a designated accessibility route; designation must be proven per span",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "Article 1 (purpose: Article 10(1) smooth-mobility criteria plus reference criteria for ordinances); Article 2 (effective-width definition excluding curbs, rails, furniture, snow-clearance widths); Article 3 (sidewalk provision); Article 4 (effective width at least Road Structure Order Art 11(3) values); Article 6 (longitudinal 5% / 8% exception, cross 1% / 2% exception); Article 8 (sidewalk height 5 cm standard); Article 9 (crosswalk-adjacent step 2 cm standard with wheelchair turning structure)",
+      "concise_interpretation": "National structural baseline for road accessibility. Applies only on designated routes; designation evidence is a per-span unresolved fact.",
+      "confidence": "high",
+      "effective_or_revision_date": "2006-12-19 enacted as Heisei 18 MLIT Ordinance No. 116; consolidated text as retrieved 2026-09-16; latest-amendment delta not verified",
+      "exceptions": [
+        "Article 6 longitudinal 8% only where terrain or unavoidable special reasons apply",
+        "Article 6 cross 2% only under the Article 6(1) proviso case, terrain, or unavoidable special reasons",
+        "Article 8 5 cm height does not bind crosswalk-adjacent portions (Article 9 governs)",
+        "no automatic application to existing residential lanes"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Ministry of Land, Infrastructure, Transport and Tourism via e-Gov",
+      "jurisdiction": "japan_national",
+      "official_https_url": "https://laws.e-gov.go.jp/law/418M60000800116",
+      "official_title": "Ordinance on standards for road structures and specified-vehicle-stop facility services for smooth mobility",
+      "original_language_term": "移動等円滑化のために必要な道路の構造に関する基準",
+      "parameters_and_units": {
+        "cross_slope_exception_percent": 2.0,
+        "cross_slope_standard_percent": 1.0,
+        "crosswalk_step_standard_cm": 2.0,
+        "longitudinal_slope_exception_percent": 8.0,
+        "longitudinal_slope_standard_percent": 5.0,
+        "sidewalk_height_standard_cm": 5.0,
+        "sidewalk_width_by_reference_m": "Road Structure Order Article 11(3): 3.5 high-volume / 2.0 otherwise"
+      },
+      "rule_id": "JP-ACCESSIBILITY-STD",
+      "rule_kind": "statutory_requirement",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:19fd02f55f325a68b59ac00ca618d30fe2fd71add3b02a48afea120cacfb540d e-Gov lawdata API XML https://laws.e-gov.go.jp/api/1/lawdata/418M60000800116 retrieved 2026-09-16T06:38Z (140511 bytes); Last-Modified/ETag not supplied",
+      "subject_families": [
+        "accessibility"
+      ],
+      "unresolved_notes": [
+        "per-span route designation unresolved",
+        "latest-amendment delta after the retrieved consolidation not verified"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "a span is railway-adjacent with a specified risk or location; operator implementation standards govern the exact requirement",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "Article 3 (operator implementation standards: operator sets and obeys them, ministerial detailed notice prevails, district bureau notification, non-conformance directive); Article 27 (falling-object/flood protection equipment); Article 31 (trespass prevention: protective equipment or warning as needed; Shinkansen mandatory except inaccessible bridges/tunnels); Article 39 (no at-grade road crossings except low-traffic or unavoidable non-Shinkansen cases); Article 40 (level crossings with Article 62 safety equipment)",
+      "concise_interpretation": "Establishes railway safety-equipment and operator implementation standards. Supports conditional fencing as a safety requirement for specified risks and locations. Never supports a universal every-boundary fence claim.",
+      "confidence": "medium",
+      "effective_or_revision_date": "2001-12-25 enacted as Heisei 13 MLIT Ordinance No. 151; consolidated text as retrieved 2026-09-16; latest-amendment delta not verified",
+      "exceptions": [
+        "Article 31 Shinkansen fencing duty excepts bridges, tunnels, and other non-readily-accessible places",
+        "Article 39 at-grade crossing ban excepts non-Shinkansen railways with low traffic or unavoidable terrain reasons",
+        "numeric fencing specifications live in operator implementation standards under Article 3, not in this ordinance"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Ministry of Land, Infrastructure, Transport and Tourism via e-Gov",
+      "jurisdiction": "railway_operator",
+      "official_https_url": "https://laws.e-gov.go.jp/law/413M60000800151",
+      "official_title": "Railway technical standards ordinance and interpretation",
+      "original_language_term": "鉄道に関する技術上の基準を定める省令",
+      "parameters_and_units": {},
+      "rule_id": "JP-RAILWAY-TECH-STD",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:d99f65d6e6d0d223b52fad134ea10056399c8d49a6116bafea815c5097c13e2f e-Gov lawdata API XML https://laws.e-gov.go.jp/api/1/lawdata/413M60000800151 retrieved 2026-09-16T06:38Z (196669 bytes); Last-Modified/ETag not supplied. Interpretation PDF https://www.mlit.go.jp/tetudo/content/20240315interpretation.pdf returned HTTP 404 on 2026-09-16T06:39Z and 06:41Z (234-byte error body sha256:81f021fb8ba2f00e93cd02dcd712e93e2f941d39fb6af23ca49d2eaed6898896); no substitute found on the MLIT railway standards page",
+      "subject_families": [
+        "railway_boundary"
+      ],
+      "unresolved_notes": [
+        "MLIT interpretation PDF inaccessible (HTTP 404 twice 2026-09-16); ordinance articles verified instead",
+        "exact articles and railway-adjacency facts per span unresolved",
+        "numeric fencing specifications require operator implementation-standard records"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "a span is Tokyo-managed (toto) and newly constructed or reconstructed; administrator confirmation required",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [
+          "tokyo_metropolitan"
+        ],
+        "road_classes": [],
+        "project_types": [
+          "new_construction",
+          "reconstruction"
+        ]
+      },
+      "article_table_figure_or_page": "Tokyo reiki g101RG00004360: Article 1 (purpose: Road Act Art 30(3) general technical standards for newly built or reconstructed toto roads); Article 2 (toto = prefectural roads managed by Tokyo; other terms follow the Act and Structure Order); Article 3 (lane counts, design-traffic-volume tables, lane-width table, 4 m / 3 m carriageway for grades 5/lowest); Article 4 (lane separation, median tables); Article 5 (sub-road 4 m standard); Article 6 (shoulder tables); Articles 39-40 (appurtenant-work and changed-class exceptions); Article 46 (delegation to rules); Supplementary Provisions 1-3 (enforced 2013-04-01, applies to post-enforcement builds, in-construction exception); amendment appendices Reiwa 1 Ordinance 94 and Reiwa 3 Ordinance 81",
+      "concise_interpretation": "Tokyo structural parameters for metropolitan (toto) roads. Conditional on Tokyo administration plus new-construction or reconstruction status of the span, which Step 1 did not establish for any span.",
+      "confidence": "high",
+      "effective_or_revision_date": "2012-12-13 enacted as Heisei 24 Tokyo Ordinance No. 147; enforced 2013-04-01; amended by Reiwa 1 Ordinance No. 94 and Reiwa 3 Ordinance No. 81 (deltas not extracted); page retrieved 2026-09-16",
+      "exceptions": [
+        "Supplementary Provisions 3: roads already under construction (including contracted design) at enforcement are exempt for non-conforming parts",
+        "Articles 39-40 appurtenant-work and changed-class exceptions",
+        "no application without Tokyo-administrator confirmation"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Tokyo Metropolitan Government",
+      "jurisdiction": "tokyo_metropolitan",
+      "official_https_url": "https://www.reiki.metro.tokyo.lg.jp/reiki/reiki_honbun/g101RG00004360.html",
+      "official_title": "Ordinance on technical standards for road structures on toto roads (都道における道路構造の技術的基準に関する条例)",
+      "original_language_term": "都道における道路構造の技術的基準に関する条例",
+      "parameters_and_units": {
+        "carriageway_width_lowest_grade_m": 4.0,
+        "carriageway_width_lowest_grade_reduced_m": 3.0,
+        "design_traffic_volume_thresholds_vehicles_per_day": "tables: 9000-14000 bands by class/terrain, 0.8 factor for intersection-heavy class-4 roads",
+        "intersection_heavy_class4_factor_ratio": 0.8,
+        "intersection_heavy_class4_per_lane_factor_ratio": 0.6,
+        "lane_width_adjustment_conditional_m": 0.25,
+        "lane_width_by_class_m": "table: 3.5 down to 2.75 matching national rows for toto-applicable classes",
+        "median_width_by_class_m": "tables: 4.5 down to 1.0 with conditional reductions",
+        "sub_road_width_standard_m": 4.0
+      },
+      "rule_id": "TYO-ROAD-STRUCT-ORD",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:bfac6539b272ba794b43f67f0b396489784f17d75bb30ac4646c6fa444a1db9f retrieved 2026-09-16T06:39Z (255444 bytes); last-modified:Mon, 24 Aug 2026 23:56:04 GMT; etag:\"3e5d4-659d3ba9bad00\"",
+      "subject_families": [
+        "road_structure"
+      ],
+      "unresolved_notes": [
+        "Reiwa 1 / Reiwa 3 amendment content deltas not extracted",
+        "no span confirmed as Tokyo-managed; per-span project class unresolved"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "a span is Ota-managed (Step 1 ota_managed) and the project class triggers structural parameters",
+        "management_classes": [
+          "ota_managed"
+        ],
+        "administrators": [
+          "ota_ward"
+        ],
+        "road_classes": [],
+        "project_types": [
+          "new_construction",
+          "reconstruction"
+        ]
+      },
+      "article_table_figure_or_page": "Official indexed-text leads: Articles 9-10 (bicycle/pedestrian paths and sidewalks), 22-23 (paving and cross slope), 37-39 (exceptions and special paths), 41 (sign dimensions); direct source-byte verification pending",
+      "concise_interpretation": "Ota structural parameters for ward roads. Applies conditionally to ota_managed spans after project class is proven. Never proves existing geometry.",
+      "confidence": "low",
+      "effective_or_revision_date": null,
+      "exceptions": [
+        "project-class and existing-geometry proofs still required"
+      ],
+      "extraction_state": "locator_only",
+      "issuing_authority": "Ota City official regulations database",
+      "jurisdiction": "ota_ward",
+      "official_https_url": "https://www1.g-reiki.net/cityota.reiki/reiki_honbun/g112RG00000575.html",
+      "official_title": "Ota ward-road structural ordinance",
+      "original_language_term": "大田区区道構造条例",
+      "parameters_and_units": {},
+      "rule_id": "OTA-ROAD-STRUCT-ORD",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "HTTP 403 Forbidden on 2026-09-16T06:39Z via curl and WebFetch and re-verified HTTP 403 via curl 2026-09-16T09:44Z (150-byte body sha256:730934d7be5828b72f25b2259bfe5f2b73f274881946bb6fd058db8dfd846a08; bot protection; no official content retrieved, no Last-Modified/ETag supplied); unfetched; locator recorded 2026-09-15; alternate official hosts probed 2026-09-16 (www.g-reiki SSL error, city.ota.tokyo.jp/reiki 404, mokuji 403, .pdf 403); 2026-09-17 sweep: official reiki menu reiki_menu.html 403 (same body hash), WebFetch direct fetch timed out, council session/bill pages reach back only to R4 (H25 enactment bills offline), council nenpou R4+, H25 pubcom list has no road-ordinance item, assembly VOICES minutes search not executable headless, kuho archives reach back only to R05, e-Gov/Tokyo-reiki/MLIT structurally cannot carry ward ordinances. Official Ota approval-work standards WERE retrieved 2026-09-17 and inspected (Road Act Art. 24 examination standard PDF sha256:028d46d8: 23 scanned pages, cites only the structural drawing collection; structural drawing collection 2026-05-14 PDF sha256:f14336d2: L/U gutters, catch basins, Ota-type guardrails as approval-work defaults) but neither reproduces ordinance article text, so no promotion.",
+      "subject_families": [
+        "road_structure"
+      ],
+      "unresolved_notes": [
+        "direct fetch blocked (HTTP 403); candidate article locators were visible through the official indexed page but exact text and numeric values remain excluded until source bytes are verified",
+        "per-span project class unresolved"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "a span is a qualifying Ota sidewalk or bicycle-pedestrian path; qualification must be proven per span",
+        "management_classes": [
+          "ota_managed"
+        ],
+        "administrators": [
+          "ota_ward"
+        ],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "Official indexed-text leads: Article 3 (effective width), Article 4 (longitudinal/cross slope), Article 5 (curb), Article 6 (sidewalk elevation), Article 7 (crosswalk transition); direct source-byte verification pending",
+      "concise_interpretation": "Conditional Ota accessibility geometry. Values below are transcribed from the prior handoff audit, not direct-verified; they are conditional standards, never automatic for existing lanes.",
+      "confidence": "low",
+      "effective_or_revision_date": null,
+      "exceptions": [
+        "no automatic application to existing residential lanes"
+      ],
+      "extraction_state": "locator_only",
+      "issuing_authority": "Ota City official regulations database",
+      "jurisdiction": "ota_ward",
+      "official_https_url": "https://www1.g-reiki.net/cityota.reiki/reiki_honbun/g112RG00000578.html",
+      "official_title": "Ota road accessibility implementing regulation",
+      "original_language_term": "大田区移動等円滑化のために必要な区道の構造に関する基準を定める条例施行規則",
+      "parameters_and_units": {},
+      "rule_id": "OTA-ACCESS-IMPL-REGS",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "HTTP 403 Forbidden on 2026-09-16T06:39Z via curl and re-verified HTTP 403 via curl 2026-09-16T09:44Z (150-byte body sha256:730934d7be5828b72f25b2259bfe5f2b73f274881946bb6fd058db8dfd846a08; bot protection; no official content retrieved); unfetched; locator recorded 2026-09-15; numeric values transcribed from handoff audit, exact article locators pending direct verification; 2026-09-17 sweep of alternate official channels found no ordinance text: reiki menu 403, council bills/minutes and kuho archives do not reach the H25 enactment era, H25 pubcom has no accessibility-regulation item, e-Gov/Tokyo-reiki/MLIT cannot carry ward regulations",
+      "subject_families": [
+        "accessibility"
+      ],
+      "unresolved_notes": [
+        "direct fetch blocked (HTTP 403); candidate Articles 3-7 were visible through the official indexed page, but exact text remains unverified",
+        "indexed search excerpts expose candidate numeric values, but those values are deliberately excluded from machine parameters until official source bytes and exact article locators are verified",
+        "per-span sidewalk qualification unresolved"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "a span is officially designated as a Building Standards Act Article 42(2) road; designation must come from the official road-designation map per segment",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "page body: 2-item-road definition, 2 m centerline setback (Figure 1), 4 m river-or-railway-side setback (Figure 2); page number 503725253, updated 2026-04-01",
+      "concise_interpretation": "Where a segment is a designated Article 42(2) road, the future road boundary is normally 2 m from the centerline, or 4 m from the river or railway side when symmetric widening is prevented. The setback area cannot contain buildings, walls, or retaining walls and cannot count toward site area. The rule never applies until the official designation map confirms the segment.",
+      "confidence": "high",
+      "effective_or_revision_date": "2026-04-01",
+      "exceptions": [
+        "river or railway adjacency switches the setback to one-sided 4 m",
+        "narrow-road widening subsidies are a separate program"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Ota City",
+      "jurisdiction": "ota_ward",
+      "official_https_url": "https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/kenchiku/k_douro/douro.html",
+      "official_title": "Ota Article 42(2) road explanation",
+      "original_language_term": "2項道路",
+      "parameters_and_units": {
+        "setback_from_centerline_m": 2.0,
+        "setback_from_river_or_railway_side_m": 4.0
+      },
+      "rule_id": "OTA-ART42-SETBACK",
+      "rule_kind": "statutory_requirement",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:5add4acb23ea59a3fedd99807f3db03dbb677a75e0fd12aa31a9b55f429bc42f last-modified:Mon, 14 Sep 2026 00:35:00 GMT; page bytes hashed 2026-09-16, content not retained; independent re-fetch reproduced identical bytes 2026-09-16",
+      "subject_families": [
+        "setback",
+        "article_42_category"
+      ],
+      "unresolved_notes": [
+        "no Numabe segment confirmed as Article 42(2) by the designation map"
+      ]
+    },
+    {
+      "accessed_on": "2026-09-16",
+      "applicability_predicate": {
+        "applies_when": "constraining projecting storefront elements above or within a road area after road ownership is known",
+        "management_classes": [
+          "ota_managed",
+          "not_ota_managed"
+        ],
+        "administrators": [
+          "tokyo_metropolitan"
+        ],
+        "road_classes": [],
+        "project_types": []
+      },
+      "article_table_figure_or_page": "Tokyo road-occupation standards PDF (道路占用許可基準及び道路占用物件配置標準, 15 pp): General provisions 通則一 (occupancy location: sidewalk effective-width 2/3 plus 1.5 m margin, 1.0 m public-purpose exception; 5 m / 10 m exclusion zones); Detailed rule 13 日よけ (awning lower edge 2.5 m, 4.5 m fixed over carriageway; projection 1.0 m / 0.5 m); Detailed rule 14 アーケード (sidewalk 2.5 m+, carriageway 8 m+ or 6 m+ one-way, posts 6 m+, length 30 m+); Detailed rule 24 突出看板 (2 per business, lower edge 2.5 m / 4.5 m, projection 1.0 m sleeve / 0.3 m flat)",
+      "concise_interpretation": "Tokyo occupation standards constrain canopies, projecting signs, scaffolds, and objects above or within road areas. Bounds awning and sign variants only; never proves their existence.",
+      "confidence": "high",
+      "effective_or_revision_date": "1977-09-01 Notification No. 751 under Tokyo Road Occupancy Rule (Showa 52 Rule No. 132) Article 4; PDF retrieved 2026-09-16; later-amendment consolidation not verified",
+      "exceptions": [
+        "通則一(二): roads other than new accessible-designated roads under Barrier-Free Act Art 10(1) with public-purpose occupancy and no traffic hindrance need only 1.0 m margin",
+        "通則一(三): utility poles, signals, signs, arcades, and under-road objects are exempt from the 5 m / 10 m exclusion zones",
+        "Ota has its own approval process for ward-managed roads"
+      ],
+      "extraction_state": "extracted_text_verified",
+      "issuing_authority": "Tokyo Metropolitan Government Bureau of Construction",
+      "jurisdiction": "tokyo_metropolitan",
+      "official_https_url": "https://www.kensetsu.metro.tokyo.lg.jp/documents/d/kensetsu/000008920",
+      "official_title": "Tokyo road-occupation standards (道路占用許可基準及び道路占用物件配置標準)",
+      "original_language_term": "道路占用基準",
+      "parameters_and_units": {
+        "arcade_length_min_m": 30.0,
+        "arcade_post_spacing_min_m": 6.0,
+        "arcade_sidewalk_width_min_m": 2.5,
+        "arcade_carriageway_width_min_m": 8.0,
+        "arcade_carriageway_width_min_oneway_m": 6.0,
+        "awning_lower_edge_over_sidewalk_min_m": 2.5,
+        "awning_lower_edge_fixed_over_carriageway_min_m": 4.5,
+        "awning_projection_narrow_road_max_m": 0.5,
+        "awning_projection_standard_max_m": 1.0,
+        "exclusion_zone_crosswalk_signal_m": 5.0,
+        "exclusion_zone_busstop_bridge_tunnel_crossing_m": 10.0,
+        "projecting_sign_flat_projection_max_m": 0.3,
+        "projecting_sign_lower_edge_no_sidewalk_min_m": 4.5,
+        "projecting_sign_lower_edge_over_sidewalk_min_m": 2.5,
+        "projecting_sign_per_business_max_count": 2,
+        "projecting_sign_sleeve_projection_max_m": 1.0,
+        "sidewalk_occupancy_margin_min_m": 1.5,
+        "sidewalk_occupancy_margin_public_exception_min_m": 1.0
+      },
+      "rule_id": "TYO-ROAD-OCCUPY-STD",
+      "rule_kind": "technical_standard",
+      "site_truth_effect": "constraint_only",
+      "source_hash_or_archive_receipt": "sha256:eca7c11ea04e9d7bf8df25dcad453705e665b693f5ee3f41d53712fd2fed616c retrieved 2026-09-16T06:39Z (254921 bytes, 15 pp, content-disposition filename 000008920.pdf); last-modified:Mon, 08 Jul 2024 12:22:01 GMT; ETag not supplied",
+      "subject_families": [
+        "occupation"
+      ],
+      "unresolved_notes": [
+        "later-amendment consolidation after the 1977 notification not verified",
+        "per-span road ownership beyond Step 1 classes unresolved"
+      ]
+    }
+  ],
+  "schema": "y92.law_standards_corpus_index.v2",
+  "stage": "extracted_text_verified for 10 selectable official-source rule extractions (JP-ROAD deepened 2026-09-16 with Arts 10/23/24/26/29/31 from re-verified bytes; 2 sign/marking chapters split; 2 sign-portal children split) plus prior ART42 extraction; all accessible sources re-fetched byte-identical 2026-09-16T09:30-09:44Z; 2 Ota reiki records remain locator_only (HTTP 403-blocked, re-verified); 2 parent IDs retained as superseded aliases"
+}

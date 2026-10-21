@@ -1,0 +1,49 @@
+{
+  "schema": "material_profile_assignments.v1",
+  "map_path": "assets/a3d/game_map_y8_original_game_map.a3d",
+  "map_hash": "1eb2e8e106c91e53501f8b0b59e495f67a3e1bbcc7d7496fef06f1c31baf1cf6",
+  "assignments": [
+    {
+      "key": "terrain:1",
+      "profile_id": "fl4260-rq147-grass-tops-0001",
+      "profile_hash": "e0e199c7387b8de21f509432f1e9ab6c145ecade9261f4abec0db10fb8e6d52e",
+      "admission_receipt_id": null
+    },
+    {
+      "key": "terrain:2",
+      "profile_id": "fl4260-rq154-dirt-0001",
+      "profile_hash": "c8f7850f38d325596b176fdaabef995a89b05832b33415686495a6887ffe4b9f",
+      "admission_receipt_id": null
+    },
+    {
+      "key": "terrain:3",
+      "profile_id": "fl4260-rq154-rock-0001",
+      "profile_hash": "a7d7ac0d6e4c26950cbcb536f76f05100649b3c43a50d715b1f3e59f338da430",
+      "admission_receipt_id": null
+    },
+    {
+      "key": "terrain:4",
+      "profile_id": "fl4260-rq154-sand-0001",
+      "profile_hash": "4633e83c22fb9fe4e4489517d2f8262409a4650ea10c0ec1319f03457946147d",
+      "admission_receipt_id": null
+    },
+    {
+      "key": "terrain:5",
+      "profile_id": "fl4260-rq154-snow-0001",
+      "profile_hash": "5695d36e26ffefbaf56b1f08cc3354cf2137a8134d296b978531e502d74a815a",
+      "admission_receipt_id": null
+    },
+    {
+      "key": "terrain:6",
+      "profile_id": "fl4260-rq154-mud-0001",
+      "profile_hash": "9bee35b77da8e106149e369b025ab52ab418628ecd4ef3491256ba63a02b8376",
+      "admission_receipt_id": null
+    },
+    {
+      "key": "terrain:8",
+      "profile_id": "fl4260-rq154-gravel-0001",
+      "profile_hash": "55f502623a021ed7ddb21a333e5b2c09deaefe63c74b5ba75fb59c46a544c64b",
+      "admission_receipt_id": null
+    }
+  ]
+}

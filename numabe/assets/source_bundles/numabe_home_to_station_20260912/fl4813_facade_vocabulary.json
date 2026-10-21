@@ -1,0 +1,93 @@
+{
+  "classes": [
+    {
+      "prompts": [
+        "building facade wall"
+      ],
+      "semantic_class": "facade_wall"
+    },
+    {
+      "prompts": [
+        "building window",
+        "storefront glass window"
+      ],
+      "semantic_class": "facade_window"
+    },
+    {
+      "prompts": [
+        "building entrance door",
+        "storefront entrance"
+      ],
+      "semantic_class": "facade_door"
+    },
+    {
+      "prompts": [
+        "balcony",
+        "balcony railing"
+      ],
+      "semantic_class": "facade_balcony"
+    },
+    {
+      "prompts": [
+        "window shutter",
+        "storefront roller shutter"
+      ],
+      "semantic_class": "facade_shutter"
+    },
+    {
+      "prompts": [
+        "exterior air conditioner unit"
+      ],
+      "semantic_class": "exterior_air_conditioner"
+    },
+    {
+      "prompts": [
+        "wall ventilation grille"
+      ],
+      "semantic_class": "facade_vent"
+    },
+    {
+      "prompts": [
+        "storefront fascia",
+        "shop awning"
+      ],
+      "semantic_class": "storefront_fascia"
+    },
+    {
+      "prompts": [
+        "shop sign",
+        "building name sign"
+      ],
+      "semantic_class": "storefront_sign"
+    },
+    {
+      "prompts": [
+        "Japanese station sign"
+      ],
+      "semantic_class": "station_identity_sign"
+    },
+    {
+      "prompts": [
+        "wall notice board",
+        "parking notice sign"
+      ],
+      "semantic_class": "notice_panel"
+    },
+    {
+      "prompts": [
+        "exterior utility box"
+      ],
+      "semantic_class": "utility_box"
+    }
+  ],
+  "id": "fl4813_facade_vocabulary_v1",
+  "model": {
+    "id": "IDEA-Research/grounding-dino-tiny",
+    "license": "Apache-2.0",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "source_uri": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/tree/a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "weights_sha256": "1a2412ef99bd74bcd3c2a246fa1e48581f8889a1300c9051974741314fc042f3"
+  },
+  "purpose": "Bulk image-space facade observations; geometry and identity require accepted registration and review gates.",
+  "schema": "y92.object_detection_vocabulary.v1"
+}

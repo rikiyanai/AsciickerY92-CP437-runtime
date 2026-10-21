@@ -1,0 +1,54 @@
+{
+  "schema": "y92.official_road_classification.v1",
+  "classification_id": "numabe_home_to_station_ota_management_20260916",
+  "adapter_id": "jp.tokyo.ota.doro_map.phase1.v1",
+  "reviewed_on": "2026-09-16",
+  "route": {
+    "path": "valhalla_pedestrian_route.json",
+    "sha256": "19641c43345ed6424928fd65bcd3060b7c98f2169bec3b0f0802ec1ce5ba292f",
+    "length_m": 428.0
+  },
+  "source_layer_updates": {
+    "GH": "2026-08-04",
+    "RM": "2026-08-04",
+    "KK": "2026-09-02",
+    "CS": "2026-09-02",
+    "KJ": "2026-06-01"
+  },
+  "join_method": {
+    "kind": "reviewed_route_to_live_rm_factual_join",
+    "spatial_tolerance_m": 5.0,
+    "raw_official_geometry_retained": false,
+    "crossing_route_policy": "A crossing route does not replace the continuing route unless the pedestrian spine turns onto it."
+  },
+  "management_spans": [
+    {
+      "start_m": 0.0,
+      "end_m": 27.0,
+      "management_class": "ota_managed",
+      "route_key": "5030310",
+      "route_name_ja": "大田区道3-31号線"
+    },
+    {
+      "start_m": 27.0,
+      "end_m": 143.0,
+      "management_class": "not_ota_managed",
+      "route_key": null,
+      "route_name_ja": null,
+      "claim_limit": "The RM absence establishes only that Ota does not manage this span."
+    },
+    {
+      "start_m": 143.0,
+      "end_m": 428.0,
+      "management_class": "ota_managed",
+      "route_key": "5030510",
+      "route_name_ja": "大田区道3-51号線"
+    }
+  ],
+  "phase1_output_boundary": {
+    "legal_width_selected": false,
+    "building_standards_act_category_selected": false,
+    "observed_features_joined": false,
+    "physical_instances_registered": false
+  }
+}

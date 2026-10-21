@@ -1,0 +1,243 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://asciicker.local/schema/fl4730.pieta_complete_oracle.v1.schema.json",
+ "title": "FL-4730 complete Pieta oracle",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "schema",
+  "oracle_artifact_id",
+  "oracle_schema_version",
+  "oracle_source_revision",
+  "predicted_before_verification_run",
+  "status_scope",
+  "sources",
+  "compiled_artifact_hashes",
+  "authoring_receipts",
+  "pieta_scene_fact_hash",
+  "corpus_definition",
+  "timepoints"
+ ],
+ "properties": {
+  "schema": {"const": "fl4730.pieta_complete_oracle.v1"},
+  "oracle_artifact_id": {"const": "fl4730://pieta/persistent-feature-corpus/v1"},
+  "oracle_schema_version": {"const": 1},
+  "oracle_source_revision": {"type": "string", "minLength": 7},
+  "predicted_before_verification_run": {"const": true},
+  "status_scope": {"type": "string", "minLength": 1},
+  "sources": {
+   "type": "object",
+   "additionalProperties": {"$ref": "#/$defs/source"},
+   "required": ["schema", "predictor", "glyph_fact", "address_space", "glyph_program_pin"]
+  },
+  "compiled_artifact_hashes": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": ["glyph_fact", "address_space", "glyph_program_pin"],
+   "properties": {
+    "glyph_fact": {"$ref": "#/$defs/sha256"},
+    "address_space": {"$ref": "#/$defs/sha256"},
+    "glyph_program_pin": {"$ref": "#/$defs/sha256"}
+   }
+  },
+  "authoring_receipts": {
+   "type": "array",
+   "minItems": 2,
+   "uniqueItems": true,
+   "items": {"$ref": "#/$defs/source"}
+  },
+  "pieta_scene_fact_hash": {"$ref": "#/$defs/sha256"},
+  "corpus_definition": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "material_namespace",
+    "material_key",
+    "timepoint_labels",
+    "persistent_feature_refs",
+    "authoring_receipt_count",
+    "expected_timepoint_count",
+    "expected_row_count"
+   ],
+   "properties": {
+    "material_namespace": {"const": 2},
+    "material_key": {"const": 200},
+    "timepoint_labels": {
+     "type": "array",
+     "minItems": 5,
+     "maxItems": 5,
+     "uniqueItems": true,
+     "items": {"type": "string", "minLength": 1}
+    },
+    "persistent_feature_refs": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {"type": "string", "pattern": "^[1-9][0-9]*$"}
+    },
+    "authoring_receipt_count": {"type": "integer", "minimum": 2},
+    "expected_timepoint_count": {"const": 5},
+    "expected_row_count": {"type": "integer", "minimum": 5}
+   }
+  },
+  "timepoints": {
+   "type": "array",
+   "minItems": 5,
+   "maxItems": 5,
+   "items": {"$ref": "#/$defs/timepoint"}
+  }
+ },
+ "$defs": {
+  "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+  "source": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": ["path", "sha256"],
+   "properties": {
+    "path": {"type": "string", "minLength": 1},
+    "sha256": {"$ref": "#/$defs/sha256"}
+   }
+  },
+  "rgba": {
+   "type": "array",
+   "minItems": 4,
+   "maxItems": 4,
+   "items": {"type": "integer", "minimum": 0, "maximum": 255}
+  },
+  "coordinate": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": ["x", "y"],
+   "properties": {
+    "x": {"type": "integer", "minimum": 0},
+    "y": {"type": "integer", "minimum": 0}
+   }
+  },
+  "scene_fact": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "name",
+    "schema_version",
+    "valid",
+    "material_namespace",
+    "material_key",
+    "route_family_mask",
+    "ramp_bin",
+    "density_bin",
+    "direction_bin",
+    "flow_bin",
+    "edge_bin"
+   ],
+   "properties": {
+    "name": {"type": "string", "minLength": 1},
+    "schema_version": {"const": 2},
+    "valid": {"const": 1},
+    "material_namespace": {"const": 2},
+    "material_key": {"const": 200},
+    "route_family_mask": {"type": "integer", "minimum": 1, "maximum": 127},
+    "ramp_bin": {"type": "integer", "minimum": 0, "maximum": 255},
+    "density_bin": {"type": "integer", "minimum": 0, "maximum": 255},
+    "direction_bin": {"type": "integer", "minimum": 0, "maximum": 255},
+    "flow_bin": {"type": "integer", "minimum": 0, "maximum": 255},
+    "edge_bin": {"type": "integer", "minimum": 0, "maximum": 255},
+    "harri_shape6_valid": {"type": "integer", "enum": [0, 1]},
+    "harri_shape6_q0_16": {
+     "type": "array",
+     "minItems": 6,
+     "maxItems": 6,
+     "items": {"type": "integer", "minimum": 0, "maximum": 65535}
+    }
+   }
+  },
+  "row": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "cell_coordinate",
+    "runtime_join_key",
+    "scene_fact",
+    "expected_glyph_id",
+    "expected_unicode_scalar",
+    "expected_palette_indices",
+    "expected_colour_rgba",
+    "expected_role",
+    "expected_structure_membership",
+    "expected_feature_ref",
+    "expected_structural_sequence",
+    "expected_topology_transition"
+   ],
+   "properties": {
+    "cell_coordinate": {"$ref": "#/$defs/coordinate"},
+    "runtime_join_key": {"type": "string", "pattern": "^pieta:[a-z0-9_]+:[1-9][0-9]*$"},
+    "scene_fact": {"$ref": "#/$defs/scene_fact"},
+    "expected_glyph_id": {"type": "integer", "minimum": 256},
+    "expected_unicode_scalar": {"type": "integer", "minimum": 1, "maximum": 1114111},
+    "expected_palette_indices": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": ["foreground", "background"],
+     "properties": {
+      "foreground": {"type": "integer", "minimum": 16, "maximum": 231},
+      "background": {"type": "integer", "minimum": 16, "maximum": 231}
+     }
+    },
+    "expected_colour_rgba": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": ["foreground", "background"],
+     "properties": {
+      "foreground": {"$ref": "#/$defs/rgba"},
+      "background": {"$ref": "#/$defs/rgba"}
+     }
+    },
+    "expected_role": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": ["code", "name"],
+     "properties": {"code": {"const": 1}, "name": {"const": "tonal_fill"}}
+    },
+    "expected_structure_membership": {
+     "type": "array",
+     "minItems": 1,
+     "uniqueItems": true,
+     "items": {"type": "string", "pattern": "^mesh:200:"}
+    },
+    "expected_feature_ref": {"type": "string", "pattern": "^[1-9][0-9]*$"},
+    "expected_structural_sequence": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": ["kind", "reason"],
+     "properties": {
+      "kind": {"const": "declared_absent"},
+      "reason": {"const": "tonal_fill_is_not_a_structural_sequence_participant"}
+     }
+    },
+    "expected_topology_transition": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": ["code", "name"],
+     "properties": {"code": {"const": 0}, "name": {"const": "none"}}
+    }
+   }
+  },
+  "timepoint": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": ["frame_timepoint", "authoring_scene_frame", "rows"],
+   "properties": {
+    "frame_timepoint": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": ["ordinal", "label"],
+     "properties": {
+      "ordinal": {"type": "integer", "minimum": 0, "maximum": 4},
+      "label": {"type": "string", "minLength": 1}
+     }
+    },
+    "authoring_scene_frame": {"type": ["integer", "null"], "minimum": 0},
+    "rows": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/row"}}
+   }
+  }
+ }
+}

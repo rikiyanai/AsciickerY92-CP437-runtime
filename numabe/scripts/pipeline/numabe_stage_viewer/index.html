@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Numabe Stage Viewer</title>
+<!--
+  FL-4809 VIEWER-01 - offline stage viewer for the Numabe pipeline; restored
+  and extended under FL-4876 TOOL-ROUTE-01 (signs, sign sprites, Classic train
+  routes, TMG LiDAR rail edges and heights).
+
+  Template only: export_viewer_data.py copies this page into the run's viewer
+  directory next to viewer_data.js / viewer_lidar.js. No external script,
+  stylesheet, font or map tile is referenced; the page draws its own
+  axonometric view on a 2-D canvas and opens straight from file://.
+-->
+<style>
+:root{
+  --bg:#0e1117; --panel:#161b22; --panel2:#1c232c; --line:#2b3441;
+  --ink:#e6edf3; --ink-dim:#8b98a5; --accent:#4cc2ff; --warn:#ffb454;
+  --ok:#58d68d; --bad:#ff6b6b; --shadow:rgba(0,0,0,.55);
+  --canvas-bg:#0b0f14; --grid:#1a2230; --ground:#131a23;
+}
+:root[data-theme="light"]{
+  --bg:#f3f5f7; --panel:#ffffff; --panel2:#eef1f5; --line:#d3dae2;
+  --ink:#16202b; --ink-dim:#5b6b7b; --accent:#0b6fa4; --warn:#a56100;
+  --ok:#1d7a44; --bad:#b32323; --shadow:rgba(0,0,0,.14);
+  --canvas-bg:#e7ecf1; --grid:#d3dbe4; --ground:#dde4ec;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font:13px/1.45 ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif;
+  overflow:hidden;
+}
+#stage{position:fixed;inset:0}
+canvas{display:block;width:100%;height:100%;background:var(--canvas-bg);cursor:grab}
+canvas.dragging{cursor:grabbing}
+
+.pane{
+  position:fixed; background:var(--panel); border:1px solid var(--line);
+  border-radius:10px; box-shadow:0 8px 28px var(--shadow); overflow:hidden;
+}
+.pane h2{
+  margin:0; padding:8px 10px; font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink-dim); background:var(--panel2);
+  border-bottom:1px solid var(--line); display:flex; align-items:center; gap:8px;
+}
+.pane h2 .sp{margin-left:auto}
+.pane .body{padding:8px 10px; overflow:auto}
+
+#controls{left:12px; top:12px; width:274px; max-height:calc(100vh - 24px); display:flex; flex-direction:column}
+#controls .body{max-height:calc(100vh - 70px)}
+#legend{right:12px; bottom:12px; width:236px; max-height:44vh; display:flex; flex-direction:column}
+#legend .body{max-height:38vh}
+#info{right:12px; top:12px; width:360px; max-height:calc(100vh - 24px); display:none; flex-direction:column}
+#info .body{max-height:calc(100vh - 70px)}
+#info.open{display:flex}
+#hud{
+  position:fixed; left:12px; bottom:12px; padding:6px 10px; border-radius:8px;
+  background:var(--panel); border:1px solid var(--line); color:var(--ink-dim);
+  font:11px ui-monospace,SFMono-Regular,Menlo,monospace; pointer-events:none;
+}
+#tip{
+  position:fixed; pointer-events:none; padding:4px 7px; border-radius:6px;
+  background:var(--panel); border:1px solid var(--line); font-size:11px;
+  display:none; max-width:280px; box-shadow:0 4px 14px var(--shadow); z-index:9;
+}
+
+fieldset{border:0;border-top:1px solid var(--line);margin:10px 0 0;padding:8px 0 0}
+fieldset:first-of-type{border-top:0;margin-top:0;padding-top:0}
+legend{padding:0 0 4px;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim)}
+label.row{display:flex;align-items:center;gap:6px;padding:1px 0;cursor:pointer}
+label.row span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+label.row .n{color:var(--ink-dim);font:10px ui-monospace,Menlo,monospace}
+input[type=checkbox],input[type=radio]{accent-color:var(--accent);margin:0}
+select,button{
+  font:inherit; color:var(--ink); background:var(--panel2);
+  border:1px solid var(--line); border-radius:6px; padding:3px 6px;
+}
+button{cursor:pointer}
+button:hover{border-color:var(--accent)}
+button.mini{padding:1px 6px;font-size:11px}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.sw{width:12px;height:12px;border-radius:3px;border:1px solid var(--line);flex:none}
+.k{color:var(--ink-dim)}
+table.kv{width:100%;border-collapse:collapse;font-size:12px}
+table.kv td{padding:2px 4px;vertical-align:top;border-top:1px solid var(--line)}
+table.kv td:first-child{color:var(--ink-dim);white-space:nowrap;width:38%}
+table.kv tr:first-child td{border-top:0}
+h3.sec{margin:12px 0 4px;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim)}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.thumbs a{display:block;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.thumbs img{display:block;width:100%;height:auto;background:var(--panel2)}
+.sheet img{width:100%;border:1px solid var(--line);border-radius:6px}
+.pill{
+  display:inline-block;padding:0 6px;border-radius:999px;border:1px solid var(--line);
+  font-size:11px;background:var(--panel2);margin:0 4px 4px 0;
+}
+.miss{color:var(--warn)}
+a{color:var(--accent);word-break:break-all}
+.note{color:var(--ink-dim);font-size:11px;margin:6px 0 0}
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="cv"></canvas></div>
+
+<section class="pane" id="controls">
+  <h2>Numabe stage viewer <button class="mini sp" id="theme">theme</button></h2>
+  <div class="body">
+    <fieldset>
+      <legend>Camera</legend>
+      <label class="row"><span>pitch <b id="vPitch">55</b>&deg;</span></label>
+      <input type="range" id="pitch" min="0" max="85" value="55">
+      <label class="row"><span>rotate <b id="vYaw">30</b>&deg;</span></label>
+      <input type="range" id="yaw" min="0" max="359" value="30">
+      <label class="row"><span>height exaggeration <b id="vEx">1.0</b>&times;</span></label>
+      <input type="range" id="ex" min="5" max="40" value="10">
+      <div style="display:flex;gap:6px;margin-top:6px">
+        <button class="mini" id="fit">fit</button>
+        <button class="mini" id="top">plan</button>
+        <button class="mini" id="iso">iso 55&deg;</button>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Colour buildings by</legend>
+      <select id="colourBy" style="width:100%">
+        <option value="footprint_source">footprint source (osm / plateau)</option>
+        <option value="reconstruction_class">reconstruction class A/B/C</option>
+        <option value="evidence_state">evidence_state</option>
+        <option value="debt_state">debt_state</option>
+        <option value="visual_owner">visual owner</option>
+        <option value="collision_owner">collision owner</option>
+        <option value="navigation_owner">navigation owner</option>
+        <option value="disposition">disposition</option>
+        <option value="importance">importance</option>
+        <option value="height_basis">height basis (lidar / plateau / default)</option>
+        <option value="height">height (m)</option>
+      </select>
+      <div id="filters" style="margin-top:6px"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Layers</legend>
+      <div id="layers"></div>
+      <label class="row"><span>LiDAR min height <b id="vLidarMin">0.5</b> m</span></label>
+      <input type="range" id="lidarMin" min="5" max="300" value="5">
+    </fieldset>
+
+    <fieldset>
+      <legend>Camera cones</legend>
+      <label class="row"><input type="radio" name="cone" value="none" checked><span>none</span></label>
+      <label class="row"><input type="radio" name="cone" value="local"><span>downloaded + debt frames</span></label>
+      <label class="row"><input type="radio" name="cone" value="all"><span>every posed picture (flat)</span></label>
+      <label class="row"><span>cone length fallback <b id="vCone">25</b> m</span></label>
+      <input type="range" id="coneLen" min="5" max="80" value="25">
+    </fieldset>
+
+    <fieldset>
+      <legend>Labels</legend>
+      <label class="row"><input type="checkbox" id="labBuild"><span>named buildings</span></label>
+      <label class="row"><input type="checkbox" id="labPlace"><span>places and debt features</span></label>
+      <label class="row"><input type="checkbox" id="labFront" checked><span>front billboards</span></label>
+      <label class="row"><input type="checkbox" id="labSign" checked><span>signs (custom identity)</span></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Payload</legend>
+      <div id="counts" style="font:11px ui-monospace,Menlo,monospace;color:var(--ink-dim)"></div>
+      <!-- CHAIN-SUMMARY-START -->
+      <!-- CHAIN-SUMMARY-END -->
+      <p class="note" id="omittedNote"></p>
+    </fieldset>
+  </div>
+</section>
+
+<section class="pane" id="legend">
+  <h2>Legend <button class="mini sp" id="palBtn">palette</button></h2>
+  <div class="body" id="legendBody"></div>
+</section>
+
+<section class="pane" id="info">
+  <h2>Selection <button class="mini sp" id="closeInfo">close</button></h2>
+  <div class="body" id="infoBody"></div>
+</section>
+
+<div id="hud"></div>
+<div id="tip"></div>
+
+<script src="viewer_lidar.js"></script>
+<script src="viewer_data.js"></script>
+<script>
+"use strict";
+(function () {
+
+// ---------------------------------------------------------------------------
+// data loading
+// ---------------------------------------------------------------------------
+function boot(D) { try { start(D); } catch (e) { fail(e); } }
+function fail(e) {
+  document.body.innerHTML =
+    '<pre style="padding:24px;white-space:pre-wrap;color:#ff6b6b">' +
+    'Viewer could not start.\n\n' + (e && e.stack ? e.stack : e) + '</pre>';
+}
+function load() {
+  if (window.VIEWER_DATA) {
+    boot(window.VIEWER_DATA);
+  } else {
+    fetch("viewer_data.json").then(function (r) { return r.json(); }).then(boot).catch(function (e) {
+      fail("viewer_data.js is missing and viewer_data.json could not be fetched.\n" +
+           "Run export_viewer_data.py --run-root RUN, then open RUN/viewer/index.html.\n\n" + e);
+    });
+  }
+}
+
+// ---------------------------------------------------------------------------
+// colour vocabularies
+// ---------------------------------------------------------------------------
+var CAT = {
+  footprint_source: { osm: [86, 160, 232], plateau: [232, 142, 74], unknown: [130, 130, 130] },
+  reconstruction_class: { A: [92, 148, 214], B: [232, 178, 70], C: [214, 96, 110], unknown: [130,130,130] },
+  evidence_state: {
+    authoritative_observed: [74, 190, 128], directly_observed: [110, 200, 200],
+    derived: [214, 178, 84], synthetic: [214, 110, 110], unknown: [130, 130, 130]
+  },
+  debt_state: {
+    complete: [74, 190, 128], observed_boxed: [96, 180, 220],
+    frame_available_unboxed: [226, 176, 76], observation_owed: [222, 96, 102],
+    waived: [150, 130, 200], unknown: [130, 130, 130]
+  },
+  visual_owner: {
+    terrain: [120, 150, 120], building_mass: [150, 140, 200],
+    fixture: [200, 160, 110], place_front: [220, 120, 170],
+    none: [110, 110, 110], unknown: [130, 130, 130]
+  },
+  collision_owner: {
+    terrain: [120, 150, 120], building_mass: [150, 140, 200],
+    none: [110, 110, 110], unknown: [130, 130, 130]
+  },
+  navigation_owner: { route: [96, 190, 220], none: [110, 110, 110], unknown: [130, 130, 130] },
+  disposition: {
+    conflated: [96, 180, 140], osm_only: [86, 160, 232],
+    plateau_only: [232, 142, 74], unknown: [130, 130, 130]
+  },
+  importance: {
+    landmark: [232, 120, 92], route_visible: [96, 176, 224],
+    background: [128, 138, 148], unknown: [130, 130, 130]
+  },
+  height_basis: { tmg_lidar_measured: [74, 210, 150], unknown: [130, 130, 130] }
+};
+var FALLBACK = [
+  [ 96,160,220],[224,150, 80],[110,190,130],[210,110,130],[170,140,210],
+  [220,196, 96],[110,190,196],[200,130,180],[150,160,120],[180,120,110]
+];
+function hashColour(key) {
+  var h = 0, i;
+  for (i = 0; i < key.length; i++) { h = (h * 31 + key.charCodeAt(i)) >>> 0; }
+  return FALLBACK[h % FALLBACK.length];
+}
+function rgb(c, a) {
+  return "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + (a === undefined ? 1 : a) + ")";
+}
+function shade(c, f) {
+  return [Math.max(0, Math.min(255, Math.round(c[0] * f))),
+          Math.max(0, Math.min(255, Math.round(c[1] * f))),
+          Math.max(0, Math.min(255, Math.round(c[2] * f)))];
+}
+function heightRamp(h) {
+  var t = Math.max(0, Math.min(1, (h || 0) / 30));
+  return [Math.round(40 + 200 * t), Math.round(80 + 60 * (1 - t)), Math.round(190 - 110 * t)];
+}
+
+var CONTEXT_STYLE = {
+  road:             { c: [140, 146, 156], w: 2.6 },
+  sidewalk:         { c: [124, 150, 130], w: 1.6 },
+  crossing:         { c: [228, 228, 214], w: 1.8 },
+  railway_boundary: { c: [176, 132,  96], w: 2.2 },
+  terrain:          { c: [ 96, 122,  96], w: 1.2 },
+  station_entrance: { c: [ 96, 196, 224], w: 2.0 },
+  sign:             { c: [226, 176,  76], w: 2.0 },
+  fixture:          { c: [200, 160, 110], w: 1.4 },
+  place:            { c: [226, 116, 176], w: 2.0 }
+};
+
+var FIXTURE_COLOUR = {
+  traffic_signal: [232, 108, 92], pedestrian_crossing_marker: [226, 226, 216],
+  stop_sign: [216, 86, 86], post_box: [224, 84, 110], information_board: [190, 158, 110],
+  bus_stop: [96, 176, 224], bicycle_parking: [126, 196, 150], bollard: [170, 170, 176],
+  public_telephone: [132, 150, 224]
+};
+var SIGN_COLOUR = [255, 120, 210], SPRITE_COLOUR = [255, 236, 120];
+var TRAIN_COLOUR = [70, 200, 120], RAIL_EDGE_COLOUR = [255, 150, 60];
+
+// ---------------------------------------------------------------------------
+// main
+// ---------------------------------------------------------------------------
+function start(D) {
+  var L = window.VIEWER_LIDAR || null;
+  var cv = document.getElementById("cv");
+  var ctx = cv.getContext("2d");
+  var meta = D.meta, M = { lon: meta.m_per_deg_lon, lat: meta.m_per_deg_lat };
+  var O = { lon: meta.origin_lon, lat: meta.origin_lat };
+  var poseCols = {}, i;
+  for (i = 0; i < D.poses.columns.length; i++) poseCols[D.poses.columns[i]] = i;
+
+  function toM(ll) { return [(ll[0] - O.lon) * M.lon, (ll[1] - O.lat) * M.lat]; }
+  function ringM(r) { var o = new Array(r.length), k; for (k = 0; k < r.length; k++) o[k] = toM(r[k]); return o; }
+
+  // -- indexes ------------------------------------------------------------
+  var ledgerById = {};
+  for (i = 0; i < D.ledger.length; i++) ledgerById[D.ledger[i].feature_id] = D.ledger[i];
+  var debtById = {};
+  for (i = 0; i < D.debt_features.length; i++) debtById[D.debt_features[i].id] = D.debt_features[i];
+  var framesByFeature = {};
+  for (i = 0; i < D.debt_frames.length; i++) {
+    var f = D.debt_frames[i];
+    (framesByFeature[f.feature_id] = framesByFeature[f.feature_id] || []).push(f);
+  }
+  var footprintById = {};
+
+  // -- geometry preparation ----------------------------------------------
+  var builds = [], ctxFeats = [], fronts = [], fixtures = [], linears = [], debts = [], poses = [], cones = [];
+  var signs = [], trains = [], railEdges = [], lidarPts = [];
+  var b, row;
+  for (i = 0; i < D.footprints.length; i++) {
+    b = D.footprints[i];
+    row = ledgerById[b.id] || {};
+    var pm = ringM(b.ring), cx = 0, cy = 0, k;
+    for (k = 0; k < pm.length; k++) { cx += pm[k][0]; cy += pm[k][1]; }
+    var item = {
+      kind: "building", d: b, row: row, ring: pm,
+      c: [cx / pm.length, cy / pm.length],
+      h: b.height_m === null || b.height_m === undefined ? 0 : b.height_m
+    };
+    builds.push(item);
+    footprintById[b.id] = item;
+  }
+  for (i = 0; i < D.context.length; i++) {
+    var c = D.context[i];
+    ctxFeats.push({
+      kind: "context", d: c, row: ledgerById[c.id] || {},
+      pts: c.kind === "point" ? [toM(c.coords)] : ringM(c.coords)
+    });
+  }
+  for (i = 0; i < D.fronts.length; i++) {
+    var fr = D.fronts[i];
+    fronts.push({ kind: "front", d: fr, row: ledgerById[fr.id] || {}, p: toM(fr.lonlat) });
+  }
+  for (i = 0; i < D.fixtures.length; i++) {
+    var fx = D.fixtures[i];
+    fixtures.push({ kind: "fixture", d: fx, row: ledgerById[fx.id] || {}, p: toM(fx.lonlat) });
+  }
+  for (i = 0; i < (D.linear_instances || []).length; i++) {
+    var li = D.linear_instances[i];
+    linears.push({ kind: "linear", d: li, row: ledgerById[li.id] || {}, p: toM(li.lonlat) });
+  }
+  for (i = 0; i < (D.signs || []).length; i++) {
+    var sg = D.signs[i];
+    signs.push({ kind: "sign", d: sg, row: ledgerById[sg.parent] || {}, p: toM(sg.lonlat),
+                 sp: sg.sprite_lonlat ? toM(sg.sprite_lonlat) : null });
+  }
+  for (i = 0; i < (D.trains || []).length; i++) {
+    var tr = D.trains[i];
+    trains.push({ kind: "train", d: tr, row: {}, line: tr.polyline.map(toM),
+                  env: (tr.stopped_envelope || []).map(toM) });
+  }
+  function edgeRuns(list) {
+    var runs = [], cur = [], k;
+    for (k = 0; k < list.length; k++) {
+      if (list[k]) cur.push(toM(list[k]));
+      else if (cur.length) { if (cur.length > 1) runs.push(cur); cur = []; }
+    }
+    if (cur.length > 1) runs.push(cur);
+    return runs;
+  }
+  for (i = 0; i < (D.rail_edges || []).length; i++) {
+    var re = D.rail_edges[i];
+    railEdges.push({ kind: "rail_edge", d: re, left: edgeRuns(re.left), right: edgeRuns(re.right) });
+  }
+  if (L && L.rows) {
+    for (i = 0; i < L.rows.length; i++) {
+      var lr = L.rows[i];
+      lidarPts.push([ (lr[0] - O.lon) * M.lon, (lr[1] - O.lat) * M.lat, lr[2], lr[3] ]);
+    }
+  }
+  for (i = 0; i < D.debt_features.length; i++) {
+    var dg = D.debt_features[i];
+    if (!dg.lonlat) continue;
+    debts.push({ kind: "debt", d: dg, row: ledgerById[dg.id] || {}, p: toM(dg.lonlat) });
+  }
+  var chPhys = [], chProxy = [], chGhost = [], chOwed = [], chOmit = [],
+      chFail = [], chMap = [], chBins = [];
+  function chainPrep(list, arr, ghost) {
+    for (var k = 0; k < list.length; k++) {
+      var it = list[k];
+      if (!it.lonlat) continue;
+      var rec = { kind: "chain", d: it, p: toM(it.lonlat), g: null };
+      if (ghost && it.detail && it.detail.ghost_lonlat) rec.g = toM(it.detail.ghost_lonlat);
+      arr.push(rec);
+    }
+  }
+  if (D.chain) {
+    chainPrep(D.chain.emitted_physical || [], chPhys, false);
+    chainPrep(D.chain.emitted_proxy || [], chProxy, false);
+    chainPrep(D.chain.planned_not_emitted || [], chGhost, true);
+    chainPrep(D.chain.owed || [], chOwed, false);
+    chainPrep(D.chain.omitted || [], chOmit, false);
+    chainPrep(D.chain.spatial_fail || [], chFail, false);
+    chainPrep(D.chain.mapillary || [], chMap, false);
+    chainPrep(D.chain.bins || [], chBins, false);
+  }
+  var rows = D.poses.rows;
+  for (i = 0; i < rows.length; i++) {
+    var r = rows[i];
+    poses.push({
+      p: toM([r[poseCols.lon], r[poseCols.lat]]),
+      heading: r[poseCols.heading_deg], hfov: r[poseCols.hfov_deg],
+      basis: r[poseCols.hfov_basis], id: r[poseCols.picture_id],
+      date: r[poseCols.capture_date], seq: r[poseCols.sequence_id],
+      local: r[poseCols.local_path], dist: null, feature: null
+    });
+  }
+  var posesById = {};
+  for (i = 0; i < poses.length; i++) posesById[poses[i].id] = poses[i];
+  for (i = 0; i < D.debt_frames.length; i++) {
+    var df = D.debt_frames[i];
+    var pose = posesById[df.picture_id];
+    if (pose) { pose.dist = df.distance_m; pose.feature = df.feature_id; pose.debt = true; }
+    cones.push({
+      kind: "cone", d: df, p: toM(df.lonlat), heading: df.heading_deg,
+      hfov: df.hfov_deg, dist: df.distance_m, local: df.local_path,
+      id: df.picture_id, feature: df.feature_id, debt: true
+    });
+  }
+  for (i = 0; i < poses.length; i++) {
+    if (poses[i].local && !poses[i].debt) {
+      cones.push({
+        kind: "cone", d: poses[i], p: poses[i].p, heading: poses[i].heading,
+        hfov: poses[i].hfov, dist: null, local: poses[i].local,
+        id: poses[i].id, feature: null, debt: false
+      });
+    }
+  }
+  var route = D.route.shape.map(toM);
+
+  // -- camera -------------------------------------------------------------
+  var cam = { yaw: 30 * Math.PI / 180, tilt: 55 * Math.PI / 180, scale: 2.0, px: 0, py: 0, ex: 1.0 };
+  var W = 0, H = 0, DPR = 1;
+  var cy_, sy_, ct_, st_;
+  function refreshTrig() {
+    cy_ = Math.cos(cam.yaw); sy_ = Math.sin(cam.yaw);
+    ct_ = Math.cos(cam.tilt); st_ = Math.sin(cam.tilt);
+  }
+  function px_(x, y) { return W / 2 + ((x * cy_ - y * sy_) - cam.px) * cam.scale; }
+  function py_(x, y, z) {
+    var n = x * sy_ + y * cy_;
+    return H / 2 - ((n - cam.py) * ct_ + (z || 0) * cam.ex * st_) * cam.scale;
+  }
+  function depth(x, y) { return x * sy_ + y * cy_; }
+
+  function resize() {
+    DPR = Math.min(2, window.devicePixelRatio || 1);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    draw();
+  }
+  function centreOn(mx, my) {
+    refreshTrig();
+    cam.px = mx * cy_ - my * sy_;
+    cam.py = mx * sy_ + my * cy_;
+  }
+  function fit() {
+    var bb = D.bounds;
+    var a = toM([bb.min_lon, bb.min_lat]), c2 = toM([bb.max_lon, bb.max_lat]);
+    var w = Math.abs(c2[0] - a[0]), h = Math.abs(c2[1] - a[1]);
+    var diag = Math.sqrt(w * w + h * h);
+    cam.scale = Math.min(W, H) / (diag * 0.78 || 1);
+    centreOn((a[0] + c2[0]) / 2, (a[1] + c2[1]) / 2);
+    draw();
+  }
+
+  // -- layer state --------------------------------------------------------
+  var LAYERS = [
+    ["footprints", "building footprints", true],
+    ["walls", "extruded walls", true],
+    ["context", "roads / sidewalks / rail", true],
+    ["route", "pedestrian route", true],
+    ["fixtures", "fixtures (" + D.counts.fixtures + ")", true],
+    ["linears", "lowered physical tiles (" + (D.counts.linear_instances || 0) + ")", false],
+    ["fronts", "place-front billboards (" + D.counts.fronts + ")", true],
+    ["signs", "signs: custom identity planes (" + (D.counts.signs || 0) + ")", true],
+    ["sprites", "signs: XP sprite positions (" + (D.counts.signs_with_sprite || 0) + ")", true],
+    ["trains", "Classic train routes + stopped set (" + (D.counts.train_routes || 0) + ")", true],
+    ["rail_edges", "LiDAR rail-corridor edges (" + (D.counts.rail_edge_ways || 0) + ")", true],
+    ["baked_walls", "Classic baked wall edge (what the game renders; " +
+                    (D.counts.baked_wall_points || 0) + " pts)", true],
+    ["conflicts", "identity: sightings vs mapped place (" +
+                  (D.counts.identity_conflicts || 0) + "; red contests, green supports)", true],
+    ["lidar", "LiDAR heights (" + (L && L.rows ? L.rows.length : 0) + " pts, " +
+              (L ? L.grid_m + " m grid" : "absent") + ")", false],
+    ["chain_phys", "chain: emitted physical (solid)", false],
+    ["chain_proxy", "chain: emitted proxy (outlined)", false],
+    ["chain_ghost", "chain: planned-not-emitted (ghost)", true],
+    ["chain_owed", "chain: owed (marker + jev)", true],
+    ["chain_omit", "chain: omitted (dim)", false],
+    ["chain_fail", "chain: spatial FAIL (red + host)", true],
+    ["chain_map", "chain: Mapillary observed", false],
+    ["chain_bins", "chain: inventory bins", false],
+    ["debt", "observation-debt markers", true],
+    ["poses", "posed picture dots (" + D.counts.poses + ")", true],
+    ["grid", "ground grid", true]
+  ];
+  var show = {};
+  LAYERS.forEach(function (l) { show[l[0]] = l[2]; });
+  var filterClass = { A: true, B: true, C: true, unknown: true };
+  var filterSource = { osm: true, plateau: true, unknown: true };
+  var coneMode = "none", coneLen = 25, lidarMin = 0.5;
+  var labels = { build: false, place: false, front: true, sign: true };
+  var colourBy = "footprint_source";
+  var selected = null, hover = null;
+  // FL-4876 VIEWER-02: x-ray walls (X), isolate the selected building and its
+  // facades (I, again or Esc to clear).
+  var xray = false, isolate = null;
+  var bakedPts = (D.baked_walls || []).map(toM);
+  var conflicts = (D.identity_conflicts || []).map(function (c) {
+    return { d: c, o: toM(c.observation_lonlat), m: c.mapped_lonlat ? toM(c.mapped_lonlat) : null };
+  });
+  function drawBakedWalls() {
+    if (cam.scale < 3) return;  // dense: only when zoomed in
+    ctx.fillStyle = "rgba(255,80,200,0.85)";
+    var r = Math.max(1, Math.min(3, cam.scale / 12));
+    for (var k = 0; k < bakedPts.length; k++) {
+      var X = px_(bakedPts[k][0], bakedPts[k][1]), Y = py_(bakedPts[k][0], bakedPts[k][1], 0);
+      if (X < -4 || X > W + 4 || Y < -4 || Y > H + 4) continue;
+      ctx.fillRect(X - r / 2, Y - r / 2, r, r);
+    }
+  }
+  function drawConflicts() {
+    for (var k = 0; k < conflicts.length; k++) {
+      var c = conflicts[k], X = px_(c.o[0], c.o[1]), Y = py_(c.o[0], c.o[1], 2.0);
+      var col = c.d.kind === "contesting" ? "rgba(255,70,70,1)" :
+                c.d.kind === "supporting" ? "rgba(90,230,120,1)" : "rgba(255,190,60,1)";
+      if (c.m) {
+        ctx.beginPath(); ctx.moveTo(X, Y);
+        ctx.lineTo(px_(c.m[0], c.m[1]), py_(c.m[0], c.m[1], 2.0));
+        ctx.strokeStyle = col; ctx.lineWidth = 1.2; ctx.setLineDash([4, 3]); ctx.stroke(); ctx.setLineDash([]);
+      }
+      ctx.beginPath(); ctx.moveTo(X - 5, Y - 5); ctx.lineTo(X + 5, Y + 5);
+      ctx.moveTo(X + 5, Y - 5); ctx.lineTo(X - 5, Y + 5);
+      ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.stroke();
+      pickList.push({ item: { kind: "conflict", d: c.d, p: c.o }, pt: [X, Y], r: 8, z: depth(c.o[0], c.o[1]) });
+    }
+  }
+  window.addEventListener("keydown", function (e) {
+    if (e.target && /INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+    if (e.key === "x" || e.key === "X") { xray = !xray; draw(); }
+    else if (e.key === "i" || e.key === "I") {
+      var b = selected && selected.kind === "building" ? selected.d.id :
+              (selected && selected.d && selected.d.parent) || null;
+      isolate = (isolate || !b) ? null : b; draw();
+    } else if (e.key === "Escape") { isolate = null; draw(); }
+  });
+
+  function catOf(item) {
+    var d = item.d, row = item.row;
+    switch (colourBy) {
+      case "footprint_source": return d.footprint_source || "unknown";
+      case "reconstruction_class": return row.reconstruction_class || "unknown";
+      case "evidence_state": return d.evidence_state || row.evidence_state || "unknown";
+      case "debt_state": return row.debt_state || "unknown";
+      case "visual_owner": return row.visual_owner || "unknown";
+      case "collision_owner": return row.collision_owner || "unknown";
+      case "navigation_owner": return row.navigation_owner || "unknown";
+      case "disposition": return d.disposition || row.disposition || "unknown";
+      case "importance": return row.importance || "unknown";
+      case "height_basis": return d.height_basis || "unknown";
+      case "height": return "height";
+    }
+    return "unknown";
+  }
+  function colourOf(item) {
+    if (colourBy === "height") return heightRamp(item.h);
+    var key = catOf(item), table = CAT[colourBy];
+    if (table && table[key]) return table[key];
+    return hashColour(colourBy + ":" + key);
+  }
+  function visible(item) {
+    var cls = item.row.reconstruction_class || "unknown";
+    if (!filterClass[cls]) return false;
+    var src = item.d.footprint_source || "unknown";
+    if (!filterSource[src]) return false;
+    return true;
+  }
+
+  // -- drawing ------------------------------------------------------------
+  var pickList = [];
+
+  function poly(pts, z, fillS, strokeS, lw) {
+    var k;
+    ctx.beginPath();
+    for (k = 0; k < pts.length; k++) {
+      var X = px_(pts[k][0], pts[k][1]), Y = py_(pts[k][0], pts[k][1], z);
+      if (k === 0) ctx.moveTo(X, Y); else ctx.lineTo(X, Y);
+    }
+    ctx.closePath();
+    if (fillS) { ctx.fillStyle = fillS; ctx.fill(); }
+    if (strokeS) { ctx.strokeStyle = strokeS; ctx.lineWidth = lw || 1; ctx.stroke(); }
+  }
+  function line(pts, z, strokeS, lw) {
+    var k;
+    ctx.beginPath();
+    for (k = 0; k < pts.length; k++) {
+      var X = px_(pts[k][0], pts[k][1]), Y = py_(pts[k][0], pts[k][1], z);
+      if (k === 0) ctx.moveTo(X, Y); else ctx.lineTo(X, Y);
+    }
+    ctx.strokeStyle = strokeS; ctx.lineWidth = lw || 1; ctx.stroke();
+  }
+  function screenRing(pts, z) {
+    var o = new Array(pts.length), k;
+    for (k = 0; k < pts.length; k++) o[k] = [px_(pts[k][0], pts[k][1]), py_(pts[k][0], pts[k][1], z)];
+    return o;
+  }
+  function inPoly(pt, ring) {
+    var inside = false, k, j;
+    for (k = 0, j = ring.length - 1; k < ring.length; j = k++) {
+      var xi = ring[k][0], yi = ring[k][1], xj = ring[j][0], yj = ring[j][1];
+      if (((yi > pt[1]) !== (yj > pt[1])) &&
+          (pt[0] < (xj - xi) * (pt[1] - yi) / (yj - yi + 1e-12) + xi)) inside = !inside;
+    }
+    return inside;
+  }
+
+  function drawGrid() {
+    var step = 50, span = 900, g = cssVar("--grid"), a;
+    ctx.save(); ctx.globalAlpha = 0.6;
+    for (a = -span; a <= span; a += step) {
+      line([[a, -span], [a, span]], 0, g, 1);
+      line([[-span, a], [span, a]], 0, g, 1);
+    }
+    ctx.restore();
+  }
+
+  function drawLidar() {
+    var k, n = lidarPts.length, s = Math.max(1, Math.min(3, cam.scale * 0.8));
+    for (k = 0; k < n; k++) {
+      var q = lidarPts[k];
+      if (q[2] < lidarMin) continue;
+      var X = px_(q[0], q[1]);
+      if (X < -4 || X > W + 4) continue;
+      var Y = py_(q[0], q[1], q[2]);
+      if (Y < -4 || Y > H + 4) continue;
+      ctx.fillStyle = rgb(heightRamp(q[2]), 0.75);
+      ctx.fillRect(X - s / 2, Y - s / 2, s, s);
+    }
+  }
+
+  function drawBuilding(item) {
+    var base = colourOf(item), ring = item.ring, h = item.h * 1.0, k;
+    var sel = selected === item, hov = hover === item;
+    var roof = shade(base, 1.0), wallL = shade(base, 0.62), wallR = shade(base, 0.44);
+    if (show.walls && h > 0.2) {
+      var order = [];
+      for (k = 0; k < ring.length; k++) {
+        var a = ring[k], c2 = ring[(k + 1) % ring.length];
+        order.push({ a: a, b: c2, d: (depth(a[0], a[1]) + depth(c2[0], c2[1])) / 2 });
+      }
+      order.sort(function (p, q) { return q.d - p.d; });
+      for (k = 0; k < order.length; k++) {
+        var e = order[k];
+        var nx = e.b[1] - e.a[1], ny = -(e.b[0] - e.a[0]);
+        var facing = (nx * sy_ + ny * cy_) < 0;
+        var wc = facing ? wallL : wallR;
+        ctx.beginPath();
+        ctx.moveTo(px_(e.a[0], e.a[1]), py_(e.a[0], e.a[1], 0));
+        ctx.lineTo(px_(e.b[0], e.b[1]), py_(e.b[0], e.b[1], 0));
+        ctx.lineTo(px_(e.b[0], e.b[1]), py_(e.b[0], e.b[1], h));
+        ctx.lineTo(px_(e.a[0], e.a[1]), py_(e.a[0], e.a[1], h));
+        ctx.closePath();
+        ctx.fillStyle = rgb(wc, xray ? 0.16 : 0.94); ctx.fill();
+        ctx.strokeStyle = rgb(shade(wc, 0.7), 0.9); ctx.lineWidth = 0.6; ctx.stroke();
+      }
+    }
+    var edge = sel ? "#ffffff" : (hov ? cssVar("--accent") : rgb(shade(base, 0.55), 0.95));
+    poly(ring, h, rgb(roof, xray ? 0.12 : (h > 0.2 ? 1 : 0.55)), edge, sel ? 2 : (hov ? 1.6 : 0.7));
+    pickList.push({ item: item, ring: screenRing(ring, h), z: depth(item.c[0], item.c[1]) });
+  }
+
+  function coneGeom(p, headingDeg, hfovDeg, len) {
+    var half = (hfovDeg || 60) * Math.PI / 360;
+    var hd = (headingDeg === null || headingDeg === undefined ? 0 : headingDeg) * Math.PI / 180;
+    var apexZ = 1.6, vhalf = half * 0.75, rise = len * Math.tan(vhalf);
+    var n = 7, lo = [], hi = [], k;
+    for (k = 0; k <= n; k++) {
+      var a = hd - half + (2 * half) * (k / n);
+      var x = p[0] + Math.sin(a) * len, y = p[1] + Math.cos(a) * len;
+      lo.push([x, y, apexZ - rise]); hi.push([x, y, apexZ + rise]);
+    }
+    return { apex: [p[0], p[1], apexZ], lo: lo, hi: hi, hd: hd, len: len };
+  }
+  function tri(a, b, c, fill) {
+    ctx.beginPath();
+    ctx.moveTo(px_(a[0], a[1]), py_(a[0], a[1], a[2]));
+    ctx.lineTo(px_(b[0], b[1]), py_(b[0], b[1], b[2]));
+    ctx.lineTo(px_(c[0], c[1]), py_(c[0], c[1], c[2]));
+    ctx.closePath(); ctx.fillStyle = fill; ctx.fill();
+  }
+  function drawCone(c) {
+    var len = c.dist ? c.dist : coneLen;
+    var g = coneGeom(c.p, c.heading, c.hfov, len);
+    var base = c.local ? [255, 206, 92] : (c.debt ? [120, 196, 232] : [150, 160, 176]);
+    var k;
+    ctx.beginPath();
+    ctx.moveTo(px_(c.p[0], c.p[1]), py_(c.p[0], c.p[1], 0));
+    ctx.lineTo(px_(c.p[0], c.p[1]), py_(c.p[0], c.p[1], g.apex[2]));
+    ctx.strokeStyle = rgb(base, 0.85); ctx.lineWidth = c.local ? 1.8 : 1; ctx.stroke();
+    var fa = c.local ? 0.20 : 0.11;
+    for (k = 0; k < g.lo.length - 1; k++) {
+      tri(g.apex, g.lo[k], g.lo[k + 1], rgb(base, fa));
+      tri(g.apex, g.hi[k], g.hi[k + 1], rgb(base, fa * 0.8));
+      tri(g.lo[k], g.lo[k + 1], g.hi[k + 1], rgb(base, fa * 0.55));
+      tri(g.lo[k], g.hi[k + 1], g.hi[k], rgb(base, fa * 0.55));
+    }
+    tri(g.apex, g.lo[0], g.hi[0], rgb(base, fa * 0.9));
+    tri(g.apex, g.lo[g.lo.length - 1], g.hi[g.hi.length - 1], rgb(base, fa * 0.9));
+    var mid = [c.p[0] + Math.sin(g.hd) * len, c.p[1] + Math.cos(g.hd) * len];
+    ctx.beginPath();
+    ctx.moveTo(px_(c.p[0], c.p[1]), py_(c.p[0], c.p[1], g.apex[2]));
+    ctx.lineTo(px_(mid[0], mid[1]), py_(mid[0], mid[1], g.apex[2]));
+    ctx.strokeStyle = rgb(base, c.local ? 0.95 : 0.5);
+    ctx.lineWidth = c.local ? 1.6 : 0.8; ctx.stroke();
+    var X = px_(c.p[0], c.p[1]), Y = py_(c.p[0], c.p[1], g.apex[2]);
+    ctx.beginPath(); ctx.arc(X, Y, c.local ? 4 : 2.5, 0, 6.2832);
+    ctx.fillStyle = rgb(base, 1); ctx.fill();
+    if (c.local) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 1; ctx.stroke(); }
+    pickList.push({ item: { kind: "cone", d: c.d, row: {}, cone: c }, pt: [X, Y], r: 7,
+                    z: depth(c.p[0], c.p[1]) });
+  }
+  function drawFlatCone(c) {
+    var len = c.dist ? c.dist : coneLen;
+    var g = coneGeom(c.p, c.heading, c.hfov, len);
+    var base = c.local ? [255, 206, 92] : [150, 160, 176], k;
+    ctx.beginPath();
+    ctx.moveTo(px_(c.p[0], c.p[1]), py_(c.p[0], c.p[1], 1.6));
+    for (k = 0; k < g.lo.length; k++) {
+      ctx.lineTo(px_(g.lo[k][0], g.lo[k][1]), py_(g.lo[k][0], g.lo[k][1], 1.6));
+    }
+    ctx.closePath();
+    ctx.fillStyle = rgb(base, c.local ? 0.22 : 0.07); ctx.fill();
+    ctx.strokeStyle = rgb(base, c.local ? 0.95 : 0.35);
+    ctx.lineWidth = c.local ? 2 : 0.8; ctx.stroke();
+    if (c.local) {
+      var X = px_(c.p[0], c.p[1]), Y = py_(c.p[0], c.p[1], 1.6);
+      ctx.beginPath(); ctx.arc(X, Y, 5, 0, 6.2832);
+      ctx.fillStyle = rgb(base, 1); ctx.fill();
+      ctx.strokeStyle = "#fff"; ctx.lineWidth = 1; ctx.stroke();
+    }
+  }
+
+  function drawFront(item) {
+    var d = item.d, p = item.p;
+    var body = d.body_rgb || [200, 200, 200];
+    var hd = (d.heading_deg || 0) * Math.PI / 180;
+    var ax = Math.cos(hd), ay = Math.sin(hd);
+    var halfW = (d.fitted_width_m || 3.6) / 2, top = 3.0, bot = 0.15;
+    var a = [p[0] - ax * halfW, p[1] - ay * halfW], b2 = [p[0] + ax * halfW, p[1] + ay * halfW];
+    ctx.beginPath();
+    ctx.moveTo(px_(a[0], a[1]), py_(a[0], a[1], bot));
+    ctx.lineTo(px_(b2[0], b2[1]), py_(b2[0], b2[1], bot));
+    ctx.lineTo(px_(b2[0], b2[1]), py_(b2[0], b2[1], top));
+    ctx.lineTo(px_(a[0], a[1]), py_(a[0], a[1], top));
+    ctx.closePath();
+    ctx.fillStyle = rgb(body, 0.95); ctx.fill();
+    ctx.strokeStyle = selected === item ? "#fff" : rgb(shade(body, 0.6), 1);
+    ctx.lineWidth = selected === item ? 2 : 1; ctx.stroke();
+    var prof = D.front_profiles[d.profile_id];
+    if (prof && prof.primary_rgb) {
+      ctx.beginPath();
+      ctx.moveTo(px_(a[0], a[1]), py_(a[0], a[1], top));
+      ctx.lineTo(px_(b2[0], b2[1]), py_(b2[0], b2[1], top));
+      ctx.lineTo(px_(b2[0], b2[1]), py_(b2[0], b2[1], top - 0.7));
+      ctx.lineTo(px_(a[0], a[1]), py_(a[0], a[1], top - 0.7));
+      ctx.closePath(); ctx.fillStyle = rgb(prof.primary_rgb, 0.95); ctx.fill();
+    }
+    var tipp = [p[0] + Math.sin(hd) * 3.5, p[1] - Math.cos(hd) * 3.5];
+    ctx.beginPath();
+    ctx.moveTo(px_(p[0], p[1]), py_(p[0], p[1], 1.5));
+    ctx.lineTo(px_(tipp[0], tipp[1]), py_(tipp[0], tipp[1], 1.5));
+    ctx.strokeStyle = rgb(body, 0.8); ctx.lineWidth = 1; ctx.stroke();
+    pickList.push({ item: item, pt: [px_(p[0], p[1]), py_(p[0], p[1], top / 2)], r: 12,
+                    z: depth(p[0], p[1]) });
+  }
+
+  // Custom-identity plane: tangent along transform column 0, outward normal
+  // along column 1 (lower_plan_custom basis); the normal tick is that real
+  // normal, not a side assumed from the tangent.
+  function drawSign(item) {
+    var d = item.d, p = item.p, sel = selected === item;
+    var col = d.background_rgb || SIGN_COLOUR;
+    var td = (d.tangent_deg || 0) * Math.PI / 180, nd = (d.normal_deg || 0) * Math.PI / 180;
+    var ax = Math.cos(td), ay = Math.sin(td);
+    var halfW = (d.width_m || 2) / 2, top = d.height_m || 2.4, bot = 0;
+    var a = [p[0] - ax * halfW, p[1] - ay * halfW], b2 = [p[0] + ax * halfW, p[1] + ay * halfW];
+    ctx.beginPath();
+    ctx.moveTo(px_(a[0], a[1]), py_(a[0], a[1], bot));
+    ctx.lineTo(px_(b2[0], b2[1]), py_(b2[0], b2[1], bot));
+    ctx.lineTo(px_(b2[0], b2[1]), py_(b2[0], b2[1], top));
+    ctx.lineTo(px_(a[0], a[1]), py_(a[0], a[1], top));
+    ctx.closePath();
+    ctx.fillStyle = rgb(col, 0.9); ctx.fill();
+    ctx.strokeStyle = sel ? "#fff" : rgb(SIGN_COLOUR, 1); ctx.lineWidth = sel ? 2.4 : 1.4; ctx.stroke();
+    var tip = [p[0] + Math.cos(nd) * 3.0, p[1] + Math.sin(nd) * 3.0];
+    ctx.beginPath();
+    ctx.moveTo(px_(p[0], p[1]), py_(p[0], p[1], top / 2));
+    ctx.lineTo(px_(tip[0], tip[1]), py_(tip[0], tip[1], top / 2));
+    ctx.strokeStyle = rgb(SIGN_COLOUR, 1); ctx.lineWidth = 1.6; ctx.stroke();
+    pickList.push({ item: item, pt: [px_(p[0], p[1]), py_(p[0], p[1], top / 2)], r: 10,
+                    z: depth(p[0], p[1]) });
+  }
+  function drawSprite(item) {
+    var p = item.sp, q = item.p, top = (item.d.height_m || 2.4) / 2;
+    if (!p) return;
+    var X = px_(p[0], p[1]), Y = py_(p[0], p[1], top);
+    ctx.beginPath();
+    ctx.moveTo(px_(q[0], q[1]), py_(q[0], q[1], top)); ctx.lineTo(X, Y);
+    ctx.strokeStyle = rgb(SPRITE_COLOUR, 0.8); ctx.lineWidth = 1; ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(X, Y - 5); ctx.lineTo(X + 5, Y); ctx.lineTo(X, Y + 5); ctx.lineTo(X - 5, Y);
+    ctx.closePath(); ctx.fillStyle = rgb(SPRITE_COLOUR, 1); ctx.fill();
+  }
+
+  function offsetLine(pts, off) {
+    var o = [], k;
+    for (k = 0; k < pts.length; k++) {
+      var a = pts[Math.max(0, k - 1)], c2 = pts[Math.min(pts.length - 1, k + 1)];
+      var dx = c2[0] - a[0], dy = c2[1] - a[1], n = Math.sqrt(dx * dx + dy * dy) || 1;
+      o.push([pts[k][0] - dy / n * off, pts[k][1] + dx / n * off]);
+    }
+    return o;
+  }
+  function drawTrain(item) {
+    var d = item.d, sel = selected === item;
+    line(item.line, 0.1, rgb(TRAIN_COLOUR, 0.55), sel ? 3 : 1.6);
+    if (item.env.length > 1) {
+      var half = (d.width_m || 2.8) / 2, h = d.height_m || 4.05;
+      var L1 = offsetLine(item.env, half), R1 = offsetLine(item.env, -half), k;
+      var roof = L1.concat(R1.slice().reverse());
+      for (k = 0; k < L1.length - 1; k++) {
+        [[L1[k], L1[k + 1]], [R1[k], R1[k + 1]]].forEach(function (e) {
+          ctx.beginPath();
+          ctx.moveTo(px_(e[0][0], e[0][1]), py_(e[0][0], e[0][1], 0));
+          ctx.lineTo(px_(e[1][0], e[1][1]), py_(e[1][0], e[1][1], 0));
+          ctx.lineTo(px_(e[1][0], e[1][1]), py_(e[1][0], e[1][1], h));
+          ctx.lineTo(px_(e[0][0], e[0][1]), py_(e[0][0], e[0][1], h));
+          ctx.closePath(); ctx.fillStyle = rgb(shade(TRAIN_COLOUR, 0.6), 0.85); ctx.fill();
+        });
+      }
+      poly(roof, h, rgb(TRAIN_COLOUR, 0.9), sel ? "#fff" : rgb(shade(TRAIN_COLOUR, 0.5), 1), sel ? 2 : 1);
+      var m = item.env[Math.floor(item.env.length / 2)];
+      pickList.push({ item: item, pt: [px_(m[0], m[1]), py_(m[0], m[1], h)], r: 14, z: depth(m[0], m[1]) });
+    }
+  }
+  function drawRailEdge(item) {
+    var k;
+    for (k = 0; k < item.left.length; k++) line(item.left[k], 0.2, rgb(RAIL_EDGE_COLOUR, 0.9), 1.4);
+    for (k = 0; k < item.right.length; k++) line(item.right[k], 0.2, rgb(shade(RAIL_EDGE_COLOUR, 0.75), 0.9), 1.4);
+  }
+
+  function drawFixture(item) {
+    var d = item.d, p = item.p;
+    var col = FIXTURE_COLOUR[d.subtype] || hashColour(d.subtype || "fixture");
+    var h = 2.4;
+    ctx.beginPath();
+    ctx.moveTo(px_(p[0], p[1]), py_(p[0], p[1], 0));
+    ctx.lineTo(px_(p[0], p[1]), py_(p[0], p[1], h));
+    ctx.strokeStyle = rgb(shade(col, 0.6), 0.95); ctx.lineWidth = 1.4; ctx.stroke();
+    var X = px_(p[0], p[1]), Y = py_(p[0], p[1], h);
+    ctx.beginPath(); ctx.arc(X, Y, selected === item ? 6 : 4, 0, 6.2832);
+    ctx.fillStyle = rgb(col, 1); ctx.fill();
+    ctx.strokeStyle = selected === item ? "#fff" : rgb(shade(col, 0.5), 1);
+    ctx.lineWidth = 1; ctx.stroke();
+    pickList.push({ item: item, pt: [X, Y], r: 8, z: depth(p[0], p[1]) });
+  }
+
+  function drawLinear(item) {
+    var d = item.d, p = item.p, hd = (d.yaw_deg || 0) * Math.PI / 180;
+    var len = d.span_record ? 1.2 : 0.55;
+    var dx = Math.cos(hd) * len, dy = Math.sin(hd) * len;
+    var col = hashColour(d.module_id || "linear");
+    ctx.beginPath();
+    ctx.moveTo(px_(p[0] - dx, p[1] - dy), py_(p[0] - dx, p[1] - dy, 0.12));
+    ctx.lineTo(px_(p[0] + dx, p[1] + dy), py_(p[0] + dx, p[1] + dy, 0.12));
+    ctx.strokeStyle = rgb(col, d.span_record ? 0.95 : 0.72);
+    ctx.lineWidth = d.span_record ? 1.5 : 1.0;
+    ctx.stroke();
+    if (selected === item) {
+      var X = px_(p[0], p[1]), Y = py_(p[0], p[1], 0.12);
+      ctx.beginPath(); ctx.arc(X, Y, 5, 0, 6.2832);
+      ctx.strokeStyle = "#fff"; ctx.lineWidth = 2; ctx.stroke();
+    }
+    pickList.push({ item: item, pt: [px_(p[0], p[1]), py_(p[0], p[1], 0.12)], r: 5, z: depth(p[0], p[1]) });
+  }
+
+  function drawDebt(item) {
+    var d = item.d, p = item.p;
+    var col = CAT.debt_state[d.observation_state] || CAT.debt_state.unknown;
+    var h = 7;
+    ctx.beginPath();
+    ctx.moveTo(px_(p[0], p[1]), py_(p[0], p[1], 0));
+    ctx.lineTo(px_(p[0], p[1]), py_(p[0], p[1], h));
+    ctx.strokeStyle = rgb(col, 0.9); ctx.lineWidth = 1.6; ctx.stroke();
+    var X = px_(p[0], p[1]), Y = py_(p[0], p[1], h);
+    ctx.beginPath();
+    ctx.moveTo(X, Y - 7); ctx.lineTo(X + 6, Y); ctx.lineTo(X, Y + 7); ctx.lineTo(X - 6, Y);
+    ctx.closePath();
+    ctx.fillStyle = rgb(col, 1); ctx.fill();
+    ctx.strokeStyle = selected === item ? "#fff" : rgb(shade(col, 0.5), 1);
+    ctx.lineWidth = selected === item ? 2 : 1; ctx.stroke();
+    if (d.group) {
+      ctx.fillStyle = "#101418"; ctx.font = "bold 9px ui-monospace,Menlo,monospace";
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText(d.group, X, Y + 0.5);
+    }
+    pickList.push({ item: item, pt: [X, Y], r: 10, z: depth(p[0], p[1]) });
+  }
+
+  function drawChainDot(item, fill, stroke, r) {
+    var p = item.p;
+    var X = px_(p[0], p[1]), Y = py_(p[0], p[1], 0);
+    ctx.beginPath(); ctx.arc(X, Y, selected === item ? r + 2 : r, 0, 6.2832);
+    if (fill) { ctx.fillStyle = fill; ctx.fill(); }
+    ctx.strokeStyle = stroke; ctx.lineWidth = 1.2; ctx.stroke();
+    pickList.push({ item: item, pt: [X, Y], r: 8, z: depth(p[0], p[1]) });
+  }
+
+  function drawChainGhost(item) {
+    var p = item.p, g = item.g;
+    var X = px_(p[0], p[1]), Y = py_(p[0], p[1], 0);
+    if (g) {
+      var X2 = px_(g[0], g[1]), Y2 = py_(g[0], g[1], 0);
+      ctx.beginPath(); ctx.moveTo(X, Y); ctx.lineTo(X2, Y2);
+      ctx.strokeStyle = "rgba(160,170,190,0.6)"; ctx.lineWidth = 1; ctx.stroke();
+      ctx.strokeStyle = "rgba(200,210,230,0.9)"; ctx.lineWidth = 1.4;
+      ctx.strokeRect(X2 - 4, Y2 - 4, 8, 8);
+      pickList.push({ item: item, pt: [X2, Y2], r: 8, z: depth(g[0], g[1]) });
+    }
+    ctx.fillStyle = "rgba(140,150,170,0.5)";
+    ctx.fillRect(X - 2, Y - 2, 4, 4);
+    pickList.push({ item: item, pt: [X, Y], r: 8, z: depth(p[0], p[1]) });
+  }
+  var labelBoxes = [];
+  function label(text, X, Y, colour, weight) {
+    if (!text) return;
+    ctx.font = (weight || "") + "11px ui-sans-serif,-apple-system,'Hiragino Sans','Noto Sans JP',sans-serif";
+    var w = ctx.measureText(text).width, k;
+    var box = [X - w / 2 - 3, Y - 8, w + 6, 14];
+    for (k = 0; k < labelBoxes.length; k++) {
+      var o = labelBoxes[k];
+      if (box[0] < o[0] + o[2] && box[0] + box[2] > o[0] &&
+          box[1] < o[1] + o[3] && box[1] + box[3] > o[1]) return;
+    }
+    labelBoxes.push(box);
+    ctx.fillStyle = cssVar("--panel"); ctx.globalAlpha = 0.78;
+    ctx.fillRect(box[0], box[1], box[2], box[3]);
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = colour || cssVar("--ink");
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText(text, X, Y);
+  }
+
+  function cssVarCache() { return {}; }
+  var varCache = cssVarCache();
+  function cssVar(name) {
+    if (varCache[name]) return varCache[name];
+    var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    varCache[name] = v; return v;
+  }
+  function byDepth(arr, key) {
+    return arr.slice().sort(function (p, q) {
+      var a = key(p), c2 = key(q);
+      return depth(c2[0], c2[1]) - depth(a[0], a[1]);
+    });
+  }
+
+  function draw() {
+    refreshTrig();
+    pickList = []; labelBoxes = [];
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = cssVar("--canvas-bg"); ctx.fillRect(0, 0, W, H);
+    ctx.lineJoin = "round";
+
+    if (show.grid) drawGrid();
+
+    if (show.context) {
+      for (i = 0; i < ctxFeats.length; i++) {
+        var cf = ctxFeats[i], st = CONTEXT_STYLE[cf.d["class"]] || { c: [140, 140, 140], w: 1 };
+        if (cf.d.kind === "point") {
+          var X = px_(cf.pts[0][0], cf.pts[0][1]), Y = py_(cf.pts[0][0], cf.pts[0][1], 0);
+          ctx.beginPath(); ctx.arc(X, Y, 3, 0, 6.2832);
+          ctx.fillStyle = rgb(st.c, 0.9); ctx.fill();
+          pickList.push({ item: cf, pt: [X, Y], r: 7, z: depth(cf.pts[0][0], cf.pts[0][1]) });
+        } else if (cf.d.kind === "polygon") {
+          poly(cf.pts, 0, rgb(st.c, 0.18), rgb(st.c, 0.8), st.w * 0.6);
+        } else {
+          line(cf.pts, 0, rgb(st.c, 0.85), st.w);
+        }
+      }
+    }
+    if (show.rail_edges) for (i = 0; i < railEdges.length; i++) drawRailEdge(railEdges[i]);
+
+    if (show.route && route.length) {
+      line(route, 0.05, "rgba(90,220,255,0.35)", 7);
+      line(route, 0.05, "rgba(90,220,255,0.95)", 2.2);
+    }
+
+    // FL-4876 VIEWER-02: buildings, fronts and sign planes share one depth
+    // order, so a facade is hidden by the buildings in front of it and drawn
+    // over its own host, never pasted on top of everything (which made
+    // wall-mounted planes look detached). X-ray and isolation reveal them.
+    var scene = [];
+    if (show.footprints) {
+      for (i = 0; i < builds.length; i++) {
+        if (!visible(builds[i])) continue;
+        if (isolate && builds[i].d.id !== isolate) continue;
+        scene.push({ d: depth(builds[i].c[0], builds[i].c[1]), f: drawBuilding, it: builds[i] });
+      }
+    }
+    var onIso = function (it) { return !isolate || (it.d && it.d.parent === isolate); };
+    if (show.fronts) for (i = 0; i < fronts.length; i++) if (onIso(fronts[i]))
+      scene.push({ d: depth(fronts[i].p[0], fronts[i].p[1]) - 0.01, f: drawFront, it: fronts[i] });
+    if (show.signs) for (i = 0; i < signs.length; i++) if (onIso(signs[i]))
+      scene.push({ d: depth(signs[i].p[0], signs[i].p[1]) - 0.01, f: drawSign, it: signs[i] });
+    scene.sort(function (p, q) { return q.d - p.d; });
+    for (i = 0; i < scene.length; i++) scene[i].f(scene[i].it);
+    if (show.baked_walls) drawBakedWalls();
+    if (show.conflicts) drawConflicts();
+    if (show.lidar) drawLidar();
+
+    if (show.poses) {
+      ctx.fillStyle = "rgba(160,176,196,0.55)";
+      for (i = 0; i < poses.length; i++) {
+        var pp = poses[i].p;
+        var Xp = px_(pp[0], pp[1]), Yp = py_(pp[0], pp[1], 0);
+        if (Xp < -20 || Xp > W + 20 || Yp < -20 || Yp > H + 20) continue;
+        ctx.fillRect(Xp - 1, Yp - 1, 2, 2);
+      }
+    }
+
+    if (coneMode !== "none") {
+      var sorted = byDepth(cones, function (c) { return c.p; });
+      if (coneMode === "all") {
+        for (i = 0; i < poses.length; i++) {
+          if (poses[i].debt || poses[i].local) continue;
+          drawFlatCone({ p: poses[i].p, heading: poses[i].heading, hfov: poses[i].hfov, dist: null, local: null });
+        }
+      }
+      for (i = 0; i < sorted.length; i++) drawCone(sorted[i]);
+    }
+    // A pose selected through #picture= remains visible even when the global
+    // cone layer is off.  Otherwise the reproducible focus URL centres an
+    // invisible point and cannot diagnose which frontage the frame sees.
+    if (selected && selected.kind === "cone" && selected.cone) {
+      drawFlatCone({
+        p: selected.cone.p,
+        heading: selected.cone.heading,
+        hfov: selected.cone.hfov,
+        dist: selected.cone.dist,
+        local: true
+      });
+    }
+
+    if (show.trains) for (i = 0; i < trains.length; i++) drawTrain(trains[i]);
+    if (show.fixtures) {
+      var fsorted = byDepth(fixtures, function (x) { return x.p; });
+      for (i = 0; i < fsorted.length; i++) drawFixture(fsorted[i]);
+    }
+    if (show.linears) {
+      var lsorted = byDepth(linears, function (x) { return x.p; });
+      for (i = 0; i < lsorted.length; i++) drawLinear(lsorted[i]);
+    }
+    // fronts and sign planes are drawn in the depth-ordered scene above
+    if (show.sprites) {
+      var ssorted = byDepth(signs, function (x) { return x.p; });
+      for (i = 0; i < ssorted.length; i++) if (onIso(ssorted[i])) drawSprite(ssorted[i]);
+    }
+    if (show.debt) {
+      var dsorted = byDepth(debts, function (x) { return x.p; });
+      for (i = 0; i < dsorted.length; i++) drawDebt(dsorted[i]);
+    }
+    function drawChainList(arr, fn) {
+      var s = byDepth(arr, function (x) { return x.p; });
+      for (i = 0; i < s.length; i++) fn(s[i]);
+    }
+    if (show.chain_phys) drawChainList(chPhys, function (it) {
+      drawChainDot(it, "rgba(120,220,140,0.95)", "rgba(40,120,60,1)", 4); });
+    if (show.chain_proxy) drawChainList(chProxy, function (it) {
+      drawChainDot(it, null, "rgba(220,190,120,0.95)", 4); });
+    if (show.chain_ghost) drawChainList(chGhost, function (it) { drawChainGhost(it); });
+    if (show.chain_owed) drawChainList(chOwed, function (it) {
+      drawChainDot(it, "rgba(220,170,90,0.95)", "rgba(120,80,20,1)", 5); });
+    if (show.chain_omit) drawChainList(chOmit, function (it) {
+      drawChainDot(it, "rgba(120,130,150,0.35)", "rgba(120,130,150,0.5)", 3); });
+    if (show.chain_fail) drawChainList(chFail, function (it) {
+      drawChainDot(it, "rgba(230,70,70,0.9)", "#fff", 6); });
+    if (show.chain_map) drawChainList(chMap, function (it) {
+      drawChainDot(it, "rgba(90,200,230,0.9)", "rgba(20,90,120,1)", 2.5); });
+    if (show.chain_bins) drawChainList(chBins, function (it) {
+      drawChainDot(it, null, "rgba(90,220,255,0.7)", 3); });
+
+    if (labels.sign && show.signs) {
+      for (i = 0; i < signs.length; i++) {
+        var so = signs[i];
+        label(so.d.label, px_(so.p[0], so.p[1]), py_(so.p[0], so.p[1], (so.d.height_m || 2.4)) - 10,
+              rgb(SIGN_COLOUR), "bold ");
+      }
+    }
+    if (labels.front) {
+      for (i = 0; i < fronts.length; i++) {
+        var fo = fronts[i];
+        label(fo.d.rendered_text || fo.d.label, px_(fo.p[0], fo.p[1]),
+              py_(fo.p[0], fo.p[1], 3.6) - 8,
+              fo.d.body_rgb ? rgb(shade(fo.d.body_rgb, 1.25)) : null, "bold ");
+      }
+    }
+    if (labels.place) {
+      for (i = 0; i < debts.length; i++) {
+        var dd = debts[i];
+        label(dd.d.label, px_(dd.p[0], dd.p[1]), py_(dd.p[0], dd.p[1], 7) - 14, null, "bold ");
+      }
+      for (i = 0; i < ctxFeats.length; i++) {
+        var cl = ctxFeats[i];
+        if (cl.d["class"] !== "place" && cl.d["class"] !== "station_entrance") continue;
+        if (!cl.d.label) continue;
+        label(cl.d.label, px_(cl.pts[0][0], cl.pts[0][1]), py_(cl.pts[0][0], cl.pts[0][1], 0) - 10);
+      }
+    }
+    if (labels.build && show.footprints) {
+      for (i = 0; i < builds.length; i++) {
+        var bd = builds[i];
+        if (!bd.d.label || !visible(bd)) continue;
+        label(bd.d.label, px_(bd.c[0], bd.c[1]), py_(bd.c[0], bd.c[1], bd.h) - 8);
+      }
+    }
+    hud();
+  }
+
+  function hud() {
+    document.getElementById("hud").textContent =
+      "pitch " + Math.round(cam.tilt * 180 / Math.PI) + "°  " +
+      "yaw " + Math.round(cam.yaw * 180 / Math.PI) + "°  " +
+      "scale " + cam.scale.toFixed(2) + " px/m  " +
+      "drag=pan  right/shift+drag=orbit cursor  wheel=zoom  click=inspect  dblclick=face it  X=x-ray  I=isolate";
+  }
+
+  // -- picking ------------------------------------------------------------
+  function pick(sx, sy) {
+    var best = null, k;
+    for (k = pickList.length - 1; k >= 0; k--) {
+      var e = pickList[k];
+      if (e.pt) {
+        var dx = sx - e.pt[0], dy = sy - e.pt[1];
+        if (dx * dx + dy * dy <= e.r * e.r) { best = e; break; }
+      } else if (e.ring && inPoly([sx, sy], e.ring)) { best = e; break; }
+    }
+    return best ? best.item : null;
+  }
+
+  // -- side panel ---------------------------------------------------------
+  function esc(s) {
+    return String(s === null || s === undefined ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+  function kv(pairs) {
+    var h = '<table class="kv">', k;
+    for (k = 0; k < pairs.length; k++) {
+      if (pairs[k][1] === null || pairs[k][1] === undefined || pairs[k][1] === "") continue;
+      h += "<tr><td>" + esc(pairs[k][0]) + "</td><td>" + pairs[k][1] + "</td></tr>";
+    }
+    return h + "</table>";
+  }
+  function thumbs(list) {
+    if (!list.length) return '<p class="note miss">no frame is present on disk for this feature</p>';
+    var h = '<div class="thumbs">', k;
+    for (k = 0; k < list.length; k++) {
+      h += '<a href="' + esc(list[k].path) + '" target="_blank" title="' + esc(list[k].title) + '">' +
+           '<img loading="lazy" src="' + esc(list[k].path) + '" alt="' + esc(list[k].title) + '"></a>';
+    }
+    return h + "</div>";
+  }
+  function ledgerTable(row) {
+    if (!row || !row.feature_id) return '<p class="note miss">no feature_ledger row for this id</p>';
+    var head = "";
+    if (row.synthetic) {
+      head = '<p class="note miss">synthetic row: ' + esc(row.synthetic_reason) +
+             (row.synthetic_source_reason ? '<br><span class="k">' + esc(row.synthetic_source_reason) + "</span>" : "") +
+             "</p>";
+    }
+    return head + kv([
+      ["reconstruction_class", esc(row.reconstruction_class)],
+      ["importance", esc(row.importance)],
+      ["evidence_state", esc(row.evidence_state)],
+      ["debt_state", esc(row.debt_state)],
+      ["disposition", esc(row.disposition)],
+      ["visual owner", esc(row.visual_owner)],
+      ["collision owner", esc(row.collision_owner)],
+      ["navigation owner", esc(row.navigation_owner)],
+      ["label", esc(row.label)]
+    ]);
+  }
+  function claimsTable(claims) {
+    if (!claims) return "";
+    var names = Object.keys(claims).sort(), h = "", k;
+    if (!names.length) return "";
+    h += '<h3 class="sec">Claims (conflate)</h3><table class="kv">';
+    for (k = 0; k < names.length; k++) {
+      var c = claims[names[k]];
+      h += "<tr><td>" + esc(names[k]) + "</td><td><b>" + esc(c.value) + "</b>" +
+           '<div class="k">' + esc(c.evidence_state) + " &middot; " + esc(c.source || "no source") +
+           "</div><div class=\"k\">" + esc(c.method) + "</div></td></tr>";
+    }
+    return h + "</table>";
+  }
+  function debtBlock(fid) {
+    var dg = debtById[fid];
+    if (!dg) return "";
+    var frames = framesByFeature[fid] || [], k, list = [], absent = [];
+    for (k = 0; k < frames.length; k++) {
+      if (frames[k].local_path) {
+        list.push({ path: frames[k].local_path,
+                    title: frames[k].picture_id + "  " + (frames[k].distance_m || "?") + " m" });
+      } else if (frames[k].frame_state === "declared_absent") {
+        absent.push(frames[k]);
+      }
+    }
+    var h = '<h3 class="sec">Observation debt</h3>' + kv([
+      ["state", esc(dg.observation_state)],
+      ["group", esc(dg.group)],
+      ["importance", esc(dg.importance)],
+      ["frames indexed", frames.length],
+      ["waiver", dg.waiver ? esc(dg.waiver) : "none"],
+      ["waiver reason", esc(dg.waiver_reason)]
+    ]);
+    h += '<h3 class="sec">Frames on disk (' + list.length + " of " + frames.length + ")</h3>" + thumbs(list);
+    if (absent.length) {
+      h += '<p class="note miss">' + absent.length + " frame(s) declared on_disk_path but absent:</p>";
+      for (k = 0; k < absent.length; k++) h += '<span class="pill">' + esc(absent[k].picture_id) + "</span>";
+    }
+    if (dg.sheet) {
+      h += '<h3 class="sec">Contact sheet</h3><div class="sheet"><a href="' + esc(dg.sheet) +
+           '" target="_blank"><img loading="lazy" src="' + esc(dg.sheet) + '" alt="contact sheet"></a></div>';
+    }
+    return h;
+  }
+
+  function showInfo(item) {
+    var panel = document.getElementById("info"), body = document.getElementById("infoBody");
+    if (!item) { panel.classList.remove("open"); return; }
+    var d = item.d, h = "";
+    if (item.kind === "building") {
+      h += "<h3 class=\"sec\">Building footprint</h3>" + kv([
+        ["feature id", "<code>" + esc(d.id) + "</code>"],
+        ["canonical id", "<code>" + esc(d.canonical_id) + "</code>"],
+        ["name", esc(d.label)],
+        ["footprint source", '<span class="pill">' + esc(d.footprint_source) + "</span>" +
+          (d.footprint_prev_source ? '<span class="pill">was ' + esc(d.footprint_prev_source) + "</span>" : "")],
+        ["pair IoU", d.footprint_iou],
+        ["height", d.height_m === null ? '<span class="miss">no height claim</span>' : esc(d.height_m) + " m"],
+        ["height basis", esc(d.height_basis)],
+        ["storeys", esc(d.storeys)],
+        ["area", d.area_m2 ? esc(d.area_m2) + " m²" : null],
+        ["mass family", esc(d.mass_family)],
+        ["triage group", esc(d.triage_group)]
+      ]);
+      h += '<h3 class="sec">Feature ledger</h3>' + ledgerTable(item.row);
+      h += claimsTable(d.claims);
+    } else if (item.kind === "sign") {
+      h += '<h3 class="sec">Custom identity plane (lower_custom)</h3>' + kv([
+        ["placement", "<code>" + esc(d.id) + "</code>"],
+        ["label", esc(d.label)],
+        ["family", esc(d.semantic_family)],
+        ["rendered text", esc(d.rendered_text)],
+        ["parent", "<code>" + esc(d.parent) + "</code>"],
+        ["size", esc(d.width_m) + " × " + esc(d.height_m) + " m"],
+        ["tangent / normal", esc(d.tangent_deg) + "° / " + esc(d.normal_deg) + "°"],
+        ["colour basis", esc(d.colour_basis)],
+        ["mesh", esc(d.mesh)],
+        ["annotations", esc((d.annotation_ids || []).join(", "))],
+        ["captures", esc((d.capture_ids || []).join(", "))]
+      ]);
+      h += '<h3 class="sec">XP sign sprite (SIGN-XP-01)</h3>' + kv([
+        ["sprite", d.sprite ? esc(d.sprite) : '<span class="miss">no sprite (no resolvable crop)</span>'],
+        ["cells", d.sprite_cells ? esc(d.sprite_cells.join(" × ")) : null]
+      ]);
+      if (d.crop) h += '<h3 class="sec">Source crop</h3>' + thumbs([{ path: d.crop, title: d.label }]);
+      h += '<h3 class="sec">Parent ledger</h3>' + ledgerTable(item.row);
+    } else if (item.kind === "train") {
+      var tt = d.timetable || {};
+      h += '<h3 class="sec">Classic train route</h3>' + kv([
+        ["route", esc(d.id)],
+        ["direction", esc(d.direction)],
+        ["length", esc(d.length_m) + " m"],
+        ["stop at", esc(d.stop_s_m) + " m (" + esc(d.stop_station_distance_m) + " m from station anchor)"],
+        ["set", esc(d.set_length_m) + " × " + esc(d.width_m) + " × " + esc(d.height_m) + " m"],
+        ["mesh", esc(typeof d.mesh === "string" ? d.mesh : JSON.stringify(d.mesh))],
+        ["timetable", "period " + esc(tt.period_s) + " s, dwell " + esc(tt.dwell_s) + " s, cruise " +
+          esc(tt.cruise_mps) + " m/s, accel " + esc(tt.accel_mps2) + " m/s²"],
+        ["features", esc((d.feature_ids || []).join(", "))]
+      ]);
+    } else if (item.kind === "front") {
+      h += '<h3 class="sec">Place front (emitted build)</h3>' + kv([
+        ["feature id", "<code>" + esc(d.id) + "</code>"],
+        ["label", esc(d.label)],
+        ["rendered text", d.rendered_text ? esc(d.rendered_text)
+          : '<span class="miss">not rendered (no supported source label)</span>'],
+        ["profile", esc(d.profile_id) + " (" + esc(d.profile_pack) + ")"],
+        ["heading", esc(d.heading_deg) + "°"],
+        ["fitted width", d.fitted_width_m === null ? null : esc(d.fitted_width_m) + " m"],
+        ["category", esc(d.category)],
+        ["parent building", "<code>" + esc(d.parent) + "</code>"],
+        ["status", esc(d.proposal_status)],
+        ["wall gap (front to baked wall)", d.wall_gap_m === null || d.wall_gap_m === undefined
+          ? null : esc(d.wall_gap_m) + " m"]
+      ]);
+      var en = d.entity || {};
+      h += '<h3 class="sec">Semantic owner (identity entity)</h3>' + kv([
+        ["entity", "<code>" + esc(en.entity_id) + "</code>"],
+        ["state", esc(en.state)],
+        ["host (independent)", "<code>" + esc(en.host) + "</code> " + esc(en.host_basis)],
+        ["host == front parent", en.host ? (en.host === d.parent ? "yes" : '<span class="miss">NO</span>') : null],
+        ["supporting sightings", esc((en.supporting || []).join(", "))],
+        ["contesting sightings", (en.contesting || []).length
+          ? '<span class="miss">' + esc(en.contesting.join(", ")) + "</span>" : "none"],
+        ["logo crop eligible", esc((en.crop_eligible || []).join(", ")) || "none"]
+      ]);
+      h += '<h3 class="sec">Feature ledger</h3>' + ledgerTable(item.row);
+      h += debtBlock(d.id);
+    } else if (item.kind === "conflict") {
+      h += '<h3 class="sec">Sighting vs mapped place</h3>' + kv([
+        ["observation", "<code>" + esc(d.instance_id) + "</code>"],
+        ["subject", esc(d.subject)],
+        ["relation", esc(d.kind)],
+        ["entity", "<code>" + esc(d.entity_id) + "</code>"],
+        ["position uncertainty", esc(d.position_uncertainty_m) + " m"],
+        ["distance to entity host", d.host_distance_m === null ? null : esc(d.host_distance_m) + " m"],
+        ["entity state", esc(d.entity_state)]
+      ]);
+    } else if (item.kind === "fixture") {
+      h += '<h3 class="sec">Fixture (emitted build)</h3>' + kv([
+        ["feature id", "<code>" + esc(d.id) + "</code>"],
+        ["instance", "<code>" + esc(d.inst_name) + "</code>"],
+        ["subtype / module", esc(d.subtype)],
+        ["placement", esc(d.template_id)],
+        ["mesh", esc(d.mesh)],
+        ["mount / anchor", esc(d.anchor_kind)],
+        ["carrier", esc(d.carrier_class)],
+        ["canonical host", d.host ? "<code>" + esc(d.host) + "</code>" : null],
+        ["yaw", (d.yaw_rad * 180 / Math.PI).toFixed(1) + "°"],
+        ["road centreline clearance", d.road_clearance_m === null ? null : esc(d.road_clearance_m) + " m"]
+      ]);
+      h += '<h3 class="sec">Feature ledger</h3>' + ledgerTable(item.row);
+    } else if (item.kind === "linear") {
+      h += '<h3 class="sec">Lowered physical tile</h3>' + kv([
+        ["feature id", "<code>" + esc(d.id) + "</code>"],
+        ["instance", "<code>" + esc(d.inst_name) + "</code>"],
+        ["module", esc(d.module_id)],
+        ["span record", String(d.span_record)],
+        ["yaw", d.yaw_deg === null ? null : esc(d.yaw_deg) + "°"]
+      ]);
+    } else if (item.kind === "debt") {
+      h += '<h3 class="sec">Observation-debt feature</h3>' + kv([
+        ["feature id", "<code>" + esc(d.id) + "</code>"], ["label", esc(d.label)]
+      ]);
+      h += '<h3 class="sec">Feature ledger</h3>' + ledgerTable(item.row);
+      h += debtBlock(d.id);
+    } else if (item.kind === "cone") {
+      var c = item.cone;
+      var page = meta.picture_page_uri_template.replace("{picture_id}", c.id);
+      h += '<h3 class="sec">Camera pose</h3>' + kv([
+        ["picture id", "<code>" + esc(c.id) + "</code>"],
+        ["heading", c.heading === null ? '<span class="miss">no compass heading</span>' : esc(c.heading) + "°"],
+        ["hfov", esc(c.hfov) + "° <span class=\"k\">(" + esc(c.basis || "declared_default_no_source_focal") + ")</span>"],
+        ["cone length", c.dist ? esc(c.dist) + " m (to feature)" : coneLen + " m (fallback)"],
+        ["associated feature", c.feature ? "<code>" + esc(c.feature) + "</code>" : null],
+        ["capture", esc(c.capture_time || c.date)],
+        ["page", '<a href="' + esc(page) + '" target="_blank">' + esc(page) + "</a>"]
+      ]);
+      if (c.local) h += '<h3 class="sec">Downloaded frame</h3>' + thumbs([{ path: c.local, title: c.id }]);
+      else h += '<p class="note miss">this pose has no frame on disk; only the pose is local</p>';
+      if (c.feature) h += debtBlock(c.feature);
+    } else if (item.kind === "context") {
+      h += '<h3 class="sec">' + esc(d["class"]) + "</h3>" + kv([
+        ["feature id", "<code>" + esc(d.id) + "</code>"],
+        ["label", esc(d.label || d.label_local)],
+        ["gameplay authority", esc(d.authority)],
+        ["triage group", esc(d.triage_group)]
+      ]);
+      h += '<h3 class="sec">Feature ledger</h3>' + ledgerTable(item.row);
+      h += debtBlock(d.id);
+    }
+    body.innerHTML = h;
+    panel.classList.add("open");
+  }
+
+  // -- interaction --------------------------------------------------------
+  var drag = null;
+  // Screen point -> ground point (z = 0), the inverse of px_/py_.
+  function groundAt(X, Y) {
+    refreshTrig();
+    var u = (X - W / 2) / cam.scale + cam.px;
+    var n = cam.py - (Y - H / 2) / (cam.scale * Math.max(0.05, ct_));
+    return [u * cy_ + n * sy_, -u * sy_ + n * cy_];
+  }
+  cv.addEventListener("mousedown", function (e) {
+    var rect = cv.getBoundingClientRect();
+    var sx = e.clientX - rect.left, sy = e.clientY - rect.top;
+    // Right button or shift: orbit about the ground point under the cursor.
+    var rot = e.shiftKey || e.button === 2;
+    drag = { x: e.clientX, y: e.clientY, moved: 0, rot: rot,
+             yaw: cam.yaw, tilt: cam.tilt, px: cam.px, py: cam.py,
+             pivot: rot ? groundAt(sx, sy) : null, psx: sx, psy: sy };
+    cv.classList.add("dragging");
+  });
+  cv.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  window.addEventListener("mousemove", function (e) {
+    if (drag) {
+      var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      drag.moved = Math.max(drag.moved, Math.abs(dx) + Math.abs(dy));
+      if (drag.rot) {
+        // FL-4876 VIEWER-02: ~8.6 degrees per 100 px (was ~34), orbit pivot kept
+        // under the cursor so facades can be walked around.
+        cam.yaw = drag.yaw + dx * 0.0015;
+        cam.tilt = Math.max(0, Math.min(85 * Math.PI / 180, drag.tilt + dy * 0.0015));
+        refreshTrig();
+        var p = drag.pivot;
+        var X = px_(p[0], p[1]), Y = py_(p[0], p[1], 0);
+        cam.px += (X - drag.psx) / cam.scale;
+        cam.py += (drag.psy - Y) / (cam.scale * Math.max(0.05, ct_));
+        syncSliders();
+      } else {
+        cam.px = drag.px - dx / cam.scale;
+        cam.py = drag.py + dy / (cam.scale * Math.max(0.2, Math.cos(cam.tilt)));
+      }
+      draw();
+      return;
+    }
+    var rect = cv.getBoundingClientRect();
+    var it = pick(e.clientX - rect.left, e.clientY - rect.top);
+    var tip = document.getElementById("tip");
+    if (it !== hover) { hover = it; draw(); }
+    if (it) {
+      var t = it.kind === "building"
+        ? (it.d.label || it.d.id) + "  • " + (it.d.footprint_source || "?") +
+          "  • " + (it.d.height_m === null ? "no height" : it.d.height_m + " m") +
+          (it.d.height_basis ? "  • " + it.d.height_basis : "")
+        : (it.kind === "cone" ? "pose " + it.cone.id + (it.cone.local ? " (on disk)" : "")
+           : (it.d.label || it.d.id));
+      tip.textContent = t;
+      tip.style.display = "block";
+      tip.style.left = (e.clientX + 14) + "px";
+      tip.style.top = (e.clientY + 14) + "px";
+    } else { tip.style.display = "none"; }
+  });
+  window.addEventListener("mouseup", function (e) {
+    if (drag && drag.moved < 4) {
+      var rect = cv.getBoundingClientRect();
+      selected = pick(e.clientX - rect.left, e.clientY - rect.top);
+      showInfo(selected);
+      draw();
+    }
+    drag = null; cv.classList.remove("dragging");
+  });
+  // FL-4876 VIEWER-02: face a front or sign plane square-on (view along
+  // -normal; scene depth increases along (sin yaw, cos yaw)).
+  function faceItem(it) {
+    if (!it) return;
+    var p = it.p || it.c || (it.env && it.env[Math.floor(it.env.length / 2)]);
+    if (!p) return;
+    var n = null, sd = it.d || {};
+    if (it.kind === "front") {
+      var hd = (sd.heading_deg || 0) * Math.PI / 180; n = [Math.sin(hd), -Math.cos(hd)];
+    } else if (it.kind === "sign") {
+      var nd = (sd.normal_deg || 0) * Math.PI / 180; n = [Math.cos(nd), Math.sin(nd)];
+    }
+    if (n) { cam.yaw = Math.atan2(-n[0], -n[1]); cam.tilt = 20 * Math.PI / 180; syncSliders(); }
+    centreOn(p[0], p[1]); cam.scale = Math.max(cam.scale, n ? 30 : 12); draw();
+  }
+  cv.addEventListener("dblclick", function () { faceItem(selected); });
+  cv.addEventListener("wheel", function (e) {
+    e.preventDefault();
+    var f = Math.pow(1.0015, -e.deltaY);
+    cam.scale = Math.max(0.15, Math.min(60, cam.scale * f));
+    draw();
+  }, { passive: false });
+
+  // -- controls -----------------------------------------------------------
+  function syncSliders() {
+    document.getElementById("yaw").value = Math.round(((cam.yaw * 180 / Math.PI) % 360 + 360) % 360);
+    document.getElementById("pitch").value = Math.round(cam.tilt * 180 / Math.PI);
+    document.getElementById("vYaw").textContent = document.getElementById("yaw").value;
+    document.getElementById("vPitch").textContent = document.getElementById("pitch").value;
+  }
+  document.getElementById("pitch").addEventListener("input", function () {
+    cam.tilt = this.value * Math.PI / 180;
+    document.getElementById("vPitch").textContent = this.value; draw();
+  });
+  document.getElementById("yaw").addEventListener("input", function () {
+    cam.yaw = this.value * Math.PI / 180;
+    document.getElementById("vYaw").textContent = this.value; draw();
+  });
+  document.getElementById("ex").addEventListener("input", function () {
+    cam.ex = this.value / 10;
+    document.getElementById("vEx").textContent = cam.ex.toFixed(1); draw();
+  });
+  document.getElementById("lidarMin").addEventListener("input", function () {
+    lidarMin = this.value / 10;
+    document.getElementById("vLidarMin").textContent = lidarMin.toFixed(1); draw();
+  });
+  document.getElementById("coneLen").addEventListener("input", function () {
+    coneLen = +this.value;
+    document.getElementById("vCone").textContent = this.value; draw();
+  });
+  document.getElementById("fit").addEventListener("click", fit);
+  document.getElementById("top").addEventListener("click", function () {
+    cam.tilt = 0; syncSliders(); draw();
+  });
+  document.getElementById("iso").addEventListener("click", function () {
+    cam.tilt = 55 * Math.PI / 180; cam.yaw = 30 * Math.PI / 180; syncSliders(); draw();
+  });
+  document.getElementById("closeInfo").addEventListener("click", function () {
+    selected = null; showInfo(null); draw();
+  });
+  document.getElementById("theme").addEventListener("click", function () {
+    var root = document.documentElement;
+    root.setAttribute("data-theme", root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    varCache = cssVarCache(); draw();
+  });
+  document.getElementById("colourBy").addEventListener("change", function () {
+    colourBy = this.value; buildLegend(); draw();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name=cone]'), function (el) {
+    el.addEventListener("change", function () { coneMode = this.value; draw(); });
+  });
+  [["labBuild", "build"], ["labPlace", "place"], ["labFront", "front"], ["labSign", "sign"]].forEach(function (p) {
+    document.getElementById(p[0]).addEventListener("change", function () {
+      labels[p[1]] = this.checked; draw();
+    });
+  });
+
+  var layersEl = document.getElementById("layers");
+  LAYERS.forEach(function (l) {
+    var lab = document.createElement("label");
+    lab.className = "row";
+    lab.innerHTML = '<input type="checkbox"' + (l[2] ? " checked" : "") + '><span>' + l[1] + "</span>";
+    lab.querySelector("input").addEventListener("change", function () {
+      show[l[0]] = this.checked; draw();
+    });
+    layersEl.appendChild(lab);
+  });
+
+  var filtersEl = document.getElementById("filters");
+  function filterGroup(title, state, counter) {
+    var wrap = document.createElement("div");
+    wrap.innerHTML = '<div class="k" style="margin-top:4px">' + title + "</div>";
+    Object.keys(state).sort().forEach(function (key) {
+      var n = counter[key] || 0;
+      if (!n) return;
+      var lab = document.createElement("label");
+      lab.className = "row";
+      lab.innerHTML = '<input type="checkbox" checked><span>' + key + '</span><span class="n">' + n + "</span>";
+      lab.querySelector("input").addEventListener("change", function () {
+        state[key] = this.checked; draw();
+      });
+      wrap.appendChild(lab);
+    });
+    filtersEl.appendChild(wrap);
+  }
+  var classCount = {}, sourceCount = {};
+  for (i = 0; i < builds.length; i++) {
+    var ck = builds[i].row.reconstruction_class || "unknown";
+    classCount[ck] = (classCount[ck] || 0) + 1;
+    var sk = builds[i].d.footprint_source || "unknown";
+    sourceCount[sk] = (sourceCount[sk] || 0) + 1;
+  }
+  filterGroup("reconstruction class", filterClass, classCount);
+  filterGroup("footprint source", filterSource, sourceCount);
+
+  var paletteMode = false;
+  document.getElementById("palBtn").addEventListener("click", function () {
+    paletteMode = !paletteMode; this.textContent = paletteMode ? "legend" : "palette"; buildLegend();
+  });
+  function buildLegend() {
+    var el = document.getElementById("legendBody"), h = "", k;
+    if (paletteMode) {
+      h += '<div class="k" style="margin-bottom:6px">source palette roles (' + D.palette.length + ")</div>";
+      for (k = 0; k < D.palette.length; k++) {
+        var s = D.palette[k];
+        h += '<label class="row"><span class="sw" style="background:' +
+             (s.bg ? rgb(s.bg) : "transparent") + '"></span><span>' + esc(s.role) +
+             '</span><span class="n">' + (s.provenance_class || "").slice(0, 4) + "</span></label>";
+      }
+      el.innerHTML = h; return;
+    }
+    var counter = {};
+    for (k = 0; k < builds.length; k++) counter[catOf(builds[k])] = (counter[catOf(builds[k])] || 0) + 1;
+    if (colourBy === "height") {
+      h += '<div class="k">building height, 0 to 30 m</div>';
+      for (k = 0; k <= 6; k++) {
+        h += '<label class="row"><span class="sw" style="background:' + rgb(heightRamp(k * 5)) +
+             '"></span><span>' + (k * 5) + " m</span></label>";
+      }
+    } else {
+      h += '<div class="k" style="margin-bottom:4px">buildings by ' + esc(colourBy) + "</div>";
+      Object.keys(counter).sort().forEach(function (key) {
+        var col = (CAT[colourBy] && CAT[colourBy][key]) || hashColour(colourBy + ":" + key);
+        h += '<label class="row"><span class="sw" style="background:' + rgb(col) +
+             '"></span><span>' + esc(key) + '</span><span class="n">' + counter[key] + "</span></label>";
+      });
+    }
+    h += '<div class="k" style="margin-top:8px">other marks</div>';
+    [["front billboard", "linear-gradient(90deg,#cbc6b7,#4c453e)"],
+     ["sign plane (outline) + normal tick", rgb(SIGN_COLOUR)],
+     ["XP sign sprite position", rgb(SPRITE_COLOUR)],
+     ["train route + stopped set", rgb(TRAIN_COLOUR)],
+     ["LiDAR rail edge (left / right)", rgb(RAIL_EDGE_COLOUR)],
+     ["LiDAR height point (height ramp)", rgb(heightRamp(15))],
+     ["fixture", rgb([232, 108, 92])],
+     ["camera cone, frame on disk", rgb([255, 206, 92])],
+     ["pedestrian route", "rgba(90,220,255,0.95)"]
+    ].forEach(function (p) {
+      h += '<label class="row"><span class="sw" style="background:' + p[1] + '"></span><span>' +
+           p[0] + "</span></label>";
+    });
+    el.innerHTML = h;
+  }
+
+  var cEl = document.getElementById("counts"), ch = "", keys = Object.keys(D.counts).sort();
+  for (i = 0; i < keys.length; i++) ch += keys[i] + " " + D.counts[keys[i]] + "<br>";
+  ch += '<span class="k">receipts: ledger ' + D.receipt_counts.ledger_rows +
+        ", fronts " + D.receipt_counts.place_fronts_emitted +
+        ", fixtures " + D.receipt_counts.fixtures_emitted +
+        ", survey " + D.receipt_counts.survey_pictures + "</span>";
+  if (L) ch += '<br><span class="k">LiDAR: ' + L.points_in_bbox + " of " + L.points_total +
+               " returns in bbox, " + esc(L.authority) + "</span>";
+  cEl.innerHTML = ch;
+  document.getElementById("omittedNote").textContent =
+    D.omitted.length + " items are recorded as omitted or unmapped in viewer_data.json.";
+
+  window.addEventListener("resize", resize);
+  buildLegend();
+  syncSliders();
+  resize();
+  fit();
+
+  // Reproducible view (FL-4876 VIEWER-HASH-01):
+  // #lon=&lat=&scale=&yaw=&tilt=&layers=a,b
+  // #building=<canonical feature id> centres an exact footprint.
+  // #picture=<Mapillary id> centres an exact camera pose.
+  // centres on a lon/lat, sets px-per-metre, yaw/tilt degrees, and (if given)
+  // shows exactly the named layers. Re-applied on every hash change so a fixed
+  // set of macro inspection shots can be taken without pointer input.
+  function applyHash() {
+    var q = {}, parts = location.hash.replace(/^#/, "").split("&"), k;
+    for (k = 0; k < parts.length; k++) {
+      var kvp = parts[k].split("=");
+      if (kvp[0]) q[kvp[0]] = decodeURIComponent(kvp[1] || "");
+    }
+    if (q.yaw !== undefined) cam.yaw = +q.yaw * Math.PI / 180;
+    if (q.tilt !== undefined) cam.tilt = +q.tilt * Math.PI / 180;
+    if (q.scale !== undefined) cam.scale = +q.scale;
+    if (q.layers !== undefined) {
+      var want = q.layers.split(",");
+      LAYERS.forEach(function (l, idx) {
+        show[l[0]] = want.indexOf(l[0]) >= 0;
+        var box = layersEl.children[idx] && layersEl.children[idx].querySelector("input");
+        if (box) box.checked = show[l[0]];
+      });
+    }
+    if (q.lon !== undefined && q.lat !== undefined) {
+      var m = toM([+q.lon, +q.lat]); centreOn(m[0], m[1]);
+    } else {
+      refreshTrig();
+    }
+    // #front=<feature id> faces that front square-on (same as dblclick), then
+    // an explicit scale/tilt in the hash overrides the default framing.
+    if (q.front !== undefined || q.sign !== undefined ||
+        q.building !== undefined || q.picture !== undefined) {
+      var hit = null;
+      if (q.front !== undefined)
+        for (k = 0; k < fronts.length; k++) if (fronts[k].d.id === q.front || fronts[k].d.label === q.front) hit = fronts[k];
+      if (q.sign !== undefined)
+        for (k = 0; k < signs.length; k++) if (signs[k].d.id === q.sign || signs[k].d.label === q.sign) hit = signs[k];
+      if (q.building !== undefined)
+        hit = footprintById[q.building] || null;
+      if (q.picture !== undefined && posesById[q.picture]) {
+        var hp = posesById[q.picture];
+        hit = {kind: "cone", d: hp, cone: hp, p: hp.p};
+      }
+      if (hit) {
+        selected = hit; faceItem(hit); showInfo(hit);
+        if (q.scale !== undefined) cam.scale = +q.scale;
+        if (q.tilt !== undefined) cam.tilt = +q.tilt * Math.PI / 180;
+      }
+    }
+    syncSliders(); draw();
+  }
+  window.addEventListener("hashchange", applyHash);
+  if (location.hash.length > 1) applyHash();
+}
+
+load();
+})();
+</script>
+</body>
+</html>

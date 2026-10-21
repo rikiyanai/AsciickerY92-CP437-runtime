@@ -1,0 +1,11 @@
+{
+ "schema": "y92.identity_invariant_gate.v1",
+ "pass": true,
+ "violations": [],
+ "counts": {},
+ "checked": {
+  "observations": 44,
+  "place_fronts": 10,
+  "entities": 32
+ }
+}

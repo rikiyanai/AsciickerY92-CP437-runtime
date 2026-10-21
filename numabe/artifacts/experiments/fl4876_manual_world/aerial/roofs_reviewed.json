@@ -1,0 +1,9249 @@
+{
+"feature:building_footprint:way/1507403538": {
+"decision": "accepted",
+"point_px": [
+637.1,
+837.8
+],
+"roof_rgb": [
+100,
+112,
+118
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403545": {
+"decision": "accepted",
+"point_px": [
+639.0,
+780.8
+],
+"roof_rgb": [
+74,
+89,
+97
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403546": {
+"decision": "accepted",
+"point_px": [
+628.5,
+789.3
+],
+"roof_rgb": [
+110,
+123,
+130
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403547": {
+"decision": "accepted",
+"point_px": [
+617.6,
+802.1
+],
+"roof_rgb": [
+77,
+92,
+100
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403548": {
+"decision": "accepted",
+"point_px": [
+606.4,
+829.4
+],
+"roof_rgb": [
+112,
+127,
+134
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403549": {
+"decision": "accepted",
+"point_px": [
+595.3,
+849.8
+],
+"roof_rgb": [
+154,
+151,
+147
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403550": {
+"decision": "accepted",
+"point_px": [
+616.3,
+867.0
+],
+"roof_rgb": [
+99,
+113,
+116
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403551": {
+"decision": "accepted",
+"point_px": [
+629.7,
+877.9
+],
+"roof_rgb": [
+98,
+113,
+120
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403733": {
+"decision": "accepted",
+"point_px": [
+573.7,
+880.3
+],
+"roof_rgb": [
+141,
+145,
+150
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403734": {
+"decision": "accepted",
+"point_px": [
+541.7,
+880.8
+],
+"roof_rgb": [
+85,
+103,
+110
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403735": {
+"decision": "accepted",
+"point_px": [
+526.2,
+867.1
+],
+"roof_rgb": [
+161,
+175,
+176
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403765": {
+"decision": "accepted",
+"point_px": [
+563.8,
+829.3
+],
+"roof_rgb": [
+90,
+108,
+115
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403766": {
+"decision": "accepted",
+"point_px": [
+549.0,
+820.7
+],
+"roof_rgb": [
+104,
+119,
+125
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403767": {
+"decision": "accepted",
+"point_px": [
+533.7,
+811.4
+],
+"roof_rgb": [
+149,
+176,
+177
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403768": {
+"decision": "accepted",
+"point_px": [
+518.9,
+802.4
+],
+"roof_rgb": [
+107,
+116,
+122
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403769": {
+"decision": "accepted",
+"point_px": [
+529.6,
+785.2
+],
+"roof_rgb": [
+117,
+129,
+123
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/1507403770": {
+"decision": "accepted",
+"point_px": [
+562.5,
+798.3
+],
+"roof_rgb": [
+169,
+177,
+177
+],
+"block": "06_04"
+},
+"feature:building_footprint:plateau/bldg_e3ef0835-70c9-40b3-be79-184f7152f5cf": {
+"decision": "accepted",
+"point_px": [
+550.8,
+887.4
+],
+"roof_rgb": [
+68,
+75,
+82
+],
+"block": "06_04"
+},
+"feature:building_footprint:way/477599549": {
+"decision": "accepted",
+"point_px": [
+641.1,
+124.5
+],
+"roof_rgb": [
+122,
+130,
+130
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137825": {
+"decision": "accepted",
+"point_px": [
+719.0,
+51.5
+],
+"roof_rgb": [
+175,
+180,
+178
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137836": {
+"decision": "accepted",
+"point_px": [
+691.5,
+54.0
+],
+"roof_rgb": [
+196,
+208,
+208
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137850": {
+"decision": "accepted",
+"point_px": [
+676.6,
+62.4
+],
+"roof_rgb": [
+188,
+198,
+200
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137858": {
+"decision": "accepted",
+"point_px": [
+660.4,
+73.7
+],
+"roof_rgb": [
+139,
+141,
+139
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137859": {
+"decision": "accepted",
+"point_px": [
+702.4,
+71.5
+],
+"roof_rgb": [
+144,
+157,
+157
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137861": {
+"decision": "accepted",
+"point_px": [
+649.6,
+78.5
+],
+"roof_rgb": [
+98,
+104,
+111
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137862": {
+"decision": "accepted",
+"point_px": [
+686.9,
+78.5
+],
+"roof_rgb": [
+141,
+150,
+151
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137874": {
+"decision": "accepted",
+"point_px": [
+722.5,
+85.9
+],
+"roof_rgb": [
+103,
+117,
+126
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137881": {
+"decision": "accepted",
+"point_px": [
+702.1,
+90.4
+],
+"roof_rgb": [
+117,
+127,
+127
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137886": {
+"decision": "accepted",
+"point_px": [
+669.4,
+100.5
+],
+"roof_rgb": [
+190,
+199,
+199
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137895": {
+"decision": "accepted",
+"point_px": [
+748.6,
+102.4
+],
+"roof_rgb": [
+152,
+162,
+165
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137902": {
+"decision": "accepted",
+"point_px": [
+715.5,
+107.9
+],
+"roof_rgb": [
+102,
+114,
+123
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137908": {
+"decision": "accepted",
+"point_px": [
+731.6,
+105.6
+],
+"roof_rgb": [
+110,
+121,
+125
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137912": {
+"decision": "accepted",
+"point_px": [
+691.4,
+123.4
+],
+"roof_rgb": [
+144,
+144,
+148
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/725137914": {
+"decision": "accepted",
+"point_px": [
+759.0,
+122.2
+],
+"roof_rgb": [
+123,
+134,
+137
+],
+"block": "00_05"
+},
+"feature:building_footprint:plateau/bldg_45538384-4685-4888-92fa-74085b59caa9": {
+"decision": "accepted",
+"point_px": [
+728.5,
+119.9
+],
+"roof_rgb": [
+80,
+92,
+103
+],
+"block": "00_05"
+},
+"feature:building_footprint:way/477599546": {
+"decision": "accepted",
+"point_px": [
+670.9,
+194.8
+],
+"roof_rgb": [
+213,
+227,
+225
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/477599547": {
+"decision": "accepted",
+"point_px": [
+651.6,
+169.3
+],
+"roof_rgb": [
+180,
+181,
+183
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/477599548": {
+"decision": "accepted",
+"point_px": [
+649.2,
+142.0
+],
+"roof_rgb": [
+134,
+139,
+142
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137943": {
+"decision": "accepted",
+"point_px": [
+697.9,
+145.8
+],
+"roof_rgb": [
+91,
+109,
+115
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137950": {
+"decision": "accepted",
+"point_px": [
+766.9,
+143.7
+],
+"roof_rgb": [
+157,
+160,
+159
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137951": {
+"decision": "accepted",
+"point_px": [
+683.9,
+166.5
+],
+"roof_rgb": [
+153,
+168,
+171
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137956": {
+"decision": "accepted",
+"point_px": [
+754.5,
+161.5
+],
+"roof_rgb": [
+151,
+159,
+165
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137957": {
+"decision": "accepted",
+"point_px": [
+706.3,
+156.9
+],
+"roof_rgb": [
+107,
+117,
+124
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137965": {
+"decision": "accepted",
+"point_px": [
+720.3,
+170.7
+],
+"roof_rgb": [
+133,
+143,
+146
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137971": {
+"decision": "accepted",
+"point_px": [
+709.2,
+176.8
+],
+"roof_rgb": [
+132,
+140,
+146
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137975": {
+"decision": "accepted",
+"point_px": [
+765.1,
+186.9
+],
+"roof_rgb": [
+213,
+190,
+180
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137987": {
+"decision": "accepted",
+"point_px": [
+726.4,
+192.7
+],
+"roof_rgb": [
+115,
+127,
+132
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137989": {
+"decision": "accepted",
+"point_px": [
+701.3,
+192.5
+],
+"roof_rgb": [
+150,
+157,
+160
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137997": {
+"decision": "accepted",
+"point_px": [
+681.7,
+206.9
+],
+"roof_rgb": [
+111,
+121,
+127
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138000": {
+"decision": "accepted",
+"point_px": [
+709.6,
+204.3
+],
+"roof_rgb": [
+141,
+150,
+155
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138002": {
+"decision": "accepted",
+"point_px": [
+743.2,
+205.8
+],
+"roof_rgb": [
+143,
+156,
+163
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138007": {
+"decision": "accepted",
+"point_px": [
+731.7,
+213.3
+],
+"roof_rgb": [
+148,
+163,
+166
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138014": {
+"decision": "accepted",
+"point_px": [
+698.3,
+217.0
+],
+"roof_rgb": [
+122,
+136,
+141
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138019": {
+"decision": "accepted",
+"point_px": [
+718.7,
+220.2
+],
+"roof_rgb": [
+132,
+145,
+149
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138021": {
+"decision": "accepted",
+"point_px": [
+755.0,
+221.9
+],
+"roof_rgb": [
+133,
+146,
+150
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138024": {
+"decision": "accepted",
+"point_px": [
+687.2,
+232.1
+],
+"roof_rgb": [
+105,
+116,
+122
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138025": {
+"decision": "accepted",
+"point_px": [
+690.3,
+225.4
+],
+"roof_rgb": [
+87,
+97,
+102
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138026": {
+"decision": "accepted",
+"point_px": [
+725.9,
+227.1
+],
+"roof_rgb": [
+125,
+137,
+142
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138027": {
+"decision": "accepted",
+"point_px": [
+710.8,
+227.4
+],
+"roof_rgb": [
+109,
+117,
+123
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138028": {
+"decision": "accepted",
+"point_px": [
+745.1,
+231.9
+],
+"roof_rgb": [
+123,
+135,
+139
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138033": {
+"decision": "accepted",
+"point_px": [
+732.3,
+241.5
+],
+"roof_rgb": [
+148,
+157,
+160
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138036": {
+"decision": "accepted",
+"point_px": [
+641.6,
+247.6
+],
+"roof_rgb": [
+164,
+172,
+173
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138038": {
+"decision": "accepted",
+"point_px": [
+707.8,
+238.9
+],
+"roof_rgb": [
+87,
+97,
+100
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138039": {
+"decision": "accepted",
+"point_px": [
+761.9,
+249.5
+],
+"roof_rgb": [
+190,
+169,
+172
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138041": {
+"decision": "accepted",
+"point_px": [
+721.3,
+251.4
+],
+"roof_rgb": [
+201,
+207,
+207
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725138050": {
+"decision": "accepted",
+"point_px": [
+748.5,
+255.6
+],
+"roof_rgb": [
+118,
+127,
+131
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/1297867492": {
+"decision": "accepted",
+"point_px": [
+664.4,
+185.3
+],
+"roof_rgb": [
+172,
+183,
+187
+],
+"block": "01_05"
+},
+"feature:building_footprint:plateau/bldg_8f8b33d0-a537-4000-bac1-eb9a354e77a9": {
+"decision": "accepted",
+"point_px": [
+738.3,
+138.1
+],
+"roof_rgb": [
+176,
+181,
+176
+],
+"block": "01_05"
+},
+"feature:building_footprint:way/725137923": {
+"decision": "accepted",
+"point_px": [
+779.6,
+129.3
+],
+"roof_rgb": [
+120,
+129,
+134
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725137927": {
+"decision": "accepted",
+"point_px": [
+824.6,
+146.7
+],
+"roof_rgb": [
+168,
+180,
+184
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725137944": {
+"decision": "accepted",
+"point_px": [
+784.5,
+149.5
+],
+"roof_rgb": [
+163,
+171,
+172
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725137960": {
+"decision": "accepted",
+"point_px": [
+801.0,
+176.9
+],
+"roof_rgb": [
+208,
+212,
+211
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725137990": {
+"decision": "accepted",
+"point_px": [
+792.7,
+189.2
+],
+"roof_rgb": [
+202,
+206,
+200
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725137996": {
+"decision": "accepted",
+"point_px": [
+791.9,
+205.2
+],
+"roof_rgb": [
+138,
+125,
+128
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725138006": {
+"decision": "rejected",
+"reason": "dot on garden trees, roof not visible",
+"block": "01_06"
+},
+"feature:building_footprint:way/725138010": {
+"decision": "accepted",
+"point_px": [
+808.2,
+210.4
+],
+"roof_rgb": [
+149,
+149,
+146
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725138015": {
+"decision": "accepted",
+"point_px": [
+847.9,
+227.7
+],
+"roof_rgb": [
+87,
+99,
+109
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725138030": {
+"decision": "accepted",
+"point_px": [
+770.9,
+238.8
+],
+"roof_rgb": [
+181,
+165,
+166
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/725138034": {
+"decision": "accepted",
+"point_px": [
+839.4,
+244.4
+],
+"roof_rgb": [
+202,
+210,
+212
+],
+"block": "01_06"
+},
+"feature:building_footprint:plateau/bldg_fde79fb6-5a9b-474b-bdaa-7af872498465": {
+"decision": "accepted",
+"point_px": [
+770.0,
+164.7
+],
+"roof_rgb": [
+162,
+171,
+172
+],
+"block": "01_06"
+},
+"feature:building_footprint:way/477599544": {
+"decision": "accepted",
+"point_px": [
+581.7,
+238.2
+],
+"roof_rgb": [
+110,
+124,
+130
+],
+"block": "01_04"
+},
+"feature:building_footprint:way/477599545": {
+"decision": "accepted",
+"point_px": [
+626.5,
+223.7
+],
+"roof_rgb": [
+119,
+134,
+138
+],
+"block": "01_04"
+},
+"feature:building_footprint:way/477599554": {
+"decision": "accepted",
+"point_px": [
+567.4,
+171.8
+],
+"roof_rgb": [
+116,
+128,
+132
+],
+"block": "01_04"
+},
+"feature:building_footprint:way/477599555": {
+"decision": "accepted",
+"point_px": [
+614.4,
+199.4
+],
+"roof_rgb": [
+175,
+186,
+185
+],
+"block": "01_04"
+},
+"feature:building_footprint:way/477599556": {
+"decision": "accepted",
+"point_px": [
+591.0,
+159.8
+],
+"roof_rgb": [
+86,
+110,
+123
+],
+"block": "01_04"
+},
+"feature:building_footprint:way/477645425": {
+"decision": "accepted",
+"point_px": [
+530.3,
+230.2
+],
+"roof_rgb": [
+213,
+226,
+225
+],
+"block": "01_04"
+},
+"feature:building_footprint:way/477645436": {
+"decision": "accepted",
+"point_px": [
+517.5,
+198.1
+],
+"roof_rgb": [
+175,
+182,
+184
+],
+"block": "01_04"
+},
+"feature:building_footprint:way/725138046": {
+"decision": "accepted",
+"point_px": [
+628.2,
+248.6
+],
+"roof_rgb": [
+176,
+186,
+183
+],
+"block": "01_04"
+},
+"feature:building_footprint:plateau/bldg_4c31f6e8-41ec-4c25-9073-1369d596af2e": {
+"decision": "accepted",
+"point_px": [
+601.7,
+226.8
+],
+"roof_rgb": [
+135,
+134,
+134
+],
+"block": "01_04"
+},
+"feature:building_footprint:way/477645418": {
+"decision": "accepted",
+"point_px": [
+549.0,
+257.6
+],
+"roof_rgb": [
+225,
+232,
+232
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/477645420": {
+"decision": "accepted",
+"point_px": [
+519.1,
+267.8
+],
+"roof_rgb": [
+104,
+117,
+125
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/477645421": {
+"decision": "accepted",
+"point_px": [
+535.2,
+263.8
+],
+"roof_rgb": [
+89,
+96,
+100
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138057": {
+"decision": "accepted",
+"point_px": [
+626.6,
+270.9
+],
+"roof_rgb": [
+131,
+144,
+149
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138061": {
+"decision": "accepted",
+"point_px": [
+601.9,
+274.0
+],
+"roof_rgb": [
+97,
+106,
+113
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138080": {
+"decision": "accepted",
+"point_px": [
+578.9,
+297.2
+],
+"roof_rgb": [
+114,
+123,
+125
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138085": {
+"decision": "accepted",
+"point_px": [
+615.5,
+298.8
+],
+"roof_rgb": [
+170,
+175,
+171
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138116": {
+"decision": "accepted",
+"point_px": [
+637.8,
+313.7
+],
+"roof_rgb": [
+153,
+162,
+162
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138125": {
+"decision": "accepted",
+"point_px": [
+619.5,
+326.6
+],
+"roof_rgb": [
+118,
+131,
+139
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138153": {
+"decision": "accepted",
+"point_px": [
+602.1,
+348.7
+],
+"roof_rgb": [
+131,
+136,
+143
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138157": {
+"decision": "accepted",
+"point_px": [
+555.4,
+346.4
+],
+"roof_rgb": [
+83,
+98,
+104
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138175": {
+"decision": "accepted",
+"point_px": [
+630.4,
+360.9
+],
+"roof_rgb": [
+105,
+117,
+123
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/725138202": {
+"decision": "accepted",
+"point_px": [
+588.5,
+381.8
+],
+"roof_rgb": [
+143,
+145,
+147
+],
+"block": "02_04"
+},
+"feature:building_footprint:plateau/bldg_24e43d0e-93cd-4aca-90ee-d2f55ddae054": {
+"decision": "accepted",
+"point_px": [
+536.3,
+308.1
+],
+"roof_rgb": [
+111,
+124,
+131
+],
+"block": "02_04"
+},
+"feature:building_footprint:plateau/bldg_72cb6ade-4ffc-4b89-b9da-973eb0dd892b": {
+"decision": "accepted",
+"point_px": [
+541.0,
+335.4
+],
+"roof_rgb": [
+82,
+92,
+100
+],
+"block": "02_04"
+},
+"feature:building_footprint:plateau/bldg_f4ddaf34-7478-439d-93b8-dd66c395ce91": {
+"decision": "accepted",
+"point_px": [
+558.7,
+379.4
+],
+"roof_rgb": [
+226,
+228,
+233
+],
+"block": "02_04"
+},
+"feature:building_footprint:way/289194874": {
+"decision": "accepted",
+"point_px": [
+730.4,
+288.7
+],
+"roof_rgb": [
+171,
+192,
+189
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/289194875": {
+"decision": "accepted",
+"point_px": [
+748.2,
+272.2
+],
+"roof_rgb": [
+80,
+88,
+96
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138049": {
+"decision": "accepted",
+"point_px": [
+702.5,
+263.3
+],
+"roof_rgb": [
+116,
+146,
+149
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138055": {
+"decision": "accepted",
+"point_px": [
+662.1,
+292.1
+],
+"roof_rgb": [
+208,
+216,
+218
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138059": {
+"decision": "accepted",
+"point_px": [
+758.1,
+266.8
+],
+"roof_rgb": [
+124,
+130,
+135
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138113": {
+"decision": "accepted",
+"point_px": [
+764.8,
+313.9
+],
+"roof_rgb": [
+119,
+133,
+138
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138130": {
+"decision": "accepted",
+"point_px": [
+756.1,
+326.6
+],
+"roof_rgb": [
+113,
+121,
+125
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138146": {
+"decision": "accepted",
+"point_px": [
+747.6,
+337.5
+],
+"roof_rgb": [
+154,
+131,
+133
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138150": {
+"decision": "accepted",
+"point_px": [
+651.0,
+349.3
+],
+"roof_rgb": [
+178,
+188,
+185
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138164": {
+"decision": "accepted",
+"point_px": [
+758.2,
+347.0
+],
+"roof_rgb": [
+117,
+126,
+132
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138174": {
+"decision": "accepted",
+"point_px": [
+767.2,
+358.6
+],
+"roof_rgb": [
+177,
+156,
+157
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138179": {
+"decision": "accepted",
+"point_px": [
+732.8,
+357.0
+],
+"roof_rgb": [
+133,
+146,
+151
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138195": {
+"decision": "accepted",
+"point_px": [
+657.1,
+377.8
+],
+"roof_rgb": [
+121,
+134,
+141
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138198": {
+"decision": "accepted",
+"point_px": [
+736.1,
+380.1
+],
+"roof_rgb": [
+179,
+161,
+159
+],
+"block": "02_05"
+},
+"feature:building_footprint:plateau/bldg_b36eac76-8ba2-4c1a-814d-bd6db8734590": {
+"decision": "accepted",
+"point_px": [
+684.2,
+337.5
+],
+"roof_rgb": [
+207,
+212,
+209
+],
+"block": "02_05"
+},
+"feature:building_footprint:way/725138045": {
+"decision": "accepted",
+"point_px": [
+818.7,
+265.2
+],
+"roof_rgb": [
+202,
+207,
+207
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138062": {
+"decision": "accepted",
+"point_px": [
+800.8,
+271.4
+],
+"roof_rgb": [
+95,
+101,
+104
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138067": {
+"decision": "accepted",
+"point_px": [
+795.4,
+278.5
+],
+"roof_rgb": [
+150,
+160,
+162
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138078": {
+"decision": "accepted",
+"point_px": [
+789.5,
+287.5
+],
+"roof_rgb": [
+116,
+128,
+131
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138088": {
+"decision": "accepted",
+"point_px": [
+811.8,
+295.6
+],
+"roof_rgb": [
+176,
+170,
+169
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138095": {
+"decision": "accepted",
+"point_px": [
+771.1,
+298.6
+],
+"roof_rgb": [
+173,
+161,
+161
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138100": {
+"decision": "accepted",
+"point_px": [
+840.8,
+303.9
+],
+"roof_rgb": [
+160,
+159,
+158
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138107": {
+"decision": "accepted",
+"point_px": [
+793.7,
+314.3
+],
+"roof_rgb": [
+150,
+155,
+153
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138111": {
+"decision": "accepted",
+"point_px": [
+834.8,
+312.5
+],
+"roof_rgb": [
+129,
+142,
+145
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138126": {
+"decision": "accepted",
+"point_px": [
+827.2,
+319.3
+],
+"roof_rgb": [
+105,
+114,
+121
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138129": {
+"decision": "accepted",
+"point_px": [
+779.9,
+325.5
+],
+"roof_rgb": [
+170,
+178,
+178
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138136": {
+"decision": "accepted",
+"point_px": [
+818.3,
+332.0
+],
+"roof_rgb": [
+204,
+186,
+170
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138143": {
+"decision": "accepted",
+"point_px": [
+792.4,
+334.6
+],
+"roof_rgb": [
+85,
+100,
+110
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138158": {
+"decision": "accepted",
+"point_px": [
+777.3,
+342.3
+],
+"roof_rgb": [
+157,
+136,
+140
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138177": {
+"decision": "accepted",
+"point_px": [
+836.4,
+360.9
+],
+"roof_rgb": [
+165,
+174,
+174
+],
+"block": "02_06"
+},
+"feature:building_footprint:way/725138216": {
+"decision": "accepted",
+"point_px": [
+602.4,
+389.0
+],
+"roof_rgb": [
+128,
+128,
+129
+],
+"block": "03_04"
+},
+"feature:building_footprint:way/725138223": {
+"decision": "accepted",
+"point_px": [
+620.6,
+399.1
+],
+"roof_rgb": [
+121,
+131,
+136
+],
+"block": "03_04"
+},
+"feature:building_footprint:way/725138234": {
+"decision": "accepted",
+"point_px": [
+584.4,
+438.3
+],
+"roof_rgb": [
+122,
+130,
+132
+],
+"block": "03_04"
+},
+"feature:building_footprint:way/725138242": {
+"decision": "accepted",
+"point_px": [
+562.5,
+412.2
+],
+"roof_rgb": [
+149,
+159,
+162
+],
+"block": "03_04"
+},
+"feature:building_footprint:way/725138281": {
+"decision": "accepted",
+"point_px": [
+624.3,
+445.4
+],
+"roof_rgb": [
+86,
+95,
+100
+],
+"block": "03_04"
+},
+"feature:building_footprint:way/725138291": {
+"decision": "accepted",
+"point_px": [
+541.4,
+468.9
+],
+"roof_rgb": [
+157,
+161,
+157
+],
+"block": "03_04"
+},
+"feature:building_footprint:way/725138336": {
+"decision": "accepted",
+"point_px": [
+532.6,
+501.3
+],
+"roof_rgb": [
+160,
+162,
+162
+],
+"block": "03_04"
+},
+"feature:building_footprint:way/725138352": {
+"decision": "accepted",
+"point_px": [
+551.2,
+510.4
+],
+"roof_rgb": [
+105,
+115,
+118
+],
+"block": "03_04"
+},
+"feature:building_footprint:plateau/bldg_9ce30eeb-952f-42ae-b59f-4a6527f00509": {
+"decision": "accepted",
+"point_px": [
+542.4,
+436.2
+],
+"roof_rgb": [
+134,
+141,
+146
+],
+"block": "03_04"
+},
+"feature:building_footprint:plateau/bldg_ec691626-9de6-485e-80ec-9bc1a66d747f": {
+"decision": "accepted",
+"point_px": [
+605.6,
+464.1
+],
+"roof_rgb": [
+87,
+101,
+109
+],
+"block": "03_04"
+},
+"feature:building_footprint:plateau/bldg_9185db26-da34-460f-b0f2-66cff1182064": {
+"decision": "accepted",
+"point_px": [
+610.8,
+447.6
+],
+"roof_rgb": [
+102,
+117,
+126
+],
+"block": "03_04"
+},
+"feature:building_footprint:way/725138222": {
+"decision": "accepted",
+"point_px": [
+714.6,
+391.1
+],
+"roof_rgb": [
+169,
+163,
+168
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138230": {
+"decision": "accepted",
+"point_px": [
+762.5,
+409.9
+],
+"roof_rgb": [
+126,
+137,
+136
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138236": {
+"decision": "accepted",
+"point_px": [
+641.4,
+410.8
+],
+"roof_rgb": [
+124,
+126,
+128
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138239": {
+"decision": "accepted",
+"point_px": [
+737.1,
+412.8
+],
+"roof_rgb": [
+177,
+162,
+162
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138263": {
+"decision": "accepted",
+"point_px": [
+752.9,
+436.3
+],
+"roof_rgb": [
+80,
+92,
+101
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138272": {
+"decision": "accepted",
+"point_px": [
+696.7,
+442.4
+],
+"roof_rgb": [
+98,
+108,
+114
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138297": {
+"decision": "accepted",
+"point_px": [
+718.7,
+457.4
+],
+"roof_rgb": [
+127,
+135,
+140
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138313": {
+"decision": "accepted",
+"point_px": [
+744.1,
+473.0
+],
+"roof_rgb": [
+145,
+143,
+149
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138331": {
+"decision": "accepted",
+"point_px": [
+713.2,
+478.8
+],
+"roof_rgb": [
+122,
+129,
+131
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138333": {
+"decision": "accepted",
+"point_px": [
+729.4,
+486.9
+],
+"roof_rgb": [
+82,
+96,
+106
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138346": {
+"decision": "accepted",
+"point_px": [
+757.1,
+501.2
+],
+"roof_rgb": [
+128,
+138,
+143
+],
+"block": "03_05"
+},
+"feature:building_footprint:plateau/bldg_d642c218-09a9-48a4-ac4e-357d7a74b093": {
+"decision": "accepted",
+"point_px": [
+682.3,
+486.5
+],
+"roof_rgb": [
+139,
+147,
+150
+],
+"block": "03_05"
+},
+"feature:building_footprint:plateau/bldg_98de34bc-ec9b-4881-8ed8-679167ea7fef": {
+"decision": "accepted",
+"point_px": [
+700.7,
+501.5
+],
+"roof_rgb": [
+107,
+119,
+127
+],
+"block": "03_05"
+},
+"feature:building_footprint:plateau/bldg_f0a98836-aae8-4ab3-b2da-512e42ed0f4c": {
+"decision": "accepted",
+"point_px": [
+714.1,
+426.5
+],
+"roof_rgb": [
+66,
+76,
+78
+],
+"block": "03_05"
+},
+"feature:building_footprint:plateau/bldg_66ce8aba-6148-4f48-9f98-56d56b172466": {
+"decision": "accepted",
+"point_px": [
+675.1,
+499.3
+],
+"roof_rgb": [
+87,
+96,
+102
+],
+"block": "03_05"
+},
+"feature:building_footprint:way/725138253": {
+"decision": "accepted",
+"point_px": [
+777.8,
+430.9
+],
+"roof_rgb": [
+127,
+138,
+140
+],
+"block": "03_06"
+},
+"feature:building_footprint:way/725138270": {
+"decision": "accepted",
+"point_px": [
+824.0,
+440.3
+],
+"roof_rgb": [
+132,
+123,
+131
+],
+"block": "03_06"
+},
+"feature:building_footprint:way/725138293": {
+"decision": "accepted",
+"point_px": [
+770.4,
+456.4
+],
+"roof_rgb": [
+148,
+138,
+137
+],
+"block": "03_06"
+},
+"feature:building_footprint:way/725138316": {
+"decision": "accepted",
+"point_px": [
+799.4,
+474.4
+],
+"roof_rgb": [
+144,
+149,
+151
+],
+"block": "03_06"
+},
+"feature:building_footprint:way/725138322": {
+"decision": "accepted",
+"point_px": [
+780.9,
+479.5
+],
+"roof_rgb": [
+138,
+141,
+144
+],
+"block": "03_06"
+},
+"feature:building_footprint:way/725138329": {
+"decision": "accepted",
+"point_px": [
+779.0,
+491.7
+],
+"roof_rgb": [
+108,
+116,
+115
+],
+"block": "03_06"
+},
+"feature:building_footprint:way/725138357": {
+"decision": "accepted",
+"point_px": [
+791.3,
+509.1
+],
+"roof_rgb": [
+102,
+109,
+111
+],
+"block": "03_06"
+},
+"feature:building_footprint:way/725138370": {
+"decision": "accepted",
+"point_px": [
+457.9,
+527.7
+],
+"roof_rgb": [
+131,
+140,
+143
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138373": {
+"decision": "accepted",
+"point_px": [
+490.2,
+518.4
+],
+"roof_rgb": [
+95,
+109,
+118
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138378": {
+"decision": "accepted",
+"point_px": [
+503.5,
+527.6
+],
+"roof_rgb": [
+132,
+161,
+174
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138381": {
+"decision": "accepted",
+"point_px": [
+478.2,
+535.1
+],
+"roof_rgb": [
+86,
+94,
+99
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138396": {
+"decision": "accepted",
+"point_px": [
+493.0,
+544.9
+],
+"roof_rgb": [
+107,
+139,
+154
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138404": {
+"decision": "accepted",
+"point_px": [
+432.9,
+567.5
+],
+"roof_rgb": [
+166,
+173,
+177
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138409": {
+"decision": "accepted",
+"point_px": [
+488.6,
+561.3
+],
+"roof_rgb": [
+116,
+126,
+129
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138424": {
+"decision": "accepted",
+"point_px": [
+502.1,
+568.7
+],
+"roof_rgb": [
+122,
+103,
+114
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138449": {
+"decision": "accepted",
+"point_px": [
+468.8,
+586.6
+],
+"roof_rgb": [
+86,
+94,
+99
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138477": {
+"decision": "accepted",
+"point_px": [
+405.1,
+621.8
+],
+"roof_rgb": [
+117,
+126,
+130
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138481": {
+"decision": "accepted",
+"point_px": [
+465.3,
+610.5
+],
+"roof_rgb": [
+89,
+95,
+88
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138500": {
+"decision": "accepted",
+"point_px": [
+416.9,
+635.8
+],
+"roof_rgb": [
+181,
+185,
+186
+],
+"block": "04_03"
+},
+"feature:building_footprint:plateau/bldg_2cb6c6d7-35b6-40d5-a261-e0b0a91b2f6b": {
+"decision": "accepted",
+"point_px": [
+437.1,
+596.4
+],
+"roof_rgb": [
+148,
+153,
+147
+],
+"block": "04_03"
+},
+"feature:building_footprint:way/725138365": {
+"decision": "accepted",
+"point_px": [
+575.5,
+515.1
+],
+"roof_rgb": [
+93,
+99,
+106
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138367": {
+"decision": "accepted",
+"point_px": [
+517.9,
+512.8
+],
+"roof_rgb": [
+130,
+133,
+136
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138376": {
+"decision": "accepted",
+"point_px": [
+570.4,
+528.3
+],
+"roof_rgb": [
+199,
+209,
+212
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138389": {
+"decision": "accepted",
+"point_px": [
+520.7,
+540.8
+],
+"roof_rgb": [
+146,
+136,
+142
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138407": {
+"decision": "accepted",
+"point_px": [
+512.7,
+558.3
+],
+"roof_rgb": [
+149,
+159,
+164
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138421": {
+"decision": "accepted",
+"point_px": [
+534.1,
+551.1
+],
+"roof_rgb": [
+129,
+141,
+146
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138428": {
+"decision": "accepted",
+"point_px": [
+528.8,
+585.4
+],
+"roof_rgb": [
+92,
+97,
+101
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138436": {
+"decision": "accepted",
+"point_px": [
+533.2,
+572.9
+],
+"roof_rgb": [
+89,
+101,
+107
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138437": {
+"decision": "accepted",
+"point_px": [
+606.7,
+585.1
+],
+"roof_rgb": [
+169,
+168,
+168
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138447": {
+"decision": "accepted",
+"point_px": [
+618.1,
+590.5
+],
+"roof_rgb": [
+135,
+135,
+137
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138450": {
+"decision": "accepted",
+"point_px": [
+631.2,
+595.9
+],
+"roof_rgb": [
+136,
+148,
+151
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138452": {
+"decision": "accepted",
+"point_px": [
+513.3,
+613.2
+],
+"roof_rgb": [
+210,
+208,
+194
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138460": {
+"decision": "accepted",
+"point_px": [
+595.2,
+605.4
+],
+"roof_rgb": [
+151,
+150,
+153
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138478": {
+"decision": "accepted",
+"point_px": [
+614.6,
+615.2
+],
+"roof_rgb": [
+177,
+189,
+188
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138482": {
+"decision": "accepted",
+"point_px": [
+635.0,
+623.9
+],
+"roof_rgb": [
+107,
+116,
+121
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138491": {
+"decision": "accepted",
+"point_px": [
+594.6,
+628.4
+],
+"roof_rgb": [
+175,
+175,
+169
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138493": {
+"decision": "accepted",
+"point_px": [
+582.9,
+637.7
+],
+"roof_rgb": [
+186,
+197,
+204
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138496": {
+"decision": "accepted",
+"point_px": [
+605.8,
+632.4
+],
+"roof_rgb": [
+140,
+145,
+142
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/1507403796": {
+"decision": "accepted",
+"point_px": [
+552.9,
+560.8
+],
+"roof_rgb": [
+95,
+106,
+115
+],
+"block": "04_04"
+},
+"feature:building_footprint:plateau/bldg_4111af78-8be2-4652-b369-9f23d095efbd": {
+"decision": "rejected",
+"reason": "tiny footprint under tree canopy; roof not visible",
+"block": "04_04"
+},
+"feature:building_footprint:plateau/bldg_7efd7e29-3eec-4718-bcee-64721e07c2d7": {
+"decision": "accepted",
+"point_px": [
+639.1,
+564.9
+],
+"roof_rgb": [
+117,
+126,
+133
+],
+"block": "04_04"
+},
+"feature:building_footprint:way/725138380": {
+"decision": "accepted",
+"point_px": [
+765.8,
+524.9
+],
+"roof_rgb": [
+85,
+97,
+109
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138384": {
+"decision": "accepted",
+"point_px": [
+648.0,
+532.6
+],
+"roof_rgb": [
+141,
+148,
+153
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138390": {
+"decision": "accepted",
+"point_px": [
+751.8,
+545.6
+],
+"roof_rgb": [
+162,
+160,
+161
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138416": {
+"decision": "accepted",
+"point_px": [
+750.5,
+559.4
+],
+"roof_rgb": [
+113,
+110,
+114
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138418": {
+"decision": "accepted",
+"point_px": [
+765.7,
+567.7
+],
+"roof_rgb": [
+134,
+138,
+139
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138431": {
+"decision": "accepted",
+"point_px": [
+731.1,
+580.5
+],
+"roof_rgb": [
+139,
+145,
+147
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138443": {
+"decision": "accepted",
+"point_px": [
+747.1,
+589.4
+],
+"roof_rgb": [
+134,
+146,
+145
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138453": {
+"decision": "accepted",
+"point_px": [
+715.9,
+603.5
+],
+"roof_rgb": [
+138,
+142,
+145
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138455": {
+"decision": "accepted",
+"point_px": [
+642.8,
+602.8
+],
+"roof_rgb": [
+118,
+127,
+131
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138465": {
+"decision": "accepted",
+"point_px": [
+729.6,
+616.2
+],
+"roof_rgb": [
+160,
+168,
+169
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138467": {
+"decision": "accepted",
+"point_px": [
+653.4,
+609.7
+],
+"roof_rgb": [
+135,
+145,
+149
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138479": {
+"decision": "accepted",
+"point_px": [
+668.9,
+623.2
+],
+"roof_rgb": [
+100,
+119,
+131
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_d0ac3d6a-76d0-48ef-a947-9cf574f9478e": {
+"decision": "accepted",
+"point_px": [
+667.1,
+561.2
+],
+"roof_rgb": [
+79,
+87,
+96
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_2f45a317-9aff-4dfa-89f0-3eb8f409ddfe": {
+"decision": "accepted",
+"point_px": [
+661.2,
+576.6
+],
+"roof_rgb": [
+78,
+87,
+93
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_a4ddd70c-1eb0-4d85-b9c3-cb03244831fe": {
+"decision": "accepted",
+"point_px": [
+667.7,
+516.5
+],
+"roof_rgb": [
+98,
+106,
+112
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_9b71dbea-e3a8-487a-9757-9f953c0ebfb4": {
+"decision": "accepted",
+"point_px": [
+724.9,
+545.2
+],
+"roof_rgb": [
+84,
+100,
+109
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_0495524f-6d23-414b-9679-038bbdb3b3e3": {
+"decision": "accepted",
+"point_px": [
+726.7,
+533.4
+],
+"roof_rgb": [
+84,
+96,
+102
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_9fa745c0-bb7f-47d7-b04f-85fac862f7ec": {
+"decision": "accepted",
+"point_px": [
+765.4,
+619.5
+],
+"roof_rgb": [
+144,
+156,
+159
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_0847d03d-a134-49d4-b17a-e387997c8e14": {
+"decision": "accepted",
+"point_px": [
+754.7,
+636.5
+],
+"roof_rgb": [
+133,
+142,
+149
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_14148cdc-da38-47b1-a754-a444e9a3c2eb": {
+"decision": "accepted",
+"point_px": [
+693.8,
+593.9
+],
+"roof_rgb": [
+174,
+174,
+180
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_cb8fa8f7-d1cd-49c2-82d7-9fcd270e8423": {
+"decision": "accepted",
+"point_px": [
+691.1,
+515.9
+],
+"roof_rgb": [
+69,
+80,
+89
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_5a25e55a-bb74-4248-bcd5-050597776f40": {
+"decision": "accepted",
+"point_px": [
+650.5,
+549.2
+],
+"roof_rgb": [
+112,
+120,
+125
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_80dde5a3-65d0-4f9f-933f-f0a5f6651bef": {
+"decision": "accepted",
+"point_px": [
+675.2,
+546.2
+],
+"roof_rgb": [
+82,
+86,
+92
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_fe45bedb-07cf-471d-ba33-be80b86b2279": {
+"decision": "accepted",
+"point_px": [
+708.5,
+571.5
+],
+"roof_rgb": [
+98,
+110,
+117
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_5d474b85-2059-421b-b517-4e1efb549043": {
+"decision": "accepted",
+"point_px": [
+731.2,
+521.9
+],
+"roof_rgb": [
+108,
+103,
+111
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_b1824e2d-6b25-4d22-bea9-e1c945672f69": {
+"decision": "accepted",
+"point_px": [
+717.0,
+556.8
+],
+"roof_rgb": [
+90,
+98,
+104
+],
+"block": "04_05"
+},
+"feature:building_footprint:plateau/bldg_f4858cfb-4f76-472e-aa48-1c76dbedfccc": {
+"decision": "accepted",
+"point_px": [
+682.6,
+531.2
+],
+"roof_rgb": [
+85,
+95,
+104
+],
+"block": "04_05"
+},
+"feature:building_footprint:way/725138377": {
+"decision": "accepted",
+"point_px": [
+774.2,
+521.0
+],
+"roof_rgb": [
+66,
+77,
+83
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138385": {
+"decision": "accepted",
+"point_px": [
+794.5,
+535.9
+],
+"roof_rgb": [
+120,
+126,
+127
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138388": {
+"decision": "accepted",
+"point_px": [
+775.5,
+535.2
+],
+"roof_rgb": [
+168,
+157,
+161
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138399": {
+"decision": "accepted",
+"point_px": [
+776.8,
+547.1
+],
+"roof_rgb": [
+168,
+172,
+173
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138402": {
+"decision": "accepted",
+"point_px": [
+821.9,
+556.0
+],
+"roof_rgb": [
+138,
+150,
+156
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138410": {
+"decision": "accepted",
+"point_px": [
+770.5,
+556.7
+],
+"roof_rgb": [
+91,
+100,
+109
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138413": {
+"decision": "accepted",
+"point_px": [
+794.5,
+564.8
+],
+"roof_rgb": [
+127,
+141,
+144
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138417": {
+"decision": "accepted",
+"point_px": [
+832.7,
+568.2
+],
+"roof_rgb": [
+133,
+142,
+147
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138426": {
+"decision": "accepted",
+"point_px": [
+777.9,
+571.4
+],
+"roof_rgb": [
+145,
+128,
+135
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138432": {
+"decision": "accepted",
+"point_px": [
+792.8,
+580.9
+],
+"roof_rgb": [
+129,
+134,
+137
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138442": {
+"decision": "accepted",
+"point_px": [
+816.8,
+586.4
+],
+"roof_rgb": [
+168,
+175,
+171
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138451": {
+"decision": "accepted",
+"point_px": [
+846.3,
+597.4
+],
+"roof_rgb": [
+111,
+119,
+124
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138457": {
+"decision": "accepted",
+"point_px": [
+771.4,
+602.7
+],
+"roof_rgb": [
+193,
+203,
+203
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138466": {
+"decision": "accepted",
+"point_px": [
+782.6,
+607.0
+],
+"roof_rgb": [
+182,
+191,
+191
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138473": {
+"decision": "accepted",
+"point_px": [
+796.9,
+612.1
+],
+"roof_rgb": [
+132,
+148,
+155
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138485": {
+"decision": "accepted",
+"point_px": [
+836.2,
+617.6
+],
+"roof_rgb": [
+58,
+74,
+87
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138492": {
+"decision": "accepted",
+"point_px": [
+830.9,
+629.0
+],
+"roof_rgb": [
+67,
+82,
+87
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138494": {
+"decision": "accepted",
+"point_px": [
+893.2,
+634.9
+],
+"roof_rgb": [
+93,
+102,
+104
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138495": {
+"decision": "accepted",
+"point_px": [
+859.9,
+624.3
+],
+"roof_rgb": [
+93,
+106,
+116
+],
+"block": "04_06"
+},
+"feature:building_footprint:plateau/bldg_673678e2-5f64-4a74-92b7-9148c7e7dc9e": {
+"decision": "accepted",
+"point_px": [
+781.8,
+629.7
+],
+"roof_rgb": [
+133,
+148,
+156
+],
+"block": "04_06"
+},
+"feature:building_footprint:plateau/bldg_d5775013-8870-4d01-8cb7-24399811d177": {
+"decision": "accepted",
+"point_px": [
+820.5,
+529.6
+],
+"roof_rgb": [
+63,
+77,
+87
+],
+"block": "04_06"
+},
+"feature:building_footprint:plateau/bldg_1e0273ef-6a8f-41b3-8c4e-4eeffc97fbc1": {
+"decision": "accepted",
+"point_px": [
+813.1,
+517.3
+],
+"roof_rgb": [
+71,
+82,
+92
+],
+"block": "04_06"
+},
+"feature:building_footprint:plateau/bldg_8dfa9cab-aca1-4d21-bede-c950ea73ba82": {
+"decision": "accepted",
+"point_px": [
+849.0,
+620.4
+],
+"roof_rgb": [
+95,
+113,
+121
+],
+"block": "04_06"
+},
+"feature:building_footprint:way/725138508": {
+"decision": "accepted",
+"point_px": [
+447.5,
+652.4
+],
+"roof_rgb": [
+191,
+202,
+204
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138515": {
+"decision": "accepted",
+"point_px": [
+408.4,
+647.9
+],
+"roof_rgb": [
+83,
+92,
+99
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138533": {
+"decision": "accepted",
+"point_px": [
+486.7,
+665.1
+],
+"roof_rgb": [
+191,
+197,
+195
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138550": {
+"decision": "accepted",
+"point_px": [
+478.7,
+677.5
+],
+"roof_rgb": [
+114,
+120,
+121
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138559": {
+"decision": "accepted",
+"point_px": [
+399.5,
+678.0
+],
+"roof_rgb": [
+102,
+113,
+121
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138570": {
+"decision": "accepted",
+"point_px": [
+441.3,
+693.7
+],
+"roof_rgb": [
+121,
+134,
+140
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138575": {
+"decision": "accepted",
+"point_px": [
+465.2,
+696.2
+],
+"roof_rgb": [
+87,
+96,
+103
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138598": {
+"decision": "accepted",
+"point_px": [
+454.3,
+712.6
+],
+"roof_rgb": [
+110,
+121,
+128
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138616": {
+"decision": "accepted",
+"point_px": [
+511.5,
+722.5
+],
+"roof_rgb": [
+99,
+113,
+125
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138617": {
+"decision": "accepted",
+"point_px": [
+418.6,
+728.5
+],
+"roof_rgb": [
+132,
+146,
+148
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138634": {
+"decision": "accepted",
+"point_px": [
+489.9,
+741.1
+],
+"roof_rgb": [
+177,
+181,
+184
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/1507403775": {
+"decision": "accepted",
+"point_px": [
+482.8,
+767.1
+],
+"roof_rgb": [
+212,
+224,
+226
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/1507403797": {
+"decision": "accepted",
+"point_px": [
+415.0,
+683.2
+],
+"roof_rgb": [
+127,
+134,
+137
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/1507403798": {
+"decision": "accepted",
+"point_px": [
+427.4,
+689.0
+],
+"roof_rgb": [
+106,
+113,
+121
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/1507403805": {
+"decision": "accepted",
+"point_px": [
+430.6,
+753.6
+],
+"roof_rgb": [
+145,
+158,
+151
+],
+"block": "05_03"
+},
+"feature:building_footprint:way/725138503": {
+"decision": "accepted",
+"point_px": [
+618.4,
+641.3
+],
+"roof_rgb": [
+116,
+121,
+125
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138516": {
+"decision": "accepted",
+"point_px": [
+561.2,
+648.6
+],
+"roof_rgb": [
+163,
+143,
+137
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138518": {
+"decision": "accepted",
+"point_px": [
+629.5,
+648.9
+],
+"roof_rgb": [
+154,
+153,
+143
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138524": {
+"decision": "accepted",
+"point_px": [
+590.8,
+662.9
+],
+"roof_rgb": [
+128,
+138,
+142
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138529": {
+"decision": "accepted",
+"point_px": [
+551.6,
+660.9
+],
+"roof_rgb": [
+135,
+143,
+142
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138530": {
+"decision": "accepted",
+"point_px": [
+579.1,
+659.9
+],
+"roof_rgb": [
+103,
+116,
+125
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138547": {
+"decision": "accepted",
+"point_px": [
+565.6,
+672.0
+],
+"roof_rgb": [
+148,
+159,
+158
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138565": {
+"decision": "accepted",
+"point_px": [
+529.4,
+684.2
+],
+"roof_rgb": [
+139,
+140,
+143
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138580": {
+"decision": "accepted",
+"point_px": [
+523.0,
+693.5
+],
+"roof_rgb": [
+122,
+123,
+125
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138582": {
+"decision": "accepted",
+"point_px": [
+542.4,
+697.3
+],
+"roof_rgb": [
+149,
+126,
+137
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138591": {
+"decision": "accepted",
+"point_px": [
+553.7,
+704.5
+],
+"roof_rgb": [
+142,
+165,
+157
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138592": {
+"decision": "accepted",
+"point_px": [
+516.2,
+700.8
+],
+"roof_rgb": [
+115,
+120,
+123
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138597": {
+"decision": "accepted",
+"point_px": [
+565.4,
+713.4
+],
+"roof_rgb": [
+185,
+162,
+147
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138604": {
+"decision": "accepted",
+"point_px": [
+533.1,
+711.8
+],
+"roof_rgb": [
+96,
+99,
+107
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138608": {
+"decision": "accepted",
+"point_px": [
+577.1,
+714.9
+],
+"roof_rgb": [
+68,
+75,
+87
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138612": {
+"decision": "accepted",
+"point_px": [
+543.5,
+717.8
+],
+"roof_rgb": [
+139,
+148,
+146
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138623": {
+"decision": "accepted",
+"point_px": [
+554.8,
+730.7
+],
+"roof_rgb": [
+58,
+77,
+91
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138629": {
+"decision": "accepted",
+"point_px": [
+530.0,
+736.9
+],
+"roof_rgb": [
+132,
+145,
+151
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138638": {
+"decision": "accepted",
+"point_px": [
+543.1,
+746.6
+],
+"roof_rgb": [
+56,
+69,
+81
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138645": {
+"decision": "accepted",
+"point_px": [
+513.9,
+756.9
+],
+"roof_rgb": [
+151,
+160,
+161
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/1507403534": {
+"decision": "accepted",
+"point_px": [
+620.2,
+697.6
+],
+"roof_rgb": [
+119,
+129,
+133
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/1507403535": {
+"decision": "accepted",
+"point_px": [
+631.0,
+707.1
+],
+"roof_rgb": [
+160,
+168,
+171
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/1507403536": {
+"decision": "accepted",
+"point_px": [
+633.8,
+688.5
+],
+"roof_rgb": [
+99,
+95,
+100
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/1507403543": {
+"decision": "accepted",
+"point_px": [
+638.2,
+758.3
+],
+"roof_rgb": [
+115,
+131,
+136
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/1507403771": {
+"decision": "accepted",
+"point_px": [
+579.8,
+754.0
+],
+"roof_rgb": [
+188,
+198,
+199
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/1507403772": {
+"decision": "accepted",
+"point_px": [
+558.2,
+767.4
+],
+"roof_rgb": [
+188,
+198,
+199
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/1507403777": {
+"decision": "accepted",
+"point_px": [
+527.4,
+763.9
+],
+"roof_rgb": [
+89,
+100,
+103
+],
+"block": "05_04"
+},
+"feature:building_footprint:way/725138502": {
+"decision": "accepted",
+"point_px": [
+710.1,
+646.1
+],
+"roof_rgb": [
+168,
+181,
+180
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138507": {
+"decision": "accepted",
+"point_px": [
+650.5,
+641.9
+],
+"roof_rgb": [
+76,
+90,
+97
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138513": {
+"decision": "accepted",
+"point_px": [
+665.8,
+648.1
+],
+"roof_rgb": [
+97,
+108,
+113
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138523": {
+"decision": "accepted",
+"point_px": [
+730.2,
+650.5
+],
+"roof_rgb": [
+128,
+135,
+135
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138525": {
+"decision": "accepted",
+"point_px": [
+742.2,
+653.4
+],
+"roof_rgb": [
+204,
+211,
+214
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138526": {
+"decision": "accepted",
+"point_px": [
+641.3,
+656.9
+],
+"roof_rgb": [
+84,
+101,
+108
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138528": {
+"decision": "accepted",
+"point_px": [
+694.3,
+657.5
+],
+"roof_rgb": [
+201,
+212,
+213
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138532": {
+"decision": "accepted",
+"point_px": [
+747.0,
+667.3
+],
+"roof_rgb": [
+84,
+90,
+96
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138538": {
+"decision": "accepted",
+"point_px": [
+653.4,
+666.8
+],
+"roof_rgb": [
+86,
+100,
+109
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138539": {
+"decision": "accepted",
+"point_px": [
+715.8,
+666.9
+],
+"roof_rgb": [
+127,
+137,
+140
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138544": {
+"decision": "accepted",
+"point_px": [
+705.2,
+664.6
+],
+"roof_rgb": [
+114,
+116,
+120
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138548": {
+"decision": "accepted",
+"point_px": [
+682.0,
+679.3
+],
+"roof_rgb": [
+82,
+91,
+100
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138553": {
+"decision": "accepted",
+"point_px": [
+727.3,
+672.1
+],
+"roof_rgb": [
+136,
+142,
+148
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138562": {
+"decision": "accepted",
+"point_px": [
+702.5,
+685.6
+],
+"roof_rgb": [
+113,
+126,
+135
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138563": {
+"decision": "accepted",
+"point_px": [
+640.6,
+675.8
+],
+"roof_rgb": [
+88,
+103,
+110
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138564": {
+"decision": "accepted",
+"point_px": [
+722.7,
+689.4
+],
+"roof_rgb": [
+78,
+83,
+96
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138578": {
+"decision": "accepted",
+"point_px": [
+676.6,
+696.5
+],
+"roof_rgb": [
+116,
+125,
+133
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138586": {
+"decision": "accepted",
+"point_px": [
+740.0,
+705.3
+],
+"roof_rgb": [
+109,
+116,
+122
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138589": {
+"decision": "accepted",
+"point_px": [
+690.9,
+705.2
+],
+"roof_rgb": [
+132,
+133,
+137
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138605": {
+"decision": "accepted",
+"point_px": [
+658.4,
+718.7
+],
+"roof_rgb": [
+163,
+164,
+164
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138613": {
+"decision": "accepted",
+"point_px": [
+675.9,
+726.8
+],
+"roof_rgb": [
+121,
+127,
+132
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138619": {
+"decision": "accepted",
+"point_px": [
+758.2,
+722.6
+],
+"roof_rgb": [
+103,
+107,
+112
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138631": {
+"decision": "accepted",
+"point_px": [
+684.7,
+740.9
+],
+"roof_rgb": [
+172,
+144,
+149
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138635": {
+"decision": "accepted",
+"point_px": [
+698.3,
+743.4
+],
+"roof_rgb": [
+166,
+160,
+165
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138637": {
+"decision": "accepted",
+"point_px": [
+759.1,
+743.4
+],
+"roof_rgb": [
+114,
+118,
+126
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138644": {
+"decision": "accepted",
+"point_px": [
+742.5,
+755.4
+],
+"roof_rgb": [
+190,
+167,
+156
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/1507403531": {
+"decision": "accepted",
+"point_px": [
+713.2,
+733.2
+],
+"roof_rgb": [
+97,
+102,
+106
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/1507403532": {
+"decision": "accepted",
+"point_px": [
+719.3,
+718.3
+],
+"roof_rgb": [
+167,
+172,
+177
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/1507403533": {
+"decision": "accepted",
+"point_px": [
+700.3,
+711.1
+],
+"roof_rgb": [
+191,
+193,
+189
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/1507403544": {
+"decision": "accepted",
+"point_px": [
+653.3,
+767.9
+],
+"roof_rgb": [
+97,
+110,
+118
+],
+"block": "05_05"
+},
+"feature:building_footprint:plateau/bldg_f9734989-12fd-4e96-b3af-10defe0cc42b": {
+"decision": "accepted",
+"point_px": [
+705.4,
+760.3
+],
+"roof_rgb": [
+127,
+137,
+123
+],
+"block": "05_05"
+},
+"feature:building_footprint:way/725138509": {
+"decision": "accepted",
+"point_px": [
+778.2,
+645.3
+],
+"roof_rgb": [
+142,
+162,
+159
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138510": {
+"decision": "accepted",
+"point_px": [
+855.7,
+642.8
+],
+"roof_rgb": [
+188,
+161,
+166
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138517": {
+"decision": "accepted",
+"point_px": [
+824.2,
+647.7
+],
+"roof_rgb": [
+140,
+149,
+153
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138534": {
+"decision": "accepted",
+"point_px": [
+870.2,
+665.9
+],
+"roof_rgb": [
+70,
+80,
+90
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138546": {
+"decision": "accepted",
+"point_px": [
+815.5,
+670.8
+],
+"roof_rgb": [
+132,
+135,
+136
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138556": {
+"decision": "accepted",
+"point_px": [
+797.0,
+685.6
+],
+"roof_rgb": [
+118,
+124,
+132
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138579": {
+"decision": "accepted",
+"point_px": [
+870.2,
+697.6
+],
+"roof_rgb": [
+87,
+109,
+117
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138584": {
+"decision": "accepted",
+"point_px": [
+780.1,
+700.6
+],
+"roof_rgb": [
+94,
+105,
+114
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138593": {
+"decision": "accepted",
+"point_px": [
+795.5,
+706.4
+],
+"roof_rgb": [
+134,
+151,
+151
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138595": {
+"decision": "accepted",
+"point_px": [
+882.8,
+709.2
+],
+"roof_rgb": [
+78,
+91,
+97
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138600": {
+"decision": "accepted",
+"point_px": [
+809.4,
+712.5
+],
+"roof_rgb": [
+96,
+111,
+116
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138609": {
+"decision": "accepted",
+"point_px": [
+860.7,
+728.5
+],
+"roof_rgb": [
+214,
+224,
+226
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138625": {
+"decision": "accepted",
+"point_px": [
+778.8,
+729.4
+],
+"roof_rgb": [
+128,
+133,
+138
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138627": {
+"decision": "accepted",
+"point_px": [
+793.6,
+733.2
+],
+"roof_rgb": [
+145,
+148,
+151
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/725138632": {
+"decision": "accepted",
+"point_px": [
+853.2,
+746.4
+],
+"roof_rgb": [
+139,
+140,
+142
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/1507403517": {
+"decision": "accepted",
+"point_px": [
+886.4,
+764.9
+],
+"roof_rgb": [
+107,
+116,
+122
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/1507403524": {
+"decision": "accepted",
+"point_px": [
+827.5,
+755.2
+],
+"roof_rgb": [
+86,
+99,
+106
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/1507403525": {
+"decision": "accepted",
+"point_px": [
+822.0,
+732.0
+],
+"roof_rgb": [
+138,
+146,
+146
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/1507403526": {
+"decision": "accepted",
+"point_px": [
+802.1,
+756.9
+],
+"roof_rgb": [
+106,
+110,
+115
+],
+"block": "05_06"
+},
+"feature:building_footprint:way/1507403722": {
+"decision": "accepted",
+"point_px": [
+511.2,
+892.8
+],
+"roof_rgb": [
+118,
+127,
+136
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403736": {
+"decision": "accepted",
+"point_px": [
+499.4,
+846.2
+],
+"roof_rgb": [
+110,
+122,
+128
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403737": {
+"decision": "accepted",
+"point_px": [
+494.0,
+865.3
+],
+"roof_rgb": [
+114,
+125,
+130
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403738": {
+"decision": "accepted",
+"point_px": [
+478.0,
+849.6
+],
+"roof_rgb": [
+126,
+122,
+115
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403739": {
+"decision": "accepted",
+"point_px": [
+489.4,
+830.2
+],
+"roof_rgb": [
+123,
+135,
+142
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403740": {
+"decision": "accepted",
+"point_px": [
+473.3,
+871.4
+],
+"roof_rgb": [
+98,
+110,
+117
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403741": {
+"decision": "accepted",
+"point_px": [
+454.9,
+879.4
+],
+"roof_rgb": [
+103,
+117,
+124
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403742": {
+"decision": "accepted",
+"point_px": [
+459.5,
+892.3
+],
+"roof_rgb": [
+110,
+112,
+115
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403743": {
+"decision": "accepted",
+"point_px": [
+447.9,
+895.1
+],
+"roof_rgb": [
+94,
+104,
+108
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403757": {
+"decision": "accepted",
+"point_px": [
+400.6,
+882.3
+],
+"roof_rgb": [
+160,
+162,
+166
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403759": {
+"decision": "accepted",
+"point_px": [
+396.5,
+889.5
+],
+"roof_rgb": [
+148,
+156,
+159
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403760": {
+"decision": "accepted",
+"point_px": [
+414.4,
+895.8
+],
+"roof_rgb": [
+112,
+124,
+129
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403761": {
+"decision": "accepted",
+"point_px": [
+420.1,
+866.6
+],
+"roof_rgb": [
+198,
+207,
+208
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403762": {
+"decision": "accepted",
+"point_px": [
+426.2,
+843.7
+],
+"roof_rgb": [
+132,
+141,
+146
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403763": {
+"decision": "accepted",
+"point_px": [
+445.0,
+853.1
+],
+"roof_rgb": [
+182,
+182,
+181
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403764": {
+"decision": "accepted",
+"point_px": [
+451.0,
+818.0
+],
+"roof_rgb": [
+158,
+157,
+162
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403773": {
+"decision": "accepted",
+"point_px": [
+496.9,
+788.6
+],
+"roof_rgb": [
+80,
+99,
+103
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403774": {
+"decision": "accepted",
+"point_px": [
+465.0,
+781.5
+],
+"roof_rgb": [
+146,
+154,
+157
+],
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403776": {
+"decision": "accepted",
+"point_px": [
+507.1,
+775.2
+],
+"roof_rgb": [
+158,
+168,
+170
+],
+"block": "06_03"
+},
+"feature:building_footprint:plateau/bldg_33dbbb59-d3bb-47e3-ab8d-293d29a63594": {
+"decision": "rejected",
+"reason": "footprint too small to read a roof from the aerial",
+"block": "06_03"
+},
+"feature:building_footprint:way/1507403529": {
+"decision": "accepted",
+"point_px": [
+765.9,
+768.2
+],
+"roof_rgb": [
+134,
+129,
+129
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403530": {
+"decision": "accepted",
+"point_px": [
+730.7,
+779.2
+],
+"roof_rgb": [
+196,
+192,
+188
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403537": {
+"decision": "accepted",
+"point_px": [
+682.3,
+786.7
+],
+"roof_rgb": [
+192,
+168,
+162
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403539": {
+"decision": "accepted",
+"point_px": [
+646.9,
+847.5
+],
+"roof_rgb": [
+169,
+181,
+182
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403540": {
+"decision": "accepted",
+"point_px": [
+651.7,
+822.0
+],
+"roof_rgb": [
+133,
+140,
+141
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403541": {
+"decision": "accepted",
+"point_px": [
+659.9,
+796.8
+],
+"roof_rgb": [
+77,
+85,
+92
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403542": {
+"decision": "accepted",
+"point_px": [
+666.8,
+775.7
+],
+"roof_rgb": [
+93,
+106,
+114
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403552": {
+"decision": "accepted",
+"point_px": [
+688.5,
+851.8
+],
+"roof_rgb": [
+112,
+128,
+133
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403553": {
+"decision": "accepted",
+"point_px": [
+700.9,
+817.9
+],
+"roof_rgb": [
+108,
+121,
+134
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403554": {
+"decision": "accepted",
+"point_px": [
+716.4,
+831.0
+],
+"roof_rgb": [
+132,
+133,
+137
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403555": {
+"decision": "accepted",
+"point_px": [
+734.1,
+850.5
+],
+"roof_rgb": [
+160,
+176,
+175
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403556": {
+"decision": "accepted",
+"point_px": [
+714.2,
+875.0
+],
+"roof_rgb": [
+110,
+114,
+124
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403557": {
+"decision": "accepted",
+"point_px": [
+676.7,
+876.3
+],
+"roof_rgb": [
+129,
+122,
+125
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403559": {
+"decision": "accepted",
+"point_px": [
+760.9,
+871.2
+],
+"roof_rgb": [
+189,
+195,
+185
+],
+"block": "06_05"
+},
+"feature:building_footprint:plateau/bldg_1b99db3c-8d54-4767-8220-a8fae66f9bc4": {
+"decision": "accepted",
+"point_px": [
+708.5,
+800.9
+],
+"roof_rgb": [
+67,
+80,
+90
+],
+"block": "06_05"
+},
+"feature:building_footprint:plateau/bldg_729945a1-4f54-40c0-8844-5797e52441c8": {
+"decision": "accepted",
+"point_px": [
+741.7,
+870.8
+],
+"roof_rgb": [
+100,
+109,
+107
+],
+"block": "06_05"
+},
+"feature:building_footprint:plateau/bldg_a8d2192b-ef09-4fe6-818f-d519770f964e": {
+"decision": "accepted",
+"point_px": [
+668.6,
+815.7
+],
+"roof_rgb": [
+166,
+170,
+165
+],
+"block": "06_05"
+},
+"feature:building_footprint:plateau/bldg_82166c35-e854-49f2-b7a7-536893f9b0a5": {
+"decision": "accepted",
+"point_px": [
+657.2,
+812.4
+],
+"roof_rgb": [
+72,
+75,
+80
+],
+"block": "06_05"
+},
+"feature:building_footprint:way/1507403501": {
+"decision": "accepted",
+"point_px": [
+852.6,
+835.9
+],
+"roof_rgb": [
+182,
+194,
+198
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403510": {
+"decision": "accepted",
+"point_px": [
+831.7,
+880.5
+],
+"roof_rgb": [
+117,
+130,
+135
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403511": {
+"decision": "accepted",
+"point_px": [
+831.3,
+853.7
+],
+"roof_rgb": [
+108,
+116,
+123
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403512": {
+"decision": "accepted",
+"point_px": [
+796.7,
+850.6
+],
+"roof_rgb": [
+177,
+164,
+157
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403513": {
+"decision": "accepted",
+"point_px": [
+811.3,
+835.4
+],
+"roof_rgb": [
+136,
+135,
+140
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403514": {
+"decision": "accepted",
+"point_px": [
+830.3,
+817.8
+],
+"roof_rgb": [
+124,
+123,
+129
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403515": {
+"decision": "accepted",
+"point_px": [
+842.0,
+807.7
+],
+"roof_rgb": [
+171,
+157,
+161
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403516": {
+"decision": "accepted",
+"point_px": [
+868.7,
+786.2
+],
+"roof_rgb": [
+82,
+96,
+105
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403518": {
+"decision": "accepted",
+"point_px": [
+769.9,
+814.5
+],
+"roof_rgb": [
+108,
+119,
+129
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403519": {
+"decision": "accepted",
+"point_px": [
+772.2,
+830.0
+],
+"roof_rgb": [
+107,
+114,
+121
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403520": {
+"decision": "accepted",
+"point_px": [
+784.0,
+819.3
+],
+"roof_rgb": [
+122,
+137,
+145
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403521": {
+"decision": "accepted",
+"point_px": [
+794.4,
+806.1
+],
+"roof_rgb": [
+156,
+161,
+162
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403522": {
+"decision": "accepted",
+"point_px": [
+802.7,
+790.7
+],
+"roof_rgb": [
+143,
+158,
+156
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403523": {
+"decision": "accepted",
+"point_px": [
+820.2,
+772.0
+],
+"roof_rgb": [
+106,
+117,
+117
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403527": {
+"decision": "accepted",
+"point_px": [
+788.0,
+773.6
+],
+"roof_rgb": [
+146,
+151,
+153
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/1507403528": {
+"decision": "accepted",
+"point_px": [
+770.5,
+790.1
+],
+"roof_rgb": [
+113,
+124,
+126
+],
+"block": "06_06"
+},
+"feature:building_footprint:plateau/bldg_ce933d27-b40e-49b4-b60b-2e1759d407b8": {
+"decision": "accepted",
+"point_px": [
+886.7,
+798.0
+],
+"roof_rgb": [
+130,
+110,
+117
+],
+"block": "06_06"
+},
+"feature:building_footprint:way/225101048": {
+"decision": "accepted",
+"point_px": [
+267.5,
+989.0
+],
+"roof_rgb": [
+170,
+176,
+179
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/225101506": {
+"decision": "accepted",
+"point_px": [
+265.9,
+1019.9
+],
+"roof_rgb": [
+141,
+149,
+151
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/441951068": {
+"decision": "accepted",
+"point_px": [
+303.8,
+970.2
+],
+"roof_rgb": [
+110,
+120,
+128
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/441951069": {
+"decision": "accepted",
+"point_px": [
+313.1,
+953.6
+],
+"roof_rgb": [
+86,
+102,
+107
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/441951070": {
+"decision": "accepted",
+"point_px": [
+335.6,
+919.2
+],
+"roof_rgb": [
+122,
+133,
+139
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/441951081": {
+"decision": "accepted",
+"point_px": [
+289.8,
+941.4
+],
+"roof_rgb": [
+159,
+165,
+170
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403751": {
+"decision": "accepted",
+"point_px": [
+380.8,
+990.4
+],
+"roof_rgb": [
+153,
+171,
+173
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403752": {
+"decision": "accepted",
+"point_px": [
+359.0,
+972.0
+],
+"roof_rgb": [
+144,
+158,
+165
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403754": {
+"decision": "accepted",
+"point_px": [
+364.1,
+950.9
+],
+"roof_rgb": [
+109,
+123,
+132
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403755": {
+"decision": "accepted",
+"point_px": [
+371.7,
+930.4
+],
+"roof_rgb": [
+235,
+244,
+242
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403778": {
+"decision": "accepted",
+"point_px": [
+330.0,
+1000.1
+],
+"roof_rgb": [
+144,
+155,
+160
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403790": {
+"decision": "accepted",
+"point_px": [
+353.7,
+1017.3
+],
+"roof_rgb": [
+125,
+134,
+137
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403795": {
+"decision": "accepted",
+"point_px": [
+339.5,
+1009.0
+],
+"roof_rgb": [
+161,
+174,
+169
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403815": {
+"decision": "accepted",
+"point_px": [
+321.4,
+939.3
+],
+"roof_rgb": [
+139,
+139,
+134
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403816": {
+"decision": "accepted",
+"point_px": [
+309.9,
+905.4
+],
+"roof_rgb": [
+157,
+168,
+172
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403819": {
+"decision": "accepted",
+"point_px": [
+263.3,
+926.8
+],
+"roof_rgb": [
+146,
+156,
+158
+],
+"block": "07_02"
+},
+"feature:building_footprint:plateau/bldg_860533da-641f-4362-8168-833e12e43345": {
+"decision": "accepted",
+"point_px": [
+292.4,
+915.5
+],
+"roof_rgb": [
+107,
+116,
+108
+],
+"block": "07_02"
+},
+"feature:building_footprint:plateau/bldg_d08a339c-31bc-49da-b5e7-637888199d32": {
+"decision": "accepted",
+"point_px": [
+303.9,
+925.9
+],
+"roof_rgb": [
+113,
+118,
+117
+],
+"block": "07_02"
+},
+"feature:building_footprint:plateau/bldg_ea6b9271-b7d3-430e-b994-e8824a5b23b9": {
+"decision": "accepted",
+"point_px": [
+267.3,
+941.5
+],
+"roof_rgb": [
+164,
+168,
+166
+],
+"block": "07_02"
+},
+"feature:building_footprint:way/1507403700": {
+"decision": "accepted",
+"point_px": [
+476.3,
+1017.8
+],
+"roof_rgb": [
+121,
+129,
+132
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403701": {
+"decision": "accepted",
+"point_px": [
+417.0,
+1011.7
+],
+"roof_rgb": [
+103,
+113,
+110
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403702": {
+"decision": "accepted",
+"point_px": [
+432.7,
+1020.4
+],
+"roof_rgb": [
+98,
+102,
+99
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403704": {
+"decision": "accepted",
+"point_px": [
+465.5,
+1009.1
+],
+"roof_rgb": [
+111,
+120,
+128
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403705": {
+"decision": "accepted",
+"point_px": [
+451.4,
+1001.3
+],
+"roof_rgb": [
+57,
+73,
+86
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403706": {
+"decision": "accepted",
+"point_px": [
+438.2,
+988.6
+],
+"roof_rgb": [
+60,
+79,
+78
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403707": {
+"decision": "accepted",
+"point_px": [
+453.3,
+972.6
+],
+"roof_rgb": [
+159,
+169,
+170
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403708": {
+"decision": "accepted",
+"point_px": [
+478.4,
+976.8
+],
+"roof_rgb": [
+103,
+107,
+117
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403710": {
+"decision": "accepted",
+"point_px": [
+502.9,
+996.0
+],
+"roof_rgb": [
+125,
+132,
+139
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403711": {
+"decision": "accepted",
+"point_px": [
+500.5,
+980.4
+],
+"roof_rgb": [
+202,
+208,
+209
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403714": {
+"decision": "accepted",
+"point_px": [
+486.9,
+957.0
+],
+"roof_rgb": [
+114,
+120,
+125
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403715": {
+"decision": "accepted",
+"point_px": [
+478.4,
+948.4
+],
+"roof_rgb": [
+133,
+135,
+138
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403716": {
+"decision": "accepted",
+"point_px": [
+480.7,
+938.9
+],
+"roof_rgb": [
+98,
+107,
+112
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403717": {
+"decision": "accepted",
+"point_px": [
+499.4,
+937.2
+],
+"roof_rgb": [
+124,
+135,
+138
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403718": {
+"decision": "accepted",
+"point_px": [
+506.7,
+926.1
+],
+"roof_rgb": [
+123,
+130,
+136
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403719": {
+"decision": "accepted",
+"point_px": [
+483.5,
+928.5
+],
+"roof_rgb": [
+101,
+112,
+120
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403720": {
+"decision": "accepted",
+"point_px": [
+497.5,
+918.2
+],
+"roof_rgb": [
+125,
+134,
+139
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403721": {
+"decision": "accepted",
+"point_px": [
+502.7,
+909.7
+],
+"roof_rgb": [
+122,
+134,
+138
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403744": {
+"decision": "accepted",
+"point_px": [
+443.7,
+903.1
+],
+"roof_rgb": [
+99,
+111,
+117
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403745": {
+"decision": "accepted",
+"point_px": [
+433.7,
+913.3
+],
+"roof_rgb": [
+95,
+109,
+111
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403746": {
+"decision": "accepted",
+"point_px": [
+424.9,
+926.2
+],
+"roof_rgb": [
+104,
+117,
+125
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403747": {
+"decision": "accepted",
+"point_px": [
+408.8,
+941.4
+],
+"roof_rgb": [
+96,
+106,
+112
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403748": {
+"decision": "accepted",
+"point_px": [
+391.8,
+964.2
+],
+"roof_rgb": [
+161,
+172,
+176
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403749": {
+"decision": "accepted",
+"point_px": [
+411.7,
+971.5
+],
+"roof_rgb": [
+152,
+167,
+171
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403750": {
+"decision": "accepted",
+"point_px": [
+402.7,
+998.5
+],
+"roof_rgb": [
+161,
+193,
+193
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403753": {
+"decision": "accepted",
+"point_px": [
+386.5,
+938.9
+],
+"roof_rgb": [
+125,
+136,
+142
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403756": {
+"decision": "accepted",
+"point_px": [
+390.8,
+915.1
+],
+"roof_rgb": [
+108,
+119,
+123
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403758": {
+"decision": "accepted",
+"point_px": [
+392.1,
+897.2
+],
+"roof_rgb": [
+147,
+157,
+160
+],
+"block": "07_03"
+},
+"feature:building_footprint:plateau/bldg_e9420c70-daf3-4b49-8128-5822064931b4": {
+"decision": "accepted",
+"point_px": [
+413.9,
+912.4
+],
+"roof_rgb": [
+91,
+102,
+109
+],
+"block": "07_03"
+},
+"feature:building_footprint:plateau/bldg_3929d18e-8293-4a7b-a57e-739aca2bf4b1": {
+"decision": "accepted",
+"point_px": [
+389.4,
+1000.0
+],
+"roof_rgb": [
+159,
+164,
+156
+],
+"block": "07_03"
+},
+"feature:building_footprint:way/1507403614": {
+"decision": "accepted",
+"point_px": [
+637.9,
+941.5
+],
+"roof_rgb": [
+128,
+132,
+133
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403616": {
+"decision": "accepted",
+"point_px": [
+639.1,
+988.7
+],
+"roof_rgb": [
+137,
+151,
+158
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403617": {
+"decision": "accepted",
+"point_px": [
+621.5,
+973.7
+],
+"roof_rgb": [
+136,
+149,
+151
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403618": {
+"decision": "accepted",
+"point_px": [
+589.7,
+1006.2
+],
+"roof_rgb": [
+163,
+173,
+174
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403619": {
+"decision": "accepted",
+"point_px": [
+608.7,
+1017.7
+],
+"roof_rgb": [
+106,
+149,
+171
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403709": {
+"decision": "accepted",
+"point_px": [
+534.7,
+1015.7
+],
+"roof_rgb": [
+200,
+202,
+199
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403712": {
+"decision": "accepted",
+"point_px": [
+555.8,
+981.4
+],
+"roof_rgb": [
+143,
+159,
+161
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403713": {
+"decision": "accepted",
+"point_px": [
+523.8,
+959.8
+],
+"roof_rgb": [
+145,
+148,
+152
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403723": {
+"decision": "accepted",
+"point_px": [
+515.9,
+913.1
+],
+"roof_rgb": [
+144,
+150,
+153
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403724": {
+"decision": "accepted",
+"point_px": [
+524.2,
+901.2
+],
+"roof_rgb": [
+179,
+188,
+187
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403725": {
+"decision": "accepted",
+"point_px": [
+577.5,
+950.2
+],
+"roof_rgb": [
+90,
+100,
+106
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403726": {
+"decision": "accepted",
+"point_px": [
+556.9,
+934.4
+],
+"roof_rgb": [
+94,
+110,
+122
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403727": {
+"decision": "accepted",
+"point_px": [
+538.5,
+920.9
+],
+"roof_rgb": [
+150,
+153,
+159
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403728": {
+"decision": "accepted",
+"point_px": [
+595.6,
+927.8
+],
+"roof_rgb": [
+97,
+112,
+123
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403729": {
+"decision": "accepted",
+"point_px": [
+579.8,
+918.8
+],
+"roof_rgb": [
+105,
+116,
+126
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403730": {
+"decision": "accepted",
+"point_px": [
+565.3,
+906.8
+],
+"roof_rgb": [
+85,
+102,
+111
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403731": {
+"decision": "accepted",
+"point_px": [
+547.6,
+899.2
+],
+"roof_rgb": [
+125,
+141,
+147
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403732": {
+"decision": "accepted",
+"point_px": [
+598.5,
+897.1
+],
+"roof_rgb": [
+124,
+109,
+120
+],
+"block": "07_04"
+},
+"feature:building_footprint:plateau/bldg_1ef7736a-4e4e-4806-a555-6af423da3aef": {
+"decision": "accepted",
+"point_px": [
+578.6,
+905.2
+],
+"roof_rgb": [
+112,
+122,
+126
+],
+"block": "07_04"
+},
+"feature:building_footprint:plateau/bldg_9f51114c-152b-4015-9840-cb5f650417e2": {
+"decision": "accepted",
+"point_px": [
+614.4,
+948.1
+],
+"roof_rgb": [
+148,
+151,
+145
+],
+"block": "07_04"
+},
+"feature:building_footprint:plateau/bldg_20f1662a-a1f1-40cf-b88d-5ec657abeadb": {
+"decision": "accepted",
+"point_px": [
+622.1,
+934.9
+],
+"roof_rgb": [
+147,
+154,
+161
+],
+"block": "07_04"
+},
+"feature:building_footprint:way/1507403558": {
+"decision": "accepted",
+"point_px": [
+697.3,
+897.2
+],
+"roof_rgb": [
+133,
+143,
+143
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403567": {
+"decision": "accepted",
+"point_px": [
+744.3,
+898.9
+],
+"roof_rgb": [
+133,
+167,
+179
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403568": {
+"decision": "accepted",
+"point_px": [
+727.8,
+922.3
+],
+"roof_rgb": [
+164,
+169,
+169
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403569": {
+"decision": "accepted",
+"point_px": [
+761.0,
+930.4
+],
+"roof_rgb": [
+179,
+156,
+160
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403594": {
+"decision": "accepted",
+"point_px": [
+680.6,
+988.8
+],
+"roof_rgb": [
+132,
+142,
+144
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403595": {
+"decision": "accepted",
+"point_px": [
+694.8,
+1018.7
+],
+"roof_rgb": [
+149,
+153,
+150
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403596": {
+"decision": "accepted",
+"point_px": [
+711.5,
+993.0
+],
+"roof_rgb": [
+89,
+98,
+103
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403605": {
+"decision": "accepted",
+"point_px": [
+742.3,
+991.6
+],
+"roof_rgb": [
+111,
+128,
+135
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403606": {
+"decision": "accepted",
+"point_px": [
+722.7,
+978.4
+],
+"roof_rgb": [
+64,
+100,
+121
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403607": {
+"decision": "accepted",
+"point_px": [
+732.0,
+960.9
+],
+"roof_rgb": [
+111,
+118,
+125
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403608": {
+"decision": "accepted",
+"point_px": [
+712.9,
+956.7
+],
+"roof_rgb": [
+131,
+160,
+135
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403609": {
+"decision": "accepted",
+"point_px": [
+705.0,
+940.6
+],
+"roof_rgb": [
+132,
+138,
+140
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403610": {
+"decision": "accepted",
+"point_px": [
+693.3,
+956.9
+],
+"roof_rgb": [
+170,
+148,
+154
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403611": {
+"decision": "accepted",
+"point_px": [
+683.6,
+940.3
+],
+"roof_rgb": [
+180,
+148,
+145
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403612": {
+"decision": "accepted",
+"point_px": [
+670.0,
+918.9
+],
+"roof_rgb": [
+138,
+153,
+156
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403613": {
+"decision": "accepted",
+"point_px": [
+654.0,
+902.2
+],
+"roof_rgb": [
+123,
+134,
+138
+],
+"block": "07_05"
+},
+"feature:building_footprint:way/1507403615": {
+"decision": "accepted",
+"point_px": [
+660.5,
+987.2
+],
+"roof_rgb": [
+136,
+139,
+144
+],
+"block": "07_05"
+},
+"feature:building_footprint:plateau/bldg_ed388774-88fa-410f-b06f-97670ea8c22a": {
+"decision": "rejected",
+"reason": "dot on an unclear pale patch; no readable roof",
+"block": "07_05"
+},
+"feature:building_footprint:way/225197357": {
+"decision": "accepted",
+"point_px": [
+145.7,
+1039.5
+],
+"roof_rgb": [
+149,
+195,
+226
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225197535": {
+"decision": "accepted",
+"point_px": [
+182.9,
+1029.3
+],
+"roof_rgb": [
+129,
+133,
+140
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225197536": {
+"decision": "accepted",
+"point_px": [
+197.6,
+1038.1
+],
+"roof_rgb": [
+147,
+139,
+143
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225197883": {
+"decision": "accepted",
+"point_px": [
+217.1,
+1056.0
+],
+"roof_rgb": [
+134,
+139,
+142
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225197884": {
+"decision": "accepted",
+"point_px": [
+245.1,
+1064.5
+],
+"roof_rgb": [
+103,
+114,
+119
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225197885": {
+"decision": "accepted",
+"point_px": [
+234.9,
+1080.1
+],
+"roof_rgb": [
+102,
+115,
+124
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225197886": {
+"decision": "accepted",
+"point_px": [
+224.5,
+1060.6
+],
+"roof_rgb": [
+147,
+152,
+157
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225197887": {
+"decision": "accepted",
+"point_px": [
+210.2,
+1051.0
+],
+"roof_rgb": [
+139,
+127,
+133
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225197888": {
+"decision": "accepted",
+"point_px": [
+240.6,
+1073.6
+],
+"roof_rgb": [
+184,
+196,
+195
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225198068": {
+"decision": "accepted",
+"point_px": [
+217.5,
+1086.0
+],
+"roof_rgb": [
+125,
+131,
+134
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225198069": {
+"decision": "accepted",
+"point_px": [
+210.8,
+1117.2
+],
+"roof_rgb": [
+202,
+208,
+207
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225198100": {
+"decision": "accepted",
+"point_px": [
+190.0,
+1129.1
+],
+"roof_rgb": [
+206,
+215,
+212
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225198101": {
+"decision": "accepted",
+"point_px": [
+197.1,
+1123.7
+],
+"roof_rgb": [
+85,
+96,
+100
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225198151": {
+"decision": "accepted",
+"point_px": [
+145.8,
+1078.9
+],
+"roof_rgb": [
+160,
+163,
+164
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225198199": {
+"decision": "accepted",
+"point_px": [
+174.9,
+1120.0
+],
+"roof_rgb": [
+118,
+119,
+127
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225367798": {
+"decision": "accepted",
+"point_px": [
+251.9,
+1125.2
+],
+"roof_rgb": [
+163,
+164,
+164
+],
+"block": "08_01"
+},
+"feature:building_footprint:plateau/bldg_2082c92d-7efc-4450-aafc-9e5605200198": {
+"decision": "accepted",
+"point_px": [
+170.9,
+1045.9
+],
+"roof_rgb": [
+156,
+157,
+157
+],
+"block": "08_01"
+},
+"feature:building_footprint:plateau/bldg_7a870f8d-82ed-4398-9700-b5e02e39e8a5": {
+"decision": "accepted",
+"point_px": [
+173.5,
+1068.8
+],
+"roof_rgb": [
+187,
+189,
+186
+],
+"block": "08_01"
+},
+"feature:building_footprint:plateau/bldg_9cf6d457-c31c-4b19-aecb-3aa449cb9e83": {
+"decision": "accepted",
+"point_px": [
+181.0,
+1057.2
+],
+"roof_rgb": [
+109,
+112,
+118
+],
+"block": "08_01"
+},
+"feature:building_footprint:way/225367799": {
+"decision": "accepted",
+"point_px": [
+311.4,
+1140.1
+],
+"roof_rgb": [
+126,
+138,
+142
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/225367800": {
+"decision": "accepted",
+"point_px": [
+299.4,
+1127.0
+],
+"roof_rgb": [
+168,
+183,
+184
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/225367801": {
+"decision": "accepted",
+"point_px": [
+279.5,
+1125.6
+],
+"roof_rgb": [
+206,
+186,
+184
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/225367803": {
+"decision": "accepted",
+"point_px": [
+275.5,
+1096.6
+],
+"roof_rgb": [
+212,
+219,
+219
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/225367804": {
+"decision": "accepted",
+"point_px": [
+287.0,
+1110.6
+],
+"roof_rgb": [
+124,
+133,
+143
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/225367805": {
+"decision": "accepted",
+"point_px": [
+289.6,
+1147.5
+],
+"roof_rgb": [
+182,
+193,
+194
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/225367806": {
+"decision": "accepted",
+"point_px": [
+318.5,
+1151.4
+],
+"roof_rgb": [
+174,
+176,
+171
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/225367807": {
+"decision": "accepted",
+"point_px": [
+264.3,
+1133.0
+],
+"roof_rgb": [
+129,
+145,
+151
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403686": {
+"decision": "accepted",
+"point_px": [
+364.3,
+1147.8
+],
+"roof_rgb": [
+148,
+147,
+151
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403687": {
+"decision": "accepted",
+"point_px": [
+361.9,
+1140.0
+],
+"roof_rgb": [
+116,
+118,
+126
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403689": {
+"decision": "accepted",
+"point_px": [
+359.5,
+1120.1
+],
+"roof_rgb": [
+209,
+212,
+209
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403779": {
+"decision": "accepted",
+"point_px": [
+382.7,
+1040.0
+],
+"roof_rgb": [
+147,
+155,
+161
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403780": {
+"decision": "accepted",
+"point_px": [
+370.3,
+1055.0
+],
+"roof_rgb": [
+114,
+123,
+134
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403781": {
+"decision": "accepted",
+"point_px": [
+364.0,
+1063.0
+],
+"roof_rgb": [
+116,
+127,
+134
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403782": {
+"decision": "accepted",
+"point_px": [
+358.0,
+1070.1
+],
+"roof_rgb": [
+118,
+129,
+137
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403783": {
+"decision": "accepted",
+"point_px": [
+353.0,
+1078.1
+],
+"roof_rgb": [
+119,
+127,
+135
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403784": {
+"decision": "accepted",
+"point_px": [
+343.2,
+1090.6
+],
+"roof_rgb": [
+176,
+178,
+174
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403785": {
+"decision": "accepted",
+"point_px": [
+329.1,
+1103.6
+],
+"roof_rgb": [
+187,
+194,
+194
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403786": {
+"decision": "accepted",
+"point_px": [
+324.1,
+1080.8
+],
+"roof_rgb": [
+173,
+183,
+185
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403787": {
+"decision": "accepted",
+"point_px": [
+349.8,
+1057.1
+],
+"roof_rgb": [
+165,
+179,
+180
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403788": {
+"decision": "accepted",
+"point_px": [
+361.0,
+1036.1
+],
+"roof_rgb": [
+84,
+91,
+97
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403789": {
+"decision": "accepted",
+"point_px": [
+370.0,
+1026.4
+],
+"roof_rgb": [
+132,
+133,
+136
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403791": {
+"decision": "accepted",
+"point_px": [
+350.5,
+1030.3
+],
+"roof_rgb": [
+91,
+93,
+99
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403792": {
+"decision": "accepted",
+"point_px": [
+323.8,
+1063.8
+],
+"roof_rgb": [
+171,
+175,
+174
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403793": {
+"decision": "accepted",
+"point_px": [
+298.6,
+1053.8
+],
+"roof_rgb": [
+156,
+167,
+168
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403794": {
+"decision": "accepted",
+"point_px": [
+314.9,
+1028.3
+],
+"roof_rgb": [
+113,
+127,
+136
+],
+"block": "08_02"
+},
+"feature:building_footprint:way/1507403673": {
+"decision": "accepted",
+"point_px": [
+456.9,
+1088.4
+],
+"roof_rgb": [
+123,
+135,
+141
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403674": {
+"decision": "accepted",
+"point_px": [
+487.9,
+1081.3
+],
+"roof_rgb": [
+224,
+232,
+233
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403675": {
+"decision": "accepted",
+"point_px": [
+468.1,
+1068.2
+],
+"roof_rgb": [
+206,
+210,
+206
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403676": {
+"decision": "accepted",
+"point_px": [
+432.0,
+1059.4
+],
+"roof_rgb": [
+119,
+125,
+129
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403677": {
+"decision": "accepted",
+"point_px": [
+447.8,
+1063.3
+],
+"roof_rgb": [
+105,
+115,
+122
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403678": {
+"decision": "accepted",
+"point_px": [
+428.6,
+1085.7
+],
+"roof_rgb": [
+122,
+131,
+136
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403679": {
+"decision": "accepted",
+"point_px": [
+424.7,
+1104.5
+],
+"roof_rgb": [
+148,
+158,
+164
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403680": {
+"decision": "accepted",
+"point_px": [
+469.5,
+1114.4
+],
+"roof_rgb": [
+132,
+146,
+155
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403681": {
+"decision": "accepted",
+"point_px": [
+449.8,
+1142.4
+],
+"roof_rgb": [
+139,
+144,
+141
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403684": {
+"decision": "accepted",
+"point_px": [
+405.2,
+1148.7
+],
+"roof_rgb": [
+105,
+119,
+128
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403688": {
+"decision": "accepted",
+"point_px": [
+388.5,
+1130.5
+],
+"roof_rgb": [
+123,
+128,
+131
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403690": {
+"decision": "accepted",
+"point_px": [
+384.3,
+1099.5
+],
+"roof_rgb": [
+143,
+154,
+152
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403691": {
+"decision": "accepted",
+"point_px": [
+393.9,
+1089.6
+],
+"roof_rgb": [
+177,
+191,
+192
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403692": {
+"decision": "accepted",
+"point_px": [
+403.4,
+1061.4
+],
+"roof_rgb": [
+125,
+105,
+115
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403693": {
+"decision": "accepted",
+"point_px": [
+410.5,
+1042.5
+],
+"roof_rgb": [
+107,
+114,
+117
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403694": {
+"decision": "accepted",
+"point_px": [
+473.9,
+1039.3
+],
+"roof_rgb": [
+149,
+157,
+164
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403695": {
+"decision": "accepted",
+"point_px": [
+497.3,
+1050.7
+],
+"roof_rgb": [
+182,
+182,
+179
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403698": {
+"decision": "accepted",
+"point_px": [
+505.5,
+1033.4
+],
+"roof_rgb": [
+185,
+189,
+190
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403699": {
+"decision": "accepted",
+"point_px": [
+491.4,
+1024.4
+],
+"roof_rgb": [
+138,
+142,
+144
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403703": {
+"decision": "accepted",
+"point_px": [
+449.4,
+1026.6
+],
+"roof_rgb": [
+134,
+137,
+133
+],
+"block": "08_03"
+},
+"feature:building_footprint:way/1507403620": {
+"decision": "accepted",
+"point_px": [
+635.9,
+1029.8
+],
+"roof_rgb": [
+122,
+131,
+137
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403634": {
+"decision": "accepted",
+"point_px": [
+638.5,
+1126.2
+],
+"roof_rgb": [
+117,
+130,
+133
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403636": {
+"decision": "accepted",
+"point_px": [
+621.5,
+1109.1
+],
+"roof_rgb": [
+132,
+139,
+143
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403637": {
+"decision": "accepted",
+"point_px": [
+608.7,
+1101.4
+],
+"roof_rgb": [
+85,
+99,
+105
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403638": {
+"decision": "accepted",
+"point_px": [
+618.9,
+1079.2
+],
+"roof_rgb": [
+107,
+120,
+127
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403639": {
+"decision": "accepted",
+"point_px": [
+631.7,
+1063.7
+],
+"roof_rgb": [
+178,
+193,
+201
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403640": {
+"decision": "accepted",
+"point_px": [
+607.5,
+1058.5
+],
+"roof_rgb": [
+80,
+91,
+96
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403641": {
+"decision": "accepted",
+"point_px": [
+585.6,
+1088.7
+],
+"roof_rgb": [
+168,
+160,
+160
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403642": {
+"decision": "accepted",
+"point_px": [
+576.3,
+1066.3
+],
+"roof_rgb": [
+187,
+203,
+205
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403643": {
+"decision": "accepted",
+"point_px": [
+577.4,
+1026.6
+],
+"roof_rgb": [
+119,
+138,
+145
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403644": {
+"decision": "accepted",
+"point_px": [
+568.1,
+1039.8
+],
+"roof_rgb": [
+83,
+95,
+104
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403645": {
+"decision": "accepted",
+"point_px": [
+561.2,
+1052.2
+],
+"roof_rgb": [
+114,
+119,
+125
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403646": {
+"decision": "accepted",
+"point_px": [
+549.7,
+1064.8
+],
+"roof_rgb": [
+195,
+206,
+207
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403647": {
+"decision": "accepted",
+"point_px": [
+528.4,
+1101.1
+],
+"roof_rgb": [
+213,
+225,
+225
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403648": {
+"decision": "accepted",
+"point_px": [
+558.5,
+1117.0
+],
+"roof_rgb": [
+212,
+221,
+220
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403649": {
+"decision": "accepted",
+"point_px": [
+553.8,
+1127.1
+],
+"roof_rgb": [
+200,
+202,
+206
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403650": {
+"decision": "accepted",
+"point_px": [
+513.9,
+1125.5
+],
+"roof_rgb": [
+139,
+149,
+152
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403696": {
+"decision": "accepted",
+"point_px": [
+514.5,
+1064.6
+],
+"roof_rgb": [
+193,
+194,
+189
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/1507403697": {
+"decision": "accepted",
+"point_px": [
+522.9,
+1043.4
+],
+"roof_rgb": [
+150,
+154,
+158
+],
+"block": "08_04"
+},
+"feature:building_footprint:plateau/bldg_176b6f67-e51d-4507-8a3b-eb87bf3f6d1a": {
+"decision": "accepted",
+"point_px": [
+570.0,
+1123.5
+],
+"roof_rgb": [
+215,
+221,
+217
+],
+"block": "08_04"
+},
+"feature:building_footprint:way/225482963": {
+"decision": "accepted",
+"point_px": [
+126.2,
+1226.2
+],
+"roof_rgb": [
+105,
+114,
+124
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/225482968": {
+"decision": "accepted",
+"point_px": [
+114.5,
+1177.7
+],
+"roof_rgb": [
+95,
+108,
+116
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398045": {
+"decision": "accepted",
+"point_px": [
+73.8,
+1266.2
+],
+"roof_rgb": [
+147,
+161,
+163
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398046": {
+"decision": "accepted",
+"point_px": [
+74.0,
+1238.3
+],
+"roof_rgb": [
+105,
+115,
+119
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398047": {
+"decision": "accepted",
+"point_px": [
+57.5,
+1242.7
+],
+"roof_rgb": [
+122,
+130,
+131
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398048": {
+"decision": "accepted",
+"point_px": [
+49.1,
+1224.5
+],
+"roof_rgb": [
+114,
+123,
+124
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398049": {
+"decision": "accepted",
+"point_px": [
+69.3,
+1221.6
+],
+"roof_rgb": [
+116,
+142,
+151
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398050": {
+"decision": "accepted",
+"point_px": [
+68.1,
+1203.4
+],
+"roof_rgb": [
+147,
+148,
+151
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398051": {
+"decision": "accepted",
+"point_px": [
+40.7,
+1192.3
+],
+"roof_rgb": [
+136,
+145,
+150
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398052": {
+"decision": "accepted",
+"point_px": [
+48.6,
+1166.4
+],
+"roof_rgb": [
+125,
+133,
+134
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398053": {
+"decision": "accepted",
+"point_px": [
+60.0,
+1171.6
+],
+"roof_rgb": [
+151,
+162,
+153
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398054": {
+"decision": "accepted",
+"point_px": [
+73.9,
+1185.8
+],
+"roof_rgb": [
+132,
+142,
+141
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398055": {
+"decision": "accepted",
+"point_px": [
+75.8,
+1175.0
+],
+"roof_rgb": [
+132,
+141,
+143
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/1507398056": {
+"decision": "accepted",
+"point_px": [
+78.6,
+1162.1
+],
+"roof_rgb": [
+122,
+136,
+137
+],
+"block": "09_00"
+},
+"feature:building_footprint:plateau/bldg_a8b3ad84-bf1f-4319-a173-65e9b8cec10f": {
+"decision": "accepted",
+"point_px": [
+77.3,
+1279.6
+],
+"roof_rgb": [
+97,
+107,
+116
+],
+"block": "09_00"
+},
+"feature:building_footprint:way/225369224": {
+"decision": "accepted",
+"point_px": [
+216.6,
+1175.4
+],
+"roof_rgb": [
+130,
+132,
+129
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/225369239": {
+"decision": "accepted",
+"point_px": [
+230.1,
+1159.9
+],
+"roof_rgb": [
+125,
+133,
+139
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/225563759": {
+"decision": "accepted",
+"point_px": [
+249.8,
+1228.8
+],
+"roof_rgb": [
+172,
+171,
+171
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/1507398027": {
+"decision": "accepted",
+"point_px": [
+190.8,
+1276.0
+],
+"roof_rgb": [
+129,
+113,
+121
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/1507398028": {
+"decision": "accepted",
+"point_px": [
+170.2,
+1269.3
+],
+"roof_rgb": [
+147,
+152,
+152
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/1507398029": {
+"decision": "accepted",
+"point_px": [
+164.9,
+1243.9
+],
+"roof_rgb": [
+207,
+217,
+216
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/1507398030": {
+"decision": "accepted",
+"point_px": [
+178.6,
+1225.7
+],
+"roof_rgb": [
+102,
+117,
+124
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/1507398031": {
+"decision": "accepted",
+"point_px": [
+193.8,
+1244.7
+],
+"roof_rgb": [
+128,
+143,
+148
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/1507398032": {
+"decision": "accepted",
+"point_px": [
+210.1,
+1264.0
+],
+"roof_rgb": [
+127,
+141,
+151
+],
+"block": "09_01"
+},
+"feature:building_footprint:way/225367802": {
+"decision": "accepted",
+"point_px": [
+308.3,
+1165.4
+],
+"roof_rgb": [
+168,
+175,
+175
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225367852": {
+"decision": "accepted",
+"point_px": [
+353.1,
+1197.5
+],
+"roof_rgb": [
+198,
+210,
+210
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369223": {
+"decision": "accepted",
+"point_px": [
+336.4,
+1249.4
+],
+"roof_rgb": [
+196,
+200,
+197
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369225": {
+"decision": "accepted",
+"point_px": [
+281.8,
+1222.8
+],
+"roof_rgb": [
+164,
+159,
+160
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369226": {
+"decision": "accepted",
+"point_px": [
+316.8,
+1214.0
+],
+"roof_rgb": [
+134,
+133,
+136
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369227": {
+"decision": "accepted",
+"point_px": [
+350.9,
+1237.5
+],
+"roof_rgb": [
+169,
+165,
+169
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369228": {
+"decision": "accepted",
+"point_px": [
+295.4,
+1202.0
+],
+"roof_rgb": [
+97,
+104,
+103
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369229": {
+"decision": "accepted",
+"point_px": [
+326.7,
+1268.3
+],
+"roof_rgb": [
+140,
+145,
+148
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369230": {
+"decision": "accepted",
+"point_px": [
+260.8,
+1189.8
+],
+"roof_rgb": [
+180,
+191,
+193
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369231": {
+"decision": "accepted",
+"point_px": [
+337.5,
+1228.6
+],
+"roof_rgb": [
+92,
+97,
+104
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369232": {
+"decision": "accepted",
+"point_px": [
+305.1,
+1212.5
+],
+"roof_rgb": [
+162,
+156,
+156
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369233": {
+"decision": "accepted",
+"point_px": [
+301.5,
+1240.9
+],
+"roof_rgb": [
+97,
+107,
+114
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369234": {
+"decision": "accepted",
+"point_px": [
+334.0,
+1258.6
+],
+"roof_rgb": [
+199,
+205,
+201
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369235": {
+"decision": "accepted",
+"point_px": [
+318.4,
+1258.2
+],
+"roof_rgb": [
+131,
+144,
+149
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369236": {
+"decision": "accepted",
+"point_px": [
+288.4,
+1229.0
+],
+"roof_rgb": [
+117,
+119,
+122
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369237": {
+"decision": "accepted",
+"point_px": [
+328.9,
+1219.5
+],
+"roof_rgb": [
+189,
+198,
+200
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225369238": {
+"decision": "accepted",
+"point_px": [
+312.7,
+1228.7
+],
+"roof_rgb": [
+172,
+201,
+181
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225562520": {
+"decision": "accepted",
+"point_px": [
+364.1,
+1268.6
+],
+"roof_rgb": [
+120,
+123,
+128
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225562523": {
+"decision": "accepted",
+"point_px": [
+372.6,
+1263.6
+],
+"roof_rgb": [
+132,
+134,
+130
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225562528": {
+"decision": "accepted",
+"point_px": [
+383.9,
+1258.2
+],
+"roof_rgb": [
+133,
+139,
+141
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225563756": {
+"decision": "accepted",
+"point_px": [
+270.5,
+1250.6
+],
+"roof_rgb": [
+131,
+125,
+121
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225563757": {
+"decision": "accepted",
+"point_px": [
+286.3,
+1266.5
+],
+"roof_rgb": [
+182,
+190,
+188
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225563758": {
+"decision": "accepted",
+"point_px": [
+278.6,
+1256.1
+],
+"roof_rgb": [
+116,
+124,
+132
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225563760": {
+"decision": "accepted",
+"point_px": [
+259.0,
+1240.2
+],
+"roof_rgb": [
+155,
+155,
+160
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/1507403685": {
+"decision": "accepted",
+"point_px": [
+368.0,
+1155.3
+],
+"roof_rgb": [
+166,
+167,
+163
+],
+"block": "09_02"
+},
+"feature:building_footprint:plateau/bldg_f55b4339-c107-4912-94f0-ae7676de7832": {
+"decision": "accepted",
+"point_px": [
+294.1,
+1272.8
+],
+"roof_rgb": [
+168,
+174,
+174
+],
+"block": "09_02"
+},
+"feature:building_footprint:way/225562527": {
+"decision": "accepted",
+"point_px": [
+398.5,
+1274.1
+],
+"roof_rgb": [
+123,
+132,
+138
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403659": {
+"decision": "accepted",
+"point_px": [
+498.0,
+1183.8
+],
+"roof_rgb": [
+118,
+120,
+123
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403660": {
+"decision": "accepted",
+"point_px": [
+439.3,
+1194.5
+],
+"roof_rgb": [
+159,
+173,
+176
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403661": {
+"decision": "accepted",
+"point_px": [
+457.9,
+1214.4
+],
+"roof_rgb": [
+186,
+192,
+192
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403662": {
+"decision": "accepted",
+"point_px": [
+505.6,
+1243.3
+],
+"roof_rgb": [
+130,
+138,
+134
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403664": {
+"decision": "accepted",
+"point_px": [
+491.9,
+1252.7
+],
+"roof_rgb": [
+135,
+136,
+140
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403665": {
+"decision": "accepted",
+"point_px": [
+478.2,
+1256.1
+],
+"roof_rgb": [
+69,
+73,
+82
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403666": {
+"decision": "accepted",
+"point_px": [
+463.0,
+1265.0
+],
+"roof_rgb": [
+149,
+130,
+134
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403667": {
+"decision": "accepted",
+"point_px": [
+470.5,
+1238.3
+],
+"roof_rgb": [
+116,
+122,
+127
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403668": {
+"decision": "accepted",
+"point_px": [
+441.0,
+1231.2
+],
+"roof_rgb": [
+161,
+176,
+177
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403669": {
+"decision": "accepted",
+"point_px": [
+431.9,
+1219.4
+],
+"roof_rgb": [
+148,
+152,
+153
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403670": {
+"decision": "accepted",
+"point_px": [
+428.3,
+1235.7
+],
+"roof_rgb": [
+180,
+192,
+192
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403671": {
+"decision": "accepted",
+"point_px": [
+411.7,
+1217.6
+],
+"roof_rgb": [
+160,
+163,
+161
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403672": {
+"decision": "accepted",
+"point_px": [
+420.1,
+1206.7
+],
+"roof_rgb": [
+180,
+190,
+192
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403682": {
+"decision": "accepted",
+"point_px": [
+417.9,
+1170.8
+],
+"roof_rgb": [
+158,
+160,
+157
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403683": {
+"decision": "accepted",
+"point_px": [
+389.9,
+1173.3
+],
+"roof_rgb": [
+195,
+204,
+201
+],
+"block": "09_03"
+},
+"feature:building_footprint:way/1507403651": {
+"decision": "accepted",
+"point_px": [
+545.1,
+1157.4
+],
+"roof_rgb": [
+212,
+222,
+218
+],
+"block": "09_04"
+},
+"feature:building_footprint:way/1507403653": {
+"decision": "accepted",
+"point_px": [
+628.6,
+1155.2
+],
+"roof_rgb": [
+199,
+211,
+211
+],
+"block": "09_04"
+},
+"feature:building_footprint:way/1507403654": {
+"decision": "accepted",
+"point_px": [
+588.0,
+1152.9
+],
+"roof_rgb": [
+82,
+92,
+103
+],
+"block": "09_04"
+},
+"feature:building_footprint:way/1507403655": {
+"decision": "accepted",
+"point_px": [
+576.6,
+1180.8
+],
+"roof_rgb": [
+128,
+136,
+142
+],
+"block": "09_04"
+},
+"feature:building_footprint:way/1507403656": {
+"decision": "accepted",
+"point_px": [
+552.1,
+1219.7
+],
+"roof_rgb": [
+181,
+188,
+188
+],
+"block": "09_04"
+},
+"feature:building_footprint:way/1507403657": {
+"decision": "accepted",
+"point_px": [
+561.2,
+1205.4
+],
+"roof_rgb": [
+131,
+139,
+142
+],
+"block": "09_04"
+},
+"feature:building_footprint:way/1507403658": {
+"decision": "accepted",
+"point_px": [
+537.0,
+1197.5
+],
+"roof_rgb": [
+149,
+158,
+159
+],
+"block": "09_04"
+},
+"feature:building_footprint:way/1507403663": {
+"decision": "rejected",
+"reason": "dot on garden greenery beside the tracks",
+"block": "09_04"
+},
+"feature:building_footprint:way/1507398008": {
+"decision": "accepted",
+"point_px": [
+232.4,
+1357.2
+],
+"roof_rgb": [
+142,
+136,
+142
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398009": {
+"decision": "accepted",
+"point_px": [
+219.2,
+1346.5
+],
+"roof_rgb": [
+109,
+115,
+124
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398010": {
+"decision": "accepted",
+"point_px": [
+250.8,
+1350.8
+],
+"roof_rgb": [
+136,
+141,
+147
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398011": {
+"decision": "accepted",
+"point_px": [
+243.6,
+1342.6
+],
+"roof_rgb": [
+181,
+190,
+191
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398012": {
+"decision": "accepted",
+"point_px": [
+237.8,
+1336.3
+],
+"roof_rgb": [
+213,
+222,
+221
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398013": {
+"decision": "accepted",
+"point_px": [
+231.1,
+1328.2
+],
+"roof_rgb": [
+135,
+151,
+160
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398014": {
+"decision": "accepted",
+"point_px": [
+218.9,
+1314.4
+],
+"roof_rgb": [
+134,
+140,
+144
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398015": {
+"decision": "accepted",
+"point_px": [
+201.4,
+1302.3
+],
+"roof_rgb": [
+172,
+183,
+185
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398016": {
+"decision": "accepted",
+"point_px": [
+208.8,
+1326.4
+],
+"roof_rgb": [
+157,
+133,
+140
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398017": {
+"decision": "accepted",
+"point_px": [
+218.7,
+1337.1
+],
+"roof_rgb": [
+86,
+97,
+104
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398018": {
+"decision": "accepted",
+"point_px": [
+200.8,
+1343.2
+],
+"roof_rgb": [
+135,
+134,
+134
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398020": {
+"decision": "accepted",
+"point_px": [
+190.9,
+1359.1
+],
+"roof_rgb": [
+107,
+114,
+120
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398021": {
+"decision": "accepted",
+"point_px": [
+183.4,
+1348.8
+],
+"roof_rgb": [
+113,
+120,
+128
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398022": {
+"decision": "accepted",
+"point_px": [
+174.7,
+1330.5
+],
+"roof_rgb": [
+198,
+209,
+207
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398023": {
+"decision": "accepted",
+"point_px": [
+173.2,
+1312.9
+],
+"roof_rgb": [
+58,
+73,
+83
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398024": {
+"decision": "accepted",
+"point_px": [
+170.5,
+1301.0
+],
+"roof_rgb": [
+130,
+135,
+126
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398025": {
+"decision": "accepted",
+"point_px": [
+168.9,
+1290.5
+],
+"roof_rgb": [
+151,
+176,
+184
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398026": {
+"decision": "accepted",
+"point_px": [
+181.8,
+1284.0
+],
+"roof_rgb": [
+188,
+177,
+173
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398033": {
+"decision": "accepted",
+"point_px": [
+225.0,
+1280.5
+],
+"roof_rgb": [
+104,
+123,
+130
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/1507398035": {
+"decision": "accepted",
+"point_px": [
+135.8,
+1345.1
+],
+"roof_rgb": [
+161,
+178,
+181
+],
+"block": "10_01"
+},
+"feature:building_footprint:plateau/bldg_57ab8706-6121-4f56-a26f-91a715fefb69": {
+"decision": "accepted",
+"point_px": [
+187.8,
+1309.9
+],
+"roof_rgb": [
+107,
+115,
+123
+],
+"block": "10_01"
+},
+"feature:building_footprint:plateau/bldg_5b28c4a3-4cde-4491-8e5c-53bc2bb2c1d2": {
+"decision": "accepted",
+"point_px": [
+243.3,
+1299.6
+],
+"roof_rgb": [
+180,
+186,
+183
+],
+"block": "10_01"
+},
+"feature:building_footprint:way/225562518": {
+"decision": "accepted",
+"point_px": [
+348.4,
+1285.9
+],
+"roof_rgb": [
+160,
+174,
+177
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225562519": {
+"decision": "accepted",
+"point_px": [
+380.4,
+1297.8
+],
+"roof_rgb": [
+121,
+126,
+130
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225562522": {
+"decision": "accepted",
+"point_px": [
+355.5,
+1291.0
+],
+"roof_rgb": [
+162,
+174,
+178
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225562525": {
+"decision": "accepted",
+"point_px": [
+360.8,
+1280.5
+],
+"roof_rgb": [
+166,
+169,
+169
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225563351": {
+"decision": "accepted",
+"point_px": [
+349.4,
+1302.6
+],
+"roof_rgb": [
+98,
+104,
+113
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225563354": {
+"decision": "accepted",
+"point_px": [
+311.8,
+1298.7
+],
+"roof_rgb": [
+175,
+181,
+179
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225563355": {
+"decision": "accepted",
+"point_px": [
+329.9,
+1305.7
+],
+"roof_rgb": [
+179,
+188,
+188
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225563357": {
+"decision": "accepted",
+"point_px": [
+323.4,
+1317.2
+],
+"roof_rgb": [
+167,
+175,
+175
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225563359": {
+"decision": "accepted",
+"point_px": [
+340.2,
+1319.9
+],
+"roof_rgb": [
+176,
+187,
+190
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225563361": {
+"decision": "accepted",
+"point_px": [
+367.3,
+1310.5
+],
+"roof_rgb": [
+181,
+194,
+196
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/1507398034": {
+"decision": "accepted",
+"point_px": [
+265.2,
+1325.8
+],
+"roof_rgb": [
+172,
+178,
+174
+],
+"block": "10_02"
+},
+"feature:building_footprint:plateau/bldg_97041e1c-9bde-4e44-9717-d027b83b2617": {
+"decision": "accepted",
+"point_px": [
+307.4,
+1289.7
+],
+"roof_rgb": [
+177,
+182,
+179
+],
+"block": "10_02"
+},
+"feature:building_footprint:plateau/bldg_ccafa5bf-de3c-49e3-85f7-4d83ac1d8ca1": {
+"decision": "accepted",
+"point_px": [
+300.6,
+1281.9
+],
+"roof_rgb": [
+180,
+186,
+184
+],
+"block": "10_02"
+},
+"feature:building_footprint:way/225197478": {
+"decision": "accepted",
+"point_px": [
+123.4,
+1063.7
+],
+"roof_rgb": [
+139,
+150,
+151
+],
+"block": "08_00"
+},
+"feature:building_footprint:way/1507398057": {
+"decision": "accepted",
+"point_px": [
+73.8,
+1141.5
+],
+"roof_rgb": [
+131,
+141,
+143
+],
+"block": "08_00"
+},
+"feature:building_footprint:way/1507398058": {
+"decision": "accepted",
+"point_px": [
+58.4,
+1137.8
+],
+"roof_rgb": [
+141,
+146,
+147
+],
+"block": "08_00"
+},
+"feature:building_footprint:way/1507398062": {
+"decision": "accepted",
+"point_px": [
+106.9,
+1119.9
+],
+"roof_rgb": [
+182,
+186,
+188
+],
+"block": "08_00"
+},
+"feature:building_footprint:way/1507398063": {
+"decision": "accepted",
+"point_px": [
+84.9,
+1100.0
+],
+"roof_rgb": [
+187,
+182,
+179
+],
+"block": "08_00"
+},
+"feature:building_footprint:way/1507403621": {
+"decision": "accepted",
+"point_px": [
+660.0,
+1052.2
+],
+"roof_rgb": [
+139,
+153,
+153
+],
+"block": "08_05"
+},
+"feature:building_footprint:way/1507403622": {
+"decision": "accepted",
+"point_px": [
+677.1,
+1062.7
+],
+"roof_rgb": [
+141,
+155,
+153
+],
+"block": "08_05"
+},
+"feature:building_footprint:way/1507403632": {
+"decision": "accepted",
+"point_px": [
+655.4,
+1072.1
+],
+"roof_rgb": [
+91,
+102,
+106
+],
+"block": "08_05"
+},
+"feature:building_footprint:way/1507403633": {
+"decision": "accepted",
+"point_px": [
+641.9,
+1085.8
+],
+"roof_rgb": [
+194,
+177,
+172
+],
+"block": "08_05"
+},
+"feature:building_footprint:way/1507403635": {
+"decision": "accepted",
+"point_px": [
+647.9,
+1111.1
+],
+"roof_rgb": [
+128,
+137,
+146
+],
+"block": "08_05"
+},
+"feature:building_footprint:way/1507403560": {
+"decision": "accepted",
+"point_px": [
+779.8,
+899.2
+],
+"roof_rgb": [
+177,
+177,
+174
+],
+"block": "07_06"
+},
+"feature:building_footprint:way/1507403561": {
+"decision": "accepted",
+"point_px": [
+798.3,
+910.3
+],
+"roof_rgb": [
+182,
+198,
+200
+],
+"block": "07_06"
+},
+"feature:building_footprint:way/1507403562": {
+"decision": "accepted",
+"point_px": [
+786.0,
+919.3
+],
+"roof_rgb": [
+147,
+153,
+152
+],
+"block": "07_06"
+},
+"feature:building_footprint:way/1507403570": {
+"decision": "accepted",
+"point_px": [
+774.8,
+943.9
+],
+"roof_rgb": [
+153,
+149,
+145
+],
+"block": "07_06"
+},
+"feature:building_footprint:way/225101288": {
+"decision": "accepted",
+"point_px": [
+221.8,
+977.6
+],
+"roof_rgb": [
+155,
+196,
+198
+],
+"block": "07_01"
+},
+"feature:building_footprint:way/225101505": {
+"decision": "accepted",
+"point_px": [
+244.6,
+1017.3
+],
+"roof_rgb": [
+162,
+178,
+171
+],
+"block": "07_01"
+},
+"feature:building_footprint:way/289193022": {
+"decision": "accepted",
+"point_px": [
+639.5,
+94.4
+],
+"roof_rgb": [
+148,
+149,
+147
+],
+"block": "00_04"
+},
+"feature:building_footprint:way/477599550": {
+"decision": "accepted",
+"point_px": [
+627.0,
+113.9
+],
+"roof_rgb": [
+117,
+122,
+125
+],
+"block": "00_04"
+},
+"feature:building_footprint:plateau/bldg_8d60c050-e43e-4802-abfc-f2ffeb33b6c0": {
+"decision": "accepted",
+"point_px": [
+616.0,
+104.8
+],
+"roof_rgb": [
+153,
+159,
+154
+],
+"block": "00_04"
+},
+"feature:building_footprint:way/1507403808": {
+"decision": "accepted",
+"point_px": [
+378.6,
+829.4
+],
+"roof_rgb": [
+215,
+217,
+214
+],
+"block": "06_02"
+},
+"feature:building_footprint:way/1507403812": {
+"decision": "accepted",
+"point_px": [
+353.9,
+851.1
+],
+"roof_rgb": [
+173,
+183,
+187
+],
+"block": "06_02"
+},
+"feature:building_footprint:way/1507403814": {
+"decision": "accepted",
+"point_px": [
+343.6,
+880.1
+],
+"roof_rgb": [
+142,
+164,
+161
+],
+"block": "06_02"
+},
+"feature:building_footprint:way/477645419": {
+"decision": "accepted",
+"point_px": [
+506.0,
+243.6
+],
+"roof_rgb": [
+101,
+108,
+114
+],
+"block": "01_03"
+},
+"feature:building_footprint:way/477645435": {
+"decision": "accepted",
+"point_px": [
+504.1,
+207.2
+],
+"roof_rgb": [
+193,
+205,
+206
+],
+"block": "01_03"
+},
+"feature:building_footprint:way/477645438": {
+"decision": "accepted",
+"point_px": [
+501.8,
+169.4
+],
+"roof_rgb": [
+111,
+122,
+126
+],
+"block": "01_03"
+},
+"feature:building_footprint:way/725138323": {
+"decision": "accepted",
+"point_px": [
+502.7,
+487.5
+],
+"roof_rgb": [
+140,
+147,
+151
+],
+"block": "03_03"
+},
+"feature:building_footprint:way/725138356": {
+"decision": "rejected",
+"reason": "dot on a thin pale strip, not a readable roof",
+"block": "03_03"
+},
+"feature:building_footprint:way/725137869": {
+"decision": "accepted",
+"point_px": [
+777.5,
+92.7
+],
+"roof_rgb": [
+141,
+141,
+146
+],
+"block": "00_06"
+},
+"feature:building_footprint:way/725137913": {
+"decision": "accepted",
+"point_px": [
+797.5,
+117.2
+],
+"roof_rgb": [
+89,
+102,
+111
+],
+"block": "00_06"
+},
+"feature:building_footprint:way/725138458": {
+"decision": "accepted",
+"point_px": [
+896.2,
+607.4
+],
+"roof_rgb": [
+120,
+133,
+139
+],
+"block": "04_07"
+},
+"feature:building_footprint:way/725138642": {
+"decision": "accepted",
+"point_px": [
+900.8,
+752.8
+],
+"roof_rgb": [
+122,
+131,
+136
+],
+"block": "05_07"
+},
+"feature:building_footprint:way/1507398044": {
+"decision": "accepted",
+"point_px": [
+79.2,
+1290.9
+],
+"roof_rgb": [
+145,
+148,
+146
+],
+"block": "10_00"
+},
+"feature:building_footprint:way/225562521": {
+"decision": "accepted",
+"point_px": [
+418.7,
+1286.1
+],
+"roof_rgb": [
+181,
+192,
+196
+],
+"block": "10_03"
+},
+"feature:building_footprint:way/225562531": {
+"decision": "accepted",
+"point_px": [
+394.6,
+1301.7
+],
+"roof_rgb": [
+145,
+152,
+157
+],
+"block": "10_03"
+}
+}

@@ -1,0 +1,1569 @@
+{
+ "attached_to_building_face": 88,
+ "blank_sign_planes": 90,
+ "custom_placements_in": 154,
+ "instances_emitted": 90,
+ "lane": "lower_custom",
+ "numabe_station_skipped": 6,
+ "ocr_adopted": 0,
+ "ocr_conf_threshold": 0.5,
+ "ocr_readings_considered": 535,
+ "ocr_rejected_low_confidence": 535,
+ "per_class_counts": {
+  "figure_statue": 1,
+  "nobori_flag": 1,
+  "poster_notice": 3,
+  "sign_cluster": 60,
+  "storefront_frontage": 14,
+  "temple_cultural": 9,
+  "vending_unit": 2
+ },
+ "per_subject_counts": {
+  "candidate_branded_vendor_white_green_unit": 1,
+  "candidate_coca_cola_vending_unit_182": 1,
+  "candidate_doorway_figure_or_statue_179": 1,
+  "candidate_independent_shop_green_awning_190": 1,
+  "candidate_independent_shop_red_japanese_signband_186_194": 2,
+  "candidate_independent_shop_sign_398": 1,
+  "candidate_independent_shop_sign_cluster_404_408": 3,
+  "candidate_independent_shopfront_187": 1,
+  "candidate_independent_storefront_sign_cluster_429_431": 2,
+  "candidate_local_election_poster": 1,
+  "candidate_local_shop_sign_439": 1,
+  "candidate_local_sign_cluster_298": 1,
+  "candidate_local_sign_cluster_299": 1,
+  "candidate_local_sign_cluster_302": 1,
+  "candidate_local_sign_cluster_307": 1,
+  "candidate_local_sign_cluster_308": 1,
+  "candidate_local_sign_cluster_392": 1,
+  "candidate_local_storefront_sign_cluster_412_414": 1,
+  "candidate_local_storefront_sign_cluster_417_418": 2,
+  "candidate_mikasa_shopfront_blue_signboard": 1,
+  "candidate_miyoshiya_produce_shop": 1,
+  "candidate_mufg_branch_frontage_162_174": 2,
+  "candidate_nobori_flag_array_pink_red": 1,
+  "candidate_rail_corridor_notice_sign": 2,
+  "candidate_respa_storefront": 1,
+  "candidate_shopfront_mikasa_blue_signboard": 1,
+  "candidate_temporary_construction_scaffold_166": 1,
+  "candidate_unidentified_shop_sign_247": 1,
+  "candidate_unidentified_shop_sign_248": 1,
+  "candidate_unidentified_shop_sign_262": 1,
+  "candidate_unidentified_shop_sign_263": 1,
+  "candidate_unidentified_shop_sign_266": 1,
+  "candidate_unidentified_shop_sign_268": 1,
+  "candidate_unidentified_shop_sign_269": 1,
+  "candidate_unidentified_shop_sign_276": 1,
+  "candidate_unidentified_shop_sign_277": 1,
+  "candidate_unidentified_shop_sign_281": 1,
+  "candidate_unidentified_shop_sign_288": 1,
+  "candidate_unidentified_shop_sign_289": 1,
+  "candidate_unidentified_shop_sign_290": 1,
+  "candidate_unidentified_shop_sign_291": 1,
+  "candidate_unidentified_shop_sign_292": 1,
+  "candidate_unidentified_vertical_shop_sign_167": 1,
+  "cocokara_fine_storefront": 2,
+  "familymart_storefront": 5,
+  "local_red_sign_cluster_01": 1,
+  "local_storefront_sign_cluster_02": 1,
+  "site_specific_commercial_frontage_candidate": 1,
+  "unresolved_cultural_site_candidate_019": 1,
+  "unresolved_cultural_site_candidate_032": 1,
+  "unresolved_cultural_site_candidate_033": 1,
+  "unresolved_cultural_site_candidate_034": 1,
+  "unresolved_cultural_site_candidate_035": 1,
+  "unresolved_cultural_site_candidate_041": 1,
+  "unresolved_cultural_site_candidate_042": 1,
+  "unresolved_cultural_site_candidate_043": 1,
+  "unresolved_cultural_site_candidate_046": 1,
+  "unresolved_custom_identity_inst-0041": 1,
+  "unresolved_custom_identity_inst-0048": 1,
+  "unresolved_custom_identity_inst-0062": 1,
+  "unresolved_custom_identity_inst-0065": 1,
+  "unresolved_custom_identity_inst-0069": 1,
+  "unresolved_custom_identity_inst-0070": 1,
+  "unresolved_custom_identity_inst-0163": 1,
+  "unresolved_custom_identity_inst-0165": 1,
+  "unresolved_custom_identity_inst-0171": 1,
+  "unresolved_custom_identity_inst-0172": 1,
+  "unresolved_custom_identity_inst-0173": 1,
+  "unresolved_custom_identity_inst-0174": 1,
+  "unresolved_custom_identity_inst-0175": 1,
+  "unresolved_custom_identity_inst-0177": 1,
+  "unresolved_custom_identity_inst-0178": 1,
+  "unresolved_custom_identity_inst-0278": 1,
+  "unresolved_custom_identity_inst-0280": 1,
+  "unresolved_custom_identity_inst-0291": 1,
+  "unresolved_custom_identity_inst-0299": 1,
+  "unresolved_custom_identity_inst-0301": 1,
+  "unresolved_custom_identity_inst-0606": 1
+ },
+ "railway_posts": [
+  {
+   "nearest_face_m": 9.83,
+   "nearest_rail_m": 0.0,
+   "parent": "feature:railway_boundary:way/24475081",
+   "placement_id": "obs-inst-0469",
+   "reason": "railway_boundary_post",
+   "subject": "candidate_rail_corridor_notice_sign"
+  },
+  {
+   "nearest_face_m": 9.076,
+   "nearest_rail_m": 0.0,
+   "parent": "feature:railway_boundary:way/24475081",
+   "placement_id": "obs-inst-0470",
+   "reason": "railway_boundary_post",
+   "subject": "candidate_rail_corridor_notice_sign"
+  }
+ ],
+ "size_bounded": [
+  {
+   "band_h_m": [
+    1.6,
+    2.1
+   ],
+   "band_w_m": [
+    0.9,
+    1.4
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "vending_unit",
+   "derived_h_m": 13.646,
+   "derived_w_m": 11.545,
+   "emitted_h_m": 2.1,
+   "emitted_w_m": 1.4,
+   "placement_id": "obs-inst-0229",
+   "replaced_term": "width+height",
+   "subject": "candidate_branded_vendor_white_green_unit"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 4.308,
+   "derived_w_m": 3.108,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 3.108,
+   "placement_id": "obs-inst-0278",
+   "replaced_term": "height",
+   "subject": "unresolved_custom_identity_inst-0278"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 6.095,
+   "derived_w_m": 6.306,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 6.306,
+   "placement_id": "obs-inst-0280",
+   "replaced_term": "height",
+   "subject": "unresolved_custom_identity_inst-0280"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "sign_cluster",
+   "derived_h_m": 3.197,
+   "derived_w_m": 13.29,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0519",
+   "replaced_term": "width+height",
+   "subject": "candidate_local_sign_cluster_392"
+  },
+  {
+   "band_h_m": [
+    1.5,
+    2.0
+   ],
+   "band_w_m": [
+    0.5,
+    0.9
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "nobori_flag",
+   "derived_h_m": 0.364,
+   "derived_w_m": 0.44,
+   "emitted_h_m": 1.5,
+   "emitted_w_m": 0.5,
+   "placement_id": "obs-inst-0222",
+   "replaced_term": "width+height",
+   "subject": "candidate_nobori_flag_array_pink_red"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "storefront_frontage",
+   "derived_h_m": 6.431,
+   "derived_w_m": 20.543,
+   "emitted_h_m": 6.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0123",
+   "replaced_term": "width+height",
+   "subject": "familymart_storefront"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 22.646,
+   "derived_w_m": 19.429,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0172",
+   "replaced_term": "width+height",
+   "subject": "unresolved_custom_identity_inst-0172"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    6.0
+   ],
+   "band_w_m": [
+    0.6,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "range_estimate",
+   "class": "temple_cultural",
+   "derived_h_m": 13.9,
+   "derived_w_m": 17.964,
+   "emitted_h_m": 6.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0038",
+   "replaced_term": "width+height",
+   "subject": "unresolved_cultural_site_candidate_046"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "box_norm_extent",
+   "class": "sign_cluster",
+   "derived_h_m": 3.829,
+   "derived_w_m": 418.076,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0041",
+   "replaced_term": "width+height",
+   "subject": "unresolved_custom_identity_inst-0041"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 0.185,
+   "derived_w_m": 0.066,
+   "emitted_h_m": 0.4,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0048",
+   "replaced_term": "width+height",
+   "subject": "unresolved_custom_identity_inst-0048"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 6.023,
+   "derived_w_m": 2.145,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 2.145,
+   "placement_id": "obs-inst-0069",
+   "replaced_term": "height",
+   "subject": "unresolved_custom_identity_inst-0069"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "none",
+   "class": "storefront_frontage",
+   "derived_h_m": 7.627,
+   "derived_w_m": 4.425,
+   "emitted_h_m": 6.0,
+   "emitted_w_m": 4.425,
+   "placement_id": "obs-inst-0007",
+   "replaced_term": "height",
+   "subject": "site_specific_commercial_frontage_candidate"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "none",
+   "class": "storefront_frontage",
+   "derived_h_m": 1.453,
+   "derived_w_m": 2.118,
+   "emitted_h_m": 2.4,
+   "emitted_w_m": 2.118,
+   "placement_id": "obs-inst-0143",
+   "replaced_term": "height",
+   "subject": "familymart_storefront"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "box_norm_extent",
+   "class": "storefront_frontage",
+   "derived_h_m": 3.529,
+   "derived_w_m": 16.896,
+   "emitted_h_m": 3.529,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0422",
+   "replaced_term": "width",
+   "subject": "familymart_storefront"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "box_norm_extent",
+   "class": "storefront_frontage",
+   "derived_h_m": 4.005,
+   "derived_w_m": 12.983,
+   "emitted_h_m": 4.005,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0423",
+   "replaced_term": "width",
+   "subject": "familymart_storefront"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "box_norm_extent",
+   "class": "sign_cluster",
+   "derived_h_m": 2.136,
+   "derived_w_m": 14.146,
+   "emitted_h_m": 2.136,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0175",
+   "replaced_term": "width",
+   "subject": "unresolved_custom_identity_inst-0175"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 0.573,
+   "derived_w_m": 0.562,
+   "emitted_h_m": 0.573,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0400",
+   "replaced_term": "width",
+   "subject": "candidate_unidentified_shop_sign_262"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "box_norm_extent",
+   "class": "sign_cluster",
+   "derived_h_m": 0.693,
+   "derived_w_m": 0.383,
+   "emitted_h_m": 0.693,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0414",
+   "replaced_term": "width",
+   "subject": "candidate_unidentified_shop_sign_276"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 0.254,
+   "derived_w_m": 0.347,
+   "emitted_h_m": 0.4,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0419",
+   "replaced_term": "width+height",
+   "subject": "candidate_unidentified_shop_sign_281"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 8.445,
+   "derived_w_m": 5.777,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 5.777,
+   "placement_id": "obs-inst-0157",
+   "replaced_term": "height",
+   "subject": "local_storefront_sign_cluster_02"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 3.601,
+   "derived_w_m": 5.204,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 5.204,
+   "placement_id": "obs-inst-0165",
+   "replaced_term": "height",
+   "subject": "unresolved_custom_identity_inst-0165"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 0.2,
+   "derived_w_m": 0.962,
+   "emitted_h_m": 0.4,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0557",
+   "replaced_term": "width+height",
+   "subject": "candidate_local_shop_sign_439"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "storefront_frontage",
+   "derived_h_m": 0.162,
+   "derived_w_m": 0.275,
+   "emitted_h_m": 2.4,
+   "emitted_w_m": 2.0,
+   "placement_id": "obs-inst-0112",
+   "replaced_term": "width+height",
+   "subject": "cocokara_fine_storefront"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "sign_cluster",
+   "derived_h_m": 12.792,
+   "derived_w_m": 33.321,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0174",
+   "replaced_term": "width+height",
+   "subject": "unresolved_custom_identity_inst-0174"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 4.922,
+   "derived_w_m": 5.487,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 5.487,
+   "placement_id": "obs-inst-0425",
+   "replaced_term": "height",
+   "subject": "candidate_unidentified_shop_sign_288"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "none",
+   "class": "storefront_frontage",
+   "derived_h_m": 1.881,
+   "derived_w_m": 4.168,
+   "emitted_h_m": 2.4,
+   "emitted_w_m": 4.168,
+   "placement_id": "obs-inst-0248",
+   "replaced_term": "height",
+   "subject": "candidate_respa_storefront"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 4.101,
+   "derived_w_m": 2.826,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 2.826,
+   "placement_id": "obs-inst-0317",
+   "replaced_term": "height",
+   "subject": "candidate_unidentified_vertical_shop_sign_167"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "none",
+   "class": "storefront_frontage",
+   "derived_h_m": 0.925,
+   "derived_w_m": 10.016,
+   "emitted_h_m": 2.4,
+   "emitted_w_m": 10.016,
+   "placement_id": "obs-inst-0322",
+   "replaced_term": "height",
+   "subject": "candidate_mufg_branch_frontage_162_174"
+  },
+  {
+   "band_h_m": [
+    0.6,
+    1.8
+   ],
+   "band_w_m": [
+    0.4,
+    1.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "box_norm_extent",
+   "class": "figure_statue",
+   "derived_h_m": 0.026,
+   "derived_w_m": 0.029,
+   "emitted_h_m": 0.6,
+   "emitted_w_m": 0.4,
+   "placement_id": "obs-inst-0327",
+   "replaced_term": "width+height",
+   "subject": "candidate_doorway_figure_or_statue_179"
+  },
+  {
+   "band_h_m": [
+    1.6,
+    2.1
+   ],
+   "band_w_m": [
+    0.9,
+    1.4
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "vending_unit",
+   "derived_h_m": 2.763,
+   "derived_w_m": 3.834,
+   "emitted_h_m": 2.1,
+   "emitted_w_m": 1.4,
+   "placement_id": "obs-inst-0330",
+   "replaced_term": "width+height",
+   "subject": "candidate_coca_cola_vending_unit_182"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 9.066,
+   "derived_w_m": 13.677,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0334",
+   "replaced_term": "width+height",
+   "subject": "candidate_independent_shop_red_japanese_signband_186_194"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "storefront_frontage",
+   "derived_h_m": 1.858,
+   "derived_w_m": 12.572,
+   "emitted_h_m": 2.4,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0335",
+   "replaced_term": "width+height",
+   "subject": "candidate_independent_shopfront_187"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "storefront_frontage",
+   "derived_h_m": 0.53,
+   "derived_w_m": 1.261,
+   "emitted_h_m": 2.4,
+   "emitted_w_m": 2.0,
+   "placement_id": "obs-inst-0338",
+   "replaced_term": "width+height",
+   "subject": "candidate_independent_shop_green_awning_190"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 2.804,
+   "derived_w_m": 18.827,
+   "emitted_h_m": 2.804,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0342",
+   "replaced_term": "width",
+   "subject": "candidate_independent_shop_red_japanese_signband_186_194"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "sign_cluster",
+   "derived_h_m": 6.813,
+   "derived_w_m": 62.22,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0385",
+   "replaced_term": "width+height",
+   "subject": "candidate_unidentified_shop_sign_247"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 2.327,
+   "derived_w_m": 12.403,
+   "emitted_h_m": 2.327,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0525",
+   "replaced_term": "width",
+   "subject": "candidate_independent_shop_sign_398"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 2.529,
+   "derived_w_m": 17.459,
+   "emitted_h_m": 2.529,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0530",
+   "replaced_term": "width",
+   "subject": "candidate_independent_shop_sign_cluster_404_408"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 2.943,
+   "derived_w_m": 25.291,
+   "emitted_h_m": 2.943,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0533",
+   "replaced_term": "width",
+   "subject": "candidate_independent_shop_sign_cluster_404_408"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 0.248,
+   "derived_w_m": 0.344,
+   "emitted_h_m": 0.4,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0537",
+   "replaced_term": "width+height",
+   "subject": "candidate_local_storefront_sign_cluster_412_414"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 0.448,
+   "derived_w_m": 0.426,
+   "emitted_h_m": 0.448,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0539",
+   "replaced_term": "width",
+   "subject": "candidate_local_storefront_sign_cluster_417_418"
+  },
+  {
+   "band_h_m": [
+    2.4,
+    6.0
+   ],
+   "band_w_m": [
+    2.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "storefront_frontage",
+   "derived_h_m": 9.578,
+   "derived_w_m": 25.449,
+   "emitted_h_m": 6.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0265",
+   "replaced_term": "width+height",
+   "subject": "candidate_miyoshiya_produce_shop"
+  },
+  {
+   "band_h_m": [
+    0.5,
+    1.8
+   ],
+   "band_w_m": [
+    0.4,
+    1.5
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "poster_notice",
+   "derived_h_m": 3.099,
+   "derived_w_m": 4.188,
+   "emitted_h_m": 1.8,
+   "emitted_w_m": 1.5,
+   "placement_id": "obs-inst-0270",
+   "replaced_term": "width+height",
+   "subject": "candidate_local_election_poster"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "box_norm_extent",
+   "class": "sign_cluster",
+   "derived_h_m": 0.057,
+   "derived_w_m": 0.426,
+   "emitted_h_m": 0.4,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0549",
+   "replaced_term": "width+height",
+   "subject": "candidate_independent_storefront_sign_cluster_429_431"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 5.952,
+   "derived_w_m": 8.292,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 8.292,
+   "placement_id": "obs-inst-0316",
+   "replaced_term": "height",
+   "subject": "candidate_temporary_construction_scaffold_166"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "box_norm_extent",
+   "class": "sign_cluster",
+   "derived_h_m": 1.707,
+   "derived_w_m": 12.172,
+   "emitted_h_m": 1.707,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0386",
+   "replaced_term": "width",
+   "subject": "candidate_unidentified_shop_sign_248"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 5.378,
+   "derived_w_m": 13.007,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0401",
+   "replaced_term": "width+height",
+   "subject": "candidate_unidentified_shop_sign_263"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 3.341,
+   "derived_w_m": 8.27,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 8.27,
+   "placement_id": "obs-inst-0426",
+   "replaced_term": "height",
+   "subject": "candidate_unidentified_shop_sign_289"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 28.505,
+   "derived_w_m": 23.047,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0427",
+   "replaced_term": "width+height",
+   "subject": "candidate_unidentified_shop_sign_290"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 5.261,
+   "derived_w_m": 6.24,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 6.24,
+   "placement_id": "obs-inst-0550",
+   "replaced_term": "height",
+   "subject": "candidate_independent_storefront_sign_cluster_429_431"
+  },
+  {
+   "band_h_m": [
+    0.5,
+    1.8
+   ],
+   "band_w_m": [
+    0.4,
+    1.5
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "poster_notice",
+   "derived_h_m": 2.957,
+   "derived_w_m": 14.87,
+   "emitted_h_m": 1.8,
+   "emitted_w_m": 1.5,
+   "placement_id": "obs-inst-0469",
+   "replaced_term": "width+height",
+   "subject": "candidate_rail_corridor_notice_sign"
+  },
+  {
+   "band_h_m": [
+    0.5,
+    1.8
+   ],
+   "band_w_m": [
+    0.4,
+    1.5
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "box_norm_extent",
+   "class": "poster_notice",
+   "derived_h_m": 3.985,
+   "derived_w_m": 6.407,
+   "emitted_h_m": 1.8,
+   "emitted_w_m": 1.5,
+   "placement_id": "obs-inst-0470",
+   "replaced_term": "width+height",
+   "subject": "candidate_rail_corridor_notice_sign"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 5.111,
+   "derived_w_m": 15.562,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0291",
+   "replaced_term": "width+height",
+   "subject": "unresolved_custom_identity_inst-0291"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "none",
+   "class": "sign_cluster",
+   "derived_h_m": 6.947,
+   "derived_w_m": 8.145,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 8.145,
+   "placement_id": "obs-inst-0436",
+   "replaced_term": "height",
+   "subject": "candidate_local_sign_cluster_299"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 0.521,
+   "derived_w_m": 0.365,
+   "emitted_h_m": 0.521,
+   "emitted_w_m": 1.0,
+   "placement_id": "obs-inst-0444",
+   "replaced_term": "width",
+   "subject": "candidate_local_sign_cluster_307"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "range_estimate",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 10.517,
+   "derived_w_m": 81.116,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0445",
+   "replaced_term": "width+height",
+   "subject": "candidate_local_sign_cluster_308"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "box_norm_extent",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 12.768,
+   "derived_w_m": 13.056,
+   "emitted_h_m": 3.0,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0062",
+   "replaced_term": "width+height",
+   "subject": "unresolved_custom_identity_inst-0062"
+  },
+  {
+   "band_h_m": [
+    0.4,
+    3.0
+   ],
+   "band_w_m": [
+    1.0,
+    12.0
+   ],
+   "cause_height": "none",
+   "cause_width": "range_estimate",
+   "class": "sign_cluster",
+   "derived_h_m": 2.19,
+   "derived_w_m": 19.205,
+   "emitted_h_m": 2.19,
+   "emitted_w_m": 12.0,
+   "placement_id": "obs-inst-0439",
+   "replaced_term": "width",
+   "subject": "candidate_local_sign_cluster_302"
+  }
+ ],
+ "skipped": [
+  {
+   "placement_id": "obs-inst-0151",
+   "reason": "numabe_station_lowered_elsewhere"
+  },
+  {
+   "placement_id": "obs-inst-0504",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0506",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0508",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0511",
+   "reason": "numabe_station_lowered_elsewhere"
+  },
+  {
+   "placement_id": "obs-inst-0491",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0475",
+   "reason": "numabe_station_lowered_elsewhere"
+  },
+  {
+   "placement_id": "obs-inst-0478",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0512",
+   "reason": "numabe_station_lowered_elsewhere"
+  },
+  {
+   "placement_id": "obs-inst-0168",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0120",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0156",
+   "reason": "numabe_station_lowered_elsewhere"
+  },
+  {
+   "placement_id": "obs-inst-0167",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0272",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0351",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "osm-1268595562",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0189",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0191",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0589",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0039",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "osm-152855008",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0018",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0031",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0359",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0180",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0166",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0169",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0223",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0170",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0179",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0356",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0370",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0371",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0181",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0347",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0528",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0529",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0164",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0553",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0520",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0182",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0183",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0196",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0202",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0590",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0591",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0605",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0296",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0363",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0366",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0367",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0374",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0488",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0496",
+   "reason": "numabe_station_lowered_elsewhere"
+  },
+  {
+   "placement_id": "osm-264847040",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "osm-266759693",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0127",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0134",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0140",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0562",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0032",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "obs-inst-0176",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "osm-796878138",
+   "reason": "not_custom_identity"
+  },
+  {
+   "placement_id": "osm-796878139",
+   "reason": "not_custom_identity"
+  }
+ ],
+ "skipped_counts": {
+  "not_custom_identity": 58,
+  "numabe_station_lowered_elsewhere": 6,
+  "sibling_lane": 1615
+ },
+ "unattached": [
+  {
+   "nearest_face_m": 9.83,
+   "nearest_rail_m": 0.0,
+   "parent": "feature:railway_boundary:way/24475081",
+   "placement_id": "obs-inst-0469",
+   "reason": "railway_boundary_post",
+   "subject": "candidate_rail_corridor_notice_sign"
+  },
+  {
+   "nearest_face_m": 9.076,
+   "nearest_rail_m": 0.0,
+   "parent": "feature:railway_boundary:way/24475081",
+   "placement_id": "obs-inst-0470",
+   "reason": "railway_boundary_post",
+   "subject": "candidate_rail_corridor_notice_sign"
+  }
+ ],
+ "unattached_count": 2,
+ "unclassified_legacy": 0,
+ "unclassified_legacy_mapping": {
+  "candidate_temporary_construction_scaffold_166": "sign_cluster",
+  "unresolved_custom_identity_inst-0041": "sign_cluster",
+  "unresolved_custom_identity_inst-0048": "sign_cluster",
+  "unresolved_custom_identity_inst-0062": "sign_cluster",
+  "unresolved_custom_identity_inst-0065": "sign_cluster",
+  "unresolved_custom_identity_inst-0069": "sign_cluster",
+  "unresolved_custom_identity_inst-0070": "sign_cluster",
+  "unresolved_custom_identity_inst-0163": "sign_cluster",
+  "unresolved_custom_identity_inst-0165": "sign_cluster",
+  "unresolved_custom_identity_inst-0171": "sign_cluster",
+  "unresolved_custom_identity_inst-0172": "sign_cluster",
+  "unresolved_custom_identity_inst-0173": "sign_cluster",
+  "unresolved_custom_identity_inst-0174": "sign_cluster",
+  "unresolved_custom_identity_inst-0175": "sign_cluster",
+  "unresolved_custom_identity_inst-0177": "sign_cluster",
+  "unresolved_custom_identity_inst-0178": "sign_cluster",
+  "unresolved_custom_identity_inst-0278": "sign_cluster",
+  "unresolved_custom_identity_inst-0280": "sign_cluster",
+  "unresolved_custom_identity_inst-0291": "sign_cluster",
+  "unresolved_custom_identity_inst-0299": "sign_cluster",
+  "unresolved_custom_identity_inst-0301": "sign_cluster",
+  "unresolved_custom_identity_inst-0606": "sign_cluster"
+ },
+ "with_block_text": []
+}

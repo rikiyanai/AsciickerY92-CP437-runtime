@@ -1,0 +1,46 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "plydie_body",
+  "output_path": "assets/sprites/plydie-body.xp",
+  "output_sha256": "20b7a955c94491c55430b560e8869e3f3916055df4c64a87e6b0650cfe3fdb3f",
+  "output_dimensions": {
+    "width": 110,
+    "height": 88
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/plydie-0000.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/plydie-0000.xp",
+    "raw_layer_index": 2,
+    "upstream_xp_sha256": "29627bf1873555e2935ad8eaf31834fc7a6f9b0fe5694de398a1b2e351e45442",
+    "upstream_layer_count": 3,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 110,
+        "height": 88
+      },
+      {
+        "index": 1,
+        "width": 110,
+        "height": 88
+      },
+      {
+        "index": 2,
+        "width": 110,
+        "height": 88
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "reviewer visual inspection 2026-05-19",
+    "method": "Source: upstream/master:sprites/plydie-0000.xp is the only 3-layer (L0/L1/L2) no-equipment baseline at 110x88 for the on-foot death family. L2 carries the full death/body pose sheet. Reviewer visual call 2026-05-19: full death/body pose sheet.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=plydie_body -> upstream_xp_path=sprites/plydie-0000.xp:raw_layer_index=2. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

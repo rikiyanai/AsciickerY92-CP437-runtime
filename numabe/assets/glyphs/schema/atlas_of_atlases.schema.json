@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "assets/glyphs/schema/atlas_of_atlases.schema.json",
+  "title": "AtlasOfAtlases",
+  "description": "FL-4131 Phase 0: Web atlas-of-atlases binding contract. The web renderer (game_web.html / game_web.cpp) uses this document to locate glyph atlas pages for extended GlyphIds at runtime. Gate: web_atlas_of_atlases_binding. The atlas-of-atlases is separate from the glyph_manifest: the manifest declares identity and coverage; the atlas-of-atlases maps GlyphIds to GPU-ready texture page descriptors for the JavaScript/WebGL side. Must include the manifest_hash (RFC8785+SHA-256) of the glyph manifest it was compiled from so the web side can verify bundle identity.",
+  "type": "object",
+  "required": [
+    "aoa_version",
+    "content_pack_id",
+    "manifest_hash",
+    "pages"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "aoa_version": {
+      "description": "Atlas-of-atlases schema version. Must be 1 for Phase 0.",
+      "type": "integer",
+      "const": 1
+    },
+    "content_pack_id": {
+      "description": "Must match the content_pack_id from the source glyph manifest.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-zA-Z0-9_\\-\\.]+$"
+    },
+    "manifest_hash": {
+      "description": "RFC8785 canonical JSON + SHA-256 hex digest of the source glyph manifest. Gate bundle_compile_identity_includes_glyph_manifest_hash. Web side must reject a bundle whose manifest_hash does not match the locally available manifest file.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "fallback_glyph_id": {
+      "description": "Must match fallback_glyph_id from the source glyph manifest. The web renderer substitutes this GlyphId when it encounters an unresolvable extended glyph.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967291
+    },
+    "font_id": {
+      "description": "Echo of manifest.font_id used to bake the pages. Web/native loaders may surface this in diagnostics.",
+      "type": "string",
+      "maxLength": 128
+    },
+    "font_sha256": {
+      "description": "Echo of manifest.font_sha256. Lets loaders confirm the AOA was baked from the expected font without parsing the manifest.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "style_id": {
+      "description": "Echo of manifest.style_id.",
+      "type": "string",
+      "maxLength": 64
+    },
+    "lut_hash": {
+      "description": "Lowercase hex SHA-256 over the canonical glyph_index payload (RFC8785 sort_keys=True, separators=(',',':')). Lets clients confirm the AOA glyph layout matches a precomputed LUT without parsing the full glyph_index.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "pages": {
+      "description": "Atlas page list. Web renderer loads these as GPU textures. Phase 1+ may emit one entry per cell_px for the manifest's supported_cell_sizes ladder.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/AoAPage"
+      }
+    },
+    "glyph_index": {
+      "description": "Compact mapping from GlyphId to [page_index, u_min, v_min, u_max, v_max]. Keys are string-encoded GlyphIds (to be JSON-safe). The web renderer uses this as the primary lookup table for extended glyphs.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {"type": "number"},
+        "minItems": 5,
+        "maxItems": 5
+      }
+    }
+  },
+  "$defs": {
+    "AoAPage": {
+      "type": "object",
+      "required": ["page_id", "url", "width_px", "height_px", "page_binding_kind"],
+      "additionalProperties": false,
+      "properties": {
+        "page_id": {
+          "description": "Page identifier matching the source manifest atlas_pages entry.",
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "description": "URL or asset-relative path to the atlas PNG/WebP texture. Relative paths are computed from the same base as game_web.html.",
+          "type": "string",
+          "minLength": 1
+        },
+        "width_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "cell_px": {
+          "description": "Phase 1+ pixel size of each glyph cell on this page. Runtime selects the page whose cell_px best matches the current terminal/render font size.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 128
+        },
+        "page_hash": {
+          "description": "Phase 1+ lowercase hex SHA-256 over the raw RGBA8 pixel bytes of this page. Lets loaders detect tampered/divergent atlas pages without re-rasterizing.",
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "page_binding_kind": {
+          "description": "GPU texture binding strategy. 'atlas_rect' = sub-rect UVs within a 2D texture (required for WebGL1 web targets). 'array_layer' = layer index in a 2D texture array (WebGL2 or native only). Web targets must use 'atlas_rect'.",
+          "type": "string",
+          "enum": ["atlas_rect", "array_layer"]
+        },
+        "format": {
+          "description": "Texture format hint for the web renderer. 'rgba8' (default) or 'r8' for single-channel coverage pages.",
+          "type": "string",
+          "enum": ["rgba8", "r8"]
+        }
+      }
+    }
+  }
+}

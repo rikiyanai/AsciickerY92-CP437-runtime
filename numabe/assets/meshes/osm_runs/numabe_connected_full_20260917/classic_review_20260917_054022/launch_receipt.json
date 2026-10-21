@@ -1,0 +1,15 @@
+{
+  "stage": "intermediate_review_launch_requested",
+  "runtime_product": "classic_cp437",
+  "command": [
+    "/Users/r/Downloads/asciicker-Y9-2/.run/game_classic",
+    "--auto-start-map",
+    "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/output.a3d",
+    "--observe-render",
+    "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/classic_review_20260917_054022"
+  ],
+  "map_sha256": "010cb238be93551876a018def16f8178d77f744439a37ee1b6bc81588e392f15",
+  "runtime_sha256": "7241a3e6729c6d5918819f09283688016655cf67c0a09c2d3450df5c1fc28ab4",
+  "build_receipt": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/build_receipt.json",
+  "final_acceptance": false
+}

@@ -1,0 +1,77 @@
+{
+  "fallback_policy": "source_derived",
+  "jurisdiction": {},
+  "pack_id": "common_global",
+  "parents": [],
+  "schema": "y92.world_template_pack.v1",
+  "support_tier": "generic_source_derived",
+  "templates": [
+    {
+      "face_mode": "source_rectified",
+      "geometry_family": "rectangular_wall_sign",
+      "identity_bucket": "source_specific",
+      "semantic_class": "source_specific_sign",
+      "template_id": "common.rectangular_wall_sign_frame_v1",
+      "physical": {
+        "asset_id": "common.rectangular_wall_sign_frame_v1",
+        "semantic_family": "advertising_sign",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 1.0,
+        "intended_depth_m": 0.15,
+        "intended_height_m": 1.2,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "class_default",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "rules OBJECT_METRIC_DEFAULTS advertising_sign"
+      }
+    }
+  ],
+  "place_front_profiles": [
+    {
+      "id": "common.generic_commercial_front",
+      "geometry_family": "small_commercial_front",
+      "body_rgb": [
+        203,
+        198,
+        183
+      ],
+      "primary_rgb": [
+        76,
+        69,
+        62
+      ],
+      "accent_rgb": [
+        178,
+        154,
+        103
+      ],
+      "awning_rgb": [
+        145,
+        132,
+        112
+      ],
+      "max_width_m": 4.8,
+      "provenance": "generic synthesized fallback",
+      "physical": {
+        "asset_id": "common.generic_commercial_front",
+        "semantic_family": "storefront_front",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 4.8,
+        "intended_depth_m": 0.8,
+        "intended_height_m": 2.9,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "class_default",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "rules OBJECT_METRIC_DEFAULTS storefront_front"
+      }
+    }
+  ]
+}

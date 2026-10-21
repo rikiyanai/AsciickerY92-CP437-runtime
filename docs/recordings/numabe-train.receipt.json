@@ -1,0 +1,1904 @@
+{
+ "schema": "cp437.numabe.native_train_media.v1",
+ "capture": "/Users/r/Projects/asciicker-Y9-2/artifacts/experiments/fl4876_classic_runtime_06/train_live_20261021",
+ "gif": "/Users/r/Projects/AsciickerY92-CP437-runtime/docs/recordings/numabe-20261021/train-before-correction.gif",
+ "gif_sha256": "c4bbcf7b0a1cd64553c2939ba75ca8324c52ebe89f79045b05d6577adfb20f9f",
+ "source_map_sha256": "d40d35d440b00493ce646710dc5b07b3486fa5fab3c65fa4690c80fbe751bdf5",
+ "native_binary_sha256": null,
+ "historical_pre_correction": true,
+ "frames": 40,
+ "phases": [
+  "approach",
+  "brake",
+  "depart",
+  "dwell",
+  "hidden"
+ ],
+ "median_native_sample_interval_s": 1.5060000000000002,
+ "gif_fps": 2.0,
+ "playback_speed_multiplier_approx": 3.0120000000000005,
+ "interactive_playability": "not established by automatic capture",
+ "visual_acceptance": "requires direct inspection of this GIF and selected native frames",
+ "rows": [
+  {
+   "shot": 0,
+   "native_xp_sha256": "85fd1c4e7913d29bbd130fe57e927f4daf3e28195f78aaf03959c807258087eb",
+   "resolved_cells_sha256": "49d622ee20e62f2eb4f2f3ff97c4be23fa91a7ab29543be5a7085f9e5e2126aa",
+   "png_sha256": "019a95ffdf256eca67805b048d2149665e30ab1ac362c906517a8357e4199389",
+   "player_pos": [
+    417.7,
+    421.1,
+    195.586
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 74.0,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 74.0,
+     "s_m": -27.1,
+     "u_m": 252.953,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      826.663,
+      -102.373,
+      227.701
+     ],
+     "yaw_deg": 0.0
+    }
+   ]
+  },
+  {
+   "shot": 1,
+   "native_xp_sha256": "85fd1c4e7913d29bbd130fe57e927f4daf3e28195f78aaf03959c807258087eb",
+   "resolved_cells_sha256": "49d622ee20e62f2eb4f2f3ff97c4be23fa91a7ab29543be5a7085f9e5e2126aa",
+   "png_sha256": "019a95ffdf256eca67805b048d2149665e30ab1ac362c906517a8357e4199389",
+   "player_pos": [
+    417.7,
+    421.1,
+    195.586
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 76.399,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 76.399,
+     "s_m": 236.164,
+     "u_m": -10.311,
+     "speed_mps": 12.0,
+     "phase": "approach",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 1,
+     "centre_map": [
+      -28.162,
+      943.89,
+      165.282
+     ],
+     "yaw_deg": -50.65
+    }
+   ]
+  },
+  {
+   "shot": 2,
+   "native_xp_sha256": "85fd1c4e7913d29bbd130fe57e927f4daf3e28195f78aaf03959c807258087eb",
+   "resolved_cells_sha256": "49d622ee20e62f2eb4f2f3ff97c4be23fa91a7ab29543be5a7085f9e5e2126aa",
+   "png_sha256": "019a95ffdf256eca67805b048d2149665e30ab1ac362c906517a8357e4199389",
+   "player_pos": [
+    417.7,
+    421.1,
+    195.586
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 77.79,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 77.79,
+     "s_m": 219.469,
+     "u_m": 6.384,
+     "speed_mps": 12.0,
+     "phase": "approach",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 2,
+     "centre_map": [
+      26.165,
+      877.636,
+      209.591
+     ],
+     "yaw_deg": -50.65
+    }
+   ]
+  },
+  {
+   "shot": 3,
+   "native_xp_sha256": "85fd1c4e7913d29bbd130fe57e927f4daf3e28195f78aaf03959c807258087eb",
+   "resolved_cells_sha256": "49d622ee20e62f2eb4f2f3ff97c4be23fa91a7ab29543be5a7085f9e5e2126aa",
+   "png_sha256": "019a95ffdf256eca67805b048d2149665e30ab1ac362c906517a8357e4199389",
+   "player_pos": [
+    417.7,
+    421.1,
+    195.586
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 79.319,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 79.319,
+     "s_m": 201.128,
+     "u_m": 24.725,
+     "speed_mps": 12.0,
+     "phase": "approach",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      85.847,
+      804.851,
+      211.453
+     ],
+     "yaw_deg": -50.65
+    }
+   ]
+  },
+  {
+   "shot": 4,
+   "native_xp_sha256": "85fd1c4e7913d29bbd130fe57e927f4daf3e28195f78aaf03959c807258087eb",
+   "resolved_cells_sha256": "49d622ee20e62f2eb4f2f3ff97c4be23fa91a7ab29543be5a7085f9e5e2126aa",
+   "png_sha256": "019a95ffdf256eca67805b048d2149665e30ab1ac362c906517a8357e4199389",
+   "player_pos": [
+    417.7,
+    421.1,
+    195.586
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 80.952,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 80.952,
+     "s_m": 181.86,
+     "u_m": 43.993,
+     "speed_mps": 11.274,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      148.546,
+      728.385,
+      205.898
+     ],
+     "yaw_deg": -50.65
+    }
+   ]
+  },
+  {
+   "shot": 5,
+   "native_xp_sha256": "67abce085546ba9151f8a7897dd13e2a47fc4bb7d740e998e1223dd8a52d8ffb",
+   "resolved_cells_sha256": "e51e53836dd047dfc9adec7e56ca5a6aa9a9764e95e9c9bd746d4c803614c129",
+   "png_sha256": "ab3b61f80d8aa5f40cbe1b67f1f5bad767abc2c6ab304861ede8a3537db4997c",
+   "player_pos": [
+    419.572,
+    426.981,
+    195.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 82.441,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 82.441,
+     "s_m": 165.962,
+     "u_m": 59.891,
+     "speed_mps": 10.083,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      200.28,
+      665.294,
+      217.511
+     ],
+     "yaw_deg": -50.65
+    }
+   ]
+  },
+  {
+   "shot": 6,
+   "native_xp_sha256": "db75d7f36dd12644a7708df916a8f471817a90927cb465c3d89c5c17d7a35489",
+   "resolved_cells_sha256": "6e7d87a673d6897fdea9e07c699f01f57af892d3dc56688c64ba17e03354ca6b",
+   "png_sha256": "7df6b71d2fa19eb302aefe392e1e375b5ac49cd79d56dce298b5ef0ce9b02b35",
+   "player_pos": [
+    419.572,
+    426.981,
+    195.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 83.874,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 83.874,
+     "s_m": 152.333,
+     "u_m": 73.52,
+     "speed_mps": 8.936,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      244.629,
+      611.207,
+      215.99
+     ],
+     "yaw_deg": -50.65
+    }
+   ]
+  },
+  {
+   "shot": 7,
+   "native_xp_sha256": "a99eda059b42c08c2b4029eddd334c2ce807073e66846c62ea88809f11a0d0a8",
+   "resolved_cells_sha256": "4976c8d5aa9ed737fb74d8034b5886060bc49a80293b04a7913024e669aa81f5",
+   "png_sha256": "c35e30ff44d79c7e88dc57e32903111db46c8d94f2bbc9f000c59c579b2d353d",
+   "player_pos": [
+    419.572,
+    426.981,
+    195.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 85.39,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 85.39,
+     "s_m": 139.702,
+     "u_m": 86.151,
+     "speed_mps": 7.723,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      285.732,
+      561.081,
+      212.447
+     ],
+     "yaw_deg": -50.93
+    }
+   ]
+  },
+  {
+   "shot": 8,
+   "native_xp_sha256": "5965730823abeac13ce410ecfa32d0acff0b5c5ba4f4642585efd418104511b0",
+   "resolved_cells_sha256": "e64d2ddadb22f59f2313952a54032bea1b17ed49bb9073e8b0fa516c9362277a",
+   "png_sha256": "617219ff93dc9247e4c8178c3120c490cacb5c6dc581b389937929ec1c953839",
+   "player_pos": [
+    396.389,
+    449.257,
+    200.056
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 86.874,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 86.874,
+     "s_m": 129.122,
+     "u_m": 96.731,
+     "speed_mps": 6.536,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      320.157,
+      519.098,
+      226.731
+     ],
+     "yaw_deg": -50.96
+    }
+   ]
+  },
+  {
+   "shot": 9,
+   "native_xp_sha256": "b0ebb753d384e5c11599d6615febbc187be7ac16b62b03bd08b2692ad111cfd0",
+   "resolved_cells_sha256": "c43e65b664be74900feb10847091fc87ce0d6e686140ff86d53c98e0594c01e8",
+   "png_sha256": "f490baa3bf63f18769030f0f401f5c84886d6ca27662849045f07b2e7cf4a187",
+   "player_pos": [
+    396.389,
+    449.257,
+    200.056
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 88.416,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 88.416,
+     "s_m": 119.996,
+     "u_m": 105.857,
+     "speed_mps": 5.303,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      349.711,
+      482.766,
+      215.66
+     ],
+     "yaw_deg": -50.96
+    }
+   ]
+  },
+  {
+   "shot": 10,
+   "native_xp_sha256": "41740b7d71f35b4af7b7899d339daf32282dbea2fa8cfd5319487176d60066b4",
+   "resolved_cells_sha256": "0bda6f6236500129731ce5ff10bc57d79f91b4dc538351a61d0026c645f05520",
+   "png_sha256": "6bfa33582c05c29a5842084c94d57362e8664e3cf9997b296fbf867813ba7d7a",
+   "player_pos": [
+    392.615,
+    431.843,
+    203.942
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 89.874,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 89.874,
+     "s_m": 113.114,
+     "u_m": 112.739,
+     "speed_mps": 4.136,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      371.958,
+      455.331,
+      219.831
+     ],
+     "yaw_deg": -50.93
+    }
+   ]
+  },
+  {
+   "shot": 11,
+   "native_xp_sha256": "b06f1d26399a47bbef29494fb9e3c6bf5904cda00bc0c4dfaf61d03a68dd6a3b",
+   "resolved_cells_sha256": "e3bcfa8243bb63babb894c2d5b43a195586d22d4b955dfe9bafcc5ac5cb9f91d",
+   "png_sha256": "b4930511f6a19d086b3aebe632133a9b0b72aedc16d5530f6eddae6d97827862",
+   "player_pos": [
+    387.57,
+    408.496,
+    208.465
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 91.441,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 91.441,
+     "s_m": 107.615,
+     "u_m": 118.238,
+     "speed_mps": 2.882,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      389.733,
+      433.411,
+      214.781
+     ],
+     "yaw_deg": -50.88
+    }
+   ]
+  },
+  {
+   "shot": 12,
+   "native_xp_sha256": "fdc90c7d62df379327e118bf83f67a94fed114e1350f4e02e0e2f24813e6a34c",
+   "resolved_cells_sha256": "4c107007db914e139722d0236579a7dc6db5703129906d3c81b5130b8717a3f4",
+   "png_sha256": "5c8afc5d11963ea79cba3d4b02bf13cd79df87b4b31ef66033b0fd361f3fd1c4",
+   "player_pos": [
+    400.895,
+    398.477,
+    202.803
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 92.838,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 92.838,
+     "s_m": 104.37,
+     "u_m": 121.483,
+     "speed_mps": 1.765,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      400.221,
+      420.477,
+      219.239
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 13,
+   "native_xp_sha256": "150b8912de845275bb722b6956794d34163ebd11c5f5ee5b198a5f958980dd54",
+   "resolved_cells_sha256": "31c2c838cfc5a9f8d7222e427f0becc086bdfc3b0f3e9b9b8ed849bbd05a1c1d",
+   "png_sha256": "fd771155646c22d233c19970374fc4f0ad9c9303fdca86b47a7808352e3729a9",
+   "player_pos": [
+    467.65,
+    441.06,
+    186.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 94.417,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 94.417,
+     "s_m": 102.58,
+     "u_m": 123.273,
+     "speed_mps": 0.501,
+     "phase": "brake",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.007,
+      413.342,
+      216.763
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 14,
+   "native_xp_sha256": "52c89acace1abd3787dfe667c4be77d29f39cd065a13a55c56630bea896aa487",
+   "resolved_cells_sha256": "d9306770818cbdf1a9a70cf438cc160171e6336e49cc8b30c249091ef2999f9a",
+   "png_sha256": "ea909e5a479257a6aabb339dc28baa0f91dab597158bac41b036a5daf740e589",
+   "player_pos": [
+    493.148,
+    429.033,
+    189.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 95.916,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 95.916,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 15,
+   "native_xp_sha256": "25000472f34c6fe1ab7e3d60509b13011d79239c63d86372b6101ef68705a126",
+   "resolved_cells_sha256": "3446e348e8d1c94e90ea9ebe761f525e4b0d0b45c5636ba015b674574b99d7e8",
+   "png_sha256": "cffdcbc85a18fd8af9be5042a64788ce05b0de625629a118eb3841ba32af8d9b",
+   "player_pos": [
+    562.456,
+    370.326,
+    178.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 97.425,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 97.425,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 16,
+   "native_xp_sha256": "e4c6443fea8dd4763492039e1ac7044cbb8d29477685f09f40b4f42e00a90f19",
+   "resolved_cells_sha256": "ea9f0c26f654fecef1ea69cb02088040598b38aeab06f9590c5beead801dce2f",
+   "png_sha256": "91b4e2d39b624a8c7ac5fb30f45a8f23cb051418bcedf924a8e8861277ecf239",
+   "player_pos": [
+    638.771,
+    311.201,
+    166.698
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 98.9,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 98.9,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 17,
+   "native_xp_sha256": "6034e9a738b97d39ebe54c3942c121c846f89177a5aaf824756b23889829a15d",
+   "resolved_cells_sha256": "84013bcb98b23de1679f95237bc55fbfc63979b8ab58368383559292ac26f1b1",
+   "png_sha256": "4b076272fdcdbb658c26ae0e80f4158e97539fff475bef97602b2dbc032173b7",
+   "player_pos": [
+    654.625,
+    283.571,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 100.449,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 100.449,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 18,
+   "native_xp_sha256": "02a7ec436f09088a14d2e7636932ee0425089d6b6b5cf8861a6aa625fc1e614d",
+   "resolved_cells_sha256": "442dc026085a71b5db1a38eb51496bf98294e862a5356c647315002d0c9570a9",
+   "png_sha256": "1ac68d2a1860d5a9fbc68042d7caf9cdbcfea3d723e302022440816d1e2a18b5",
+   "player_pos": [
+    654.625,
+    283.571,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 101.833,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 101.833,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 19,
+   "native_xp_sha256": "02a7ec436f09088a14d2e7636932ee0425089d6b6b5cf8861a6aa625fc1e614d",
+   "resolved_cells_sha256": "442dc026085a71b5db1a38eb51496bf98294e862a5356c647315002d0c9570a9",
+   "png_sha256": "1ac68d2a1860d5a9fbc68042d7caf9cdbcfea3d723e302022440816d1e2a18b5",
+   "player_pos": [
+    654.625,
+    283.571,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 103.458,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 103.458,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 20,
+   "native_xp_sha256": "07211e395c20227266108408404afecbde141d6f528d0ecd1cc8f0379efb7fb8",
+   "resolved_cells_sha256": "62ed480b4ca71aacd8dcf045ae61fd8a859c24fe508cd76bbf4ba1c9ff43bc5c",
+   "png_sha256": "3f97f96770ee94cf40210f1d109be371f937113718f93754b1f3354fe8cdc030",
+   "player_pos": [
+    655.764,
+    272.568,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 104.951,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 104.951,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 21,
+   "native_xp_sha256": "e2718b838f6e5ce63160103b1a53845602a371b32786814a43833f74cb60339d",
+   "resolved_cells_sha256": "37797a927072dca08f716bd824129ce087c7619ffc643564275f1c2f38520555",
+   "png_sha256": "bba90313daecd32f7fef2f8f8e6ca51380c3566e933fc735b0cac60293f069bc",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 106.39,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 106.39,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 22,
+   "native_xp_sha256": "e2718b838f6e5ce63160103b1a53845602a371b32786814a43833f74cb60339d",
+   "resolved_cells_sha256": "37797a927072dca08f716bd824129ce087c7619ffc643564275f1c2f38520555",
+   "png_sha256": "bba90313daecd32f7fef2f8f8e6ca51380c3566e933fc735b0cac60293f069bc",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 107.823,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 107.823,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 23,
+   "native_xp_sha256": "52b7501245c0181a66675aa34dc9d53df23e10e8468b8ad614b638afd0490ad2",
+   "resolved_cells_sha256": "c4804b6c08bdc39edf56dfc56dd2d61d4692db931e8f610efa4da74b4a914b12",
+   "png_sha256": "11e9430f7398fd97226028b6eeaea02174bae91779cd6e1cfddc704451013fa3",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 109.375,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 109.375,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 24,
+   "native_xp_sha256": "99d8065c3b518397361db6abbca1e66287c5d15c9a97c695481c7b0b7f990c88",
+   "resolved_cells_sha256": "1c47d118dcf8e3aedaf30a958f849aee1b4d0c0f4ff887b2dd369946298409b3",
+   "png_sha256": "1cd7599aa690bbbf45232b21b4bf02893332099b054bc257e90b7162005063b8",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 110.916,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 110.916,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 25,
+   "native_xp_sha256": "4b7203a4cae85706c4b077ad108a29932dc3e10293a18d62add1447c13156728",
+   "resolved_cells_sha256": "6e940b981597523b3d3e1ecbd6a47f97d49641150d22d6d34ec831abc16ff2a2",
+   "png_sha256": "260c0fa6d57b2aa50c0670bbf57d113eeedb04dfc4124b31805b052b3b7b7e31",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 112.432,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 112.432,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 26,
+   "native_xp_sha256": "4b7203a4cae85706c4b077ad108a29932dc3e10293a18d62add1447c13156728",
+   "resolved_cells_sha256": "6e940b981597523b3d3e1ecbd6a47f97d49641150d22d6d34ec831abc16ff2a2",
+   "png_sha256": "260c0fa6d57b2aa50c0670bbf57d113eeedb04dfc4124b31805b052b3b7b7e31",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 113.833,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 113.833,
+     "s_m": 102.423,
+     "u_m": 123.43,
+     "speed_mps": 0.0,
+     "phase": "dwell",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.514,
+      412.716,
+      215.964
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 27,
+   "native_xp_sha256": "91abe94717f92c959aa47c55de0dbc2d53f6dec410bd2ead9365abcb3f217712",
+   "resolved_cells_sha256": "4f8d953bbb8dc0eaeb679fffd89d2238499d2ff3e1f958459b42299ae392b851",
+   "png_sha256": "a73a93f6ade2500a1579d8a794aeaadda94b27acd4c67c7dd27867f89482c414",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 115.399,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 115.399,
+     "s_m": 102.373,
+     "u_m": 123.48,
+     "speed_mps": 0.284,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      406.677,
+      412.515,
+      215.707
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 28,
+   "native_xp_sha256": "daddc5a87960e0f0f50d40e8baf66e6aefff78f0b01b4fa48166447b888dd5b5",
+   "resolved_cells_sha256": "1ff05ccf92d8d78610eacec7f0b3a698e7acaa27d02b8ad8017b3be3b3d2bcb7",
+   "png_sha256": "cfe78a1f59c90bad7416a9478e40b41a45d1dc9c70a228f93fbf579e63bec476",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 116.924,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 116.924,
+     "s_m": 101.01,
+     "u_m": 124.843,
+     "speed_mps": 1.504,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      411.082,
+      407.084,
+      208.78
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 29,
+   "native_xp_sha256": "eb603419f3357af8cf97752cdcc7cce210b2fa9ca94e00cebfff6ae4db17ebf6",
+   "resolved_cells_sha256": "6276f46702aa3a38198ec1e673536a87b5d6a9d4c7a761f23bc63445d51037cf",
+   "png_sha256": "df4cb6dfa5ff1ce085a586b134025583f1a14dd53e685fc098318ac4c7bd449b",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 118.441,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 118.441,
+     "s_m": 97.808,
+     "u_m": 128.045,
+     "speed_mps": 2.717,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      421.433,
+      394.318,
+      210.767
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 30,
+   "native_xp_sha256": "a229cefbb7195d9196e68b39e03ca27a2aedbfc00ac65c8e92b76d463a1cfd3a",
+   "resolved_cells_sha256": "e3273610dd31c01463ab867ee6166c6347a5530dda5f5881e1248995ea151eee",
+   "png_sha256": "e2ea7e54a84390349613d5abb7458f74caca6dd97725344bc621a74ff2558488",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 119.942,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 119.942,
+     "s_m": 92.827,
+     "u_m": 133.026,
+     "speed_mps": 3.918,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      437.532,
+      374.468,
+      205.827
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 31,
+   "native_xp_sha256": "458789a377d01bf69b68e4195a051ad996bb32e67d3112616b558f3603eb27f5",
+   "resolved_cells_sha256": "5fd9d668fb07b1afb6984c66135e58647293a581bd581f545688a19e6d4353f0",
+   "png_sha256": "7ca23ad6922e80df021c393abc92da918eb98b3a335901302260f6eef6659ee4",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 121.349,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 121.349,
+     "s_m": 86.521,
+     "u_m": 139.332,
+     "speed_mps": 5.044,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      457.962,
+      349.367,
+      206.909
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 32,
+   "native_xp_sha256": "458789a377d01bf69b68e4195a051ad996bb32e67d3112616b558f3603eb27f5",
+   "resolved_cells_sha256": "5fd9d668fb07b1afb6984c66135e58647293a581bd581f545688a19e6d4353f0",
+   "png_sha256": "7ca23ad6922e80df021c393abc92da918eb98b3a335901302260f6eef6659ee4",
+   "player_pos": [
+    655.434,
+    279.633,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 122.908,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 122.908,
+     "s_m": 77.69,
+     "u_m": 148.163,
+     "speed_mps": 6.291,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      486.573,
+      314.218,
+      212.924
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 33,
+   "native_xp_sha256": "f2ef9c287df5eb3a5188754d9b7d2efa6feb7fbc39a2ca44529bad5bb9385351",
+   "resolved_cells_sha256": "7f6c0d2a06c0cb0bddef436cd0d61704b5458f6cd92b5c2d291fa08187540523",
+   "png_sha256": "8dea93fac17d38babe86d2bf5d716f6e17441941e8903d89c96f274c64bb0470",
+   "player_pos": [
+    656.979,
+    277.247,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 124.349,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 124.349,
+     "s_m": 67.788,
+     "u_m": 158.065,
+     "speed_mps": 7.444,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      518.651,
+      274.807,
+      207.18
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 34,
+   "native_xp_sha256": "ca5ce3df0c873b5b977d361b59b2dd3f1800fb769dab2f90eb9e00e55f1dd91d",
+   "resolved_cells_sha256": "0d6855caef6da9ce811abd25e17fed914d4baf3193ac9a6f13be13ece90d6436",
+   "png_sha256": "544ccb06bc50963c0a2642162ed816176eeadef7f6b48afabe8a871f0a2906cb",
+   "player_pos": [
+    708.029,
+    211.458,
+    156.264
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 125.925,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 125.925,
+     "s_m": 55.065,
+     "u_m": 170.788,
+     "speed_mps": 8.705,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      559.87,
+      224.168,
+      210.754
+     ],
+     "yaw_deg": -50.86
+    }
+   ]
+  },
+  {
+   "shot": 35,
+   "native_xp_sha256": "ed6abb6d8d7c28181b8933754873300490924c752af418fea188f5c5d22fc5e6",
+   "resolved_cells_sha256": "d5f0c81a547ee0573f6bfe89ff615a167c7ae04e276019b7687993762a39a0de",
+   "png_sha256": "9cd7bb8067bdb463c5c9a59bb1ea70f382ab99b7af1d3e5c1cdf879f1af95f8c",
+   "player_pos": [
+    725.832,
+    190.185,
+    156.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 127.417,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 127.417,
+     "s_m": 41.189,
+     "u_m": 184.664,
+     "speed_mps": 9.898,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      604.824,
+      168.937,
+      206.72
+     ],
+     "yaw_deg": -50.81
+    }
+   ]
+  },
+  {
+   "shot": 36,
+   "native_xp_sha256": "eba58dc3b00799ead679f5eb4ac17a885e070e0fbf017757bec29c9d17bae4d9",
+   "resolved_cells_sha256": "b3850d5084daef41293e903c3b5c80a1af84624a6507d1f1d88f788aae8cd256",
+   "png_sha256": "0d0598f7bfc7e870ec57e3bdd8ebe7a211d133e4e8c28dd2cdca169a755d5923",
+   "player_pos": [
+    707.213,
+    218.921,
+    156.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 128.923,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 128.923,
+     "s_m": 25.377,
+     "u_m": 200.476,
+     "speed_mps": 11.103,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 3,
+     "centre_map": [
+      656.051,
+      106.002,
+      197.484
+     ],
+     "yaw_deg": -50.67
+    }
+   ]
+  },
+  {
+   "shot": 37,
+   "native_xp_sha256": "f6764d917cc0341ea4974f30a94c2abd6193809854ea243d60cd56957d787fad",
+   "resolved_cells_sha256": "6adf35a11db21899997ad93fec02254c0ed6136981c3540e6d1046f69bdbb456",
+   "png_sha256": "2f5ba73b4830e6873172fe25abd439dd74a452587a35326a7cd52b149b1ea928",
+   "player_pos": [
+    655.521,
+    288.572,
+    164.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 130.383,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 130.383,
+     "s_m": 8.356,
+     "u_m": 217.497,
+     "speed_mps": 12.0,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 2,
+     "centre_map": [
+      711.344,
+      38.376,
+      191.809
+     ],
+     "yaw_deg": -50.67
+    }
+   ]
+  },
+  {
+   "shot": 38,
+   "native_xp_sha256": "55ab4928282be7c5aaa2587c18ff6f4307d0c0283224dfee910cfc12c42303d2",
+   "resolved_cells_sha256": "11c0c24643057b51c32d5f2e500fdc30b33f48e5d83cf3b1b87ef5636e563b6f",
+   "png_sha256": "ba507af4cddff9f24f76f44f2fd0ab77bf0b9ff3dba1588395789f51c29b92dc",
+   "player_pos": [
+    620.617,
+    325.632,
+    171.25
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 131.891,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 131.891,
+     "s_m": -9.741,
+     "u_m": 235.594,
+     "speed_mps": 12.0,
+     "phase": "depart",
+     "visible": true,
+     "cars": 3,
+     "cars_visible": 1,
+     "centre_map": [
+      770.204,
+      -33.461,
+      210.48
+     ],
+     "yaw_deg": -50.67
+    }
+   ]
+  },
+  {
+   "shot": 39,
+   "native_xp_sha256": "d7d216ec911f9d6d738b464a05c0b754aef83e3b258167345a5ab94fb8f84329",
+   "resolved_cells_sha256": "459107a353f4742ed171dd4c8d669829661eaac73665f045033c7e2c74a80a6f",
+   "png_sha256": "8c647356fc8528e3ae734e5589c5a059d37101081622aee0d06e437cfe8534ad",
+   "player_pos": [
+    556.97,
+    358.49,
+    178.765
+   ],
+   "trains": [
+    {
+     "route_id": "tokyu_tamagawa_0",
+     "clock_s": 133.35,
+     "s_m": 263.037,
+     "u_m": 263.037,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      855.414,
+      -105.336,
+      204.831
+     ],
+     "yaw_deg": 0.0
+    },
+    {
+     "route_id": "tokyu_tamagawa_1",
+     "clock_s": 133.35,
+     "s_m": -27.1,
+     "u_m": 252.953,
+     "speed_mps": 0.0,
+     "phase": "hidden",
+     "visible": false,
+     "cars": 3,
+     "cars_visible": 0,
+     "centre_map": [
+      826.663,
+      -102.373,
+      227.701
+     ],
+     "yaw_deg": -50.67
+    }
+   ]
+  }
+ ]
+}

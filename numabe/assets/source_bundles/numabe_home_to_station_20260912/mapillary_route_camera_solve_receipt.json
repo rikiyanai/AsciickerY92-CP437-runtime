@@ -1,0 +1,3664 @@
+{
+  "cameras": [
+    {
+      "capture_id": "mapillary_959859571420548__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.878132155520782,
+            -3.7960261927795242,
+            0.0
+          ],
+          [
+            -3.7960261927795242,
+            4.857352251406352,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.8068010537836097,
+          2.203940165114823,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.5107179858134272,
+        "units": "m"
+      },
+      "frame_rank": 6,
+      "gps_residual_m": {
+        "east": 0.4974827552033858,
+        "horizontal": 2.2415774963777477,
+        "north": -2.185676229578018,
+        "up": 0.19921962261772466
+      },
+      "prior_azimuth_deg": 90.0,
+      "prior_gps_enu_m": [
+        -19.637824815923658,
+        2.1605441116179236e-05,
+        -3.019723450137235e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 74.68001418928115,
+      "solved_center_enu_m": [
+        -19.140342060720272,
+        -2.1856546241369017,
+        0.1991894253832233
+      ],
+      "solved_rotation_rodrigues": [
+        1.3611418135982967,
+        -1.0152535183370817,
+        1.0148989684980287
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:225841fcc0d3f9868dcf5d526227bbf7feff34c04be7de0251a65d019034e1bc"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:225841fcc0d3f9868dcf5d526227bbf7feff34c04be7de0251a65d019034e1bc"
+      }
+    },
+    {
+      "capture_id": "mapillary_196724462295987__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.577683180893595,
+            -3.7614610811791582,
+            0.0
+          ],
+          [
+            -3.7614610811791582,
+            4.853427230619889,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.7527591941347858,
+          2.2030495297700163,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.488306915924642,
+        "units": "m"
+      },
+      "frame_rank": 7,
+      "gps_residual_m": {
+        "east": 0.21102613718579377,
+        "horizontal": 2.580668351048744,
+        "north": -2.5720258761390964,
+        "up": 0.2798727195563651
+      },
+      "prior_azimuth_deg": 359.9,
+      "prior_gps_enu_m": [
+        -19.63782888461982,
+        -1.8491665460088536,
+        -3.0465715341820854e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 54.57915357580619,
+      "solved_center_enu_m": [
+        -19.426802747434028,
+        -4.42119242214795,
+        0.2798422538410233
+      ],
+      "solved_rotation_rodrigues": [
+        1.5659745819407938,
+        -0.7185379124920281,
+        0.7850313530870203
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:ff7837f037040f6e0d07530db6c9b569840d96f9ccfad34d02857a4f6f01e925"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:ff7837f037040f6e0d07530db6c9b569840d96f9ccfad34d02857a4f6f01e925"
+      }
+    },
+    {
+      "capture_id": "mapillary_571432163835754__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.3566621224644875,
+            -3.761513722503648,
+            0.0
+          ],
+          [
+            -3.761513722503648,
+            4.857574630836985,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.7123167444943608,
+          2.2039906149611856,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.4640664643134973,
+        "units": "m"
+      },
+      "frame_rank": 8,
+      "gps_residual_m": {
+        "east": -0.9991919681981791,
+        "horizontal": 4.864769126013033,
+        "north": -4.761049680490412,
+        "up": 0.34103608416554815
+      },
+      "prior_azimuth_deg": 50.8,
+      "prior_gps_enu_m": [
+        -18.127226384392635,
+        -1.8491697419221964,
+        -2.599888940868489e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 39.39791898093661,
+      "solved_center_enu_m": [
+        -19.126418352590814,
+        -6.610219422412609,
+        0.34101008527613946
+      ],
+      "solved_rotation_rodrigues": [
+        1.5944512064508733,
+        -0.5078447285263494,
+        0.5772469132692616
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:3f2ad4cee0f450200c88aef1f373d2876015d98951c8d5a4b6acc4d09a8f8443"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:3f2ad4cee0f450200c88aef1f373d2876015d98951c8d5a4b6acc4d09a8f8443"
+      }
+    },
+    {
+      "capture_id": "mapillary_138974158240453__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.222776679869067,
+            -3.7623102147460625,
+            0.0
+          ],
+          [
+            -3.7623102147460625,
+            4.869509697007067,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.6875224054636395,
+          2.2066965575282587,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.450562985433444,
+        "units": "m"
+      },
+      "frame_rank": 9,
+      "gps_residual_m": {
+        "east": -1.9270116984927768,
+        "horizontal": 5.1958143104953605,
+        "north": -4.825257740579291,
+        "up": 0.12409708030042169
+      },
+      "prior_azimuth_deg": 90.0,
+      "prior_gps_enu_m": [
+        -16.61662732455571,
+        -3.69836082853091,
+        -2.269637235263744e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 33.5604763467327,
+      "solved_center_enu_m": [
+        -18.543639023048488,
+        -8.523618569110202,
+        0.12407438392806905
+      ],
+      "solved_rotation_rodrigues": [
+        1.5601830366109415,
+        -0.4391281441929929,
+        0.48244845491423477
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:bb35b9c41268c34fe17006ee5be783606407aaffb8170c2c9728927df994570a"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:bb35b9c41268c34fe17006ee5be783606407aaffb8170c2c9728927df994570a"
+      }
+    },
+    {
+      "capture_id": "mapillary_161019379271957__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.140993481347468,
+            -3.745324356098671,
+            0.0
+          ],
+          [
+            -3.745324356098671,
+            4.889866569208359,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.6722637372361784,
+          2.2113042687989273,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.4507347027366833,
+        "units": "m"
+      },
+      "frame_rank": 10,
+      "gps_residual_m": {
+        "east": -1.248627532398725,
+        "horizontal": 5.168055442032601,
+        "north": -5.014950282630791,
+        "up": 0.12465780752087517
+      },
+      "prior_azimuth_deg": 50.8,
+      "prior_gps_enu_m": [
+        -16.616630767563944,
+        -5.54754885941747,
+        -2.404086766238933e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 33.70476287214441,
+      "solved_center_enu_m": [
+        -17.86525829996267,
+        -10.56249914204826,
+        0.12463376665321278
+      ],
+      "solved_rotation_rodrigues": [
+        1.5046772087701379,
+        -0.47144574365252745,
+        0.4478545747855046
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:da70aaf9a27814d023331676e4d52186a0bd7ea9611dd6c5efce03a35c0837f6"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:da70aaf9a27814d023331676e4d52186a0bd7ea9611dd6c5efce03a35c0837f6"
+      }
+    },
+    {
+      "capture_id": "mapillary_2996887810594050__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.123568960581013,
+            -3.7032236922041992,
+            0.0
+          ],
+          [
+            -3.7032236922041992,
+            4.913509745307403,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.669001491303632,
+          2.2166438020817423,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.4676383255769188,
+        "units": "m"
+      },
+      "frame_rank": 11,
+      "gps_residual_m": {
+        "east": -2.1627761228706817,
+        "horizontal": 5.823421837933538,
+        "north": -5.4069068185850675,
+        "up": 0.11917834346732825
+      },
+      "prior_azimuth_deg": 50.8,
+      "prior_gps_enu_m": [
+        -15.106031677811224,
+        -7.396739680669651,
+        -2.2171190015907172e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 32.09722194445097,
+      "solved_center_enu_m": [
+        -17.268807800681905,
+        -12.803646499254718,
+        0.11915617227731234
+      ],
+      "solved_rotation_rodrigues": [
+        1.5261359612160124,
+        -0.4385112597419462,
+        0.4393929134824811
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:3da19adfa6a19e8f05a6c651e63d8f95ca9ada343eb85557012f7063b14f45f4"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:3da19adfa6a19e8f05a6c651e63d8f95ca9ada343eb85557012f7063b14f45f4"
+      }
+    },
+    {
+      "capture_id": "mapillary_3845514602235452__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.183843886068249,
+            -3.637029868807263,
+            0.0
+          ],
+          [
+            -3.637029868807263,
+            4.949444105964419,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.6802693681919827,
+          2.2247346147269833,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.5039594702694519,
+        "units": "m"
+      },
+      "frame_rank": 12,
+      "gps_residual_m": {
+        "east": -2.9491550410972565,
+        "horizontal": 6.542817729080538,
+        "north": -5.8404578912565785,
+        "up": 0.03976977533241223
+      },
+      "prior_azimuth_deg": 50.8,
+      "prior_gps_enu_m": [
+        -13.59543105530043,
+        -9.245930241898094,
+        -2.119631890540319e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 40.84913707946466,
+      "solved_center_enu_m": [
+        -16.544586096397687,
+        -15.086388133154673,
+        0.03974857901350683
+      ],
+      "solved_rotation_rodrigues": [
+        1.5052650734516348,
+        -0.5737264372882109,
+        0.5431166188185267
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:f563b08b7aec9f8b1ec7bcc27d98ca69ede36b46a0af9ce53af8b754b9c3f949"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:f563b08b7aec9f8b1ec7bcc27d98ca69ede36b46a0af9ce53af8b754b9c3f949"
+      }
+    },
+    {
+      "capture_id": "mapillary_191191426174466__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.317903286609069,
+            -3.5618345999174092,
+            0.0
+          ],
+          [
+            -3.5618345999174092,
+            4.970542207080302,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.705162340157993,
+          2.229471284201773,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.5472547269544026,
+        "units": "m"
+      },
+      "frame_rank": 13,
+      "gps_residual_m": {
+        "east": -4.09502313119053,
+        "horizontal": 7.438802478316419,
+        "north": -6.210198697821271,
+        "up": 0.011426042252310345
+      },
+      "prior_azimuth_deg": 31.5,
+      "prior_gps_enu_m": [
+        -12.084829809017116,
+        -11.095120429487578,
+        -2.1117397388081827e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 41.214259212655165,
+      "solved_center_enu_m": [
+        -16.179852940207645,
+        -17.30531912730885,
+        0.011404924854922264
+      ],
+      "solved_rotation_rodrigues": [
+        1.5058375220772466,
+        -0.5822809530032896,
+        0.5448263354437738
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:2c4cfffe8d990c506d7b35acc4be108b716ce44109c4c68cfa683923b8c82578"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:2c4cfffe8d990c506d7b35acc4be108b716ce44109c4c68cfa683923b8c82578"
+      }
+    },
+    {
+      "capture_id": "mapillary_897150654188167__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            7.608081664197482,
+            -3.4753860826079315,
+            0.0
+          ],
+          [
+            -3.4753860826079315,
+            4.968427735094952,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.758275124819401,
+          2.2289970244697392,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.603338640364167,
+        "units": "m"
+      },
+      "frame_rank": 14,
+      "gps_residual_m": {
+        "east": -7.151273307210772,
+        "horizontal": 10.207870864289465,
+        "north": -7.2842238891720275,
+        "up": -0.3846916294068153
+      },
+      "prior_azimuth_deg": 31.5,
+      "prior_gps_enu_m": [
+        -9.063624460240039,
+        -12.944312129917533,
+        -1.9610659257374152e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 43.11650067507137,
+      "solved_center_enu_m": [
+        -16.21489776745081,
+        -20.22853601908956,
+        -0.38471124006607266
+      ],
+      "solved_rotation_rodrigues": [
+        1.5200929355860218,
+        -0.5635621123262977,
+        0.6176899080164645
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:26b14f79cb90e06ab4f65c3b38d6ab2056501556d5d084f50297d02eb8e90669"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:26b14f79cb90e06ab4f65c3b38d6ab2056501556d5d084f50297d02eb8e90669"
+      }
+    },
+    {
+      "capture_id": "mapillary_773000440270518__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            8.001757282657989,
+            -3.335287287715467,
+            0.0
+          ],
+          [
+            -3.335287287715467,
+            5.014069399467205,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.8287377543098597,
+          2.2392117808432515,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.6891911433928208,
+        "units": "m"
+      },
+      "frame_rank": 15,
+      "gps_residual_m": {
+        "east": -9.474043488062549,
+        "horizontal": 12.53138404114817,
+        "north": -8.202321986671985,
+        "up": -0.24602359850735703
+      },
+      "prior_azimuth_deg": 31.5,
+      "prior_gps_enu_m": [
+        -6.042417861993954,
+        -14.793502802135505,
+        -2.0071599551307884e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 34.11354860973508,
+      "solved_center_enu_m": [
+        -15.516461350056503,
+        -22.99582478880749,
+        -0.24604367010690834
+      ],
+      "solved_rotation_rodrigues": [
+        1.5979792431815947,
+        -0.4196315401708743,
+        0.5188221593428777
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:5250c84e7178f4c3078defba5a8b6ad10fa3f71b94fbadf044d7d059958aa01c"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:5250c84e7178f4c3078defba5a8b6ad10fa3f71b94fbadf044d7d059958aa01c"
+      }
+    },
+    {
+      "capture_id": "mapillary_4262919317051644__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            8.515149580796427,
+            -3.13517704197585,
+            0.0
+          ],
+          [
+            -3.13517704197585,
+            5.09146710975207,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.918072922460374,
+          2.2564279535921528,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.7975625575864491,
+        "units": "m"
+      },
+      "frame_rank": 16,
+      "gps_residual_m": {
+        "east": -11.504390792716116,
+        "horizontal": 14.693170423363854,
+        "north": -9.139926125439032,
+        "up": -0.23881619893675984
+      },
+      "prior_azimuth_deg": 359.9,
+      "prior_gps_enu_m": [
+        -3.021209104923403,
+        -16.64269233652842,
+        -2.249896872807966e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 34.839529270100705,
+      "solved_center_enu_m": [
+        -14.52559989763952,
+        -25.782618461967452,
+        -0.23883869790548792
+      ],
+      "solved_rotation_rodrigues": [
+        1.598335190014264,
+        -0.4512390465450492,
+        0.5082860294848512
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:33ec0057ba31014dc57264ff6067127d9db5e0966750391f20e1f8ee824094f7"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:33ec0057ba31014dc57264ff6067127d9db5e0966750391f20e1f8ee824094f7"
+      }
+    },
+    {
+      "capture_id": "mapillary_762970891085341__yaw_p000",
+      "center_covariance": {
+        "finite": true,
+        "matrix": [
+          [
+            9.104839910647888,
+            -2.8815352124048648,
+            0.0
+          ],
+          [
+            -2.8815352124048648,
+            5.20049376180234,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          3.0174227265412927,
+          2.28045911206545,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.9162769439835126,
+        "units": "m"
+      },
+      "frame_rank": 17,
+      "gps_residual_m": {
+        "east": -13.369802404226586,
+        "horizontal": 17.80582170407247,
+        "north": -11.759917951633646,
+        "up": -0.36972604838190953
+      },
+      "prior_azimuth_deg": 67.8,
+      "prior_gps_enu_m": [
+        -3.658042757592739e-10,
+        -16.642692847766853,
+        -2.1784427111981586e-05
+      ],
+      "rotation_covariance_rad2": {
+        "finite": true,
+        "matrix": [
+          [
+            0.030461741978670857,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.06853891945200942,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.007555322788305095
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          0.17453292519943295,
+          0.2617993877991494,
+          0.0869213597932355
+        ],
+        "sigma_major_m": 0.2617993877991494,
+        "sigma_minor_m": 0.0869213597932355,
+        "units": "m"
+      },
+      "solved_azimuth_deg": 44.322381223865634,
+      "solved_center_enu_m": [
+        -13.369802404592392,
+        -28.4026107994005,
+        -0.3697478328090215
+      ],
+      "solved_rotation_rodrigues": [
+        1.5912886599215612,
+        -0.5766160766776245,
+        0.6446492426305419
+      ],
+      "source_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "sha256": "sha256:15461e5e9d28051c1ef299adc38e2a514ad8e28711ff88e94a5332cf32de9145"
+      },
+      "working_image": {
+        "dimensions_px": [
+          512,
+          512
+        ],
+        "policy": "source_pixels",
+        "sha256": "sha256:15461e5e9d28051c1ef299adc38e2a514ad8e28711ff88e94a5332cf32de9145"
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "facade_anchor",
+      "covariance_absolute": {
+        "finite": true,
+        "matrix": [
+          [
+            7.5727032474695015,
+            -3.9725675193943344,
+            0.0
+          ],
+          [
+            -3.9725675193943344,
+            4.994004890515723,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.7518545105927203,
+          2.234727028188392,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.4514774604604914,
+        "units": "m"
+      },
+      "covariance_relative_to_camera_track": null,
+      "gate": {
+        "all_required_passed": false,
+        "criteria": [
+          {
+            "criterion": "useful_viewpoints",
+            "observed": 4,
+            "pass": true,
+            "preferred_met": true,
+            "required": ">= 2 (preferred >= 3)"
+          },
+          {
+            "criterion": "triangulation_angle_deg",
+            "note": "widest angle subtended at the point by any two viewpoints",
+            "observed": 31.481071958686247,
+            "pass": true,
+            "preferred_met": true,
+            "required": ">= 3.0 (preferred >= 5.0)"
+          },
+          {
+            "criterion": "median_reprojection_px",
+            "observed": 0.5311644122708512,
+            "pass": true,
+            "required": "<= 2.0"
+          },
+          {
+            "criterion": "worst_accepted_observation_px",
+            "note": "an observation above this is not silently accepted; it needs review",
+            "observed": 0.7071009689085466,
+            "pass": true,
+            "required": "<= 4.0 (else review)"
+          },
+          {
+            "criterion": "finite_positive_definite_uncertainty",
+            "note": "largest positional sigma in metres along the worst-constrained axis",
+            "observed": 9.425545675531097,
+            "pass": true,
+            "required": "positive definite, all entries finite"
+          },
+          {
+            "criterion": "consistent_semantics",
+            "note": "every viewpoint must agree, AND agree on the class being claimed ('facade_region')",
+            "observed": "off_wall_image 4/4",
+            "pass": false,
+            "required": "all viewpoints agree on 'facade_region'"
+          }
+        ],
+        "decision": "unresolved",
+        "failed": [
+          "consistent_semantics"
+        ]
+      },
+      "horizontal_distance_to_osm_wall_m": 2.0490271171031496,
+      "notes": "OSM-corroborated building facade point used as a georegistration anchor",
+      "osm_ref": "way/225369230",
+      "osm_tags": {
+        "building": "apartments",
+        "source": "Bing,2007-04"
+      },
+      "per_view_tolerance_px": 25.0,
+      "per_view_wall_image_miss_px": {
+        "10": 84.73633381519981,
+        "11": 50.52789169946689,
+        "12": 38.305342959841134,
+        "9": 169.94664859350118
+      },
+      "position_enu_m": [
+        -15.809762355349207,
+        -4.463688597379262,
+        4.324512686424972
+      ],
+      "position_wgs84": {
+        "ellipsoidal_height_m": 4.324533825740218,
+        "lat": 35.582826435501616,
+        "lon": 139.67327556904533
+      },
+      "reprojection": {
+        "frames_reprojected": 12,
+        "matched_residual_px": {
+          "count": 4,
+          "max": 0.7071009689085466,
+          "mean": 0.570200112348512,
+          "median": 0.5311644122708512,
+          "p90": 0.6600528766750403
+        },
+        "status_counts": {
+          "matched": 4,
+          "outside_frame": 4,
+          "predicted": 4
+        }
+      },
+      "reprojection_per_frame": [
+        {
+          "capture_id": "mapillary_959859571420548__yaw_p000",
+          "depth_m": 2.4905663739440165,
+          "frame_rank": 6,
+          "projected_px": [
+            581.5694147408495,
+            -168.61717845071215
+          ],
+          "status": "outside_frame"
+        },
+        {
+          "capture_id": "mapillary_196724462295987__yaw_p000",
+          "depth_m": 2.5444899523061206,
+          "frame_rank": 7,
+          "projected_px": [
+            509.25924036699035,
+            -154.32391930588875
+          ],
+          "status": "outside_frame"
+        },
+        {
+          "capture_id": "mapillary_571432163835754__yaw_p000",
+          "depth_m": 3.4731046445839,
+          "frame_rank": 8,
+          "projected_px": [
+            366.4144462876735,
+            -49.42435891869756
+          ],
+          "status": "outside_frame"
+        },
+        {
+          "capture_id": "mapillary_138974158240453__yaw_p000",
+          "depth_m": 4.77130790568996,
+          "frame_rank": 9,
+          "observed_px": [
+            266.8042907714844,
+            23.97429656982422
+          ],
+          "projected_px": [
+            266.427205457352,
+            23.376134011570123
+          ],
+          "residual_px": 0.7071009689085466,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_161019379271957__yaw_p000",
+          "depth_m": 6.2618535980507435,
+          "frame_rank": 10,
+          "observed_px": [
+            184.04238891601562,
+            88.09042358398438
+          ],
+          "projected_px": [
+            184.35408844822797,
+            88.54390442257439
+          ],
+          "residual_px": 0.550273994796859,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_2996887810594050__yaw_p000",
+          "depth_m": 7.840000126248992,
+          "frame_rank": 11,
+          "observed_px": [
+            151.33734130859375,
+            118.27823638916016
+          ],
+          "projected_px": [
+            151.7416594057689,
+            118.5913287462324
+          ],
+          "residual_px": 0.5113706559437989,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_3845514602235452__yaw_p000",
+          "depth_m": 8.456878997992073,
+          "frame_rank": 12,
+          "observed_px": [
+            60.867984771728516,
+            125.44679260253906
+          ],
+          "projected_px": [
+            60.48108367162852,
+            125.78221425867717
+          ],
+          "residual_px": 0.5120548297448433,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_191191426174466__yaw_p000",
+          "depth_m": 9.829450262201965,
+          "frame_rank": 13,
+          "projected_px": [
+            40.75369259073979,
+            143.3016459867543
+          ],
+          "status": "predicted"
+        },
+        {
+          "capture_id": "mapillary_897150654188167__yaw_p000",
+          "depth_m": 11.708426254758086,
+          "frame_rank": 14,
+          "projected_px": [
+            31.624916140400423,
+            139.3264585735104
+          ],
+          "status": "predicted"
+        },
+        {
+          "capture_id": "mapillary_773000440270518__yaw_p000",
+          "depth_m": 14.898607458150321,
+          "frame_rank": 15,
+          "projected_px": [
+            81.45009102273983,
+            148.34384397930611
+          ],
+          "status": "predicted"
+        },
+        {
+          "capture_id": "mapillary_4262919317051644__yaw_p000",
+          "depth_m": 16.429152733592925,
+          "frame_rank": 16,
+          "projected_px": [
+            55.22820687350348,
+            156.18391104999915
+          ],
+          "status": "predicted"
+        },
+        {
+          "capture_id": "mapillary_762970891085341__yaw_p000",
+          "depth_m": 14.9895066993462,
+          "frame_rank": 17,
+          "projected_px": [
+            -50.58102217893,
+            130.34521821437534
+          ],
+          "status": "outside_frame"
+        }
+      ],
+      "role": "absolute georegistration anchor (entered the global solve)",
+      "selection_evidence": {
+        "block_offset_estimate": {
+          "converged": true,
+          "gate_m": 4.0,
+          "offset_east_m": 2.3328164834236214,
+          "offset_magnitude_m": 3.062679654415388,
+          "offset_north_m": 1.9844328963804767,
+          "residual_median_m": 1.2507608064146138,
+          "used": 311
+        },
+        "block_offset_removed_m": [
+          2.3328164834236214,
+          1.9844328963804767
+        ],
+        "fine_association_gate_m": 2.188831411225574,
+        "osm_ref": "way/225369230",
+        "points_behind_per_view": {
+          "10": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "selection_median_reprojection_px": 0.5311644122707873,
+        "support_extent_along_wall_m": 19.3574773416684,
+        "support_plane_angle_to_wall_deg": 3.298365477853616,
+        "support_points": 130
+      },
+      "semantic_class": "facade_region",
+      "semantic_votes": {
+        "off_wall_image": 4
+      },
+      "triangulation_angle_deg": 31.481071958686247,
+      "viewpoints": 4
+    },
+    {
+      "building_clearance_m": 3.986575620338752,
+      "candidate_id": "unmapped_fixture",
+      "cluster_size": 55,
+      "cluster_vertical_span_m": 5.01654870920537,
+      "covariance_absolute": {
+        "finite": true,
+        "matrix": [
+          [
+            7.578379279655463,
+            -4.018771154184164,
+            0.0
+          ],
+          [
+            -4.018771154184164,
+            5.04856305416038,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            88.84091128152296
+          ]
+        ],
+        "positive_definite": true,
+        "sigma_m": [
+          2.752885627783229,
+          2.246900766424806,
+          9.425545675531097
+        ],
+        "sigma_major_m": 9.425545675531097,
+        "sigma_minor_m": 1.4492533476034357,
+        "units": "m"
+      },
+      "covariance_relative_to_camera_track": null,
+      "gate": {
+        "all_required_passed": true,
+        "criteria": [
+          {
+            "criterion": "useful_viewpoints",
+            "observed": 5,
+            "pass": true,
+            "preferred_met": true,
+            "required": ">= 2 (preferred >= 3)"
+          },
+          {
+            "criterion": "triangulation_angle_deg",
+            "note": "widest angle subtended at the point by any two viewpoints",
+            "observed": 27.056546609046386,
+            "pass": true,
+            "preferred_met": true,
+            "required": ">= 3.0 (preferred >= 5.0)"
+          },
+          {
+            "criterion": "median_reprojection_px",
+            "observed": 1.070775938895973,
+            "pass": true,
+            "required": "<= 2.0"
+          },
+          {
+            "criterion": "worst_accepted_observation_px",
+            "note": "an observation above this is not silently accepted; it needs review",
+            "observed": 1.3644459536546742,
+            "pass": true,
+            "required": "<= 4.0 (else review)"
+          },
+          {
+            "criterion": "finite_positive_definite_uncertainty",
+            "note": "largest positional sigma in metres along the worst-constrained axis",
+            "observed": 9.425545675531097,
+            "pass": true,
+            "required": "positive definite, all entries finite"
+          },
+          {
+            "criterion": "consistent_semantics",
+            "note": "every viewpoint must agree, AND agree on the class being claimed ('fixture')",
+            "observed": "fixture 5/5",
+            "pass": true,
+            "required": "all viewpoints agree on 'fixture'"
+          }
+        ],
+        "decision": "promote",
+        "failed": []
+      },
+      "notes": "vertical street fixture absent from the OSM extract for this area",
+      "osm_pole_like_features_in_extract": 0,
+      "per_view_edge_deviation_from_vertical_deg": {
+        "10": 3.593149384909263,
+        "11": 2.7209263605549627,
+        "12": 7.2277124583619745,
+        "13": 6.701923748901172,
+        "15": 0.8609658780581797
+      },
+      "position_enu_m": [
+        -15.051213325737944,
+        -4.415270760849964,
+        3.8237622509923943
+      ],
+      "position_wgs84": {
+        "ellipsoidal_height_m": 3.823781522922218,
+        "lat": 35.58282687189824,
+        "lon": 139.67328393819147
+      },
+      "reprojection": {
+        "frames_reprojected": 12,
+        "matched_residual_px": {
+          "count": 5,
+          "max": 1.3644459536546742,
+          "mean": 0.9211905344020893,
+          "median": 1.070775938895973,
+          "p90": 1.3427227776783393
+        },
+        "status_counts": {
+          "matched": 5,
+          "outside_frame": 3,
+          "predicted": 4
+        }
+      },
+      "reprojection_per_frame": [
+        {
+          "capture_id": "mapillary_959859571420548__yaw_p000",
+          "depth_m": 3.2490535616170013,
+          "frame_rank": 6,
+          "projected_px": [
+            516.8559124994723,
+            -31.485858149096778
+          ],
+          "status": "outside_frame"
+        },
+        {
+          "capture_id": "mapillary_196724462295987__yaw_p000",
+          "depth_m": 3.2334166310698107,
+          "frame_rank": 7,
+          "projected_px": [
+            483.63868503108864,
+            -29.281217582007496
+          ],
+          "status": "outside_frame"
+        },
+        {
+          "capture_id": "mapillary_571432163835754__yaw_p000",
+          "depth_m": 4.026042358700505,
+          "frame_rank": 8,
+          "projected_px": [
+            384.39400671810057,
+            24.38273625103958
+          ],
+          "status": "predicted"
+        },
+        {
+          "capture_id": "mapillary_138974158240453__yaw_p000",
+          "depth_m": 5.245243696985231,
+          "frame_rank": 9,
+          "projected_px": [
+            294.1286803417566,
+            69.25454214495544
+          ],
+          "status": "predicted"
+        },
+        {
+          "capture_id": "mapillary_161019379271957__yaw_p000",
+          "depth_m": 6.717310316316718,
+          "frame_rank": 10,
+          "observed_px": [
+            212.84031677246094,
+            119.15000915527344
+          ],
+          "projected_px": [
+            212.5996411829838,
+            118.74038631104494
+          ],
+          "residual_px": 0.47509537346096553,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_2996887810594050__yaw_p000",
+          "depth_m": 8.28413155833101,
+          "frame_rank": 11,
+          "observed_px": [
+            176.19004821777344,
+            141.10995483398438
+          ],
+          "projected_px": [
+            176.38474816335886,
+            141.44267118562277
+          ],
+          "residual_px": 0.3854973922849973,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_3845514602235452__yaw_p000",
+          "depth_m": 8.996415615529095,
+          "frame_rank": 12,
+          "observed_px": [
+            86.89906311035156,
+            146.41348266601562
+          ],
+          "projected_px": [
+            87.84702150444267,
+            147.39485295470223
+          ],
+          "residual_px": 1.3644459536546742,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_191191426174466__yaw_p000",
+          "depth_m": 10.374072784144346,
+          "frame_rank": 13,
+          "observed_px": [
+            64.99492645263672,
+            160.1969757080078
+          ],
+          "projected_px": [
+            65.57125905652664,
+            161.0994178618393
+          ],
+          "residual_px": 1.070775938895973,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_897150654188167__yaw_p000",
+          "depth_m": 12.270108145788786,
+          "frame_rank": 14,
+          "projected_px": [
+            52.31269539092776,
+            155.38188318854776
+          ],
+          "status": "predicted"
+        },
+        {
+          "capture_id": "mapillary_773000440270518__yaw_p000",
+          "depth_m": 15.391461035441147,
+          "frame_rank": 15,
+          "observed_px": [
+            96.15648651123047,
+            159.16793823242188
+          ],
+          "projected_px": [
+            96.3561156947595,
+            160.46277791518634
+          ],
+          "residual_px": 1.3101380137138365,
+          "status": "matched"
+        },
+        {
+          "capture_id": "mapillary_4262919317051644__yaw_p000",
+          "depth_m": 16.934015371987016,
+          "frame_rank": 16,
+          "projected_px": [
+            69.78371600256942,
+            166.75252578216782
+          ],
+          "status": "predicted"
+        },
+        {
+          "capture_id": "mapillary_762970891085341__yaw_p000",
+          "depth_m": 15.592935517383966,
+          "frame_rank": 17,
+          "projected_px": [
+            -30.97007989544546,
+            143.27980799948676
+          ],
+          "status": "outside_frame"
+        }
+      ],
+      "role": "triangulated object absent from OSM",
+      "semantic_class": "fixture",
+      "semantic_votes": {
+        "fixture": 5
+      },
+      "triangulation_angle_deg": 27.056546609046386,
+      "viewpoints": 5
+    }
+  ],
+  "corridor": {
+    "anchors_path": null,
+    "attribution": [
+      "mura / Mapillary, CC BY-SA 4.0"
+    ],
+    "control_points_path": null,
+    "coordinate_frame": {
+      "axis_order": [
+        "east",
+        "north",
+        "up"
+      ],
+      "crs": "local:enu",
+      "frame_id": "control_enu",
+      "note": "east/north/up metres about WGS84 origin lon=139.673450000 lat=35.582866667 alt=0.000m (ellipsoidal)",
+      "units": "m",
+      "vertical_datum": "wgs84_ellipsoid_offset_from_frame_origin"
+    },
+    "enu_origin_wgs84": {
+      "ellipsoidal_height_m": 0.0,
+      "latitude": 35.582866666667,
+      "longitude": 139.67345
+    },
+    "frame_digests": {
+      "mapillary_138974158240453__yaw_p000": "sha256:bb35b9c41268c34fe17006ee5be783606407aaffb8170c2c9728927df994570a",
+      "mapillary_161019379271957__yaw_p000": "sha256:da70aaf9a27814d023331676e4d52186a0bd7ea9611dd6c5efce03a35c0837f6",
+      "mapillary_191191426174466__yaw_p000": "sha256:2c4cfffe8d990c506d7b35acc4be108b716ce44109c4c68cfa683923b8c82578",
+      "mapillary_196724462295987__yaw_p000": "sha256:ff7837f037040f6e0d07530db6c9b569840d96f9ccfad34d02857a4f6f01e925",
+      "mapillary_2996887810594050__yaw_p000": "sha256:3da19adfa6a19e8f05a6c651e63d8f95ca9ada343eb85557012f7063b14f45f4",
+      "mapillary_3845514602235452__yaw_p000": "sha256:f563b08b7aec9f8b1ec7bcc27d98ca69ede36b46a0af9ce53af8b754b9c3f949",
+      "mapillary_4262919317051644__yaw_p000": "sha256:33ec0057ba31014dc57264ff6067127d9db5e0966750391f20e1f8ee824094f7",
+      "mapillary_571432163835754__yaw_p000": "sha256:3f2ad4cee0f450200c88aef1f373d2876015d98951c8d5a4b6acc4d09a8f8443",
+      "mapillary_762970891085341__yaw_p000": "sha256:15461e5e9d28051c1ef299adc38e2a514ad8e28711ff88e94a5332cf32de9145",
+      "mapillary_773000440270518__yaw_p000": "sha256:5250c84e7178f4c3078defba5a8b6ad10fa3f71b94fbadf044d7d059958aa01c",
+      "mapillary_897150654188167__yaw_p000": "sha256:26b14f79cb90e06ab4f65c3b38d6ab2056501556d5d084f50297d02eb8e90669",
+      "mapillary_959859571420548__yaw_p000": "sha256:225841fcc0d3f9868dcf5d526227bbf7feff34c04be7de0251a65d019034e1bc"
+    },
+    "frame_ranks": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "frames_dir": "assets/source_bundles/numabe_home_to_station_20260912/captures/mapillary_rectilinear",
+    "frames_solved": 12,
+    "items_path": "assets/source_bundles/numabe_home_to_station_20260912/mapillary_rectilinear_capture_source_index.json",
+    "licence": [
+      "CC-BY-SA-4.0"
+    ],
+    "osm_path": "assets/source_bundles/numabe_home_to_station_20260912/numabe_home_to_station_aoi.osm"
+  },
+  "evidence_role": "CONTROL / METHOD PROOF ONLY",
+  "evidence_role_note": "This receipt proves only the recorded observation-to-world geometric solve. It is not acceptance evidence for a complete playable corridor.",
+  "global_solve": {
+    "absolute_model": "rigid_block_yaw_translation",
+    "anchor_constraint_rows": 1,
+    "anchor_constraints": 1,
+    "anchor_constraints_by_geometry": {
+      "plane": 1
+    },
+    "anchor_constraints_by_kind": {
+      "osm_building_wall": 1
+    },
+    "azimuth_constraints": 12,
+    "block_parameters": {
+      "covariance": [
+        [
+          24.802661625836404,
+          1.0294418662232985,
+          1.3910700348265912,
+          0.0
+        ],
+        [
+          1.0294418662232985,
+          7.163521229979417,
+          -3.6588642559436777,
+          0.0
+        ],
+        [
+          1.3910700348265912,
+          -3.6588642559436777,
+          4.927041488006344,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          88.84091128152296
+        ]
+      ],
+      "pivot_enu_m": [
+        -12.46247351222565,
+        -8.475434569903497,
+        -2.3487470018859757e-05
+      ],
+      "translation_enu_m": [
+        -4.51439888283958,
+        -6.100242764166433,
+        -1.654587589033628e-12
+      ],
+      "yaw_deg": -34.76004142899127
+    },
+    "cameras": 12,
+    "constraint_residuals": {
+      "anchor_residual_m": {
+        "count": 1,
+        "max": 2.04902711710315,
+        "median": 2.04902711710315,
+        "rms": 2.04902711710315
+      },
+      "anchor_residual_sigmas": {
+        "count": 1,
+        "max": 1.3660180780687667,
+        "median": 1.3660180780687667,
+        "rms": 1.3660180780687667
+      },
+      "anchors": [
+        {
+          "geometry": "plane",
+          "kind": "osm_building_wall",
+          "osm_ref": "way/225369230",
+          "residual_m": 2.04902711710315,
+          "residual_rows": 1,
+          "residual_sigmas": 1.3660180780687667,
+          "sigma_m": 1.5,
+          "track_index": 268
+        }
+      ],
+      "control_point_cross_track_miss_m": null,
+      "control_point_residual_deg": null,
+      "control_point_residual_sigmas": null,
+      "control_points": []
+    },
+    "control_point_constraints": 0,
+    "control_point_rows": 0,
+    "covariance_scope": "four-parameter absolute datum covariance; local relative SfM uncertainty is not restated as datum uncertainty",
+    "degrees_of_freedom": 45,
+    "focal_is_free_parameter": false,
+    "focal_refined_by_local_bundle_adjustment": false,
+    "gps_residual_m": {
+      "count": 12,
+      "max": 17.80965984818549,
+      "median": 6.183789909645025,
+      "rms": 9.201306293331625
+    },
+    "heading_residual_deg": {
+      "count": 12,
+      "max": 56.4395236532673,
+      "median": 16.207611469287215,
+      "rms": 27.822517320254015
+    },
+    "optimizer_cost": 26.153276227776217,
+    "optimizer_message": "`ftol` termination condition is satisfied.",
+    "optimizer_nfev": 9,
+    "optimizer_optimality": 2.246159938188122e-07,
+    "optimizer_status": 2,
+    "optimizer_status_meaning": "converged: cost tolerance",
+    "parameters": 4,
+    "points": 610,
+    "relative_geometry_owner": "converged local bundle adjustment",
+    "reprojection_invariance": {
+      "after_median_px": 0.5017114952218024,
+      "before_median_px": 0.5017114952217531,
+      "max_projected_pixel_delta": 4.856703836433968e-13
+    },
+    "residual_rows": 49,
+    "sigmas": {
+      "azimuth_deg": 15.0,
+      "capture_gps_horizontal_m": {
+        "4": 10.0,
+        "5": 10.0,
+        "6": 10.0,
+        "7": 10.0,
+        "8": 10.0,
+        "9": 10.0,
+        "10": 10.0,
+        "11": 10.0,
+        "12": 10.0,
+        "13": 10.0,
+        "14": 10.0,
+        "15": 10.0
+      },
+      "capture_gps_vertical_m": {
+        "4": 30.0,
+        "5": 30.0,
+        "6": 30.0,
+        "7": 30.0,
+        "8": 30.0,
+        "9": 30.0,
+        "10": 30.0,
+        "11": 30.0,
+        "12": 30.0,
+        "13": 30.0,
+        "14": 30.0,
+        "15": 30.0
+      },
+      "control_point_deg": [],
+      "world_ir_anchor_m": []
+    },
+    "variance_factor": 1.184545483245136,
+    "visual_observations": 1407
+  },
+  "intrinsics": {
+    "distortion_model": "none (source states no distortion coefficients)",
+    "focal_basis": "route capture manifest horizontal_fov_deg",
+    "focal_prior_px": 256.00000000000006,
+    "focal_prior_sigma_px": 5.120000000000001,
+    "focal_px_solved": 256.00000000000006,
+    "focal_sigma_px": null,
+    "focal_state": "measured",
+    "horizontal_fov_deg_solved": 89.99999999999999,
+    "model": "per_frame_fixed_calibration",
+    "per_frame": {
+      "10": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_161019379271957__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "11": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_2996887810594050__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "12": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_3845514602235452__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "13": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_191191426174466__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "14": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_897150654188167__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "15": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_773000440270518__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "16": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_4262919317051644__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "17": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_762970891085341__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "6": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_959859571420548__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "7": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_196724462295987__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "8": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_571432163835754__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      },
+      "9": {
+        "basis": "route capture manifest horizontal_fov_deg",
+        "capture_id": "mapillary_138974158240453__yaw_p000",
+        "focal_px": 256.00000000000006,
+        "principal_point_px": [
+          256.0,
+          256.0
+        ],
+        "state": "measured"
+      }
+    },
+    "principal_point_px": [
+      256.0,
+      256.0
+    ]
+  },
+  "parameters": {
+    "camera_height_prior_m": 1.55,
+    "facade_coarse_gate_m": 4.0,
+    "facade_fine_gate_floor_m": 1.5,
+    "facade_fine_gate_sigma_multiple": 1.75,
+    "facade_max_plane_angle_deg": 20.0,
+    "facade_min_along_wall_m": 2.0,
+    "facade_min_support_points": 6,
+    "facade_occlusion_depth_margin_m": 1.5,
+    "facade_occlusion_radius_px": 25.0,
+    "facade_wall_image_tolerance_px": 25.0,
+    "fixture_cluster_radius_m": 0.8,
+    "fixture_min_building_clearance_m": 2.5,
+    "fixture_min_vertical_span_m": 1.0,
+    "match_window": 4,
+    "seed": 4812,
+    "vertical_edge_tolerance_deg": 25.0
+  },
+  "receipt_id": "fl4812_camera_solve",
+  "residuals": {
+    "all_visual_observations_px": {
+      "count": 1407,
+      "max": 3.9972701431068276,
+      "mean": 0.7861448892189974,
+      "median": 0.5017114952218024,
+      "min": 0.0004082226813973797,
+      "p90": 2.0152235407115904,
+      "p99": 3.568669423907381,
+      "rms": 1.1312468101600996
+    },
+    "per_camera_px": {
+      "10": {
+        "count": 186,
+        "max": 3.9972701431068276,
+        "mean": 0.305208195465326,
+        "median": 0.20889424407914933,
+        "min": 0.003508601910225947,
+        "p90": 0.6331644230955099,
+        "p99": 1.1647435394077126,
+        "rms": 0.4788247865917756
+      },
+      "11": {
+        "count": 175,
+        "max": 3.662974586583422,
+        "mean": 0.7699875041470471,
+        "median": 0.4522782613513763,
+        "min": 0.0004513264296028651,
+        "p90": 2.395002599806309,
+        "p99": 3.291696941208519,
+        "rms": 1.1674135975849307
+      },
+      "12": {
+        "count": 143,
+        "max": 2.8282231055783154,
+        "mean": 0.7971995752174366,
+        "median": 0.6390704541180526,
+        "min": 0.0004082226813973797,
+        "p90": 1.9487159106658256,
+        "p99": 2.714635508774134,
+        "rms": 1.0497583104445811
+      },
+      "13": {
+        "count": 111,
+        "max": 3.8206311873931535,
+        "mean": 0.8715924416439214,
+        "median": 0.5655359857550026,
+        "min": 0.018530486276139117,
+        "p90": 2.361157628258544,
+        "p99": 3.6636883924077375,
+        "rms": 1.247058081102896
+      },
+      "14": {
+        "count": 90,
+        "max": 3.9457112056470116,
+        "mean": 1.7155812274065505,
+        "median": 1.735260711322733,
+        "min": 0.01375388287418655,
+        "p90": 2.916978378712725,
+        "p99": 3.829219734648034,
+        "rms": 1.9526727516823044
+      },
+      "15": {
+        "count": 100,
+        "max": 3.602079507875797,
+        "mean": 1.2044821412811006,
+        "median": 0.995124560577325,
+        "min": 0.01091703392918267,
+        "p90": 2.57028196706584,
+        "p99": 3.480847753572604,
+        "rms": 1.5172282281993419
+      },
+      "16": {
+        "count": 68,
+        "max": 3.5018864106386056,
+        "mean": 0.9428114082998876,
+        "median": 0.6454684860148893,
+        "min": 0.01631623699401179,
+        "p90": 2.2384985783547444,
+        "p99": 2.8399839235983593,
+        "rms": 1.227309073859754
+      },
+      "17": {
+        "count": 22,
+        "max": 2.6938899028592838,
+        "mean": 0.9345701421266632,
+        "median": 0.9922304902751946,
+        "min": 0.03648333401013711,
+        "p90": 1.6532458150695504,
+        "p99": 2.4869937078755875,
+        "rms": 1.1152393226539918
+      },
+      "6": {
+        "count": 49,
+        "max": 2.923511636686583,
+        "mean": 1.1364147318809303,
+        "median": 1.0835305986819574,
+        "min": 0.004043798368109113,
+        "p90": 1.9220798346762413,
+        "p99": 2.7011558426321587,
+        "rms": 1.3279464049571046
+      },
+      "7": {
+        "count": 117,
+        "max": 3.841804813826074,
+        "mean": 0.8703290576838074,
+        "median": 0.723166465120472,
+        "min": 0.00367220863563627,
+        "p90": 1.639232843464978,
+        "p99": 3.704049651967027,
+        "rms": 1.1749832606583104
+      },
+      "8": {
+        "count": 152,
+        "max": 3.9010592160049837,
+        "mean": 0.715429046056362,
+        "median": 0.4359497157291309,
+        "min": 0.001986531739643425,
+        "p90": 1.6667719292056062,
+        "p99": 3.4594312055196696,
+        "rms": 1.0713418881702343
+      },
+      "9": {
+        "count": 194,
+        "max": 2.624158782010062,
+        "mean": 0.4023852637765992,
+        "median": 0.28040346565149155,
+        "min": 0.0016265726672681437,
+        "p90": 0.8632624723098772,
+        "p99": 2.1505857306147007,
+        "rms": 0.5728517038493605
+      }
+    }
+  },
+  "sparse_reconstruction": {
+    "counts": {
+      "observations": 1407,
+      "points": 610
+    },
+    "evidence_state": "accepted_after_bundle_adjustment_and_reprojection_filter",
+    "path": "assets/source_bundles/numabe_home_to_station_20260912/mapillary_route_sparse_reconstruction.json",
+    "schema": "y92.sparse_reconstruction.v1",
+    "sha256": "sha256:609cf8147cba403a56b74d8aa08546718779920c23688f3c29993b708b96bef4"
+  },
+  "stages": {
+    "absolute_registration_model": "gravity_leveled_rigid_block_yaw_translation",
+    "capture_selection": {
+      "capture_ids": [
+        "mapillary_2769415516642827__yaw_p000",
+        "mapillary_940502656696619__yaw_p000",
+        "mapillary_790724421837438__yaw_p000",
+        "mapillary_1078689165948139__yaw_p000",
+        "mapillary_959859571420548__yaw_p000",
+        "mapillary_196724462295987__yaw_p000",
+        "mapillary_571432163835754__yaw_p000",
+        "mapillary_138974158240453__yaw_p000",
+        "mapillary_161019379271957__yaw_p000",
+        "mapillary_2996887810594050__yaw_p000",
+        "mapillary_3845514602235452__yaw_p000",
+        "mapillary_191191426174466__yaw_p000",
+        "mapillary_897150654188167__yaw_p000",
+        "mapillary_773000440270518__yaw_p000",
+        "mapillary_4262919317051644__yaw_p000",
+        "mapillary_762970891085341__yaw_p000",
+        "mapillary_4296719920351968__yaw_p000",
+        "mapillary_162720512425333__yaw_p000",
+        "mapillary_901030797357438__yaw_p000",
+        "mapillary_1373024203079091__yaw_p000",
+        "mapillary_263192462175914__yaw_p000",
+        "mapillary_2929150657307887__yaw_p000",
+        "mapillary_369132391117185__yaw_p000",
+        "mapillary_149084003888966__yaw_p000",
+        "mapillary_484683162654033__yaw_p000",
+        "mapillary_132880498823214__yaw_p000",
+        "mapillary_457090682036818__yaw_p000",
+        "mapillary_151386460324139__yaw_p000",
+        "mapillary_174417261211208__yaw_p000",
+        "mapillary_321116579356787__yaw_p000",
+        "mapillary_494860091655215__yaw_p000",
+        "mapillary_2793363647591215__yaw_p000",
+        "mapillary_461783558245399__yaw_p000",
+        "mapillary_189890862961175__yaw_p000",
+        "mapillary_158653836175708__yaw_p000",
+        "mapillary_1007789950037389__yaw_p000",
+        "mapillary_906694533522058__yaw_p000",
+        "mapillary_380824489761280__yaw_p000",
+        "mapillary_4167024639984314__yaw_p000",
+        "mapillary_302695101323896__yaw_p000",
+        "mapillary_668139833981689__yaw_p000",
+        "mapillary_2548080672159882__yaw_p000",
+        "mapillary_4116751331720826__yaw_p000",
+        "mapillary_3019328731637156__yaw_p000",
+        "mapillary_298941768278559__yaw_p000",
+        "mapillary_815452022686885__yaw_p000",
+        "mapillary_215939953273780__yaw_p000",
+        "mapillary_353365796119189__yaw_p000",
+        "mapillary_309677700600370__yaw_p000",
+        "mapillary_191209566163531__yaw_p000",
+        "mapillary_971826116924489__yaw_p000",
+        "mapillary_512859586791898__yaw_p000",
+        "mapillary_494839251650001__yaw_p000",
+        "mapillary_1149421485524930__yaw_p000",
+        "mapillary_490164805458248__yaw_p000",
+        "mapillary_3936010353103311__yaw_p000",
+        "mapillary_215550649976711__yaw_p000",
+        "mapillary_2880221968867371__yaw_p000",
+        "mapillary_380143526492157__yaw_p000",
+        "mapillary_987833932024632__yaw_p000",
+        "mapillary_188064763059057__yaw_p000",
+        "mapillary_200221161739799__yaw_p000",
+        "mapillary_806994576584543__yaw_p000",
+        "mapillary_386217782460693__yaw_p000"
+      ],
+      "captures": 64,
+      "reconstruction_component": "IThCrth-fjJF1BofxvGEMg__yaw_p000",
+      "source_index": "assets/source_bundles/numabe_home_to_station_20260912/mapillary_rectilinear_capture_source_index.json",
+      "source_schema": "y92.capture_source_index.v1",
+      "working_image_policy": {
+        "encoding": "jpeg",
+        "jpeg_quality": 95,
+        "max_edge_px": 512,
+        "projection_resampler": "opencv_remap_linear_wrap"
+      }
+    },
+    "facade_anchor_selection": {
+      "block_offset_estimate": {
+        "converged": true,
+        "gate_m": 4.0,
+        "offset_east_m": 2.3328164834236214,
+        "offset_magnitude_m": 3.062679654415388,
+        "offset_north_m": 1.9844328963804767,
+        "residual_median_m": 1.2507608064146138,
+        "used": 311
+      },
+      "block_offset_removed_m": [
+        2.3328164834236214,
+        1.9844328963804767
+      ],
+      "fine_association_gate_m": 2.188831411225574,
+      "osm_ref": "way/225369230",
+      "points_behind_per_view": {
+        "10": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "selection_median_reprojection_px": 0.5311644122707873,
+      "support_extent_along_wall_m": 19.3574773416684,
+      "support_plane_angle_to_wall_deg": 3.298365477853616,
+      "support_points": 130
+    },
+    "features": {
+      "detector": "SIFT",
+      "per_frame": {
+        "0": 1183,
+        "10": 1812,
+        "11": 1562,
+        "12": 1358,
+        "13": 1230,
+        "14": 1019,
+        "15": 1005,
+        "16": 807,
+        "17": 592,
+        "18": 761,
+        "19": 845,
+        "20": 882,
+        "21": 1065,
+        "22": 1297,
+        "23": 1485,
+        "24": 1303,
+        "25": 921,
+        "26": 770,
+        "27": 891,
+        "28": 1073,
+        "3": 1345,
+        "30": 1145,
+        "31": 901,
+        "32": 379,
+        "33": 174,
+        "34": 167,
+        "35": 392,
+        "36": 330,
+        "37": 705,
+        "38": 705,
+        "39": 1352,
+        "4": 1264,
+        "40": 1617,
+        "41": 1104,
+        "42": 982,
+        "43": 1153,
+        "44": 724,
+        "45": 730,
+        "46": 842,
+        "47": 674,
+        "48": 554,
+        "49": 900,
+        "5": 1162,
+        "50": 588,
+        "51": 447,
+        "52": 661,
+        "53": 377,
+        "54": 283,
+        "55": 241,
+        "56": 855,
+        "57": 1114,
+        "58": 963,
+        "59": 767,
+        "6": 1895,
+        "60": 204,
+        "61": 231,
+        "62": 526,
+        "63": 744,
+        "65": 492,
+        "66": 664,
+        "68": 912,
+        "7": 1918,
+        "8": 1923,
+        "9": 2052
+      }
+    },
+    "global_solve_residuals": {
+      "median_px": 0.5017114952218024,
+      "observations": 1407
+    },
+    "global_stability_pruning": {
+      "frames_after": 12,
+      "frames_before": 12,
+      "frames_dropped": 0,
+      "minimum_camera_tracks": 6,
+      "minimum_track_viewpoints": 2,
+      "points_after": 610,
+      "points_before": 610,
+      "points_dropped": 0
+    },
+    "gravity_alignment": {
+      "angular_residual_deg": {
+        "max": 2.49728867234531,
+        "median": 0.7953786065636108,
+        "p95": 2.154130568664287
+      },
+      "gate": {
+        "minimum_frames": 3,
+        "minimum_inliers": 24,
+        "pass": true,
+        "threshold_deg": 2.5
+      },
+      "gravity_to_world_z_rotation_deg": 5.24783274786242,
+      "inlier_frame_count": 12,
+      "inlier_frames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "inliers": 714,
+      "leveled_camera_optical_pitch_deg": {
+        "10": -0.780051622124587,
+        "11": -0.9711161396612893,
+        "12": -0.9099316124409573,
+        "13": -3.21446113175948,
+        "14": -3.7551157002173703,
+        "15": -4.657425583945165,
+        "4": -1.6488721143710698,
+        "5": -5.198120616325999,
+        "6": -4.049852755347352,
+        "7": -1.6526339511194792,
+        "8": 0.6546697264965095,
+        "9": -0.006139372890697663
+      },
+      "max_rigid_reprojection_delta_px": 1.5628523906096474e-07,
+      "model": "shared_vertical_vanishing_direction",
+      "observations": 1187,
+      "up_vector_in_input_block": [
+        0.04041708973726501,
+        0.0820494564171201,
+        0.9958083879737231
+      ]
+    },
+    "matching": {
+      "pairs": {
+        "0-1": {
+          "raw": 18,
+          "verified": 0
+        },
+        "0-2": {
+          "raw": 9,
+          "verified": 0
+        },
+        "0-3": {
+          "raw": 16,
+          "verified": 0
+        },
+        "0-4": {
+          "raw": 9,
+          "verified": 0
+        },
+        "1-2": {
+          "median_epipolar_px": 0.5562922668557357,
+          "raw": 27,
+          "verified": 20
+        },
+        "1-3": {
+          "raw": 14,
+          "verified": 0
+        },
+        "1-4": {
+          "raw": 7,
+          "verified": 0
+        },
+        "1-5": {
+          "raw": 10,
+          "verified": 0
+        },
+        "10-11": {
+          "median_epipolar_px": 0.3756357690821901,
+          "raw": 120,
+          "verified": 109
+        },
+        "10-12": {
+          "median_epipolar_px": 0.3644665747957311,
+          "raw": 24,
+          "verified": 16
+        },
+        "10-13": {
+          "median_epipolar_px": 0.46193136636475096,
+          "raw": 14,
+          "verified": 9
+        },
+        "10-14": {
+          "raw": 7,
+          "verified": 0
+        },
+        "11-12": {
+          "median_epipolar_px": 0.2555123075860464,
+          "raw": 104,
+          "verified": 96
+        },
+        "11-13": {
+          "median_epipolar_px": 0.5818933528251596,
+          "raw": 27,
+          "verified": 15
+        },
+        "11-14": {
+          "raw": 8,
+          "verified": 0
+        },
+        "11-15": {
+          "raw": 4,
+          "verified": 0
+        },
+        "12-13": {
+          "median_epipolar_px": 0.32741080644538645,
+          "raw": 92,
+          "verified": 90
+        },
+        "12-14": {
+          "median_epipolar_px": 0.535182292123549,
+          "raw": 19,
+          "verified": 14
+        },
+        "12-15": {
+          "raw": 4,
+          "verified": 0
+        },
+        "12-16": {
+          "raw": 5,
+          "verified": 0
+        },
+        "13-14": {
+          "median_epipolar_px": 0.46804572401073724,
+          "raw": 92,
+          "verified": 78
+        },
+        "13-15": {
+          "raw": 8,
+          "verified": 0
+        },
+        "13-16": {
+          "raw": 2,
+          "verified": 0
+        },
+        "13-17": {
+          "raw": 3,
+          "verified": 0
+        },
+        "14-15": {
+          "median_epipolar_px": 0.5557903571849914,
+          "raw": 26,
+          "verified": 22
+        },
+        "14-16": {
+          "raw": 0,
+          "verified": 0
+        },
+        "14-17": {
+          "raw": 3,
+          "verified": 0
+        },
+        "14-18": {
+          "raw": 3,
+          "verified": 0
+        },
+        "15-16": {
+          "raw": 15,
+          "verified": 0
+        },
+        "15-17": {
+          "raw": 3,
+          "verified": 0
+        },
+        "15-18": {
+          "raw": 2,
+          "verified": 0
+        },
+        "15-19": {
+          "raw": 4,
+          "verified": 0
+        },
+        "16-17": {
+          "median_epipolar_px": 0.06540717274849207,
+          "raw": 15,
+          "verified": 9
+        },
+        "16-18": {
+          "raw": 6,
+          "verified": 0
+        },
+        "16-19": {
+          "raw": 4,
+          "verified": 0
+        },
+        "16-20": {
+          "raw": 1,
+          "verified": 0
+        },
+        "17-18": {
+          "raw": 2,
+          "verified": 0
+        },
+        "17-19": {
+          "raw": 7,
+          "verified": 0
+        },
+        "17-20": {
+          "raw": 1,
+          "verified": 0
+        },
+        "17-21": {
+          "raw": 2,
+          "verified": 0
+        },
+        "18-19": {
+          "median_epipolar_px": 0.24098873556501743,
+          "raw": 71,
+          "verified": 66
+        },
+        "18-20": {
+          "median_epipolar_px": 0.28754209420724525,
+          "raw": 23,
+          "verified": 15
+        },
+        "18-21": {
+          "raw": 9,
+          "verified": 0
+        },
+        "18-22": {
+          "raw": 4,
+          "verified": 0
+        },
+        "19-20": {
+          "median_epipolar_px": 0.41851735365576825,
+          "raw": 110,
+          "verified": 98
+        },
+        "19-21": {
+          "median_epipolar_px": 0.09498215770176409,
+          "raw": 18,
+          "verified": 9
+        },
+        "19-22": {
+          "raw": 2,
+          "verified": 0
+        },
+        "19-23": {
+          "raw": 3,
+          "verified": 0
+        },
+        "2-3": {
+          "median_epipolar_px": 0.4301465374019919,
+          "raw": 23,
+          "verified": 14
+        },
+        "2-4": {
+          "raw": 12,
+          "verified": 0
+        },
+        "2-5": {
+          "raw": 4,
+          "verified": 0
+        },
+        "2-6": {
+          "raw": 7,
+          "verified": 0
+        },
+        "20-21": {
+          "median_epipolar_px": 0.24971499274858047,
+          "raw": 102,
+          "verified": 96
+        },
+        "20-22": {
+          "raw": 11,
+          "verified": 0
+        },
+        "20-23": {
+          "raw": 6,
+          "verified": 0
+        },
+        "20-24": {
+          "raw": 2,
+          "verified": 0
+        },
+        "21-22": {
+          "median_epipolar_px": 0.32178790157652376,
+          "raw": 50,
+          "verified": 35
+        },
+        "21-23": {
+          "raw": 12,
+          "verified": 0
+        },
+        "21-24": {
+          "raw": 4,
+          "verified": 0
+        },
+        "21-25": {
+          "raw": 8,
+          "verified": 0
+        },
+        "22-23": {
+          "median_epipolar_px": 0.3078673838098417,
+          "raw": 35,
+          "verified": 28
+        },
+        "22-24": {
+          "raw": 11,
+          "verified": 0
+        },
+        "22-25": {
+          "raw": 14,
+          "verified": 0
+        },
+        "22-26": {
+          "raw": 10,
+          "verified": 0
+        },
+        "23-24": {
+          "median_epipolar_px": 0.33918437346282454,
+          "raw": 78,
+          "verified": 69
+        },
+        "23-25": {
+          "median_epipolar_px": 0.26789106687543957,
+          "raw": 28,
+          "verified": 22
+        },
+        "23-26": {
+          "raw": 18,
+          "verified": 0
+        },
+        "23-27": {
+          "raw": 6,
+          "verified": 0
+        },
+        "24-25": {
+          "median_epipolar_px": 0.2717013919055585,
+          "raw": 129,
+          "verified": 119
+        },
+        "24-26": {
+          "median_epipolar_px": 0.3749554223035254,
+          "raw": 42,
+          "verified": 31
+        },
+        "24-27": {
+          "raw": 5,
+          "verified": 0
+        },
+        "24-28": {
+          "raw": 6,
+          "verified": 0
+        },
+        "25-26": {
+          "median_epipolar_px": 0.4241450243494624,
+          "raw": 143,
+          "verified": 130
+        },
+        "25-27": {
+          "raw": 8,
+          "verified": 0
+        },
+        "25-28": {
+          "raw": 7,
+          "verified": 0
+        },
+        "25-29": {
+          "raw": 4,
+          "verified": 0
+        },
+        "26-27": {
+          "raw": 19,
+          "verified": 0
+        },
+        "26-28": {
+          "raw": 5,
+          "verified": 0
+        },
+        "26-29": {
+          "raw": 8,
+          "verified": 0
+        },
+        "26-30": {
+          "raw": 2,
+          "verified": 0
+        },
+        "27-28": {
+          "median_epipolar_px": 0.1385815262842703,
+          "raw": 20,
+          "verified": 8
+        },
+        "27-29": {
+          "raw": 6,
+          "verified": 0
+        },
+        "27-30": {
+          "raw": 0,
+          "verified": 0
+        },
+        "27-31": {
+          "raw": 0,
+          "verified": 0
+        },
+        "28-29": {
+          "median_epipolar_px": 0.8270986234630395,
+          "raw": 19,
+          "verified": 11
+        },
+        "28-30": {
+          "raw": 3,
+          "verified": 0
+        },
+        "28-31": {
+          "raw": 1,
+          "verified": 0
+        },
+        "28-32": {
+          "raw": 2,
+          "verified": 0
+        },
+        "29-30": {
+          "raw": 5,
+          "verified": 0
+        },
+        "29-31": {
+          "raw": 2,
+          "verified": 0
+        },
+        "29-32": {
+          "raw": 6,
+          "verified": 0
+        },
+        "29-33": {
+          "raw": 1,
+          "verified": 0
+        },
+        "3-4": {
+          "raw": 4,
+          "verified": 0
+        },
+        "3-5": {
+          "raw": 8,
+          "verified": 0
+        },
+        "3-6": {
+          "raw": 10,
+          "verified": 0
+        },
+        "3-7": {
+          "raw": 2,
+          "verified": 0
+        },
+        "30-31": {
+          "median_epipolar_px": 0.3623111183180954,
+          "raw": 9,
+          "verified": 9
+        },
+        "30-32": {
+          "raw": 1,
+          "verified": 0
+        },
+        "30-33": {
+          "raw": 2,
+          "verified": 0
+        },
+        "30-34": {
+          "raw": 0,
+          "verified": 0
+        },
+        "31-32": {
+          "raw": 1,
+          "verified": 0
+        },
+        "31-33": {
+          "raw": 1,
+          "verified": 0
+        },
+        "31-34": {
+          "raw": 1,
+          "verified": 0
+        },
+        "31-35": {
+          "raw": 4,
+          "verified": 0
+        },
+        "32-33": {
+          "raw": 1,
+          "verified": 0
+        },
+        "32-34": {
+          "raw": 0,
+          "verified": 0
+        },
+        "32-35": {
+          "raw": 1,
+          "verified": 0
+        },
+        "32-36": {
+          "raw": 1,
+          "verified": 0
+        },
+        "33-34": {
+          "raw": 0,
+          "verified": 0
+        },
+        "33-35": {
+          "raw": 0,
+          "verified": 0
+        },
+        "33-36": {
+          "raw": 0,
+          "verified": 0
+        },
+        "33-37": {
+          "raw": 1,
+          "verified": 0
+        },
+        "34-35": {
+          "raw": 3,
+          "verified": 0
+        },
+        "34-36": {
+          "raw": 1,
+          "verified": 0
+        },
+        "34-37": {
+          "raw": 0,
+          "verified": 0
+        },
+        "34-38": {
+          "raw": 1,
+          "verified": 0
+        },
+        "35-36": {
+          "raw": 2,
+          "verified": 0
+        },
+        "35-37": {
+          "raw": 1,
+          "verified": 0
+        },
+        "35-38": {
+          "raw": 2,
+          "verified": 0
+        },
+        "35-39": {
+          "raw": 1,
+          "verified": 0
+        },
+        "36-37": {
+          "raw": 1,
+          "verified": 0
+        },
+        "36-38": {
+          "raw": 7,
+          "verified": 0
+        },
+        "36-39": {
+          "raw": 3,
+          "verified": 0
+        },
+        "36-40": {
+          "raw": 4,
+          "verified": 0
+        },
+        "37-38": {
+          "raw": 3,
+          "verified": 0
+        },
+        "37-39": {
+          "raw": 6,
+          "verified": 0
+        },
+        "37-40": {
+          "raw": 0,
+          "verified": 0
+        },
+        "37-41": {
+          "raw": 4,
+          "verified": 0
+        },
+        "38-39": {
+          "raw": 3,
+          "verified": 0
+        },
+        "38-40": {
+          "raw": 4,
+          "verified": 0
+        },
+        "38-41": {
+          "raw": 4,
+          "verified": 0
+        },
+        "38-42": {
+          "raw": 2,
+          "verified": 0
+        },
+        "39-40": {
+          "raw": 0,
+          "verified": 0
+        },
+        "39-41": {
+          "raw": 1,
+          "verified": 0
+        },
+        "39-42": {
+          "raw": 3,
+          "verified": 0
+        },
+        "39-43": {
+          "raw": 3,
+          "verified": 0
+        },
+        "4-5": {
+          "median_epipolar_px": 0.3638471690550086,
+          "raw": 60,
+          "verified": 49
+        },
+        "4-6": {
+          "raw": 10,
+          "verified": 0
+        },
+        "4-7": {
+          "raw": 10,
+          "verified": 0
+        },
+        "4-8": {
+          "raw": 8,
+          "verified": 0
+        },
+        "40-41": {
+          "median_epipolar_px": 0.12469404769998775,
+          "raw": 19,
+          "verified": 10
+        },
+        "40-42": {
+          "raw": 6,
+          "verified": 0
+        },
+        "40-43": {
+          "median_epipolar_px": 0.5491120383680133,
+          "raw": 25,
+          "verified": 22
+        },
+        "40-44": {
+          "raw": 1,
+          "verified": 0
+        },
+        "41-42": {
+          "median_epipolar_px": 0.33410897288578983,
+          "raw": 35,
+          "verified": 29
+        },
+        "41-43": {
+          "raw": 3,
+          "verified": 0
+        },
+        "41-44": {
+          "raw": 1,
+          "verified": 0
+        },
+        "41-45": {
+          "raw": 3,
+          "verified": 0
+        },
+        "42-43": {
+          "raw": 13,
+          "verified": 0
+        },
+        "42-44": {
+          "raw": 5,
+          "verified": 0
+        },
+        "42-45": {
+          "raw": 6,
+          "verified": 0
+        },
+        "42-46": {
+          "raw": 4,
+          "verified": 0
+        },
+        "43-44": {
+          "median_epipolar_px": 0.18705881336977065,
+          "raw": 8,
+          "verified": 8
+        },
+        "43-45": {
+          "raw": 5,
+          "verified": 0
+        },
+        "43-46": {
+          "raw": 6,
+          "verified": 0
+        },
+        "43-47": {
+          "raw": 3,
+          "verified": 0
+        },
+        "44-45": {
+          "raw": 3,
+          "verified": 0
+        },
+        "44-46": {
+          "raw": 6,
+          "verified": 0
+        },
+        "44-47": {
+          "raw": 4,
+          "verified": 0
+        },
+        "44-48": {
+          "raw": 2,
+          "verified": 0
+        },
+        "45-46": {
+          "raw": 4,
+          "verified": 0
+        },
+        "45-47": {
+          "raw": 4,
+          "verified": 0
+        },
+        "45-48": {
+          "raw": 2,
+          "verified": 0
+        },
+        "45-49": {
+          "raw": 7,
+          "verified": 0
+        },
+        "46-47": {
+          "raw": 10,
+          "verified": 0
+        },
+        "46-48": {
+          "raw": 7,
+          "verified": 0
+        },
+        "46-49": {
+          "raw": 3,
+          "verified": 0
+        },
+        "46-50": {
+          "raw": 5,
+          "verified": 0
+        },
+        "47-48": {
+          "raw": 6,
+          "verified": 0
+        },
+        "47-49": {
+          "raw": 1,
+          "verified": 0
+        },
+        "47-50": {
+          "raw": 1,
+          "verified": 0
+        },
+        "47-51": {
+          "raw": 2,
+          "verified": 0
+        },
+        "48-49": {
+          "raw": 9,
+          "verified": 0
+        },
+        "48-50": {
+          "raw": 2,
+          "verified": 0
+        },
+        "48-51": {
+          "raw": 2,
+          "verified": 0
+        },
+        "48-52": {
+          "raw": 1,
+          "verified": 0
+        },
+        "49-50": {
+          "raw": 7,
+          "verified": 0
+        },
+        "49-51": {
+          "raw": 3,
+          "verified": 0
+        },
+        "49-52": {
+          "raw": 3,
+          "verified": 0
+        },
+        "49-53": {
+          "raw": 2,
+          "verified": 0
+        },
+        "5-6": {
+          "median_epipolar_px": 0.2727226260598013,
+          "raw": 88,
+          "verified": 78
+        },
+        "5-7": {
+          "median_epipolar_px": 2.1711228422934978e-07,
+          "raw": 26,
+          "verified": 11
+        },
+        "5-8": {
+          "raw": 7,
+          "verified": 0
+        },
+        "5-9": {
+          "raw": 3,
+          "verified": 0
+        },
+        "50-51": {
+          "median_epipolar_px": 0.12439830627468983,
+          "raw": 14,
+          "verified": 8
+        },
+        "50-52": {
+          "raw": 1,
+          "verified": 0
+        },
+        "50-53": {
+          "raw": 0,
+          "verified": 0
+        },
+        "50-54": {
+          "raw": 1,
+          "verified": 0
+        },
+        "51-52": {
+          "raw": 4,
+          "verified": 0
+        },
+        "51-53": {
+          "raw": 3,
+          "verified": 0
+        },
+        "51-54": {
+          "raw": 2,
+          "verified": 0
+        },
+        "51-55": {
+          "raw": 4,
+          "verified": 0
+        },
+        "52-53": {
+          "raw": 3,
+          "verified": 0
+        },
+        "52-54": {
+          "raw": 2,
+          "verified": 0
+        },
+        "52-55": {
+          "raw": 1,
+          "verified": 0
+        },
+        "52-56": {
+          "raw": 2,
+          "verified": 0
+        },
+        "53-54": {
+          "raw": 7,
+          "verified": 0
+        },
+        "53-55": {
+          "raw": 7,
+          "verified": 0
+        },
+        "53-56": {
+          "raw": 1,
+          "verified": 0
+        },
+        "53-57": {
+          "raw": 3,
+          "verified": 0
+        },
+        "54-55": {
+          "raw": 7,
+          "verified": 0
+        },
+        "54-56": {
+          "raw": 0,
+          "verified": 0
+        },
+        "54-57": {
+          "raw": 2,
+          "verified": 0
+        },
+        "54-58": {
+          "raw": 3,
+          "verified": 0
+        },
+        "55-56": {
+          "raw": 6,
+          "verified": 0
+        },
+        "55-57": {
+          "raw": 2,
+          "verified": 0
+        },
+        "55-58": {
+          "raw": 5,
+          "verified": 0
+        },
+        "55-59": {
+          "raw": 0,
+          "verified": 0
+        },
+        "56-57": {
+          "raw": 3,
+          "verified": 0
+        },
+        "56-58": {
+          "raw": 3,
+          "verified": 0
+        },
+        "56-59": {
+          "raw": 4,
+          "verified": 0
+        },
+        "56-60": {
+          "raw": 2,
+          "verified": 0
+        },
+        "57-58": {
+          "raw": 7,
+          "verified": 0
+        },
+        "57-59": {
+          "raw": 3,
+          "verified": 0
+        },
+        "57-60": {
+          "raw": 3,
+          "verified": 0
+        },
+        "57-61": {
+          "raw": 2,
+          "verified": 0
+        },
+        "58-59": {
+          "raw": 7,
+          "verified": 0
+        },
+        "58-60": {
+          "raw": 3,
+          "verified": 0
+        },
+        "58-61": {
+          "raw": 1,
+          "verified": 0
+        },
+        "58-62": {
+          "raw": 2,
+          "verified": 0
+        },
+        "59-60": {
+          "raw": 2,
+          "verified": 0
+        },
+        "59-61": {
+          "raw": 1,
+          "verified": 0
+        },
+        "59-62": {
+          "raw": 4,
+          "verified": 0
+        },
+        "59-63": {
+          "raw": 2,
+          "verified": 0
+        },
+        "6-10": {
+          "raw": 8,
+          "verified": 0
+        },
+        "6-7": {
+          "median_epipolar_px": 0.19337873564949654,
+          "raw": 127,
+          "verified": 114
+        },
+        "6-8": {
+          "median_epipolar_px": 0.3264990039878748,
+          "raw": 30,
+          "verified": 22
+        },
+        "6-9": {
+          "raw": 9,
+          "verified": 0
+        },
+        "60-61": {
+          "raw": 3,
+          "verified": 0
+        },
+        "60-62": {
+          "raw": 1,
+          "verified": 0
+        },
+        "60-63": {
+          "raw": 4,
+          "verified": 0
+        },
+        "61-62": {
+          "raw": 20,
+          "verified": 0
+        },
+        "61-63": {
+          "raw": 2,
+          "verified": 0
+        },
+        "62-63": {
+          "raw": 15,
+          "verified": 0
+        },
+        "7-10": {
+          "raw": 8,
+          "verified": 0
+        },
+        "7-11": {
+          "raw": 8,
+          "verified": 0
+        },
+        "7-8": {
+          "median_epipolar_px": 0.3484462456798363,
+          "raw": 142,
+          "verified": 130
+        },
+        "7-9": {
+          "median_epipolar_px": 0.28916412607118813,
+          "raw": 31,
+          "verified": 26
+        },
+        "8-10": {
+          "raw": 17,
+          "verified": 0
+        },
+        "8-11": {
+          "raw": 8,
+          "verified": 0
+        },
+        "8-12": {
+          "raw": 9,
+          "verified": 0
+        },
+        "8-9": {
+          "median_epipolar_px": 0.38393814225913303,
+          "raw": 137,
+          "verified": 130
+        },
+        "9-10": {
+          "median_epipolar_px": 0.6030403796637869,
+          "raw": 102,
+          "verified": 88
+        },
+        "9-11": {
+          "median_epipolar_px": 0.3274695996260051,
+          "raw": 28,
+          "verified": 24
+        },
+        "9-12": {
+          "median_epipolar_px": 0.28827738527231583,
+          "raw": 15,
+          "verified": 9
+        },
+        "9-13": {
+          "median_epipolar_px": 0.17288925895158266,
+          "raw": 20,
+          "verified": 10
+        }
+      },
+      "track_length_histogram": {
+        "2": 1143,
+        "3": 237,
+        "4": 54,
+        "5": 15,
+        "6+": 6
+      },
+      "tracks": 1455,
+      "window": 4
+    },
+    "osm": {
+      "absence_claim": "no power=pole/tower/portal, man_made=utility_pole/mast/pole/street_lamp, highway=street_lamp or amenity=street_lamp exists anywhere in this extract",
+      "assumed_ground_z_enu_m": -1.5500463793128632,
+      "buildings_loaded": 636,
+      "camera_height_prior_m": 1.55,
+      "path": "assets/source_bundles/numabe_home_to_station_20260912/numabe_home_to_station_aoi.osm",
+      "pole_like_examples": [],
+      "pole_like_features_in_extract": 0
+    },
+    "relative_bundle_adjustment": {
+      "cameras_optimized": 11,
+      "iterations": 23,
+      "observations": 1407,
+      "outlier_rejection_threshold_px": 4.0,
+      "points_dropped_after_ba": 0,
+      "points_dropped_before_ba": 63,
+      "points_optimized": 610,
+      "reprojection_px_after": {
+        "count": 1407,
+        "max": 3.997270143106839,
+        "mean": 0.7861448892189935,
+        "median": 0.5017114952216969,
+        "min": 0.000408222681630362,
+        "p90": 2.0152235407115326,
+        "p99": 3.5686694239074583,
+        "rms": 1.1312468101600912
+      },
+      "rms_reprojection_px_after": 0.7999122906598515,
+      "rms_reprojection_px_before": 0.800220498812052,
+      "status": 4
+    },
+    "relative_reconstruction": {
+      "frames_registered": 12,
+      "frames_total": 64,
+      "points_triangulated": 673,
+      "reprojection_px": {
+        "count": 1619,
+        "max": 40.46640193875624,
+        "mean": 1.2146810843612779,
+        "median": 0.5502739948509713,
+        "min": 0.00040822254787001777,
+        "p90": 2.897354167286297,
+        "p99": 9.473323729958064,
+        "rms": 2.490276988412756
+      }
+    },
+    "similarity_alignment": {
+      "azimuth_residual_deg": {
+        "max_abs": 91.36833710392114,
+        "median_abs": 45.59825222786701
+      },
+      "gps_residual_m": {
+        "max": 2.0172076887303003,
+        "median": 1.2811322735438173,
+        "rms": 1.3856634918324746
+      },
+      "residual_camera_roll_deg": {
+        "max_abs": 4.611835163134606,
+        "median_abs": 2.4863092454155655
+      },
+      "similarity_scale_recon_units_per_metre": 2.1487751648480256,
+      "track_axis_roll_correction_deg": 350.34128880570483,
+      "track_reversal_branch": {
+        "applied": false,
+        "flipped_branch_azimuth_median_deg": 134.40174777213292,
+        "flipped_branch_gps_median_m": 14.735483417290213,
+        "kept_branch_azimuth_median_deg": 45.59825222786701,
+        "kept_branch_gps_median_m": 1.2811322735438173
+      }
+    }
+  },
+  "tool_versions": {
+    "note": "no package was added to scripts/pipeline/requirements.txt; cv2/numpy/scipy were already importable in this interpreter",
+    "numpy": "2.5.2",
+    "opencv": "4.13.0",
+    "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7",
+    "python_executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "scipy": "1.18.1"
+  },
+  "validation_findings": 0,
+  "world_ir": {
+    "canonical_features": 14,
+    "coordinate_frames": 1,
+    "gameplay_authorities": [
+      "none",
+      "presentation_only"
+    ],
+    "generated_representations": 0,
+    "ir_id": "fl4812_numabe_mapillary_route_component",
+    "source_observations": 13
+  }
+}

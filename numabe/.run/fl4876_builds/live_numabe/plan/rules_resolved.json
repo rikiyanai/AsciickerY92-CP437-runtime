@@ -1,0 +1,4320 @@
+{
+  "schema": "y92.numabe_rules_resolved.v1",
+  "task_id": "NUMABE-RULES-01",
+  "governing_note": "Authoring defaults only; no official legal-width, Article 42, boundary, presence, or condition claim is made for any span.",
+  "defaults_policy": {
+    "unnamed_spans": "administrator DEFAULT:ota_managed, legal class DEFAULT:kubun_3",
+    "designation_unproven": "DEFAULT:not_designated with base-standard parameters",
+    "predicate_unproven": "copy adjacent named span resolved values as DEFAULT:<adjacent route_key>",
+    "zero_matched_rules": "DEFAULT:JP-ROAD-STRUCT-ORDER base class"
+  },
+  "inputs": {
+    "receipt": "/Users/r/Projects/asciicker-Y9-2/artifacts/experiments/fl4813_phase1_final_reconcile_20260916/applicable_law_selection_receipt.json",
+    "corpus": "/Users/r/Projects/asciicker-Y9-2/assets/public_realm_corpora/jp/law_standards_corpus_index.json"
+  },
+  "counts": {
+    "spans": 13,
+    "subjects_per_span": 8,
+    "subject_rows": 104,
+    "cited_rows": 26,
+    "default_rows": 78,
+    "street_fusion_rows": 2,
+    "street_template_rows": 29,
+    "fixture_archetype_rows": 7,
+    "jev_routine_resolution_rows": 4
+  },
+  "road_class_defaults": {
+    "carriageway_width_m_by_highway": {
+      "primary": {
+        "value": 11.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+      },
+      "tertiary": {
+        "value": 7.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+      },
+      "residential": {
+        "value": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+      },
+      "unclassified": {
+        "value": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+      },
+      "service": {
+        "value": 3.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+      }
+    },
+    "footway_half_width_m_by_kind": {
+      "footway": {
+        "value": 0.9,
+        "unit": "m",
+        "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+      },
+      "steps": {
+        "value": 0.75,
+        "unit": "m",
+        "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+      },
+      "pedestrian": {
+        "value": 1.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+      }
+    },
+    "sidewalk_default_width_m": {
+      "value": 2.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    "sidewalk_default_classes": {
+      "value": [
+        "primary",
+        "tertiary"
+      ],
+      "unit": "class_list",
+      "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    "lane_width_m": {
+      "value": 3.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    "observation_run_extent_m": {
+      "value": 8.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (one annotation fixes position, not extent)"
+    },
+    "bollard_spacing_m": {
+      "value": 1.5,
+      "unit": "m",
+      "source": "DEFAULT:authoring (typical vehicle-stop post spacing 1.2-2.0 m family; no ordinance basis)"
+    },
+    "storey_height_m": {
+      "value": 3.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (typical Japanese residential storey ~3 m family; no ordinance basis)"
+    },
+    "default_building_height_m": {
+      "value": 9.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (three storeys at the storey default where no height evidence exists; no ordinance basis)"
+    },
+    "utility_pole_spacing_m": {
+      "value": 30.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (typical urban distribution-pole spacing 25-40 m family; no ordinance basis)"
+    },
+    "utility_pole_merge_m": {
+      "value": 5.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (same-pole observation scatter versus distinct poles; no ordinance basis)"
+    },
+    "tag_sidewalk_extra_m": {
+      "value": 0.5,
+      "unit": "m",
+      "source": "DEFAULT:authoring (moved from world_surfaces.py; no ordinance basis)"
+    },
+    "explicit_sidewalk_centreline_half_m": {
+      "value": 1.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (moved from world_surfaces.py; no ordinance basis)"
+    },
+    "place_front_outward_offset_m": {
+      "value": 0.7,
+      "unit": "m",
+      "source": "DEFAULT:authoring (FL-4809 REPRESENT-01: one full terrain cell plus half the deepest front depth, so mesh-placed fronts clear the baked parent mass; moved from compile_world_ir_fixtures.py literals; no ordinance basis)"
+    },
+    "rail_half_width_m": {
+      "value": 5.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    "waterway_half_width_m": {
+      "value": 1.5,
+      "unit": "m",
+      "source": "DEFAULT:authoring (moved from world_surfaces.py; no ordinance basis)"
+    },
+    "observation_default_hfov_deg": {
+      "value": 60.0,
+      "unit": "deg",
+      "source": "DEFAULT:authoring (FL-4809 OBSERVE-01: repo perspective-frame fallback 60 deg per register_observations.py and lower_plan_custom.py; no measured intrinsics basis)"
+    },
+    "junction_rule": {
+      "value": "at every node shared by two or more road carriers (footway-only nodes excluded), a disc of radius the largest incident carriageway half-width",
+      "unit": "m",
+      "source": "DEFAULT:authoring (moved from world_surfaces.py; no ordinance basis)"
+    }
+  },
+  "facade_archetype_defaults_by_use": {
+    "by_use": {
+      "commercial": {
+        "value": "narrow_mixed_use",
+        "unit": "module_id",
+        "source": "DEFAULT:authoring (facade use-class family; no ordinance basis)"
+      },
+      "mixed": {
+        "value": "narrow_mixed_use",
+        "unit": "module_id",
+        "source": "DEFAULT:authoring (facade use-class family; no ordinance basis)"
+      },
+      "residential": {
+        "value": "residential_facade_roofed_entry",
+        "unit": "module_id",
+        "source": "DEFAULT:authoring (facade use-class family; no ordinance basis)"
+      },
+      "service": {
+        "value": "roller_shutter_facade",
+        "unit": "module_id",
+        "source": "DEFAULT:authoring (facade use-class family; no ordinance basis)"
+      }
+    },
+    "variant_length_tiers_m": {
+      "residential_facade_roofed_entry": [
+        {
+          "max_length_m": 6.0,
+          "variant": "deep_projecting_roof_overhang"
+        },
+        {
+          "max_length_m": 8.0,
+          "variant": "external_stair_and_balcony"
+        },
+        {
+          "max_length_m": 10.0,
+          "variant": "external_stair_stack"
+        },
+        {
+          "max_length_m": 12.0,
+          "variant": "stacked_balcony_facade"
+        },
+        {
+          "max_length_m": 15.0,
+          "variant": "stacked_balcony_overhang"
+        },
+        {
+          "max_length_m": "inf",
+          "variant": "weathered_tile_roof"
+        }
+      ],
+      "narrow_mixed_use": [
+        {
+          "max_length_m": 8.0,
+          "variant": "corner_commercial_with_signband"
+        },
+        {
+          "max_length_m": 10.0,
+          "variant": "curved_corner_facade"
+        },
+        {
+          "max_length_m": 13.0,
+          "variant": "lowrise_service_facade_with_signband"
+        },
+        {
+          "max_length_m": "inf",
+          "variant": "partial_multistorey_facade"
+        }
+      ],
+      "residential_facade_with_boundary_sign": [
+        {
+          "max_length_m": "inf",
+          "variant": "lowrise_tile_roof"
+        }
+      ],
+      "roller_shutter_facade": [
+        {
+          "max_length_m": "inf",
+          "variant": "horizontal_shutter_with_tiled_base"
+        }
+      ]
+    }
+  },
+  "representation_policy": {
+    "semantic_identity_proxy": [
+      {
+        "id": "station_platform",
+        "match": {
+          "semantic_class": "place",
+          "claim_property": "place_category",
+          "claim_value": "public_transport=station"
+        },
+        "proxy_target": "station_platform",
+        "disposition": "mesh_fixture",
+        "representation_kind": "synthetic_identity_proxy",
+        "asserts_physical_presence": false,
+        "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+      },
+      {
+        "id": "station_stop",
+        "match": {
+          "semantic_class": "place",
+          "claim_property": "place_category",
+          "claim_value_prefix": "public_transport="
+        },
+        "proxy_target": null,
+        "disposition": "minimap_only",
+        "representation_kind": "map_only",
+        "asserts_physical_presence": false,
+        "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+      },
+      {
+        "id": "memorial",
+        "match": {
+          "semantic_class": "place",
+          "claim_property": "place_category",
+          "claim_value": "historic=memorial"
+        },
+        "proxy_target": "information_board",
+        "disposition": "mesh_fixture",
+        "representation_kind": "synthetic_identity_proxy",
+        "asserts_physical_presence": false,
+        "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+      },
+      {
+        "id": "entrance_gate",
+        "match": {
+          "semantic_class": "station_entrance"
+        },
+        "proxy_target": "pedestrian_gate",
+        "disposition": "mesh_fixture",
+        "representation_kind": "synthetic_identity_proxy",
+        "asserts_physical_presence": false,
+        "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+      },
+      {
+        "id": "rail_crossing",
+        "match": {
+          "semantic_class": "crossing",
+          "geometry_kind": "point",
+          "claim_property": "cross_section.highway",
+          "claim_null": true
+        },
+        "proxy_target": "crossing_marker",
+        "disposition": "mesh_fixture",
+        "representation_kind": "synthetic_identity_proxy",
+        "asserts_physical_presence": false,
+        "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+      },
+      {
+        "id": "attraction_map_only",
+        "match": {
+          "semantic_class": "place",
+          "claim_property": "place_category",
+          "claim_value": "tourism=attraction"
+        },
+        "proxy_target": null,
+        "disposition": "minimap_only",
+        "representation_kind": "map_only",
+        "asserts_physical_presence": false,
+        "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+      },
+      {
+        "id": "bicycle_rental_map_only",
+        "match": {
+          "semantic_class": "place",
+          "claim_property": "place_category",
+          "claim_value": "amenity=bicycle_rental"
+        },
+        "proxy_target": null,
+        "disposition": "minimap_only",
+        "representation_kind": "map_only",
+        "asserts_physical_presence": false,
+        "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+      },
+      {
+        "id": "locality_map_only",
+        "match": {
+          "semantic_class": "place",
+          "claim_property": "place_category",
+          "claim_absent": true,
+          "triage_group": "A"
+        },
+        "proxy_target": null,
+        "disposition": "minimap_only",
+        "representation_kind": "map_only",
+        "asserts_physical_presence": false,
+        "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+      }
+    ],
+    "debt_policy_by_importance": {
+      "value": {
+        "background_A": "synthesis allowed under pack rule",
+        "route_visible_B": "synthesis only as a marked archetype or proxy",
+        "route_visible_C": "observation_owed blocks evidence_complete until observation, authored waiver, or explicit synthetic proxy"
+      },
+      "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+    },
+    "elevated_surface_omission": {
+      "value": {
+        "claim_property": "elevation_relation",
+        "omit_when": "bridge tag present and not a no/false/0 value, or numeric layer above grade",
+        "disposition": "intentional_omission",
+        "reason": "bridge_deck",
+        "owner_stage": "none"
+      },
+      "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+    },
+    "below_grade_omission": {
+      "value": {
+        "claim_property": "elevation_relation",
+        "omit_when": "numeric layer below grade, or tunnel tag present and not a no/false/0 value without a layer above grade",
+        "disposition": "intentional_omission",
+        "reason": "below_grade",
+        "owner_stage": "none"
+      },
+      "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+    },
+    "unmapped_rule": {
+      "value": {
+        "disposition": "intentional_omission",
+        "reconstruction_class": "B",
+        "owner_stage": "none"
+      },
+      "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+    },
+    "observed_defaults": {
+      "value": {
+        "ground_surface_classes": [
+          "road",
+          "sidewalk",
+          "crossing",
+          "terrain",
+          "railway_boundary",
+          "bridge_deck"
+        ],
+        "physical_fixture_classes": [
+          "fixture",
+          "sign"
+        ],
+        "zebra_crossing": {
+          "claim_property": "cross_section.highway",
+          "claim_null": false
+        },
+        "mass_class": "building_footprint"
+      },
+      "source": "DEFAULT:authoring (FL-4809 PLAN-02: proxy semantics for unobserved physical things; no ordinance basis)"
+    },
+    "street_marking": {
+      "value": {
+        "id": "R-STREET-MARKING",
+        "semantic_class": "road_marking",
+        "claim_property": "object_value",
+        "attachment_state": "resolved",
+        "anchor_kind": "carrier_chainage",
+        "disposition": "surface_decal",
+        "representation_kind": "surface",
+        "owner_stage": "stamp",
+        "family_by_class_token": {
+          "crosswalk-zebra": "crosswalk",
+          "crosswalk": "crosswalk",
+          "stop-line": "stop_line",
+          "lane-line": "lane_line",
+          "arrow": "arrow"
+        },
+        "other_family": "other"
+      },
+      "source": "DEFAULT:authoring (FL-4809 R-STREET-MARKING: resolved Mapillary road markings are surface paint; family follows the observed class; no ordinance, dimension, or licence claim)"
+    }
+  },
+  "attachment_tolerances": {
+    "carrier_association_m": {
+      "value": 12.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (FL-4809 ATTACH-01: anchor-kind association tolerances; no ordinance basis)"
+    },
+    "face_resolve_m": {
+      "value": 6.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (FL-4809 ATTACH-01: anchor-kind association tolerances; no ordinance basis)"
+    }
+  },
+  "jev_thresholds": {
+    "accept_confidence": {
+      "value": 0.7,
+      "unit": "ratio",
+      "source": "DEFAULT:authoring (FL-4809 JEV-01: typed decision thresholds; no ordinance basis)"
+    },
+    "review_floor": {
+      "value": 0.4,
+      "unit": "ratio",
+      "source": "DEFAULT:authoring (FL-4809 JEV-01: typed decision thresholds; no ordinance basis)"
+    },
+    "human_review_accept_confidence": {
+      "value": 0.85,
+      "unit": "ratio",
+      "source": "DEFAULT:authoring (FL-4809 JEV-01: typed decision thresholds; no ordinance basis)"
+    }
+  },
+  "jev_routine_resolution": {
+    "catalog_match": {
+      "routing": "decided",
+      "representation": "existing_asset",
+      "source": "DEFAULT:authoring (FL-4809 JEV-03: exact Mapillary class plus verified catalog coverage is routine; no ordinance or site-specific identity claim)"
+    },
+    "observed_road_marking": {
+      "semantic_class": "road_marking",
+      "object_value_prefix": "marking--",
+      "routing": "decided",
+      "representation": "procedural_template",
+      "source": "DEFAULT:authoring (FL-4809 JEV-03: exact Mapillary class plus verified catalog coverage is routine; no ordinance or site-specific identity claim)"
+    },
+    "observed_flat_surface": {
+      "semantic_class": "fixture",
+      "object_value_prefix": "construction--flat--",
+      "routing": "decided",
+      "representation": "procedural_template",
+      "source": "DEFAULT:authoring (FL-4809 JEV-03: exact Mapillary class plus verified catalog coverage is routine; no ordinance or site-specific identity claim)"
+    },
+    "unmatched": {
+      "routing": "model_decision",
+      "representation": "unresolved",
+      "source": "DEFAULT:authoring (FL-4809 JEV-03: exact Mapillary class plus verified catalog coverage is routine; no ordinance or site-specific identity claim)"
+    }
+  },
+  "street_fusion_policy": {
+    "sighting_frames_min": {
+      "value": 1,
+      "unit": "count",
+      "source": "DEFAULT:authoring (FL-4809 PLAN-04: street sighting policy; no ordinance basis)"
+    },
+    "beyond_carrier_budget": {
+      "value": "freestanding",
+      "unit": "disposition",
+      "source": "DEFAULT:authoring (FL-4809 PLAN-04: street sighting policy; no ordinance basis)"
+    }
+  },
+  "street_template_families": {
+    "families": [
+      {
+        "object_token": "utility-pole",
+        "match": "contains",
+        "template_id": "jp.urban.utility_pole_concrete_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "traffic-sign",
+        "match": "contains",
+        "template_id": "jp.urban.traffic_sign_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "regulatory--stop",
+        "match": "contains",
+        "template_id": "jp.urban.stop_sign_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "advertisement",
+        "match": "contains",
+        "template_id": "jp.urban.advertising_sign_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "information",
+        "match": "contains",
+        "template_id": "jp.urban.information_board_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "street-light",
+        "match": "contains",
+        "template_id": "jp.urban.street_lamp_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "traffic-light",
+        "match": "contains",
+        "template_id": "jp.urban.traffic_signal_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "junction-box",
+        "match": "contains",
+        "template_id": "jp.urban.street_cabinet_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "trash-can",
+        "match": "contains",
+        "template_id": "jp.urban.waste_basket_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "regulatory",
+        "match": "contains",
+        "template_id": "jp.traffic.regulatory_family_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "bench",
+        "match": "contains",
+        "template_id": "jp.urban.bench_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "bus-stop",
+        "match": "contains",
+        "template_id": "jp.urban.bus_stop_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "bus_stop",
+        "match": "contains",
+        "template_id": "jp.urban.bus_stop_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "bollard",
+        "match": "contains",
+        "template_id": "jp.urban.bollard_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "vending-machine",
+        "match": "contains",
+        "template_id": "jp.urban.vending_machine_rectangular_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "tree",
+        "match": "contains",
+        "template_id": "jp.urban.street_tree_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "vegetation",
+        "match": "contains",
+        "template_id": "jp.urban.street_tree_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "sign--store",
+        "match": "contains",
+        "template_id": "jp.urban.store_signboard_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "banner",
+        "match": "contains",
+        "template_id": "jp.urban.banner_sign_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "manhole",
+        "match": "contains",
+        "template_id": "jp.urban.manhole_cover_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "catch-basin",
+        "match": "contains",
+        "template_id": "jp.urban.catch_basin_grate_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "traffic-cone",
+        "match": "contains",
+        "template_id": "jp.urban.traffic_cone_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "driveway",
+        "match": "contains",
+        "template_id": "jp.urban.driveway_apron_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "sign--other",
+        "match": "contains",
+        "template_id": "jp.urban.generic_sign_plate_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "warning",
+        "match": "contains",
+        "template_id": "jp.urban.warning_sign_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "water-valve",
+        "match": "contains",
+        "template_id": "jp.urban.water_valve_cover_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "bike-rack",
+        "match": "contains",
+        "template_id": "jp.urban.bicycle_parking_rack_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "fire-hydrant",
+        "match": "contains",
+        "template_id": "jp.urban.fire_hydrant_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      },
+      {
+        "object_token": "sign--back",
+        "match": "contains",
+        "template_id": "jp.urban.generic_sign_plate_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+      }
+    ],
+    "cone_evidence_frames_min": {
+      "value": 2,
+      "unit": "count",
+      "source": "DEFAULT:authoring (FL-4809 PLAN-06: Mapillary object_value to template family; no ordinance basis)"
+    }
+  },
+  "fixture_archetype_templates": {
+    "rows": [
+      {
+        "archetype": "amenity=bicycle_parking",
+        "template_id": "jp.urban.bicycle_parking_rack_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-07: fixture archetype to template; no ordinance basis)"
+      },
+      {
+        "archetype": "highway=traffic_signals",
+        "template_id": "jp.urban.traffic_signal_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-07: fixture archetype to template; no ordinance basis)"
+      },
+      {
+        "archetype": "amenity=post_box",
+        "template_id": "jp.urban.post_box_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-07: fixture archetype to template; no ordinance basis)"
+      },
+      {
+        "archetype": "barrier=bollard",
+        "template_id": "jp.urban.bollard_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-07: fixture archetype to template; no ordinance basis)"
+      },
+      {
+        "archetype": "amenity=telephone",
+        "template_id": "jp.urban.public_telephone_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-07: fixture archetype to template; no ordinance basis)"
+      },
+      {
+        "archetype": "highway=bus_stop",
+        "template_id": "jp.urban.bus_stop_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-07: fixture archetype to template; no ordinance basis)"
+      },
+      {
+        "archetype": "highway=stop",
+        "template_id": "jp.urban.stop_sign_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-07: fixture archetype to template; no ordinance basis)"
+      },
+      {
+        "archetype": "tourism=information",
+        "template_id": "jp.urban.information_board_v1",
+        "source": "DEFAULT:authoring (FL-4809 PLAN-07: fixture archetype to template; no ordinance basis)"
+      }
+    ]
+  },
+  "inventory": {
+    "bin_length_m": 25.0,
+    "route_visible_corridor_m": 20.0,
+    "unit": "m",
+    "source": "DEFAULT:authoring (FL-4876 INVENTORY-FACTS-01: route inventory binning and route-visible corridor width, promoted verbatim from the documented defaults in compile_route_streetscape_inventory.py; no ordinance basis)"
+  },
+  "roadside_lateral_band": {
+    "roadside_lateral_band_m": {
+      "value": 1.0,
+      "unit": "m",
+      "source": "DEFAULT:authoring (FL-4809 SPATIAL-03: roadside hardware lateral placement band; no ordinance basis)"
+    }
+  },
+  "object_metric_defaults": {
+    "vending_machine": {
+      "width_m": {
+        "min": 0.8,
+        "max": 1.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.5,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.6,
+        "max": 2.1,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "utility_pole": {
+      "width_m": {
+        "min": 0.15,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.15,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 6.0,
+        "max": 12.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "street_lamp": {
+      "width_m": {
+        "min": 0.15,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.15,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 4.0,
+        "max": 7.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "traffic_signal": {
+      "width_m": {
+        "min": 0.3,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 0.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 2.5,
+        "max": 4.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "post_box": {
+      "width_m": {
+        "min": 0.4,
+        "max": 0.9,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.3,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.2,
+        "max": 1.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "public_telephone": {
+      "width_m": {
+        "min": 0.5,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.4,
+        "max": 0.9,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.5,
+        "max": 2.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "bicycle_parking": {
+      "width_m": {
+        "min": 1.0,
+        "max": 2.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.5,
+        "max": 1.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.6,
+        "max": 1.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "bench": {
+      "width_m": {
+        "min": 1.2,
+        "max": 2.4,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.4,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.7,
+        "max": 1.1,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "waste_basket": {
+      "width_m": {
+        "min": 0.4,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.4,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.6,
+        "max": 1.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "drinking_water": {
+      "width_m": {
+        "min": 0.4,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.4,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.7,
+        "max": 1.4,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "shelter": {
+      "width_m": {
+        "min": 2.0,
+        "max": 5.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 1.0,
+        "max": 2.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 2.2,
+        "max": 2.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "clock": {
+      "width_m": {
+        "min": 0.3,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.15,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 2.0,
+        "max": 4.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "fountain": {
+      "width_m": {
+        "min": 1.0,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 1.0,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.2,
+        "max": 1.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "bus_stop": {
+      "width_m": {
+        "min": 0.3,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.1,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.8,
+        "max": 2.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "stop_sign_panel": {
+      "width_m": {
+        "min": 0.5,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.1,
+        "max": 0.3,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.8,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "gate_barrier": {
+      "width_m": {
+        "min": 1.0,
+        "max": 3.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.1,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.9,
+        "max": 1.4,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "bollard": {
+      "width_m": {
+        "min": 0.12,
+        "max": 0.35,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.12,
+        "max": 0.35,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.6,
+        "max": 1.1,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "railway_signal": {
+      "width_m": {
+        "min": 0.3,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 0.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 2.5,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "railway_ground_equipment": {
+      "width_m": {
+        "min": 0.4,
+        "max": 1.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.1,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "railway_buffer_stop": {
+      "width_m": {
+        "min": 1.0,
+        "max": 2.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.3,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.5,
+        "max": 1.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "flagpole": {
+      "width_m": {
+        "min": 0.1,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.1,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 4.0,
+        "max": 10.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "street_cabinet": {
+      "width_m": {
+        "min": 0.6,
+        "max": 1.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.4,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.0,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "fire_hydrant": {
+      "width_m": {
+        "min": 0.3,
+        "max": 0.7,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 0.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.5,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "information_board": {
+      "width_m": {
+        "min": 1.0,
+        "max": 2.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 0.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.6,
+        "max": 2.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.85,
+        "max": 1.15,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "advertising_sign": {
+      "width_m": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.1,
+        "max": 0.4,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.0,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "notice_panel": {
+      "width_m": {
+        "min": 0.4,
+        "max": 1.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.05,
+        "max": 0.3,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.2,
+        "max": 2.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "curb": {
+      "width_m": {
+        "min": 0.01,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.01,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.02,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "drain": {
+      "width_m": {
+        "min": 0.2,
+        "max": 2.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 2.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.2,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "wall": {
+      "width_m": {
+        "min": 0.2,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "fence": {
+      "width_m": {
+        "min": 0.05,
+        "max": 0.3,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.05,
+        "max": 0.3,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.8,
+        "max": 2.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "vegetation": {
+      "width_m": {
+        "min": 0.15,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.15,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.5,
+        "max": 6.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "guardrail": {
+      "width_m": {
+        "min": 0.05,
+        "max": 0.35,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.05,
+        "max": 0.35,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.9,
+        "max": 1.3,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "marking": {
+      "width_m": {
+        "min": 0.01,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.01,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.01,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "paver": {
+      "width_m": {
+        "min": 0.01,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.01,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.01,
+        "max": 0.1,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "cabinet_box": {
+      "width_m": {
+        "min": 0.05,
+        "max": 1.7,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.05,
+        "max": 1.7,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.02,
+        "max": 8.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "pedestrian_crossing_marker": {
+      "width_m": {
+        "min": 1.0,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.8,
+        "max": 1.6,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.01,
+        "max": 0.1,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "tree": {
+      "width_m": {
+        "min": 1.0,
+        "max": 6.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 1.0,
+        "max": 6.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 2.0,
+        "max": 8.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.7,
+        "max": 1.5,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "footbridge": {
+      "width_m": {
+        "min": 0.8,
+        "max": 6.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.8,
+        "max": 4.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.2,
+        "max": 1.4,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "planter_bed": {
+      "width_m": {
+        "min": 0.4,
+        "max": 4.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.3,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.3,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "wall_with_piers": {
+      "width_m": {
+        "min": 0.2,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 0.8,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.5,
+        "max": 2.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "storefront_front": {
+      "width_m": {
+        "min": 1.0,
+        "max": 8.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.1,
+        "max": 1.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 2.4,
+        "max": 3.4,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "place_entry_gate": {
+      "width_m": {
+        "min": 1.5,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.2,
+        "max": 1.2,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 2.4,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "conventional_rail": {
+      "width_m": {
+        "min": 0.5,
+        "max": 4.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.5,
+        "max": 4.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.0,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "crossing_equipment": {
+      "width_m": {
+        "min": 0.4,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.4,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.4,
+        "max": 4.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.8,
+        "max": 1.25,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "railbed": {
+      "width_m": {
+        "min": 0.1,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.1,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.3,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "pole_wire": {
+      "width_m": {
+        "min": 0.05,
+        "max": 6.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.05,
+        "max": 6.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.05,
+        "max": 10.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "platform_edge": {
+      "width_m": {
+        "min": 0.05,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.05,
+        "max": 0.5,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "station_proposal": {
+      "width_m": {
+        "min": 1.0,
+        "max": 6.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 1.0,
+        "max": 6.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 1.0,
+        "max": 4.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "terrain_patch": {
+      "width_m": {
+        "min": 1.0,
+        "max": 30.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 1.0,
+        "max": 30.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.01,
+        "max": 1.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    },
+    "water_structure": {
+      "width_m": {
+        "min": 0.3,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "depth_m": {
+        "min": 0.3,
+        "max": 3.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "height_m": {
+        "min": 0.5,
+        "max": 8.0,
+        "unit": "m",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      },
+      "allowed_scale": {
+        "min": 0.5,
+        "max": 2.0,
+        "unit": "ratio",
+        "source": "DEFAULT:authoring (FL-4809 METRIC-01: urban object class-size priors; measured build_final4 mesh ranges lie inside; no ordinance basis)"
+      }
+    }
+  },
+  "spans": [
+    {
+      "span_index": 0,
+      "route_key": "5030310",
+      "route_name_ja": "大田区道3-31号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        0.0,
+        27.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 1,
+      "route_key": "DEFAULT:unnamed_27_143",
+      "route_name_ja": "DEFAULT:unnamed_span",
+      "management_class": "DEFAULT:ota_managed",
+      "administrator": "DEFAULT:ota_managed",
+      "legal_class": "DEFAULT:kubun_3",
+      "span_m": [
+        27.0,
+        143.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:5030310"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:5030310"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:5030310"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:5030310"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:5030310"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 2,
+      "route_key": "5030510",
+      "route_name_ja": "大田区道3-51号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        143.0,
+        468.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 3,
+      "route_key": "5030250",
+      "route_name_ja": "大田区道3-25号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        468.0,
+        583.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 4,
+      "route_key": "5030490",
+      "route_name_ja": "大田区道3-49号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        583.0,
+        618.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 5,
+      "route_key": "4000600",
+      "route_name_ja": "大田区道主要第60号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        618.0,
+        643.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 6,
+      "route_key": "4000460",
+      "route_name_ja": "大田区道主要第46号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        643.0,
+        718.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 7,
+      "route_key": "DEFAULT:unnamed_718_773",
+      "route_name_ja": "DEFAULT:unnamed_span",
+      "management_class": "DEFAULT:ota_managed",
+      "administrator": "DEFAULT:ota_managed",
+      "legal_class": "DEFAULT:kubun_3",
+      "span_m": [
+        718.0,
+        773.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:4000460"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:4000460"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:4000460"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:4000460"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:4000460"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 8,
+      "route_key": "5030250",
+      "route_name_ja": "大田区道3-25号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        773.0,
+        803.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 9,
+      "route_key": "DEFAULT:unnamed_803_883",
+      "route_name_ja": "DEFAULT:unnamed_span",
+      "management_class": "DEFAULT:ota_managed",
+      "administrator": "DEFAULT:ota_managed",
+      "legal_class": "DEFAULT:kubun_3",
+      "span_m": [
+        803.0,
+        883.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:5030250"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:5030250"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:5030250"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:5030250"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:5030250"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 10,
+      "route_key": "5031200",
+      "route_name_ja": "大田区道3-120号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        883.0,
+        933.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 11,
+      "route_key": "4000600",
+      "route_name_ja": "大田区道主要第60号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        933.0,
+        953.0
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "span_index": 12,
+      "route_key": "4000450",
+      "route_name_ja": "大田区道主要第45号線",
+      "management_class": "ota_managed",
+      "administrator": "ota_ward",
+      "legal_class": "kubun_3",
+      "span_m": [
+        953.0,
+        1016.882
+      ],
+      "subjects": {
+        "accessibility": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ACCESSIBILITY-STD",
+            "OTA-ACCESS-IMPL-REGS"
+          ],
+          "parameters": {
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "curb_height_cm": {
+              "value": 5.0,
+              "unit": "cm",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "tactile_paving_placement": {
+              "value": "crosswalk_ends_and_guidance_path",
+              "unit": "placement",
+              "source": "DEFAULT:not_designated"
+            },
+            "cross_slope_standard_percent": {
+              "value": 1.0,
+              "unit": "percent",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "article_42_category": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "designation_category": {
+              "value": "not_designated",
+              "unit": "category",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "marking_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-MARKINGS"
+          ],
+          "parameters": {
+            "crosswalk_marking": {
+              "value": "Appended-Table-4 crosswalk form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            },
+            "stop_line": {
+              "value": "Appended-Table-4 stop-line form",
+              "unit": "form",
+              "source": "JP-SIGN-MARK-ORDER-MARKINGS Article 6"
+            }
+          }
+        },
+        "occupation": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "permitted_occupation_objects": {
+              "value": "none",
+              "unit": "list",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "utility_pole_spacing_basis": {
+              "value": "base_class_reference_no_placed_poles",
+              "unit": "basis",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "railway_boundary": {
+          "status": "default",
+          "rule_ids": [
+            "JP-RAILWAY-TECH-STD"
+          ],
+          "parameters": {
+            "rail_boundary_fence_type": {
+              "value": "trespass_prevention_equipment",
+              "unit": "type",
+              "source": "DEFAULT:not_designated"
+            },
+            "rail_boundary_fence_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "road_structure": {
+          "status": "default",
+          "rule_ids": [
+            "JP-ROAD-STRUCT-ORDER"
+          ],
+          "parameters": {
+            "carriageway_width_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "sidewalk_width_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            },
+            "drainage_gutter_width_m": {
+              "value": 0.3,
+              "unit": "m",
+              "source": "DEFAULT:JP-ROAD-STRUCT-ORDER"
+            }
+          }
+        },
+        "setback": {
+          "status": "default",
+          "rule_ids": [
+            "OTA-ART42-SETBACK"
+          ],
+          "parameters": {
+            "setback_distance_from_centerline_m": {
+              "value": 2.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            },
+            "setback_distance_from_river_or_railway_side_m": {
+              "value": 4.0,
+              "unit": "m",
+              "source": "DEFAULT:not_designated"
+            }
+          }
+        },
+        "sign_form": {
+          "status": "cited",
+          "rule_ids": [
+            "JP-SIGN-MARK-ORDER-SIGNS",
+            "JP-MLIT-SIGN-CATALOG",
+            "JP-MLIT-SIGN-INSTALL-STD"
+          ],
+          "parameters": {
+            "sign_mounting_height_m": {
+              "value": 1.8,
+              "unit": "m",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            },
+            "sign_lateral_offset_cm": {
+              "value": 25.0,
+              "unit": "cm",
+              "source": "JP-MLIT-SIGN-INSTALL-STD ch.3(2)"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

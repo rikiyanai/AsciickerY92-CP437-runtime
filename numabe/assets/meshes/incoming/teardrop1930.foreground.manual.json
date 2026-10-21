@@ -1,0 +1,26 @@
+{
+  "schema": "asciicker.car.native_foreground_binding.v1",
+  "subject": "teardrop1930",
+  "status": "MANUAL_INTEGRATION_IN_REVIEW_NOT_RUNTIME_ACCEPTANCE",
+  "mechanical_contract": "assets/meshes/incoming/approved_car_foreground.mechanics.json",
+  "construction": "articles/fl4831-aahub-car-turntables-20261019/revision-04/teardrop1930/construction.json",
+  "construction_sha256": "715787738c8e3f5a9725f1977664b5b9efd4a135045fa7f4c26c6d0ce7f566be",
+  "authorship": "Retain the original1930s-inspired coachwork target across all96native views, not an exact historical model claim. Manual semantic binding; no generic modern sedan or newly hand-typed source-art claim.",
+  "inspected_native_samples": [0],
+  "sequence": {"first": 0, "last": 95, "retain": "Full original glyph passages, native advances, wire-wheel articulation, running-board grooves and negative shapes through the complete GIF."},
+  "bindings": [
+    {"prefix": "body.", "part": 0, "retain": "Long separate bonnet and flowing rear coachwork, not a modern monocoque box."},
+    {"prefix": "bonnet.", "part": 0, "retain": "Long tapered bonnet seams and repeated side vents, kept distinct from the radiator and cabin."},
+    {"prefix": "radiator.", "part": 0, "retain": "Tall narrow front radiator with original bounded vertical grille passages and surrounding separation."},
+    {"prefix": "fender.", "part": 0, "retain": "Large separate swept fenders over all four wheels, crown/return marks and arch gaps; do not fuse the fenders to the tire outlines."},
+    {"prefix": "board.", "part": 0, "retain": "Low running boards and original groove rhythm connecting the fender relationships, without filling the open underbody."},
+    {"prefix": "roof.", "part": 0, "retain": "Compact swept roof behind the long bonnet; retain its original front/rear pillar joins."},
+    {"prefix": "glass.", "part": 0, "retain": "Source windscreen, rear glass and side-pane rhythm; preserve all seven protected openings."},
+    {"prefix": "door.", "part": 0, "retain": "Source coachwork door seam/handle relationships."},
+    {"prefix": "front.", "part": 0, "retain": "Separate round headlamps, radiator-adjacent bars, bumper and physical fictional ﾅ57-62 plate."},
+    {"prefix": "rear.", "part": 0, "retain": "Flowing tail and source lamps/bumper with physical ﾅ57-62 plate."}
+  ],
+  "wheel_character": "Retain the original paired wire-spoke passages, hub, valve and tread. Spokes rotate physically; do not replace them with four vents or Porsche petals.",
+  "output": "godot_project/assets/world_mesh/foreground/teardrop1930.native.json",
+  "open": ["Runtime continuous rotation", "Player walk-around", "Fender/running-board separation", "Scale and occlusion transitions"]
+}

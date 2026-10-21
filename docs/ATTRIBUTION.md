@@ -1,5 +1,21 @@
 # Attribution and provenance
 
+## Numabe map and reference layers
+
+The Numabe map uses OpenStreetMap contributors' data (ODbL1.0). Source IDs,
+acquisition metadata and credits are retained under `numabe/assets/source_bundles/`.
+Mapillary reference images retain their per-image source IDs and attribution
+metadata in the included manifests/surveys (CC BY-SA4.0 where declared there).
+GSI aerial tiles retain their source metadata under
+`numabe/artifacts/experiments/fl4876_manual_world/aerial/` (Geospatial
+Information Authority of Japan). PLATEAU/Tokyo survey credits and acquisition
+hashes remain in the source manifest, although raw surveys are not bundled.
+
+The train is the project-authored Tokyu7000 three-car mesh. Its motion follows
+OSM rail centrelines with a synthetic presence timetable, not an observed
+railway schedule. The README animation is a historical native Classic capture.
+Private operator-pasted reference photographs are not redistributed.
+
 ## Upstream
 
 This project is derived from [msokalski/asciicker](https://github.com/msokalski/asciicker). No authorship is claimed for upstream Asciicker source or assets. The original source license is preserved at `docs/licenses/asciicker-source-LICENSE`.

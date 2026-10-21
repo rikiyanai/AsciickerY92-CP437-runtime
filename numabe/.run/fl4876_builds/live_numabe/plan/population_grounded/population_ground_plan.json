@@ -1,0 +1,26 @@
+{
+  "counts": {
+    "grounded_logical_instances": 2660,
+    "grounded_placements": 3076
+  },
+  "inputs": {
+    "dispatch_dir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population",
+    "source_dispatch_sha256_by_owner": {
+      "custom": "7edae366a620086d23341871c027bac81caaecdd251c5248dcb01989494ec40f",
+      "fixtures": "e2d83000449f18671ce12c7955e3c2075201caf86bff120e565f03eb87f8f716",
+      "linear": "3ae0511b362249275184cf34f0f84461aba206b3ac490ee0669ee2e7a4344ab0",
+      "terminal": "efe8a9f09673df4a0397d5d8a98a2ed33ce7309ef395650a6afa57ef11c77f6f"
+    },
+    "terrain_map": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/output.a3d",
+    "terrain_map_sha256": "e4bc9166fcd2da55df478bcca4d9d1b7e311169d177cec5ccb7bf45eea06a5aa",
+    "terrain_metadata": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/terrain_metadata.json",
+    "terrain_metadata_sha256": "2b96f3aa2495a09c15a5ddc07f3c2bca243ed67c26be2df9b4e27f828fac2a3d"
+  },
+  "outputs": {
+    "custom": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population_grounded/population_plan.custom.json",
+    "fixtures": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population_grounded/population_plan.fixtures.json",
+    "linear": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population_grounded/population_plan.linear.json",
+    "terminal": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population_grounded/population_plan.terminal.json"
+  },
+  "schema": "y92.population_ground_plan.v1"
+}

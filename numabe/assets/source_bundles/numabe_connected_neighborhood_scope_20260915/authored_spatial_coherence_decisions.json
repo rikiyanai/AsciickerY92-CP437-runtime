@@ -1,0 +1,472 @@
+{
+  "schema": "y92.spatial_coherence_decisions.v1",
+  "decisions": [
+    {
+      "decision_id": "fl4876-manual-0517-axis",
+      "target_kind": "instance",
+      "target_id": "linear_obs-inst-0517_unit",
+      "action": "orientation_axis_180",
+      "status": "superseded",
+      "parameters": {
+        "placement_id": "obs-inst-0517",
+        "module_id": "green_cycle_or_walk_band"
+      },
+      "decided_by": "operator",
+      "decided_on": "2026-10-10",
+      "decision_record": "Manually visually inspect five more by hand and state the correct placement or nature of the mismatch for each one.",
+      "rationale": "The emitted band and reference describe the same undirected strip axis in opposite directions; a 180 degree reversal does not change this symmetric surface strip.",
+      "evidence": [
+        "artifacts/experiments/fl4876_coherence_preview/v2/1_wrong_facing.png",
+        "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789452008623-ca85f0.png"
+      ],
+      "superseded_by": "SF-4876-X003",
+      "superseded_basis": "inst-0517 missing by SF-4876-X003: Pano mapillary_460974244998043 (crop 45x66 px at x .83-.87): a green painted band with a white edge line runs along the road edge beside the drugstore frontage toward the crossing, directly behind the capture rider. The camera pose in pano_index lies inside building 225369224, so bearings from it are unreliable. Judged by hand from the drugstore frontage and the road, the band lies on the NW (drugstore) edge of primary road 1115662463, about 3 m from its centreline, not on the SE-side footway 1087430630 where the projected point put it. No fixture of this module exists; position is the weakest of this batch.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-manual-0459-rail",
+      "target_kind": "instance",
+      "target_id": "linear_obs-inst-0459_unit",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "placement_id": "obs-inst-0459",
+        "accepted_state": "railway_attachment_after_TRACKSIDE-01"
+      },
+      "decided_by": "operator",
+      "decided_on": "2026-10-10",
+      "decision_record": "Manually visually inspect five more by hand and state the correct placement or nature of the mismatch for each one.",
+      "rationale": "The source crop is ballasted railway track, not a road strip. TRACKSIDE-01's railway attachment is the correct current placement; the earlier road-strip description is retracted.",
+      "evidence": [
+        "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789451581789-36f254.png"
+      ],
+      "superseded_by": "railway geometry",
+      "superseded_basis": "inst-0459 owned by railway geometry: the crop is the ballasted double track at the station; the track is emitted from the mapped railway carriers, not a scene fixture",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-manual-pole-0023-0059",
+      "target_kind": "instance",
+      "target_id": "linear_obs-pole-0023__obs-pole-0059_span",
+      "action": "set_minimum_span_endpoint_lateral",
+      "status": "decided",
+      "parameters": {
+        "endpoint_placement_ids": [
+          "obs-pole-0023",
+          "obs-pole-0059"
+        ],
+        "endpoint_canonical_feature_ids": [
+          "feature:mapillary_object/497769121667490",
+          "feature:mapillary_object/497896894988046"
+        ],
+        "endpoint_identity_basis": "canonical poles behind obs-pole-0023 / obs-pole-0059 in build_reg_43 population_plan.json (E 379771.88 N 3938498.25; E 379772.82 N 3938502.78); the sequence ids shift once authored fixtures adopt canonical poles",
+        "target_lateral_m": 2.0,
+        "side_policy": "preserve_selected_endpoint_side"
+      },
+      "decided_by": "operator",
+      "decided_on": "2026-10-10",
+      "decision_record": "Manually visually inspect five more by hand and state the correct placement or nature of the mismatch for each one.",
+      "rationale": "The endpoint with the smaller carrier offset stands in the carriageway; move that pole to the reviewed roadside offset and regenerate the wire from its endpoints.",
+      "evidence": [
+        "artifacts/experiments/fl4876_coherence_preview/v2/2_off_offset.png"
+      ]
+    },
+    {
+      "decision_id": "fl4876-manual-gantry-0462-0510",
+      "target_kind": "instance",
+      "target_id": "linear_obs-inst-0462__obs-inst-0510_span",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "accepted_failure_kind": "span_off_carrier",
+        "semantic_role": "overhead_gantry_wire"
+      },
+      "decided_by": "operator",
+      "decided_on": "2026-10-10",
+      "decision_record": "Manually visually inspect five more by hand and state the correct placement or nature of the mismatch for each one.",
+      "rationale": "A rail catenary portal is supposed to span across the railway; a roadside lateral-offset rule is inapplicable. This decision does not authorize the newer 0462-0453 topology created by refiling.",
+      "evidence": [
+        "artifacts/experiments/fl4876_coherence_preview/v2/2_off_offset.png",
+        "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789451579935-54a9b3.png",
+        "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789451703457-aa65d9.png"
+      ],
+      "superseded_by": "SF-4876-0370, SF-4876-0425",
+      "superseded_basis": "inst-0462 owned by SF-4876-0370: The derived point (E379664.6 N3938616.4, 140 m NW) is in the wrong direction: it used the raw heading 324.6, but the assessed alignment for mapillary_541585217453090 is -178.9 deg, a rear-cab view looking SE (rail vanishing point x~446, 'Numabe' station sign legible at right in the photo). The box (x .46-.56, y .33-.46) is the second truss catenary portal beyond the nearer beam and in front of the covered footbridge and platform, roughly 40-55 m ahead of the crossing. Along the track that is where SF-4876-0370 stands (E379783.5 N3938474.5, on the track mid-line, yaw 51 across the tracks, sightings 386866/435245/462607); its neighbour SF-4876-0398 is a separate portal 12 m further, and the nearer beam is the 0158/0437 mast pair. Confidence is medium: cab pose is poor and the portal pair could instead be 0370 vs the 0158/0437 pair, but no new portal is needed in either case.; inst-0510 owned by SF-4876-0425: rail catenary portal 1.55 m from accepted overhead_gantry_wire SF-4876-0425",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-manual-station-facade-outward",
+      "target_kind": "instance",
+      "target_id": "facade_feature_facade_plane_numabe_station_entrance_1",
+      "action": "offset_facade_normal",
+      "status": "decided",
+      "parameters": {
+        "placement_id": "station-facade:feature:facade_plane:numabe_station_entrance_1",
+        "outward_offset_m": 0.5,
+        "lateral_shift_m": -4.0
+      },
+      "decided_by": "operator",
+      "decided_on": "2026-10-10",
+      "decision_record": "Manually visually inspect five more by hand and state the correct placement or nature of the mismatch for each one.",
+      "rationale": "The entrance identity and direction are correct, but the facade plane is visibly embedded in the station mass. Move it along its authored outward normal toward the approach footway. REVISED 2026-10-10 from 1.0 m to 4.7 m by agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 under operator instruction 'DONT STOP TILL FULL MAP IS BUIDLABLE': in build_reg_06 (every other coherence row PASS) the 1.0 m facade is still 0.96 m inside PLATEAU footprint bldg_b3153710 (5.4 m measured, the long platform canopy/station structure between the tracks; the OSM entrance node itself lies 0.97 m inside it). Along the same outward normal (az 319.8) the first point outside every canonical footprint is at 4.4 m; 4.7 m puts the gate 0.3 m beyond the canopy end. Direction unchanged. REVISED 2026-10-16 (FL-4876 station/track card fix, review artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track item on_track, runtime crop crops/runtime_reg87_frame3_facade_slab.png): outward 4.7 m left the 7.15 m plane lying across route tokyu_tamagawa_0 (0.02 m from its centreline; the OSM entrance node 9865199050 is itself 2.59 m from that route). The station photographs nmb00 and nmb01 (assets/source_bundles/numabe_home_to_station_20260912/captures) show the black portal seen head-on from the NW along the track: the gate hall stands at the end of a street approach (yellow tactile line, fence and tracks on its left), with its face toward the NW. So the facing (normal az 319.8) is right and only the lateral position was wrong: the plane is slid 4.0 m along its tangent toward the NE (the street side, away from the rails; lateral_shift_m is signed along horizontal_tangent_enu, which points SW) and moved 0.5 m outward. Measured in build_reg_88_temple geometry: 2.19 m from route 0 and 6.0 m from route 1 (producer guard minimum 1.9 m), 0.8 m clear of footprint way/225369224 at its NE end, plane centre outside the PLATEAU canopy bldg_b3153710. The reviewer's alternative (plane parallel to the rails, normal toward az 49.6) was not taken because both photographs show the face end-on to the rails.",
+      "evidence": [
+        "artifacts/experiments/fl4876_coherence_preview/v2/3_inside_building.png",
+        "artifacts/experiments/fl4876_fixture_visual/station_entrance_plan.py",
+        "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/runtime_reg87_frame3_facade_slab.png",
+        "assets/source_bundles/numabe_home_to_station_20260912/captures/nmb00_Numabe_Station_2024_May_30_various_16_16_51_330000.jpeg",
+        "assets/source_bundles/numabe_home_to_station_20260912/captures/nmb01_Numabe_Station_2024_May_30_various_16_16_42_050000.jpeg"
+      ]
+    },
+    {
+      "decision_id": "fl4876-manual-fence-0119-lidar",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0119",
+      "action": "set_carrier_lateral_offset",
+      "status": "superseded",
+      "superseded_by": "REG-EDGE-01 registration (commit 972a8d870c)",
+      "superseded_on": "2026-10-10",
+      "supersession_reason": "Wrong side. OSM maps the Tamagawa tracks as two ways 3.4 m apart; way/24475081 is the NE track. The cab photo sequence moves SE (139.7 deg) and the fence stands left of the train, so it is on the NE side, LiDAR edge about 2.7 m from the way. R 7.25 m is the far SW corridor fence. REG-EDGE-01 registers 0119 at the measured NE edge (test_fl4876_registration_rays.py pins it). Evidence: edge_offsets/obs-inst-0119.jpg, registration_reg_edge_01/panels/inst-0119.jpg.",
+      "parameters": {
+        "target_lateral_m": 7.25,
+        "side": "R"
+      },
+      "decided_by": "operator",
+      "decided_on": "2026-10-10",
+      "decision_record": "Claude measured the rail fence at about 7.25 m from the track centreline and showed the built fence on the rails.",
+      "rationale": "The TMG cross-section has no vertical structure over the track bed and shows the fence band at approximately +7.25 m; the authored zero offset is upstream placement error.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/fix_0119_A.png",
+        "artifacts/experiments/fl4876_fixture_visual/fix_0119_C.png",
+        "artifacts/experiments/fl4876_fixture_visual/fix_0119_xsec.png"
+      ]
+    },
+    {
+      "decision_id": "fl4876-manual-pole-0417-photo",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0417",
+      "action": "offset_from_mass_boundary",
+      "status": "superseded",
+      "superseded_by": "POS-4876-002",
+      "superseded_on": "2026-10-10",
+      "supersession_reason": "The later full-resolution photo-foot reconstruction places the merged 0416/0417 pole 0.8 m outside the wall; the earlier 1.8 m estimate would put it in the carriageway.",
+      "parameters": {
+        "building_feature_id": "feature:building_footprint:way/225367798",
+        "outward_distance_m": 1.8
+      },
+      "decided_by": "operator",
+      "decided_on": "2026-10-10",
+      "decision_record": "Claude's photo places pole 0417 at the corner beside the crosswalk, about 1.8 m out from the building; the point cloud is too sparse there.",
+      "rationale": "The built pole lies on the building outline. Project from the nearest wall point along that mass's outward normal using the photo-derived distance, then recompute its carrier attachment.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/pole_0417_C.png",
+        "artifacts/experiments/fl4876_fixture_visual/pole_0417_lidar.png"
+      ]
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0097",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0097",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "trimmed_hedge",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0097"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Sonnet said change_host from the photo heading; full-resolution recheck overturns it: TMG LiDAR shows a 3-4 m vegetation band along the road-facing SW face of way/1507403646, parallel to road way/229865708, exactly where the planned span runs. The capture heading (21 deg) disagrees with its own view along the street.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0097.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0150",
+      "superseded_basis": "inst-0097 owned by SF-4876-0150: same tall clipped hedge on the retaining wall, 3.5 m from accepted trimmed_hedge SF-4876-0150",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0602",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0602",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "concrete_block_wall",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0602"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (medium): A concrete block wall with greenery above it runs laterally across the road ahead. The span runs ESE from the registered point along the building's SW edge, matching the wall's lateral orientation. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0602.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-X004",
+      "superseded_basis": "inst-0602 missing by SF-4876-X004: Capture mapillary_320465079646948 (box ann-1789452571241-eb6c23, x .51-.77, y .10-.27): the SW face of building 1507403646 along the road is a grey stacked concrete-block retaining wall on a dark rubble footing, topped by a dark metal fence overgrown with ivy and a tall clipped hedge. SF-4876-0150 authors the hedge on top and SF-4876-0290 (metal_fence) the fence on top, both on the same 9.9 m face; SF-4876-0349 is the stone marker post in front of it. The block wall itself is not authored (SF-4876-0289 is a different grey wall with gate piers 20 m west on way 1507403696). Hedge, fence and wall are one continuous assembly on one wall line, so the wall is a stacked fixture, not a duplicate.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0626",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0626",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "stone_lined_water_channel",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0626"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (high): A stone-lined canal runs through the street with the box on its right bank. The span follows the blue waterway line along the terrain edge, matching the channel. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0626.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0141",
+      "superseded_basis": "inst-0626 owned by SF-4876-0141: same vegetated stone channel bank, 3.3 m from accepted stone_lined_water_channel SF-4876-0141",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0303",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0303",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "trimmed_hedge",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0303"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (medium): A small clipped shrub/hedge stands at the foot of a mid-rise apartment block on the left corner. The span runs along the building's SW frontage next to the registered point. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0303.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0356",
+      "superseded_basis": "inst-0303 owned by SF-4876-0356: Pano mapillary_298941768278559 box (82x85 px crop) is a single rounded green shrub / small tree about 2 m high at the road-side frontage of the white balconied apartment block, beside parked bicycles. It is not a hedge run. SF-4876-0356 (small_tree, E379825.8 N3938508.7, carrier 225367802) already has a sighting from this exact capture at x=105 'green shrubs in front yard, NE-side house'; by hand, the bush bears about 50 deg from the camera at roughly 9-10 m (using the pano's -40 deg alignment), which lands within 1-2 m of SF-0356. The module differs (small_tree vs trimmed_hedge) but the physical object is the same; the derived trimmed_hedge label overstated it, so no hedge record is needed.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0124",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0124",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "open_and_covered_drain",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0124"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (medium): A shallow open drain runs along the foot of a long hedge beside a brick path. The span follows the building's SW edge from the registered point alongside the path. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0124.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0186",
+      "superseded_basis": "inst-0124 owned by SF-4876-0186: same open drainage channel beside the hedge, 3.5 m from accepted open_and_covered_drain SF-4876-0186",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0129",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0129",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "trimmed_hedge",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0129"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (medium): A clipped hedge runs along the building plot beside a brick path. The span runs along the building's SW edge, parallel to the path and the hedge. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0129.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0132",
+      "superseded_basis": "inst-0129 owned by SF-4876-0132: same dense hedge along the curving path, 3.8 m from accepted trimmed_hedge SF-4876-0132",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0138",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0138",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "trimmed_hedge",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0138"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (medium): A trimmed hedge borders the path in front of an apartment block, with a drain at its foot. The span follows the building's long NE-facing edge along the path. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0138.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0213",
+      "superseded_basis": "inst-0138 owned by SF-4876-0213: Same photo scene as inst-0583 (mapillary_4232338600119124, box ann-1789504026806-34ace3): the clipped hedge on the far bank of the stone channel, with the apartment block and parked van beyond. SF-4876-0213 is the hedge fixture beside the same channel and path (its sightings are literally 'hedge along channel' / 'trimmed hedge' and it lies 5.7 m from this pano camera). The hedge is one continuous run along the channel (about 20 m); SF-4876-0309 continues it to the SE and SF-4876-0138 holds the NW end, so the derived point lies inside an already-authored run. Caveat: SF-0213 carries run_length_m 4.4 only, so the middle of the run is represented by neighbours rather than by its own point; I judge that the same object, not a new one.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0583",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0583",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "stone_lined_water_channel",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0583"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (medium): A narrow stone-lined channel runs at the foot of the hedge beside the path. The span coincides with the same building edge; the channel lies right at that boundary. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0583.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0119",
+      "superseded_basis": "inst-0583 owned by SF-4876-0119: Photo mapillary_4232338600119124 (crop ann-1789452429743-b1a50b) shows the stone-edged open water channel curving beside the red brick promenade, with a clipped hedge on its far bank. The perspective captures 565865518637783 and 1251131275673158, taken 3-5 m from this pano camera, look straight down the same channel (stone edging, stepping stones, plank crossing at the junction). SF-4876-0119 (stone_lined_water_channel, on mapped waterway 1268595561, sightings 1150014362092228 and 208850427442017 of this channel beside this path) already authors it; SF-4876-0518 authors the stone planter complex at the junction end. There is one channel along this path, not two. The derived point sits 12 m from SF-0119 because it was ray-projected from a pano whose pose is only good to a few metres.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0635",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0635",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "trimmed_hedge",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0635"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (medium): A trimmed hedge with a small drain below it runs along the path in front of the building. The span follows the building's NE edge along the path. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0635.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0138",
+      "superseded_basis": "inst-0635 owned by SF-4876-0138: Pano mapillary_843598582892761 (camera E379838.7 N3938515.4) shows the same curved stone-lined channel, clipped hedge, parked van and apartment block as inst-0138/0583, seen from the NW end of the run (the brick path vanishes at x~0.30, which is the route bearing 145, so the raw heading is about right). The near end of the hedge sits ~4 m W of the camera at the right edge of the box, where SF-4876-0138 (E379835.0 N3938515.6, sighting 'hedge' from this same capture, along route 670892441) stands. The open channel in the photo is SF-4876-0055 (same capture, 'concrete box / channel cover at path edge'). The 'driveway' is the road mouth with the van beyond the hedge, not a separate object. The derived point 8.2 m from SF-0138 is a ray-projection artefact of a hedge about 20 m long.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0498",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0498",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "pedestrian_guardrail_vertical_bar_continuous",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0498"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Visual review (medium): A vertical-bar metal guardrail with sloped sections stands beside a station entrance. A bent span runs along the building edge from the registered point at the station frontage. The zero lateral offset on this outline is correct.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0498.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-X001",
+      "superseded_basis": "inst-0498 missing by SF-4876-X001: Capture mapillary_601032566167537 (box x .64-.98, y .56-.97) shows a galvanized silver pedestrian guardrail with vertical bars and tactile paving behind it, in front of the station entrance / kiosk, with staircase rails to the left. The accepted rails nearby (SF-4876-0034 white_railguard, 0072/0028 white_tube) are white guard-pipe along the road edge, a different object 8-14 m away, and no fixture of module pedestrian_guardrail_vertical_bar_continuous exists anywhere. No fixture cites this capture. By hand the rail stands about 3-4 m ahead-right of the camera (bearings 113-141 deg from heading 97) at the front of the kiosk building 225563759, on its camera-facing NW face.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0230",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0230",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "mesh_fence",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0230"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Low confidence. The photo shows a tall mesh fence immediately left of the camera enclosing a lot; the planned span is within about 3 m of the camera there. Position accepted; orientation along the lane is not verified from this sheet.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0230.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "SF-4876-0093",
+      "superseded_basis": "inst-0230 owned by SF-4876-0093: Pano mapillary_196724462295987 (camera E379791.6 N3938492.0, heading 359.9, offset 0): the box (x .16-.26) is the right end of the mesh fence that fills the left third of the frame in front of a corrugated shed, with a dark service cabinet / door behind it. SF-4876-0093 (rail_corridor_mesh_fence, carrier 264753665) already has a sighting from this very capture at x=120 'mesh fence (railway side)' and its position basis says it stands for the whole SW fence run, also seen in SF-0095. The box is another bay of the same continuous mesh fence; the cabinet behind it is an object inside the yard (meter cabinet SF-4876-0031 stands at the passage), not a separate fence.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-jev-visual-01-0024",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0024",
+      "action": "accept_current",
+      "status": "superseded",
+      "parameters": {
+        "module_id": "curb_and_open_gutter",
+        "review_id": "spatial-plan-zero-offset:obs-inst-0024"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 (Sonnet visual JEV-VISUAL-01 reviewed, full-resolution recheck by Opus), under operator instruction",
+      "decided_on": "2026-10-10",
+      "decision_record": "Operator, verbatim: \"TRY TO FIX JEV, FOR ANY LOOSE ENDS , JUST RESORT TO MANUAL VISUAL INSPECTION VIA SONNET AGENT. IF ITS STILL UNRESOLVABLE, JUST SKIP\"",
+      "rationale": "Low confidence. Kerb with gutter and guard posts along the road edge beside the canal; the span follows that terrain edge.",
+      "evidence": [
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/obs-inst-0024.png",
+        "artifacts/experiments/fl4876_fixture_visual/jev_visual_01/agent_verdicts.json"
+      ],
+      "superseded_by": "POS-4876-035",
+      "superseded_on": "2026-10-10",
+      "supersession_reason": "The host was the culverted canal reach, which the plan omits; the kerb is re-hosted on road way/225104982."
+    },
+    {
+      "decision_id": "fl4876-manual-gutter-0235",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0235",
+      "action": "set_carrier_lateral_offset",
+      "status": "superseded",
+      "parameters": {
+        "target_lateral_m": 5.3,
+        "side": "R"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 under operator instruction 'FOR ANY LOOSE ENDS, JUST RESORT TO MANUAL VISUAL INSPECTION'",
+      "decided_on": "2026-10-10",
+      "decision_record": "build_reg_17 spatial coherence: tile inside non-host mass feature:building_footprint:way/225562528 after ROAD-XSECTION-01 refiled the observation from that building to road way/27073255.",
+      "rationale": "Observed road-edge drainage (stone_lined_water_channel) attached to primary way/27073255 at R 5.789 m, i.e. 0.3-0.6 m inside building way/225562528 behind the painted asphalt edge at R 5.50 m. Manual plan view on the GSI aerial (scratch drain_plan_c.png) shows the painted edge running along that building's road face, so a gutter cannot stand inside the footprint; place it in the gutter 0.2 m inside the painted edge.",
+      "evidence": [
+        "build_reg_17 spatial_coherence.json inside_mass rows for linear_obs-inst-0235_unit"
+      ],
+      "superseded_by": "SF-4876-0119",
+      "superseded_basis": "inst-0235 owned by SF-4876-0119: Capture mapillary_565865518637783 (crop ann-1789450031367-a3fe10) shows the narrow stone-edged channel running along the red-paved path toward a plank crossing and boulder near the junction, about 3-12 m ahead of the camera. That is the same channel as inst-0583, authored as SF-4876-0119 (stone_lined_water_channel on mapped waterway 1268595561); the stretch is 3 m from SF-0119 by hand. The derived point (E379866 N3938465) is 35 m SE of the channel and sits on the corner of building 225562528, which is a ray-projection artefact (the carrier is a building, not a waterway). The stone planter/waterfall complex at the junction is SF-4876-0518.",
+      "superseded_on": "2026-10-13"
+    },
+    {
+      "decision_id": "fl4876-manual-gutter-0593",
+      "target_kind": "placement",
+      "target_id": "obs-inst-0593",
+      "action": "set_carrier_lateral_offset",
+      "status": "superseded",
+      "parameters": {
+        "target_lateral_m": 5.3,
+        "side": "R"
+      },
+      "decided_by": "agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 under operator instruction 'FOR ANY LOOSE ENDS, JUST RESORT TO MANUAL VISUAL INSPECTION'",
+      "decided_on": "2026-10-10",
+      "decision_record": "build_reg_17 spatial coherence: tile inside non-host mass feature:building_footprint:way/225562528 after ROAD-XSECTION-01 refiled the observation from that building to road way/27073255.",
+      "rationale": "Observed road-edge drainage (open_and_covered_drain) attached to primary way/27073255 at R 6.144 m, i.e. 0.3-0.6 m inside building way/225562528 behind the painted asphalt edge at R 5.50 m. Manual plan view on the GSI aerial (scratch drain_plan_c.png) shows the painted edge running along that building's road face, so a gutter cannot stand inside the footprint; place it in the gutter 0.2 m inside the painted edge.",
+      "evidence": [
+        "build_reg_17 spatial_coherence.json inside_mass rows for linear_obs-inst-0593_unit"
+      ],
+      "superseded_by": "SF-4876-0119",
+      "superseded_basis": "inst-0593 owned by SF-4876-0119: Duplicate of inst-0235: capture mapillary_1251131275673158 (crop ann-1789452478292-587b6c) is taken 1.2 m away and 3.7 deg to the left of 565865518637783 in the same sequence and shows the same stretch of stone-edged channel with the same plank crossing and boulder. One physical object, authored as SF-4876-0119. The open_and_covered_drain label is wrong: the channel is open stone-lined water; the plank is a small crossing at the end of it.",
+      "superseded_on": "2026-10-13"
+    }
+  ]
+}

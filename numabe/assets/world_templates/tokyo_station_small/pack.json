@@ -1,0 +1,32 @@
+{
+  "schema": "y92.world_template_pack.v1",
+  "pack_id": "tokyo_station_small",
+  "parents": ["tokyo"],
+  "jurisdiction": {"country_code": "JP", "region": "Tokyo"},
+  "site_contexts": ["railway_station"],
+  "fallback_policy": "source_derived",
+  "station_composition_profiles": [
+    {
+      "id": "jp.tokyo.small_station_side_platform",
+      "platform_length_m": 45.0,
+      "platform_width_m": 2.1,
+      "platform_height_m": 0.94,
+      "canopy_height_m": 3.22,
+      "rail_boundary_offset_m": 2.25,
+      "rail_boundary_height_m": 1.25,
+      "station_radius_m": 110.0,
+      "entrance_portal_width_m": 4.9,
+      "entrance_portal_height_m": 3.12,
+      "provenance": "declarative small urban station proposal; source review required"
+    }
+  ],
+  "templates": [
+    {
+      "template_id": "jp.tokyo.station.notice_panel_v1",
+      "semantic_class": "station_facility_notice",
+      "identity_bucket": "semi_standardized",
+      "geometry_family": "jp_station_notice_panel",
+      "face_mode": "source_parameters"
+    }
+  ]
+}

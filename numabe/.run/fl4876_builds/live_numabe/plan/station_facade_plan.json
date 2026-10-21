@@ -1,0 +1,177 @@
+{
+  "asset": {
+    "alpha": 255,
+    "authored_palette": {
+      "glass_rgb": [
+        40,
+        48,
+        48
+      ],
+      "mode": "source_palette_ps1_station_structure",
+      "trim_rgb": [
+        105,
+        110,
+        110
+      ],
+      "wall_rgb": [
+        136,
+        144,
+        144
+      ]
+    },
+    "facade_raster": [
+      32,
+      24
+    ],
+    "faces": 772,
+    "mesh_bytes": 170611,
+    "mesh_name": "facade_feature_facade_plane_numabe_station_entrance_1.akm",
+    "mesh_path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/meshes/facade_feature_facade_plane_numabe_station_entrance_1.akm",
+    "mesh_sha256": "179aec48ab9e2499218b36f45f78af412dcd7ecd6ce6e5be4bb8d39384ac0127",
+    "sign_raster": [
+      48,
+      16
+    ],
+    "source_observations": {
+      "facade": [
+        "object-observation:nmb01:0025",
+        "object-observation:nmb03:0008"
+      ],
+      "sign": [
+        "object-observation:nmb00:0013",
+        "object-observation:nmb01:0012",
+        "object-observation:nmb03:0013"
+      ]
+    },
+    "vertices": 3088
+  },
+  "inputs": {
+    "authored_spatial_decisions": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/authored_spatial_coherence_decisions.json",
+    "authored_spatial_decisions_sha256": "64bbefcbe99991081ff850ac8c44e9736bda35fb477f79c499fdb95a4ee95ebb",
+    "capture_index_sha256": "4466f0dc4c8eb02ed64ff9363b95e3d64863fceb00a2b41fbc2542f6fc77ecef",
+    "object_observations_sha256": "258e4233aedc7ceac0efdba83a9f08cf283d5bf40f3c06950e88013ff0bae2d8",
+    "reconstruction": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/station_facade_reconstruction.json",
+    "reconstruction_sha256": "7ba9178f55de4241d63a254c214541931ab6388182b603272707e6aafe335075",
+    "registered_instances": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/observation_registration/identity_entities.json",
+    "registered_instances_sha256": "4ba2b5f7789281589468d10c4901c5fd7cee0c08cb5a5ea8d8a6e70ce4fe7a52",
+    "requirements": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json",
+    "requirements_sha256": "cbd1325e35fed7e67add0737a0a7d6351dbe66aa80f45602424de0522c65aee7",
+    "world_ir": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/station_facade.world_ir.json",
+    "world_ir_sha256": "51b478ff6caf7c87768b1bbc9549269bf136f89b520007e3d9cca56aa0030a00"
+  },
+  "lowering_owner": "station_facade",
+  "placements": [
+    {
+      "asset_physical_envelope": {
+        "depth_m": 0.045,
+        "height_m": 5.798879904086453,
+        "max_longitudinal_overhang_m": 0.0,
+        "width_m": 7.1527089951644065
+      },
+      "attachment": {
+        "attachment_id": "attachment:station-facade:feature:facade_plane:numabe_station_entrance_1",
+        "horizontal_tangent_enu": [
+          -0.7555477800089557,
+          -0.655093544559507,
+          0.0
+        ],
+        "normal_enu": [
+          -0.655093544559507,
+          0.7555477800089557,
+          0.0
+        ],
+        "outward_offset_m": 4.7,
+        "plane_origin_enu_m": [
+          19.72044068742941,
+          -10.121218756037976,
+          -3.850937863969506e-05
+        ],
+        "record_type": "accepted_reconstruction_plane",
+        "source": "station_facade_reconstruction.plane"
+      },
+      "authored_spatial_decision": {
+        "action": "offset_facade_normal",
+        "decision_id": "fl4876-manual-station-facade-outward",
+        "rationale": "The entrance identity and direction are correct, but the facade plane is visibly embedded in the station mass. Move it along its authored outward normal toward the approach footway. REVISED 2026-10-10 from 1.0 m to 4.7 m by agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 under operator instruction 'DONT STOP TILL FULL MAP IS BUIDLABLE': in build_reg_06 (every other coherence row PASS) the 1.0 m facade is still 0.96 m inside PLATEAU footprint bldg_b3153710 (5.4 m measured, the long platform canopy/station structure between the tracks; the OSM entrance node itself lies 0.97 m inside it). Along the same outward normal (az 319.8) the first point outside every canonical footprint is at 4.4 m; 4.7 m puts the gate 0.3 m beyond the canopy end. Direction unchanged."
+      },
+      "canonical_anchor_id": "feature:station_entrance:node/9865199050",
+      "feature_id": "feature:facade_plane:numabe_station_entrance_1",
+      "placement_id": "station-facade:feature:facade_plane:numabe_station_entrance_1",
+      "sign_feature_id": "feature:sign:numabe_station_identity_1",
+      "source_observation_basis": "registered_station_entity_observations",
+      "source_observation_instance_ids": [
+        "inst-0151",
+        "inst-0156",
+        "inst-0475",
+        "inst-0496",
+        "inst-0511"
+      ]
+    }
+  ],
+  "representation": {
+    "locale_pack_chain": [
+      "common_global",
+      "japan",
+      "japan_urban",
+      "tokyo",
+      "tokyo_station_small",
+      "tokyu"
+    ],
+    "selected_template": {
+      "face_mode": "parameterized_catalog",
+      "geometry_family": "tokyu_station_identity_sign",
+      "identity_bucket": "operator_standard",
+      "ocr_matches": [],
+      "pack_id": "tokyu",
+      "parameters": {
+        "label_suffix": " STA",
+        "panel_rgb": [
+          157,
+          45,
+          83
+        ],
+        "text_rgb": [
+          239,
+          238,
+          224
+        ],
+        "trim_rgb": [
+          220,
+          219,
+          208
+        ]
+      },
+      "score": 175,
+      "score_reasons": [
+        "semantic_class",
+        "country",
+        "region",
+        "operator",
+        "site_context"
+      ],
+      "semantic_class": "station_identity_sign",
+      "template_id": "jp.tokyu.station_identity_v1"
+    },
+    "selection_context": {
+      "country_code": "JP",
+      "municipality": "Ota",
+      "operator_ids": [
+        "tokyu"
+      ],
+      "region": "Tokyo",
+      "site_contexts": [
+        "urban_residential",
+        "railway_station"
+      ],
+      "template_pack_chain": [
+        "common_global",
+        "japan",
+        "japan_urban",
+        "tokyo",
+        "tokyo_station_small",
+        "tokyu"
+      ]
+    }
+  },
+  "schema": "y92.station_facade_plan.v1"
+}

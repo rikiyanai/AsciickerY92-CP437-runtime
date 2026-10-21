@@ -1,0 +1,15 @@
+# Optional heavy dependencies — only needed for specific pipelines.
+# Install: pip install -r requirements-optional.txt
+# (inherits all runtime deps)
+
+-r requirements.txt
+
+# Image analysis pipeline (scikit-image depends on scipy)
+scikit-image>=0.19.0
+scipy>=1.8.0
+
+# Airborne LiDAR reader for scripts/pipeline/compile_lidar_roof_field.py (FL-4787 SBU, FL-4930 Numabe)
+laspy>=2.5,<3
+
+# Blender MCP integration (renamed from the compatibility-wrapper blender-mcp)
+mcp-for-blender>=2.0.4,<3

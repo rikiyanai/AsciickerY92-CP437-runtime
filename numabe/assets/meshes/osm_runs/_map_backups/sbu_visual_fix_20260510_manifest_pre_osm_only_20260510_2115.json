@@ -1,0 +1,161 @@
+{
+  "artifacts": {
+    "a3d_exists": true,
+    "a3d_size_bytes": 7959642,
+    "activation_env_exists": true,
+    "blend_exists": true,
+    "buildings_only_a3d_exists": true,
+    "buildings_only_a3d_size_bytes": 7955482,
+    "mesh_count": 20,
+    "prebake_a3d_exists": true,
+    "prebake_a3d_size_bytes": 7955482,
+    "terrain_only_a3d_exists": true,
+    "terrain_only_a3d_size_bytes": 7955482
+  },
+  "bbox": {
+    "max_lat": 40.91646,
+    "max_lon": -73.12253,
+    "min_lat": 40.91377,
+    "min_lon": -73.129
+  },
+  "blender_probe": {
+    "addon_profile": "unified-4.x",
+    "addons": {
+      "blender_mcp_addon.py": true,
+      "io_asciicker": true
+    },
+    "blosm_available": true,
+    "legacy_addons": {
+      "akm_curve_volumizer.py": false,
+      "any_obj_vtex_color.py": false,
+      "io_mesh_akm": false,
+      "vertex_coloring_building.py": false
+    },
+    "path": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "required_addons": [
+      "io_asciicker",
+      "blender_mcp_addon.py"
+    ],
+    "version": "4.5"
+  },
+  "import": {
+    "buildings_found": 0,
+    "objects_added": 14,
+    "objects_after": 14,
+    "objects_before": 0,
+    "operator_result": "{'FINISHED'}",
+    "source": "overpass-cache",
+    "status": "imported"
+  },
+  "paths": {
+    "a3d_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/output.a3d",
+    "activation_env_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/active_mesh_root.env",
+    "blend_file": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/workspace.blend",
+    "building_bake_summary_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/building_bake_summary.json",
+    "building_specs_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/building_instances.json",
+    "buildings_only_a3d_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/output_buildings_only.a3d",
+    "fixture_specs_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/fixture_instances.json",
+    "fixtures_dir": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/fixtures",
+    "manifest_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/manifest.json",
+    "meshes_dir": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/meshes",
+    "normalized_osm_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/osm_blosm_input.osm",
+    "prebake_a3d_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/output_prebake.a3d",
+    "terrain_metadata_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/terrain_metadata.json",
+    "terrain_only_a3d_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/output_terrain_only.a3d",
+    "topology_instance_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/topology_instance.json"
+  },
+  "pipeline": {
+    "asciiid_phase": {
+      "status": "completed",
+      "steps_done": [
+        "append_topology_mesh",
+        "topology_bake",
+        "delete_topology_mesh",
+        "copy_markers_after_topology_bake",
+        "prepare_building_footprint_bake_input",
+        "copy_markers_into_building_footprint_input",
+        "direct_footprint_bake",
+        "copy_markers_after_building_bake",
+        "skip_embed_player_start",
+        "filter_probe_fixtures(24/52)",
+        "append_deferred_fixtures",
+        "copy_markers_after_fixture_append"
+      ],
+      "steps_failed": []
+    },
+    "blender_phase": {
+      "content_bounds": {
+        "max_x": 1616.4951171875,
+        "max_y": 1220.4510498046875,
+        "min_x": 11.747940063476562,
+        "min_y": 13.948760986328125
+      },
+      "exported_mesh_count": 19,
+      "phase_a3d_output": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510/output_terrain_only.a3d",
+      "status": "completed",
+      "steps_done": [
+        "auto_terrain",
+        "paint_terrain",
+        "separate(19)",
+        "rename_osm(17)",
+        "extrude(19/19)",
+        "skip_paint_buildings_for_bake",
+        "prepare_meshes",
+        "clean",
+        "fixtures_deferred(52)",
+        "buildings_deferred(19)",
+        "export_a3d"
+      ],
+      "steps_failed": [],
+      "terrain_bounds": {
+        "max_x": 1632.0,
+        "max_y": 1632.0,
+        "min_x": 0.0,
+        "min_y": 0.0
+      },
+      "terrain_shift": {
+        "x": 592.0,
+        "y": 608.0
+      },
+      "terrain_size": 1632.0
+    },
+    "building_mesh_groups": 19,
+    "extrude": {
+      "placed": 19,
+      "total": 19
+    },
+    "fixture_placements": 52,
+    "mode": "baked",
+    "status": "completed"
+  },
+  "pipeline_config": {
+    "building_height_mult": 5.0,
+    "content_scale": 4.5,
+    "max_terrain_grid_segs": 2048,
+    "osm_material_postprocess": true,
+    "resume_fixtures_from": null,
+    "road_width_mult": 1.0,
+    "satellite_paint": true,
+    "satellite_paint_force": false,
+    "satellite_paint_max_tiles": 100,
+    "satellite_paint_zoom": 18,
+    "skip_import": false,
+    "skip_pipeline": false,
+    "stop_after_buildings_only": false,
+    "topology_mesh": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/sbu_terrain.akm",
+    "topology_z_scale": 0.1
+  },
+  "pipeline_mode": "baked",
+  "run_id": "sbu_visual_fix_20260510",
+  "run_root": "/Users/r/Downloads/asciicker-Y9-2/assets/meshes/osm_runs/sbu_visual_fix_20260510",
+  "source": {
+    "bbox": {
+      "max_lat": 40.91646,
+      "max_lon": -73.12253,
+      "min_lat": 40.91377,
+      "min_lon": -73.129
+    },
+    "type": "overpass"
+  },
+  "timestamp_local": "2026-05-10 19:46:52"
+}

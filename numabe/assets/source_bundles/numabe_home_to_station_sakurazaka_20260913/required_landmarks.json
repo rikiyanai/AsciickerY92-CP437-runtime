@@ -1,0 +1,102 @@
+{
+  "schema": "y92.required_landmarks/1",
+  "landmarks": [
+    {
+      "landmark_id": "sakurazaka",
+      "name": "桜坂",
+      "osm_type": "way",
+      "osm_id": 37661730,
+      "source_ref": "way/37661730",
+      "vertex_count": 10,
+      "buffer_m": 35.0,
+      "buffer_method": "metric capsule in EPSG:32654, 16 segments per quadrant",
+      "full_way_coordinates_lonlat": [
+        [
+          139.6747211,
+          35.5851761
+        ],
+        [
+          139.67477,
+          35.5852294
+        ],
+        [
+          139.674839,
+          35.5853046
+        ],
+        [
+          139.6751292,
+          35.5856564
+        ],
+        [
+          139.6754133,
+          35.5860875
+        ],
+        [
+          139.6755635,
+          35.5862948
+        ],
+        [
+          139.6756122,
+          35.5863549
+        ],
+        [
+          139.6757707,
+          35.5865506
+        ],
+        [
+          139.6757919,
+          35.5865728
+        ],
+        [
+          139.6758276,
+          35.5866102
+        ]
+      ],
+      "aoi_lobe_feature_id": "required_landmark_lobe_sakurazaka",
+      "presentation_recipe": {
+        "vegetation_family": "cherry_tree",
+        "tree_spacing_m": 6.0,
+        "setback_m": 5.0,
+        "handrail_family": "jp_tokyo_white_tube_double",
+        "handrail_spacing_m": 4.2,
+        "handrail_setback_m": 3.0,
+        "handrail_sides": [
+          -1,
+          1
+        ],
+        "retaining_edge_family": "tokyo_slope_low_concrete",
+        "provenance_class": "synthesized",
+        "method": "operator-required landmark tree/handrail/retaining-edge grammar grounded to the OSM road and DEM; positions are not surveyed"
+      }
+    }
+  ],
+  "route_aoi": {
+    "source_bundle": "numabe_home_to_station_20260912",
+    "frozen_route_preserved": true,
+    "old_aoi_area_m2": 79580.2,
+    "new_aoi_area_m2": 95768.0,
+    "bbox_lonlat": [
+      139.6722123071,
+      35.582179839,
+      139.6767237151,
+      35.5869257255
+    ]
+  },
+  "construction": {
+    "method": "metric polygon union",
+    "projection": "EPSG:4326 -> EPSG:32654 via scripts/pipeline/geo_frames.py",
+    "base_aoi": "assets/source_bundles/numabe_home_to_station_20260912/numabe_home_to_station_aoi.geojson",
+    "base_aoi_sha256": "d11251e48929ddaf59a771c99ae14e7a6b111becda3f91d44a0a566820e5266d",
+    "base_route_buffer_m": 55.0,
+    "base_endpoint_radius_m": 75.0,
+    "landmark_source": "assets/source_bundles/numabe_home_to_station_20260912/numabe_home_to_station_aoi.osm way/37661730",
+    "landmark_source_sha256": "44611698c347482dfa6d02861d7018a6f83d0f949fd1f4eb2bca43edff3048ff",
+    "operation": "OGR Polygon.Union(Polygon(base_aoi), LineString(way/37661730).Buffer(35.0,16))",
+    "buffer_quadrant_segments": 16,
+    "connected_union": true,
+    "generated_utc": "2026-09-13T07:37:49Z",
+    "output_aoi": "numabe_home_to_station_sakurazaka_aoi.geojson",
+    "base_route_source": "assets/source_bundles/numabe_home_to_station_20260912/valhalla_pedestrian_route.json",
+    "base_route_sha256": "19641c43345ed6424928fd65bcd3060b7c98f2169bec3b0f0802ec1ce5ba292f"
+  }
+}

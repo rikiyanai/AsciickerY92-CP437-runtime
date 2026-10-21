@@ -1,0 +1,73 @@
+{
+ "schema": "y92.fl4876.sv_alignment.v1",
+ "alignments": {
+  "mapillary_4296719920351968": {
+   "dE": -0.6,
+   "dN": -3.25,
+   "dheading_deg": -18.0,
+   "dpitch_deg": 0.0,
+   "droll_deg": 0.0,
+   "height_m": 2.2,
+   "fov_deg": 75.0,
+   "by": "agent sv-overlay side-by-side alignment 2026-10-18",
+   "at": "2026-10-18T04:34:13Z",
+   "note": "rough visual match (4 tries): GPS point inside a building; moved 3.3 m S into the shopping lane; at 141 green shop front left and blue awning right in both views; lane at 321 within ~10 deg",
+   "base_heading_deg": 50.8,
+   "history": [
+    {
+     "dE": 0.65,
+     "dN": -2.41,
+     "dheading_deg": 0.0,
+     "dpitch_deg": 0.0,
+     "droll_deg": 0.0,
+     "height_m": 2.5,
+     "by": "agent sv-overlay verification 2026-10-18",
+     "at": "2026-10-18T04:25:47Z",
+     "note": "auto step-out from the building footprint (GPS inside); side by side b141 shows the same shopping lane with the green shop front on the left",
+     "base_heading_deg": 50.8
+    }
+   ]
+  },
+  "mapillary_1007789950037389": {
+   "dE": -1.0,
+   "dN": -3.0,
+   "dheading_deg": -10.0,
+   "dpitch_deg": 0.0,
+   "droll_deg": 0.0,
+   "height_m": 2.2,
+   "fov_deg": 75.0,
+   "by": "agent sv-overlay side-by-side alignment 2026-10-18",
+   "at": "2026-10-18T04:34:13Z",
+   "note": "rough visual match (2 tries): GPS point against the wedge building wall; moved 3.2 m SSW onto the road; street directions at 109 and 289 agree within ~8 deg after -10",
+   "base_heading_deg": 198.8
+  },
+  "mapillary_1150014362092228": {
+   "dE": 2.5,
+   "dN": 1.5,
+   "dheading_deg": -20.0,
+   "dpitch_deg": 0.0,
+   "droll_deg": 0.0,
+   "height_m": 2.2,
+   "fov_deg": 75.0,
+   "by": "agent sv-overlay side-by-side alignment 2026-10-18",
+   "at": "2026-10-18T04:34:13Z",
+   "note": "rough visual match (2 tries): GPS point on the SW bank 3 m from the rounded block; moved 2.9 m NE across the stream (photo has the stream between camera and hedge); stream/promenade direction agrees within ~10 deg after -20",
+   "base_heading_deg": 230.5
+  },
+  "mapillary_861063177781848": {
+   "dE": 2.0,
+   "dN": 3.0,
+   "dheading_deg": -10.0,
+   "dpitch_deg": 0.0,
+   "droll_deg": 0.0,
+   "height_m": 2.2,
+   "fov_deg": 75.0,
+   "by": "agent sv-overlay side-by-side alignment 2026-10-18",
+   "at": "2026-10-18T04:34:13Z",
+   "note": "rough visual match (3 tries): moved 3.6 m NE under the trellis walkway; at 320 road left and canal balustrade right in both views; at 140 trellis and fence left, open paving ahead; the white temple wall of the photo is not seen as a wall in the A3D",
+   "base_heading_deg": 230.0
+  }
+ },
+ "about": "FL-4876 SV-OVERLAY-01: per-panorama alignment of the Mapillary equirectangular panoramas to the A3D first-person camera. Camera at pano E+dE, N+dN, height_m above the terrain; photo heading = base_heading_deg (pano_index compass + authored heading_offset_deg) + dheading_deg; dpitch/droll tilt the panorama; fov_deg (optional) = horizontal lens of the side-by-side view that matched. Written by map_editor.py POST /api/sv/alignment.",
+ "updated": "2026-10-18T04:34:13Z"
+}

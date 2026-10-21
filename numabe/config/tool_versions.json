@@ -1,0 +1,55 @@
+{
+  "schema": "asciicker.tool-versions.v1",
+  "checked_on": "2026-09-24",
+  "tools": {
+    "godot": {
+      "production_version": "4.7.2",
+      "accepted_version_prefix": "4.7.2",
+      "upstream": "https://godotengine.org/download/archive/4.7.2-stable/"
+    },
+    "blender": {
+      "production_version": "5.2.2",
+      "accepted_series": "5.2",
+      "upstream": "https://www.blender.org/releases/5-2/"
+    },
+    "mcp": {
+      "protocol_revision": "2026-07-28",
+      "python_sdk_minimum": "2.2.0",
+      "python_sdk_major": 2,
+      "blender_server_package": "mcp-for-blender",
+      "blender_server_minimum": "2.0.4",
+      "blender_addon_protocol": 9,
+      "blender_addon_sha256": "daaea155399fab3a7af937834d4e826b3b60038f641566717ab2af1c27775df1",
+      "upstream": "https://modelcontextprotocol.io/specification/2026-07-28"
+    },
+    "emscripten": {
+      "production_version": "6.0.5",
+      "pin_file": ".emscripten-version",
+      "upstream": "https://github.com/emscripten-core/emsdk/blob/main/emscripten-releases-tags.json"
+    },
+    "node": {
+      "production_lts_major": 24,
+      "ci_major": 24,
+      "upstream": "https://nodejs.org/en/about/previous-releases"
+    },
+    "python": {
+      "current_feature_version": "3.14.7",
+      "minimum_supported": "3.10",
+      "ci_compatibility_version": "3.11",
+      "upstream": "https://www.python.org/downloads/"
+    },
+    "github_actions": {
+      "checkout": 7,
+      "setup_node": 7,
+      "setup_python": 7,
+      "setup_java": 6,
+      "upload_artifact": 7,
+      "download_artifact": 8,
+      "configure_pages": 6,
+      "upload_pages_artifact": 5,
+      "deploy_pages": 5,
+      "github_script": 9,
+      "setup_emsdk": 16
+    }
+  }
+}

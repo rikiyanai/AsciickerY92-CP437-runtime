@@ -1,0 +1,502 @@
+{
+  "context": {
+    "aoi": {
+      "area_m2": 26871.3,
+      "bbox_extent_m": [
+        215.0,
+        165.0
+      ],
+      "bbox_lonlat": [
+        139.6722376,
+        35.5819619,
+        139.6746123,
+        35.5834444
+      ],
+      "bbox_overpass_order": "35.5819619,139.6722376,35.5834444,139.6746123",
+      "lateral_buffer_m": 55.0,
+      "station_radius_m": 75.0
+    },
+    "aoi_content_check": {
+      "building_perp_distance_m": {
+        "max": 78.6,
+        "median": 33.3,
+        "min": 3.9
+      },
+      "building_side_split": {
+        "left_of_corridor": 57,
+        "right_of_corridor": 62
+      },
+      "buildings_inside_aoi": 119,
+      "buildings_within_25m_of_corridor_first_depth": 48,
+      "highway_classes_touching_aoi": [
+        "footway",
+        "primary",
+        "residential",
+        "service",
+        "tertiary"
+      ],
+      "highway_ways_touching_aoi": 20,
+      "method": "point-in-polygon of building-way centroids against the AOI ring; signed side taken from the nearest corridor segment; all distances in EPSG:32654",
+      "railway_lines_touching_aoi": [
+        "東急多摩川線",
+        "東海道新幹線",
+        "東海道本線（品鶴線）"
+      ],
+      "railway_ways_touching_aoi": 19,
+      "verdict": "AOI carries lateral context, not a narrow tunnel: first-depth buildings on both sides, five highway classes including side-street mouths, and the rail boundary."
+    },
+    "corridor": {
+      "admin": "大田区 (Ota City), 東京都 (Tokyo), Japan",
+      "corridor_length_m": 150.09,
+      "corridor_osm_ways": [
+        264753664,
+        264753665
+      ],
+      "line_en": "Tokyu Tamagawa Line",
+      "line_ja": "東急多摩川線",
+      "name_en": "Numabe Station",
+      "name_ja": "沼部駅",
+      "selected_entrance_lonlat": [
+        139.6730398,
+        35.582856
+      ],
+      "selected_entrance_osm_node": 9865199050,
+      "selected_entrance_tags": {
+        "railway": "train_station_entrance",
+        "ref": "1"
+      },
+      "station_osm_node": 7834193975
+    },
+    "crs": {
+      "geographic": "EPSG:4326",
+      "metric_working": "EPSG:32654",
+      "note": "All GeoJSON coordinates are WGS84 lon/lat decimal degrees (EPSG:4326, RFC 7946). All metre figures were computed in EPSG:32654 (WGS84 / UTM zone 54N)."
+    },
+    "extract_element_counts": {
+      "building_ways": 161,
+      "highway_ways": 31,
+      "named_building_ways": 0,
+      "node": 40122,
+      "note": "node/way totals are inflated by the '>;' recursion in the inherited query shape, which pulls every member node of any way or relation touching the bbox.",
+      "railway_ways": 24,
+      "relation": 34,
+      "tagged_nodes": 31,
+      "train_station_entrance_nodes": 2,
+      "way": 11145
+    },
+    "frozen_utc": "2026-09-12T02:12:35Z",
+    "overpass_osm_base": "2026-09-12T02:11:13Z",
+    "purpose": "FL-4810 first frozen source/observation bundle + AOI for the Numabe corridor. Acquisition and licensing evidence only: no reconstruction, no camera solving, no map compilation.",
+    "reconstructability": {
+      "blocks": {
+        "FL-4812_IMPLEMENTATION": "NOT BLOCKED - corridor-independent, provable on any open corpus",
+        "FL-4812_NUMABE_ACCEPTANCE": "CANDIDATE MULTI-VIEW SET FOUND: viewpoint-count gate met; reconstruction/convergence gate tested 2026-09-12 -- 2 of 9 register together, but the largest island registers 4 of 4 with 29 tracks in 3+ images at 0.2054 px median, so LOCAL SfM converged while ABSOLUTE registration failed with 0 anchor constraints and a consistent -147 degree yaw offset"
+      },
+      "corrected_per_provider_state": {
+        "google_street_view": "UNKNOWN_PENDING_ACCESS",
+        "kartaview": "PRESENT",
+        "mapillary": "UNKNOWN_PENDING_ACCESS",
+        "panoramax": "ABSENT_IN_SURVEYED_RADIUS",
+        "wikimedia_commons": "PRESENT"
+      },
+      "mapillary_evidence_phrasing": "The two in-AOI OSM mapillary= ids are evidence that Mapillary imagery was ASSOCIATED with features in this AOI during 2022 surveys. That is not proof the images are presently retrievable, nor proof of current coverage.",
+      "reconstruction_grade_corpus_acquired": false,
+      "superseded": true,
+      "superseded_by": "imagery_survey_v2.json",
+      "why_withdrawn": "Scoped to Panoramax only; generalised to all open imagery without testing KartaView, Mapillary, Google or any open photo pool.",
+      "withdrawn_text": "BLOCKED on street-level imagery: zero open street-level pictures inside the AOI. Geometry (OSM) and metric elevation (GSI DEM5A) are both available and openly licensed."
+    },
+    "user_agent": "asciicker-Y9-2-FL4810/1.0 (source acquisition research; info@yuuz.co)"
+  },
+  "manifest_id": "numabe_corridor_20260911",
+  "record_count": 12,
+  "records": [
+    {
+      "acquired_utc": "2026-09-12T02:18Z",
+      "artifact_path": "numabe_corridor_aoi.geojson",
+      "attribution": "Derived work of OpenStreetMap data. (c) OpenStreetMap contributors, ODbL 1.0 - https://www.openstreetmap.org/copyright",
+      "capture_date": "2026-09-12",
+      "crs": "EPSG:4326",
+      "kind": "annotation",
+      "licence": "ODbL-1.0",
+      "licence_uri": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "notes": "Contains the AOI polygon, the corridor centerline, both mapped station entrances, the station node, and the Overpass bbox. CRS is stated inside the file.",
+      "parameters": {
+        "aoi_area_m2": 26871.3,
+        "corridor_length_m": 150.09,
+        "hull_vertices": 30,
+        "lateral_buffer_m": 55.0,
+        "station_disc_segments": 48,
+        "station_radius_m": 75.0
+      },
+      "provider": "asciicker-Y9-2 FL-4810",
+      "record_id": "aoi_definition_geojson",
+      "retention": "retained",
+      "seed": null,
+      "sha256": "4d3e20d1f649fb376742183033a09a1233ddee54a77b1f6402ae0ece62d18950",
+      "size_bytes": 8933,
+      "source_id": "numabe_corridor_aoi_20260911",
+      "source_uri": "derived from OSM nodes 7834193975, 9865199049, 9865199050, 442165546, 2145028049 and ways 264753664, 264753665, 1115662463, 196858614, 1038001323, 1038001324",
+      "tool_version": "pyproj 3.7.2 (EPSG:4326 -> EPSG:32654); convex hull (monotone chain) of offset corridor + 48-gon station disc"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:19Z",
+      "artifact_path": "imagery_survey.json",
+      "attribution": "asciicker-Y9-2",
+      "capture_date": "2026-09-12",
+      "crs": "EPSG:4326",
+      "kind": "annotation",
+      "licence": "CC0-1.0",
+      "licence_uri": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "notes": "Panoramax-only survey. Its generalised non-reconstructability conclusion is withdrawn in-file; see imagery_survey_v2.json.",
+      "parameters": {
+        "aoi_pictures": 0,
+        "instances_queried": 4
+      },
+      "provider": "asciicker-Y9-2 FL-4810",
+      "record_id": "imagery_survey_record",
+      "retention": "retained",
+      "seed": null,
+      "sha256": "b82ffba299bb4cd8b6be02b0429079821d73bcc078b5bccb9b277114fb6af147",
+      "size_bytes": 7350,
+      "source_id": "numabe_corridor_20260911_imagery",
+      "source_uri": "local record of the street-level imagery survey",
+      "tool_version": "curl 8.7.1 against Panoramax STAC API; python 3.14.7 for spacing statistics"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:12:31Z",
+      "artifact_path": "overpass_query.overpassql",
+      "attribution": "asciicker-Y9-2",
+      "capture_date": "2026-09-12",
+      "crs": "EPSG:4326",
+      "kind": "annotation",
+      "licence": "CC0-1.0",
+      "licence_uri": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "notes": "Exact query bytes, so the extract can be re-requested without re-deriving it.",
+      "parameters": {
+        "bbox_overpass_order": "35.5819619,139.6722376,35.5834444,139.6746123"
+      },
+      "provider": "asciicker-Y9-2 FL-4810",
+      "record_id": "overpass_query_text",
+      "retention": "retained",
+      "seed": null,
+      "sha256": "da92bfc56a78f903bc6ef87263ec02c10341b099d6a7a33b5acf05c917dd603b",
+      "size_bytes": 223,
+      "source_id": "overpass_query.overpassql",
+      "source_uri": "local record of the request body sent to Overpass",
+      "tool_version": "scripts/pipeline/source_manifest.py schema source-manifest/1; acquisition by curl 8.7.1 reusing the request shape of scripts/sbu_e2e_run.py:487 _fetch_overpass_osm_file"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:28Z",
+      "artifact_path": null,
+      "attribution": "出典：国土地理院 数値標高モデル DEM5A (Source: GSI of Japan, 5 m mesh DEM)",
+      "capture_date": null,
+      "crs": "EPSG:4326 tiling (Web Mercator XYZ, EPSG:3857 grid); elevations are orthometric metres on the Japanese vertical datum",
+      "kind": "dem",
+      "licence": "JP-GSI-TERMS",
+      "licence_uri": "https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html",
+      "notes": "Open, reachable, metric elevation evidence covering the whole AOI. DEM5A is the 5 m mesh airborne-LiDAR-derived model; the AOI tile has 0 nodata cells. Probe tile was fetched to the scratchpad only; no downloader was built.",
+      "parameters": {
+        "cell_size_m_at_z15": 3.885,
+        "elev_max_m": 24.12,
+        "elev_mean_m": 9.71,
+        "elev_min_m": -0.31,
+        "entrance_cell": [
+          89,
+          85
+        ],
+        "entrance_elevation_m": 7.28,
+        "grid": [
+          256,
+          256
+        ],
+        "http_status": 200,
+        "nodata_cells": 0,
+        "sibling_endpoints_verified": {
+          "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/15/29097/12914.png": {
+            "bytes": 65545,
+            "content_type": "image/png",
+            "http": 200
+          },
+          "https://cyberjapandata.gsi.go.jp/xyz/dem_png/14/14548/6457.png": {
+            "bytes": 37437,
+            "content_type": "image/png",
+            "http": 200
+          },
+          "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/17/116389/51657.jpg": {
+            "bytes": 21018,
+            "content_type": "image/jpeg",
+            "http": 200
+          }
+        },
+        "terms_page_http": 200,
+        "valid_samples": 65536
+      },
+      "provider": "Geospatial Information Authority of Japan (国土地理院 / GSI)",
+      "record_id": "gsi_dem5a_elevation",
+      "retention": "not_retained",
+      "seed": null,
+      "sha256": "3a2fd14ea73ef27004bab9034f17fa5325db4f1a84f883c2b3246fd40fe0ecf6",
+      "size_bytes": 353256,
+      "source_id": "dem5a tile z15/29097/12914",
+      "source_uri": "https://cyberjapandata.gsi.go.jp/xyz/dem5a/15/29097/12914.txt",
+      "tool_version": "curl 8.7.1"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:16Z",
+      "artifact_path": null,
+      "attribution": "n/a - no content acquired",
+      "capture_date": null,
+      "crs": "EPSG:4326",
+      "kind": "imagery",
+      "licence": "proprietary",
+      "licence_uri": "https://cloud.google.com/maps-platform/terms",
+      "notes": "POLICY: Street View content may be referenced by panorama ID / metadata only; prefetching, storing or caching Street View imagery is prohibited. No imagery was requested. The metadata endpoint requires an API key, so no panorama-ID coverage evidence could be recorded either.",
+      "parameters": {
+        "api_status": "REQUEST_DENIED",
+        "error_message": "You must use an API key to authenticate each request to Google Maps Platform APIs.",
+        "http_status": 200,
+        "panorama_ids_recorded": 0
+      },
+      "provider": "Google Maps Platform",
+      "record_id": "google_street_view_metadata",
+      "retention": "metadata_only",
+      "seed": null,
+      "sha256": null,
+      "size_bytes": null,
+      "source_id": "streetview metadata @ 35.582856,139.6730398 r=50",
+      "source_uri": "https://maps.googleapis.com/maps/api/streetview/metadata?location=35.582856,139.6730398&radius=50",
+      "tool_version": "curl 8.7.1"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:16Z",
+      "artifact_path": null,
+      "attribution": "n/a - no content acquired",
+      "capture_date": null,
+      "crs": "EPSG:4326",
+      "kind": "imagery",
+      "licence": "unset-requires-authentication",
+      "licence_uri": "https://www.mapillary.com/terms",
+      "notes": "Single unauthenticated status probe only; no imagery requested or downloaded. Coverage at Numabe is UNKNOWN because the endpoint requires an OAuth token that this repo does not hold.",
+      "parameters": {
+        "error": "Invalid OAuth 2.0 Access Token (MLYApiException code 190)",
+        "http_status": 500
+      },
+      "provider": "Mapillary (Meta)",
+      "record_id": "mapillary_metadata",
+      "retention": "metadata_only",
+      "seed": null,
+      "sha256": null,
+      "size_bytes": null,
+      "source_id": "graph.mapillary.com images @ AOI bbox",
+      "source_uri": "https://graph.mapillary.com/images?bbox=139.6722376,35.5819619,139.6746123,35.5834444&limit=1",
+      "tool_version": "curl 8.7.1"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:14Z",
+      "artifact_path": null,
+      "attribution": "n/a - nothing was acquired",
+      "capture_date": null,
+      "crs": "EPSG:4326",
+      "kind": "imagery",
+      "licence": "NO-COVERAGE",
+      "licence_uri": null,
+      "notes": "ZERO pictures and ZERO sequences inside the AOI on all four Panoramax instances (HTTP 200 in every case). A Paris control bbox returned 200 pictures over the same endpoint, so the zero is real coverage absence, not an API failure. No Japan-hosted instance is federated. Keyframe spacing and viewpoint multiplicity are therefore both unmet: the corridor is NOT reconstructable from open street-level imagery at this date.",
+      "parameters": {
+        "aoi_pictures": 0,
+        "aoi_sequences": 0,
+        "control_bbox_paris_pictures": 200,
+        "distinct_viewpoints_in_aoi": 0,
+        "http_status": 200,
+        "instances_queried": 4,
+        "radius_1000m_pictures": 0,
+        "radius_2000m_pictures": 1,
+        "radius_4000m_pictures": 500,
+        "viewpoints_required": ">=2 (preferably >=3)"
+      },
+      "provider": "Panoramax (panoramax.xyz, osm-fr, ign, osm-tw)",
+      "record_id": "panoramax_aoi_coverage",
+      "retention": "not_retained",
+      "seed": null,
+      "sha256": null,
+      "size_bytes": null,
+      "source_id": "bbox 139.6722376,35.5819619,139.6746123,35.5834444",
+      "source_uri": "https://api.panoramax.xyz/api/search?bbox=139.6722376,35.5819619,139.6746123,35.5834444&limit=100",
+      "tool_version": "curl 8.7.1"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:33Z",
+      "artifact_path": null,
+      "attribution": "Anonymous897234 via Panoramax, CC-BY-SA-4.0",
+      "capture_date": "2026-08-18T06:52:46.541000+00:00",
+      "crs": "EPSG:4326",
+      "kind": "imagery",
+      "licence": "CC-BY-SA-4.0",
+      "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "notes": "Licence-gated probe. Downloaded ONLY to the session scratchpad (not into the repo) because it lies outside the AOI. Retained here as a metadata row proving what a Panoramax picture yields: open licence, GPS, azimuth, and real intrinsics on Pixel captures.",
+      "parameters": {
+        "aoi_relation": "outside_reference",
+        "camera_manufacturer": "Google",
+        "camera_model": "Pixel 9 Pro XL",
+        "distance_from_entrance_m": 1382.0,
+        "exif_gps_fields": [
+          "GPSLatitude",
+          "GPSLongitude",
+          "GPSAltitude",
+          "GPSImgDirection"
+        ],
+        "focal_length_mm": 6.9,
+        "http_status": 200,
+        "pixels": [
+          2160,
+          3840
+        ],
+        "quality_horizontal_accuracy_m": 5.0,
+        "sensor_array_dimensions": [
+          2160,
+          3840
+        ],
+        "software": "Panoramax App 1.7.2-63",
+        "view_azimuth_deg": 152
+      },
+      "provider": "Panoramax / panoramax.xyz",
+      "record_id": "panoramax_probe_0f3fd3e4",
+      "retention": "not_retained",
+      "seed": null,
+      "sha256": "b5e0325b6c2233a70f75517319b1a37d2e6a01c4d049632bfbde3e6b316d6275",
+      "size_bytes": 2792333,
+      "source_id": "0f3fd3e4-ae03-4016-94d4-572a54dff703",
+      "source_uri": "https://panoramax.openstreetmap.fr/images/0f/3f/d3/e4/ae03-4016-94d4-572a54dff703.jpg",
+      "tool_version": "curl 8.7.1"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:32Z",
+      "artifact_path": null,
+      "attribution": "motocultrice via Panoramax, CC-BY-SA-4.0",
+      "capture_date": "2022-06-24T21:13:10.525000+00:00",
+      "crs": "EPSG:4326",
+      "kind": "imagery",
+      "licence": "CC-BY-SA-4.0",
+      "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "notes": "Licence-gated probe, scratchpad only, outside the AOI. Its sequence is the nearest dense Japanese capture; median spacing 3.43 m shows that Panoramax-style capture WOULD meet the 2-4 m keyframe requirement where it exists. Note focal_length is ABSENT on every iPhone capture in this sequence, so intrinsics are not guaranteed per picture.",
+      "parameters": {
+        "aoi_relation": "outside_reference",
+        "camera_manufacturer": "Apple",
+        "camera_model": "iPhone",
+        "collection": "05e79ef6-1aff-4c03-93c6-dab1d8552e75",
+        "distance_from_entrance_m": 4478.0,
+        "focal_length_mm": null,
+        "http_status": 200,
+        "quality_horizontal_accuracy_m": 5.0,
+        "sensor_array_dimensions": [
+          4032,
+          3024
+        ],
+        "sequence_items": 268,
+        "sequence_length_m": 949.3,
+        "sequence_median_spacing_m": 3.43,
+        "view_azimuth_deg": 49
+      },
+      "provider": "Panoramax / panoramax.xyz",
+      "record_id": "panoramax_probe_5950aa74",
+      "retention": "not_retained",
+      "seed": null,
+      "sha256": "709433c06674c9400318ad07f8bc63bb3aa42b795bbb8628c7230419e1243b0f",
+      "size_bytes": 1698698,
+      "source_id": "5950aa74-b62b-4efe-af65-ecc9f4a7f122",
+      "source_uri": "https://panoramax.openstreetmap.fr/images/59/50/aa/74/b62b-4efe-af65-ecc9f4a7f122.jpg",
+      "tool_version": "curl 8.7.1"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:10Z",
+      "artifact_path": null,
+      "attribution": "(c) OpenStreetMap contributors, ODbL 1.0 - https://www.openstreetmap.org/copyright",
+      "capture_date": "2026-09-12",
+      "crs": "EPSG:4326",
+      "kind": "osm",
+      "licence": "ODbL-1.0",
+      "licence_uri": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "notes": "Used only to resolve the station identity; coordinates were then re-verified against the Overpass element itself.",
+      "parameters": {
+        "display_name": "沼部, 多摩堤通り, 田園調布本町, 大田区, 東京都, 145-0072, 日本",
+        "http_status": 200,
+        "resolved_lat": 35.5827683,
+        "resolved_lon": 139.6730652,
+        "results": 1
+      },
+      "provider": "OpenStreetMap / Nominatim",
+      "record_id": "nominatim_station_geocode",
+      "retention": "metadata_only",
+      "seed": null,
+      "sha256": null,
+      "size_bytes": null,
+      "source_id": "node/7834193975",
+      "source_uri": "https://nominatim.openstreetmap.org/search?q=%E6%B2%BC%E9%83%A8%E9%A7%85&format=jsonv2&limit=10&extratags=1&addressdetails=1",
+      "tool_version": "curl 8.7.1"
+    },
+    {
+      "acquired_utc": "2026-09-12T02:12:35Z",
+      "artifact_path": "numabe_corridor_aoi.osm",
+      "attribution": "(c) OpenStreetMap contributors, ODbL 1.0 - https://www.openstreetmap.org/copyright",
+      "capture_date": "2026-09-12T02:11:13Z",
+      "crs": "EPSG:4326",
+      "kind": "osm",
+      "licence": "ODbL-1.0",
+      "licence_uri": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "notes": "Query text is byte-identical in shape to the existing Overpass owner's template, with only the bbox substituted. Also retained verbatim as overpass_query.overpassql.",
+      "parameters": {
+        "bbox_lonlat": [
+          139.6722376,
+          35.5819619,
+          139.6746123,
+          35.5834444
+        ],
+        "bbox_overpass_order": "35.5819619,139.6722376,35.5834444,139.6746123",
+        "data_param": "data",
+        "fetch_seconds": 4.034,
+        "generator": "Overpass API 0.7.62.11 87bfad18",
+        "http_status": 200,
+        "method": "POST",
+        "osm_api_version": "0.6",
+        "overpass_query": "[out:xml][timeout:180];\n(\n  node(35.5819619,139.6722376,35.5834444,139.6746123);\n  way(35.5819619,139.6722376,35.5834444,139.6746123);\n  relation(35.5819619,139.6722376,35.5834444,139.6746123);\n);\nout body;\n>;\nout skel qt;\n",
+        "request_shape_owner": "scripts/sbu_e2e_run.py:487 _fetch_overpass_osm_file"
+      },
+      "provider": "OpenStreetMap / Overpass API",
+      "record_id": "osm_overpass_aoi_extract",
+      "retention": "retained",
+      "seed": null,
+      "sha256": "9692fb0f0d597abec8e3bc52d9f5986cfa9a68dc6cf00b027f9ac739dde9f0ff",
+      "size_bytes": 6368701,
+      "source_id": "overpass bbox 35.5819619,139.6722376,35.5834444,139.6746123",
+      "source_uri": "https://overpass-api.de/api/interpreter",
+      "tool_version": "scripts/pipeline/source_manifest.py schema source-manifest/1; acquisition by curl 8.7.1 reusing the request shape of scripts/sbu_e2e_run.py:487 _fetch_overpass_osm_file"
+    },
+    {
+      "acquired_utc": "2026-09-12T03:38Z",
+      "artifact_path": "imagery_survey_v2.json",
+      "attribution": "asciicker-Y9-2",
+      "capture_date": "2026-09-12",
+      "crs": "EPSG:4326",
+      "kind": "annotation",
+      "licence": "CC0-1.0",
+      "licence_uri": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "notes": "Multi-provider corrected survey: Panoramax, KartaView (incl. its 3D/point-cloud endpoints), Mapillary, Google Street View and open photo pools, each with an explicit per-provider state token and a control query so a zero is provably real.",
+      "parameters": {
+        "class_A": 9,
+        "class_B": 11,
+        "class_C": 39,
+        "providers_surveyed": 5
+      },
+      "provider": "asciicker-Y9-2 FL-4810",
+      "record_id": "imagery_survey_v2_record",
+      "retention": "retained",
+      "seed": null,
+      "sha256": "f4a5e017d573b6156cb7c3e8a374b6e7ab066568f114f5aaa60b2706bf568cd5",
+      "size_bytes": 124301,
+      "source_id": "numabe_corridor_20260911_imagery",
+      "source_uri": "local record of the street-level imagery survey",
+      "tool_version": "curl 8.7.1 + python 3.14.7 via scripts/pipeline/street_imagery_probe.py"
+    }
+  ],
+  "schema_version": "source-manifest/1"
+}

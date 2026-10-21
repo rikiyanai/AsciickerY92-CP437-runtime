@@ -1,0 +1,957 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fl4683.glyph_program_pin.v1.schema.json",
+  "title": "FL-4683 compiled glyph-program sidecar pin receipt",
+  "description": "Records the fingerprint and byte size of the binary glyph-program sidecar and of every input it was compiled from. A reader confirms these before trusting any compiled content. Receipt version 7 adds the FL-4783 glyph stroke-port graph sidecar format. Receipt version 6 distinguishes the serialized sidecar's blocked-at-rest runtime byte from gate-enabled product startup promotion, records measured loader reachability and the static selector call path, and carries the compiler-owned Harri morphology, scorer-kind, quantized profile weights, policy byte, and scorer-scoped no-match threshold in sidecar format version 6. Receipt version 2 (FL-4686 precondition PA) records complete address-space dispositions. Receipt version 3 (FL-4694 E8) adds an exhaustive aspect-conditioned projection of all 65,536 GTR-v2 relation rows. Receipt version 4 (FL-4512 D2/D3) established the Harri input contract that Phase 2 extends.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "version",
+    "artifact_kind",
+    "generated_by",
+    "sidecar",
+    "program_identity",
+    "harri_selector_contract",
+    "runtime_rights",
+    "pins",
+    "regeneration",
+    "scene_address_index",
+    "gtr_v2_relation_projection"
+  ],
+  "properties": {
+    "schema": {
+      "const": "fl4683.glyph_program_pin.v1"
+    },
+    "version": {
+      "const": 7
+    },
+    "artifact_kind": {
+      "const": "compiled_glyph_program_sidecar_pin_receipt"
+    },
+    "generated_by": {
+      "const": "scripts/compile_fl4683_glyph_program.py"
+    },
+    "artifact_scope": {
+      "description": "Isolated disposable preview or immutable live-authoring transaction.",
+      "enum": ["preview", "authoring"]
+    },
+    "deployment_eligible": {
+      "description": "Only explicit authoring transactions can enter the live product activation boundary.",
+      "type": "boolean"
+    },
+    "authoring_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "activation_owner"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^(?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^/].*$"},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "activation_owner": {"const": "Fl4693ProductProgramPrepareV1"}
+      }
+    },
+    "sidecar": {
+      "description": "Identity and fixed binary layout of the generated sidecar file.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "byte_size",
+        "sha256",
+        "format_version",
+        "magic",
+        "header_size",
+        "fact_record_size",
+        "fact_member_size",
+        "relation_edge_size",
+        "pin_record_size",
+        "scene_address_record_size",
+        "gtr_v2_relation_record_size"
+      ],
+      "properties": {
+        "path": {
+          "oneOf": [
+            { "const": "assets/glyphs/generated/fl4683.glyph_program.v1.bin" },
+            { "type": "string", "pattern": "^(?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^/].*$" }
+          ]
+        },
+        "byte_size": {
+          "type": "integer",
+          "minimum": 257
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "format_version": {
+          "const": 7
+        },
+        "magic": {
+          "const": "FL4683GP"
+        },
+        "header_size": {
+          "const": 320
+        },
+        "fact_record_size": {
+          "const": 128
+        },
+        "fact_member_size": {
+          "const": 20
+        },
+        "relation_edge_size": {
+          "const": 24
+        },
+        "pin_record_size": {
+          "const": 224
+        },
+        "scene_address_record_size": {
+          "const": 12
+        },
+        "gtr_v2_relation_record_size": {
+          "const": 32
+        }
+      }
+    },
+    "harri_selector_contract": {
+      "description": "FL-4512 D2/D3 and Phase-2 format-v6 inputs for compiler-owned Harri selection. The glyph-fact and compiled-pool pins cover each joined source named here; the policy byte and scorer-scoped threshold are part of every fixed-size fact record.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owning_fl",
+        "member_scorer_operand_size",
+        "member_shape6_source",
+        "shape6_component_count",
+        "member_u7_source",
+        "member_primitive_source",
+        "primitive_boundary_rule",
+        "primitive_fact_policy_source",
+        "primitive_live_fact_count",
+        "primitive_live_profile_ids",
+        "primitive_fact_policy_values",
+        "fact_scorer_source",
+        "scorer_kind_values",
+        "fact_role_weights_source",
+        "role_weight_count",
+        "role_weight_quantization",
+        "role_weight_q4_min",
+        "role_weight_q4_max",
+        "shape_quantization",
+        "shape_weighted_l2_order",
+        "reserved_fields_zero",
+        "no_match_policy_contract"
+      ],
+      "properties": {
+        "owning_fl": {"const": "FL-4512"},
+        "member_scorer_operand_size": {"const": 12},
+        "member_shape6_source": {
+          "const": "glyph_records[].morphology.shape6_norm_q0_16 joined by glyph_record_id"
+        },
+        "shape6_component_count": {"const": 6},
+        "member_u7_source": {
+          "const": "glyph_records[].connectivity.mask8_u64_le_hex plus glyph_records[].structure.endpoint_count/junction_count joined by glyph_record_id"
+        },
+        "member_primitive_source": {
+          "const": "fl4512.compiled_pool.v1 rows[].candidate_descriptors mask8_u64_le_hex/filled_region_class/detail_u16 joined by row_sha256 and glyph_id"
+        },
+        "primitive_boundary_rule": {
+          "const": "boundary4 is derived exactly from candidate mask8 by S_pf.v1"
+        },
+        "primitive_fact_policy_source": {
+          "const": "fl4512.compiled_pool.v1 materials[] joined by profile_namespace/material_key"
+        },
+        "primitive_live_fact_count": {"const": 1},
+        "primitive_live_profile_ids": {"const": ["mesh:200"]},
+        "primitive_fact_policy_values": {
+          "const": [
+            {
+              "source_profile_id": "mesh:200",
+              "primitive_target_region_class": 7,
+              "primitive_target_priority_u16": 140,
+              "primitive_extent_enter_q": 8192
+            }
+          ]
+        },
+        "fact_scorer_source": {
+          "const": "facts[].scene_membership_key.scorer_id"
+        },
+        "scorer_kind_values": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unset_refuse",
+            "fl4512.shape6_f8_w4.v2",
+            "u7.mask.v1",
+            "S_pf.v1",
+            "fl4763.structural_decline.v1"
+          ],
+          "properties": {
+            "unset_refuse": {"const": 0},
+            "fl4512.shape6_f8_w4.v2": {"const": 1},
+            "u7.mask.v1": {"const": 2},
+            "S_pf.v1": {"const": 3},
+            "fl4763.structural_decline.v1": {"const": 4}
+          }
+        },
+        "fact_role_weights_source": {
+          "const": "profiles[].role_weights joined by facts[].source_profile_id"
+        },
+        "role_weight_count": {"const": 6},
+        "role_weight_quantization": {
+          "const": "q_W(w)=round-half-up(clamp(w,0,1.5)*16)"
+        },
+        "role_weight_q4_min": {"const": 0},
+        "role_weight_q4_max": {"const": 24},
+        "shape_quantization": {
+          "const": "q_F(x)=round-half-up(clamp(x,0,1)*256)"
+        },
+        "shape_weighted_l2_order": {
+          "const": "sum k=0..5 role_weights_q4[k]*(source_f8[k]-candidate_f8[k])^2"
+        },
+        "reserved_fields_zero": {"const": true},
+        "no_match_policy_contract": {
+          "description": "Format-v6 policy carrier. Structural shape6 rows may carry the degenerate-operand abstention bit and a shape6 weighted-L2 no-match bound. Tonal shape6 rows carry the tonal bound and never carry the bit. U7 rows carry neither the bit nor a bound because their scorer units differ. Zero means unbounded for shape6 bounds.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "policy_source",
+            "degenerate_operand_abstain_flag",
+            "flagged_fact_count",
+            "structural_route_keys",
+            "tonal_route_keys",
+            "structural_bound_fact_count",
+            "tonal_bound_fact_count",
+            "tonal_rows_never_flagged",
+            "bound_units",
+            "threshold_u32_scoping"
+          ],
+          "properties": {
+            "policy_source": {
+              "const": "fl4512.compiled_pool.v1 materials[].no_match_policy joined by profile_namespace/material_key"
+            },
+            "degenerate_operand_abstain_flag": {"const": 1},
+            "flagged_fact_count": {"type": "integer", "minimum": 0},
+            "structural_route_keys": {
+              "const": ["direction.v1", "edge.v1", "flow.v1"]
+            },
+            "tonal_route_keys": {
+              "const": ["density.v1", "ramp.v1"]
+            },
+            "structural_bound_fact_count": {"type": "integer", "minimum": 0},
+            "tonal_bound_fact_count": {"type": "integer", "minimum": 0},
+            "tonal_rows_never_flagged": {"const": true},
+            "bound_units": {"type": "string", "minLength": 1},
+            "threshold_u32_scoping": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "S_pf.v1",
+                "fl4512.shape6_f8_w4.v2",
+                "u7.mask.v1",
+                "fl4763.structural_decline.v1"
+              ],
+              "properties": {
+                "S_pf.v1": {"const": "projected-extent enter gate (unchanged from v5)"},
+                "fl4512.shape6_f8_w4.v2": {"const": "compiled no-match bound, 0 = unbounded"},
+                "u7.mask.v1": {"const": "always 0 (unbounded), see bound_units"},
+                "fl4763.structural_decline.v1": {
+                  "const": "always 0; the row declines before any bound could apply"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "gtr_v2_relation_projection": {
+      "description": "FL-4694 E8 resolution: the exact committed GTR-v2 relation domain projected into the GlyphProgram sidecar in canonical aspect/source/target order. This is inspectable compiler output, not live runtime authority.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "owning_fl",
+        "projection_id",
+        "source_path",
+        "source_schema_path",
+        "glyph_count",
+        "aspect_count",
+        "relations_per_aspect",
+        "relation_count",
+        "record_size",
+        "static_component_count",
+        "affine_component_count",
+        "descriptor_sha256",
+        "aspect_sha256",
+        "relation_sha256",
+        "content_sha256",
+        "address_fields",
+        "preserved_fields",
+        "directionality",
+        "tie_order",
+        "exact_parity_rows",
+        "mismatch_rows",
+        "disposition",
+        "delete_list_entry",
+        "delete_list_disposition",
+        "runtime_authority"
+      ],
+      "properties": {
+        "owning_fl": {"const": "FL-4694"},
+        "projection_id": {"const": "fl4694.glyph_program_gtr_v2_exact_projection.v1"},
+        "source_path": {"const": "assets/glyphs/generated/fl4512.glyph_transform_relation.v2.json"},
+        "source_schema_path": {"const": "assets/glyphs/schema/fl4512.glyph_transform_relation.v2.schema.json"},
+        "glyph_count": {"const": 32},
+        "aspect_count": {"const": 64},
+        "relations_per_aspect": {"const": 1024},
+        "relation_count": {"const": 65536},
+        "record_size": {"const": 32},
+        "static_component_count": {"const": 11},
+        "affine_component_count": {"const": 7},
+        "descriptor_sha256": {"$ref": "#/$defs/sha256"},
+        "aspect_sha256": {"$ref": "#/$defs/sha256"},
+        "relation_sha256": {"$ref": "#/$defs/sha256"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "address_fields": {
+          "const": ["aspect", "from_glyph_id", "to_glyph_id"]
+        },
+        "preserved_fields": {
+          "const": [
+            "static_components",
+            "affine_components",
+            "relation_confidence_q0_16",
+            "compiled_transform_cost"
+          ]
+        },
+        "directionality": {"type": "string", "minLength": 1},
+        "tie_order": {"type": "string", "minLength": 1},
+        "exact_parity_rows": {"const": 65536},
+        "mismatch_rows": {"const": 0},
+        "disposition": {"const": "EXACT_GTR_V2_PARITY"},
+        "delete_list_entry": {"const": "E8"},
+        "delete_list_disposition": {"const": "MANDATORY_DELETE_DURING_FL_4693_CUTOVER"},
+        "runtime_authority": {"const": false}
+      }
+    },
+    "scene_address_index": {
+      "description": "Format version 3 (FL-4686 PA). A sorted lookup table inside the sidecar that turns what a renderer knows about a cell -- namespace, material, route family, lane -- into either the matching compiled fact or an explicit declaration that the program owns the address and holds no glyph for it. It exists because the compiled address fingerprint seals a whole compiled row and therefore cannot be recomputed from a live cell description. It covers the WHOLE profile-scoped space, not only the addresses that hold glyphs, so that a cell the program owns can never produce a lookup failure.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entry_count",
+        "record_size",
+        "key_fields",
+        "sorted_by_key",
+        "discriminator_source",
+        "why",
+        "populated_entry_count",
+        "declared_absent_entry_count",
+        "disposition_values",
+        "no_fact_index_sentinel",
+        "address_space_source",
+        "declared_absence_is"
+      ],
+      "properties": {
+        "entry_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "record_size": {
+          "const": 12
+        },
+        "key_fields": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "enum": [
+              "profile_namespace_code",
+              "material_key",
+              "route_family_bit",
+              "lane_index"
+            ]
+          }
+        },
+        "sorted_by_key": {
+          "const": true
+        },
+        "discriminator_source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why": {
+          "type": "string",
+          "minLength": 1
+        },
+        "populated_entry_count": {
+          "description": "How many addresses the program holds glyphs for. Equals the sidecar's fact count.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "declared_absent_entry_count": {
+          "description": "How many addresses the program owns and declares empty. entry_count minus this equals populated_entry_count.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "disposition_values": {
+          "description": "The numeric disposition each index entry carries. Zero is deliberately not a valid value, so a zeroed record reads as unset and is refused rather than as populated.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "populated",
+            "declared_absent"
+          ],
+          "properties": {
+            "populated": {
+              "const": 1
+            },
+            "declared_absent": {
+              "const": 2
+            }
+          }
+        },
+        "no_fact_index_sentinel": {
+          "description": "Stored in a declared-absent entry's fact index. All-ones can never be a legal fact index, so a reader that forgets to check the disposition rejects it rather than reading the wrong fact.",
+          "const": 4294967295
+        },
+        "address_space_source": {
+          "description": "The committed artifact that enumerates the whole profile-scoped address space. Pinned, so a drift changes the receipt rather than silently changing what the program claims to own.",
+          "oneOf": [
+            { "const": "assets/glyphs/generated/fl4512.compiled_pool.v1.json" },
+            { "type": "string", "pattern": "^(?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^/].*$" }
+          ]
+        },
+        "declared_absence_is": {
+          "description": "Prose stating, in the receipt itself, that declared absence is an owned answer and not a failure.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "program_identity": {
+      "description": "The four content identities that the native GlyphProgramV1 view carries, plus the two counts it exposes.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "artifact_file_sha256",
+        "artifact_content_sha256",
+        "glyph_universe_sha256",
+        "scene_fact_schema_sha256",
+        "glyph_record_count",
+        "fact_count"
+      ],
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "pattern": "^glyphfact\\.v1\\.[0-9a-f]{16}$"
+        },
+        "artifact_file_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "artifact_content_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "glyph_universe_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "scene_fact_schema_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "glyph_record_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fact_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "runtime_rights": {
+      "description": "Separates the immutable serialized sidecar byte, product startup promotion, static loader reachability, and the static selector source path. Static fields do not prove runtime execution.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "serialized_sidecar",
+        "declared_future_rights",
+        "product_startup_promotion",
+        "loader_call_site_measurement",
+        "selector_call_path",
+        "compile_time_gate",
+        "compile_time_gate_default"
+      ],
+      "properties": {
+        "serialized_sidecar": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "runtime_consumption_allowed",
+            "header_byte_offset",
+            "header_byte_value"
+          ],
+          "properties": {
+            "runtime_consumption_allowed": {
+              "const": false
+            },
+            "header_byte_offset": {
+              "const": 160
+            },
+            "header_byte_value": {
+              "const": 0
+            }
+          }
+        },
+        "declared_future_rights": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "score_compiler_emitted_costs",
+              "select_fact_id_from_scene_fact"
+            ]
+          }
+        },
+        "product_startup_promotion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "enabled",
+            "owner_source",
+            "owner_symbol",
+            "requires_loader_status",
+            "runtime_consumption_allowed_after_promotion",
+            "runtime_rights_after_promotion",
+            "enabled_by",
+            "scope_ceiling"
+          ],
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "owner_source": {
+              "const": "apps/fl4512-runtime/platform/fl4693_product_glyph_program.cpp"
+            },
+            "owner_symbol": {
+              "const": "Fl4693ProductGlyphProgramStartV1"
+            },
+            "requires_loader_status": {
+              "const": [
+                "loaded",
+                "loaded_without_local_relation_cache"
+              ]
+            },
+            "runtime_consumption_allowed_after_promotion": {
+              "const": true
+            },
+            "runtime_rights_after_promotion": {
+              "const": [
+                "score_compiler_emitted_costs",
+                "select_fact_id_from_scene_fact"
+              ]
+            },
+            "enabled_by": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string"
+              }
+            },
+            "scope_ceiling": {
+              "const": "static_source_contract_only"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "enabled": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "enabled"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "enabled_by": {
+                    "minItems": 1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "loader_call_site_measurement": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "entry_symbol",
+            "measured_call_site_count",
+            "call_sites",
+            "scope_ceiling"
+          ],
+          "properties": {
+            "entry_symbol": {
+              "const": "Fl4683GlyphProgramLoadV1"
+            },
+            "measured_call_site_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "call_sites": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "path",
+                  "line",
+                  "enabled_by"
+                ],
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "enabled_by": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "scope_ceiling": {
+              "const": "static_gate_reachability_only"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "measured_call_site_count": {
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "measured_call_site_count"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "call_sites": {
+                    "minItems": 1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "selector_call_path": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "enabled",
+            "steps",
+            "scope_ceiling"
+          ],
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "steps": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "path",
+                  "line",
+                  "symbol"
+                ],
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "line": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "symbol": {
+                    "enum": [
+                      "Fl4693ProductGlyphSelectV1",
+                      "Fl4683ExactCellSelectV1"
+                    ]
+                  }
+                }
+              }
+            },
+            "scope_ceiling": {
+              "const": "static_source_path_only"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "enabled": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "enabled"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "steps": {
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "compile_time_gate": {
+          "const": "FL4683_GLYPH_PROGRAM_LOADER_ENABLED"
+        },
+        "compile_time_gate_default": {
+          "const": "off"
+        }
+      }
+    },
+    "pins": {
+      "description": "Every file the loader confirms before trusting compiled content, in the order the loader confirms them.",
+      "type": "array",
+      "minItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "role",
+          "role_name",
+          "path",
+          "byte_size",
+          "sha256",
+          "local_regenerable"
+        ],
+        "properties": {
+          "role": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10,
+            "description": "Role 8 enumerates the complete profile-scoped address space. Roles 9 and 10 pin the FL-4694 exhaustive GTR-v2 source and schema."
+          },
+          "role_name": {
+            "enum": [
+              "glyph_fact_artifact",
+              "glyph_fact_schema",
+              "scene_fact_handshake_schema",
+              "relation_pointer_manifest",
+              "relation_pointer_schema",
+              "local_relation_knn",
+              "local_glyph_ramp",
+              "local_ramp_record_index",
+              "compiled_pool_address_space",
+              "gtr_v2_artifact",
+              "gtr_v2_schema"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 175
+          },
+          "byte_size": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sha256": {
+            "$ref": "#/$defs/sha256"
+          },
+          "local_regenerable": {
+            "description": "True when the file is deliberately not committed and may be absent on a fresh machine. Absence then produces a named unavailable state instead of a corruption abort.",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "regeneration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "command",
+        "recheck_command",
+        "deterministic",
+        "determinism_basis",
+        "local_cache_regeneration_command"
+      ],
+      "properties": {
+        "command": {
+          "oneOf": [
+            { "const": "python3 scripts/compile_fl4683_glyph_program.py --write" },
+            {
+              "type": "string",
+              "pattern": "^python3 scripts/compile_fl4683_glyph_program\\.py --write( --authoring)? --glyph-fact (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+ --compiled-pool (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+( --relation-pointer (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+)?( --profiles (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+)? --sidecar-out (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+ --receipt-out (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+$"
+            }
+          ]
+        },
+        "recheck_command": {
+          "oneOf": [
+            { "const": "python3 scripts/compile_fl4683_glyph_program.py --check" },
+            {
+              "type": "string",
+              "pattern": "^python3 scripts/compile_fl4683_glyph_program\\.py --check( --authoring)? --glyph-fact (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+ --compiled-pool (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+( --relation-pointer (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+)?( --profiles (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+)? --sidecar-out (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+ --receipt-out (?:\\.run|assets/glyphs/generated/fl4512_authoring)/[^ ]+$"
+            }
+          ]
+        },
+        "deterministic": {
+          "const": true
+        },
+        "determinism_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "local_cache_regeneration_command": {
+          "const": "python3 scripts/compile_fl4694_glyph_relations.py --write"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": ["artifact_scope"],
+        "properties": {"artifact_scope": {"const": "preview"}}
+      },
+      "then": {
+        "required": ["deployment_eligible"],
+        "properties": {
+          "sidecar": {
+            "properties": {"path": {"pattern": "^\\.run/[^/].*$"}}
+          },
+          "scene_address_index": {
+            "properties": {
+              "address_space_source": {"pattern": "^\\.run/[^/].*$"}
+            }
+          },
+          "pins": {
+            "allOf": [
+              {
+                "contains": {
+                  "type": "object",
+                  "required": ["role", "path"],
+                  "properties": {
+                    "role": {"const": 0},
+                    "path": {"pattern": "^\\.run/[^/].*$"}
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": ["role", "path"],
+                  "properties": {
+                    "role": {"const": 8},
+                    "path": {"pattern": "^\\.run/[^/].*$"}
+                  }
+                }
+              }
+            ]
+          },
+          "regeneration": {
+            "properties": {
+              "command": {
+                "pattern": "^python3 scripts/compile_fl4683_glyph_program\\.py --write( --authoring)? --glyph-fact \\.run/[^ ]+ --compiled-pool \\.run/[^ ]+( --relation-pointer \\.run/[^ ]+)?( --profiles \\.run/[^ ]+)? --sidecar-out \\.run/[^ ]+ --receipt-out \\.run/[^ ]+$"
+              },
+              "recheck_command": {
+                "pattern": "^python3 scripts/compile_fl4683_glyph_program\\.py --check( --authoring)? --glyph-fact \\.run/[^ ]+ --compiled-pool \\.run/[^ ]+( --relation-pointer \\.run/[^ ]+)?( --profiles \\.run/[^ ]+)? --sidecar-out \\.run/[^ ]+ --receipt-out \\.run/[^ ]+$"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"required": ["artifact_scope"], "properties": {"artifact_scope": {"const": "preview"}}},
+      "then": {"properties": {"deployment_eligible": {"const": false}}, "not": {"required": ["authoring_profile"]}}
+    },
+    {
+      "if": {"required": ["artifact_scope"], "properties": {"artifact_scope": {"const": "authoring"}}},
+      "then": {"required": ["authoring_profile"], "properties": {"deployment_eligible": {"const": true}}}
+    },
+    {
+      "if": {"not": {"required": ["artifact_scope"]}},
+      "then": {
+        "not": {"required": ["deployment_eligible"]},
+        "properties": {
+          "sidecar": {
+            "properties": {
+              "path": {"const": "assets/glyphs/generated/fl4683.glyph_program.v1.bin"}
+            }
+          },
+          "scene_address_index": {
+            "properties": {
+              "address_space_source": {
+                "const": "assets/glyphs/generated/fl4512.compiled_pool.v1.json"
+              }
+            }
+          },
+          "pins": {
+            "allOf": [
+              {
+                "contains": {
+                  "type": "object",
+                  "required": ["role", "path"],
+                  "properties": {
+                    "role": {"const": 0},
+                    "path": {
+                      "const": "assets/glyphs/generated/fl4676.glyph_fact.v1.json"
+                    }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": ["role", "path"],
+                  "properties": {
+                    "role": {"const": 8},
+                    "path": {
+                      "const": "assets/glyphs/generated/fl4512.compiled_pool.v1.json"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "regeneration": {
+            "properties": {
+              "command": {
+                "const": "python3 scripts/compile_fl4683_glyph_program.py --write"
+              },
+              "recheck_command": {
+                "const": "python3 scripts/compile_fl4683_glyph_program.py --check"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

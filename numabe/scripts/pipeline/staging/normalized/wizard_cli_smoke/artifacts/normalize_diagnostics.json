@@ -1,0 +1,24 @@
+{
+  "name": "wizard_cli_smoke",
+  "status": "OK",
+  "confidence": 1.0,
+  "source_dimensions": [
+    128,
+    64
+  ],
+  "detected_rows": 1,
+  "row_col_counts": [
+    2
+  ],
+  "total_sprites": 2,
+  "sprite_sizes": [
+    [
+      57,
+      57
+    ],
+    [
+      57,
+      57
+    ]
+  ]
+}

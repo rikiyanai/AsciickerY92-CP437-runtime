@@ -1,0 +1,14 @@
+{
+  "schema": "y92.capture_review_snapshot_receipt.v1",
+  "frozen_utc": "2026-09-15T06:11:08.365967+00:00",
+  "source_receipt": "artifacts/experiments/fl4813_capture_review_20260915/annotations.json",
+  "source_receipt_sha256": "3687284f92edc25e63e42582ce1ae62abc2b51cefd95a769ba16c5d80ea92dd7",
+  "annotations_path": "annotations.json",
+  "annotations_sha256": "2cafb9d89d427eb1a40711b039ff6100e7bb5d984f4edb2d4ef9bc0bf5439a50",
+  "annotation_count": 499,
+  "verified_crop_count": 499,
+  "copied_crop_count": 0,
+  "missing_crop_count": 0,
+  "digest_mismatch_count": 0,
+  "passed": true
+}

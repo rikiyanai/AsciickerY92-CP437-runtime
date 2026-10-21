@@ -1,0 +1,22 @@
+# Source and saved native world are published; temporary builds remain local.
+/.o_*/
+/.d_*/
+/.tmp-ems/
+/.web-classic/obj/
+/.run/*
+!/.run/fl4876_builds/
+/.run/fl4876_builds/*
+!/.run/fl4876_builds/live_numabe/
+/.run/fl4876_builds/live_numabe/*.lock
+/.run/fl4876_builds/live_numabe/output.a3d.pre_edit_*
+!/.run/fl4876_builds/live_numabe/output.a3d.pre_edit_d40d35d4
+**/__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+# Unneeded for loading/editing the saved map; retain originals locally.
+/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/plateau/
+/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/tmg_pointcloud/
+/assets/glyphs/generated/
+/artifacts/experiments/fl4876_manual_world/assess/
+/artifacts/experiments/fl4876_manual_world/operator_map_review/facades/

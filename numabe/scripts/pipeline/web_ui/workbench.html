@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Workbench - Asciicker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes/sacred.css">
+    <style>
+        .workbench-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr 300px;
+            gap: 16px;
+            padding: 16px;
+            height: calc(100vh - 120px);
+        }
+        .wb-panel {
+            background: var(--bg, #1a1a2e);
+            border: 1px solid var(--border, #333);
+            border-radius: var(--radius, 8px);
+            padding: 12px;
+            overflow-y: auto;
+        }
+        .wb-panel h3 {
+            margin: 0 0 12px 0;
+            color: var(--accent-secondary, #7c83ff);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .wb-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg, #1a1a2e);
+            border-bottom: 1px solid var(--border, #333);
+            flex-wrap: wrap;
+        }
+        .wb-toolbar label {
+            font-size: 12px;
+            color: var(--fg-muted, #888);
+        }
+        .wb-toolbar input[type="number"],
+        .wb-toolbar input[type="text"],
+        .wb-toolbar select {
+            background: var(--bg-deep, #0f0f23);
+            border: 1px solid var(--border, #333);
+            color: var(--fg, #ccc);
+            padding: 4px 8px;
+            border-radius: var(--radius, 4px);
+            width: 80px;
+        }
+        .wb-toolbar button, .wb-actions button {
+            background: var(--accent-secondary, #7c83ff);
+            color: var(--fg-on-accent, #fff);
+            border: none;
+            padding: 6px 14px;
+            border-radius: var(--radius, 4px);
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .wb-toolbar button:hover, .wb-actions button:hover { opacity: 0.9; }
+        .wb-toolbar button:disabled, .wb-actions button:disabled { opacity: 0.4; cursor: default; }
+        .wb-actions {
+            display: flex;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg, #1a1a2e);
+            border-bottom: 1px solid var(--border, #333);
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .wb-actions .sep { color: var(--border-strong, #444); font-size: 14px; }
+        .wb-actions select {
+            background: var(--bg-deep, #0f0f23);
+            border: 1px solid var(--border, #333);
+            color: var(--fg, #ccc);
+            padding: 4px 8px;
+            border-radius: var(--radius, 4px);
+            font-size: 12px;
+        }
+        #sourceCanvas {
+            max-width: 100%;
+            border: 1px solid var(--border, #333);
+            background: repeating-conic-gradient(var(--border-subtle, #222) 0% 25%, var(--bg-elevated, #2a2a2a) 0% 50%) 50% / 16px 16px;
+        }
+        .sprite-bbox {
+            position: absolute;
+            border: 2px solid var(--tool-bbox, #0f0);
+            pointer-events: none;
+        }
+        .sprite-bbox.manual {
+            border-color: var(--tool-bbox-manual, #0ff);
+            pointer-events: auto;
+            cursor: move;
+        }
+        .sprite-bbox.manual.selected {
+            border-color: var(--accent-secondary, #7c83ff);
+            box-shadow: 0 0 8px var(--accent-secondary, #7c83ff);
+        }
+        .sprite-bbox.manual .bbox-label {
+            position: absolute;
+            top: -16px;
+            left: 0;
+            font-size: 9px;
+            background: rgba(0,255,255,0.8);
+            color: #000;
+            padding: 1px 4px;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        .sprite-bbox.manual .bbox-resize {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--tool-bbox-manual, #0ff);
+            border: 1px solid #099;
+            cursor: nwse-resize;
+            bottom: -4px;
+            right: -4px;
+        }
+        .bbox-drawing {
+            position: absolute;
+            border: 2px dashed var(--tool-bbox-manual, #0ff);
+            pointer-events: none;
+            background: rgba(0,255,255,0.08);
+        }
+        .wb-toolbar button.active {
+            background: var(--tool-bbox-manual, #0ff);
+            color: var(--fg-on-dark, #000);
+        }
+        .source-wrap {
+            position: relative;
+            display: inline-block;
+            overflow: auto;
+            max-height: min(72vh, 860px);
+            transform-origin: top left;
+        }
+        .grid-cell {
+            display: inline-block;
+            border: 1px solid var(--border, #333);
+            image-rendering: pixelated;
+            cursor: pointer;
+            position: relative;
+        }
+        .grid-cell.selected {
+            border-color: var(--accent-secondary, #7c83ff);
+            box-shadow: 0 0 6px var(--accent-secondary, #7c83ff);
+        }
+        .grid-cell.swap-source {
+            border-color: var(--tool-swap, #ff0);
+            box-shadow: 0 0 6px var(--tool-swap, #ff0);
+        }
+        .grid-cell.drag-over {
+            border-color: var(--tool-bbox, #0f0);
+            box-shadow: 0 0 8px var(--tool-bbox, #0f0);
+        }
+        .grid-cell.copied {
+            border-color: var(--tool-bbox-manual, #0ff);
+            box-shadow: 0 0 6px var(--tool-bbox-manual, #0ff);
+        }
+        .grid-cell.copied::after {
+            content: "COPY";
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 8px;
+            background: rgba(0,255,255,0.8);
+            color: #000;
+            padding: 0 3px;
+        }
+        /* WB-08: playback highlight */
+        .grid-cell.playing {
+            border-color: var(--tool-playing, #4caf50);
+            box-shadow: 0 0 8px var(--tool-playing, #4caf50);
+        }
+        /* WB-07: context menu */
+        #cellContextMenu {
+            display: none;
+            position: fixed;
+            background: var(--bg, #1a1a2e);
+            border: 1px solid var(--border-strong, #444);
+            border-radius: var(--radius, 4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            z-index: 1000;
+            min-width: 140px;
+            padding: 4px 0;
+        }
+        #cellContextMenu .ctx-item {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            color: var(--fg, #ccc);
+            padding: 6px 14px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        #cellContextMenu .ctx-item:hover {
+            background: var(--bg-input, #2a2a4a);
+            color: var(--fg-strong, #fff);
+        }
+        #cellContextMenu .ctx-sep {
+            height: 1px;
+            background: var(--border, #333);
+            margin: 3px 0;
+        }
+        .grid-cell-label {
+            position: absolute;
+            bottom: 0; left: 0;
+            font-size: 9px;
+            background: rgba(0,0,0,0.7);
+            color: var(--fg-muted, #aaa);
+            padding: 1px 3px;
+            pointer-events: none;
+        }
+        .grid-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+            transform-origin: top left;
+        }
+        .grid-preview-controls {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+            font-size: 11px;
+            color: var(--fg-muted, #888);
+        }
+        .grid-preview-controls button {
+            border: 1px solid var(--border, #333);
+            background: var(--bg-surface, #111827);
+            color: var(--fg, #ccc);
+            border-radius: var(--radius, 3px);
+            padding: 2px 7px;
+            cursor: pointer;
+            line-height: 1.2;
+        }
+        .grid-preview-controls button:hover {
+            background: var(--bg-elevated, #1f2937);
+        }
+        .grid-preview-controls label {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+        .grid-preview-viewport {
+            overflow: auto;
+            max-height: min(68vh, 760px);
+            border: 1px solid var(--border, #25253a);
+            border-radius: var(--radius, 6px);
+            padding: 6px;
+            background: var(--bg-deep, #0b0b18);
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            font-size: 13px;
+            border-bottom: 1px solid var(--border-subtle, #222);
+        }
+        .info-label { color: var(--fg-muted, #888); }
+        .info-value { color: var(--fg, #ccc); font-family: monospace; }
+        .nav-link {
+            color: var(--accent-secondary, #7c83ff);
+            text-decoration: none;
+            font-size: 13px;
+        }
+        #statusBar {
+            padding: 8px 16px;
+            font-size: 12px;
+            color: var(--fg-muted, #888);
+            border-top: 1px solid var(--border, #333);
+        }
+        #logPanel {
+            max-height: 120px;
+            overflow-y: auto;
+            font-size: 11px;
+            font-family: monospace;
+            padding: 4px 8px;
+            background: var(--bg-deep, #0a0a1a);
+            border-top: 1px solid var(--border-subtle, #222);
+            color: var(--fg-muted, #888);
+        }
+        .log-warn { color: var(--log-warn, #fa0); }
+        .log-err { color: var(--log-err, #f44); }
+    </style>
+</head>
+<body>
+<script>
+(function(){var p=new URLSearchParams(location.search);
+var t=p.get('theme')||localStorage.getItem('asciicker-theme')||'sacred';
+document.body.classList.add('theme-'+t);
+localStorage.setItem('asciicker-theme',t);})();
+</script>
+    <!-- Toolbar: Upload + Extraction settings -->
+    <div class="wb-toolbar">
+        <a href="/" class="nav-link">Back to Wizard</a>
+        <span style="color: var(--fg-dim, #555)">|</span>
+        <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.bmp,.gif,.webp" title="Primary source image">
+        <button id="loadXpBtn" title="Load an existing .xp sprite file into the workbench grid">Load .xp</button>
+        <input type="file" id="loadXpFile" accept=".xp" style="display:none">
+        <label>Threshold: <input type="number" id="threshold" value="128" min="0" max="255"></label>
+        <label>Min sprite size: <input type="number" id="minSize" value="16" min="0"></label>
+        <label>BG color: <input type="text" id="bgColor" placeholder="auto" size="8"></label>
+        <button id="extractBtn" disabled>Find Sprites</button>
+        <button id="drawBoxBtn" disabled title="Draw manual bounding boxes on the source image">Draw Box</button>
+        <button id="deleteBoxBtn" disabled title="Delete selected bounding box (or press Delete key)">Delete Box</button>
+        <button id="addSourceBtn" title="Add another source image for merging sprites from multiple sheets">+ Add Source</button>
+        <input type="file" id="addSourceFile" accept=".png,.jpg,.jpeg,.bmp,.gif,.webp" style="display:none" multiple>
+        <span style="color: var(--fg-dim, #555)">|</span>
+        <label>Directions: <input type="number" id="angles" value="1" min="1" max="16"></label>
+        <label>Frames per direction: <input type="text" id="frames" value="1" size="8" placeholder="e.g. 8"></label>
+        <label>Grid offset X: <input type="number" id="gridOffsetX" value="0" min="-4096" max="4096" step="1" style="width:72px"></label>
+        <label>Y: <input type="number" id="gridOffsetY" value="0" min="-4096" max="4096" step="1" style="width:72px"></label>
+        <button id="assignBtn" title="Assign extracted sprites into the grid">Lay Out Grid</button>
+        <button id="setGridSizeBtn" title="Set grid size from Directions + Frames, even before extraction">Set Grid Size</button>
+        <span id="gridAxesHint" style="font-size: 11px; color: var(--fg-muted, #888); margin-left: 8px;">Grid: 1 row x 1 column (Directions = rows, Frames = columns)</span>
+    </div>
+
+    <!-- Action bar: Editing controls -->
+    <div class="wb-actions" id="editActions" style="display: none;">
+        <button id="swapBtn" disabled title="Click two cells to swap them">Swap</button>
+        <button id="dupeBtn" disabled title="Copy selected cell to another slot">Duplicate</button>
+        <button id="importBtn" title="Import an external image into selected cell(s)">Import Image</button>
+        <input type="file" id="importFile" accept=".png,.jpg,.jpeg,.bmp,.gif,.webp,.tiff,.tif" style="display:none">
+        <span class="sep">|</span>
+        <button id="undoBtn" disabled>Undo</button>
+        <button id="redoBtn" disabled>Redo</button>
+        <span class="sep">|</span>
+        <button id="exportBtn" disabled>Export .xp</button>
+        <!-- WB-05: Reflection guard -->
+        <label style="font-size: 11px; color: var(--fg-muted, #aaa); margin-left: 6px; cursor: pointer;" title="If checked, mirror columns will NOT be generated during export">
+            <input type="checkbox" id="skipReflections"> Skip reflections
+        </label>
+        <span id="opCounter" style="font-size: 12px; color: var(--fg-muted, #888); margin-left: 8px;">0 edits</span>
+        <span class="sep">|</span>
+        <label id="layerSelectLabel" style="display: none; font-size: 11px; color: var(--fg-muted, #aaa);">Layer:
+            <select id="layerSelect" style="font-size: 11px; background: var(--bg-deep, #111); color: var(--fg, #ccc); border: 1px solid var(--border, #333); border-radius: var(--radius, 3px);">
+                <option value="2" selected>Visual (2)</option>
+                <option value="0">Metadata (0)</option>
+                <option value="1">Height (1)</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Transform + Merge controls (shown when cells selected and session exists) -->
+    <div class="wb-actions" id="transformActions" style="display: none;">
+        <span style="font-size: 12px; color: var(--fg-muted, #888);">Transform:</span>
+        <button id="flipHBtn" title="Flip horizontal">Flip H</button>
+        <button id="flipVBtn" title="Flip vertical">Flip V</button>
+        <button id="rot90Btn" title="Rotate 90 degrees">Rot 90</button>
+        <button id="rot180Btn" title="Rotate 180 degrees">Rot 180</button>
+        <button id="rot270Btn" title="Rotate 270 degrees">Rot 270</button>
+        <span class="sep">|</span>
+        <span style="font-size: 12px; color: var(--fg-muted, #888);">Merge:</span>
+        <select id="blendMode">
+            <option value="replace">Replace</option>
+            <option value="blend_alpha">Blend Alpha</option>
+            <option value="keep_nontransparent">Keep Non-transparent</option>
+        </select>
+        <select id="fitMode">
+            <option value="nearest_stretch">Stretch</option>
+            <option value="contain_pad">Contain + Pad</option>
+            <option value="crop_center">Center Crop</option>
+        </select>
+    </div>
+
+    <!-- Main layout -->
+    <div class="workbench-layout">
+        <!-- Left: Source image with extraction overlays -->
+        <div class="wb-panel">
+            <h3>Source Image</h3>
+            <div class="source-wrap" id="sourceWrap">
+                <canvas id="sourceCanvas" width="1" height="1"></canvas>
+                <div id="bboxOverlay"></div>
+            </div>
+            <!-- WB-03: Source panel zoom -->
+            <div style="margin-top: 4px; display: flex; gap: 4px; align-items: center;">
+                <button id="zoomInBtn" title="Zoom in" style="width: 28px; padding: 2px;">+</button>
+                <button id="zoomOutBtn" title="Zoom out" style="width: 28px; padding: 2px;">&minus;</button>
+                <button id="zoomResetBtn" title="Reset zoom" style="padding: 2px 6px;">1:1</button>
+                <span id="zoomLevel" style="font-size: 11px; color: var(--fg-muted, #888);">100%</span>
+            </div>
+            <div id="extractionInfo" style="margin-top: 8px; font-size: 12px; color: var(--fg-muted, #888);"></div>
+        </div>
+
+        <!-- Center: Grid preview -->
+        <div class="wb-panel">
+            <h3>Grid Preview <span id="gridSummary" style="font-weight:normal; font-size:12px; color:var(--fg-muted,#888);"></span></h3>
+            <div class="grid-preview-controls">
+                <button id="gridZoomOutBtn" title="Zoom out grid preview">&minus;</button>
+                <span id="gridZoomLevel">100%</span>
+                <button id="gridZoomInBtn" title="Zoom in grid preview">+</button>
+                <button id="gridZoomResetBtn" title="Reset grid zoom">1:1</button>
+                <label title="Show/hide per-cell legend labels">
+                    <input type="checkbox" id="gridLegendsToggle" checked>
+                    Legends
+                </label>
+            </div>
+            <div id="gridPreviewViewport" class="grid-preview-viewport">
+                <div id="gridPreview" class="grid-preview"></div>
+            </div>
+        </div>
+
+        <!-- Right: Cell info + controls -->
+        <div class="wb-panel">
+            <h3>Selected Cell</h3>
+            <div id="cellInfo">
+                <div class="info-row"><span class="info-label">Cell #</span><span class="info-value" id="infoSelected">-</span></div>
+                <div class="info-row"><span class="info-label">Direction</span><span class="info-value" id="infoAngle">-</span></div>
+                <div class="info-row"><span class="info-label">Animation</span><span class="info-value" id="infoAnim">-</span></div>
+                <div class="info-row"><span class="info-label">Frame</span><span class="info-value" id="infoFrame">-</span></div>
+                <div class="info-row"><span class="info-label">Projection</span><span class="info-value" id="infoProj">-</span></div>
+                <div class="info-row"><span class="info-label">Size</span><span class="info-value" id="infoDims">-</span></div>
+            </div>
+            <div id="cellEditorPanel" style="display:none;margin-top:12px;padding:8px;background:var(--bg-deep,#111);border:1px solid var(--border,#333);border-radius:var(--radius,3px);">
+                <h4 style="margin:0 0 8px 0;font-size:12px;color:var(--accent,#f90);">Cell Editor</h4>
+            </div>
+            <h3 style="margin-top: 16px;">Animation Preview</h3>
+            <div id="animPreview">
+                <div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: center;">
+                    <button id="playBtn" style="min-width: 60px;">Play</button>
+                    <label style="font-size: 12px; color: var(--fg-muted, #888);">FPS: <input type="number" id="fpsInput" value="8" min="1" max="60" style="width: 50px;"></label>
+                    <label style="font-size: 12px; color: var(--fg-muted, #888);">Dir: <select id="previewAngle" style="font-size: 12px;"></select></label>
+                </div>
+                <canvas id="previewCanvas" width="48" height="48" style="border: 1px solid var(--border, #333); image-rendering: pixelated; background: var(--bg-deep, #111);"></canvas>
+                <div id="previewFrameInfo" style="font-size: 11px; color: var(--fg-muted, #888); margin-top: 4px;">-</div>
+            </div>
+            <h3 style="margin-top: 16px;">Game Layout Guide</h3>
+            <div id="gameGuide" style="font-size: 11px; color: var(--fg-muted, #888); line-height: 1.5;">
+                <div style="margin-bottom: 6px;"><strong style="color: var(--accent-secondary, #7c83ff);">Standard layouts:</strong></div>
+                <div>1 dir: static props, items</div>
+                <div>4 dir: S, W, N, E (RPG)</div>
+                <div>8 dir: S, SW, W, NW, N, NE, E, SE</div>
+                <div style="margin-top: 6px;"><strong style="color: var(--accent-secondary, #7c83ff);">Common frame counts:</strong></div>
+                <div>Idle: 1 frame</div>
+                <div>Walk: 8 frames (per direction)</div>
+                <div>Attack: 6-12 frames</div>
+                <div>Death: 4-8 frames</div>
+                <div style="margin-top: 6px; color: var(--fg-dim, #666);">Frames field accepts comma-separated for multiple anims: <code style="color: var(--fg-muted, #aaa);">1,8</code> = 1 idle + 8 walk</div>
+            </div>
+            <h3 style="margin-top: 16px;">Session</h3>
+            <div id="sessionInfo" style="font-size: 12px; color: var(--fg-muted, #888);">
+                No active session
+            </div>
+            <h3 style="margin-top: 16px; cursor: pointer; user-select: none;" onclick="toggleConfigPanel()">
+                Pipeline Config <span id="configToggle" style="font-size: 10px; color: var(--fg-dim, #666);">[+]</span>
+            </h3>
+            <div id="configPanel" style="display: none; font-size: 12px;">
+                <div id="configFields" style="display: flex; flex-direction: column; gap: 8px;"></div>
+                <div style="margin-top: 8px; display: flex; gap: 6px;">
+                    <button id="configValidateBtn" style="font-size: 11px; padding: 4px 10px;">Validate</button>
+                    <button id="configResetBtn" style="font-size: 11px; padding: 4px 10px; background: var(--bg-elevated, #555);">Reset</button>
+                </div>
+                <div id="configStatus" style="margin-top: 6px; font-size: 11px; color: var(--fg-muted, #888);"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export status + proceed area (hidden until export completes) -->
+    <div id="exportStatus" style="display: none; padding: 12px 16px; background: var(--bg, #1a1a2e); border-top: 1px solid var(--border, #333);">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <span style="color: var(--success, #4caf50); font-size: 14px; font-weight: bold;">Export Complete</span>
+            <span id="exportPath" style="font-family: monospace; font-size: 13px; color: var(--fg, #ccc); background: var(--bg-deep, #0a0a1a); padding: 4px 8px; border-radius: var(--radius, 4px); cursor: pointer;" title="Click to copy path" onclick="navigator.clipboard.writeText(this.textContent)"></span>
+            <button id="downloadXpBtn" style="background: var(--success, #4caf50); color: var(--fg-on-accent, #fff); border: none; padding: 6px 14px; border-radius: var(--radius, 4px); cursor: pointer; font-size: 13px;">Download .xp</button>
+            <button id="newExportBtn" style="background: var(--accent-secondary, #7c83ff); color: var(--fg-on-accent, #fff); border: none; padding: 6px 14px; border-radius: var(--radius, 4px); cursor: pointer; font-size: 13px;">Export Again</button>
+        </div>
+        <div id="xpToolCommandHint" style="margin-top: 8px; font-size: 12px; color: var(--fg-muted, #888); font-family: monospace; cursor: pointer;" title="Click to copy command" onclick="navigator.clipboard.writeText(this.textContent.replace('XP Tool: ', ''))"></div>
+        <div id="exportSummary" style="margin-top: 8px; font-size: 12px; color: var(--fg-muted, #aaa);"></div>
+        <div style="margin-top: 12px; font-size: 12px; color: var(--fg-muted, #888);">XP Preview (appears after export)</div>
+        <div id="xpPreview" style="margin-top: 6px; color: var(--fg-dim, #777); font-size: 12px;">Export an `.xp` to render preview frames here.</div>
+    </div>
+
+    <!-- User guide (shown when draw mode is active or no extraction yet) -->
+    <div id="userGuide" style="padding: 8px 16px; background: var(--bg, #1a1a2e); border-top: 1px solid var(--border, #333); font-size: 12px; color: var(--fg-muted, #aaa); display: none;">
+      <strong style="color: var(--accent-secondary, #7c83ff);">How to use the Workbench:</strong>
+      <ol style="margin: 4px 0 0 16px; padding: 0; line-height: 1.6;">
+        <li><strong>Upload</strong> a sprite sheet image (or it loads from the wizard). Use <strong>+ Add Source</strong> to merge additional images without replacing the current extraction.</li>
+        <li><strong>Find Sprites</strong> auto-detects sprites, or <strong>Draw Box</strong> to manually select regions</li>
+        <li>Set <strong>Directions</strong> (angles) and <strong>Frames per direction</strong>, then click <strong>Lay Out Grid</strong></li>
+        <li><strong>Drag</strong> drawn boxes from the source image onto grid cells in the center panel to place them</li>
+        <li><strong>Click</strong> a grid cell to select it, then use <strong>Swap</strong>, <strong>Duplicate</strong>, <strong>Import</strong>, or <strong>Transforms</strong></li>
+        <li>Use <strong>Animation Preview</strong> (right panel) to check the result, then <strong>Export .xp</strong></li>
+      </ol>
+      <div style="margin-top: 4px; color: var(--fg-dim, #666);">
+        <strong>Keyboard:</strong> Ctrl+C/V = copy/paste cells | Ctrl+Z/Y = undo/redo | Delete = remove selected box | Escape = exit draw mode
+      </div>
+    </div>
+
+    <!-- Status bar -->
+    <div id="statusBar">Ready. Upload an image to start.</div>
+
+    <!-- Debug log panel -->
+    <div id="debugConsole" style="border-top: 1px solid var(--border, #333);">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 4px 8px; background: var(--bg-deep, #111);">
+            <span style="font-size: 11px; color: var(--fg-muted, #888); font-weight: bold;">Debug Console</span>
+            <button id="clearLogBtn" style="font-size: 10px; padding: 2px 8px; background: var(--border, #333); color: var(--fg-muted, #aaa); border: 1px solid var(--border-strong, #444); border-radius: var(--radius, 3px); cursor: pointer;">Clear</button>
+            <button id="toggleLogBtn" style="font-size: 10px; padding: 2px 8px; background: var(--border, #333); color: var(--fg-muted, #aaa); border: 1px solid var(--border-strong, #444); border-radius: var(--radius, 3px); cursor: pointer;">Hide</button>
+            <label style="font-size: 10px; color: var(--fg-dim, #666);"><input type="checkbox" id="logFilterWarn" checked> Warn</label>
+            <label style="font-size: 10px; color: var(--fg-dim, #666);"><input type="checkbox" id="logFilterErr" checked> Errors</label>
+            <span id="logCount" style="font-size: 10px; color: var(--fg-dim, #555); margin-left: auto;">0 events</span>
+        </div>
+        <div id="logPanel"></div>
+    </div>
+
+    <script src="cp437_renderer.js"></script>
+    <script src="cell_editor.js"></script>
+    <script src="merge_panel.js"></script>
+    <script src="workbench.js"></script>
+    <script>
+    // ============================================================================
+    // Workbench wiring: connects UI controls to backend via workbench.js + merge_panel.js
+    // ============================================================================
+    (function () {
+      "use strict";
+
+      var API_BASE = window.ASSET_API_BASE || "/api";
+      var sessionId = null;
+      var swapMode = false;
+      var swapFirst = null;
+      var selectedCells = [];
+      var gridZoom = 1;
+      var showGridLegends = true;
+
+      // ---- Animation preview state ----
+      var animInterval = null;
+      var animFrame = 0;
+      var animPlaying = false;
+
+      // Grab URL params (for wizard handoff)
+      var params = new URLSearchParams(window.location.search);
+      var handoffSessionId = params.get("session_id");
+      var handoffLegacyJobId = params.get("job_id");
+      var handoffPipelineJobId = params.get("pipeline_job_id") || handoffLegacyJobId;
+      var handoffAngles = params.get("angles");
+      var handoffFrames = params.get("frames");
+
+      if (handoffAngles) document.getElementById("angles").value = handoffAngles;
+      if (handoffFrames) document.getElementById("frames").value = handoffFrames;
+
+      // ---- CP437 atlas init ----
+      CP437Renderer.loadAtlas("assets/cp437_atlas.png");
+
+      // ---- Log panel ----
+      function log(msg, cls) {
+        var el = document.getElementById("logPanel");
+        var line = document.createElement("div");
+        line.textContent = new Date().toLocaleTimeString() + " " + msg;
+        if (cls) line.className = cls;
+        el.appendChild(line);
+        el.scrollTop = el.scrollHeight;
+      }
+      window.workbenchLog = log;
+
+      function ensureCellLegend(cellEl, idx, cell) {
+        if (!cellEl) return;
+        var legend = cellEl.querySelector(".grid-cell-label");
+        if (!legend) {
+          legend = document.createElement("div");
+          legend.className = "grid-cell-label";
+          cellEl.appendChild(legend);
+        }
+        var angleIdx = (cell && cell.angle !== undefined) ? (cell.angle + 1) : "-";
+        var frameIdx = (cell && cell.frame !== undefined) ? (cell.frame + 1) : "-";
+        legend.textContent = "#" + idx + " A" + angleIdx + " F" + frameIdx;
+        legend.style.display = showGridLegends ? "" : "none";
+      }
+
+      function applyGridPreviewZoom() {
+        var grid = document.getElementById("gridPreview");
+        var level = document.getElementById("gridZoomLevel");
+        if (!grid) return;
+        var offsetX = parseInt(grid.dataset.offsetX || "0", 10) || 0;
+        var offsetY = parseInt(grid.dataset.offsetY || "0", 10) || 0;
+        grid.style.transform = "translate(" + offsetX + "px, " + offsetY + "px) scale(" + gridZoom + ")";
+        if (level) level.textContent = Math.round(gridZoom * 100) + "%";
+      }
+
+      function setGridLegendsVisible(visible) {
+        showGridLegends = !!visible;
+        document.querySelectorAll("#gridPreview .grid-cell-label").forEach(function (el) {
+          el.style.display = showGridLegends ? "" : "none";
+        });
+      }
+
+      var gridZoomInBtn = document.getElementById("gridZoomInBtn");
+      if (gridZoomInBtn) {
+        gridZoomInBtn.addEventListener("click", function () {
+          gridZoom = Math.min(gridZoom * 1.25, 8);
+          applyGridPreviewZoom();
+        });
+      }
+      var gridZoomOutBtn = document.getElementById("gridZoomOutBtn");
+      if (gridZoomOutBtn) {
+        gridZoomOutBtn.addEventListener("click", function () {
+          gridZoom = Math.max(gridZoom / 1.25, 0.25);
+          applyGridPreviewZoom();
+        });
+      }
+      var gridZoomResetBtn = document.getElementById("gridZoomResetBtn");
+      if (gridZoomResetBtn) {
+        gridZoomResetBtn.addEventListener("click", function () {
+          gridZoom = 1;
+          applyGridPreviewZoom();
+        });
+      }
+      var gridLegendsToggle = document.getElementById("gridLegendsToggle");
+      if (gridLegendsToggle) {
+        gridLegendsToggle.addEventListener("change", function () {
+          setGridLegendsVisible(this.checked);
+        });
+      }
+      applyGridPreviewZoom();
+
+      // ---- WB-03: Source panel zoom ----
+      var sourceZoom = 1;
+      function applyZoom() {
+        var wrap = document.getElementById("sourceWrap");
+        var canvas = document.getElementById("sourceCanvas");
+        var overlay = document.getElementById("bboxOverlay");
+        canvas.style.transform = "scale(" + sourceZoom + ")";
+        canvas.style.transformOrigin = "top left";
+        if (overlay) { overlay.style.transform = "scale(" + sourceZoom + ")"; overlay.style.transformOrigin = "top left"; }
+        document.getElementById("zoomLevel").textContent = Math.round(sourceZoom * 100) + "%";
+      }
+      document.getElementById("zoomInBtn").addEventListener("click", function () { sourceZoom = Math.min(sourceZoom * 1.25, 8); applyZoom(); });
+      document.getElementById("zoomOutBtn").addEventListener("click", function () { sourceZoom = Math.max(sourceZoom / 1.25, 0.25); applyZoom(); });
+      document.getElementById("zoomResetBtn").addEventListener("click", function () { sourceZoom = 1; applyZoom(); });
+
+      // ---- Session management ----
+      function startSession(angles, framesList, cellW, cellH, projs) {
+        cellW = cellW || 24;
+        cellH = cellH || 24;
+        projs = projs || 1;
+        return fetch(API_BASE + "/workbench/start-session", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            angles: angles,
+            frames: framesList,
+            projs: projs,
+            cell_w: cellW,
+            cell_h: cellH,
+          }),
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            sessionId = data.job_id;
+            window._wbSessionId = sessionId;
+            MergePanel.setJobId(sessionId);
+            document.getElementById("editActions").style.display = "flex";
+            document.getElementById("exportBtn").disabled = false;
+            document.getElementById("swapBtn").disabled = false;
+            document.getElementById("dupeBtn").disabled = false;
+            updateSessionInfo();
+            showTransformBar();
+            log("Session started: " + sessionId);
+            return data;
+          });
+      }
+
+      function updateSessionInfo() {
+        if (!sessionId) return;
+        fetch(API_BASE + "/workbench/session/" + sessionId)
+          .then(function (r) {
+            if (!r.ok) {
+              throw new Error("Session lookup failed (" + r.status + ")");
+            }
+            return r.json();
+          })
+          .then(function (data) {
+            if (!data || !data.job_id) {
+              throw new Error("Invalid session payload");
+            }
+            var el = document.getElementById("sessionInfo");
+            // B4 fix: set dataset.sessionId so cell_editor.js can resolve
+            // the session ID from the DOM without relying on window globals.
+            el.dataset.sessionId = data.job_id;
+            el.innerHTML =
+              '<div class="info-row"><span class="info-label">Job ID</span><span class="info-value">' + data.job_id.slice(0, 8) + '...</span></div>' +
+              '<div class="info-row"><span class="info-label">Frames</span><span class="info-value">' + data.frame_count + '</span></div>' +
+              '<div class="info-row"><span class="info-label">Edits</span><span class="info-value">' + data.op_count + '</span></div>';
+            document.getElementById("opCounter").textContent = data.op_count + " edit(s)";
+            document.getElementById("undoBtn").disabled = data.op_count === 0;
+            document.getElementById("redoBtn").disabled = (data.redo_count || 0) === 0;
+          })
+          .catch(function (err) {
+            log("Session unavailable: " + err.message, "log-warn");
+          });
+      }
+
+      // ---- Transform bar visibility ----
+      function showTransformBar() {
+        var bar = document.getElementById("transformActions");
+        if (bar) bar.style.display = (selectedCells.length > 0 && sessionId) ? "flex" : "none";
+      }
+
+      // ---- Apply transform to selected cells ----
+      function applyTransform(type) {
+        if (!sessionId || selectedCells.length === 0) return;
+        var gridCells = wbState.gridAssignment;
+        var targets = selectedCells.map(function (idx) {
+          var c = gridCells[idx] || {};
+          return { angle: c.angle || 0, anim: c.anim || 0, frame: c.frame || 0, proj: c.proj || 0 };
+        });
+
+        var transform = { flip_h: false, flip_v: false, rotate_deg: 0 };
+        if (type === "flipH") transform.flip_h = true;
+        if (type === "flipV") transform.flip_v = true;
+        if (type === "rot90") transform.rotate_deg = 90;
+        if (type === "rot180") transform.rotate_deg = 180;
+        if (type === "rot270") transform.rotate_deg = 270;
+
+        MergePanel.transformCells(targets, transform)
+          .then(function (data) {
+            log("Applied " + type + " to " + targets.length + " cell(s)");
+            if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+            updateSessionInfo();
+          })
+          .catch(function (err) {
+            log("Transform failed: " + err.message, "log-err");
+          });
+      }
+
+      // Wire transform buttons
+      ["flipH", "flipV", "rot90", "rot180", "rot270"].forEach(function (type) {
+        var btn = document.getElementById(type + "Btn");
+        if (btn) btn.addEventListener("click", function () { applyTransform(type); });
+      });
+
+      // ---- Animation preview ----
+
+      function stopAnimation() {
+        if (animInterval !== null) {
+          clearInterval(animInterval);
+          animInterval = null;
+        }
+        animPlaying = false;
+        document.getElementById("playBtn").textContent = "Play";
+        // WB-08: clear playback highlight
+        document.querySelectorAll("#gridPreview .grid-cell.playing").forEach(function (c) { c.classList.remove("playing"); });
+      }
+
+      function stepAnimation() {
+        var gridCells = wbState.gridAssignment || [];
+        var angleSelect = document.getElementById("previewAngle");
+        var angleVal = parseInt(angleSelect.value, 10);
+        if (isNaN(angleVal)) angleVal = 0;
+        var angleCells = [];
+        var angleCellIndices = [];
+        gridCells.forEach(function (c, i) {
+          if (c.angle === angleVal) { angleCells.push(c); angleCellIndices.push(i); }
+        });
+        if (angleCells.length === 0) {
+          document.getElementById("previewFrameInfo").textContent = "No frames for this direction";
+          return;
+        }
+        animFrame = animFrame % angleCells.length;
+        var cell = angleCells[animFrame];
+
+        // WB-08: highlight the currently-playing cell in the grid
+        document.querySelectorAll("#gridPreview .grid-cell").forEach(function (c) { c.classList.remove("playing"); });
+        var allGridCells = document.querySelectorAll("#gridPreview .grid-cell");
+        var playIdx = angleCellIndices[animFrame];
+        if (allGridCells[playIdx]) allGridCells[playIdx].classList.add("playing");
+        var canvas = document.getElementById("previewCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Build image data URL from thumbnail (base64) or imageDataUrl
+        var imgSrc = cell.imageDataUrl || (cell.thumbnail ? "data:image/png;base64," + cell.thumbnail : null);
+        if (imgSrc) {
+          var img = new Image();
+          img.onload = function () {
+            canvas.width = img.width * 2;
+            canvas.height = img.height * 2;
+            ctx.imageSmoothingEnabled = false;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          };
+          img.src = imgSrc;
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        document.getElementById("previewFrameInfo").textContent = "Frame " + (animFrame + 1) + "/" + angleCells.length;
+        animFrame++;
+      }
+
+      document.getElementById("playBtn").addEventListener("click", function () {
+        if (animPlaying) {
+          stopAnimation();
+        } else {
+          animPlaying = true;
+          this.textContent = "Pause";
+          var fps = parseInt(document.getElementById("fpsInput").value, 10) || 8;
+          animFrame = 0;
+          stepAnimation();
+          animInterval = setInterval(stepAnimation, 1000 / fps);
+        }
+      });
+
+      document.getElementById("previewAngle").addEventListener("change", function () {
+        animFrame = 0;
+        if (animPlaying) {
+          stopAnimation();
+        }
+        document.getElementById("previewFrameInfo").textContent = "-";
+      });
+
+      document.getElementById("fpsInput").addEventListener("change", function () {
+        if (animPlaying) {
+          clearInterval(animInterval);
+          var fps = parseInt(this.value, 10) || 8;
+          animInterval = setInterval(stepAnimation, 1000 / fps);
+        }
+      });
+
+      // Game engine direction labels (matching CANONICAL_ANGLE_ORDER)
+      var DIRECTION_LABELS = {
+        1: ["Front"],
+        4: ["S (front)", "W (left)", "N (back)", "E (right)"],
+        8: ["S (front)", "SW", "W (left)", "NW", "N (back)", "NE", "E (right)", "SE"],
+      };
+
+      function getDirectionLabel(angleIdx, totalAngles) {
+        var labels = DIRECTION_LABELS[totalAngles];
+        if (labels && angleIdx < labels.length) return labels[angleIdx];
+        return "Angle " + angleIdx;
+      }
+      window.getDirectionLabel = getDirectionLabel;
+
+      function parseFramesForWorkbench(value) {
+        if (typeof window.parseFramesInput === "function") {
+          return window.parseFramesInput(value);
+        }
+        var normalized = String(value || "1").replace(/[xX]/g, ",").replace(/\s+/g, ",");
+        var parsed = normalized.split(",").map(function (s) { return parseInt(String(s).trim(), 10); }).filter(function (n) { return !isNaN(n) && n > 0; });
+        return parsed.length > 0 ? parsed : [1];
+      }
+
+      function updateGridAxesHint() {
+        var anglesVal = parseInt(document.getElementById("angles").value, 10);
+        if (isNaN(anglesVal) || anglesVal < 1) anglesVal = 1;
+        var framesList = parseFramesForWorkbench(document.getElementById("frames").value || "1");
+        var cols = 0;
+        framesList.forEach(function (n) { cols += n; });
+        var hint = document.getElementById("gridAxesHint");
+        if (!hint) return;
+        hint.textContent = "Grid: " + anglesVal + " row(s) x " + cols + " column(s) (Directions = rows, Frames = columns)";
+      }
+
+      document.getElementById("angles").addEventListener("input", updateGridAxesHint);
+      document.getElementById("frames").addEventListener("input", updateGridAxesHint);
+      updateGridAxesHint();
+
+      function populateAngleSelector(gridCells) {
+        var angleSelect = document.getElementById("previewAngle");
+        var seen = {};
+        var angles = [];
+        gridCells.forEach(function (c) {
+          var a = c.angle !== undefined ? c.angle : 0;
+          if (!seen[a]) {
+            seen[a] = true;
+            angles.push(a);
+          }
+        });
+        angles.sort(function (a, b) { return a - b; });
+        angleSelect.innerHTML = "";
+        angles.forEach(function (a) {
+          var opt = document.createElement("option");
+          opt.value = a;
+          opt.textContent = getDirectionLabel(a, angles.length);
+          angleSelect.appendChild(opt);
+        });
+
+        // Update grid summary with direction info
+        var summary = document.getElementById("gridSummary");
+        if (summary) {
+          var totalFrames = gridCells.length;
+          var labels = DIRECTION_LABELS[angles.length];
+          if (labels) {
+            summary.textContent = totalFrames + " cells | " + angles.length + " directions: " + labels.join(", ");
+          } else {
+            summary.textContent = totalFrames + " cells | " + angles.length + " direction(s)";
+          }
+        }
+      }
+
+      // ---- Auto-suggest grid dimensions from extraction ----
+      function suggestGridDimensions(spriteCount) {
+        var guide = document.getElementById("gameGuide");
+        if (!guide || spriteCount === 0) return;
+
+        var suggestions = [];
+        // Common patterns that divide evenly into sprite count
+        var patterns = [
+          { angles: 8, name: "8-dir" },
+          { angles: 4, name: "4-dir" },
+          { angles: 1, name: "1-dir" },
+        ];
+        patterns.forEach(function (p) {
+          if (spriteCount % p.angles === 0) {
+            var framesPerDir = spriteCount / p.angles;
+            suggestions.push(p.name + ": " + p.angles + " dirs x " + framesPerDir + " frames");
+          }
+        });
+
+        if (suggestions.length > 0) {
+          var hint = document.createElement("div");
+          hint.style.cssText = "margin-top: 8px; padding: 6px; background: #0a0a1a; border: 1px solid #333; border-radius: 4px;"; /* TODO(THEME) */
+          hint.innerHTML = '<strong style="color: #4caf50;">Detected ' + spriteCount + ' sprites.</strong><br>' + /* TODO(THEME) */
+            '<span style="color: #aaa;">Possible layouts:</span><br>' +
+            suggestions.map(function (s) { return '<span style="color: #ccc;">' + s + '</span>'; }).join('<br>');
+          guide.appendChild(hint);
+        }
+      }
+
+      // ---- Hook into workbench.js extraction to trigger suggestion ----
+      var origRunExtraction = window.runExtraction;
+      window.runExtraction = function () {
+        origRunExtraction();
+        // After extraction completes (async), poll for result and suggest
+        var check = setInterval(function () {
+          if (wbState.extractionResult && wbState.extractionResult.sprites) {
+            clearInterval(check);
+            suggestGridDimensions(wbState.extractionResult.sprites.length);
+          }
+        }, 300);
+        // Stop polling after 10s
+        setTimeout(function () { clearInterval(check); }, 10000);
+      };
+
+      // ---- Hook into workbench.js grid assignment ----
+      var origRunAssignment = window.runAssignment;
+      window.runAssignment = function () {
+        var a = parseInt(document.getElementById("angles").value, 10) || 1;
+        var fr = document.getElementById("frames").value || "1";
+        var framesList = parseFramesForWorkbench(fr);
+
+        // Determine cell size from extraction (median sprite size, 12-aligned)
+        var cellW = 24, cellH = 24;
+        var extraction = wbState.extractionResult;
+        if (extraction && extraction.sprites && extraction.sprites.length > 0) {
+          var widths = extraction.sprites.map(function(s) { return s.width || s.bbox[2]; }).sort(function(a,b) { return a-b; });
+          var heights = extraction.sprites.map(function(s) { return s.height || s.bbox[3]; }).sort(function(a,b) { return a-b; });
+          var medW = widths[Math.floor(widths.length / 2)];
+          var medH = heights[Math.floor(heights.length / 2)];
+          // Round up to nearest multiple of 12 (required for CP437 font atlas)
+          cellW = Math.max(12, Math.ceil(medW / 12) * 12);
+          cellH = Math.max(12, Math.ceil(medH / 12) * 12);
+          if (medW !== cellW || medH !== cellH) {
+            log("12px alignment: sprite median " + medW + "x" + medH + " rounded to " + cellW + "x" + cellH, "log-warn");
+            updateWbState({ cellSizeRounded: true, originalCellW: medW, originalCellH: medH });
+          }
+        }
+
+        // Stop any running animation before re-assigning
+        stopAnimation();
+
+        // Start a backend session when grid is assigned
+        startSession(a, framesList, cellW, cellH).then(function () {
+          origRunAssignment();
+          // After grid is rendered, populate server-side frames from source image
+          setTimeout(function () {
+            var gridCells = wbState.gridAssignment || [];
+            if (gridCells.length > 0) {
+              populateAngleSelector(gridCells);
+              populateServerFrames(gridCells);
+            }
+            updateGuideVisibility();
+          }, 200);
+        });
+      };
+
+      // ---- Populate server-side session frames from source image(s) ----
+      function populateServerFrames(gridCells) {
+        var defaultSourceId = wbState.sourceId;
+        if (!sessionId) {
+          log("No active session", "log-warn");
+          return;
+        }
+
+        var extraction = wbState.extractionResult;
+        if (!extraction || !extraction.sprites) return;
+
+        // Group sprites by source_id to handle multi-source merges
+        var sourceGroups = {};
+        extraction.sprites.forEach(function (s, i) {
+          var sid = s.source_id || defaultSourceId;
+          if (!sid) return;
+          if (!sourceGroups[sid]) sourceGroups[sid] = [];
+          sourceGroups[sid].push({ bbox: s.bbox, globalIndex: i });
+        });
+
+        var sourceIds = Object.keys(sourceGroups);
+        if (sourceIds.length === 0) {
+          log("No source image stored server-side (use Find Sprites first)", "log-warn");
+          return;
+        }
+
+        // For single-source case, use the simple path (most common)
+        if (sourceIds.length === 1) {
+          var sid = sourceIds[0];
+          var sprites = sourceGroups[sid].map(function (entry) {
+            return { bbox: entry.bbox };
+          });
+          fetch(API_BASE + "/workbench/populate-frames", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ job_id: sessionId, source_id: sid, sprites: sprites }),
+          })
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              if (data.error) { log("Frame population failed: " + data.error, "log-err"); return; }
+              log("Populated " + data.populated + "/" + data.frame_count + " frames from source image");
+              if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+              updateSessionInfo();
+            })
+            .catch(function (err) { log("Frame population failed: " + err.message, "log-err"); });
+          return;
+        }
+
+        // Multi-source: populate from each source in sequence
+        log("Populating frames from " + sourceIds.length + " sources...");
+        var chain = Promise.resolve();
+        sourceIds.forEach(function (sid) {
+          var entries = sourceGroups[sid];
+          chain = chain.then(function () {
+            return fetch(API_BASE + "/workbench/populate-frames", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                job_id: sessionId,
+                source_id: sid,
+                sprites: entries.map(function (e) { return { bbox: e.bbox }; }),
+                target_indices: entries.map(function (e) { return e.globalIndex; }),
+              }),
+            })
+              .then(function (r) { return r.json(); })
+              .then(function (data) {
+                if (data.error) { log("Source population error: " + data.error, "log-warn"); return; }
+                log("Populated " + data.populated + " frames from source " + sid.slice(0, 8));
+                if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+              });
+          });
+        });
+        chain.then(function () {
+          log("All sources populated");
+          updateSessionInfo();
+        }).catch(function (err) {
+          log("Multi-source population failed: " + err.message, "log-err");
+        });
+      }
+
+      // ---- Update grid cell thumbnails from server response ----
+      function updateGridThumbnails(thumbnails) {
+        var cells = document.querySelectorAll("#gridPreview .grid-cell");
+        // Backend returns {str(index): base64} dict — iterate over keys
+        var pairs = [];
+        if (Array.isArray(thumbnails)) {
+          thumbnails.forEach(function (thumb, i) { pairs.push([i, thumb]); });
+        } else if (thumbnails && typeof thumbnails === "object") {
+          Object.keys(thumbnails).forEach(function (k) {
+            pairs.push([parseInt(k, 10), thumbnails[k]]);
+          });
+        }
+        pairs.forEach(function (pair) {
+          var i = pair[0], thumb = pair[1];
+          if (i >= cells.length || !thumb) return;
+          var src = (typeof thumb === "string" && thumb.indexOf("data:") === 0)
+            ? thumb : "data:image/png;base64," + thumb;
+          var img = cells[i].querySelector("img");
+          if (img) {
+            img.src = src;
+          } else {
+            img = document.createElement("img");
+            img.src = src;
+            img.style.width = "96px";
+            img.style.height = "96px";
+            img.style.imageRendering = "pixelated";
+            img.draggable = false;
+            cells[i].innerHTML = "";
+            cells[i].appendChild(img);
+          }
+          // Also update wbState gridAssignment with imageDataUrl for animation preview
+          if (wbState.gridAssignment && wbState.gridAssignment[i]) {
+            wbState.gridAssignment[i].imageDataUrl = src;
+          }
+        });
+      }
+
+      /**
+       * Render a single grid cell as a CP437 canvas from native cell data.
+       * @param {HTMLElement} cellEl - The .grid-cell div to render into.
+       * @param {object} cellData - {glyph, fg, bg} for the active layer.
+       * @param {number} scale - Render scale (default 8 → 96px from 12px glyph).
+       */
+      function renderNativeCellToGrid(cellEl, cellData, scale) {
+        scale = scale || 8;
+        var existing = cellEl.querySelector("canvas.native-cell");
+        var canvas;
+        if (existing) {
+          canvas = existing;
+        } else {
+          canvas = document.createElement("canvas");
+          canvas.className = "native-cell";
+          canvas.width = CP437Renderer.GLYPH_W * scale;
+          canvas.height = CP437Renderer.GLYPH_H * scale;
+          canvas.style.imageRendering = "pixelated";
+          canvas.style.width = "96px";
+          canvas.style.height = "96px";
+        }
+        var ctx = canvas.getContext("2d");
+        CP437Renderer.renderCell(ctx, 0, 0, cellData.glyph, cellData.fg, cellData.bg, scale);
+        if (!existing) {
+          // Remove any existing img thumbnail
+          var img = cellEl.querySelector("img");
+          if (img) img.remove();
+          cellEl.appendChild(canvas);
+        }
+      }
+
+      /**
+       * Fetch layer data and render all grid cells natively.
+       * @param {number} layerIdx - XP layer index to render (default: wbState.activeLayer).
+       */
+      function fetchAndRenderNativeGrid(layerIdx) {
+        if (layerIdx === undefined) layerIdx = wbState.activeLayer;
+        if (!sessionId || !wbState.hasNativeCells) return;
+
+        fetch(API_BASE + "/workbench/" + sessionId + "/layer/" + layerIdx)
+          .then(function (r) {
+            if (!r.ok) throw new Error("Layer fetch failed (HTTP " + r.status + ")");
+            return r.json();
+          })
+          .then(function (data) {
+            if (data.error) { log("Layer fetch: " + data.error, "log-err"); return; }
+            // Cache cell data for layer switching without re-fetch
+            wbState.nativeCellCache = data.cells;
+            renderNativeGridFromCache(data.cells);
+          })
+          .catch(function (err) {
+            log("Native grid render failed: " + err.message, "log-err");
+          });
+      }
+
+      /**
+       * Render grid cells from cached native cell data array.
+       * @param {Array} cells - Array of {glyph, fg, bg} or null per grid index.
+       */
+      function renderNativeGridFromCache(cells) {
+        if (!cells) return;
+        var gridEls = document.querySelectorAll("#gridPreview .grid-cell");
+        CP437Renderer.onReady(function () {
+          for (var i = 0; i < cells.length && i < gridEls.length; i++) {
+            var cell = cells[i];
+            if (!cell) continue;
+            renderNativeCellToGrid(gridEls[i], cell);
+          }
+        });
+      }
+
+      // Expose for cell_editor.js
+      window.renderNativeCellToGrid = renderNativeCellToGrid;
+
+      /**
+       * Populate grid from a load-xp / load-from-job API response.
+       * Shared helper to avoid duplicating grid population logic.
+       */
+      function populateGridFromResponse(data, sourceLabel) {
+        sessionId = data.job_id;
+        window._wbSessionId = sessionId;
+        MergePanel.setJobId(sessionId);
+        // B4 fix: also set dataset.sessionId on load paths so cell_editor.js
+        // can resolve session ID from the DOM immediately.
+        var sessionEl = document.getElementById("sessionInfo");
+        if (sessionEl) {
+            sessionEl.dataset.sessionId = sessionId;
+        }
+
+        // B5 fix (AMD-4): only populate wizard fields from XP metadata if
+        // user has not already entered custom values. Preserves wizard-provided
+        // angles/frames when present; falls back to XP metadata if empty/default.
+        var anglesInput = document.getElementById("angles");
+        if (!anglesInput.value || anglesInput.value === "1") {
+            anglesInput.value = data.angles || 1;
+        }
+        var framesInput = document.getElementById("frames");
+        if (!framesInput.value || framesInput.value === "1") {
+            framesInput.value = (data.anims || [1]).join(",");
+        }
+
+        var gridCells = [];
+        var anims = data.anims || [1];
+        var projs = data.projs || 1;
+        for (var a = 0; a < (data.angles || 1); a++) {
+          for (var p = 0; p < projs; p++) {
+            for (var ai = 0; ai < anims.length; ai++) {
+              for (var f = 0; f < anims[ai]; f++) {
+                gridCells.push({ angle: a, anim: ai, frame: f, proj: p, imageDataUrl: null });
+              }
+            }
+          }
+        }
+
+        var isNative = !!(data.has_native_cells);
+        updateWbState({
+          gridAssignment: gridCells,
+          hasNativeCells: isNative,
+          activeLayer: 2,
+          nativeCellCache: null,
+          status: "Loaded " + sourceLabel + " (" + data.populated + " frames)",
+        });
+
+        var gridPreview = document.getElementById("gridPreview");
+        gridPreview.innerHTML = "";
+        var cols = anims.reduce(function (s, v) { return s + v; }, 0) * projs;
+        gridPreview.style.gridTemplateColumns = "repeat(" + cols + ", 102px)";
+        gridCells.forEach(function (cell, i) {
+          var el = document.createElement("div");
+          el.className = "grid-cell";
+          el.dataset.index = i;
+          el.onclick = function (ev) { window.selectCell(i, cell, ev); };
+          el.ondblclick = function () {
+            if (wbState.hasNativeCells && sessionId && typeof window.openCellEditor === "function") {
+              window.openCellEditor(i, sessionId);
+            }
+          };
+          gridPreview.appendChild(el);
+        });
+
+        if (isNative) {
+          // Native CP437 rendering — fetch layer data and render with canvas
+          fetchAndRenderNativeGrid(2);
+          document.getElementById("layerSelectLabel").style.display = "";
+          // Populate extra swoosh layers in selector if present
+          var sel = document.getElementById("layerSelect");
+          var layerCount = data.layer_count || 3;
+          // Remove any previously added swoosh options
+          while (sel.options.length > 3) sel.remove(3);
+          for (var li = 3; li < layerCount; li++) {
+            var opt = document.createElement("option");
+            opt.value = li;
+            opt.textContent = "Swoosh (" + li + ")";
+            sel.appendChild(opt);
+          }
+          sel.value = "2"; // Reset to visual layer
+          log("Native XP cell data available — using CP437 canvas rendering (" + layerCount + " layers)");
+        } else if (data.thumbnails) {
+          var thumbArr = [];
+          for (var k = 0; k < gridCells.length; k++) {
+            var raw = data.thumbnails[String(k)];
+            thumbArr.push(raw ? "data:image/png;base64," + raw : null);
+          }
+          updateGridThumbnails(thumbArr);
+          document.getElementById("layerSelectLabel").style.display = "none";
+        }
+
+        document.getElementById("editActions").style.display = "flex";
+        document.getElementById("exportBtn").disabled = false;
+        showTransformBar();
+        updateSessionInfo();
+        populateAngleSelector(gridCells);
+        updateGuideVisibility();
+
+        log("Loaded " + sourceLabel + ": " + (data.angles || 1) + " angles, " +
+            (data.anims || [1]).join("+") + " frames, " + data.populated + " populated");
+      }
+
+      // ---- Clear selection helper (WB-06) ----
+      function clearSelection() {
+        selectedCells = [];
+        document.querySelectorAll("#gridPreview .grid-cell").forEach(function (c) {
+          c.classList.remove("selected");
+        });
+        document.getElementById("infoSelected").textContent = "-";
+        document.getElementById("infoAngle").textContent = "-";
+        document.getElementById("infoAnim").textContent = "-";
+        document.getElementById("infoFrame").textContent = "-";
+        document.getElementById("infoProj").textContent = "-";
+        document.getElementById("swapBtn").disabled = true;
+        document.getElementById("dupeBtn").disabled = true;
+        updateWbState({ selectedCell: null, status: "Selection cleared" });
+        showTransformBar();
+      }
+
+      // ---- Cell selection (override workbench.js selectCell) ----
+      var origSelectCell = window.selectCell;
+      window.selectCell = function (index, cell, event) {
+        var isShift = event && event.shiftKey;
+
+        if (isShift) {
+          // Shift-click: toggle cell in multi-select set
+          var pos = selectedCells.indexOf(index);
+          if (pos !== -1) {
+            selectedCells = selectedCells.filter(function (idx) { return idx !== index; });
+          } else {
+            selectedCells = [].concat(selectedCells, [index]);
+          }
+          // Update visual selection on all cells
+          var allCells = document.querySelectorAll("#gridPreview .grid-cell");
+          allCells.forEach(function (c) { c.classList.remove("selected"); });
+          selectedCells.forEach(function (idx) {
+            if (allCells[idx]) allCells[idx].classList.add("selected");
+          });
+          // Update info panel for the last toggled cell
+          document.getElementById("infoSelected").textContent = selectedCells.length > 1
+            ? selectedCells.length + " cells"
+            : "#" + index;
+          document.getElementById("infoProj").textContent = cell.proj !== undefined ? cell.proj : "-";
+          updateWbState({ selectedCell: index });
+          document.getElementById("swapBtn").disabled = false;
+          document.getElementById("dupeBtn").disabled = false;
+          showTransformBar();
+          return;
+        }
+
+        // WB-06: Click on already-selected cell to unselect
+        if (selectedCells.length === 1 && selectedCells[0] === index && !swapMode) {
+          clearSelection();
+          return;
+        }
+
+        origSelectCell(index, cell, event);
+        selectedCells = [index];
+        document.getElementById("infoProj").textContent = cell.proj !== undefined ? cell.proj : "-";
+
+        document.getElementById("swapBtn").disabled = false;
+        document.getElementById("dupeBtn").disabled = false;
+        showTransformBar();
+
+        if (swapMode && swapFirst !== null && swapFirst !== index) {
+          // Complete the swap
+          var gridCells = wbState.gridAssignment;
+          var cellA = gridCells[swapFirst] || { angle: 0, anim: 0, frame: swapFirst, proj: 0 };
+          var cellB = gridCells[index] || { angle: 0, anim: 0, frame: index, proj: 0 };
+          MergePanel.swapCells(
+            { angle: cellA.angle, anim: cellA.anim || 0, frame: cellA.frame, proj: cellA.proj || 0 },
+            { angle: cellB.angle, anim: cellB.anim || 0, frame: cellB.frame, proj: cellB.proj || 0 }
+          ).then(function (data) {
+            log("Swapped cell " + swapFirst + " with " + index);
+            swapMode = false;
+            swapFirst = null;
+            document.querySelectorAll("#gridPreview .grid-cell").forEach(function (c) {
+              c.classList.remove("swap-source");
+            });
+            if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+            updateSessionInfo();
+          }).catch(function (err) {
+            log("Swap failed: " + err.message, "log-err");
+          });
+          return;
+        }
+
+        if (swapMode) {
+          swapFirst = index;
+          var cells = document.querySelectorAll("#gridPreview .grid-cell");
+          cells.forEach(function (c) { c.classList.remove("swap-source"); });
+          if (cells[index]) cells[index].classList.add("swap-source");
+          log("Swap: selected first cell #" + index + ", now click the second cell");
+        }
+      };
+
+      // ---- Swap button ----
+      document.getElementById("swapBtn").addEventListener("click", function () {
+        if (selectedCells.length === 0) return;
+        swapMode = true;
+        swapFirst = selectedCells[0];
+        var cells = document.querySelectorAll("#gridPreview .grid-cell");
+        cells.forEach(function (c) { c.classList.remove("swap-source"); });
+        if (cells[swapFirst]) cells[swapFirst].classList.add("swap-source");
+        log("Swap mode: click another cell to swap with #" + swapFirst);
+        updateWbState({ status: "Click another cell to swap with #" + swapFirst });
+      });
+
+      // ---- Drag-drop swap (called from workbench.js drag handlers) ----
+      window.triggerSwap = function (srcIdx, tgtIdx) {
+        var gridCells = wbState.gridAssignment;
+        var cellA = gridCells[srcIdx] || { angle: 0, anim: 0, frame: srcIdx, proj: 0 };
+        var cellB = gridCells[tgtIdx] || { angle: 0, anim: 0, frame: tgtIdx, proj: 0 };
+        MergePanel.swapCells(
+          { angle: cellA.angle, anim: cellA.anim || 0, frame: cellA.frame, proj: cellA.proj || 0 },
+          { angle: cellB.angle, anim: cellB.anim || 0, frame: cellB.frame, proj: cellB.proj || 0 }
+        ).then(function (data) {
+          log("Drag-swapped cell " + srcIdx + " with " + tgtIdx);
+          if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+          updateSessionInfo();
+        }).catch(function (err) {
+          log("Drag-swap failed: " + err.message, "log-err");
+        });
+      };
+
+      // ---- Duplicate button ----
+      document.getElementById("dupeBtn").addEventListener("click", function () {
+        if (selectedCells.length === 0 || !sessionId) return;
+        var srcIdx = selectedCells[0];
+        var gridCells = wbState.gridAssignment;
+        var src = gridCells[srcIdx] || {};
+        var targetIdx = prompt("Duplicate cell #" + srcIdx + " to which cell number?");
+        if (targetIdx === null) return;
+        targetIdx = parseInt(targetIdx, 10);
+        if (isNaN(targetIdx) || targetIdx < 0 || targetIdx >= gridCells.length) {
+          log("Invalid target cell number", "log-warn");
+          return;
+        }
+        var tgt = gridCells[targetIdx] || {};
+        MergePanel.fillFromSlot(
+          { angle: src.angle || 0, anim: src.anim || 0, frame: src.frame || 0, proj: src.proj || 0 },
+          [{ angle: tgt.angle || 0, anim: tgt.anim || 0, frame: tgt.frame || 0, proj: tgt.proj || 0 }]
+        ).then(function (data) {
+          log("Duplicated cell #" + srcIdx + " to #" + targetIdx);
+          if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+          updateSessionInfo();
+        }).catch(function (err) {
+          log("Duplicate failed: " + err.message, "log-err");
+        });
+      });
+
+      // ---- Import external image ----
+      document.getElementById("importBtn").addEventListener("click", function () {
+        document.getElementById("importFile").click();
+      });
+
+      document.getElementById("importFile").addEventListener("change", function (e) {
+        var file = e.target.files[0];
+        if (!file || selectedCells.length === 0 || !sessionId) return;
+
+        var gridCells = wbState.gridAssignment;
+        var targets = selectedCells.map(function (idx) {
+          var c = gridCells[idx] || {};
+          return { angle: c.angle || 0, anim: c.anim || 0, frame: c.frame || 0, proj: c.proj || 0 };
+        });
+
+        MergePanel.importExternal(file, targets, {
+          blendMode: document.getElementById("blendMode").value,
+          fitMode: document.getElementById("fitMode").value,
+        }).then(function (data) {
+          log("Imported " + file.name + " into " + targets.length + " cell(s)");
+          if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+          updateSessionInfo();
+        }).catch(function (err) {
+          log("Import failed: " + err.message, "log-err");
+        });
+
+        e.target.value = "";
+      });
+
+      // ---- Undo / Redo ----
+      document.getElementById("undoBtn").addEventListener("click", function () {
+        if (!sessionId) return;
+        MergePanel.undo()
+          .then(function (data) {
+            log("Undo: " + (data.undone_op_id || "").slice(0, 8));
+            if (data.warning) log("Warning: " + data.warning, "log-warn");
+            if (data.failed_ops) {
+              data.failed_ops.forEach(function (f) {
+                log("  Failed op " + f.op_id.slice(0, 8) + ": " + f.error, "log-err");
+              });
+            }
+            if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+            updateSessionInfo();
+          })
+          .catch(function (err) { log("Undo failed: " + err.message, "log-err"); });
+      });
+
+      document.getElementById("redoBtn").addEventListener("click", function () {
+        if (!sessionId) return;
+        MergePanel.redo()
+          .then(function (data) {
+            log("Redo: " + (data.redone_op_id || "").slice(0, 8));
+            if (data.warning) log("Warning: " + data.warning, "log-warn");
+            if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+            updateSessionInfo();
+          })
+          .catch(function (err) { log("Redo failed: " + err.message, "log-err"); });
+      });
+
+      // ---- Export ----
+      function doExport(name, repair) {
+        var url = API_BASE + "/workbench/export-xp";
+        var body = { job_id: sessionId, name: name };
+        if (repair) body.repair_12px = true;
+        // WB-05: pass reflection guard setting
+        if (document.getElementById("skipReflections").checked) body.skip_reflections = true;
+
+        fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.repair_available) {
+              // Show repair choice instead of silently auto-repairing
+              showRepairChoice(data, name);
+              return;
+            }
+            if (data.error) {
+              log("Export failed: " + data.error, "log-err");
+              return;
+            }
+            onExportSuccess(data, name);
+          })
+          .catch(function (err) { log("Export failed: " + err.message, "log-err"); });
+      }
+
+      function showRepairChoice(data, name) {
+        var cur = data.error || "unknown";
+        var sW = data.suggested_w;
+        var sH = data.suggested_h;
+        log("12px mismatch: " + cur, "log-warn");
+        updateWbState({ status: "Cell size not 12px-aligned. Choose how to proceed." });
+
+        // Show repair panel ABOVE exportStatus (preserve exportStatus children for later)
+        var panel = document.getElementById("exportStatus");
+        var savedHTML = panel.innerHTML;
+        panel.style.display = "block";
+        panel.innerHTML =
+          '<div id="repairPanel" style="padding: 8px 0;">' +
+            '<div style="color: #ffb74d; font-weight: bold; margin-bottom: 6px;">12px Alignment Required</div>' + /* TODO(THEME) */
+            '<div style="font-size: 13px; color: #ccc; margin-bottom: 10px;">' +
+              cur + '<br>Suggested: <strong>' + sW + 'x' + sH + '</strong> (nearest 12px-aligned)' +
+            '</div>' +
+            '<div id="repairActions" style="display: flex; gap: 8px; flex-wrap: wrap;">' +
+              '<button id="repairAutoBtn" style="background: #4caf50; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Auto-Repair (' + sW + 'x' + sH + ')</button>' +
+              '<button id="repairEditBtn" style="background: var(--accent, #7c83ff); color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Edit Manually</button>' +
+              '<button id="repairCancelBtn" style="background: #555; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Cancel</button>' +
+            '</div>' +
+          '</div>';
+
+        function restorePanel() {
+          panel.innerHTML = savedHTML;
+          panel.style.display = "none";
+        }
+
+        document.getElementById("repairAutoBtn").addEventListener("click", function () {
+          log("Auto-repairing to " + sW + "x" + sH);
+          restorePanel();
+          doExport(name, true);
+        });
+
+        document.getElementById("repairEditBtn").addEventListener("click", function () {
+          log("Returning to grid for manual cell editing");
+          restorePanel();
+          updateWbState({ status: "Edit cells manually, then re-export. Current cells are not 12px-aligned (" + cur + ")." });
+          var grid = document.getElementById("gridPreview");
+          if (grid) grid.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+
+        document.getElementById("repairCancelBtn").addEventListener("click", function () {
+          log("Export cancelled");
+          restorePanel();
+          updateWbState({ status: "Export cancelled. Cells need 12px-aligned dimensions." });
+        });
+
+        panel.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function onExportSuccess(data, name) {
+        log("Exported to " + data.xp_path);
+        updateWbState({ status: "Exported: " + data.xp_path });
+
+        var exportStatus = document.getElementById("exportStatus");
+        var exportPath = document.getElementById("exportPath");
+        exportPath.textContent = data.xp_path;
+        exportStatus.style.display = "block";
+        exportStatus.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // Summary
+        var layout = data.grid_layout || {};
+        var summary = document.getElementById("exportSummary");
+        summary.innerHTML =
+          '<strong>' + (data.name || name) + '.xp</strong> | ' +
+          (layout.angles || '?') + ' directions, ' +
+          (layout.frames ? layout.frames.join('+') : '?') + ' frames/dir, ' +
+          data.frame_count + ' total frames, ' +
+          (layout.cell_w || '?') + 'x' + (layout.cell_h || '?') + 'px cells';
+
+        // Download button — fetch from server and trigger browser download
+        var downloadBtn = document.getElementById("downloadXpBtn");
+        downloadBtn.onclick = function () {
+          var a = document.createElement("a");
+          a.href = API_BASE + "/workbench/download-xp?path=" + encodeURIComponent(data.xp_path);
+          a.download = (data.name || name) + ".xp";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        };
+
+        // Export Again button
+        var newExportBtn = document.getElementById("newExportBtn");
+        newExportBtn.onclick = function () {
+          exportStatus.style.display = "none";
+          document.getElementById("exportBtn").click();
+        };
+
+        fetch(API_BASE + "/workbench/xp-tool-command", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ xp_path: data.xp_path }),
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (cmd) {
+            var hint = document.getElementById("xpToolCommandHint");
+            hint.textContent = "XP Tool: " + cmd.command;
+            log("To view in XP Tool: " + cmd.command);
+          });
+
+        // Load XP preview
+        fetch(API_BASE + "/viewer/load-xp-path", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ path: data.xp_path, scale: 2 }),
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (preview) {
+            if (preview.error) {
+              log("XP preview failed: " + preview.error, "log-warn");
+              return;
+            }
+            var container = document.getElementById("xpPreview");
+            container.innerHTML = '<div style="font-size: 12px; color: #888; margin-bottom: 4px;">' + /* TODO(THEME) */
+              'XP Preview (' + (preview.angles || '?') + ' angles, ' +
+              (preview.anims ? preview.anims.join('+') : '?') + ' frames, ' +
+              (preview.total_frames || '?') + ' total)</div>';
+            var wrap = document.createElement("div");
+            wrap.style.cssText = "display: flex; flex-wrap: wrap; gap: 4px; max-height: 200px; overflow-y: auto;";
+            (preview.frames || []).forEach(function (frame, i) {
+              if (!frame || !frame.data) return;
+              var img = document.createElement("img");
+              img.src = "data:image/png;base64," + frame.data;
+              img.title = "Frame " + i;
+              img.style.cssText = "image-rendering: pixelated; border: 1px solid #333; max-height: 80px;"; /* TODO(THEME) */
+              wrap.appendChild(img);
+            });
+            container.appendChild(wrap);
+            log("XP preview loaded: " + (preview.total_frames || 0) + " frames");
+          })
+          .catch(function (err) {
+            log("XP preview failed: " + err.message, "log-warn");
+          });
+      }
+
+      document.getElementById("exportBtn").addEventListener("click", function () {
+        if (!sessionId) return;
+        var name = prompt("Export name:", handoffName || "workbench_export");
+        if (!name) return;
+        doExport(name, false);
+      });
+
+      // ---- Layer selector ----
+      document.getElementById("layerSelect").addEventListener("change", function () {
+        var layerIdx = parseInt(this.value, 10);
+        updateWbState({ activeLayer: layerIdx });
+        if (wbState.hasNativeCells && sessionId) {
+          log("Switching to layer " + layerIdx);
+          fetchAndRenderNativeGrid(layerIdx);
+        }
+      });
+
+      // ---- Copy/paste clipboard ----
+      var copiedCell = null;
+
+      // ---- Keyboard shortcuts ----
+      document.addEventListener("keydown", function (e) {
+        // Skip when typing in inputs
+        if (document.activeElement && (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA")) return;
+
+        // WB-06: ESC to clear selection
+        if (e.key === "Escape") {
+          e.preventDefault();
+          if (swapMode) { swapMode = false; swapFirst = null; document.querySelectorAll("#gridPreview .grid-cell").forEach(function (c) { c.classList.remove("swap-source"); }); updateWbState({ status: "Swap cancelled" }); }
+          clearSelection();
+          return;
+        }
+
+        if ((e.ctrlKey || e.metaKey) && e.key === "z") { e.preventDefault(); document.getElementById("undoBtn").click(); }
+        if ((e.ctrlKey || e.metaKey) && e.key === "y") { e.preventDefault(); document.getElementById("redoBtn").click(); }
+
+        // Ctrl+C: copy the single selected cell
+        if ((e.ctrlKey || e.metaKey) && e.key === "c") {
+          if (selectedCells.length === 1) {
+            e.preventDefault();
+            // Clear previous copy indicator
+            var prevCopy = document.querySelector("#gridPreview .grid-cell.copied");
+            if (prevCopy) prevCopy.classList.remove("copied");
+            copiedCell = selectedCells[0];
+            // Highlight copied cell
+            var allCells = document.querySelectorAll("#gridPreview .grid-cell");
+            if (allCells[copiedCell]) allCells[copiedCell].classList.add("copied");
+            log("Copied cell #" + copiedCell + " (Ctrl+V to paste into selected cells)");
+          }
+        }
+
+        // Ctrl+V: paste copied cell to all selected targets
+        if ((e.ctrlKey || e.metaKey) && e.key === "v") {
+          if (copiedCell !== null && selectedCells.length > 0 && sessionId) {
+            e.preventDefault();
+            var gridCells = wbState.gridAssignment;
+            var src = gridCells[copiedCell] || {};
+            var targets = selectedCells.filter(function (idx) { return idx !== copiedCell; }).map(function (idx) {
+              var c = gridCells[idx] || {};
+              return { angle: c.angle || 0, anim: c.anim || 0, frame: c.frame || 0, proj: c.proj || 0 };
+            });
+            if (targets.length > 0) {
+              MergePanel.fillFromSlot(
+                { angle: src.angle || 0, anim: src.anim || 0, frame: src.frame || 0, proj: src.proj || 0 },
+                targets
+              ).then(function (data) {
+                log("Pasted cell #" + copiedCell + " to " + targets.length + " target(s)");
+                if (data.thumbnails) updateGridThumbnails(data.thumbnails);
+                updateSessionInfo();
+              }).catch(function (err) {
+                log("Paste failed: " + err.message, "log-err");
+              });
+            }
+          }
+        }
+      });
+
+      // ---- Add Source (multi-image merge) ----
+      document.getElementById("addSourceBtn").addEventListener("click", function () {
+        document.getElementById("addSourceFile").click();
+      });
+
+      document.getElementById("addSourceFile").addEventListener("change", function (e) {
+        var files = e.target.files;
+        if (!files || files.length === 0) return;
+
+        var formData = new FormData();
+        for (var i = 0; i < files.length; i++) {
+          formData.append("files", files[i]);
+        }
+        formData.append("alpha_threshold", document.getElementById("threshold").value);
+        formData.append("min_size", document.getElementById("minSize").value);
+
+        log("Merging " + files.length + " additional source(s)...");
+        updateWbState({ status: "Extracting from " + files.length + " additional source(s)..." });
+
+        fetch(API_BASE + "/workbench/merge-sources", { method: "POST", body: formData })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.error) {
+              log("Merge failed: " + data.error, "log-err");
+              return;
+            }
+            // Append merged sprites to existing extraction result
+            var existingExtraction = wbState.extractionResult || { sprites: [], method: "manual", filtered_count: 0 };
+            var combinedSprites = existingExtraction.sprites.concat(data.sprites);
+            var updated = Object.assign({}, existingExtraction, { sprites: combinedSprites });
+            updateWbState({
+              extractionResult: updated,
+              status: "Added " + data.total_sprites + " sprites from " + data.sources.length + " source(s). Total: " + combinedSprites.length,
+            });
+            // Re-render extraction overlay
+            renderExtractionOverlay(updated);
+            assignBtn.disabled = false;
+            log("Merged " + data.total_sprites + " sprites from " + data.sources.length + " source(s)");
+          })
+          .catch(function (err) {
+            log("Merge failed: " + err.message, "log-err");
+          });
+
+        e.target.value = "";
+      });
+
+      // ---- Load XP file into workbench ----
+      document.getElementById("loadXpBtn").addEventListener("click", function () {
+        document.getElementById("loadXpFile").click();
+      });
+
+      document.getElementById("loadXpFile").addEventListener("change", function (e) {
+        var file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        var formData = new FormData();
+        formData.append("file", file);
+
+        log("Loading XP file: " + file.name + "...");
+        updateWbState({ status: "Loading " + file.name + "..." });
+
+        fetch(API_BASE + "/workbench/load-xp", { method: "POST", body: formData })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.error) {
+              log("XP load failed: " + data.error, "log-err");
+              updateWbState({ status: "Error: " + data.error });
+              return;
+            }
+            populateGridFromResponse(data, file.name);
+          })
+          .catch(function (err) {
+            log("XP load failed: " + err.message, "log-err");
+            updateWbState({ status: "Error loading XP" });
+          });
+
+        e.target.value = "";
+      });
+
+      // ---- Drag bbox from source to grid cell ----
+      window.handleBboxDrop = function (bbox, targetIdx, targetCell) {
+        if (!sessionId || !wbState.sourceId) {
+          log("Cannot drop: no session or source image", "log-warn");
+          return;
+        }
+
+        // Crop the bbox region from source and place into target grid cell
+        var gridCells = wbState.gridAssignment || [];
+        var tgt = gridCells[targetIdx] || {};
+        var targets = [{ angle: tgt.angle || 0, anim: tgt.anim || 0, frame: tgt.frame || 0, proj: tgt.proj || 0 }];
+
+        // Use populate-frames with a single sprite to crop the bbox into this one cell
+        fetch(API_BASE + "/workbench/populate-frames", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            job_id: sessionId,
+            source_id: wbState.sourceId,
+            sprites: [{ bbox: [bbox.x, bbox.y, bbox.w, bbox.h] }],
+            target_indices: [targetIdx],
+          }),
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.error) {
+              log("Drop failed: " + data.error, "log-err");
+              return;
+            }
+            log("Dropped box #" + bbox.boxId + " into grid cell #" + targetIdx);
+            // Update the single cell thumbnail
+            if (data.thumbnails) {
+              // Backend returns dict keyed by string index
+              var thumbKey = String(targetIdx);
+              var rawThumb = data.thumbnails[thumbKey] || data.thumbnails[targetIdx];
+              if (rawThumb) {
+                var thumbSrc = (typeof rawThumb === "string" && rawThumb.indexOf("data:") === 0)
+                  ? rawThumb : "data:image/png;base64," + rawThumb;
+                var cells = document.querySelectorAll("#gridPreview .grid-cell");
+                if (cells[targetIdx]) {
+                  var img = cells[targetIdx].querySelector("img");
+                  if (img) {
+                    img.src = thumbSrc;
+                  } else {
+                    img = document.createElement("img");
+                    img.src = thumbSrc;
+                    img.style.width = "48px";
+                    img.style.height = "48px";
+                    img.style.imageRendering = "pixelated";
+                    img.draggable = false;
+                    cells[targetIdx].innerHTML = "";
+                    cells[targetIdx].appendChild(img);
+                  }
+                  if (wbState.gridAssignment && wbState.gridAssignment[targetIdx]) {
+                    wbState.gridAssignment[targetIdx].imageDataUrl = thumbSrc;
+                  }
+                }
+              }
+            }
+            updateSessionInfo();
+          })
+          .catch(function (err) {
+            log("Drop failed: " + err.message, "log-err");
+          });
+      };
+
+      // ---- User guide visibility ----
+      function updateGuideVisibility() {
+        var guide = document.getElementById("userGuide");
+        if (guide) {
+          // Show guide when no grid is assigned yet
+          var hasGrid = wbState.gridAssignment && wbState.gridAssignment.length > 0;
+          guide.style.display = hasGrid ? "none" : "block";
+        }
+      }
+      // Show guide initially
+      setTimeout(updateGuideVisibility, 100);
+
+      // ---- Debug console controls ----
+      var logEventCount = 0;
+      var origLog = log;
+      log = function (msg, cls) {
+        origLog(msg, cls);
+        logEventCount++;
+        document.getElementById("logCount").textContent = logEventCount + " event(s)";
+      };
+      window.workbenchLog = log;
+
+      document.getElementById("clearLogBtn").addEventListener("click", function () {
+        document.getElementById("logPanel").innerHTML = "";
+        logEventCount = 0;
+        document.getElementById("logCount").textContent = "0 events";
+      });
+
+      document.getElementById("toggleLogBtn").addEventListener("click", function () {
+        var panel = document.getElementById("logPanel");
+        if (panel.style.display === "none") {
+          panel.style.display = "";
+          this.textContent = "Hide";
+        } else {
+          panel.style.display = "none";
+          this.textContent = "Show";
+        }
+      });
+
+      document.getElementById("logFilterWarn").addEventListener("change", function () {
+        var items = document.querySelectorAll("#logPanel .log-warn");
+        items.forEach(function (el) { el.style.display = this.checked ? "" : "none"; }.bind(this));
+      });
+
+      document.getElementById("logFilterErr").addEventListener("change", function () {
+        var items = document.querySelectorAll("#logPanel .log-err");
+        items.forEach(function (el) { el.style.display = this.checked ? "" : "none"; }.bind(this));
+      });
+
+      // ---- Wizard handoff ----
+      var handoffImagePath = params.get("image_path");
+      var handoffName = params.get("name");
+
+      if (handoffSessionId) {
+        sessionId = handoffSessionId;
+        MergePanel.setJobId(sessionId);
+        document.getElementById("editActions").style.display = "flex";
+        document.getElementById("exportBtn").disabled = false;
+        updateSessionInfo();
+        showTransformBar();
+        log("Restored session from wizard: " + handoffSessionId);
+      } else if (handoffPipelineJobId) {
+        log("Loading pipeline output...");
+        updateWbState({ status: "Loading pipeline output..." });
+        // Pass angles/frames from URL params so workbench uses wizard config
+        var loadBody = { job_id: handoffPipelineJobId };
+        if (handoffAngles) loadBody.angles = parseInt(handoffAngles, 10);
+        if (handoffFrames) loadBody.frames = handoffFrames;
+        fetch(API_BASE + "/workbench/load-from-job", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(loadBody),
+        })
+          .then(function (r) {
+            if (!r.ok) throw new Error("Job not found (status " + r.status + ")");
+            return r.json();
+          })
+          .then(function (data) {
+            if (data.error) throw new Error(data.error);
+            populateGridFromResponse(data, "pipeline output");
+          })
+          .catch(function (err) {
+            // R2 fallback: try xp_path from URL params
+            var xpPath = params.get("xp_path");
+            if (xpPath) {
+              log("Job expired, loading from XP path...");
+              var formData = new FormData();
+              // Fetch the XP from server path via load-xp-path viewer endpoint
+              fetch(API_BASE + "/viewer/load-xp-path", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ xp_path: xpPath }),
+              })
+                .then(function (r) { return r.json(); })
+                .then(function (viewData) {
+                  if (viewData.error) {
+                    log("XP path fallback failed: " + viewData.error, "log-err");
+                    updateWbState({ status: "Pipeline job expired. Upload .xp file manually." });
+                  } else {
+                    log("Loaded from XP path (viewer mode)");
+                    updateWbState({ status: "Loaded from " + xpPath });
+                  }
+                })
+                .catch(function () {
+                  log("Pipeline job expired. Upload the .xp file manually.", "log-err");
+                  updateWbState({ status: "Pipeline job expired." });
+                });
+            } else {
+              log("Pipeline job expired. Upload the .xp file manually.", "log-err");
+              updateWbState({ status: "Pipeline job expired." });
+            }
+          });
+      }
+
+      // If wizard passed an image path, load it into the workbench
+      if (handoffImagePath) {
+        log("Loading image from wizard: " + handoffImagePath);
+        updateWbState({ status: "Loading image from wizard..." });
+        fetch(API_BASE + "/workbench/load-server-image", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ image_path: handoffImagePath }),
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.error) {
+              log("Failed to load wizard image: " + data.error, "log-err");
+              updateWbState({ status: "Image load failed: " + data.error + ". Upload manually." });
+              return;
+            }
+            // Display the image on canvas
+            var img = new Image();
+            img.onload = function () {
+              sourceCanvas.width = img.width;
+              sourceCanvas.height = img.height;
+              var ctx = sourceCanvas.getContext("2d");
+              ctx.drawImage(img, 0, 0);
+              updateWbState({
+                sourceId: data.source_id,
+                sourceImageUrl: data.data_url,
+                status: "Image loaded from wizard (" + data.width + "x" + data.height + "). Click 'Find Sprites' or draw manual boxes.",
+              });
+              extractBtn.disabled = false;
+              drawBoxBtn.disabled = false;
+              log("Source image loaded: " + data.width + "x" + data.height + " (source_id: " + data.source_id.slice(0, 8) + ")");
+            };
+            img.src = data.data_url;
+          })
+          .catch(function (err) {
+            log("Failed to load wizard image: " + err.message, "log-err");
+          });
+      }
+      // ---- WB-07: Right-click context menu on grid cells ----
+      var ctxMenu = document.createElement("div");
+      ctxMenu.id = "cellContextMenu";
+      ctxMenu.innerHTML =
+        '<button class="ctx-item" data-action="copy">Copy (Ctrl+C)</button>' +
+        '<button class="ctx-item" data-action="paste">Paste (Ctrl+V)</button>' +
+        '<div class="ctx-sep"></div>' +
+        '<button class="ctx-item" data-action="swap">Swap with...</button>' +
+        '<button class="ctx-item" data-action="dupe">Duplicate to...</button>' +
+        '<button class="ctx-item" data-action="import">Import image...</button>' +
+        '<div class="ctx-sep"></div>' +
+        '<button class="ctx-item" data-action="flipH">Flip horizontal</button>' +
+        '<button class="ctx-item" data-action="flipV">Flip vertical</button>' +
+        '<button class="ctx-item" data-action="rot90">Rotate 90\u00b0</button>' +
+        '<div class="ctx-sep"></div>' +
+        '<button class="ctx-item" data-action="deselect">Deselect (Esc)</button>';
+      document.body.appendChild(ctxMenu);
+
+      var ctxCellIdx = null;
+
+      document.getElementById("gridPreview").addEventListener("contextmenu", function (e) {
+        var cell = e.target.closest(".grid-cell");
+        if (!cell) return;
+        e.preventDefault();
+        ctxCellIdx = parseInt(cell.dataset.cellIndex || cell.dataset.index, 10);
+        // Select the right-clicked cell first
+        var gc = (wbState.gridAssignment || [])[ctxCellIdx] || {};
+        if (typeof window.selectCell === "function") window.selectCell(ctxCellIdx, gc, e);
+        // Position and show menu
+        ctxMenu.style.display = "block";
+        ctxMenu.style.left = e.clientX + "px";
+        ctxMenu.style.top = e.clientY + "px";
+        // Adjust if menu goes off-screen
+        var rect = ctxMenu.getBoundingClientRect();
+        if (rect.right > window.innerWidth) ctxMenu.style.left = (window.innerWidth - rect.width - 4) + "px";
+        if (rect.bottom > window.innerHeight) ctxMenu.style.top = (window.innerHeight - rect.height - 4) + "px";
+      });
+
+      // Hide menu on click outside
+      document.addEventListener("click", function () { ctxMenu.style.display = "none"; });
+
+      ctxMenu.addEventListener("click", function (e) {
+        var btn = e.target.closest(".ctx-item");
+        if (!btn) return;
+        ctxMenu.style.display = "none";
+        var action = btn.dataset.action;
+        if (action === "copy") { document.dispatchEvent(new KeyboardEvent("keydown", { key: "c", ctrlKey: true })); }
+        else if (action === "paste") { document.dispatchEvent(new KeyboardEvent("keydown", { key: "v", ctrlKey: true })); }
+        else if (action === "swap") { document.getElementById("swapBtn").click(); }
+        else if (action === "dupe") { document.getElementById("dupeBtn").click(); }
+        else if (action === "import") { document.getElementById("importBtn").click(); }
+        else if (action === "flipH") { var b = document.getElementById("flipHBtn"); if (b) b.click(); }
+        else if (action === "flipV") { var b = document.getElementById("flipVBtn"); if (b) b.click(); }
+        else if (action === "rot90") { var b = document.getElementById("rot90Btn"); if (b) b.click(); }
+        else if (action === "deselect") { clearSelection(); }
+      });
+
+    })();
+
+    // ========================================================================
+    // Pipeline Config Panel (Phase 19-03)
+    // Server-driven form: /api/config/schema returns field specs,
+    // JS renders inputs dynamically. Config state stored as JSON dict.
+    // ========================================================================
+    var _pipelineConfig = null;
+
+    function toggleConfigPanel() {
+      var panel = document.getElementById("configPanel");
+      var toggle = document.getElementById("configToggle");
+      if (panel.style.display === "none") {
+        panel.style.display = "block";
+        toggle.textContent = "[-]";
+        if (!_pipelineConfig) loadConfigSchema();
+      } else {
+        panel.style.display = "none";
+        toggle.textContent = "[+]";
+      }
+    }
+
+    function loadConfigSchema() {
+      var API_BASE = window.ASSET_API_BASE || "/api";
+      Promise.all([
+        fetch(API_BASE + "/config/schema").then(function(r) { return r.json(); }),
+        fetch(API_BASE + "/config/defaults").then(function(r) { return r.json(); })
+      ]).then(function(results) {
+        var schema = results[0];
+        var defaults = results[1];
+        _pipelineConfig = defaults.config || {};
+        renderConfigFields(schema.fields || [], _pipelineConfig);
+      }).catch(function(err) {
+        document.getElementById("configStatus").textContent = "Failed to load config schema: " + err;
+        document.getElementById("configStatus").style.color = "#e94560"; /* TODO(THEME) */
+      });
+    }
+
+    function renderConfigFields(fields, config) {
+      var container = document.getElementById("configFields");
+      container.innerHTML = "";
+      var currentSection = "";
+
+      fields.forEach(function(f) {
+        if (f.section !== currentSection) {
+          currentSection = f.section;
+          var header = document.createElement("div");
+          header.style.cssText = "color: #7c83ff; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; border-bottom: 1px solid #333; padding-bottom: 2px;"; /* TODO(THEME) */
+          header.textContent = currentSection.replace(/_/g, " ");
+          container.appendChild(header);
+        }
+
+        var row = document.createElement("div");
+        row.style.cssText = "display: flex; justify-content: space-between; align-items: center; gap: 6px;";
+
+        var label = document.createElement("label");
+        label.style.cssText = "color: #888; font-size: 11px; flex-shrink: 0;"; /* TODO(THEME) */
+        label.textContent = f.label;
+        label.title = f.description;
+
+        var sectionData = config[f.section] || {};
+        var currentVal = sectionData[f.field_name];
+        var input;
+
+        if (f.ui_widget === "select" && f.choices && f.choices.length > 0) {
+          input = document.createElement("select");
+          f.choices.forEach(function(c) {
+            var opt = document.createElement("option");
+            opt.value = c;
+            opt.textContent = c;
+            if (String(currentVal) === c) opt.selected = true;
+            input.appendChild(opt);
+          });
+        } else if (f.ui_widget === "checkbox") {
+          input = document.createElement("input");
+          input.type = "checkbox";
+          input.checked = !!currentVal;
+        } else if (f.ui_widget === "number") {
+          input = document.createElement("input");
+          input.type = "number";
+          if (f.min_val !== null) input.min = f.min_val;
+          if (f.max_val !== null) input.max = f.max_val;
+          input.step = (f.max_val !== null && f.max_val <= 1) ? "0.01" : "1";
+          input.value = currentVal !== null && currentVal !== undefined ? currentVal : "";
+        } else {
+          input = document.createElement("input");
+          input.type = "text";
+          input.value = currentVal !== null && currentVal !== undefined ? (Array.isArray(currentVal) ? JSON.stringify(currentVal) : String(currentVal)) : "";
+        }
+
+        input.style.cssText = "background: #0f0f23; border: 1px solid #333; color: #ccc; padding: 3px 6px; border-radius: 3px; font-size: 11px; width: 100px;"; /* TODO(THEME) */
+        input.dataset.section = f.section;
+        input.dataset.field = f.field_name;
+        input.dataset.widget = f.ui_widget;
+        input.className = "config-input";
+
+        row.appendChild(label);
+        row.appendChild(input);
+        container.appendChild(row);
+      });
+    }
+
+    function collectConfigValues() {
+      var config = JSON.parse(JSON.stringify(_pipelineConfig || {}));
+      document.querySelectorAll(".config-input").forEach(function(el) {
+        var section = el.dataset.section;
+        var field = el.dataset.field;
+        if (!config[section]) config[section] = {};
+        if (el.dataset.widget === "checkbox") {
+          config[section][field] = el.checked;
+        } else if (el.dataset.widget === "number") {
+          var v = el.value.trim();
+          config[section][field] = v === "" ? null : Number(v);
+        } else if (el.dataset.widget === "color_list") {
+          try { config[section][field] = JSON.parse(el.value); }
+          catch (_) { config[section][field] = el.value; }
+        } else {
+          var raw = el.value;
+          var trimmed = (raw || "").trim();
+          if (trimmed === "") {
+            config[section][field] = "";
+          } else if ((trimmed[0] === "[" && trimmed[trimmed.length - 1] === "]") ||
+                     (trimmed[0] === "{" && trimmed[trimmed.length - 1] === "}")) {
+            try { config[section][field] = JSON.parse(trimmed); }
+            catch (_) { config[section][field] = raw; }
+          } else if (field === "tie_break_order") {
+            config[section][field] = trimmed.split(",").map(function(x) { return x.trim(); }).filter(Boolean);
+          } else {
+            config[section][field] = raw;
+          }
+        }
+      });
+      return config;
+    }
+
+    (function() {
+      var validateBtn = document.getElementById("configValidateBtn");
+      var resetBtn = document.getElementById("configResetBtn");
+      var statusEl = document.getElementById("configStatus");
+      var API_BASE = window.ASSET_API_BASE || "/api";
+
+      if (validateBtn) {
+        validateBtn.addEventListener("click", function() {
+          var config = collectConfigValues();
+          statusEl.textContent = "Validating...";
+          statusEl.style.color = "#888"; /* TODO(THEME) */
+          fetch(API_BASE + "/config/validate", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(config)
+          }).then(function(r) { return r.json(); }).then(function(data) {
+            if (data.valid) {
+              _pipelineConfig = data.config;
+              statusEl.textContent = "Valid";
+              statusEl.style.color = "#4caf50"; /* TODO(THEME) */
+            } else {
+              statusEl.textContent = data.error || "Invalid";
+              statusEl.style.color = "#e94560"; /* TODO(THEME) */
+            }
+          }).catch(function(err) {
+            statusEl.textContent = "Error: " + err;
+            statusEl.style.color = "#e94560"; /* TODO(THEME) */
+          });
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener("click", function() {
+          fetch(API_BASE + "/config/defaults").then(function(r) { return r.json(); }).then(function(data) {
+            _pipelineConfig = data.config || {};
+            loadConfigSchema();
+            statusEl.textContent = "Reset to defaults";
+            statusEl.style.color = "#888"; /* TODO(THEME) */
+          });
+        });
+      }
+    })();
+    </script>
+</body>
+</html>

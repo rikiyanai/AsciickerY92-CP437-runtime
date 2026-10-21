@@ -1,0 +1,57 @@
+{
+ "schema": "y92.fl4876.facade_capture_check.v1",
+ "at": "2026-10-14",
+ "session": "0e4cdb7d-789e-4f42-9ca8-ce5af0878c03",
+ "build": ".run/fl4876_builds/build_reg_73 (1.5x, 115092 patches)",
+ "subject": "Lawson way/725137997 face 1 (8.41 m, outward 242.3 deg; street front per /api/locate front_camera)",
+ "test_cells": "operator queued screenshot OPQ-4876-0001 (shots/a3caa18e6d617dd1.png), rough frontal crop, half-block converter; a pipeline test, NOT an operator capture",
+ "anchor_sweep_zoom1": {
+  "sign_5_rows": {
+   "-1.0": 1,
+   "-0.6..-0.2": 0,
+   "0..+2.0": 5
+  },
+  "storefront_17_rows": {
+   "-1.0..-0.2": 0,
+   "0..+2.0": 17
+  },
+  "meaning": "metres from the footprint face along the outward normal -> rows drawn"
+ },
+ "before_fixes": {
+  "foot_anchor_rows_drawn": {
+   "sign": 0,
+   "storefront": 10
+  },
+  "cause": [
+   "snap_to_wall foot at -0.1 m from the face is inside the baked building for the height-only sprite depth test",
+   "layer-1 height digit capped at 9"
+  ]
+ },
+ "after_fixes_zoom1_rows_bottom_up": {
+  "sign": [
+   41,
+   45
+  ],
+  "storefront": [
+   24,
+   40
+  ]
+ },
+ "zoom2": "anchors spread 2x, sprites do not scale (Classic blits sprites at native density): judge at zoom 1",
+ "preview_vs_build": "0 differing bytes (160x70 frame): live preview on build_reg_73 (sprites injected + place front collapsed) vs scratch copy rebuilt by compile_sign_sprites.build after a scratch accept",
+ "hide_bug": "HideInst does not hide BSP mesh instances (world_internal.h mesh_cb path ignores INST_VISIBLE); fixed in ClassicSetInstVisible by zero-scale collapse",
+ "preexisting_finding": "build_reg_73 output.a3d holds 0 of the 19 sign sprites its sign_sprites_receipt.json lists (instance diff vs re-run: +19 sign_* sprites); a later stage rewrote output.a3d without them",
+ "files": {
+  "fc_cells.py": "92d1ef2bc94b55f2",
+  "fc_verify.mjs": "50ee4e92450f06cf",
+  "fc_sweep.mjs": "e4a734cb44da6b2c",
+  "fc_buildview.mjs": "f998b577ddbff642",
+  "fc_e2e.py": "f640fdeb84b7ec6c",
+  "flip.py": "228eb2a2c2843f89",
+  "inst_diff.py": "453c3ed2826523da",
+  "base_a_s4_up.png": "5aa21e01ebbff735",
+  "z1_after_s4_up.png": "1f71ee4207d611a6",
+  "e2e_view_s4_up.png": "4877a2c7b2c7ca44",
+  "lawson_crop.png": "bd91ce870a1599d1"
+ }
+}
