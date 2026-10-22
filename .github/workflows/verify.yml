@@ -23,10 +23,11 @@ jobs:
           node-version: "22"
       - run: python -m pip install -r requirements-test.txt
       - run: ./scripts/run_standalone_checks.sh
+      - run: make numabe-test
       - name: Enforce standalone repository hygiene
         shell: bash
         run: |
-          test -z "$(git ls-files '*.md' 'LICENSE*' '*/LICENSE*' | awk '$0 != "README.md" && $0 !~ /^docs\//')"
+          python3 scripts/check_document_placement.py
           test -z "$(git ls-files | awk '$0 ~ /(^|\/)(AGENTS\.md|CLAUDE\.md|CONTEXT\.md)$/')"
           test -z "$(git grep -Il -E 'environ(ment)?\.get\([^,]+,[[:space:]]*["'\''"][A-Za-z0-9_-]{32,}["'\''"]' -- . || true)"
           process_pattern='worker task descr''iption|agent instr''uctions|session trans''cript|conversation trans''cript|you are cod''ex'

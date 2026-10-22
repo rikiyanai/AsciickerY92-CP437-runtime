@@ -2,6 +2,25 @@
 
 ## Numabe public saved-map/editor port — 2026-10-21
 
+- Publication-CI repair: restored the historical equipment-recording link.
+  Standalone checks now report 46 passing pytest cases plus all script,
+  JavaScript and manifest/coverage gates. Three negative-control cases
+  exercise exact document ownership: unknown sibling documents, stale/glob
+  owners and instruction files still fail. CI now uses the same explicit
+  owner model as local commit placement, retaining 37 exact upstream or
+  existing source/license owners instead of exempting imported directories.
+  No existing source or license was removed. The contracts job also runs
+  the 60-case Numabe release suite, not just the older root-engine tests.
+
+- PR #2's actual GitHub attribution check and native server, macOS terminal
+  and web builds passed. The contracts job failed on the existing README
+  omission of `docs/recordings/cp437-runtime-layer-transitions.gif` (42
+  other cases passed). The upstream-main README also lacks that link.
+  Restore the real existing recording link, not a weakened test assertion.
+  Inspection also found the workflow's blanket Markdown placement check
+  predates exact imported-document ownership; preserve existing source and
+  licenses rather than deleting them to make that placement check green.
+
 - Recovery: the operator approved the single-branch exception. Ruleset
   25459478 now also excludes only `refs/heads/numabe-publication` from its
   non-main creation/update prohibition. Enforcement stays active, with no

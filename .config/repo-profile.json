@@ -1,9 +1,17 @@
 {
   "document_owners": [
+    ".scratch/atsaturn_firewatch_pixelart_demo/Firewatch Inspired + Pixel Art demo/Assets/Main stuff (messed up)/FlatKit/Utils/EditorAttributes/LICENSE",
+    ".scratch/atsaturn_firewatch_pixelart_demo/Firewatch Inspired + Pixel Art demo/Assets/Main stuff (messed up)/FlatKit/Utils/EditorAttributes/LICENSE.meta",
+    ".scratch/atsaturn_firewatch_pixelart_demo/Firewatch Inspired + Pixel Art demo/Assets/SubjectNerd/PixelCamera/LICENSE",
+    ".scratch/atsaturn_firewatch_pixelart_demo/Firewatch Inspired + Pixel Art demo/Assets/SubjectNerd/PixelCamera/LICENSE.meta",
+    ".scratch/atsaturn_firewatch_pixelart_demo/Firewatch Inspired + Pixel Art demo/Assets/SubjectNerd/PixelCamera/README.md",
     "numabe/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/wvr-4809-001-approval.md",
     "numabe/docs/agent/cli-anything/cli_anything/blender/README.md",
     "numabe/docs/agent/cli-anything/cli_anything/blender/tests/TEST.md",
+    "numabe/engine/third_party/cjson/LICENSE",
     "numabe/engine/third_party/cjson/PROVENANCE.md",
+    "numabe/vendor/colyseus-native-sdk/0.17.7/LICENSE",
+    "numabe/vendor/imgui/LICENSE.txt",
     "numabe/vendor/imgui/docs/README.md",
     "numabe/vendor/imgui/docs/issue_template.md",
     "numabe/vendor/imgui/docs/pull_request_template.md",
@@ -12,6 +20,22 @@
     "numabe/vendor/imgui/examples/example_sdl_opengl2/README.md",
     "numabe/vendor/imgui/examples/example_sdl_opengl3/README.md",
     "numabe/vendor/imgui/misc/freetype/README.md",
-    "numabe/vendor/png2rex-master/README.md"
+    "numabe/vendor/png2rex-master/LICENSE",
+    "numabe/vendor/png2rex-master/README.md",
+    "scripts/README.md",
+    "scripts/maintainer/POLICY.md",
+    "scripts/pipeline/staging/debug/pipeline_diagnosis.md",
+    "scripts/pipeline/web_api/ARCHITECTURE-DECISIONS.md",
+    "vendor/imgui/LICENSE.txt",
+    "vendor/imgui/docs/README.md",
+    "vendor/imgui/docs/issue_template.md",
+    "vendor/imgui/docs/pull_request_template.md",
+    "vendor/imgui/examples/example_allegro5/README.md",
+    "vendor/imgui/examples/example_apple_metal/README.md",
+    "vendor/imgui/examples/example_sdl_opengl2/README.md",
+    "vendor/imgui/examples/example_sdl_opengl3/README.md",
+    "vendor/imgui/misc/freetype/README.md",
+    "vendor/png2rex-master/LICENSE",
+    "vendor/png2rex-master/README.md"
   ]
 }

@@ -49,6 +49,13 @@ The editor is running from the clean checkout at http://127.0.0.1:8792/.
 The largest required file is51971284 bytes. The public export contains no
 raw survey archive, unrelated Unicode generator cache or legacy session log.
 
+Publication-CI follow-up restored the pre-existing missing README link to
+the equipment-layer recording. The root standalone suite then passed 46
+pytest cases and its script/JavaScript/manifest/coverage checks. Document
+placement passes with 37 exact source/license owners; three negative-control
+tests retain rejection of unowned, stale/glob and instruction-file entries.
+The GitHub contracts workflow also executes `make numabe-test` for this port.
+
 ## Wallace/Gromit upright-rocket correction (2026-08-15)
 
 The current correction is Verified against the staged dirty source. It is not
