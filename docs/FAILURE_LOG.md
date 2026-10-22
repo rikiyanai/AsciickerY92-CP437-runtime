@@ -2,6 +2,13 @@
 
 ## Numabe public saved-map/editor port — 2026-10-21
 
+- The next Linux run passed the GDAL scope tests and 51 Numabe cases but
+  exposed OpenCV imported transitively by camera-solve package initialization
+  in the station-clearance negative control. Inspection of that package's
+  full import closure also found SciPy. Both are now explicit test
+  dependencies, rather than relying on the developer machine's packages.
+  The original negative control and its rail-clearance assertions remain.
+
 - The Linux contracts rerun exposed an undeclared native/Python GDAL
   dependency in the scope compiler tests. CI now installs matching native
   GDAL and Python bindings; the README separates this test prerequisite from

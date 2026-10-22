@@ -33,6 +33,7 @@ needs sharding; each published file is below 100 MB.
 
 `make numabe-test` checks the published map/editor closure. The optional
 `make numabe-source-verify` also requires those local raw acquisitions.
+Install `requirements-test.txt` for the test suite, including OpenCV/SciPy.
 The scope-geometry tests additionally need GDAL's Python bindings matching
 the native GDAL installation (on Ubuntu, install `libgdal-dev gdal-bin`, then
 `python3 -m pip install "GDAL==$(gdal-config --version)"`). The saved-map HTML
