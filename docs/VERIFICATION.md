@@ -1,5 +1,61 @@
 # Verification record
 
+## Numabe saved-map/editor publication — 2026-10-21
+
+The initial publication of commit
+`6c4ac3424e6d8b6fb6cf81d406b5b363f4cc490c` was rejected by repository
+policy, not a file-size limit: main required `AI attribution policy` while
+all other branches were prohibited. The operator subsequently approved a
+temporary exception for only `refs/heads/numabe-publication`. That exception
+was applied without weakening required checks, main integrity or other
+branch restrictions. Publication must pass the real GitHub check before
+merging, after which the original main-only rule is restored. The pull
+request and remote main ref are the publication outcome owners; this local
+test record alone does not establish a successful merge.
+
+The public workspace is `numabe/`. It includes the current A3D world,3156
+map mesh basenames,19 sign XP files,2 train routes, the HTML editor and its
+Classic wasm bundle, all live Mapillary panorama references, aerial/reference
+layers, direct authoring helpers, edit journal and matching native build source.
+The active receipt is workspace-relative. A fresh clone needs no Y9 checkout.
+
+Raw CityGML and airborne point-cloud acquisitions are not loaded by the saved
+world or editor. The operator explicitly authorised excluding unnecessary
+surveys. Those originals remain local, with URLs/hashes in the source manifest.
+Unicode generator caches, old assessment screenshots, compiled object files
+and private pasted reference photos are not runtime/editor dependencies either.
+No required published file exceeds100MB; sharding is unnecessary.
+
+The map is
+`9779fbc2063f793f5547331ff2276f9116b923d879b8eb34e49082e8ff6eeab8`.
+Only the obsolete station facade instance was removed. Native terrain/material
+prefix and remaining file tail are unchanged. The immediate pre-edit map and
+journal are retained for exact regression/recovery checks. The billboard is
+also rejected by the public launch guard if an old rebuild restores it.
+
+The native game/server and107-unit browser build passed in the preserved
+source workspace. Public-clone verification is recorded below after export.
+The README GIF is40 historical native frames (approach/brake/dwell/departure),
+not a post-correction gameplay test. True CP437 first-person, architectural
+foreground glyph authoring and post-edit keyboard/train acceptance remain open.
+The eye-level geometry preview is not presented as first-person gameplay.
+
+Clean-export checks: `make numabe-check` resolves3646 instances and346
+panoramas with0 missing assets. `make numabe-test` reports60 passed and1
+skipped; only the optional raw-acquisition test is deselected. The actor
+coverage gate passes205 rows. HTTP checks of the clean checkout returned200
+for editor projection/aerial metadata and actual building-face metrics.
+The editor is running from the clean checkout at http://127.0.0.1:8792/.
+The largest required file is51971284 bytes. The public export contains no
+raw survey archive, unrelated Unicode generator cache or legacy session log.
+
+Publication-CI follow-up restored the pre-existing missing README link to
+the equipment-layer recording. The root standalone suite then passed 46
+pytest cases and its script/JavaScript/manifest/coverage checks. Document
+placement passes with 37 exact source/license owners; three negative-control
+tests retain rejection of unowned, stale/glob and instruction-file entries.
+The GitHub contracts workflow also executes `make numabe-test` for this port.
+
 ## Wallace/Gromit upright-rocket correction (2026-08-15)
 
 The current correction is Verified against the staged dirty source. It is not

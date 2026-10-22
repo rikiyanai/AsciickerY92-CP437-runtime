@@ -1,0 +1,56 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "wolack_weapon_sword",
+  "output_path": "assets/sprites/wolack-weapon-sword.xp",
+  "output_sha256": "81e33cca1bf77f6c50505f15e552fd35e13ef1cf9688deab3783248a5d949fa5",
+  "output_dimensions": {
+    "width": 160,
+    "height": 104
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/wolack-0001.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/wolack-0001.xp",
+    "raw_layer_index": 3,
+    "upstream_xp_sha256": "20247d143b306be27a14a6a8034b4a70f1c5441912f5d13b5bcf8616fef084dc",
+    "upstream_layer_count": 5,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 1,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 2,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 3,
+        "width": 160,
+        "height": 104
+      },
+      {
+        "index": 4,
+        "width": 160,
+        "height": 104
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "user interactive review 2026-05-19",
+    "method": "User visual call 2026-05-19: YES (rider+sword in attack-swinging anim, NOT just holding sword). wolack-0001 has 5 layers: L2 = wolf body, L3 = rider+sword in swing motion, L4 = swoosh. Pose-specific (mounted-attack swing).",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=wolack_weapon_sword -> upstream_xp_path=sprites/wolack-0001.xp:raw_layer_index=3. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490692,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

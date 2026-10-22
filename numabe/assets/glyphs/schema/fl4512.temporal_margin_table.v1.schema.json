@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fl4512.temporal_margin_table.v1.schema.json",
+  "title": "FL-4512 typed temporal margin table",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "policy_set_id",
+    "method",
+    "perceptual_claim",
+    "suppressed_real_change",
+    "corpus",
+    "corpus_hash",
+    "rows",
+    "table_sha256"
+  ],
+  "properties": {
+    "schema": {"const": "fl4512.temporal_margin_table.v1"},
+    "policy_set_id": {"type": "string", "minLength": 1},
+    "method": {
+      "enum": ["nearest_rank_p99.v1", "mixed_policy_basis.v1"]
+    },
+    "perceptual_claim": {"const": false},
+    "suppressed_real_change": {"const": 0},
+    "corpus": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"$ref": "#/$defs/sha256"}
+        }
+      }
+    },
+    "corpus_hash": {"$ref": "#/$defs/sha256"},
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/margin_row"}
+    },
+    "table_sha256": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "quantile_rank": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "numerator",
+        "denominator",
+        "nearest_rank_index_zero_based",
+        "sample_count"
+      ],
+      "properties": {
+        "numerator": {"const": 99},
+        "denominator": {"const": 100},
+        "nearest_rank_index_zero_based": {"type": "integer", "minimum": 0},
+        "sample_count": {"type": "integer", "minimum": 1}
+      }
+    },
+    "delta_u32": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "value"],
+      "properties": {
+        "type": {"const": "u32"},
+        "value": {"type": "integer", "minimum": 0, "maximum": 4294967295}
+      }
+    },
+    "delta_u32_zero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "value"],
+      "properties": {
+        "type": {"const": "u32"},
+        "value": {"const": 0}
+      }
+    },
+    "delta_binary32": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "bits_le_u32", "decimal"],
+      "properties": {
+        "type": {"const": "ieee754_binary32"},
+        "bits_le_u32": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+        "decimal": {"type": "number", "minimum": 0}
+      }
+    },
+    "margin_row_common": {
+      "type": "object",
+      "required": [
+        "scorer_kind",
+        "scorer_version",
+        "scorer_id",
+        "score_domain",
+        "calibration_id",
+        "policy_basis",
+        "delta_keep"
+      ],
+      "properties": {
+        "calibration_id": {"type": "string", "minLength": 1, "maxLength": 31},
+        "policy_basis": {"type": "string", "minLength": 1},
+        "corpus_hash": {"$ref": "#/$defs/sha256"},
+        "quantile_rank": {"$ref": "#/$defs/quantile_rank"}
+      }
+    },
+    "margin_row": {
+      "allOf": [
+        {"$ref": "#/$defs/margin_row_common"},
+        {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "scorer_kind", "scorer_version", "scorer_id", "score_domain",
+                "calibration_id", "policy_basis", "corpus_hash",
+                "quantile_rank", "delta_keep"
+              ],
+              "properties": {
+                "scorer_kind": {"const": 1},
+                "scorer_version": {"const": 1},
+                "scorer_id": {"const": "fl4260.shape6_weighted_l2.v1"},
+                "score_domain": {"const": "fl4260.shape6_weighted_l2.v1.binary32"},
+                "calibration_id": {"type": "string"},
+                "policy_basis": {"const": "calibrated_nearest_rank_p99.v1"},
+                "corpus_hash": {"$ref": "#/$defs/sha256"},
+                "quantile_rank": {"$ref": "#/$defs/quantile_rank"},
+                "delta_keep": {"$ref": "#/$defs/delta_binary32"}
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "scorer_kind", "scorer_version", "scorer_id", "score_domain",
+                "calibration_id", "policy_basis", "delta_keep"
+              ],
+              "properties": {
+                "scorer_kind": {"const": 1},
+                "scorer_version": {"const": 2},
+                "scorer_id": {"const": "fl4512.shape6_f8_w4.v2"},
+                "score_domain": {"const": "fl4512.shape6_f8_w4.v2.score_int.u32"},
+                "calibration_id": {"const": "authored-exact-argmin-tie-v1"},
+                "policy_basis": {"const": "authored_exact_argmin_tie.v1"},
+                "delta_keep": {"$ref": "#/$defs/delta_u32_zero"}
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "scorer_kind", "scorer_version", "scorer_id", "score_domain",
+                "calibration_id", "policy_basis", "corpus_hash",
+                "quantile_rank", "delta_keep"
+              ],
+              "properties": {
+                "scorer_kind": {"const": 1},
+                "scorer_version": {"const": 2},
+                "scorer_id": {"const": "fl4512.shape6_f8_w4.v2"},
+                "score_domain": {"const": "fl4512.shape6_f8_w4.v2.score_int.u32"},
+                "calibration_id": {"type": "string"},
+                "policy_basis": {"const": "calibrated_nearest_rank_p99.v1"},
+                "corpus_hash": {"$ref": "#/$defs/sha256"},
+                "quantile_rank": {"$ref": "#/$defs/quantile_rank"},
+                "delta_keep": {"$ref": "#/$defs/delta_u32"}
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "scorer_kind", "scorer_version", "scorer_id", "score_domain",
+                "calibration_id", "policy_basis", "corpus_hash",
+                "quantile_rank", "delta_keep"
+              ],
+              "properties": {
+                "scorer_kind": {"const": 2},
+                "scorer_version": {"const": 1},
+                "scorer_id": {"const": "u7.mask.v1"},
+                "score_domain": {"const": "u7.mask.v1.score_num.u32"},
+                "calibration_id": {"type": "string"},
+                "policy_basis": {"const": "calibrated_nearest_rank_p99.v1"},
+                "corpus_hash": {"$ref": "#/$defs/sha256"},
+                "quantile_rank": {"$ref": "#/$defs/quantile_rank"},
+                "delta_keep": {"$ref": "#/$defs/delta_u32"}
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "scorer_kind", "scorer_version", "scorer_id", "score_domain",
+                "calibration_id", "policy_basis", "corpus_hash",
+                "quantile_rank", "delta_keep"
+              ],
+              "properties": {
+                "scorer_kind": {"const": 3},
+                "scorer_version": {"const": 1},
+                "scorer_id": {"const": "S_pf.v1"},
+                "score_domain": {"const": "S_pf.v1.score_num.u32"},
+                "calibration_id": {"type": "string"},
+                "policy_basis": {"const": "calibrated_nearest_rank_p99.v1"},
+                "corpus_hash": {"$ref": "#/$defs/sha256"},
+                "quantile_rank": {"$ref": "#/$defs/quantile_rank"},
+                "delta_keep": {"$ref": "#/$defs/delta_u32"}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

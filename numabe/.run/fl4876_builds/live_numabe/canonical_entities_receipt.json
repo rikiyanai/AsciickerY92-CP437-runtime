@@ -1,0 +1,57 @@
+{
+  "counts": {
+    "conflated_pairs": 556,
+    "conflicting_heights": 0,
+    "dispositions": 1963,
+    "entities": 1387,
+    "height_by_evidence_state": {
+      "authoritative_observed": 706,
+      "directly_observed": 81,
+      "synthetic": 17
+    },
+    "height_from_tmg": 81,
+    "osm_only": 94,
+    "plateau_only": 154,
+    "storeys_sentinels_dropped": 92,
+    "street": {
+      "budget_provenance": "DEFAULT:authoring (FL-4809 MERGE-01: Mapillary fusion budgets; Mapillary serves no per-feature sigma or merge distance; no ordinance basis)",
+      "budgets": {
+        "fixture": 4.0,
+        "road_marking": 3.0,
+        "sign": 2.5,
+        "utility_pole": 6.0
+      },
+      "entities_debt": 1,
+      "sightings": 603,
+      "sightings_merged_into_osm": 8,
+      "street_entities": 583
+    },
+    "tmg_contradictions": 43
+  },
+  "inputs": {
+    "lidar_roof_summary": {
+      "horizontal_crs": "EPSG:6677",
+      "path": "/Users/r/Projects/asciicker-Y9-2/artifacts/experiments/fl4930_tmg_building_existence/roof_field_summary.json",
+      "sha256": "0d3d795c2881f968dcd56ae43205a12c0f361494fcd5461fb3b4175e853764e6",
+      "tile_sha256": [
+        "fa6f6619bfc21d0f9bebca9f2a4686a6113a6c06968a6d223ae27a38196e4cd6",
+        "725565d19fed0d3a068a086a722530f5ed7963c7ced383b708a302d1ec95633d",
+        "c206f5b3e8058505f11a5cb3524c19916e6d437604c64873032e1886849398eb",
+        "d685e12b9875d0f7a159ce47a4c3ffe6fc9b806fbef97873df34f39e0d8d4e14",
+        "b347ce8e1916fc4509fcff7c64fd7fa3227f61039e002d106310ac8fb5a2a3d8"
+      ],
+      "tiles": [
+        "09LD5624.las",
+        "09LD5633.las",
+        "09LD5634.las",
+        "09LD5643.las",
+        "09LD5644.las"
+      ]
+    },
+    "mapillary_objects": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_inputs/mapillary_objects.world_ir.json",
+    "match_receipt": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plateau_ingest_receipt.json",
+    "osm_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/osm.world_ir.json",
+    "plateau_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plateau.world_ir.json"
+  },
+  "schema": "y92.canonical_entities_receipt.v1"
+}

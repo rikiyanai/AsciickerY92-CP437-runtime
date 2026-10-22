@@ -1,0 +1,216 @@
+{
+  "$schema": "asciicker.runtime_data_contract.v1",
+  "contract_version": 1,
+  "authority": "shared/runtime_data",
+  "filesystem_semantics": {
+    "shared_path_is_shared_session": false,
+    "concurrent_writers_supported": false,
+    "conflict_detection_supported": false,
+    "map_conversion_in_place_supported": false,
+    "rule": "Products may read the same repository assets, but they do not share memory, live world state, renderer state, save coordination, locks, or conflict detection. Editors must not write the same document concurrently. Conversion always writes a distinct output and receipt."
+  },
+  "compiled_authoring_connection": {
+    "owner": "apps/fl4512-runtime/platform/fl4693_product_glyph_program.cpp",
+    "entrypoint": "Fl4693ProductProgramRefreshWorkspaceV1",
+    "native_consumers": ["asciicker_presenter", "game_fl4512_unicode"],
+    "workspace_selection": "Both products use --profile-workspace ROOT through ProductStartupV1. The default remains assets/glyphs.",
+    "publication": "One ASCIIID writer compiles an immutable transaction under assets/glyphs/generated/fl4512_authoring, commits profile and pool, then atomically replaces generated/fl4512.active_program.v1.json in the selected workspace.",
+    "consumption": "Before a native frame, the sole product owner checks the receipt at a bounded cadence, validates the complete pinned snapshot and a strictly newer revision, rechecks receipt identity, and publishes program plus metadata together. Invalid updates retain the last fully admitted snapshot. Skipped forward revisions are allowed; rollback is not.",
+    "not_provided": ["shared world or map memory", "concurrent authoring writers", "Web receipt transport", "pure ANSI game_term tuple presentation"],
+    "acceptance": "Source connection is not same-session visual acceptance. A receipt must bind the authoring edit, unchanged game PID, accepted program/revision, and resulting final frame."
+  },
+  "module_boundaries": {
+    "shared_contract": {
+      "path": "shared/runtime_data",
+      "owns": ["cross-product data capability declarations", "A3D version constants"],
+      "must_not_own": ["renderer selection", "glyph selection", "editor UI", "live session state"]
+    },
+    "asciiid_classic": {
+      "path": "apps/asciiid-classic/pinned",
+      "owns": ["ASCIIID Classic editor process", "classic CP437 presentation", "Classic A3D v0-v4 intake and v4 saves"],
+      "allowed_cross_product_compile_inputs": ["shared/runtime_data/a3d_abi.h"]
+    },
+    "fl4512_runtime": {
+      "paths": ["apps/fl4512-runtime"],
+      "owns": ["FL4512 game renderers", "FL4512 editor process", "A3D v0-v6 intake and v6 saves"]
+    },
+    "launcher": {
+      "paths": ["scripts/launcher.py", "scripts/launcher_lib", "scripts/presenter_app.py", "scripts/asciid.py"],
+      "owns": ["product selection", "process launch", "wrapper identity"],
+      "must_not_own": ["renderer output", "map conversion", "asset format semantics"]
+    }
+  },
+  "a3d_world": {
+    "versions": {
+      "minimum": 0,
+      "story_id": 1,
+      "item_record": 3,
+      "player_start": 4,
+      "material_key": 5,
+      "mesh_uid": 6,
+      "current_max": 6,
+      "current_write": 6,
+      "classic_max": 4,
+      "classic_write": 4
+    },
+    "reject_reasons": {
+      "classic_version_unsupported": "classic_version_unsupported",
+      "world_version_unsupported": "world_version_unsupported"
+    },
+    "conversion": {
+      "source_overwrite": "forbidden",
+      "distinct_output_required": true,
+      "receipt_required": true,
+      "lossy_downgrade_default": "refuse",
+      "lossy_opt_in_flag": "--allow-lossy",
+      "v5_to_v4_losses": ["material_key", "material_key_override"],
+      "v6_to_v4_losses": ["material_key", "material_key_override", "mesh_uid"]
+    }
+  },
+  "asset_formats": {
+    "a3d_world": {
+      "paths": ["assets/a3d/*.a3d"],
+      "wire_contract": "Versioned AS3D container and world section governed by a3d_world.versions.",
+      "compatibility": "Current products read v0-v6 and write v6. ASCIIID Classic reads v0-v4 and writes v4. v5/v6 input is rejected by Classic before payload parse.",
+      "conversion": "scripts/asciid.py downgrade-to-classic may write a distinct v4 copy plus receipt. Lossy field removal requires --allow-lossy. Source overwrite is forbidden.",
+      "write_rule": "One writer per document path. No lock, merge, live synchronization, or conflict detection exists."
+    },
+    "akm_mesh": {
+      "paths": ["assets/meshes/**/*.akm"],
+      "wire_contract": "ASCII PLY 1.0 with the vertex and face properties accepted by engine/world_mesh.cpp.",
+      "compatibility": "Classic and current loaders parse the same file independently. There is no AKM version field or automatic converter.",
+      "write_rule": "Treat published AKM files as immutable runtime inputs; authoring tools publish a deliberate output path before either product reloads it."
+    },
+    "xp_sprite": {
+      "paths": ["assets/sprites/**/*.xp"],
+      "wire_contract": "Gzip-compressed REXPaint payload with int32 version/layer/width/height header and 10-byte cells; the runtime requires at least three layers.",
+      "compatibility": "The current and pinned readers do not enforce the XP header version. Shared readability is therefore verified-corpus compatibility, not a forward-compatible version promise.",
+      "write_rule": "Treat published XP and adjacent sidecars as one reviewed asset transaction; no live reload synchronization or automatic conversion is provided."
+    },
+    "fonts_palettes_and_ui": {
+      "paths": ["assets/fonts/**", "assets/icons/**", "assets/palettes/**", "assets/images/**"],
+      "wire_contract": "Product presentation inputs loaded independently by each process.",
+      "compatibility": "Font file, atlas, cell resolution, palette, icon, and UI-image selection is product configuration. It is never map-owned state.",
+      "write_rule": "Runtime products read these files. Asset tooling publishes replacements; maps do not rewrite them."
+    },
+    "audio_samples": {
+      "paths": ["assets/samples/**"],
+      "wire_contract": "Audio files consumed independently by each product audio backend.",
+      "compatibility": "Filesystem sharing does not imply equal playback backend, mixer state, or timing.",
+      "write_rule": "Runtime products read these files; asset tooling publishes replacements."
+    },
+    "glyph_data": {
+      "paths": ["assets/glyphs/**"],
+      "wire_contract": "Mixed glyph atlases, manifests, profiles, fixtures, sidecars, and generated compiler outputs.",
+      "compatibility": "A shared directory is not blanket compatibility. The fl4512_compiled_selection package is forbidden to ASCIIID Classic and game_classic_cp437; product capability gates decide every other consumer.",
+      "write_rule": "Only the named offline compiler or explicit editor command may publish a generated file. Runtime observation does not grant write ownership."
+    }
+  },
+  "data_packages": {
+    "shared_world_maps": {
+      "path_prefixes": ["assets/a3d"],
+      "map_semantics": true,
+      "runtime_writers": ["asciiid_classic"],
+      "consumers": ["asciiid_classic", "asciicker_presenter", "game_classic_cp437", "game_fl4512_unicode", "game_terminal"],
+      "rule": "ASCIIID Classic performs the sole in-place map save (SaveMapToPath writes the map file then the material sidecar). The current presenter persists only through browser Save As download (workspace.document.save_as.commit derives DownloadDocument bytes to /browser/downloads/{logical_name}); it does not write shared map paths in place. There is no save coordination, lock, or concurrent-writer safety; operators must use distinct outputs and never write the same map concurrently."
+    },
+    "shared_meshes": {
+      "path_prefixes": ["assets/meshes"],
+      "map_semantics": false,
+      "consumers": ["asciiid_classic", "asciicker_presenter", "game_classic_cp437", "game_fl4512_unicode", "game_terminal"]
+    },
+    "shared_sprites": {
+      "path_prefixes": ["assets/sprites"],
+      "map_semantics": false,
+      "consumers": ["asciiid_classic", "asciicker_presenter", "game_classic_cp437", "game_fl4512_unicode", "game_terminal"]
+    },
+    "shared_audio": {
+      "path_prefixes": ["assets/samples"],
+      "map_semantics": false,
+      "consumers": ["asciiid_classic", "asciicker_presenter", "game_classic_cp437", "game_fl4512_unicode", "game_terminal"]
+    },
+    "shared_authoring_presentation": {
+      "path_prefixes": ["assets/fonts", "assets/icons", "assets/palettes", "assets/images"],
+      "map_semantics": false,
+      "rule": "Font files, font resolutions, icons, palettes, and UI images are presentation inputs. A map never selects or owns them.",
+      "consumers": ["asciiid_classic", "asciicker_presenter", "game_classic_cp437", "game_fl4512_unicode", "game_terminal"]
+    },
+    "glyph_data_tree": {
+      "path_prefixes": ["assets/glyphs"],
+      "map_semantics": false,
+      "rule": "This tree contains both pre-FL4512 glyph assets and FL4512-era compiled selection inputs. Product capability gates, not the shared directory name, decide which files may affect a renderer.",
+      "consumers": ["asciiid_classic", "asciicker_presenter", "game_classic_cp437", "game_fl4512_unicode", "game_terminal"]
+    },
+    "fl4512_compiled_selection": {
+      "path_globs": [
+        "assets/glyphs/generated/fl4512.*",
+        "assets/glyphs/generated/fl4683.*",
+        "assets/glyphs/generated/fl4684.*",
+        "assets/glyphs/generated/fl4685.*",
+        "assets/glyphs/generated/fl4694.*",
+        "assets/glyphs/schema/fl4512.*",
+        "assets/glyphs/schema/fl4683.*",
+        "assets/glyphs/schema/fl4694.*",
+        "assets/glyphs/fixtures/fl4512_*",
+        "assets/glyphs/fixtures/fl4683.*"
+      ],
+      "map_semantics": false,
+      "consumers": ["asciicker_presenter", "game_fl4512_unicode", "game_terminal"],
+      "forbidden_consumers": ["asciiid_classic", "game_classic_cp437"]
+    }
+  },
+  "products": {
+    "asciiid_classic": {
+      "binary": ".run/asciiid-classic",
+      "app_bundle": ".run/ASCIIID Classic.app",
+      "bundle_id": "world.riki.asciiid.classic",
+      "launcher_action": "map-asciiid-classic",
+      "renderer": "classic_cp437",
+      "a3d_read_versions": [0, 1, 2, 3, 4],
+      "a3d_write_version": 4,
+      "live_session_owner": "own_process",
+      "source_root": "apps/asciiid-classic/pinned"
+    },
+    "asciicker_presenter": {
+      "product_label": "ASCIID FL4512 Presenter",
+      "binary": ".run/asciicker-presenter",
+      "native_app_bundle": ".run/ASCIID FL4512 Presenter.app",
+      "native_bundle_id": "world.riki.asciicker.presenter",
+      "html_surface_label": "ASCIID FL4512 Presenter HTML Authoring",
+      "html_app_bundle": "dist/ASCIID FL4512 Presenter HTML Authoring.app",
+      "html_bundle_id": "world.riki.asciicker.presenter.html",
+      "launcher_actions": ["map-asciicker-presenter", "map-asciicker-presenter-native", "map-asciicker-presenter-html"],
+      "renderer": "fl4512_unicode",
+      "a3d_read_versions": [0, 1, 2, 3, 4, 5, 6],
+      "a3d_write_version": 6,
+      "live_session_owner": "own_process",
+      "html_rule": "The HTML shell is an authoring client of this binary through --authoring-port; it is not another renderer."
+    },
+    "game_classic_cp437": {
+      "binary": ".run/game_classic",
+      "launcher_actions": ["game-classic-euclidean", "game-spherical-classic"],
+      "renderer": "classic_cp437",
+      "a3d_read_versions": [0, 1, 2, 3, 4, 5, 6],
+      "a3d_write_version": null,
+      "live_session_owner": "game_process",
+      "rule": "This is the current game compiled with the classic renderer. It is not the pinned ASCIIID Classic editor."
+    },
+    "game_fl4512_unicode": {
+      "binary": ".run/game",
+      "launcher_actions": ["game-fl4512-unicode-euclidean"],
+      "renderer": "fl4512_unicode",
+      "a3d_read_versions": [0, 1, 2, 3, 4, 5, 6],
+      "a3d_write_version": null,
+      "live_session_owner": "game_process"
+    },
+    "game_terminal": {
+      "binary": ".run/game_term",
+      "launcher_actions": [],
+      "renderer": "fl4512_unicode_terminal",
+      "a3d_read_versions": [0, 1, 2, 3, 4, 5, 6],
+      "a3d_write_version": null,
+      "live_session_owner": "game_process",
+      "rule": "Terminal presentation is another consumer of current glyph selection, not a map editor or a shared session with the presenter."
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+ "bins": 42,
+ "corridor_features": 480,
+ "emission_files_present": {
+  "emission_manifest.json": true
+ },
+ "inputs": {
+  "build_dir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple",
+  "debt": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/observation_debt.json",
+  "entities": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical_entities.json",
+  "extra_observations": [],
+  "plan": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/representation_plan.json",
+  "route": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/valhalla_pedestrian_route.json",
+  "rules": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population/rules_resolved.json",
+  "world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical.world_ir.json"
+ },
+ "outside_corridor": 974,
+ "route_length_m": 1041.762,
+ "schema": "y92.route_streetscape_inventory_receipt.v1",
+ "text_table": [
+  "0-25 m: buildings observed 3 represented 3; storefronts_and_places observed 3 represented 1 [proxy 1] (omitted 2); poles_and_lamps observed 3 represented 3 [physical 3]; signs observed 5 represented 5 [physical 5]; rail_side observed 7 represented 7 [proxy 2]; street_furniture observed 13 represented 13 [physical 13]; ground observed 2 represented 2",
+  "25-50 m: buildings observed 3 represented 3; storefronts_and_places observed 1 represented 1 [physical 1]; poles_and_lamps observed 7 represented 7 [physical 7]; signs observed 10 represented 10 [physical 10]; crossings_and_signals observed 7 represented 7 [physical 2, proxy 4]; street_furniture observed 10 represented 10 [physical 10]; ground observed 4 represented 4",
+  "50-75 m: buildings observed 5 represented 5; storefronts_and_places observed 1 represented 1 [physical 1]; poles_and_lamps observed 6 represented 6 [physical 6]; signs observed 12 represented 12 [physical 12]; crossings_and_signals observed 6 represented 6 [physical 5]; street_furniture observed 21 represented 20 [physical 19] (omitted 1); ground observed 10 represented 10",
+  "75-100 m: buildings observed 8 represented 8; storefronts_and_places observed 2 represented 2 [proxy 2]; poles_and_lamps observed 5 represented 5 [physical 5]; signs observed 21 represented 21 [physical 21]; street_furniture observed 8 represented 5 [physical 5] (omitted 3); ground observed 3 represented 3",
+  "100-125 m: buildings observed 3 represented 3; storefronts_and_places observed 1 represented 1 [proxy 1]; poles_and_lamps observed 6 represented 6 [physical 6]; signs observed 16 represented 14 [physical 14] (omitted 2); street_furniture observed 18 represented 16 [physical 16] (omitted 2); ground observed 12 represented 11 (omitted 1)",
+  "125-150 m: buildings observed 6 represented 6; storefronts_and_places observed 1 represented 1 [physical 1]; poles_and_lamps observed 3 represented 3 [physical 3]; ground observed 2 represented 2",
+  "150-175 m: buildings observed 6 represented 6; ground observed 1 represented 1",
+  "175-200 m: buildings observed 6 represented 6",
+  "200-225 m: buildings observed 6 represented 6",
+  "225-250 m: buildings observed 3 represented 3",
+  "250-275 m: buildings observed 3 represented 3; ground observed 1 represented 1",
+  "275-300 m: buildings observed 4 represented 4; ground observed 1 represented 1",
+  "300-325 m: buildings observed 4 represented 4",
+  "325-350 m: buildings observed 2 represented 2; crossings_and_signals observed 1 represented 1 [physical 1]; ground observed 1 represented 1",
+  "350-375 m: buildings observed 1 represented 1",
+  "375-400 m: buildings observed 1 represented 1; ground observed 1 represented 1",
+  "400-425 m: buildings observed 8 represented 8",
+  "425-450 m: buildings observed 5 represented 5; crossings_and_signals observed 4 represented 4 [physical 4]; ground observed 2 represented 2",
+  "450-475 m: buildings observed 6 represented 6",
+  "475-500 m: buildings observed 8 represented 8",
+  "500-525 m: buildings observed 6 represented 6; ground observed 1 represented 1",
+  "525-550 m: buildings observed 7 represented 7; ground observed 1 represented 1",
+  "550-575 m: ",
+  "575-600 m: buildings observed 9 represented 9",
+  "600-625 m: buildings observed 3 represented 3; fences_walls_guardrails observed 1 represented 1 [physical 1]; ground observed 4 represented 1 (omitted 3)",
+  "625-650 m: buildings observed 5 represented 5",
+  "650-675 m: buildings observed 3 represented 3; ground observed 1 represented 1",
+  "675-700 m: buildings observed 2 represented 2; crossings_and_signals observed 4 represented 4 [physical 4]; ground observed 3 represented 3",
+  "700-725 m: buildings observed 9 represented 9",
+  "725-750 m: buildings observed 1 represented 1",
+  "750-775 m: buildings observed 3 represented 3",
+  "775-800 m: buildings observed 11 represented 11",
+  "800-825 m: buildings observed 1 represented 1; ground observed 1 represented 1",
+  "825-850 m: buildings observed 4 represented 4; ground observed 2 represented 2",
+  "850-875 m: buildings observed 8 represented 8; ground observed 1 represented 1",
+  "875-900 m: buildings observed 8 represented 8; storefronts_and_places observed 1 represented 0 (debt 1); ground observed 1 represented 1",
+  "900-925 m: buildings observed 5 represented 5",
+  "925-950 m: buildings observed 2 represented 2; ground observed 1 represented 1",
+  "950-975 m: buildings observed 5 represented 5; ground observed 2 represented 2",
+  "975-1000 m: buildings observed 7 represented 7; crossings_and_signals observed 4 represented 4 [physical 4]; ground observed 2 represented 2",
+  "1000-1025 m: buildings observed 1 represented 1; storefronts_and_places observed 1 represented 1 [proxy 1]; street_furniture observed 1 represented 1 [physical 1]",
+  "1025-1041.76 m: buildings observed 15 represented 15; storefronts_and_places observed 1 represented 1 [proxy 1]; crossings_and_signals observed 1 represented 1 [physical 1]; ground observed 2 represented 2"
+ ],
+ "totals": {
+  "buildings": {
+   "debt": 0,
+   "observed": 206,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 206,
+   "vanished": 0
+  },
+  "crossings_and_signals": {
+   "debt": 0,
+   "observed": 27,
+   "observed_physical": 21,
+   "omitted_with_reason": 0,
+   "proxy": 4,
+   "represented": 27,
+   "vanished": 0
+  },
+  "fences_walls_guardrails": {
+   "debt": 0,
+   "observed": 1,
+   "observed_physical": 1,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 1,
+   "vanished": 0
+  },
+  "ground": {
+   "debt": 0,
+   "observed": 62,
+   "observed_physical": 0,
+   "omitted_with_reason": 4,
+   "proxy": 0,
+   "represented": 58,
+   "vanished": 0
+  },
+  "poles_and_lamps": {
+   "debt": 0,
+   "observed": 30,
+   "observed_physical": 30,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 30,
+   "vanished": 0
+  },
+  "rail_side": {
+   "debt": 0,
+   "observed": 7,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 2,
+   "represented": 7,
+   "vanished": 0
+  },
+  "signs": {
+   "debt": 0,
+   "observed": 64,
+   "observed_physical": 62,
+   "omitted_with_reason": 2,
+   "proxy": 0,
+   "represented": 62,
+   "vanished": 0
+  },
+  "storefronts_and_places": {
+   "debt": 1,
+   "observed": 12,
+   "observed_physical": 3,
+   "omitted_with_reason": 2,
+   "proxy": 6,
+   "represented": 9,
+   "vanished": 0
+  },
+  "street_furniture": {
+   "debt": 0,
+   "observed": 71,
+   "observed_physical": 64,
+   "omitted_with_reason": 6,
+   "proxy": 0,
+   "represented": 65,
+   "vanished": 0
+  },
+  "unmapped_class": {
+   "debt": 0,
+   "observed": 0,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 0,
+   "vanished": 0
+  },
+  "vegetation": {
+   "debt": 0,
+   "observed": 0,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 0,
+   "vanished": 0
+  },
+  "waterways_and_bridges": {
+   "debt": 0,
+   "observed": 0,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 0,
+   "vanished": 0
+  }
+ },
+ "vanished_ids": [],
+ "vanished_total": 0
+}

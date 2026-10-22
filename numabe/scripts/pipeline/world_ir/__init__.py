@@ -1,0 +1,121 @@
+"""Y92 World IR (FL-4811).
+
+The versioned canonical owner between source evidence and generated runtime
+representations.  Import order of business:
+
+    from scripts.pipeline.world_ir import WorldIRStore, schema, validate
+
+``schema`` owns the vocabulary and canonical serialization, ``validate`` owns
+the rules, ``store`` owns the document.  Nothing here imports a numerical or
+machine-learning package: validating world truth is a stdlib operation.
+"""
+
+from __future__ import annotations
+
+from . import schema, store, validate
+from .schema import (
+    AUTHORITY_COLLISION,
+    AUTHORITY_NONE,
+    AUTHORITY_PRESENTATION_ONLY,
+    AUTHORITY_WALKABILITY,
+    CONFLICT_NONE,
+    CONFLICT_RESOLVED_BY_REVIEW,
+    CONFLICT_UNRESOLVED,
+    GAMEPLAY_AUTHORITIES,
+    PROVENANCE_CLASSES,
+    PROVENANCE_DERIVED,
+    PROVENANCE_MEASURED,
+    PROVENANCE_SYNTHESIZED,
+    RECORD_CANONICAL_FEATURE,
+    RECORD_GENERATED_REPRESENTATION,
+    RECORD_SOURCE_OBSERVATION,
+    SCHEMA_VERSION,
+    SEMANTIC_CLASSES,
+    canonical_bytes,
+    canonical_dumps,
+    canonical_feature,
+    conflict_none,
+    conflict_resolved,
+    conflict_unresolved,
+    contradiction,
+    coordinate_frame,
+    document,
+    generated_representation,
+    geometry_field_samples,
+    geometry_none,
+    geometry_point,
+    geometry_polygon,
+    geometry_polygon_with_holes,
+    geometry_polyline,
+    geometry_prism,
+    presentation_requirements,
+    property_claim,
+    source_observation,
+    uncertainty_bounds,
+    uncertainty_categorical,
+    uncertainty_covariance,
+    uncertainty_isotropic,
+    uncertainty_ordinal,
+)
+from .store import WorldIRStore
+from .validate import (
+    Finding,
+    WorldIRValidationError,
+    assert_valid,
+    is_valid,
+    validate_document,
+)
+
+__all__ = [
+    "AUTHORITY_COLLISION",
+    "AUTHORITY_NONE",
+    "AUTHORITY_PRESENTATION_ONLY",
+    "AUTHORITY_WALKABILITY",
+    "CONFLICT_NONE",
+    "CONFLICT_RESOLVED_BY_REVIEW",
+    "CONFLICT_UNRESOLVED",
+    "Finding",
+    "GAMEPLAY_AUTHORITIES",
+    "PROVENANCE_CLASSES",
+    "PROVENANCE_DERIVED",
+    "PROVENANCE_MEASURED",
+    "PROVENANCE_SYNTHESIZED",
+    "RECORD_CANONICAL_FEATURE",
+    "RECORD_GENERATED_REPRESENTATION",
+    "RECORD_SOURCE_OBSERVATION",
+    "SCHEMA_VERSION",
+    "SEMANTIC_CLASSES",
+    "WorldIRStore",
+    "WorldIRValidationError",
+    "assert_valid",
+    "canonical_bytes",
+    "canonical_dumps",
+    "canonical_feature",
+    "conflict_none",
+    "conflict_resolved",
+    "conflict_unresolved",
+    "contradiction",
+    "coordinate_frame",
+    "document",
+    "generated_representation",
+    "geometry_field_samples",
+    "geometry_none",
+    "geometry_point",
+    "geometry_polygon",
+    "geometry_polygon_with_holes",
+    "geometry_polyline",
+    "geometry_prism",
+    "is_valid",
+    "presentation_requirements",
+    "property_claim",
+    "schema",
+    "source_observation",
+    "store",
+    "uncertainty_bounds",
+    "uncertainty_categorical",
+    "uncertainty_covariance",
+    "uncertainty_isotropic",
+    "uncertainty_ordinal",
+    "validate",
+    "validate_document",
+]

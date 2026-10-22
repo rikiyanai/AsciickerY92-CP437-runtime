@@ -1,0 +1,65 @@
+{
+  "counts": {
+    "by_importance": {
+      "background": 2,
+      "landmark": 1,
+      "route_visible": 14
+    },
+    "by_state": {
+      "frame_available_unboxed": 7,
+      "observation_owed": 7,
+      "observed_boxed": 3
+    },
+    "features": 17
+  },
+  "defaults_used": {
+    "observation_default_hfov_deg": {
+      "source": "DEFAULT:authoring (FL-4809 OBSERVE-01: repo perspective-frame fallback 60 deg per register_observations.py and lower_plan_custom.py; no measured intrinsics basis)",
+      "unit": "deg",
+      "value": 60.0
+    }
+  },
+  "facade_views": {
+    "dir": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_20260912/mapillary_facade_views",
+    "jpg_count": 214
+  },
+  "frame_stats": {
+    "frames_indexed": 2023,
+    "frames_skipped_no_pose": 1,
+    "manifest_captures": 212,
+    "survey_pictures": 1812
+  },
+  "generated_at": "2026-09-19T00:00:00Z",
+  "inputs": {
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical.world_ir.json": {
+      "sha256": "bcc806ee1998931ba4bc8d2f8dfe046f83f1060ed35820b059c5183f37787b03",
+      "size_bytes": 5682138
+    },
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/observation_registration/registered_instances.json": {
+      "sha256": "92ab5cea2a7c7a5f51e30d3c76e2303fa46133aa05176b2fa1489517893f4a61",
+      "size_bytes": 34796
+    },
+    "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/osm_ingest_receipt.json": {
+      "sha256": "0293ce535efd8a713e426d901e06d61d49370f20f8c0a68dc3af5da2c769e741",
+      "size_bytes": 163739
+    },
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/added_route_imagery_survey.json": {
+      "sha256": "c2dfe5da2256ddd1efd6f1a24bc348679b3fd0a0dcc84e742e853e1d57a1ed1d",
+      "size_bytes": 3037702
+    },
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/required_landmarks.json": {
+      "sha256": "5a75538b3f568fbef6f7f17f0cee75cb65899ab23e058a21c85025899bb13dc5",
+      "size_bytes": 2836
+    },
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/valhalla_pedestrian_route.json": {
+      "sha256": "51940b2d8bf273239805ab868dfdc242a47eb2bdf895ab52cbd2fcdf6874777b",
+      "size_bytes": 1597
+    },
+    "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_20260912/route_capture_manifest.json": {
+      "sha256": "8da797b96b05ed560e4df7c94559c25bf93c0680d2d6e19c143ce011c3b59a04",
+      "size_bytes": 626861
+    }
+  },
+  "rule": "importance: landmark when a normalized feature name (triage label or IR name/name:en) equals a normalized required_landmarks entry (landmark_id, name, source_ref, lobe id); else route_visible when the feature point is within 30 m of the Valhalla pedestrian route polyline; else background. candidates: camera within 45 m of the feature point AND |wrap(bearing - heading)| <= hfov/2, ranked by (distance_m, |residual|, frame_id), line of sight required against every building_footprint ring except a ring containing the feature point (own parent) or the camera; keep the best 3. hfov: measured horizontal_fov_deg, else 2*atan(18/focal_35mm), else the observation_default_hfov_deg DEFAULT fact. observation_state: observed_boxed when a registered instance (custom_identity_subject match or shared capture_id with a kept frame) or a facade view (capture_id shared with a kept frame) references the feature; else frame_available_unboxed when kept frames exist; else observation_owed.",
+  "schema": "y92.observation_debt_receipt.v1"
+}

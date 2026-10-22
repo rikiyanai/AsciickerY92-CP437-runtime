@@ -1,0 +1,32 @@
+# Blender 4.5.0 MTL File: 'lighthouse_0.blend'
+# www.blender.org
+
+newmtl Material.007
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Textures/Brick 1/Layer 1/Brick_01-Layer_1_Center-128x128.png
+
+newmtl Material.008
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd Textures/1422cf5546da30317a65958ab9128fb5-3777564975.png
+
+newmtl Material.010
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Textures/Brick 1/Brick 1 - Decorations/Door/Layer 1/Brick_01-Layer_1_CDoor-128x128.png

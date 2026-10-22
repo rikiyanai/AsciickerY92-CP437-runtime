@@ -1,0 +1,112 @@
+{
+ "counts": {
+  "attachment_contract_missing": 0,
+  "by_anchor_kind": {
+   "building_face": 1275,
+   "carrier_chainage": 1081,
+   "carrier_span": 1143,
+   "freestanding": 93,
+   "infrastructure_crossing": 4,
+   "infrastructure_station": 2,
+   "place_front_face": 10,
+   "station_facade_anchor": 1,
+   "terrain_mass": 715
+  },
+  "by_attachment_basis": {
+   "feature": 799,
+   "infrastructure.crossing_source_points": 4,
+   "infrastructure.station_source_points": 2,
+   "place_front.parent_building_face": 10,
+   "placement": 3470,
+   "plan_attachment_resolve": 38,
+   "station_facade_reconstruction.anchor.osm_ref": 1
+  },
+  "by_bin": {
+   "0": 107,
+   "1": 59,
+   "10": 10,
+   "11": 63,
+   "12": 197,
+   "13": 32,
+   "14": 22,
+   "15": 11,
+   "16": 9,
+   "17": 20,
+   "18": 13,
+   "19": 25,
+   "2": 19,
+   "20": 12,
+   "21": 17,
+   "22": 15,
+   "23": 22,
+   "24": 18,
+   "25": 14,
+   "26": 10,
+   "27": 27,
+   "28": 34,
+   "29": 18,
+   "3": 43,
+   "30": 23,
+   "31": 22,
+   "32": 8,
+   "33": 22,
+   "34": 23,
+   "35": 5,
+   "36": 10,
+   "37": 10,
+   "38": 18,
+   "39": 23,
+   "4": 51,
+   "40": 9,
+   "41": 214,
+   "5": 35,
+   "6": 17,
+   "7": 30,
+   "8": 31,
+   "9": 13,
+   "out_of_corridor": 2943
+  },
+  "by_class_group": {
+   "buildings": 1847,
+   "crossings_and_signals": 77,
+   "custom_identity": 15,
+   "fences_walls_guardrails": 1,
+   "ground": 1756,
+   "infrastructure": 6,
+   "place_front": 10,
+   "poles_and_lamps": 140,
+   "rail_side": 169,
+   "signs": 140,
+   "station_facade": 1,
+   "storefronts_and_places": 1,
+   "street_furniture": 161
+  },
+  "by_route_scope": {
+   "in_corridor": 1381,
+   "out_of_corridor": 2943
+  },
+  "by_verdict": {
+   "PASS": 4324
+  },
+  "fail": 0,
+  "input_contract_missing": 0,
+  "out_of_corridor": 2943,
+  "rows": 4324,
+  "unresolved": 0
+ },
+ "fail_feature_ids": [],
+ "generated_at": "2026-10-16T17:53:34Z",
+ "inputs_absent": [],
+ "ruling_basis": {
+  "inside_mass": {
+   "basis": "planned host/attachment only",
+   "verifier_side_semantic_exceptions": []
+  },
+  "roadside_band_m": {
+   "basis": "rules.roadside_lateral_band",
+   "value": 1.0
+  }
+ },
+ "schema": "y92.spatial_coherence_receipt.v1",
+ "stage": "all_pass"
+}

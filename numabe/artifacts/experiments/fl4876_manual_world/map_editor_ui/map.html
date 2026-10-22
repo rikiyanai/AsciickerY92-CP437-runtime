@@ -1,0 +1,158 @@
+<!doctype html>
+<!-- FL-4876 operator map editor, plan tab (served by map_editor.py). Coordinates are UTM 54N E/N metres;
+     the canvas maps them to screen with north up. Selections are broadcast to the /view tab. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Numabe Map Editor</title>
+<style>
+:root{--bg:#121216;--panel:#1c1c22;--ink:#e8e4da;--dim:#9a958a;--acc:#ffd166;--note:#ff9f43;--ok:#7bd88f;--bad:#ff6b6b;--cam:#55d8ef}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#121216}}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:12px ui-monospace,Menlo,monospace;overflow:hidden}
+#bar{position:fixed;left:0;right:0;top:0;height:28px;display:flex;gap:10px;align-items:center;padding:0 8px;background:var(--panel);border-bottom:1px solid #333;z-index:3;white-space:nowrap;overflow:hidden}
+#bar label{color:var(--dim)}#bar b{color:var(--acc)}
+canvas{position:fixed;left:0;top:28px;cursor:crosshair}
+#side{position:fixed;right:0;top:28px;bottom:0;width:300px;background:var(--panel);border-left:1px solid #333;overflow:auto;padding:8px;z-index:2}
+#side h3{margin:8px 0 4px;font-size:12px;color:var(--acc)}#side .it{padding:3px 0;border-bottom:1px solid #2a2a30;cursor:pointer}
+#side .it small{color:var(--dim)}.open{color:var(--note)}.done{color:var(--ok)}
+#dlg{position:fixed;left:50%;top:80px;transform:translateX(-50%);width:min(560px,92vw);background:var(--panel);border:1px solid var(--acc);padding:10px;display:none;z-index:5}
+#dlg textarea{width:100%;height:110px;background:#0d0d10;color:var(--ink);border:1px solid #444;font:inherit}
+#dlg .row{display:flex;gap:8px;justify-content:flex-end;margin-top:6px}button{background:#2a2a33;color:var(--ink);border:1px solid #555;font:inherit;padding:3px 8px;cursor:pointer}
+#toast{position:fixed;left:8px;bottom:8px;background:#000c;padding:6px 10px;border:1px solid #444;z-index:4;max-width:60vw}
+#help{color:var(--dim);font-size:11px;line-height:1.5}
+</style></head><body>
+<div id="bar"><b>NUMABE</b><span id="build"></span>
+<label><input type="checkbox" id="L_aerial" checked>aerial</label><label><input type="checkbox" id="L_bld" checked>buildings</label>
+<label><input type="checkbox" id="L_obj" checked>objects</label><label><input type="checkbox" id="L_lin">linear</label>
+<label><input type="checkbox" id="L_pano" checked>panoramas</label><label><input type="checkbox" id="L_q" checked>notes</label>
+<span id="pos"></span></div>
+<canvas id="c"></canvas>
+<div id="side"><div id="help">click select · shift+click add · drag = rect select · space/right-drag pan · WASD/arrows pan · wheel zoom<br>
+<b>N</b> note on rect/selection · <b>Del</b> delete selected objects · <b>⌘V</b> paste facade onto selected building (face nearest the click/rect) · <b>⌘Z</b> undo fixture delete · <b>Esc</b> clear · <b>H</b> home 17-16</div>
+<h3>Selection</h3><div id="sel">nothing</div><h3>Queue <small id="qc"></small></h3><div id="queue"></div></div>
+<div id="dlg"><div id="dlgTitle"></div><textarea id="dlgText" placeholder="what should change here? (⌘Enter to save)"></textarea>
+<div class="row"><button id="dlgCancel">Cancel (Esc)</button><button id="dlgOk">Save (⌘Enter)</button></div></div>
+<div id="toast" hidden></div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), cv=$('c'), ctx=cv.getContext('2d'), chan=new BroadcastChannel('numabe-map-editor');
+const HOME='feature:building_footprint:way/725138644';
+let W={}, view={cx:0,cy:0,s:2}, sel={b:new Set(),o:new Set(),p:new Set()}, rect=null, lastClick=null, drag=null, keys=new Set(), aerial=new Image(), dlgMode=null;
+// ---- view transform: E/N metres -> canvas px (north up)
+const sx=E=>cv.width/2/devicePixelRatio+(E-view.cx)*view.s, sy=N=>cv.height/2/devicePixelRatio-(N-view.cy)*view.s;
+const wx=x=>view.cx+(x-cv.width/2/devicePixelRatio)/view.s, wy=y=>view.cy-(y-cv.height/2/devicePixelRatio)/view.s;
+function toast(t,ms=3500){const e=$('toast');e.textContent=t;e.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>e.hidden=true,ms)}
+function saveView(){try{localStorage.setItem('numabe-view',JSON.stringify(view))}catch(e){}}
+function resize(){const r=devicePixelRatio||1, w=innerWidth-300, h=innerHeight-28;cv.style.width=w+'px';cv.style.height=h+'px';cv.width=w*r;cv.height=h*r;draw()}
+const cen=ring=>{let e=0,n=0;ring.forEach(q=>{e+=q[0];n+=q[1]});return [e/ring.length,n/ring.length]};
+function inPoly(p,ring){let c=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if((a[1]>p[1])!=(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])c=!c}return c}
+function segDist(p,a,b){const dx=b[0]-a[0],dy=b[1]-a[1],L=dx*dx+dy*dy||1e-9;let t=((p[0]-a[0])*dx+(p[1]-a[1])*dy)/L;t=Math.max(0,Math.min(1,t));return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy)}
+function nearestFace(bid,p){const b=W.bmap[bid];let best=0,bd=1e9;b.ring.forEach((q,i)=>{const d=segDist(p,q,b.ring[(i+1)%b.ring.length]);if(d<bd){bd=d;best=i}});return best}
+const objVisible=o=>!o.deleted&&(o.family==='linear'?$('L_lin').checked:$('L_obj').checked);
+const famCol={fixtures:'#ff6bd6',linear:'#c9a227',custom:'#ffffff'};
+function draw(){
+  const r=devicePixelRatio||1;ctx.setTransform(r,0,0,r,0,0);ctx.fillStyle='#121216';ctx.fillRect(0,0,cv.width,cv.height);
+  if(!W.buildings)return;
+  if($('L_aerial').checked&&W.aerial&&aerial.complete){ // canvas transform = screen∘(px->E/N); see map_editor.aerial_affine
+    const [a,b,c]=W.aerial.x,[d,e,f]=W.aerial.y,det=a*e-b*d,i11=e/det,i12=-b/det,i21=-d/det,i22=a/det,s=view.s,w2=cv.width/2/r,h2=cv.height/2/r;
+    ctx.setTransform(r*s*i11,-r*s*i21,r*s*i12,-r*s*i22,r*(s*(-i11*c-i12*f-view.cx)+w2),r*(-s*(-i21*c-i22*f-view.cy)+h2));
+    ctx.globalAlpha=.85;ctx.drawImage(aerial,0,0);ctx.globalAlpha=1;ctx.setTransform(r,0,0,r,0,0)}
+  ctx.lineWidth=1;for(const rd of W.roads){ctx.strokeStyle=rd.cls==='railway_boundary'?'#b07cff':rd.cls==='road'?'#d8d8d8aa':'#8888';ctx.beginPath();rd.pts.forEach((q,i)=>i?ctx.lineTo(sx(q[0]),sy(q[1])):ctx.moveTo(sx(q[0]),sy(q[1])));ctx.stroke()}
+  if($('L_bld').checked)for(const b of W.buildings){ctx.beginPath();b.ring.forEach((q,i)=>i?ctx.lineTo(sx(q[0]),sy(q[1])):ctx.moveTo(sx(q[0]),sy(q[1])));ctx.closePath();
+    const w=b.wall||[90,90,90];ctx.fillStyle=`rgba(${w[0]},${w[1]},${w[2]},.72)`;ctx.fill();
+    const on=sel.b.has(b.id);ctx.strokeStyle=on?'#ffd166':b.id===HOME?'#55d8ef':'#000a';ctx.lineWidth=on?3:1;ctx.stroke();
+    if(b.photos&&view.s>1.5){const c=cen(b.ring);ctx.fillStyle='#55d8ef';ctx.fillText('▣'+b.photos,sx(c[0])-6,sy(c[1])+4)}}
+  if(on2('L_q'))for(const q of W.queue){if(!q.rect_EN)continue;const [e0,n0,e1,n1]=q.rect_EN;ctx.setLineDash([5,3]);ctx.strokeStyle=q.status==='open'?'#ff9f43':'#7bd88f';ctx.lineWidth=2;ctx.strokeRect(sx(e0),sy(n1),(e1-e0)*view.s,(n1-n0)*view.s);ctx.setLineDash([]);ctx.fillStyle=ctx.strokeStyle;ctx.fillText(q.id.slice(-4),sx(e0)+2,sy(n1)+11)}
+  const R=Math.max(2,Math.min(5,view.s*.8));
+  for(const o of W.objects){if(!objVisible(o))continue;const x=sx(o.E),y=sy(o.N);if(x<-9||y<-9||x>innerWidth||y>innerHeight)continue;
+    ctx.fillStyle=sel.o.has(o.id)?'#ffd166':famCol[o.family]||'#f0f';ctx.fillRect(x-R/2,y-R/2,R,R);
+    if(sel.o.has(o.id)){ctx.strokeStyle='#ffd166';ctx.lineWidth=2;ctx.strokeRect(x-R,y-R,2*R,2*R)}
+    if(view.s>9){ctx.fillStyle='#ddd';ctx.fillText(o.module||'',x+R+1,y+3)}}
+  if(on2('L_pano'))for(const p of W.panoramas){const x=sx(p.E),y=sy(p.N),h=p.heading??p.compass,on=sel.p.has(p.id);
+    ctx.fillStyle=p.heading==null?'#ff6b6b':on?'#ffd166':'#55d8ef';ctx.beginPath();ctx.arc(x,y,on?5:3,0,7);ctx.fill();
+    const a=(h-90)*Math.PI/180,L=on?22:10;ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=on?2:1;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+Math.cos(a)*L,y+Math.sin(a)*L);ctx.stroke()}
+  if(rect){const [e0,n0,e1,n1]=normRect(rect);ctx.strokeStyle='#ffd166';ctx.lineWidth=1.5;ctx.setLineDash([4,2]);ctx.strokeRect(sx(e0),sy(n1),(e1-e0)*view.s,(n1-n0)*view.s);ctx.setLineDash([])}
+}
+const on2=id=>$(id).checked;
+const normRect=r=>[Math.min(r[0],r[2]),Math.min(r[1],r[3]),Math.max(r[0],r[2]),Math.max(r[1],r[3])];
+function pick(px,py){const p=[wx(px),wy(py)],tol=7/view.s;let best=null,bd=tol;
+  for(const o of W.objects){if(!objVisible(o))continue;const d=Math.hypot(o.E-p[0],o.N-p[1]);if(d<bd){bd=d;best={k:'o',id:o.id}}}
+  if(on2('L_pano'))for(const q of W.panoramas){const d=Math.hypot(q.E-p[0],q.N-p[1]);if(d<bd){bd=d;best={k:'p',id:q.id}}}
+  if(best)return best;if(on2('L_bld'))for(const b of W.buildings)if(inPoly(p,b.ring))return {k:'b',id:b.id};return null}
+function rectSelect(r,add){const [e0,n0,e1,n1]=normRect(r),inside=(e,n)=>e>=e0&&e<=e1&&n>=n0&&n<=n1;if(!add)clearSel();
+  for(const o of W.objects)if(objVisible(o)&&inside(o.E,o.N))sel.o.add(o.id);
+  if(on2('L_pano'))for(const p of W.panoramas)if(inside(p.E,p.N))sel.p.add(p.id);
+  const c=[(e0+e1)/2,(n0+n1)/2];if(on2('L_bld'))for(const b of W.buildings)if(b.ring.some(q=>inside(q[0],q[1]))||inPoly(c,b.ring))sel.b.add(b.id)}
+function clearSel(){sel.b.clear();sel.o.clear();sel.p.clear()}
+function broadcast(){chan.postMessage({type:'select',buildings:[...sel.b],objects:[...sel.o],panoramas:[...sel.p],click:lastClick,rect:rect&&normRect(rect),
+  face:sel.b.size===1&&lastClick?nearestFace([...sel.b][0],lastClick):null});showSel()}
+function showSel(){const rows=[...[...sel.b].map(id=>{const b=W.bmap[id];return `<div class="it">${id.split(':').pop()} <small>wall ${b.wall_src}${b.photos?' · '+b.photos+' photo':''}</small></div>`}),
+  ...[...sel.o].slice(0,40).map(id=>{const o=W.omap[id];return `<div class="it">${o.module||o.mesh} <small>${o.family} · ${o.fixture_id||o.evidence||''}</small></div>`}),
+  ...[...sel.p].map(id=>`<div class="it">${id} <small>${W.pmap[id].heading==null?'UNALIGNED':W.pmap[id].heading+'°'}</small></div>`)];
+  $('sel').innerHTML=rows.length?rows.join('')+(sel.o.size>40?`<small>+${sel.o.size-40} more</small>`:''):'nothing';draw()}
+function showQueue(){const q=W.queue||[];$('qc').textContent=`${q.filter(x=>x.status==='open').length} open / ${q.length}`;
+  $('queue').innerHTML=q.slice().reverse().map(x=>`<div class="it" data-q="${x.id}"><span class="${x.status}">${x.id} ${x.kind}</span> <small>${x.status}</small><br><small>${esc(x.text||'')}</small></div>`).join('');
+  document.querySelectorAll('[data-q]').forEach(n=>n.onclick=()=>{const it=W.queue.find(x=>x.id===n.dataset.q);if(it?.rect_EN){const [a,b,c,d]=it.rect_EN;view.cx=(a+c)/2;view.cy=(b+d)/2;rect=[a,b,c,d];draw()}})}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function api(path,body){const r=await fetch(path,body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{});const j=await r.json();if(!r.ok)throw new Error(j.error||r.status);return j}
+async function reload(keep){W=await api('/api/world');W.bmap=Object.fromEntries(W.buildings.map(b=>[b.id,b]));W.omap=Object.fromEntries(W.objects.map(o=>[o.id,o]));W.pmap=Object.fromEntries(W.panoramas.map(p=>[p.id,p]));
+  $('build').textContent='objects from '+W.build;if(!keep){let v=null;try{v=JSON.parse(localStorage.getItem('numabe-view'))}catch(e){}
+  if(v&&isFinite(v.cx))view=v;else{const c=cen(W.bmap[HOME].ring);view={cx:c[0],cy:c[1],s:4}}}
+  if(W.aerial&&!aerial.src){aerial.onload=draw;aerial.src='/aerial.jpg'}showQueue();showSel()}
+// ---- dialogs (in-page; no browser alert/prompt)
+function openDlg(mode,title){dlgMode=mode;$('dlgTitle').textContent=title;$('dlg').style.display='block';$('dlgText').value='';$('dlgText').style.display=mode.kind==='confirm'?'none':'block';setTimeout(()=>$('dlgText').focus(),0)}
+function closeDlg(){$('dlg').style.display='none';dlgMode=null;cv.focus()}
+async function okDlg(){const m=dlgMode;if(!m)return;closeDlg();try{
+  if(m.kind==='note'){const it=await api('/api/note',{text:$('dlgText').value||'(no text)',rect:m.rect,building_ids:m.b,object_ids:m.o,panorama_ids:m.p});toast('saved '+it.id+' → queue.json')}
+  if(m.kind==='confirm'){const r=await api('/api/delete',{objects:m.objs});toast(`removed ${r.removed.length} authored fixture(s) from authored_scene_fixtures.json`+(r.queued?` · ${r.queued.objects.length} generated object(s) queued as ${r.queued.id}`:''),6000);clearSel()}
+  await reload(true)}catch(e){toast('FAILED: '+e.message,8000)}}
+$('dlgOk').onclick=okDlg;$('dlgCancel').onclick=closeDlg;
+function noteDlg(){const r=rect?normRect(rect):null;if(!r&&!sel.b.size&&!sel.o.size&&!sel.p.size){toast('draw a rectangle or select something first');return}
+  let rr=r;if(!rr){const pts=[...[...sel.b].flatMap(id=>W.bmap[id].ring),...[...sel.o].map(id=>[W.omap[id].E,W.omap[id].N]),...[...sel.p].map(id=>[W.pmap[id].E,W.pmap[id].N])];
+    rr=[Math.min(...pts.map(q=>q[0]))-1,Math.min(...pts.map(q=>q[1]))-1,Math.max(...pts.map(q=>q[0]))+1,Math.max(...pts.map(q=>q[1]))+1]}
+  openDlg({kind:'note',rect:rr.map(v=>+v.toFixed(2)),b:[...sel.b],o:[...sel.o],p:[...sel.p]},`Note on ${sel.b.size} building(s), ${sel.o.size} object(s), ${sel.p.size} panorama(s)`)}
+function deleteDlg(){if(!sel.o.size){toast('select objects (squares) to delete');return}const objs=[...sel.o].map(id=>W.omap[id]);const a=objs.filter(o=>o.fixture_id).length;
+  openDlg({kind:'confirm',objs},`Delete ${objs.length} object(s)? ${a} authored fixture(s) are removed now; ${objs.length-a} generated object(s) become a delete request. Enter = yes, Esc = no`)}
+// ---- pointer
+cv.tabIndex=0;cv.addEventListener('contextmenu',e=>e.preventDefault());
+cv.addEventListener('mousedown',e=>{cv.focus();drag={x:e.offsetX,y:e.offsetY,pan:e.button!==0||keys.has(' '),cx:view.cx,cy:view.cy,moved:false}});
+addEventListener('mousemove',e=>{const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;$('pos').textContent=`E ${wx(x).toFixed(1)} N ${wy(y).toFixed(1)} · ${view.s.toFixed(1)} px/m`;
+  if(!drag)return;if(Math.hypot(x-drag.x,y-drag.y)>4)drag.moved=true;if(!drag.moved)return;
+  if(drag.pan){view.cx=drag.cx-(x-drag.x)/view.s;view.cy=drag.cy+(y-drag.y)/view.s;draw()}else{rect=[wx(drag.x),wy(drag.y),wx(x),wy(y)];draw()}});
+addEventListener('mouseup',e=>{if(!drag)return;const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,d=drag;drag=null;
+  if(d.pan){saveView();return}
+  if(d.moved){rectSelect(rect,e.shiftKey);lastClick=[(rect[0]+rect[2])/2,(rect[1]+rect[3])/2];broadcast();return}
+  rect=null;lastClick=[wx(x),wy(y)];const h=pick(x,y);if(!e.shiftKey)clearSel();if(h){const S=h.k==='b'?sel.b:h.k==='o'?sel.o:sel.p;S.has(h.id)&&e.shiftKey?S.delete(h.id):S.add(h.id)}broadcast()});
+cv.addEventListener('wheel',e=>{e.preventDefault();const x=e.offsetX,y=e.offsetY,E=wx(x),N=wy(y);view.s=Math.max(.3,Math.min(60,view.s*Math.exp(-e.deltaY*.0015)));view.cx=E-(x-cv.width/2/devicePixelRatio)/view.s;view.cy=N+(y-cv.height/2/devicePixelRatio)/view.s;saveView();draw()},{passive:false});
+// ---- keyboard: WASD/arrows pan continuously while held
+addEventListener('keydown',e=>{if(dlgMode){if(e.key==='Escape')closeDlg();else if(e.key==='Enter'&&(dlgMode.kind==='confirm'||e.metaKey||e.ctrlKey)){e.preventDefault();okDlg()}return}
+  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')return;const k=e.key.toLowerCase();
+  if((e.metaKey||e.ctrlKey)&&k==='z'){e.preventDefault();api('/api/undo',{}).then(r=>{toast(r.restored.length?'restored '+r.restored.join(', '):'nothing to undo');return reload(true)}).catch(err=>toast('FAILED '+err.message));return}
+  if(e.metaKey||e.ctrlKey)return;
+  if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright',' '].includes(k)){e.preventDefault();keys.add(k);tick()}
+  else if(k==='n'){e.preventDefault();noteDlg()}else if(k==='delete'||k==='backspace'){e.preventDefault();deleteDlg()}
+  else if(k==='escape'){rect=null;clearSel();broadcast()}else if(k==='h'){const c=cen(W.bmap[HOME].ring);view.cx=c[0];view.cy=c[1];view.s=6;saveView();draw()}
+  else if(k==='='||k==='+'){view.s=Math.min(60,view.s*1.25);draw()}else if(k==='-'){view.s=Math.max(.3,view.s/1.25);draw()}});
+addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));addEventListener('blur',()=>keys.clear());
+let ticking=false,lastT=0;function tick(){if(ticking)return;ticking=true;lastT=performance.now();requestAnimationFrame(step)}
+function step(t){const dt=Math.min(.05,(t-lastT)/1000);lastT=t;const v=500/view.s*dt;let m=false; // 500 screen px per second
+  if(keys.has('w')||keys.has('arrowup')){view.cy+=v;m=true}if(keys.has('s')||keys.has('arrowdown')){view.cy-=v;m=true}
+  if(keys.has('a')||keys.has('arrowleft')){view.cx-=v;m=true}if(keys.has('d')||keys.has('arrowright')){view.cx+=v;m=true}
+  if(m){draw();requestAnimationFrame(step)}else{ticking=false;saveView()}}
+// ---- paste a facade photo onto the selected building
+addEventListener('paste',async e=>{if(dlgMode)return;const it=[...(e.clipboardData?.items||[])].find(i=>i.type.startsWith('image/'));if(!it)return;e.preventDefault();
+  let bid=sel.b.size===1?[...sel.b][0]:null;const p=lastClick||[view.cx,view.cy];if(!bid)bid=(W.buildings.find(b=>inPoly(p,b.ring))||{}).id;
+  if(!bid){toast('select exactly one building (click it, or click near the facade edge) before pasting');return}
+  const face=nearestFace(bid,p),url=await new Promise(res=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.readAsDataURL(it.getAsFile())});
+  try{const r=await api('/api/facade',{building_id:bid,face_index:face,data_url:url});toast(`facade photo → ${bid.split(':').pop()} face ${face} (${r.queue.face_bearing_deg}°) · ${r.queue.id}`,6000);await reload(true);sel.b=new Set([bid]);broadcast()}catch(err){toast('FAILED '+err.message,8000)}});
+// /a3d camera (look target E/N + heading) is drawn as a gold arrow; /a3d selections highlight here too
+let a3dCam=null,follow=true;
+chan.onmessage=e=>{const m=e.data;if(m.type==='focus'){view.cx=m.E;view.cy=m.N;if(m.s)view.s=m.s;draw()}if(m.type==='reload')reload(true);
+  if(m.type==='a3d_camera'){a3dCam=m;if(follow){view.cx=m.E;view.cy=m.N}draw()}
+  if(m.type==='a3d_select'&&W.bmap){sel.b=new Set((m.buildings||[]).filter(id=>W.bmap[id]));showSel()}
+  if(m.type==='select_building'&&W.bmap&&W.bmap[m.id]){sel.b=new Set([m.id]);const c=cen(W.bmap[m.id].ring);view.cx=c[0];view.cy=c[1];showSel()}};
+const _draw0=draw;draw=function(){_draw0();if(!a3dCam||!W.buildings)return;const x=sx(a3dCam.E),y=sy(a3dCam.N),a=(a3dCam.heading-90)*Math.PI/180;
+  ctx.strokeStyle=ctx.fillStyle='#ffd166';ctx.lineWidth=3;ctx.beginPath();ctx.arc(x,y,6,0,7);ctx.stroke();ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+Math.cos(a)*34,y+Math.sin(a)*34);ctx.stroke();
+  ctx.font='bold 11px ui-monospace';ctx.fillText('A3D'+(follow?' (following)':''),x+9,y-8)};
+addEventListener('keydown',e=>{if(e.key.toLowerCase()==='f'&&!dlgMode&&e.target.tagName!=='TEXTAREA'){follow=!follow;toast('map '+(follow?'follows':'does not follow')+' the A3D camera');draw()}});
+['L_aerial','L_bld','L_obj','L_lin','L_pano','L_q'].forEach(id=>$(id).onchange=draw);
+addEventListener('resize',resize);reload().then(resize).catch(e=>toast('load failed: '+e.message,1e5));
+</script></body></html>

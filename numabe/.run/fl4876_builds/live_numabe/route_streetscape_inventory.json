@@ -1,0 +1,5488 @@
+{
+ "bins": [
+  {
+   "bin": 0,
+   "endpoints": [
+    [
+     379774.09478406,
+     3938492.8766434793
+    ],
+    [
+     379769.32769792515,
+     3938510.4374734014
+    ]
+   ],
+   "from_m": 0.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 3,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 7,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 2,
+     "represented": 7,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 5,
+     "observed_physical": 5,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 5,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 2,
+     "proxy": 1,
+     "represented": 1,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 13,
+     "observed_physical": 13,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 13,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 25.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 1,
+   "endpoints": [
+    [
+     379769.32769792515,
+     3938510.4374734014
+    ],
+    [
+     379788.10835381283,
+     3938524.0525212516
+    ]
+   ],
+   "from_m": 25.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 7,
+     "observed_physical": 2,
+     "omitted_with_reason": 0,
+     "proxy": 4,
+     "represented": 7,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 4,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 4,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 7,
+     "observed_physical": 7,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 7,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 10,
+     "observed_physical": 10,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 10,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 1,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 10,
+     "observed_physical": 10,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 10,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 50.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 2,
+   "endpoints": [
+    [
+     379788.10835381283,
+     3938524.0525212516
+    ],
+    [
+     379798.0046991697,
+     3938543.2498129928
+    ]
+   ],
+   "from_m": 50.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 5,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 5,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 5,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 10,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 10,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 6,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 12,
+     "observed_physical": 12,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 12,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 1,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 21,
+     "observed_physical": 19,
+     "omitted_with_reason": 1,
+     "proxy": 0,
+     "represented": 20,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 75.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 3,
+   "endpoints": [
+    [
+     379798.0046991697,
+     3938543.2498129928
+    ],
+    [
+     379812.87376710563,
+     3938563.259840502
+    ]
+   ],
+   "from_m": 75.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 8,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 8,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 5,
+     "observed_physical": 5,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 5,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 21,
+     "observed_physical": 21,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 21,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 2,
+     "represented": 2,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 8,
+     "observed_physical": 5,
+     "omitted_with_reason": 3,
+     "proxy": 0,
+     "represented": 5,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 100.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 4,
+   "endpoints": [
+    [
+     379812.87376710563,
+     3938563.259840502
+    ],
+    [
+     379825.4278242985,
+     3938584.8791755517
+    ]
+   ],
+   "from_m": 100.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 12,
+     "observed_physical": 0,
+     "omitted_with_reason": 1,
+     "proxy": 0,
+     "represented": 11,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 6,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 16,
+     "observed_physical": 14,
+     "omitted_with_reason": 2,
+     "proxy": 0,
+     "represented": 14,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 1,
+     "represented": 1,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 18,
+     "observed_physical": 16,
+     "omitted_with_reason": 2,
+     "proxy": 0,
+     "represented": 16,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 125.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 5,
+   "endpoints": [
+    [
+     379825.4278242985,
+     3938584.8791755517
+    ],
+    [
+     379838.07214795996,
+     3938606.444955884
+    ]
+   ],
+   "from_m": 125.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 3,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 1,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 150.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 6,
+   "endpoints": [
+    [
+     379838.07214795996,
+     3938606.444955884
+    ],
+    [
+     379850.89927084086,
+     3938627.903402207
+    ]
+   ],
+   "from_m": 150.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 175.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 7,
+   "endpoints": [
+    [
+     379850.89927084086,
+     3938627.903402207
+    ],
+    [
+     379863.72639372176,
+     3938649.36184853
+    ]
+   ],
+   "from_m": 175.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 200.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 8,
+   "endpoints": [
+    [
+     379863.72639372176,
+     3938649.36184853
+    ],
+    [
+     379876.55351660267,
+     3938670.820294853
+    ]
+   ],
+   "from_m": 200.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 225.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 9,
+   "endpoints": [
+    [
+     379876.55351660267,
+     3938670.820294853
+    ],
+    [
+     379889.36450466857,
+     3938692.2883548583
+    ]
+   ],
+   "from_m": 225.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 250.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 10,
+   "endpoints": [
+    [
+     379889.36450466857,
+     3938692.2883548583
+    ],
+    [
+     379903.06611652044,
+     3938713.197768159
+    ]
+   ],
+   "from_m": 250.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 275.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 11,
+   "endpoints": [
+    [
+     379903.06611652044,
+     3938713.197768159
+    ],
+    [
+     379917.93310796947,
+     3938733.262292072
+    ]
+   ],
+   "from_m": 275.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 4,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 4,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 300.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 12,
+   "endpoints": [
+    [
+     379917.93310796947,
+     3938733.262292072
+    ],
+    [
+     379935.54843640066,
+     3938746.4891084824
+    ]
+   ],
+   "from_m": 300.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 4,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 4,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 325.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 13,
+   "endpoints": [
+    [
+     379935.54843640066,
+     3938746.4891084824
+    ],
+    [
+     379956.6407484233,
+     3938733.090007665
+    ]
+   ],
+   "from_m": 325.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 1,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 350.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 14,
+   "endpoints": [
+    [
+     379956.6407484233,
+     3938733.090007665
+    ],
+    [
+     379977.6988513104,
+     3938719.6157246493
+    ]
+   ],
+   "from_m": 350.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 375.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 15,
+   "endpoints": [
+    [
+     379977.6988513104,
+     3938719.6157246493
+    ],
+    [
+     379998.8501813505,
+     3938706.293676471
+    ]
+   ],
+   "from_m": 375.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 400.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 16,
+   "endpoints": [
+    [
+     379998.8501813505,
+     3938706.293676471
+    ],
+    [
+     380019.7892774824,
+     3938692.7240587147
+    ]
+   ],
+   "from_m": 400.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 8,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 8,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 425.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 17,
+   "endpoints": [
+    [
+     380019.7892774824,
+     3938692.7240587147
+    ],
+    [
+     380034.1433464353,
+     3938711.27926224
+    ]
+   ],
+   "from_m": 425.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 5,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 5,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 4,
+     "observed_physical": 4,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 4,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 450.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 18,
+   "endpoints": [
+    [
+     380034.1433464353,
+     3938711.27926224
+    ],
+    [
+     380048.5141597758,
+     3938731.73602616
+    ]
+   ],
+   "from_m": 450.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 475.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 19,
+   "endpoints": [
+    [
+     380048.5141597758,
+     3938731.73602616
+    ],
+    [
+     380051.10608020984,
+     3938750.0237317276
+    ]
+   ],
+   "from_m": 475.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 8,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 8,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 500.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 20,
+   "endpoints": [
+    [
+     380051.10608020984,
+     3938750.0237317276
+    ],
+    [
+     380030.14585017425,
+     3938763.6419339627
+    ]
+   ],
+   "from_m": 500.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 6,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 6,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 525.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 21,
+   "endpoints": [
+    [
+     380030.14585017425,
+     3938763.6419339627
+    ],
+    [
+     380008.95488248655,
+     3938776.905899464
+    ]
+   ],
+   "from_m": 525.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 7,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 7,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 550.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 22,
+   "endpoints": [
+    [
+     380008.95488248655,
+     3938776.905899464
+    ],
+    [
+     379987.625748027,
+     3938789.9466955718
+    ]
+   ],
+   "from_m": 550.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 575.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 23,
+   "endpoints": [
+    [
+     379987.625748027,
+     3938789.9466955718
+    ],
+    [
+     379966.36882175674,
+     3938803.1042978945
+    ]
+   ],
+   "from_m": 575.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 9,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 9,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 600.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 24,
+   "endpoints": [
+    [
+     379966.36882175674,
+     3938803.1042978945
+    ],
+    [
+     379951.3394923278,
+     3938791.61992756
+    ]
+   ],
+   "from_m": 600.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 1,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 4,
+     "observed_physical": 0,
+     "omitted_with_reason": 3,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 625.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 25,
+   "endpoints": [
+    [
+     379951.3394923278,
+     3938791.61992756
+    ],
+    [
+     379942.0938186547,
+     3938768.691116587
+    ]
+   ],
+   "from_m": 625.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 5,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 5,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 650.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 26,
+   "endpoints": [
+    [
+     379942.0938186547,
+     3938768.691116587
+    ],
+    [
+     379930.4677884475,
+     3938747.9766220218
+    ]
+   ],
+   "from_m": 650.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 675.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 27,
+   "endpoints": [
+    [
+     379930.4677884475,
+     3938747.9766220218
+    ],
+    [
+     379952.18154468737,
+     3938735.943283361
+    ]
+   ],
+   "from_m": 675.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 4,
+     "observed_physical": 4,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 4,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 700.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 28,
+   "endpoints": [
+    [
+     379952.18154468737,
+     3938735.943283361
+    ],
+    [
+     379973.23964757443,
+     3938722.4690003446
+    ]
+   ],
+   "from_m": 700.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 9,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 9,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 725.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 29,
+   "endpoints": [
+    [
+     379973.23964757443,
+     3938722.4690003446
+    ],
+    [
+     379991.0975295416,
+     3938724.306086587
+    ]
+   ],
+   "from_m": 725.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 750.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 30,
+   "endpoints": [
+    [
+     379991.0975295416,
+     3938724.306086587
+    ],
+    [
+     380004.99604901444,
+     3938745.0866341363
+    ]
+   ],
+   "from_m": 750.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 3,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 3,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 775.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 31,
+   "endpoints": [
+    [
+     380004.99604901444,
+     3938745.0866341363
+    ],
+    [
+     380018.89456848725,
+     3938765.8671816858
+    ]
+   ],
+   "from_m": 775.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 11,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 11,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 800.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 32,
+   "endpoints": [
+    [
+     380018.89456848725,
+     3938765.8671816858
+    ],
+    [
+     380004.18039105326,
+     3938780.541077854
+    ]
+   ],
+   "from_m": 800.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 825.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 33,
+   "endpoints": [
+    [
+     380004.18039105326,
+     3938780.541077854
+    ],
+    [
+     380016.0769165027,
+     3938802.5290900934
+    ]
+   ],
+   "from_m": 825.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 4,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 4,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 850.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 34,
+   "endpoints": [
+    [
+     380016.0769165027,
+     3938802.5290900934
+    ],
+    [
+     380027.9734419521,
+     3938824.517102333
+    ]
+   ],
+   "from_m": 850.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 8,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 8,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 875.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 35,
+   "endpoints": [
+    [
+     380027.9734419521,
+     3938824.517102333
+    ],
+    [
+     380013.0124343794,
+     3938841.261992808
+    ]
+   ],
+   "from_m": 875.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 8,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 8,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 1,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 900.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 36,
+   "endpoints": [
+    [
+     380013.0124343794,
+     3938841.261992808
+    ],
+    [
+     380010.2013433035,
+     3938860.675442494
+    ]
+   ],
+   "from_m": 900.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 5,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 5,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 925.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 37,
+   "endpoints": [
+    [
+     380010.2013433035,
+     3938860.675442494
+    ],
+    [
+     380021.32824624906,
+     3938883.0627606353
+    ]
+   ],
+   "from_m": 925.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 950.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 38,
+   "endpoints": [
+    [
+     380021.32824624906,
+     3938883.0627606353
+    ],
+    [
+     380031.8780741587,
+     3938905.3275412535
+    ]
+   ],
+   "from_m": 950.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 5,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 5,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 975.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 39,
+   "endpoints": [
+    [
+     380031.8780741587,
+     3938905.3275412535
+    ],
+    [
+     380019.89944002836,
+     3938926.7444791463
+    ]
+   ],
+   "from_m": 975.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 7,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 7,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 4,
+     "observed_physical": 4,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 4,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 1000.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 40,
+   "endpoints": [
+    [
+     380019.89944002836,
+     3938926.7444791463
+    ],
+    [
+     380007.8284093107,
+     3938948.6371769565
+    ]
+   ],
+   "from_m": 1000.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 1,
+     "represented": 1,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 1,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 1025.0,
+   "vanished_ids": []
+  },
+  {
+   "bin": 41,
+   "endpoints": [
+    [
+     380007.8284093107,
+     3938948.6371769565
+    ],
+    [
+     379999.7349687455,
+     3938963.315894349
+    ]
+   ],
+   "from_m": 1025.0,
+   "groups": {
+    "buildings": {
+     "debt": 0,
+     "observed": 15,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 15,
+     "vanished": 0
+    },
+    "crossings_and_signals": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 1,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 1,
+     "vanished": 0
+    },
+    "fences_walls_guardrails": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "ground": {
+     "debt": 0,
+     "observed": 2,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 2,
+     "vanished": 0
+    },
+    "poles_and_lamps": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "rail_side": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "signs": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "storefronts_and_places": {
+     "debt": 0,
+     "observed": 1,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 1,
+     "represented": 1,
+     "vanished": 0
+    },
+    "street_furniture": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "unmapped_class": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "vegetation": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    },
+    "waterways_and_bridges": {
+     "debt": 0,
+     "observed": 0,
+     "observed_physical": 0,
+     "omitted_with_reason": 0,
+     "proxy": 0,
+     "represented": 0,
+     "vanished": 0
+    }
+   },
+   "to_m": 1041.762,
+   "vanished_ids": []
+  }
+ ],
+ "counts": {
+  "corridor_features": 480,
+  "outside_corridor": 974,
+  "positioned_extra_observations": 0,
+  "unmapped_semantic_classes": [
+   "bridge_deck"
+  ]
+ },
+ "emission_files_present": {
+  "emission_manifest.json": true
+ },
+ "generated_at": "2026-10-16T17:54:15Z",
+ "inputs": {
+  "build_dir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple",
+  "debt": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/observation_debt.json",
+  "entities": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical_entities.json",
+  "extra_observations": [],
+  "plan": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/representation_plan.json",
+  "route": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/valhalla_pedestrian_route.json",
+  "rules": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population/rules_resolved.json",
+  "world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical.world_ir.json"
+ },
+ "out_of_corridor_plan_gaps": [],
+ "route": {
+  "bins": 42,
+  "length_m": 1041.762
+ },
+ "rules": {
+  "bin_length_m": 25.0,
+  "proposed_rules_facts": {
+   "inventory.bin_length_m": 25.0,
+   "inventory.route_visible_corridor_m": 20.0
+  },
+  "route_visible_corridor_m": 20.0,
+  "rules_basis": "rules.inventory"
+ },
+ "schema": "y92.route_streetscape_inventory.v1",
+ "text_table": [
+  "0-25 m: buildings observed 3 represented 3; storefronts_and_places observed 3 represented 1 [proxy 1] (omitted 2); poles_and_lamps observed 3 represented 3 [physical 3]; signs observed 5 represented 5 [physical 5]; rail_side observed 7 represented 7 [proxy 2]; street_furniture observed 13 represented 13 [physical 13]; ground observed 2 represented 2",
+  "25-50 m: buildings observed 3 represented 3; storefronts_and_places observed 1 represented 1 [physical 1]; poles_and_lamps observed 7 represented 7 [physical 7]; signs observed 10 represented 10 [physical 10]; crossings_and_signals observed 7 represented 7 [physical 2, proxy 4]; street_furniture observed 10 represented 10 [physical 10]; ground observed 4 represented 4",
+  "50-75 m: buildings observed 5 represented 5; storefronts_and_places observed 1 represented 1 [physical 1]; poles_and_lamps observed 6 represented 6 [physical 6]; signs observed 12 represented 12 [physical 12]; crossings_and_signals observed 6 represented 6 [physical 5]; street_furniture observed 21 represented 20 [physical 19] (omitted 1); ground observed 10 represented 10",
+  "75-100 m: buildings observed 8 represented 8; storefronts_and_places observed 2 represented 2 [proxy 2]; poles_and_lamps observed 5 represented 5 [physical 5]; signs observed 21 represented 21 [physical 21]; street_furniture observed 8 represented 5 [physical 5] (omitted 3); ground observed 3 represented 3",
+  "100-125 m: buildings observed 3 represented 3; storefronts_and_places observed 1 represented 1 [proxy 1]; poles_and_lamps observed 6 represented 6 [physical 6]; signs observed 16 represented 14 [physical 14] (omitted 2); street_furniture observed 18 represented 16 [physical 16] (omitted 2); ground observed 12 represented 11 (omitted 1)",
+  "125-150 m: buildings observed 6 represented 6; storefronts_and_places observed 1 represented 1 [physical 1]; poles_and_lamps observed 3 represented 3 [physical 3]; ground observed 2 represented 2",
+  "150-175 m: buildings observed 6 represented 6; ground observed 1 represented 1",
+  "175-200 m: buildings observed 6 represented 6",
+  "200-225 m: buildings observed 6 represented 6",
+  "225-250 m: buildings observed 3 represented 3",
+  "250-275 m: buildings observed 3 represented 3; ground observed 1 represented 1",
+  "275-300 m: buildings observed 4 represented 4; ground observed 1 represented 1",
+  "300-325 m: buildings observed 4 represented 4",
+  "325-350 m: buildings observed 2 represented 2; crossings_and_signals observed 1 represented 1 [physical 1]; ground observed 1 represented 1",
+  "350-375 m: buildings observed 1 represented 1",
+  "375-400 m: buildings observed 1 represented 1; ground observed 1 represented 1",
+  "400-425 m: buildings observed 8 represented 8",
+  "425-450 m: buildings observed 5 represented 5; crossings_and_signals observed 4 represented 4 [physical 4]; ground observed 2 represented 2",
+  "450-475 m: buildings observed 6 represented 6",
+  "475-500 m: buildings observed 8 represented 8",
+  "500-525 m: buildings observed 6 represented 6; ground observed 1 represented 1",
+  "525-550 m: buildings observed 7 represented 7; ground observed 1 represented 1",
+  "550-575 m: ",
+  "575-600 m: buildings observed 9 represented 9",
+  "600-625 m: buildings observed 3 represented 3; fences_walls_guardrails observed 1 represented 1 [physical 1]; ground observed 4 represented 1 (omitted 3)",
+  "625-650 m: buildings observed 5 represented 5",
+  "650-675 m: buildings observed 3 represented 3; ground observed 1 represented 1",
+  "675-700 m: buildings observed 2 represented 2; crossings_and_signals observed 4 represented 4 [physical 4]; ground observed 3 represented 3",
+  "700-725 m: buildings observed 9 represented 9",
+  "725-750 m: buildings observed 1 represented 1",
+  "750-775 m: buildings observed 3 represented 3",
+  "775-800 m: buildings observed 11 represented 11",
+  "800-825 m: buildings observed 1 represented 1; ground observed 1 represented 1",
+  "825-850 m: buildings observed 4 represented 4; ground observed 2 represented 2",
+  "850-875 m: buildings observed 8 represented 8; ground observed 1 represented 1",
+  "875-900 m: buildings observed 8 represented 8; storefronts_and_places observed 1 represented 0 (debt 1); ground observed 1 represented 1",
+  "900-925 m: buildings observed 5 represented 5",
+  "925-950 m: buildings observed 2 represented 2; ground observed 1 represented 1",
+  "950-975 m: buildings observed 5 represented 5; ground observed 2 represented 2",
+  "975-1000 m: buildings observed 7 represented 7; crossings_and_signals observed 4 represented 4 [physical 4]; ground observed 2 represented 2",
+  "1000-1025 m: buildings observed 1 represented 1; storefronts_and_places observed 1 represented 1 [proxy 1]; street_furniture observed 1 represented 1 [physical 1]",
+  "1025-1041.76 m: buildings observed 15 represented 15; storefronts_and_places observed 1 represented 1 [proxy 1]; crossings_and_signals observed 1 represented 1 [physical 1]; ground observed 2 represented 2"
+ ],
+ "totals": {
+  "buildings": {
+   "debt": 0,
+   "observed": 206,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 206,
+   "vanished": 0
+  },
+  "crossings_and_signals": {
+   "debt": 0,
+   "observed": 27,
+   "observed_physical": 21,
+   "omitted_with_reason": 0,
+   "proxy": 4,
+   "represented": 27,
+   "vanished": 0
+  },
+  "fences_walls_guardrails": {
+   "debt": 0,
+   "observed": 1,
+   "observed_physical": 1,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 1,
+   "vanished": 0
+  },
+  "ground": {
+   "debt": 0,
+   "observed": 62,
+   "observed_physical": 0,
+   "omitted_with_reason": 4,
+   "proxy": 0,
+   "represented": 58,
+   "vanished": 0
+  },
+  "poles_and_lamps": {
+   "debt": 0,
+   "observed": 30,
+   "observed_physical": 30,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 30,
+   "vanished": 0
+  },
+  "rail_side": {
+   "debt": 0,
+   "observed": 7,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 2,
+   "represented": 7,
+   "vanished": 0
+  },
+  "signs": {
+   "debt": 0,
+   "observed": 64,
+   "observed_physical": 62,
+   "omitted_with_reason": 2,
+   "proxy": 0,
+   "represented": 62,
+   "vanished": 0
+  },
+  "storefronts_and_places": {
+   "debt": 1,
+   "observed": 12,
+   "observed_physical": 3,
+   "omitted_with_reason": 2,
+   "proxy": 6,
+   "represented": 9,
+   "vanished": 0
+  },
+  "street_furniture": {
+   "debt": 0,
+   "observed": 71,
+   "observed_physical": 64,
+   "omitted_with_reason": 6,
+   "proxy": 0,
+   "represented": 65,
+   "vanished": 0
+  },
+  "unmapped_class": {
+   "debt": 0,
+   "observed": 0,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 0,
+   "vanished": 0
+  },
+  "vegetation": {
+   "debt": 0,
+   "observed": 0,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 0,
+   "vanished": 0
+  },
+  "waterways_and_bridges": {
+   "debt": 0,
+   "observed": 0,
+   "observed_physical": 0,
+   "omitted_with_reason": 0,
+   "proxy": 0,
+   "represented": 0,
+   "vanished": 0
+  }
+ },
+ "vanished": []
+}

@@ -1,0 +1,472 @@
+{
+  "conditional_authorities": {
+    "railway_operator": "railway_adjacent"
+  },
+  "derivation_boundary": [
+    "Designation facts never prove physical presence, position, width, or condition.",
+    "An unknown designation keeps every dependent subject unresolved.",
+    "Administrator values for keyed spans repeat the reviewed Step 1 classification; they are not an independent ownership survey.",
+    "road_class ward_road values restate reviewed Step 1 route_name_ja ward-road naming; they are not an independent road-class survey."
+  ],
+  "route_id": "numabe_connected_neighborhood",
+  "jurisdiction_chain": [
+    "japan_national",
+    "tokyo_metropolitan",
+    "ota_ward"
+  ],
+  "schema": "y92.route_designation_facts.v1",
+  "spans": [
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 5030310 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 27.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "5030310",
+      "start_m": 0.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": null,
+      "administrator_evidence": "Administrator unresolved after OSM lead check 2026-09-16 (bundle OSM sha256:12467a39bae46a19e19e9a6d726c00a41bb4212856c36ab1db3325cdec93c463): nearest carriageway ways way/225104982, way/31706445, way/670892441, way/670892442 (≈7m) carry no name/operator tags{nearby}; operator=大田区 tags in the AOI belong to parks, not carriageways. Competent-office confirmation required; classification route_key is null, so Step 1 re-review is also required before the span-level owner fact can clear. No Tokyo/MLIT per-span administrator source consulted 2026-09-16 beyond generic portals (MLIT road index https://www.mlit.go.jp/road/index.html sha256 3bfea8dc92c0f10253baac4b03dc1561c63c176ee66ce4a00e3c36fa386fd7e4, 19626 bytes; Tokyo Construction Bureau road portal https://www.kensetsu.metro.tokyo.lg.jp/road/ sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; neither carries a per-span administrator register). RM absence proves only not_ota_managed.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 143.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": null,
+      "road_class_evidence": "No legal road class established. OSM lead check 2026-09-16 (bundle OSM sha256:12467a39bae46a19e19e9a6d726c00a41bb4212856c36ab1db3325cdec93c463): nearest carriageway ways way/225104982, way/31706445, way/670892441, way/670892442 (≈7m) carry no name/operator tags. No Tokyo ledger per-span class source consulted beyond the generic portals noted in administrator_evidence. No corpus rule currently constrains road_class.",
+      "route_key": null,
+      "start_m": 27.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 5030510 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 468.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "5030510",
+      "start_m": 143.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 5030250 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 583.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "5030250",
+      "start_m": 468.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 5030490 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 618.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "5030490",
+      "start_m": 583.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 4000600 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 643.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "4000600",
+      "start_m": 618.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 4000460 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 718.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "4000460",
+      "start_m": 643.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": null,
+      "administrator_evidence": "Administrator unresolved after OSM lead check 2026-09-16 (bundle OSM sha256:12467a39bae46a19e19e9a6d726c00a41bb4212856c36ab1db3325cdec93c463): nearest carriageway ways way/23990281, way/264844672, way/126233962 (≈7m) carry no name/operator tags{nearby}; operator=大田区 tags in the AOI belong to parks, not carriageways. Competent-office confirmation required; classification route_key is null, so Step 1 re-review is also required before the span-level owner fact can clear. No Tokyo/MLIT per-span administrator source consulted 2026-09-16 beyond generic portals (MLIT road index https://www.mlit.go.jp/road/index.html sha256 3bfea8dc92c0f10253baac4b03dc1561c63c176ee66ce4a00e3c36fa386fd7e4, 19626 bytes; Tokyo Construction Bureau road portal https://www.kensetsu.metro.tokyo.lg.jp/road/ sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; neither carries a per-span administrator register). RM absence proves only not_ota_managed.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 773.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": null,
+      "road_class_evidence": "No legal road class established. OSM lead check 2026-09-16 (bundle OSM sha256:12467a39bae46a19e19e9a6d726c00a41bb4212856c36ab1db3325cdec93c463): nearest carriageway ways way/23990281, way/264844672, way/126233962 (≈7m) carry no name/operator tags. No Tokyo ledger per-span class source consulted beyond the generic portals noted in administrator_evidence. No corpus rule currently constrains road_class.",
+      "route_key": null,
+      "start_m": 718.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 5030250 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 803.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "5030250",
+      "start_m": 773.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": null,
+      "administrator_evidence": "Administrator unresolved after OSM lead check 2026-09-16 (bundle OSM sha256:12467a39bae46a19e19e9a6d726c00a41bb4212856c36ab1db3325cdec93c463): nearest carriageway ways way/1465498421, way/200087061 (≈18m) carry no name/operator tags{nearby}; operator=大田区 tags in the AOI belong to parks, not carriageways. Competent-office confirmation required; classification route_key is null, so Step 1 re-review is also required before the span-level owner fact can clear. No Tokyo/MLIT per-span administrator source consulted 2026-09-16 beyond generic portals (MLIT road index https://www.mlit.go.jp/road/index.html sha256 3bfea8dc92c0f10253baac4b03dc1561c63c176ee66ce4a00e3c36fa386fd7e4, 19626 bytes; Tokyo Construction Bureau road portal https://www.kensetsu.metro.tokyo.lg.jp/road/ sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; neither carries a per-span administrator register). RM absence proves only not_ota_managed.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 883.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": null,
+      "road_class_evidence": "No legal road class established. OSM lead check 2026-09-16 (bundle OSM sha256:12467a39bae46a19e19e9a6d726c00a41bb4212856c36ab1db3325cdec93c463): nearest carriageway ways way/1465498421, way/200087061 (≈18m) carry no name/operator tags. No Tokyo ledger per-span class source consulted beyond the generic portals noted in administrator_evidence. No corpus rule currently constrains road_class.",
+      "route_key": null,
+      "start_m": 803.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 5031200 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 933.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "5031200",
+      "start_m": 883.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 4000600 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 953.0,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "4000600",
+      "start_m": 933.0,
+      "subject_exclusions": {}
+    },
+    {
+      "administrator": "ota_ward",
+      "administrator_evidence": "Step 1 ota_managed span with official Ota route key 4000450 (classification numabe_connected_neighborhood_ota_management_20260916; live Ota Doro Map refresh 2026-09-16 confirmed RM 2026-08-04, full 1016.882 m / 13-span coverage, Step 1 passed; portal https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/). Repeats Step 1; not an independent ownership survey; proves Ota management only.",
+      "designations": {
+        "accessibility": {
+          "evidence": "unknown: no per-span accessibility-route designation consulted 2026-09-16. Ota guessed barrier-free URL returned HTTP 404 (absent page; not an affirmative negative). Tokyo Construction Bureau road portal consulted 2026-09-16 (https://www.kensetsu.metro.tokyo.lg.jp/road/, sha256 a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6, 553352 bytes; generic portal, no per-span register). Tactile paving never used as designation evidence. Confidence: n/a. Limit: designation unproven per span.",
+          "status": "unknown"
+        },
+        "article_42": {
+          "evidence": "unknown: Ota road-publication page re-fetched 2026-09-16T06:41:19Z (https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html, sha256 757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, byte-identical to prior fetch) affirmatively assigns Building Standards Act road categories to Machimap Ota (https://www2.wagmap.jp/ota/Portal, app shell fetched 2026-09-16, sha256 91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86, 42323 bytes, interactive-only; per-span lookup requires interactive session or road-section counter) and lists window guidance as authoritative over the map on divergence. Apparent width never used as category evidence. Confidence: n/a. Limit: per-span Article 42 status unproven pending interactive-map or counter lookup.",
+          "status": "unknown"
+        },
+        "railway": {
+          "adjacent": null,
+          "evidence": "unknown: no official per-span railway-adjacency source consulted 2026-09-16. Tokyu official station list fetched 2026-09-16 (https://www.tokyu.co.jp/railway/station/, sha256 ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc, 495699 bytes) lists Numabe area pages, proving only that Tokyu serves Numabe; it establishes no per-span adjacency and no per-span operator. Generic map labels never used; observation crops never used as adjacency evidence. Confidence: n/a. Limit: adjacency and operator unproven per span.",
+          "operator": null
+        }
+      },
+      "end_m": 1016.882,
+      "project_type": null,
+      "project_type_evidence": "No per-span project status established. Ota road-publication page re-fetched 2026-09-16T06:41:19Z, byte-identical (sha256:757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03, 24141 bytes, https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html): assigns Building Standards Act categories to Machimap Ota and lists no per-span works register; Road Act Art. 24 approval-works procedure and narrow-road widening programme remain unconsulted leads. New-construction/reconstruction status remains unknown. Confidence: n/a.",
+      "road_class": "ward_road",
+      "road_class_evidence": "Restates reviewed Step 1 ward-road route_name_ja for this span's official route key (see administrator_evidence; classification numabe_connected_neighborhood_ota_management_20260916); not an independent road-class survey. No corpus rule currently constrains road_class.",
+      "route_key": "4000450",
+      "start_m": 953.0,
+      "subject_exclusions": {}
+    }
+  ],
+  "predicate_evidence": {
+    "investigated_on": "2026-09-16",
+    "slice": "predicates-first: administrator, road_class, project_type; designation leads: article_42, accessibility, railway",
+    "step1_live_refresh": {
+      "ran_on": "2026-09-16T09:42:39Z",
+      "tool": "scripts/pipeline/official_road_source.py",
+      "policy": "assets/public_realm_corpora/jp/ota/doro_map_ota_phase1.json",
+      "portal": "https://doro-map.city.ota.tokyo.jp/SWE.OTA.TOP/",
+      "result": "passed; live layers GH 2026-08-04, RM 2026-08-04, KK 2026-09-02, CS 2026-09-02, KJ 2026-06-01 match reviewed classification; full 1016.882 m / 13-span coverage verified; all 8 expected Ota route keys present (5030310, 5030510, 5030250, 5030490, 4000600, 4000460, 5031200, 4000450); unnamed intervals 27-143 m, 718-773 m, 803-883 m confirmed not_ota_managed; same-run Step 1 receipt sha256 b5c3f550527b7bf2f0a53d29063627311967b22d935a9034c2b511aca04b6547, update feed sha256 093437dda3d180c2261536530affff208f056acc18879eb0885b2cecacf7c42e; same-run Step 2 executed against this Step 1 receipt (see artifacts receipts; counts owned by that receipt, not duplicated here), step2_passed=false",
+      "receipts": "artifacts/experiments/fl4813_route_designation_20260916/official_road_source_receipt.json and applicable_law_selection_receipt.json",
+      "claim_limit": "run-local receipts retained under artifacts/experiments/fl4813_route_designation_20260916, not in bundle; factual classification on disk unchanged"
+    },
+    "source_consultations": [
+      {
+        "authority": "Ota City road-publication page",
+        "url": "https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/douro_kouen_kasen/douro/roadmap-ota_release.html",
+        "retrieved_at": "2026-09-16T06:41:19Z",
+        "sha256": "757cdd59aa474b4771a0f71d3e8b60f4b6c4a79033fecb725a5aa0ea36ea7f03",
+        "size_bytes": 24141,
+        "locator": "page section: Building Standards Act road categories -> Machimap Ota link; national/metropolitan road width inquiry contacts (Tokyo national-road office, Tokyo 2nd construction office); counter-vs-map divergence notice",
+        "finding": "Byte-identical to prior fetch. Affirmatively assigns Article 42 categories to Machimap Ota and certification to the road-section counter; lists no per-span works register.",
+        "confidence": "high for page-level facts; n/a per span",
+        "limit": "supports no per-span project_type, Article 42, or width fact"
+      },
+      {
+        "authority": "Ota City Machimap Ota portal shell",
+        "url": "https://www2.wagmap.jp/ota/Portal",
+        "retrieved_at": "2026-09-16T06:41:56Z",
+        "sha256": "91aee2574d71807de2102e0ffb20b1444a789f87ca78fd785b8c334f8ec87a86",
+        "size_bytes": 42323,
+        "locator": "portal application shell (interactive JS map; no static per-parcel payload)",
+        "finding": "Per-span Article 42 lookup requires an interactive session or counter visit; no per-span fact retrievable by static fetch. No tiles or drawings retained.",
+        "confidence": "high for interactive-only limitation",
+        "limit": "per-span Article 42 status remains unproven for all 13 spans"
+      },
+      {
+        "authority": "MLIT road portal",
+        "url": "https://www.mlit.go.jp/road/index.html",
+        "retrieved_at": "2026-09-16T06:41:19Z",
+        "sha256": "3bfea8dc92c0f10253baac4b03dc1561c63c176ee66ce4a00e3c36fa386fd7e4",
+        "size_bytes": 19626,
+        "locator": "portal index (title: roads, MLIT)",
+        "finding": "Generic national road-administration index; no per-span administrator or project fact for this route.",
+        "confidence": "high for generic-only finding",
+        "limit": "supports no per-span administrator, road-class, or project fact"
+      },
+      {
+        "authority": "Tokyo Metropolitan Government Construction Bureau road page",
+        "url": "https://www.kensetsu.metro.tokyo.lg.jp/road/",
+        "retrieved_at": "2026-09-16T06:42:03Z",
+        "sha256": "a9bb265af60689f82da376c9c38addda9b277caa37acce4a2af8f3f27bc9eef6",
+        "size_bytes": 553352,
+        "locator": "generic metropolitan road portal (mentions road ledger and routes without a static per-span register)",
+        "finding": "No per-span Tokyo administrator, ledger, or accessibility-register fact retrievable by static fetch.",
+        "confidence": "high for generic-only finding",
+        "limit": "supports no per-span administrator, road-class, or accessibility fact"
+      },
+      {
+        "authority": "Tokyu Corporation official station list",
+        "url": "https://www.tokyu.co.jp/railway/station/",
+        "retrieved_at": "2026-09-16T06:41:19Z",
+        "sha256": "ccc002f6328998cadd099801b2249b92296f540b2767be2a3d697c2975b5b4bc",
+        "size_bytes": 495699,
+        "locator": "station area index entries for Numabe (Japanese: Numabe) with /area/numabe/ detail links",
+        "finding": "Proves only that Tokyu serves the Numabe station area (operator lead). Establishes no per-span railway adjacency and no per-span operator obligation.",
+        "confidence": "high for Tokyu-serves-Numabe; n/a per span",
+        "limit": "railway adjacency and operator remain unproven for all 13 spans"
+      },
+      {
+        "authority": "Ota City guessed barrier-free page (negative lookup)",
+        "url": "https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/barrierfree/",
+        "retrieved_at": "2026-09-16T06:42:03Z",
+        "sha256": null,
+        "size_bytes": 0,
+        "locator": "HTTP 404 response to guessed URL",
+        "finding": "No Ota accessibility-plan page exists at the guessed URL. A 404 is not an affirmative negative on designation; it only records that this lookup path failed.",
+        "confidence": "high for 404; n/a for designation",
+        "limit": "accessibility-route designation remains unproven for all 13 spans"
+      }
+    ],
+    "prohibited_material": "No Ota map tiles, drawings, or reproductions were retained. Only factual route keys, management classes, hashes, and evidence statements are recorded.",
+    "leads_for_other_slices": [
+      "occupation: Ota special-ward road occupation-work guidelines (senyokojiyoko.html), unconsulted",
+      "project_type: Road Act Art. 24 approval-works procedure page, unconsulted",
+      "designations: Machimap Ota interactive session or road-section counter visit required for per-span Article 42 categories; narrow-road widening program (kyouai.html) noted",
+      "railway: per-span adjacency requires an official operator or cadastre source joined to span geometry; Tokyu-serves-Numabe is a lead only",
+      "accessibility: Ota/Tokyo barrier-free plan per-route designated-section list still to be located"
+    ],
+    "bundle_osm": {
+      "path": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/numabe_connected_neighborhood_aoi.osm",
+      "sha256": "12467a39bae46a19e19e9a6d726c00a41bb4212856c36ab1db3325cdec93c463",
+      "finding": "carriageway ways near unnamed spans carry no name/operator tags (lead only; OSM is not an official administrator authority)"
+    },
+    "chainage_mapping_limit": "span midpoints located via Valhalla route geometry (decoded 1042.3m) vs classification route (1016.882m); positions approximate, about 15m tolerance",
+    "structural_findings": [
+      "classification route_key null keeps the 3 span-level owner facts unresolved even if administrator were set (selector span-level check reads the classification route_key)",
+      "no corpus rule constrains road_class (all road_classes empty), so road_class values cannot change verdicts",
+      "road_structure predicate_unproven is driven by project_type null; occupation predicate_unproven on unnamed spans is driven by administrator null"
+    ],
+    "verdict_effect": "Route designation facts do not own derived Step 2 totals. The run-local applicable-law receipt records the current unresolved count and reason distribution against exact corpus and designation hashes."
+  }
+}

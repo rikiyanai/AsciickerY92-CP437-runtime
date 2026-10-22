@@ -1,0 +1,66 @@
+{
+  "providers": {
+    "google_street_view": {
+      "enabled": false
+    },
+    "kartaview": {
+      "control": {
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "radius_m": 500
+      },
+      "enabled": true
+    },
+    "mapillary": {
+      "access_token_env": "MAPILLARY_ACCESS_TOKEN",
+      "enabled": true,
+      "limit": 2000,
+      "max_pages": 20,
+      "tile_zooms": [
+        14,
+        17
+      ],
+      "tilesets": [
+        "mly1_public",
+        "mly1_computed_public"
+      ]
+    },
+    "panoramax": {
+      "control": {
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "radius_m": 500
+      },
+      "enabled": true,
+      "limit": 500
+    },
+    "wikimedia_commons": {
+      "control": {
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "radius_m": 250
+      },
+      "enabled": true,
+      "limit": 100
+    }
+  },
+  "radius_ladder_m": [
+    50,
+    100
+  ],
+  "survey_id": "numabe_mid_route_hero_20260914_open_imagery",
+  "target": {
+    "label": "Numabe route chainage 200 m hero",
+    "lat": 35.58335088058806,
+    "lon": 139.6747304840919
+  },
+  "user_agent": "asciicker-Y9-2-FL4810-hero-acquisition/1.0 (info@yuuz.co)",
+  "viewpoint": {
+    "half_fov_deg": 45.0,
+    "max_range_m": 80.0,
+    "min_baseline_m": 3.0
+  }
+}

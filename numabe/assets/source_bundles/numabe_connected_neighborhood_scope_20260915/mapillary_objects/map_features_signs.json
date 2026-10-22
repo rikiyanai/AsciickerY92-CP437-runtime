@@ -1,0 +1,70 @@
+{
+ "bbox": [
+  139.67221240709017,
+  35.58217993901949,
+  139.67674297090048,
+  35.58784396110593
+ ],
+ "object_values": "object--traffic-sign--regulatory--no-entry,object--traffic-sign--regulatory--stop,object--traffic-sign--warning--crossing,object--support--traffic-sign-frame",
+ "data": [
+  {
+   "id": "1142453943046717",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     139.67467,
+     35.58219
+    ]
+   },
+   "object_value": "object--support--traffic-sign-frame",
+   "object_type": "panoptic",
+   "aligned_direction": 337.35325440855,
+   "first_seen_at": "2022-10-29T06:28:20+0000",
+   "last_seen_at": "2022-10-29T06:28:20+0000",
+   "images": {
+    "data": [
+     {
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        139.67455890043,
+        35.582341407459
+       ]
+      },
+      "id": "479248787517974"
+     },
+     {
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        139.67454783631,
+        35.582377491552
+       ]
+      },
+      "id": "194615319772695"
+     },
+     {
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        139.67455538003,
+        35.582351046647
+       ]
+      },
+      "id": "516193996759568"
+     },
+     {
+      "geometry": {
+       "type": "Point",
+       "coordinates": [
+        139.67455202727,
+        35.582366930354
+       ]
+      },
+      "id": "681399370315545"
+     }
+    ]
+   }
+  }
+ ]
+}

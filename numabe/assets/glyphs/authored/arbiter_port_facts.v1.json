@@ -1,0 +1,226 @@
+{
+  "schema": "fl4359.arbiter_port_facts.v1",
+  "version": 1,
+  "source": "glyph_combinations.v1.json run geometry + tutorial plates + unifont ink rows (tiebreak only) + 41-glyph admission set",
+  "rules": [
+    "R1 run interior -> [W,E]",
+    "R2 run endpoint -> single",
+    "R3 stacked pair -> partner port",
+    "R4 dither set never structural",
+    "R5 corner holder runtime ports",
+    "R6 junction admission fallback",
+    "R7 owned cell keeps through head"
+  ],
+  "notes": [
+    "95 gains no S port: stacked R3 role belongs to the rim family, not the stroke families"
+  ],
+  "rows": {
+    "32": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R-paper",
+      "sources": [
+        "structural space (spec:2649-2650)"
+      ],
+      "ink_row": 8.0
+    },
+    "33": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R4",
+      "sources": [
+        "aa_dot_ladder (dither)"
+      ],
+      "ink_row": 8.222222222222221
+    },
+    "39": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R4",
+      "sources": [
+        "aa_dot_ladder (dither)"
+      ],
+      "ink_row": 3.5
+    },
+    "40": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R4-orb",
+      "sources": [
+        "orb_bracketed (bracket, not a stroke)"
+      ],
+      "ink_row": 8.5
+    },
+    "41": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R4-orb",
+      "sources": [
+        "orb_bracketed (bracket, not a stroke)"
+      ],
+      "ink_row": 8.5
+    },
+    "43": {
+      "ports": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "arms": 4,
+      "components": 1,
+      "rule": "R6",
+      "sources": [
+        "skill S3 connect-where-continuous; 0 vim-daily occurrences; admitted because 8254 is refused"
+      ],
+      "ink_row": 9.0
+    },
+    "45": {
+      "ports": [
+        0,
+        1
+      ],
+      "arms": 2,
+      "components": 1,
+      "rule": "R1+R2",
+      "sources": [
+        "stair_step_rising col-role [0, 1]",
+        "stair_step_falling col-role [0, 1]",
+        "slope_rising_short col-role [0, 1]",
+        "slope_falling_short col-role [0, 1]"
+      ],
+      "ink_row": 9.0
+    },
+    "46": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R4",
+      "sources": [
+        "stair_step_rising cell (dither override)",
+        "stair_step_falling cell (dither override)",
+        "slope_rising_short cell (dither override)",
+        "slope_falling_short cell (dither override)"
+      ],
+      "ink_row": 12.5
+    },
+    "47": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R-fan",
+      "sources": [
+        "fan_open orientation sample; runtime axis ports per rotation triple skill 4.4"
+      ],
+      "ink_row": 8.5
+    },
+    "58": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R5",
+      "sources": [
+        "aa_dot_ladder col2 (dither); corner ports supplied at runtime per skill 4.6"
+      ],
+      "ink_row": 9.0
+    },
+    "92": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R-fan",
+      "sources": [
+        "fan_open orientation sample; runtime axis ports per rotation triple skill 4.4"
+      ],
+      "ink_row": 8.5
+    },
+    "95": {
+      "ports": [
+        0,
+        1
+      ],
+      "arms": 2,
+      "components": 1,
+      "rule": "R1+R2",
+      "sources": [
+        "stair_step_rising col-role [1]",
+        "stair_step_falling col-role [0]"
+      ],
+      "ink_row": 14.0
+    },
+    "96": {
+      "ports": [
+        1
+      ],
+      "arms": 1,
+      "components": 1,
+      "rule": "R1+R2",
+      "sources": [
+        "stair_step_falling col-role [1]",
+        "slope_falling_short col-role [1]"
+      ],
+      "ink_row": 2.0
+    },
+    "111": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R4-orb",
+      "sources": [
+        "orb_bracketed (bracket, not a stroke)"
+      ],
+      "ink_row": 9.5
+    },
+    "124": {
+      "ports": [
+        2,
+        3
+      ],
+      "arms": 2,
+      "components": 1,
+      "rule": "R-measured",
+      "sources": [
+        "fan_collapsed col1 + unifont edge touch (S; N completed by run stacking)"
+      ],
+      "ink_row": 8.5
+    },
+    "161": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R4",
+      "sources": [
+        "aa_dot_ladder (dither)"
+      ],
+      "ink_row": 8.777777777777779
+    },
+    "180": {
+      "ports": [
+        0
+      ],
+      "arms": 1,
+      "components": 1,
+      "rule": "R1+R2",
+      "sources": [
+        "stair_step_rising col-role [0]",
+        "slope_rising_short col-role [0]"
+      ],
+      "ink_row": 2.0
+    },
+    "183": {
+      "ports": [],
+      "arms": 0,
+      "components": 1,
+      "rule": "R4",
+      "sources": [
+        "aa_dot_ladder (dither)"
+      ],
+      "ink_row": 8.5
+    }
+  }
+}

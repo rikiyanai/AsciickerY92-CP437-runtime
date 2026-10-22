@@ -1,0 +1,7 @@
+{
+  "sidecar_version": 1,
+  "profile_kind": "extended_glyph_v1",
+  "content_pack_id": "terrain.extended.v1",
+  "glyph_manifest_hash": "1ff4e22faf91a79fde8ae38c59d0736982a53aafef100d708651dd3f95c9d9cd",
+  "glyph_manifest_path": "assets/glyphs/fixtures/nonexistent_manifest.json"
+}

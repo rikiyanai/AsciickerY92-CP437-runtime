@@ -1,0 +1,102 @@
+{
+ "counts": {
+  "by_verdict": {
+   "PASS": 4191
+  },
+  "instances": 4191,
+  "unresolved_assets": {}
+ },
+ "diagnostics": {
+  "cross_object_ratios": [
+   {
+    "band": [
+     0.3306,
+     0.6139
+    ],
+    "basis": "emitted median over person basis",
+    "intended": 0.4722,
+    "pair": "bollard/person",
+    "ratio": 0.478,
+    "verdict": "PASS"
+   },
+   {
+    "band": [
+     0.1983,
+     0.3683
+    ],
+    "basis": "emitted median over person basis",
+    "intended": 0.2833,
+    "pair": "curb_height/person",
+    "ratio": 0.011,
+    "reason": "ratio outside intended band [0.1983, 0.3683]",
+    "verdict": "FAIL"
+   },
+   {
+    "band": null,
+    "basis": "person basis",
+    "pair": "bench/person",
+    "ratio": null,
+    "reason": "no emitted bench median",
+    "verdict": "UNRESOLVED"
+   },
+   {
+    "band": null,
+    "basis": "emitted median heights",
+    "pair": "lamp/bench",
+    "ratio": null,
+    "reason": "no emitted bench height",
+    "verdict": "UNRESOLVED"
+   },
+   {
+    "band": [
+     0.4136,
+     0.7682
+    ],
+    "basis": "emitted median heights",
+    "intended": 0.5909,
+    "pair": "signal/lamp",
+    "ratio": 0.61,
+    "verdict": "PASS"
+   },
+   {
+    "band": [
+     0.4466,
+     0.8293
+    ],
+    "basis": "emitted median heights",
+    "intended": 0.6379,
+    "pair": "vending/storefront",
+    "ratio": 0.308,
+    "reason": "ratio outside intended band [0.4466, 0.8293]",
+    "verdict": "FAIL"
+   },
+   {
+    "band": null,
+    "basis": "emitted median heights",
+    "pair": "building/road",
+    "ratio": 1.711,
+    "reason": "no intended height for building_mass",
+    "verdict": "UNRESOLVED"
+   },
+   {
+    "band": null,
+    "basis": "emitted median heights",
+    "pair": "tree/building",
+    "ratio": 0.857,
+    "reason": "no intended height for building_mass",
+    "verdict": "UNRESOLVED"
+   }
+  ],
+  "gating": false,
+  "reason": "cross-object medians are streetscape diagnostics; only per-instance physical contracts gate object metric"
+ },
+ "fails": [],
+ "inputs": {
+  "build_dir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple",
+  "mass_receipt": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/building_mass_receipt.json",
+  "specs": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/building_instances.json",
+  "terrain_metadata": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/terrain_metadata.json"
+ },
+ "inputs_absent": [],
+ "schema": "y92.object_metric_counts.v1"
+}

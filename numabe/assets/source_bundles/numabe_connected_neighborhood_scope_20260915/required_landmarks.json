@@ -1,0 +1,96 @@
+{
+  "construction": {
+    "base_aoi": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/connected_scope.geojson",
+    "base_route_buffer_m": 55.0,
+    "base_endpoint_radius_m": 75.0,
+    "connected_union": true,
+    "generated_utc": "2026-09-17T00:00:00Z",
+    "landmark_source": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/numabe_connected_neighborhood_aoi.osm way/37661730",
+    "method": "landmark record reused from the sakurazaka bundle (same OSM way, verified inside the connected AOI ring); route_aoi re-declared for the connected scope",
+    "operation": "reuse of sakurazaka required_landmarks landmark way/37661730; connected union already frozen in connected_scope.geojson",
+    "output_aoi": "connected_scope.geojson",
+    "projection": "EPSG:4326 -> EPSG:32654 via scripts/pipeline/geo_frames.py"
+  },
+  "landmarks": [
+    {
+      "aoi_lobe_feature_id": "required_landmark_lobe_sakurazaka",
+      "buffer_m": 35.0,
+      "buffer_method": "metric capsule in EPSG:32654, 16 segments per quadrant",
+      "full_way_coordinates_lonlat": [
+        [
+          139.6747211,
+          35.5851761
+        ],
+        [
+          139.67477,
+          35.5852294
+        ],
+        [
+          139.674839,
+          35.5853046
+        ],
+        [
+          139.6751292,
+          35.5856564
+        ],
+        [
+          139.6754133,
+          35.5860875
+        ],
+        [
+          139.6755635,
+          35.5862948
+        ],
+        [
+          139.6756122,
+          35.5863549
+        ],
+        [
+          139.6757707,
+          35.5865506
+        ],
+        [
+          139.6757919,
+          35.5865728
+        ],
+        [
+          139.6758276,
+          35.5866102
+        ]
+      ],
+      "landmark_id": "sakurazaka",
+      "name": "桜坂",
+      "osm_id": 37661730,
+      "osm_type": "way",
+      "presentation_recipe": {
+        "handrail_family": "jp_tokyo_white_tube_double",
+        "handrail_setback_m": 3.0,
+        "handrail_sides": [
+          -1,
+          1
+        ],
+        "handrail_spacing_m": 4.2,
+        "method": "operator-required landmark tree/handrail/retaining-edge grammar grounded to the OSM road and DEM; positions are not surveyed",
+        "provenance_class": "synthesized",
+        "retaining_edge_family": "tokyo_slope_low_concrete",
+        "setback_m": 5.0,
+        "tree_spacing_m": 6.0,
+        "vegetation_family": "cherry_tree"
+      },
+      "source_ref": "way/37661730",
+      "vertex_count": 10
+    }
+  ],
+  "route_aoi": {
+    "aoi_area_m2": 123918.425,
+    "bbox_lonlat": [
+      139.67221240709017,
+      35.58217993901949,
+      139.67674297090048,
+      35.58784396110593
+    ],
+    "frozen_route_preserved": true,
+    "source_bundle": "numabe_connected_neighborhood_scope_20260915"
+  },
+  "schema": "y92.required_landmarks/1"
+}

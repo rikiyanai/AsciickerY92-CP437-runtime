@@ -1,0 +1,24 @@
+{
+  "schema": "asciicker.car.native_foreground_binding.v1",
+  "subject": "ae86",
+  "status": "MANUAL_INTEGRATION_IN_REVIEW_NOT_RUNTIME_ACCEPTANCE",
+  "mechanical_contract": "assets/meshes/incoming/approved_car_foreground.mechanics.json",
+  "construction": "articles/fl4831-aahub-car-turntables-20261019/revision-04/ae86/construction.json",
+  "construction_sha256": "2182f28ddb74bf81aa0bddbabcaa88e786462839ff5d777b800b28f9ea521365",
+  "authorship": "Retain every native passage of the approved Levin-informed target over all96frames. Manual semantic binding, not newly hand-typed source drawings and not a Cresta drawing on another mesh.",
+  "inspected_native_samples": [0],
+  "sequence": {"first": 0, "last": 95, "retain": "The full source glyph order, proportional advances and protected white gaps at every view."},
+  "bindings": [
+    {"prefix": "body.", "part": 0, "retain": "Low angular wedge, sloping bonnet, straight shoulder and squared rear; retain the separate arch and sill turns."},
+    {"prefix": "cabin.", "part": 0, "retain": "Raked compact cabin with source roof/screen/backlight joins, not an upright sedan or a Porsche roof arc."},
+    {"prefix": "glass.", "part": 0, "retain": "Front side glass and separate rear-quarter pane; retain the six source protected openings and clear interiors."},
+    {"prefix": "door.", "part": 0, "retain": "The source's long-door seam and short handle relationships; do not invent Cresta rear-door seams."},
+    {"prefix": "mirror.", "part": 0, "retain": "Original attached mirror/stalk shapes."},
+    {"prefix": "front.", "part": 0, "retain": "Thin fixed rectangular lamp/grille fascia, bonnet edge, separate bumper and physical ﾏ59-55 plate; no popup-lamp substitution."},
+    {"prefix": "rear.", "part": 0, "retain": "Source rear lip, lamp band, bumper and physical ﾏ59-55 plate."},
+    {"prefix": "form.", "part": 0, "retain": "Original subordinate shoulder/arch roll marks; preserve intentional empty panels."}
+  ],
+  "wheel_character": "Retain the source four-vent wheels with their own proportions and rotation, not a generic tire character stamp.",
+  "output": "godot_project/assets/world_mesh/foreground/ae86.native.json",
+  "open": ["Runtime continuous rotation", "Player walk-around", "Scale and occlusion transitions"]
+}

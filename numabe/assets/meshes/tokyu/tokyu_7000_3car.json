@@ -1,0 +1,44 @@
+{
+ "schema": "y92.classic_train_mesh.v1",
+ "generator": "scripts/build_tokyu_train_akm.py",
+ "train": "Tokyu 7000 series (2007), Tokyu Tamagawa Line 3-car set",
+ "units": {
+  "vertex": "map units = metres x units_per_metre on x, y, z",
+  "units_per_metre": 5.1320023927966725,
+  "instance_z_scale": 16.0,
+  "axes": "+x forward along track, +y left, +z up; origin car centre at rail top"
+ },
+ "dimensions_m": {
+  "car_length_end": 18.1,
+  "car_length_mid": 18.0,
+  "width": 2.8,
+  "height": 4.05,
+  "set_length": 54.2
+ },
+ "livery": "unpainted stainless with dark/light green bands, green roof, black raked windscreen",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Tokyu_7000_series",
+  "https://ja.wikipedia.org/wiki/東急7000系電車_(2代)"
+ ],
+ "consist": [
+  {
+   "mesh": "tokyu_7000_7100_mc.akm",
+   "car": "DeHa 7100 (Mc)",
+   "length_m": 18.1,
+   "faces": 177
+  },
+  {
+   "mesh": "tokyu_7000_7200_m.akm",
+   "car": "DeHa 7200 (M)",
+   "length_m": 18.0,
+   "faces": 178
+  },
+  {
+   "mesh": "tokyu_7000_7300_tc.akm",
+   "car": "KuHa 7300 (Tc)",
+   "length_m": 18.1,
+   "faces": 177
+  }
+ ],
+ "joined_mesh": "tokyu_7000_3car.akm"
+}

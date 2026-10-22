@@ -1,0 +1,168 @@
+{
+  "schema": "y92.object_detection_vocabulary.v1",
+  "model": {
+    "id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "license": "Apache-2.0",
+    "source_uri": "https://huggingface.co/IDEA-Research/grounding-dino-tiny/tree/a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "weights_sha256": "1a2412ef99bd74bcd3c2a246fa1e48581f8889a1300c9051974741314fc042f3"
+  },
+  "classes": [
+    {
+      "semantic_class": "station_identity_sign",
+      "prompts": [
+        "Numabe Station sign",
+        "Japanese station sign",
+        "station identity sign"
+      ]
+    },
+    {
+      "semantic_class": "statutory_traffic_sign",
+      "prompts": [
+        "Japanese road traffic sign",
+        "official traffic sign"
+      ]
+    },
+    {
+      "semantic_class": "bicycle_parking_prohibited_notice",
+      "prompts": [
+        "bicycle parking prohibited notice",
+        "no bicycle parking sign"
+      ]
+    },
+    {
+      "semantic_class": "railway_crossing_signal",
+      "prompts": [
+        "railway crossing signal",
+        "railway crossing warning light"
+      ]
+    },
+    {
+      "semantic_class": "traffic_signal",
+      "prompts": [
+        "traffic light",
+        "pedestrian traffic signal"
+      ]
+    },
+    {
+      "semantic_class": "vending_machine",
+      "prompts": [
+        "Japanese vending machine",
+        "vending machine"
+      ]
+    },
+    {
+      "semantic_class": "utility_pole",
+      "prompts": [
+        "utility pole",
+        "wooden utility pole",
+        "concrete utility pole"
+      ]
+    },
+    {
+      "semantic_class": "street_lamp",
+      "prompts": [
+        "street light pole",
+        "street lamp"
+      ]
+    },
+    {
+      "semantic_class": "traffic_mirror",
+      "prompts": [
+        "convex traffic mirror",
+        "round roadside mirror"
+      ]
+    },
+    {
+      "semantic_class": "guardrail",
+      "prompts": [
+        "Japanese roadside guardrail",
+        "guardrail"
+      ]
+    },
+    {
+      "semantic_class": "bollard",
+      "prompts": [
+        "street bollard",
+        "roadside bollard"
+      ]
+    },
+    {
+      "semantic_class": "bicycle",
+      "prompts": [
+        "bicycle",
+        "parked bicycle"
+      ]
+    },
+    {
+      "semantic_class": "bicycle_rack",
+      "prompts": [
+        "bicycle rack",
+        "bicycle parking rack"
+      ]
+    },
+    {
+      "semantic_class": "bench",
+      "prompts": [
+        "street bench",
+        "station bench"
+      ]
+    },
+    {
+      "semantic_class": "planter",
+      "prompts": [
+        "street planter",
+        "plant pot"
+      ]
+    },
+    {
+      "semantic_class": "exterior_air_conditioner",
+      "prompts": [
+        "exterior air conditioner unit",
+        "air conditioner condenser"
+      ]
+    },
+    {
+      "semantic_class": "facade_door",
+      "prompts": [
+        "building entrance door",
+        "storefront entrance"
+      ]
+    },
+    {
+      "semantic_class": "facade_window",
+      "prompts": [
+        "building window",
+        "storefront window"
+      ]
+    },
+    {
+      "semantic_class": "tactile_paving",
+      "prompts": [
+        "yellow tactile paving",
+        "tactile paving strip"
+      ]
+    },
+    {
+      "semantic_class": "crosswalk",
+      "prompts": [
+        "pedestrian crosswalk",
+        "zebra crossing"
+      ]
+    },
+    {
+      "semantic_class": "tree",
+      "prompts": [
+        "street tree",
+        "tree"
+      ]
+    },
+    {
+      "semantic_class": "hedge",
+      "prompts": [
+        "hedge",
+        "trimmed hedge"
+      ]
+    }
+  ]
+}

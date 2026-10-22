@@ -1,0 +1,35 @@
+{
+  "survey_id": "numabe_added_sakurazaka_lawson_route_20260915_mapillary",
+  "user_agent": "asciicker-Y9-2-FL4810-added-route-acquisition/1.0 (info@yuuz.co)",
+  "target": {
+    "label": "added route near full Sakurazaka",
+    "lat": 35.584884,
+    "lon": 139.675333
+  },
+  "aoi_bbox_lonlat": [
+    139.67221240709017,
+    35.58217993901949,
+    139.67674297090048,
+    35.58784396110593
+  ],
+  "aoi_feature_role": "aoi",
+  "aoi_geojson": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/connected_scope.geojson",
+  "radius_ladder_m": [
+    400
+  ],
+  "viewpoint": {
+    "half_fov_deg": 45.0,
+    "max_range_m": 80.0,
+    "min_baseline_m": 3.0
+  },
+  "providers": {
+    "mapillary": {
+      "allow_public_web_client_token": true,
+      "access_token_env": "MAPILLARY_ACCESS_TOKEN",
+      "enabled": true,
+      "limit": 2000,
+      "max_pages": 20,
+      "tilesets": []
+    }
+  }
+}

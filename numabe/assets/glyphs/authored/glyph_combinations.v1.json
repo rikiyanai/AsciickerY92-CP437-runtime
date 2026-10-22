@@ -1,0 +1,559 @@
+{
+  "schema": "fl4512.glyph_combinations.v1",
+  "version": 1,
+  "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+  "description": "Recurring 2-3 cell glyph combinations from the Stone Story RPG ASCII-art tutorials, stored as cell offsets plus codepoints. \"Learning ASCII art is about learning these combinations\" and \"what are the permutations of those symbols in two dimensions on the grid\" (o5v-NS9o4yc 27:56-28:20); \"there are certain combinations of glyphs that always come up\" (5sFVVQcUWVE 11:55). Mirroring these is named as the exercise itself (o5v-NS9o4yc 31:12-31:40).",
+  "owner": "Reviewed source data for scripts/glyph_families_viewer.py --mode combo and scripts/compile_native_terminal_atlas.py. The compiler preserves native IDs, relative offsets and mirrors in authored_glyph_vocabulary.glslinc. Generated availability is not runtime motif admission.",
+  "mirror_rule": "A combination's horizontal mirror reflects cell columns (col -> cols-1-col, row unchanged) and maps each codepoint through glyph_audit.find_mirror. A codepoint with no find_mirror partner is horizontally symmetric in the font raster and is carried through unchanged (cp_source: identity).",
+  "cell_px": 16,
+  "font": "assets/fonts/unifont-17.0.04.otf",
+  "combinations": [
+    {
+      "id": "stair_step_rising",
+      "label": "stair step rising",
+      "note": "The stair-step exercise, read left to right and climbing: underscore, dot, hyphen, acute accent (U+00B4). The tutorial page plates it as _.-´ (PAGE §6); the apostrophe U+0027 is a different glyph with a different role (skill §4.1) and was replaced here on 2026-09-08. Named as a practice pattern at o5v-NS9o4yc 30:01.",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 4,
+      "rows": 1,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 95,
+          "char": "_"
+        },
+        {
+          "col": 1,
+          "row": 0,
+          "cp": 46,
+          "char": "."
+        },
+        {
+          "col": 2,
+          "row": 0,
+          "cp": 45,
+          "char": "-"
+        },
+        {
+          "col": 3,
+          "row": 0,
+          "cp": 180,
+          "char": "´"
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": false,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 96,
+            "char": "`",
+            "cp_source": "find_mirror"
+          },
+          {
+            "col": 1,
+            "row": 0,
+            "cp": 45,
+            "char": "-",
+            "cp_source": "identity"
+          },
+          {
+            "col": 2,
+            "row": 0,
+            "cp": 46,
+            "char": ".",
+            "cp_source": "identity"
+          },
+          {
+            "col": 3,
+            "row": 0,
+            "cp": 95,
+            "char": "_",
+            "cp_source": "identity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stair_step_falling",
+      "label": "stair step falling",
+      "note": "The stair-step exercise mirrored: backtick (U+0060, the acute accent's mirror partner), hyphen, dot, underscore. Typed as the mirror of _.-´ per o5v-NS9o4yc 30:08.",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 4,
+      "rows": 1,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 96,
+          "char": "`"
+        },
+        {
+          "col": 1,
+          "row": 0,
+          "cp": 45,
+          "char": "-"
+        },
+        {
+          "col": 2,
+          "row": 0,
+          "cp": 46,
+          "char": "."
+        },
+        {
+          "col": 3,
+          "row": 0,
+          "cp": 95,
+          "char": "_"
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": false,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 95,
+            "char": "_",
+            "cp_source": "identity"
+          },
+          {
+            "col": 1,
+            "row": 0,
+            "cp": 46,
+            "char": ".",
+            "cp_source": "identity"
+          },
+          {
+            "col": 2,
+            "row": 0,
+            "cp": 45,
+            "char": "-",
+            "cp_source": "identity"
+          },
+          {
+            "col": 3,
+            "row": 0,
+            "cp": 180,
+            "char": "´",
+            "cp_source": "find_mirror"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slope_rising_short",
+      "label": "short rising slope .-'",
+      "note": "The short slope: dot, hyphen, acute accent (U+00B4). A shallower climb than the four-cell stair step; the apostrophe U+0027 was replaced by the plate's acute on 2026-09-08.",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 3,
+      "rows": 1,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 46,
+          "char": "."
+        },
+        {
+          "col": 1,
+          "row": 0,
+          "cp": 45,
+          "char": "-"
+        },
+        {
+          "col": 2,
+          "row": 0,
+          "cp": 180,
+          "char": "´"
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": false,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 96,
+            "char": "`",
+            "cp_source": "find_mirror"
+          },
+          {
+            "col": 1,
+            "row": 0,
+            "cp": 45,
+            "char": "-",
+            "cp_source": "identity"
+          },
+          {
+            "col": 2,
+            "row": 0,
+            "cp": 46,
+            "char": ".",
+            "cp_source": "identity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slope_falling_short",
+      "label": "short falling slope '-.",
+      "note": "The short slope mirrored: backtick (U+0060), hyphen, dot.",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 3,
+      "rows": 1,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 96,
+          "char": "`"
+        },
+        {
+          "col": 1,
+          "row": 0,
+          "cp": 45,
+          "char": "-"
+        },
+        {
+          "col": 2,
+          "row": 0,
+          "cp": 46,
+          "char": "."
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": false,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 46,
+            "char": ".",
+            "cp_source": "identity"
+          },
+          {
+            "col": 1,
+            "row": 0,
+            "cp": 45,
+            "char": "-",
+            "cp_source": "identity"
+          },
+          {
+            "col": 2,
+            "row": 0,
+            "cp": 180,
+            "char": "´",
+            "cp_source": "find_mirror"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fan_open",
+      "label": "open fan \\ | /",
+      "note": "Three diagonals spreading from one root. Self-symmetric under horizontal mirror: the backslash and slash swap cells and swap glyphs.",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 3,
+      "rows": 1,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 92,
+          "char": "\\"
+        },
+        {
+          "col": 1,
+          "row": 0,
+          "cp": 124,
+          "char": "|"
+        },
+        {
+          "col": 2,
+          "row": 0,
+          "cp": 47,
+          "char": "/"
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": true,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 92,
+            "char": "\\",
+            "cp_source": "find_mirror"
+          },
+          {
+            "col": 1,
+            "row": 0,
+            "cp": 124,
+            "char": "|",
+            "cp_source": "identity"
+          },
+          {
+            "col": 2,
+            "row": 0,
+            "cp": 47,
+            "char": "/",
+            "cp_source": "find_mirror"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fan_collapsed",
+      "label": "collapsed fan | | |",
+      "note": "The open fan's collapse: the same three cells with every diagonal resolved to a vertical. The pair (fan_open, fan_collapsed) is the spread/gather permutation of one mark.",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 3,
+      "rows": 1,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 124,
+          "char": "|"
+        },
+        {
+          "col": 1,
+          "row": 0,
+          "cp": 124,
+          "char": "|"
+        },
+        {
+          "col": 2,
+          "row": 0,
+          "cp": 124,
+          "char": "|"
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": true,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 124,
+            "char": "|",
+            "cp_source": "identity"
+          },
+          {
+            "col": 1,
+            "row": 0,
+            "cp": 124,
+            "char": "|",
+            "cp_source": "identity"
+          },
+          {
+            "col": 2,
+            "row": 0,
+            "cp": 124,
+            "char": "|",
+            "cp_source": "identity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "orb_bracketed",
+      "label": "bracketed orb ( o )",
+      "note": "Round mass held between two brackets. Self-symmetric: the parentheses swap cells and swap glyphs. The 'o' is the one alphanumeric the source keeps (o5v-NS9o4yc 23:55).",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 3,
+      "rows": 1,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 40,
+          "char": "("
+        },
+        {
+          "col": 1,
+          "row": 0,
+          "cp": 111,
+          "char": "o"
+        },
+        {
+          "col": 2,
+          "row": 0,
+          "cp": 41,
+          "char": ")"
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": true,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 40,
+            "char": "(",
+            "cp_source": "find_mirror"
+          },
+          {
+            "col": 1,
+            "row": 0,
+            "cp": 111,
+            "char": "o",
+            "cp_source": "identity"
+          },
+          {
+            "col": 2,
+            "row": 0,
+            "cp": 41,
+            "char": ")",
+            "cp_source": "find_mirror"
+          }
+        ]
+      }
+    },
+    {
+      "id": "boundary_line_pair",
+      "label": "overscore below vs underscore above",
+      "note": "Two ways to draw the SAME line on a cell boundary: an underscore sitting at the bottom of the upper cell, or an overline sitting at the top of the lower cell. Stacked here so a reviewer sees both halves of the boundary at once. Half-cell horizontals are discussed at 5sFVVQcUWVE 18:30.",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 1,
+      "rows": 2,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 95,
+          "char": "_"
+        },
+        {
+          "col": 0,
+          "row": 1,
+          "cp": 8254,
+          "char": "‾"
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": true,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 95,
+            "char": "_",
+            "cp_source": "identity"
+          },
+          {
+            "col": 0,
+            "row": 1,
+            "cp": 8254,
+            "char": "‾",
+            "cp_source": "identity"
+          }
+        ]
+      }
+    },
+    {
+      "id": "aa_dot_ladder",
+      "label": "AA dot ladder . ' : ¡ ! ·",
+      "note": "The ASCII-art dot set: the same small mark at six vertical positions and weights within the cell, which is how vertical sub-cell placement is obtained without changing the grid.",
+      "source": "o5v-NS9o4yc 27:56-31:40; 5sFVVQcUWVE 11:55-12:09",
+      "cols": 6,
+      "rows": 1,
+      "cells": [
+        {
+          "col": 0,
+          "row": 0,
+          "cp": 46,
+          "char": "."
+        },
+        {
+          "col": 1,
+          "row": 0,
+          "cp": 39,
+          "char": "'"
+        },
+        {
+          "col": 2,
+          "row": 0,
+          "cp": 58,
+          "char": ":"
+        },
+        {
+          "col": 3,
+          "row": 0,
+          "cp": 161,
+          "char": "¡"
+        },
+        {
+          "col": 4,
+          "row": 0,
+          "cp": 33,
+          "char": "!"
+        },
+        {
+          "col": 5,
+          "row": 0,
+          "cp": 183,
+          "char": "·"
+        }
+      ],
+      "mirror": {
+        "method": "horizontal",
+        "self_symmetric": false,
+        "cells": [
+          {
+            "col": 0,
+            "row": 0,
+            "cp": 183,
+            "char": "·",
+            "cp_source": "identity"
+          },
+          {
+            "col": 1,
+            "row": 0,
+            "cp": 33,
+            "char": "!",
+            "cp_source": "identity"
+          },
+          {
+            "col": 2,
+            "row": 0,
+            "cp": 161,
+            "char": "¡",
+            "cp_source": "identity"
+          },
+          {
+            "col": 3,
+            "row": 0,
+            "cp": 58,
+            "char": ":",
+            "cp_source": "identity"
+          },
+          {
+            "col": 4,
+            "row": 0,
+            "cp": 39,
+            "char": "'",
+            "cp_source": "identity"
+          },
+          {
+            "col": 5,
+            "row": 0,
+            "cp": 46,
+            "char": ".",
+            "cp_source": "identity"
+          }
+        ]
+      }
+    }
+  ]
+}

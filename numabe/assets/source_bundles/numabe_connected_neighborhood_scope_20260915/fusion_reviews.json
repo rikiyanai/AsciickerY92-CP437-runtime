@@ -1,0 +1,411 @@
+{
+ "counts": {
+  "candidates": 30,
+  "conflicts_dropped": 0
+ },
+ "observations": {
+  "feature:mapillary_object/1168798280653865": {
+   "basis": "Overhead horizontal traffic lights clearly visible in the single frame, consistent with a mapped signal fixture.",
+   "confidence": 0.75,
+   "frames": [
+    "mapillary_142857205158097_An-OUQZeMZN5u5lMGC_XI5hli8rghxUQHG_9q2I68kYqBd1Y7P82Z1HcfjQ9zjBczyeVoau0nhnKEDp3QxERDDLKs6e9mBjv7uhn6xoG--U4efOEvfe5pBoij9HLso2euKEPqWNrU26nroWwMdSUzTo_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/1168798310653862": {
+   "basis": "No frames attached to this candidate, so no visual comparison is possible.",
+   "confidence": 0.0,
+   "frames": [],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": null,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/1168798327320527": {
+   "basis": "Frames show the same signalized street with overhead traffic lights, consistent with a mapped signal fixture.",
+   "confidence": 0.7,
+   "frames": [
+    "mapillary_142857205158097_An-OUQZeMZN5u5lMGC_XI5hli8rghxUQHG_9q2I68kYqBd1Y7P82Z1HcfjQ9zjBczyeVoau0nhnKEDp3QxERDDLKs6e9mBjv7uhn6xoG--U4efOEvfe5pBoij9HLso2euKEPqWNrU26nroWwMdSUzTo_st",
+    "mapillary_4167024639984314_An-_SoeMqJ3d-0mHyovM_y9s-ILS9JvHW7ydn5uHAjwcsEmqygBJUmjmOGsktLZqXPRRslsrJu-DNbDCzDyVWdGF0ZX0OAdaD9A1xzUi2VLfmm3fdRVUD_edtVmbBsKon_fC1wC1_3dHbeurtB6G_w_st",
+    "mapillary_680617530000398_An9vhEwq7k7uio_C8KGrFVzZ1A4KhjWrcMMJ2QA9Fd9lY8XK88FNedkYKy03nA4bff8tTLSoYGkt4mai3Bq1OLJzdTvjTGM-GaIe_Wt-aW797l1qptK6LhIndZmamOEL3JZVDCaiy94Yb5QxZ2XuWg_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/1168798343987192": {
+   "basis": "Intersection frames show a pole-mounted traffic light at the crosswalk, consistent with a mapped signal fixture.",
+   "confidence": 0.8,
+   "frames": [
+    "mapillary_4132819600116881_An8wtl3__9BjCIpTdBHJs5RXZWAD2JFJwIOhN2vL7_HZu_v5Q7wTIzS5Kj3PIAgbvK-3lbvlpTNY-L2ZYwTppxOLoMyfMybdF0JNMsWqKqmadxhW-uVs0oIPBui4ZqwFt1S_PsDtJJKUlduS1BuzjA_st",
+    "mapillary_456840156518107_An975aaoG5r8kTr4JLGOcqXUbpzD7dhoRlPFDGhIvtU1dMrld6V1VlZyKRXcR-qcELhQ6Xg33kOM0ShC-6PJL0LuBXc-Axavgv-Wf-_GAiqr8vEI3cqp_NSut4MDwApLj09sXb0LYT67Dx_PAtlAj4Y_st",
+    "mapillary_1129661880872738_An-ZaWyPu-uMH2JqWuy6Cx_SiihVjGntO1BCGUXJ1J8AdGEa8sYaInp5j-7QpqrOkK73Sy6m-tO5dRYRYRB9_ksHU8HFM4Pwxsp-os-HEtBKRICQ-nXNrr45vqJXvxrK7-Ka0nU6WYvjo9769YAhqg_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/1168798423987184": {
+   "basis": "All three frames show only rooftops and buildings from a train; no cone or street fixture visible anywhere.",
+   "confidence": 0.7,
+   "frames": [
+    "mapillary_337017681186570_An-7OUSxqxh7kdQiRX5vj2YoFjTg358TA0bDVxj9LxSTKVLDmfbOznv4Dhi81zvfzuQass0i-kMoEbUiI5vMAIGmSrMrLfUG0xi7N7kAfkvThlIW77GW9dZOzptJBZUQJPZ0nEhSif-GBhJQgZ9rkA4_st",
+    "mapillary_339580077724435_An93x5Mbww7T6dliZh7ET0ucNwOb0XKKy2HnASaNkHJvTSvbpbjUE3wi2hF8RvgtFGbWUbUP_Yxu_-_SWbNfReGEPa_yYYR5Atg_SIXHQMcKaXP0IAMFYgyFYPhd6JjKLbceyKezsLvaeQnq_RgDgU4_st",
+    "mapillary_5812792115512838_An-9Fq7uQQGIomyQGFYIiTMwjxNuSz1F7wH8h1S_wJx01g9lgABg0pa4TkovRhxaoLntSna0a1-rwKDBLLv7szpoD-SxRBfPYPueaFmp4SEDuIOjhAunXGEag90orUtxPjuHHaHbW2iaup-cXDbSfA_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/1168798493987177": {
+   "basis": "One frame shows a pole-mounted traffic light on the street, consistent with a mapped signal fixture.",
+   "confidence": 0.7,
+   "frames": [
+    "mapillary_151386460324139_An8cnjjVeEQ3rzFDVFyMW841GJcJ4qCoG2PEij8pDeewb2-LV0GCN3EkhIqfDtw-bybD6XhbUMnUHbTkAFzKo--o4dQ60vccf1LLNrmH4dsIrtQ26tZOH4szwSO48hV3MBDV5TTH9wsF6GM23cLbGtk_st",
+    "mapillary_174417261211208_An_sShakHcP0mVsIqQWYnhxyPh_hGf1rvkrw8x3U9Wcv2bPAPfNEkIq0P2iksXJG9b0pc8RFAqkcomsamM6mig7VmoXmMhKDGdIFQlJdzAoA8coW5KEh0EOIrVjQgZGMC-AKVwse4ZgR_Z8WLJSu0w_stp",
+    "mapillary_2988264754753393_An-qP7LmPUHyqBUQQPe3Mj4XBGhlbAbenk320OSKlZ-pW0CJxPtvu-djgL7tlVQJmy4UJY1Hs-21Bc7TUjdG0725ggKlfuYQg7LOdNXNk4nmfPvVp6HvmuvEE6QKthroRyHw66bNGb-15orhf5HUyg_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/2974909249321825": {
+   "basis": "One frame shows a stone information monument with map plaques, consistent with a mapped sign object.",
+   "confidence": 0.55,
+   "frames": [
+    "mapillary_1104326573585367_An9IngASf2WFJIW8lzc-G6F-fOKzx5sb6RZHnp-zYj2Gt0rtNVdi_29Uo_DHNZ5xXcOSz-fJznlWxU8ggWokef9RZoZzWP2MISypyutFa2fTG6Waa97fQoBxSsP5eXYSPEmkE5s_a2dx6jEwPKflQA_st",
+    "mapillary_805995193382440_An80XoCxLno1cqyg_g-z_SX0RoqozmU1DSlZpbsqNExrOkPBurKZ-O2KyAMVbLvyTrSTy7EHCcO_-3M1YAkKfTHHIeSlnNSPsk4LW7HA2eHHHBvsPuxsxgc1DnvYqlATu8eFHaJKo1m3jym3wyBMVM4_st",
+    "mapillary_195549839614786_An-onWxTStIC_09kCRL4zsaJfsoNoJPIOEr3FHn-sI1nz4Gk5t-my6z1bUfdAr68VJp6-f4hQ0WSZa-Na8mUDw2TT826oNtrLS_-qsH7uQHc30h5S9XFe-QL0ryBYlL5rkBXqK-vEGP7GXi75Ud0lO8_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:sign:node/2340149659",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/2974909269321823": {
+   "basis": "All three frames are canal-path panoramas with no identifiable sign visible in any view.",
+   "confidence": 0.4,
+   "frames": [
+    "mapillary_805995193382440_An80XoCxLno1cqyg_g-z_SX0RoqozmU1DSlZpbsqNExrOkPBurKZ-O2KyAMVbLvyTrSTy7EHCcO_-3M1YAkKfTHHIeSlnNSPsk4LW7HA2eHHHBvsPuxsxgc1DnvYqlATu8eFHaJKo1m3jym3wyBMVM4_st",
+    "mapillary_195549839614786_An-onWxTStIC_09kCRL4zsaJfsoNoJPIOEr3FHn-sI1nz4Gk5t-my6z1bUfdAr68VJp6-f4hQ0WSZa-Na8mUDw2TT826oNtrLS_-qsH7uQHc30h5S9XFe-QL0ryBYlL5rkBXqK-vEGP7GXi75Ud0lO8_st",
+    "mapillary_808704673093880_An-SFehSrK11Jfa8aFnXIYntCqva1KGvyJg23AuJb_3wMzFHP1YEzdW99Gr_97ng1viCs4JEkfdjZP47Y-Bbdm0K4ooZMTOdgfpEmeT5_l1wxPxJqmdHABJqnJQbl8tX4nujW13OCKaEKYWKPWC0lJo_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:sign:node/2340149659",
+   "same_object": null,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/3174343642876863": {
+   "basis": "A round manhole cover is visible on the walkway in the panorama frames, consistent with a mapped fixture.",
+   "confidence": 0.55,
+   "frames": [
+    "mapillary_1104326573585367_An9IngASf2WFJIW8lzc-G6F-fOKzx5sb6RZHnp-zYj2Gt0rtNVdi_29Uo_DHNZ5xXcOSz-fJznlWxU8ggWokef9RZoZzWP2MISypyutFa2fTG6Waa97fQoBxSsP5eXYSPEmkE5s_a2dx6jEwPKflQA_st",
+    "mapillary_195549839614786_An-onWxTStIC_09kCRL4zsaJfsoNoJPIOEr3FHn-sI1nz4Gk5t-my6z1bUfdAr68VJp6-f4hQ0WSZa-Na8mUDw2TT826oNtrLS_-qsH7uQHc30h5S9XFe-QL0ryBYlL5rkBXqK-vEGP7GXi75Ud0lO8_st",
+    "mapillary_805995193382440_An80XoCxLno1cqyg_g-z_SX0RoqozmU1DSlZpbsqNExrOkPBurKZ-O2KyAMVbLvyTrSTy7EHCcO_-3M1YAkKfTHHIeSlnNSPsk4LW7HA2eHHHBvsPuxsxgc1DnvYqlATu8eFHaJKo1m3jym3wyBMVM4_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/2339232435",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/497691318341937": {
+   "basis": "Frames show only a shop corner with utility cabinets; no traffic light visible in any view.",
+   "confidence": 0.7,
+   "frames": [
+    "mapillary_494839251650001_An9gtQ8MRM4zCMvPbgiKEhz6e85W2_CmMYnp1LLihVUzm_MYkgNYquvpeQ-re0CRWWqnA-b9JKmmEeFSxZkR9qMcTFUCXQ1ih8xhTp9RB0lgl7CFD9fS_NrGAEoHrwGzxZ_LeFtI7f7hav0Bt7kbUg_stp",
+    "mapillary_512859586791898_An-9SvygENW8cvN5zAzrm4OqTdaAcXFjbkQhVBfDw9eCbeAMO-I3bjHAJg_WLDmr7303QZ9oJc2Bt_jfki0EPu8kJeRAbMfySU38mg9CpxAazKAJOx58XuToyzobEA0Rda8dc007eutrY4iUTBswbA_stp",
+    "mapillary_971826116924489_An-DJMk1S-v-Y_BXcOultbBaDCx38B1YoBe9wOrTH7Fx1Dd1ln4S_6b33xP0FJlSFu3clRsXgM7ByRr4YS2k_UDoJH-mCek9oYcI90Tqu9bIZ7sWVv3jgQQCzEOpQfmQc8Y52nmT6OJDWnErtLzjJw_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/10669964998",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/497717568339312": {
+   "basis": "The single frame shows a restaurant storefront with no traffic cone visible anywhere.",
+   "confidence": 0.7,
+   "frames": [
+    "mapillary_1149421485524930_An-LMmr_o90oEkTwHMTiDoR21pOfQPZzudqipTUA5Vv1agVkTl6I3zVKbDh3pJspyfiAClfeP4ZwJid4Fa_l-p_Y2reBiAQSiqpbSkizU8w2FoWDFJHCCdknYutVUulp5LX4Q-8l1K1I0IPAND_4uKo_s"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/10669964997",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/497730338338035": {
+   "basis": "Frames show only a shop corner with utility cabinets; no street light visible in any view.",
+   "confidence": 0.65,
+   "frames": [
+    "mapillary_494839251650001_An9gtQ8MRM4zCMvPbgiKEhz6e85W2_CmMYnp1LLihVUzm_MYkgNYquvpeQ-re0CRWWqnA-b9JKmmEeFSxZkR9qMcTFUCXQ1ih8xhTp9RB0lgl7CFD9fS_NrGAEoHrwGzxZ_LeFtI7f7hav0Bt7kbUg_stp",
+    "mapillary_512859586791898_An-9SvygENW8cvN5zAzrm4OqTdaAcXFjbkQhVBfDw9eCbeAMO-I3bjHAJg_WLDmr7303QZ9oJc2Bt_jfki0EPu8kJeRAbMfySU38mg9CpxAazKAJOx58XuToyzobEA0Rda8dc007eutrY4iUTBswbA_stp",
+    "mapillary_971826116924489_An-DJMk1S-v-Y_BXcOultbBaDCx38B1YoBe9wOrTH7Fx1Dd1ln4S_6b33xP0FJlSFu3clRsXgM7ByRr4YS2k_UDoJH-mCek9oYcI90Tqu9bIZ7sWVv3jgQQCzEOpQfmQc8Y52nmT6OJDWnErtLzjJw_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/10669964997",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/497773828333686": {
+   "basis": "Frames show a restaurant corner and a round pole sign; no pedestrian traffic light visible in any view.",
+   "confidence": 0.65,
+   "frames": [
+    "mapillary_3936010353103311_An9Cye294lbPbFXLc6g4a92Tp58hxwGWNuZnb5yuyhcVGDKg7XUcofgEcfsWUBXZ6pVXjljupymXjjc9M3N_R1GzKzFEs29ObJuR-tBRJWT44luzmVjyGIM_VI91s3-bKKW3rJUTJWNUeUO-xriQdQ_st",
+    "mapillary_490164805458248_An96PuBl4ypTfe94AbathmxII4aDpYQeNAFvSvD3brEXuB3tLF0pfoNmQXTNl_4NsPttRbqCw7IbT00Dv78rawDTBT-zGGjuakdZFkdkKDvWCVBwbphMYbaKyQJJ367pUqg-bHxcwKElUqVFS3Nqhg_stp",
+    "mapillary_1149421485524930_An-LMmr_o90oEkTwHMTiDoR21pOfQPZzudqipTUA5Vv1agVkTl6I3zVKbDh3pJspyfiAClfeP4ZwJid4Fa_l-p_Y2reBiAQSiqpbSkizU8w2FoWDFJHCCdknYutVUulp5LX4Q-8l1K1I0IPAND_4uKo_s"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/302046711",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/497811058329963": {
+   "basis": "Frames show the monument plaza and canal paths with no traffic cone visible in any view.",
+   "confidence": 0.7,
+   "frames": [
+    "mapillary_1104326573585367_An9IngASf2WFJIW8lzc-G6F-fOKzx5sb6RZHnp-zYj2Gt0rtNVdi_29Uo_DHNZ5xXcOSz-fJznlWxU8ggWokef9RZoZzWP2MISypyutFa2fTG6Waa97fQoBxSsP5eXYSPEmkE5s_a2dx6jEwPKflQA_st",
+    "mapillary_195549839614786_An-onWxTStIC_09kCRL4zsaJfsoNoJPIOEr3FHn-sI1nz4Gk5t-my6z1bUfdAr68VJp6-f4hQ0WSZa-Na8mUDw2TT826oNtrLS_-qsH7uQHc30h5S9XFe-QL0ryBYlL5rkBXqK-vEGP7GXi75Ud0lO8_st",
+    "mapillary_805995193382440_An80XoCxLno1cqyg_g-z_SX0RoqozmU1DSlZpbsqNExrOkPBurKZ-O2KyAMVbLvyTrSTy7EHCcO_-3M1YAkKfTHHIeSlnNSPsk4LW7HA2eHHHBvsPuxsxgc1DnvYqlATu8eFHaJKo1m3jym3wyBMVM4_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/2339232435",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/497856788325390": {
+   "basis": "Frames show a plaza with trees, an info board, and stone monuments; no junction box visible in any view.",
+   "confidence": 0.65,
+   "frames": [
+    "mapillary_220432022749614_An8h6thWWJvJP1wHTGG-nmlcwVwKpXkKSn2B8yBBiqIq4DtmPnKZIqHp81DFI_E3SukdvxBg2xrgm7Gm0O53ynYka4H4qXALigbMqJKAUBsfZmsP7DKsiZOzUh5WvpDMvnrHcgYNY7TeX2F9ZIh8SA_stp",
+    "mapillary_2993141324144189_An8ISLmhDUeMU9ppoM65yyPC90bZRxz44_ET4u7hhITZ03k-GVRjVHJE2h0FCRFWDV-_M_2sfAnyHerNYNS0tW46dOleyLYcAh4LcM69MDvYMG-ca8bis5SVQdBqf2Lv-axs2ZWg8wLnjYpPvJ6hfQ_st",
+    "mapillary_218582036701815_An9y_RYcPplM51GiQ5nwXJ010Tub9bUDOJj0Y84koZdC9ZlJ7cX29cA-rqXN59tiiJiU1GUqVwZGwQMBkL5kbfFqCciZAebNMKVapWB8IVUkxvtZbRiJ7MTT7P_zlytwsNOJvFgJw26bQz2xiygARqE_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/2339232435",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/497942578316811": {
+   "basis": "Frames show only a restaurant corner and a round pole sign; no pedestrian traffic light visible in any view.",
+   "confidence": 0.65,
+   "frames": [
+    "mapillary_490164805458248_An96PuBl4ypTfe94AbathmxII4aDpYQeNAFvSvD3brEXuB3tLF0pfoNmQXTNl_4NsPttRbqCw7IbT00Dv78rawDTBT-zGGjuakdZFkdkKDvWCVBwbphMYbaKyQJJ367pUqg-bHxcwKElUqVFS3Nqhg_stp",
+    "mapillary_3936010353103311_An9Cye294lbPbFXLc6g4a92Tp58hxwGWNuZnb5yuyhcVGDKg7XUcofgEcfsWUBXZ6pVXjljupymXjjc9M3N_R1GzKzFEs29ObJuR-tBRJWT44luzmVjyGIM_VI91s3-bKKW3rJUTJWNUeUO-xriQdQ_st",
+    "mapillary_1149421485524930_An-LMmr_o90oEkTwHMTiDoR21pOfQPZzudqipTUA5Vv1agVkTl6I3zVKbDh3pJspyfiAClfeP4ZwJid4Fa_l-p_Y2reBiAQSiqpbSkizU8w2FoWDFJHCCdknYutVUulp5LX4Q-8l1K1I0IPAND_4uKo_s"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/302046711",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/497994018311667": {
+   "basis": "Frames show shop corners and utility cabinets; no pedestrian traffic light visible in any view.",
+   "confidence": 0.65,
+   "frames": [
+    "mapillary_3936010353103311_An9Cye294lbPbFXLc6g4a92Tp58hxwGWNuZnb5yuyhcVGDKg7XUcofgEcfsWUBXZ6pVXjljupymXjjc9M3N_R1GzKzFEs29ObJuR-tBRJWT44luzmVjyGIM_VI91s3-bKKW3rJUTJWNUeUO-xriQdQ_st",
+    "mapillary_490164805458248_An96PuBl4ypTfe94AbathmxII4aDpYQeNAFvSvD3brEXuB3tLF0pfoNmQXTNl_4NsPttRbqCw7IbT00Dv78rawDTBT-zGGjuakdZFkdkKDvWCVBwbphMYbaKyQJJ367pUqg-bHxcwKElUqVFS3Nqhg_stp",
+    "mapillary_215550649976711_An9PqEvAmeg1-XqX3ZcyfhLpXUcxQKp-QJU624kQMxRKTuoSvVWHLEl8NOpBI3UfD85StWz4Jrr-sRxKqq719SbDCGMVvM9_SUpohNxzNBoJ9SsN403nosIJOG-OhARMXQVZzV9XguSL2WuAfQ3xAQ_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/302046711",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/498674301576972": {
+   "basis": "Frames show only a shop corner with utility cabinets; no manhole visible in any view.",
+   "confidence": 0.65,
+   "frames": [
+    "mapillary_494839251650001_An9gtQ8MRM4zCMvPbgiKEhz6e85W2_CmMYnp1LLihVUzm_MYkgNYquvpeQ-re0CRWWqnA-b9JKmmEeFSxZkR9qMcTFUCXQ1ih8xhTp9RB0lgl7CFD9fS_NrGAEoHrwGzxZ_LeFtI7f7hav0Bt7kbUg_stp",
+    "mapillary_512859586791898_An-9SvygENW8cvN5zAzrm4OqTdaAcXFjbkQhVBfDw9eCbeAMO-I3bjHAJg_WLDmr7303QZ9oJc2Bt_jfki0EPu8kJeRAbMfySU38mg9CpxAazKAJOx58XuToyzobEA0Rda8dc007eutrY4iUTBswbA_stp",
+    "mapillary_971826116924489_An-DJMk1S-v-Y_BXcOultbBaDCx38B1YoBe9wOrTH7Fx1Dd1ln4S_6b33xP0FJlSFu3clRsXgM7ByRr4YS2k_UDoJH-mCek9oYcI90Tqu9bIZ7sWVv3jgQQCzEOpQfmQc8Y52nmT6OJDWnErtLzjJw_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/10669964997",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/506658198020393": {
+   "basis": "Frames show Japanese information plaques and a stone sign monument, consistent with a mapped sign object.",
+   "confidence": 0.55,
+   "frames": [
+    "mapillary_111929574294205_An_EnJnQIP-v9X6O44McodJ_6jyjw1J4hNGv7fdxl2HoN7AXi7kFBxj2-ySpyF3wA-z9OBVEL22vtIbHM9exiSOPVsYS6ql3jksTA27BnuSYT9hmFsSjzj3GTTnN5f8VFUpLaZZ3lrSDirn-VslCrA_stp",
+    "mapillary_203842735364141_An9Qxlb2ZnhG777CDLWyas7e54mziQfMNmpvHgRZjRDMpFDuMQ7T9FhxKb4qNnXlqoIhMQQt21Q4vgI2vHRPzJh9KxNWqbnhf2NePaNMC6GBwfmV4umW4UpWEdVHfgZhvbE1Qnu9ZrZKFT4563SEUg_stp",
+    "mapillary_463520421371151_An9JN6206SahX9gLUl-gimvrwGVgWynKwSe9gR-2i2DJE1EpUDZQYvFhsX88Y7e4Kz3k8YXeOdwI8X95yM4kPbqDIaGZDOZRKBGWgayxA5HBQZxFrcMT7zPowoqvZEX42JsovFTpkBLk0ME7_Mjc2w_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:sign:node/6282556210",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/769248310330080": {
+   "basis": "Frames show the stone map monument of the promenade, consistent with a mapped sign object.",
+   "confidence": 0.6,
+   "frames": [
+    "mapillary_1104326573585367_An9IngASf2WFJIW8lzc-G6F-fOKzx5sb6RZHnp-zYj2Gt0rtNVdi_29Uo_DHNZ5xXcOSz-fJznlWxU8ggWokef9RZoZzWP2MISypyutFa2fTG6Waa97fQoBxSsP5eXYSPEmkE5s_a2dx6jEwPKflQA_st",
+    "mapillary_1515396228934171_An8-8w1EZvf0znSRDY_aRxHkfqW_b5Q63VjWjQKlgfU-t1_r_f2iIuv_8BOvJwhhwRyg_mg7kgIO63u1xS53oQZ_DLFqLabVBI_Jn2okBfovpAEC-NqJqFLTUtouRBNY7SiErREyqEVMO4uCKf1RIIE_s",
+    "mapillary_189891150269254_An-WjvDdtBszFt3YS7KaH3XCVVA-DCTaRHOrqAmCO1U_K_gNiI_BCrUPvRaKUYnAJNwDTLkQ_qG2EYoJQRM1gS42QuN4qG2BsNN2zshKC3mVPkk2h_JlusCQ1mJ3qFqysahvsmDM3LUN2VyJp7W-Rg_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:sign:node/6282556210",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/833330301127693": {
+   "basis": "One frame shows the stone information monument at the intersection, consistent with a mapped sign object.",
+   "confidence": 0.6,
+   "frames": [
+    "mapillary_5862084907169772_An9GcVr4Z0_P0CoRqE6sBIbf5R-lW6c7_e6CLvqI32c4VnxjNczvqYtf6B--mtg3pfxMFTL3bkyRJ8ZGhaJzx0gMxG-KYyDNc_HPfLzaTludcdXczllv9VjXzw5jJ_7imKfkqldqdVOXxPfZAcpWpA_st",
+    "mapillary_189891150269254_An-WjvDdtBszFt3YS7KaH3XCVVA-DCTaRHOrqAmCO1U_K_gNiI_BCrUPvRaKUYnAJNwDTLkQ_qG2EYoJQRM1gS42QuN4qG2BsNN2zshKC3mVPkk2h_JlusCQ1mJ3qFqysahvsmDM3LUN2VyJp7W-Rg_stp",
+    "mapillary_857343642114957_An9APCqZreaDuI6Qu617KqcSm9VlILMG9t5RzrrFJp7-g12zP3nKWnAU2sefKcS3Zi5xdXwttGoZwxW7YWxXo1pWNz6XGSgXKkYcG4-N_r-6qhUPI8G5p3l9ERGb-hGg3_UihqMX7k_0cVtjLRIUwA_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:sign:node/2340149659",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/927994127992942": {
+   "basis": "The single frame shows a restaurant storefront with no regulatory sign visible anywhere.",
+   "confidence": 0.65,
+   "frames": [
+    "mapillary_1149421485524930_An-LMmr_o90oEkTwHMTiDoR21pOfQPZzudqipTUA5Vv1agVkTl6I3zVKbDh3pJspyfiAClfeP4ZwJid4Fa_l-p_Y2reBiAQSiqpbSkizU8w2FoWDFJHCCdknYutVUulp5LX4Q-8l1K1I0IPAND_4uKo_s"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/10669964997",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/928317457960609": {
+   "basis": "Frames show only a shop corner with utility cabinets; no regulatory sign visible in any view.",
+   "confidence": 0.7,
+   "frames": [
+    "mapillary_494839251650001_An9gtQ8MRM4zCMvPbgiKEhz6e85W2_CmMYnp1LLihVUzm_MYkgNYquvpeQ-re0CRWWqnA-b9JKmmEeFSxZkR9qMcTFUCXQ1ih8xhTp9RB0lgl7CFD9fS_NrGAEoHrwGzxZ_LeFtI7f7hav0Bt7kbUg_stp",
+    "mapillary_512859586791898_An-9SvygENW8cvN5zAzrm4OqTdaAcXFjbkQhVBfDw9eCbeAMO-I3bjHAJg_WLDmr7303QZ9oJc2Bt_jfki0EPu8kJeRAbMfySU38mg9CpxAazKAJOx58XuToyzobEA0Rda8dc007eutrY4iUTBswbA_stp",
+    "mapillary_971826116924489_An-DJMk1S-v-Y_BXcOultbBaDCx38B1YoBe9wOrTH7Fx1Dd1ln4S_6b33xP0FJlSFu3clRsXgM7ByRr4YS2k_UDoJH-mCek9oYcI90Tqu9bIZ7sWVv3jgQQCzEOpQfmQc8Y52nmT6OJDWnErtLzjJw_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/302046711",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/928620857930269": {
+   "basis": "No frames attached to this candidate, so no visual comparison is possible.",
+   "confidence": 0.0,
+   "frames": [],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": null,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/937672970358391": {
+   "basis": "Frames show a shopping street with banners and a map monument; no street light visible in any view.",
+   "confidence": 0.65,
+   "frames": [
+    "mapillary_2996887810594050_An9boi4XIftihRy5u55btw2QnxIuoN73-x9hxIO0eGxHfJ0yiNZWJuKpYI8wN-xy6zW2dYS9YWiUue0j5i9F2PEmoBQ04m6Dc-o6V9Q_L__p6lTMJiX6D1fugePqxEqZRzUPegF1hWYC1BeaUSevoA_st",
+    "mapillary_3845514602235452_An8H07Vhm_qjd3hTxnRcvnmeCb63Jz--2XboIDJW5yYPSQ2Kgu7fwo6jPKePetb5YfI--nchFvDCEp4yEubo9do7M1MF7ZveKvtYG8TBRccYm_oSYjfqTnR1_Os3W8ENPWDMPkEgQZ9_fEbsZJLzaw_st",
+    "mapillary_191191426174466_An-ujYkin5KOrveuN3y9xk8LCWTJVhbr6mdTsbLnRuG0ctFI_K_Wq_73uRcqFvCBARhUCQuassxeeentETkjuFXQDD5DkPqLTOh1xZvSpdLCbhCb7FOQv1r_jTusgwXJuTNyW03TxjuuwpMRACeZTGA_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442291348",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/971948000231327": {
+   "basis": "A wall-mounted no-parking sign appears in one frame, but it is a different object than the mapped signal fixture.",
+   "confidence": 0.6,
+   "frames": [
+    "mapillary_1385104305631041_An_yV3C-JWFisqU_eAOeqk4xTNQZpO6GCxq3zXyEtYlIYc_mE4WyfB12hoFf27PWpjT_zSvAk2W7auC6KlSCg_yeo2kOASKMKiFAZzKoPHwrfOFmLMbF2IzCelgT-RY1yeFnz_5290El1j1di8pdYA_st",
+    "mapillary_2242264835932914_An8k3WsUefKB5FOzAvFNjVzndTRzGEQ88kmd2bK1HlSmDkiaQGMtCOEk07b4Eq5FnHq3s8_fmzXGHwF62Yii69y3VJgBrz9dLhdMXpJwRHp33ZIOZoX-nRbI8Nqe4EwakI6fRCYZfk8hA-ipyaL-GQw_s",
+    "mapillary_1129661880872738_An-ZaWyPu-uMH2JqWuy6Cx_SiihVjGntO1BCGUXJ1J8AdGEa8sYaInp5j-7QpqrOkK73Sy6m-tO5dRYRYRB9_ksHU8HFM4Pwxsp-os-HEtBKRICQ-nXNrr45vqJXvxrK7-Ka0nU6WYvjo9769YAhqg_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/976083726484421": {
+   "basis": "Frames show a signalized intersection and shop streets, but no no-entry sign is discernible in any view.",
+   "confidence": 0.6,
+   "frames": [
+    "mapillary_132880498823214_An8rsJTDWptElab8bQEtMkT7qG4w3Zbu52JyGn9Zt41SYzcuRDmU90iBU0Yf7EdQGcX5rRu9UnsrY6M7RwhtjPwdZNkc_BGHYEuJ_G55HRCWO5NKrH5clVHhERqS0PZnfcN5tqOAwSQCHyMCWVVBwA_stp",
+    "mapillary_457090682036818_An9lizfCLX0yqpjspyaHdGeJtk1NkDDBdRDDfzTOCdswhCxWvmXnNfSxO7JaX3bszipa_m2zQ4aN3UX-NceKKkAsIp7-53NW15NlaqUtMOr8bOSuoC0pjTcNvx7oyXP7__tQU79MKA0Vjw4qxugNnDs_st",
+    "mapillary_2988264754753393_An-qP7LmPUHyqBUQQPe3Mj4XBGhlbAbenk320OSKlZ-pW0CJxPtvu-djgL7tlVQJmy4UJY1Hs-21Bc7TUjdG0725ggKlfuYQg7LOdNXNk4nmfPvVp6HvmuvEE6QKthroRyHw66bNGb-15orhf5HUyg_st"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": false,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/981393655953428": {
+   "basis": "Frames show horizontal traffic lights at a signalized crosswalk, consistent with a mapped signal fixture.",
+   "confidence": 0.8,
+   "frames": [
+    "mapillary_321116579356787_An8_Jzf_ABl4pXGdG9us7A3Z8Tns4n5L-TyMTws_Ect-tAP1Wp-MPdaFi1stOuNoWpHxK3sX6es8wOlMgTCOGE7UjkP5eVdE6j7N9W4m2rCI5ZqLL-5fMQ5bs9BgqoOq25zLBIp88Ur88bIYoBH4xA_stp",
+    "mapillary_132880498823214_An8rsJTDWptElab8bQEtMkT7qG4w3Zbu52JyGn9Zt41SYzcuRDmU90iBU0Yf7EdQGcX5rRu9UnsrY6M7RwhtjPwdZNkc_BGHYEuJ_G55HRCWO5NKrH5clVHhERqS0PZnfcN5tqOAwSQCHyMCWVVBwA_stp",
+    "mapillary_494860091655215_An_DLHk2SVgTTk57KMDRps51Yyfnw97DPhUsKJ2pNwd9YmTK1NwNsh3TdijCDIqq6ZnuPB9OPVTDabEWpYfvzvVz9_YD-_iaUAfavzueByl4oWhCEXVwS7eq7dx-I8oGWTZJIAuV7V9V9bGsrVEI-g_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/981466362612824": {
+   "basis": "Frames show horizontal traffic lights at a signalized crosswalk, consistent with a mapped signal fixture.",
+   "confidence": 0.8,
+   "frames": [
+    "mapillary_321116579356787_An8_Jzf_ABl4pXGdG9us7A3Z8Tns4n5L-TyMTws_Ect-tAP1Wp-MPdaFi1stOuNoWpHxK3sX6es8wOlMgTCOGE7UjkP5eVdE6j7N9W4m2rCI5ZqLL-5fMQ5bs9BgqoOq25zLBIp88Ur88bIYoBH4xA_stp",
+    "mapillary_494860091655215_An_DLHk2SVgTTk57KMDRps51Yyfnw97DPhUsKJ2pNwd9YmTK1NwNsh3TdijCDIqq6ZnuPB9OPVTDabEWpYfvzvVz9_YD-_iaUAfavzueByl4oWhCEXVwS7eq7dx-I8oGWTZJIAuV7V9V9bGsrVEI-g_stp",
+    "mapillary_132880498823214_An8rsJTDWptElab8bQEtMkT7qG4w3Zbu52JyGn9Zt41SYzcuRDmU90iBU0Yf7EdQGcX5rRu9UnsrY6M7RwhtjPwdZNkc_BGHYEuJ_G55HRCWO5NKrH5clVHhERqS0PZnfcN5tqOAwSQCHyMCWVVBwA_stp"
+   ],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": true,
+   "source_kind": "fusion_review"
+  },
+  "feature:mapillary_object/981520012607459": {
+   "basis": "No frames attached to this candidate, so no visual comparison is possible.",
+   "confidence": 0.0,
+   "frames": [],
+   "licence": "CC BY-SA 4.0 / Mapillary",
+   "model": "opus",
+   "osm_candidate": "feature:fixture:node/442165549",
+   "same_object": null,
+   "source_kind": "fusion_review"
+  }
+ },
+ "schema": "y92.plan06_fusion_reviews.v1"
+}

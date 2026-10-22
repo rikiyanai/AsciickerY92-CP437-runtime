@@ -1,0 +1,505 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fl4694.relation_pointer.v1.schema.json",
+  "title": "FL-4694 Form A-LOCAL relation and ramp cache pointer manifest",
+  "description": "Shape of the small committed file that points at the never-committed FL-4694 caches. The caches themselves (bounded k-nearest-neighbour glyph relations, tonal and directional ramp definitions, and the per-record ramp membership index) are far too large to commit, so the repository stores only their SHA-256 fingerprints, byte sizes, the exact rules that produced them, the fingerprints of every input, and the single command that recreates them. Any machine can regenerate the caches from the pinned inputs and confirm the fingerprints match. This manifest RESTATES, and never amends, the FL-4676 prohibition on consuming any of this data at runtime.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "version",
+    "artifact_kind",
+    "form",
+    "form_rationale",
+    "runtime_rights",
+    "relation_contract",
+    "ramp_contract",
+    "source_pins",
+    "glyph_universe",
+    "local_artifacts",
+    "local_artifact_policy",
+    "regeneration",
+    "compile_diagnostics",
+    "manifest_sha256"
+  ],
+  "properties": {
+    "schema": {
+      "description": "Identifier of this manifest shape.",
+      "const": "fl4694.relation_pointer.v1"
+    },
+    "version": {
+      "description": "Revision of this manifest shape.",
+      "const": 1
+    },
+    "artifact_kind": {
+      "description": "States plainly that this file is a pointer, not the data itself.",
+      "const": "local_only_relation_and_ramp_cache_pointer"
+    },
+    "form": {
+      "description": "The operator-selected solution shape. A_LOCAL means: bounded neighbour lists held in a local cache, with only pins committed. Form B, which would have let the running game derive relations for itself, was rejected.",
+      "const": "A_LOCAL"
+    },
+    "form_rationale": {
+      "description": "Prose explanation of why the dense relation table was not built.",
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_rights": {
+      "description": "Restatement of the FL-4676 rule that nothing here may be consumed by the running game yet.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_consumption_allowed",
+        "blocked_by",
+        "derivation_owner",
+        "forbidden_authorities",
+        "source_schema_amended"
+      ],
+      "properties": {
+        "runtime_consumption_allowed": {
+          "description": "Always false. The running game may not read these caches.",
+          "const": false
+        },
+        "blocked_by": {
+          "description": "The failure-log entry that owns the block.",
+          "const": "FL-4683"
+        },
+        "derivation_owner": {
+          "description": "Only the offline compiler is allowed to create relation edges.",
+          "const": "offline_compiler"
+        },
+        "forbidden_authorities": {
+          "description": "Powers the runtime specifically does not have.",
+          "type": "array",
+          "minItems": 7,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "derive_glyph_metadata_at_runtime",
+              "derive_relation_edges_at_runtime",
+              "invent_membership_at_runtime",
+              "mutate_compiled_artifact",
+              "substitute_missing_fact",
+              "synthesize_replacement_rows",
+              "treat_scene_fact_as_glyph_metadata"
+            ]
+          }
+        },
+        "source_schema_amended": {
+          "description": "Always false: producing this manifest did not change the FL-4676 schema.",
+          "const": false
+        }
+      }
+    },
+    "relation_contract": {
+      "description": "The complete, reproducible rule that decides which glyphs are related and how strongly.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "distance_definition_id",
+        "k",
+        "k_revisable",
+        "k_choice_rationale",
+        "distance_semantics",
+        "feature_dimensions",
+        "feature_layout",
+        "theoretical_max_distance",
+        "tie_break",
+        "self_edges_excluded",
+        "pruning",
+        "exactness",
+        "approximation",
+        "weight_encoding",
+        "weight_algorithm",
+        "weight_sum_per_record_q0_16",
+        "fail_closed_on_missing_attribute"
+      ],
+      "properties": {
+        "distance_definition_id": {
+          "description": "Name of the arithmetic rule, so a later revision cannot be confused with this one.",
+          "const": "fl4694.weighted_squared_integer_distance.v1"
+        },
+        "k": {
+          "description": "How many neighbours are kept for each glyph.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 256
+        },
+        "k_revisable": {
+          "description": "Records that k is a tuning choice, not a fixed law.",
+          "const": true
+        },
+        "k_choice_rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "distance_semantics": {
+          "description": "Prose statement of what a distance number means.",
+          "type": "string",
+          "minLength": 1
+        },
+        "feature_dimensions": {
+          "description": "How many numbers describe one glyph for distance purposes.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "feature_layout": {
+          "description": "Which record attribute supplies each block of those numbers, with its scale and importance weight.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["attribute", "dimensions", "weight", "scale"],
+            "properties": {
+              "attribute": {
+                "description": "Dotted path of the source attribute inside a GlyphRecord.",
+                "type": "string",
+                "minLength": 1
+              },
+              "dimensions": {
+                "description": "How many of the feature numbers this attribute supplies.",
+                "type": "integer",
+                "minimum": 1
+              },
+              "weight": {
+                "description": "Whole-number multiplier applied to this block's squared differences.",
+                "type": "integer",
+                "minimum": 1
+              },
+              "scale": {
+                "description": "Whole-number multiplier applied to the raw attribute value before differencing, used to bring small counts and single bits onto the same footing as the 0..65535 fields.",
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        },
+        "theoretical_max_distance": {
+          "description": "Largest value the distance rule could ever return, so a reader can judge the scale of a reported distance.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "tie_break": {
+          "description": "How equally distant candidates are ordered. Deterministic by construction.",
+          "const": "ascending_glyph_record_id"
+        },
+        "self_edges_excluded": {
+          "description": "A glyph is never listed as its own neighbour.",
+          "const": true
+        },
+        "pruning": {
+          "description": "Whether any candidate was skipped before scoring. 'none' means every glyph was scored against every other glyph.",
+          "const": "none"
+        },
+        "exactness": {
+          "description": "Scope over which the neighbour lists are exact.",
+          "const": "exact_over_full_admitted_universe"
+        },
+        "approximation": {
+          "description": "Always false: no approximate search structure was used.",
+          "const": false
+        },
+        "weight_encoding": {
+          "description": "Q0.16 means an integer 0..65535 standing for a fraction 0.0..1.0.",
+          "const": "q0_16"
+        },
+        "weight_algorithm": {
+          "description": "The FL-4676-owned normalisation that hands out descending whole-number shares adding to exactly 65535.",
+          "const": "descending_rank_largest_remainder.v1"
+        },
+        "weight_sum_per_record_q0_16": {
+          "description": "The k neighbour weights of one glyph must add up to exactly this.",
+          "const": 65535
+        },
+        "fail_closed_on_missing_attribute": {
+          "description": "A record missing any required attribute aborts the compile with a named error rather than being skipped.",
+          "const": true
+        }
+      }
+    },
+    "ramp_contract": {
+      "description": "The rule that builds the tonal (light-to-dark) and directional (turning) glyph ladders.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "families",
+        "bucket_axis",
+        "tonal_axis",
+        "directional_axis",
+        "direction_sector_count",
+        "member_cap",
+        "member_shape",
+        "member_order",
+        "weight_algorithm",
+        "weight_sum_per_ramp_q0_16",
+        "tie_break",
+        "tonal_coverage",
+        "directional_coverage",
+        "fail_closed_on_missing_attribute"
+      ],
+      "properties": {
+        "families": {
+          "description": "The kinds of ladder compiled.",
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": { "enum": ["directional", "tonal"] }
+        },
+        "bucket_axis": {
+          "description": "Ladders never mix glyphs from different stroke classes.",
+          "const": "stroke_identity.mask_class"
+        },
+        "tonal_axis": {
+          "description": "The attribute a tonal ladder climbs: ink coverage.",
+          "const": "morphology.density_q0_16"
+        },
+        "directional_axis": {
+          "description": "The attribute a directional ladder turns along: an exact whole-number substitute for the stroke angle, bucketed into equal sectors.",
+          "const": "stroke_identity.orientation_q1_15.diamond_angle_sector_32"
+        },
+        "direction_sector_count": {
+          "description": "How many equal sectors the turning circle is divided into.",
+          "type": "integer",
+          "minimum": 2
+        },
+        "member_cap": {
+          "description": "Largest number of rungs one ladder may have.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        },
+        "member_shape": {
+          "description": "Ramp members carry exactly the same two fields as an FL-4676 fact member.",
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "enum": ["glyph_record_id", "membership_weight_q0_16"] }
+        },
+        "member_order": {
+          "description": "Members are listed in rung order, lowest axis value first.",
+          "const": "ascending_ramp_axis_level"
+        },
+        "weight_algorithm": {
+          "const": "descending_rank_largest_remainder.v1"
+        },
+        "weight_sum_per_ramp_q0_16": {
+          "description": "The member weights of one ladder must add up to exactly this.",
+          "const": 65535
+        },
+        "tie_break": {
+          "const": "ascending_glyph_record_id"
+        },
+        "tonal_coverage": {
+          "description": "Coverage promise for the tonal family.",
+          "const": "every_admitted_record_in_exactly_one_tonal_ramp"
+        },
+        "directional_coverage": {
+          "description": "Coverage promise for the directional family. Glyphs with no lean at all have no place on the turning circle and are counted as excluded rather than dropped silently.",
+          "const": "every_admitted_record_with_non_zero_orientation_in_exactly_one_directional_ramp"
+        },
+        "fail_closed_on_missing_attribute": {
+          "const": true
+        }
+      }
+    },
+    "source_pins": {
+      "description": "SHA-256 fingerprint of every input this compile depended on. Regeneration is only comparable when all of these still match.",
+      "type": "array",
+      "minItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "path", "sha256"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "path": {
+            "description": "Repository-relative path, never absolute, so the manifest is machine independent.",
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": { "$ref": "#/$defs/sha256" }
+        }
+      }
+    },
+    "glyph_universe": {
+      "description": "Which glyph population was compiled, echoed from the source artifact's own declarations.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_artifact_schema",
+        "declared_glyph_record_count",
+        "compiled_record_count",
+        "universe_limit",
+        "source_artifact_id",
+        "source_canonical_content_sha256",
+        "source_input_set_sha256",
+        "source_compiler_script_sha256"
+      ],
+      "properties": {
+        "source_artifact_schema": { "const": "fl4676.glyph_fact.v1" },
+        "declared_glyph_record_count": { "type": "integer", "minimum": 1 },
+        "compiled_record_count": { "type": "integer", "minimum": 2 },
+        "universe_limit": {
+          "description": "0 for a full compile. A positive number marks a deliberately shortened test compile so it can never be mistaken for the real one.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_artifact_id": { "type": "string", "minLength": 1 },
+        "source_canonical_content_sha256": { "$ref": "#/$defs/sha256" },
+        "source_input_set_sha256": { "$ref": "#/$defs/sha256" },
+        "source_compiler_script_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "local_artifacts": {
+      "description": "The never-committed cache files, each pinned by fingerprint, byte size and line count.",
+      "type": "array",
+      "minItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "schema", "path", "sha256", "byte_size", "line_count"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "schema": {
+            "enum": [
+              "fl4694.glyph_relation_knn.v1",
+              "fl4694.glyph_ramp.v1",
+              "fl4694.ramp_record_index.v1"
+            ]
+          },
+          "path": {
+            "description": "Repository-relative path inside the gitignored local directory.",
+            "type": "string",
+            "pattern": "^assets/glyphs/generated/local/"
+          },
+          "sha256": { "$ref": "#/$defs/sha256" },
+          "byte_size": { "type": "integer", "minimum": 1 },
+          "line_count": {
+            "description": "One header line plus one line per record or ramp.",
+            "type": "integer",
+            "minimum": 2
+          }
+        }
+      }
+    },
+    "local_artifact_policy": {
+      "description": "Why these files are not in version control.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["committed", "gitignored_directory", "reason"],
+      "properties": {
+        "committed": { "const": false },
+        "gitignored_directory": { "const": "assets/glyphs/generated/local/" },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "regeneration": {
+      "description": "Exactly how to recreate the caches on a machine that has never seen them.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "command",
+        "working_directory",
+        "verify_command",
+        "recheck_command",
+        "deterministic",
+        "determinism_basis"
+      ],
+      "properties": {
+        "command": { "type": "string", "minLength": 1 },
+        "working_directory": {
+          "description": "Relative to the repository root.",
+          "const": "."
+        },
+        "verify_command": { "type": "string", "minLength": 1 },
+        "recheck_command": { "type": "string", "minLength": 1 },
+        "deterministic": {
+          "description": "Identical inputs must produce byte-identical caches.",
+          "const": true
+        },
+        "determinism_basis": {
+          "description": "Why that promise holds.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "compile_diagnostics": {
+      "description": "Deterministic summary counts. Nothing time-varying may appear here: wall-clock durations are printed to the operator instead of stored, so that a repeated compile yields a byte-identical manifest.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "knn_record_count",
+        "knn_edge_count",
+        "knn_zero_distance_edge_count",
+        "knn_max_compiled_distance",
+        "knn_max_nearest_neighbor_distance",
+        "tonal_ramp_count",
+        "tonal_member_count",
+        "directional_ramp_count",
+        "directional_member_count",
+        "directional_degenerate_orientation_excluded",
+        "singleton_ramp_count",
+        "ramp_member_cap",
+        "direction_sector_count"
+      ],
+      "properties": {
+        "knn_record_count": {
+          "description": "How many glyphs received a neighbour list.",
+          "type": "integer",
+          "minimum": 2
+        },
+        "knn_edge_count": {
+          "description": "Total relation edges: record count times k.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "knn_zero_distance_edge_count": {
+          "description": "Edges joining glyphs the rule cannot tell apart. A high number is a quality signal, not an error.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "knn_max_compiled_distance": { "type": "integer", "minimum": 0 },
+        "knn_max_nearest_neighbor_distance": {
+          "description": "The most isolated glyph's distance to its single closest relative.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "tonal_ramp_count": { "type": "integer", "minimum": 1 },
+        "tonal_member_count": {
+          "description": "Must equal the compiled record count: every glyph sits in exactly one tonal ladder.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "directional_ramp_count": { "type": "integer", "minimum": 1 },
+        "directional_member_count": { "type": "integer", "minimum": 1 },
+        "directional_degenerate_orientation_excluded": {
+          "description": "Glyphs with a zero lean vector, which have no position on the turning circle.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "singleton_ramp_count": {
+          "description": "Ladders that ended up with a single rung. Reported so nobody mistakes them for real progressions.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "ramp_member_cap": { "type": "integer", "minimum": 1, "maximum": 32 },
+        "direction_sector_count": { "type": "integer", "minimum": 2 }
+      }
+    },
+    "manifest_sha256": {
+      "description": "Fingerprint of this manifest with this field removed, so hand edits are detectable.",
+      "$ref": "#/$defs/sha256"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "description": "64 lowercase hexadecimal digits.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

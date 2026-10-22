@@ -1,0 +1,102 @@
+{
+  "schema": "y92.connected_product_scope_receipt.v1",
+  "scope_id": "numabe_connected_neighborhood_scope_20260915",
+  "compiled_utc": "2026-09-15T06:22:00Z",
+  "passed": true,
+  "checks": {
+    "aoi_is_single_connected_polygon": true,
+    "route_intersects_frozen_base_aoi": true,
+    "route_is_inside_aoi": true,
+    "mapped_landmarks_are_inside_aoi": true,
+    "required_route_landmarks_are_traversed": true,
+    "route_order_matches_provider_waypoints": true,
+    "route_length_agrees_with_composed_sources": true,
+    "preserved_base_route_is_exact_prefix": true,
+    "coin_laundry_not_claimed_as_mapped": true,
+    "annotation_snapshot_digest_matches": true,
+    "annotation_snapshot_counts_match": true,
+    "annotation_snapshot_crops_verified": true
+  },
+  "metrics": {
+    "aoi_area_m2": 123918.425,
+    "aoi_connected_components": 1,
+    "route_points": 52,
+    "route_length_m": 1016.882,
+    "provider_route_length_m": 1040.0,
+    "composed_source_length_m": 1015.12,
+    "route_length_residual_m": 1.762,
+    "bbox_epsg32654": [
+      379699.095,
+      3938417.877,
+      380113.054,
+      3939043.068
+    ]
+  },
+  "mapped_landmark_coverage": [
+    {
+      "landmark_id": "numabe_station_selected_entrance",
+      "covered": true
+    },
+    {
+      "landmark_id": "lawson_three_f_denenchofuhoncho",
+      "covered": true
+    }
+  ],
+  "route_landmark_traversal": [
+    {
+      "landmark_id": "sakurazaka",
+      "source_ref": "way/37661730",
+      "route_distance_m": [
+        0.001,
+        0.017
+      ],
+      "max_route_distance_m": 1.0,
+      "traversed": true
+    }
+  ],
+  "route_composition": {
+    "feature_role": "walking_route",
+    "from_provider_location_index": 0,
+    "to_provider_location_index": 1,
+    "max_endpoint_distance_m": 5.0,
+    "start_endpoint_distance_m": 0.091,
+    "end_endpoint_distance_m": 2.534,
+    "splice_shape_index": 27,
+    "splice_distance_m": 2.534,
+    "preserved_base_route_length_m": 428.167,
+    "provider_replaced_segment_length_m": 453.047,
+    "composed_source_length_m": 1015.12
+  },
+  "annotation_snapshot_verification": {
+    "digest_matches": true,
+    "count_matches": true,
+    "annotations": 499,
+    "crops_verified": 499,
+    "failures": []
+  },
+  "source_digests": {
+    "spec_sha256": "42ce542764744754cb36a448810e88b63b8cf7014c1a2efc2350b5c5b6d296d6",
+    "base_aoi_sha256": "b6414ed3ae7860298e8888413fa0b8afe4e33be0cf6430c51f331f9372ecfb0f",
+    "pedestrian_route_sha256": "51940b2d8bf273239805ab868dfdc242a47eb2bdf895ab52cbd2fcdf6874777b"
+  },
+  "coverage_state": {
+    "geometry": "compiled_connected",
+    "existing_428m_capture_manifest": "retained_as_partial_evidence_only",
+    "sakurazaka_imagery": "not_yet_accepted",
+    "lawson_coin_laundry_extension_imagery": "not_yet_surveyed",
+    "required_next_receipt": "expanded route imagery survey and route_capture_manifest",
+    "prohibition": "Do not relabel old route imagery or operator boxes as coverage of newly added segments."
+  },
+  "annotation_snapshot": {
+    "path": "artifacts/experiments/fl4813_capture_review_20260915/preserved/operator_boxes_complete_20260915/annotations.json",
+    "annotations": 499,
+    "crops": 499,
+    "missing_crops": 0,
+    "digest_mismatches": 0,
+    "source_receipt_sha256": "3687284f92edc25e63e42582ce1ae62abc2b51cefd95a769ba16c5d80ea92dd7",
+    "frozen_annotations_sha256": "2cafb9d89d427eb1a40711b039ff6100e7bb5d984f4edb2d4ef9bc0bf5439a50",
+    "snapshot_receipt": "artifacts/experiments/fl4813_capture_review_20260915/preserved/operator_boxes_complete_20260915/snapshot_receipt.json",
+    "label_state": "first_pass_geometry; inherited labels are non-authoritative until review",
+    "review_contract": "Tinder-style accept/reject/correct with correction note; repeatable fixtures use generic classes; location-specific store and station signs require custom_extraction_required metadata."
+  }
+}

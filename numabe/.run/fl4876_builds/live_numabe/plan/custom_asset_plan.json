@@ -1,0 +1,783 @@
+{
+  "inputs": {
+    "annotation_sha256": {
+      "/Users/r/Projects/asciicker-Y9-2/artifacts/experiments/fl4810_aoi_street_network_boxing_20260915/annotations.json": "399348608f7878bf156d95ce57a7a0db9c3559118c4697705f64db049181ad47",
+      "/Users/r/Projects/asciicker-Y9-2/artifacts/experiments/fl4813_capture_review_20260915/annotations.json": "3687284f92edc25e63e42582ce1ae62abc2b51cefd95a769ba16c5d80ea92dd7"
+    },
+    "custom_population_plan_sha256": "7edae366a620086d23341871c027bac81caaecdd251c5248dcb01989494ec40f",
+    "observation_mapping_sha256": "b28f6020bacf8112c84ab3152289052e122ed7899d51bf76114c24969f8367eb",
+    "ocr_sha256": {
+      "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/mapillary_facade_sign_ocr.json": "eb95c6db27f3ffc14d730ec8f2f39c93dce0e54ec97e6870fa167c7af87a93f5",
+      "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/mapillary_route_sign_ocr.json": "34c8e026061bda859444922faeffd57487196f554139cc5593b03b5e01e314ef",
+      "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/station_sign_ocr_observations.json": "f602694944b49e11f1445f1e2bf1d6e3e247ca673440b95710b87ab79b6c0cbf"
+    },
+    "registered_instances_sha256": "8220b093a4054c383b3bf3e72547604a2c270233782f6b22716cc161fd102cf2",
+    "source_custom_population_plan_sha256": "76d09ca4b77ea4efd55a98cadba36ec4609e7162b4396813fc02c77ab8dc189c"
+  },
+  "rows": [
+    {
+      "annotation_ids": [
+        "ann-1789451331786-0524c7",
+        "ann-1789451340718-5709f9",
+        "ann-1789451390462-8ce16c",
+        "ann-1789451407648-d06c92",
+        "ann-1789504355799-a79780",
+        "ann-1789504357841-55804a",
+        "ann-1789504389991-3f603b"
+      ],
+      "background_rgb": [
+        224,
+        224,
+        224
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_200221161739799",
+        "mapillary_263587128824320",
+        "mapillary_380143526492157",
+        "mapillary_386217782460693",
+        "mapillary_591268178519826",
+        "mapillary_806994576584543"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": false,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": false,
+          "range_m": 11.973892828879778,
+          "raw_height_m": 3.7445201343046146,
+          "raw_width_m": 7.881884542626792,
+          "width_was_bounded": false
+        },
+        "range_m": 11.973892828879778,
+        "raw_height_m": 3.7445201343046146,
+        "raw_width_m": 7.881884542626792,
+        "width_was_bounded": false
+      },
+      "face_fit": null,
+      "height_m": 0.8521276595744681,
+      "label": "storefront_sign_cafe_bit",
+      "placement_id": "obs-inst-0429",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        32,
+        32,
+        32
+      ],
+      "width_m": 3.6
+    },
+    {
+      "annotation_ids": [
+        "ann-1789451177568-b2f197",
+        "ann-1789451198522-86c11c",
+        "ann-1789451232155-d9005f"
+      ],
+      "background_rgb": [
+        96,
+        96,
+        96
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_300504531651066",
+        "mapillary_945852359566475"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 4.060029833582308,
+          "raw_height_m": 1.3244262375909523,
+          "raw_width_m": 0.6447226427519545,
+          "width_was_bounded": true
+        },
+        "range_m": 4.060029833582308,
+        "raw_height_m": 1.3244262375909523,
+        "raw_width_m": 0.6447226427519545,
+        "width_was_bounded": true
+      },
+      "face_fit": null,
+      "height_m": 2.3555555555555556,
+      "label": "storefront_sign_iijima",
+      "placement_id": "obs-inst-0414",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 1.2
+    },
+    {
+      "annotation_ids": [
+        "ann-1789450621635-16c6fb",
+        "ann-1789435437261-ea52f5",
+        "ann-1789504302481-f5b844"
+      ],
+      "background_rgb": [
+        96,
+        80,
+        96
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_215939953273780",
+        "mapillary_353365796119189"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 3.364859595497992,
+          "raw_height_m": 0.840311481403085,
+          "raw_width_m": 1.6548144363531399,
+          "width_was_bounded": true
+        },
+        "range_m": 3.364859595497992,
+        "raw_height_m": 0.840311481403085,
+        "raw_width_m": 1.6548144363531399,
+        "width_was_bounded": true
+      },
+      "face_fit": null,
+      "height_m": 1.5,
+      "label": "storefront_sign_mikasa",
+      "placement_id": "obs-manual-business:mikasa",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 3.6
+    },
+    {
+      "annotation_ids": [
+        "ann-1789503037906-e8ddc9"
+      ],
+      "background_rgb": [
+        224,
+        224,
+        208
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_857343642114957"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": false,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": false,
+          "range_m": 25.897301950289094,
+          "raw_height_m": 4.204719520590041,
+          "raw_width_m": 1.7825064696149742,
+          "width_was_bounded": true
+        },
+        "range_m": 25.897301950289094,
+        "raw_height_m": 4.204719520590041,
+        "raw_width_m": 1.7825064696149742,
+        "width_was_bounded": true
+      },
+      "face_fit": null,
+      "height_m": 2.6999999999999997,
+      "label": "storefront_sign_ebara_musen",
+      "placement_id": "obs-manual-business:ebara_musen",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        32,
+        32,
+        32
+      ],
+      "width_m": 1.2
+    },
+    {
+      "annotation_ids": [
+        "ann-1789504321494-338c58"
+      ],
+      "background_rgb": [
+        224,
+        224,
+        224
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_971826116924489"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 6.772075346731085,
+          "raw_height_m": 7.761405386973197,
+          "raw_width_m": 5.210482464684782,
+          "width_was_bounded": false
+        },
+        "range_m": 6.772075346731085,
+        "raw_height_m": 7.761405386973197,
+        "raw_width_m": 5.210482464684782,
+        "width_was_bounded": false
+      },
+      "face_fit": null,
+      "height_m": 0.6448330683624801,
+      "label": "storefront_sign_fukasawa",
+      "placement_id": "obs-manual-business:fukasawa",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        32,
+        32,
+        32
+      ],
+      "width_m": 2.6
+    },
+    {
+      "annotation_ids": [
+        "ann-1789452256109-007aaf"
+      ],
+      "background_rgb": [
+        16,
+        16,
+        16
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_380824489761280"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 1.6277344161920848,
+          "raw_height_m": 0.4507127313781763,
+          "raw_width_m": 1.0800758579121943,
+          "width_was_bounded": true
+        },
+        "range_m": 1.6277344161920848,
+        "raw_height_m": 0.4507127313781763,
+        "raw_width_m": 1.0800758579121943,
+        "width_was_bounded": true
+      },
+      "face_fit": null,
+      "height_m": 1.5,
+      "label": "storefront_sign_komatsuya",
+      "placement_id": "obs-inst-0557",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 3.6
+    },
+    {
+      "annotation_ids": [
+        "ann-1789452227813-73ff05",
+        "ann-1789450431362-715f12"
+      ],
+      "background_rgb": [
+        32,
+        32,
+        32
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_162720512425333",
+        "mapillary_4262919317051644"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 58.8102882955191,
+          "raw_height_m": 29.22834317327036,
+          "raw_width_m": 108.08801088472877,
+          "width_was_bounded": true
+        },
+        "range_m": 58.8102882955191,
+        "raw_height_m": 29.22834317327036,
+        "raw_width_m": 108.08801088472877,
+        "width_was_bounded": true
+      },
+      "face_fit": null,
+      "height_m": 1.2,
+      "label": "storefront_sign_cleaner",
+      "placement_id": "obs-manual-business:cleaner",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 3.6
+    },
+    {
+      "annotation_ids": [
+        "ann-1789450373923-71d1e8",
+        "ann-1789450375604-beccc7"
+      ],
+      "background_rgb": [
+        48,
+        48,
+        32
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_298941768278559",
+        "mapillary_3019328731637156",
+        "mapillary_4116751331720826"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": false,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": false,
+          "range_m": 8.744320185670711,
+          "raw_height_m": 3.1492404464640456,
+          "raw_width_m": 7.130302281549554,
+          "width_was_bounded": false
+        },
+        "range_m": 8.744320185670711,
+        "raw_height_m": 3.1492404464640456,
+        "raw_width_m": 7.130302281549554,
+        "width_was_bounded": false
+      },
+      "face_fit": null,
+      "height_m": 1.4173228346456692,
+      "label": "storefront_sign_unagi_tempura",
+      "placement_id": "obs-manual-business:unagi_tempura",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 3.0
+    },
+    {
+      "annotation_ids": [
+        "ann-1789452156281-0a610e",
+        "ann-1789450723343-48a341"
+      ],
+      "background_rgb": [
+        32,
+        32,
+        32
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_161019379271957",
+        "mapillary_3845514602235452"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 8.573768327814232,
+          "raw_height_m": 12.074957482476284,
+          "raw_width_m": 9.278714630207155,
+          "width_was_bounded": false
+        },
+        "range_m": 8.573768327814232,
+        "raw_height_m": 12.074957482476284,
+        "raw_width_m": 9.278714630207155,
+        "width_was_bounded": false
+      },
+      "face_fit": null,
+      "height_m": 0.8693834900731453,
+      "label": "storefront_sign_nabin",
+      "placement_id": "obs-manual-business:nabin",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 3.2
+    },
+    {
+      "annotation_ids": [
+        "ann-1789452076314-ec68e9",
+        "ann-1789435462778-3fd386"
+      ],
+      "background_rgb": [
+        16,
+        16,
+        16
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_196724462295987",
+        "mapillary_959859571420548"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "face_fit": {
+          "along_face_fraction": 0.932967,
+          "face_length_m": 22.377,
+          "slide_m": -0.023,
+          "source_along_face_fraction": 0.933994,
+          "source_width_m": 3.0
+        },
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 3.5139911845667604,
+          "raw_height_m": 1.0966601383069274,
+          "raw_width_m": 2.9055567380542944,
+          "width_was_bounded": false
+        },
+        "range_m": 3.5139911845667604,
+        "raw_height_m": 1.0966601383069274,
+        "raw_width_m": 2.9055567380542944,
+        "width_was_bounded": false
+      },
+      "face_fit": {
+        "attachment": {
+          "along_face_fraction": 0.932967,
+          "anchor_kind": "building_face",
+          "attachment_id": "att-obs-inst-0229",
+          "canonical_building_id": "feature:building_footprint:way/225369230",
+          "canonical_face_id": "feature:building_footprint:way/225369230#f2",
+          "edge_bearing_deg": 142.725,
+          "face_index": 2,
+          "height_m": 0.0,
+          "orientation_basis": "outward_normal_of_canonical_face",
+          "outward_offset_m": 0.15,
+          "record_type": "attachment"
+        },
+        "resolved_pose": {
+          "E": 379789.38,
+          "N": 3938491.125,
+          "face_end_a": [
+            379805.992,
+            3938478.481
+          ],
+          "face_end_b": [
+            379788.186,
+            3938492.034
+          ],
+          "yaw_deg": -127.275
+        }
+      },
+      "height_m": 1.2093023255813953,
+      "label": "storefront_sign_sakurazaka_bal",
+      "placement_id": "obs-inst-0229",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 3.0
+    },
+    {
+      "annotation_ids": [
+        "ann-1789452120364-033e59"
+      ],
+      "background_rgb": [
+        208,
+        208,
+        208
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_138974158240453"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 3.012788243242261,
+          "raw_height_m": 1.2184884046421092,
+          "raw_width_m": 0.45869139020239835,
+          "width_was_bounded": true
+        },
+        "range_m": 3.012788243242261,
+        "raw_height_m": 1.2184884046421092,
+        "raw_width_m": 0.45869139020239835,
+        "width_was_bounded": true
+      },
+      "face_fit": null,
+      "height_m": 3.4465753424657533,
+      "label": "storefront_sign_shige",
+      "placement_id": "obs-manual-business:shige",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        32,
+        32,
+        32
+      ],
+      "width_m": 1.2
+    },
+    {
+      "annotation_ids": [
+        "ann-1789450706373-fe2179",
+        "ann-1789452113036-3ccc2f",
+        "ann-1789452154296-3d08e3",
+        "ann-1789452170167-793acb"
+      ],
+      "background_rgb": [
+        32,
+        32,
+        32
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_138974158240453",
+        "mapillary_161019379271957",
+        "mapillary_191191426174466",
+        "mapillary_3845514602235452"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 9.631716308124602,
+          "raw_height_m": 11.374794976794956,
+          "raw_width_m": 7.939060369054022,
+          "width_was_bounded": false
+        },
+        "range_m": 9.631716308124602,
+        "raw_height_m": 11.374794976794956,
+        "raw_width_m": 7.939060369054022,
+        "width_was_bounded": false
+      },
+      "face_fit": null,
+      "height_m": 0.9699059561128526,
+      "label": "storefront_sign_tenrokuen",
+      "placement_id": "obs-manual-business:tenrokuen",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 3.4
+    },
+    {
+      "annotation_ids": [
+        "ann-1789450287612-06169d",
+        "ann-1789450285517-1552fb",
+        "ann-1789504280728-6a04f0"
+      ],
+      "background_rgb": [
+        160,
+        160,
+        160
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_302695101323896",
+        "mapillary_380824489761280"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 7.546184862117037,
+          "raw_height_m": 2.37318420225989,
+          "raw_width_m": 11.08319476135332,
+          "width_was_bounded": false
+        },
+        "range_m": 7.546184862117037,
+        "raw_height_m": 2.37318420225989,
+        "raw_width_m": 11.08319476135332,
+        "width_was_bounded": false
+      },
+      "face_fit": null,
+      "height_m": 0.9807692307692307,
+      "label": "storefront_sign_miyoshiya",
+      "placement_id": "obs-manual-business:miyoshiya",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        32,
+        32,
+        32
+      ],
+      "width_m": 4.0
+    },
+    {
+      "annotation_ids": [
+        "ann-1789450182780-07c1a5"
+      ],
+      "background_rgb": [
+        48,
+        32,
+        16
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_149084003888966"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "face_fit": {
+          "along_face_fraction": 0.632014,
+          "face_length_m": 4.891,
+          "slide_m": -0.009,
+          "source_along_face_fraction": 0.633754,
+          "source_width_m": 3.6
+        },
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 8.644114603930282,
+          "raw_height_m": 20.18468778443111,
+          "raw_width_m": 17.62585269498852,
+          "width_was_bounded": true
+        },
+        "range_m": 8.644114603930282,
+        "raw_height_m": 20.18468778443111,
+        "raw_width_m": 17.62585269498852,
+        "width_was_bounded": true
+      },
+      "face_fit": {
+        "attachment": {
+          "along_face_fraction": 0.632014,
+          "anchor_kind": "building_face",
+          "attachment_id": "att-obs-manual-business:respa",
+          "canonical_building_id": "feature:building_footprint:way/225562520",
+          "canonical_face_id": "feature:building_footprint:way/225562520#f1",
+          "edge_bearing_deg": 40.166,
+          "face_index": 1,
+          "height_m": 0.0,
+          "orientation_basis": "outward_normal_of_canonical_face",
+          "outward_offset_m": 0.15,
+          "record_type": "attachment"
+        },
+        "resolved_pose": {
+          "E": 379849.129,
+          "N": 3938460.614,
+          "face_end_a": [
+            379846.766,
+            3938458.62
+          ],
+          "face_end_b": [
+            379850.504,
+            3938461.775
+          ],
+          "yaw_deg": 130.166
+        }
+      },
+      "height_m": 0.6747428571428571,
+      "label": "storefront_sign_respa",
+      "placement_id": "obs-manual-business:respa",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 3.6
+    },
+    {
+      "annotation_ids": [
+        "ann-1789452234293-aade53"
+      ],
+      "background_rgb": [
+        16,
+        16,
+        16
+      ],
+      "block_text": null,
+      "block_text_source": null,
+      "capture_ids": [
+        "mapillary_162720512425333"
+      ],
+      "colour_basis": "source_crop_dominant",
+      "depth_m": 0.08,
+      "dimension_derivation": {
+        "basis": "LOGO-CROP-01 sign board: entity sign width, crop aspect",
+        "height_was_bounded": true,
+        "photo_box_derivation": {
+          "basis": "source_box_angular_extent_at_resolved_pose",
+          "height_was_bounded": true,
+          "range_m": 4.513619295976821,
+          "raw_height_m": 8.08017061142915,
+          "raw_width_m": 4.091765627846117,
+          "width_was_bounded": false
+        },
+        "range_m": 4.513619295976821,
+        "raw_height_m": 8.08017061142915,
+        "raw_width_m": 4.091765627846117,
+        "width_was_bounded": false
+      },
+      "face_fit": null,
+      "height_m": 0.7229235880398672,
+      "label": "storefront_sign_damassa",
+      "placement_id": "obs-manual-business:damassa",
+      "semantic_family": "storefront_frontage",
+      "text_rgb": [
+        232,
+        232,
+        226
+      ],
+      "width_m": 1.6
+    }
+  ],
+  "schema": "y92.custom_asset_plan.v1"
+}

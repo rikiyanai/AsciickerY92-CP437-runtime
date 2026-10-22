@@ -1,0 +1,10 @@
+{
+  "title": "Female hand",
+  "author": "deep3dstudio",
+  "source_url": "https://sketchfab.com/3d-models/female-hand-3e9b8ad1942048e3a267d92fb1124d46",
+  "license": "CC-BY-NC-4.0",
+  "original_file": "/Users/r/Downloads/female_hand.glb",
+  "original_sha256": "0da34a2cd4488d473f0d2141b7041266960b5ac98ce09fbcf6eccafc2ab9740f",
+  "conversion": "python3 scripts/glb_to_akm.py /Users/r/Downloads/female_hand.glb --output assets/meshes/incoming/female_hand.akm",
+  "runtime_owner": "World.gd retained static face bank -> SceneGeometryDB -> Visible Surface Builder -> Product"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "asciicker.car.foreground_mechanics.v1",
+  "scope": "Shared coordinate/font/part mechanics only. No shared car drawing or replacement glyph grammar.",
+  "font": "articles/fl4831-aahub-car-turntables-20261019/revision-04/gifs/Saitamaar.ttf",
+  "font_sha256": "592bf6be803ed76311841b95a10b20db3df0ec693a15f858757d47420b9b3a28",
+  "font_px": 16,
+  "row_pitch_px": 17,
+  "native_passages": {"f ": "Preserve the approved f and trailing-space advance; never crop its overhang or replace its neighboring glyphs."},
+  "wheel_motion_binding": {
+    "body": 0, "steer_only_outline": 1, "physical_spin": 2,
+    "outline_suffixes": ["tire", "rim", "hub"],
+    "rule": "Optical circular outlines follow the body and steering. Physical vents, petals, wire spokes, valve, sidewall and tread follow actual wheel spin after undoing source demonstration phase. Contacts remain body/ground-owned."
+  },
+  "bindings": [
+    {"prefix": "contact.", "part": 0, "retain": "The subject's existing short ground contacts; never rotate these with the tire."},
+    {"prefix": "wheel.-1.0.", "part": 1, "retain": "Original left-front native wheel passages; actual front steering and travel, no mirrored substitute."},
+    {"prefix": "wheel.1.0.", "part": 2, "retain": "Original right-front native wheel passages; independent front steering and travel."},
+    {"prefix": "wheel.-1.1.", "part": 3, "retain": "Original left-rear native wheel passages; travel spin, not front steering."},
+    {"prefix": "wheel.1.1.", "part": 4, "retain": "Original right-rear native wheel passages; travel spin, not front steering."}
+  ]
+}

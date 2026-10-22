@@ -1,0 +1,95 @@
+{
+  "fallback_policy": "source_derived",
+  "jurisdiction": {
+    "country_code": "JP"
+  },
+  "pack_id": "japan",
+  "parents": [
+    "common_global"
+  ],
+  "rail_infrastructure_profiles": [
+    {
+      "bridge_clearance_m": 6.0,
+      "default_gauge_mm": 1067,
+      "id": "jp.national.conventional_rail",
+      "provenance": "jurisdiction rail-infrastructure fallback; source tags override",
+      "physical": {
+        "asset_id": "jp.national.conventional_rail",
+        "semantic_family": "conventional_rail",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 1.5,
+        "intended_depth_m": 1.5,
+        "intended_height_m": 0.5,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "declared": {
+          "gauge_m": 1.067,
+          "bridge_clearance_m": 6.0
+        },
+        "provenance": "declared profile default_gauge_mm 1067 and bridge_clearance_m 6.0"
+      }
+    }
+  ],
+  "schema": "y92.world_template_pack.v1",
+  "support_tier": "full",
+  "templates": [
+    {
+      "expected_text": [
+        "駐輪禁止"
+      ],
+      "face_mode": "parameterized_catalog",
+      "geometry_family": "jp_rectangular_notice_panel",
+      "identity_bucket": "standardized",
+      "semantic_class": "bicycle_parking_prohibited_notice",
+      "template_id": "jp.notice.bicycle_parking_prohibited_v1",
+      "physical": {
+        "asset_id": "jp.notice.bicycle_parking_prohibited_v1",
+        "semantic_family": "notice_panel",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 0.7,
+        "intended_depth_m": 0.15,
+        "intended_height_m": 2.0,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "class_default",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "rules OBJECT_METRIC_DEFAULTS notice_panel"
+      }
+    },
+    {
+      "face_mode": "source_variant_until_subclass_resolved",
+      "geometry_family": "jp_regulatory_sign",
+      "identity_bucket": "standardized",
+      "semantic_class": "statutory_traffic_sign",
+      "template_id": "jp.traffic.regulatory_family_v1",
+      "physical": {
+        "asset_id": "jp.traffic.regulatory_family_v1",
+        "semantic_family": "stop_sign_panel",
+        "archetype_subtype": "traffic_sign",
+        "native_bbox_m": [
+          0.68,
+          0.12,
+          2.26
+        ],
+        "intended_width_m": 0.68,
+        "intended_depth_m": 0.12,
+        "intended_height_m": 2.26,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(traffic_sign) output at scale 1.0"
+      }
+    }
+  ]
+}

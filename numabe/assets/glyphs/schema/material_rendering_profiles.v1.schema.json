@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "material_rendering_profiles.v1",
+  "description": "FL-4260 RQ-147 Material Rendering Profile data model. Durable Law-1 owner of PROFILE colors/shade. .a3d mat[id].shade stays CP437 data; the per-map assignment sidecar owns assignment. Direct edits update the live profile owner.",
+  "type": "object",
+  "required": ["schema", "profiles"],
+  "properties": {
+    "schema": {"const": "material_rendering_profiles.v1"},
+    "generated_by": {"type": "string"},
+    "note": {"type": "string"},
+    "profiles": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/profile"}
+    }
+  },
+  "definitions": {
+    "profile": {
+      "type": "object",
+      "required": [
+        "material_id", "source_class", "display_name", "preset_seed_id",
+        "seed_provenance", "idempotency_marker", "profile_state",
+        "source_table_hash", "review_receipt_id", "colors", "glyph_pools",
+        "role_buckets", "scoring"
+      ],
+      "properties": {
+        "material_id": {
+          "type": "string",
+          "description": "terrain:<int> or mesh:<asset_identity>:<slot> (RQ-159). Raw RGB cannot bind.",
+          "pattern": "^(terrain:[0-9]+|mesh:.+)$"
+        },
+        "source_class": {"enum": ["terrain", "mesh"]},
+        "display_name": {"type": "string"},
+        "preset_seed_id": {"type": "string"},
+        "seed_provenance": {"type": ["string", "null"]},
+        "idempotency_marker": {"type": "string", "minLength": 1},
+        "profile_state": {"enum": ["live", "blocked"]},
+        "source_table_hash": {"type": "string"},
+        "review_receipt_id": {"type": ["string", "null"]},
+        "colors": {
+          "type": "object",
+          "required": ["fg_palette", "bg_palette", "shade_band_thresholds",
+                       "elevation_rows", "per_row", "fallback_bytes"],
+          "properties": {
+            "fg_palette": {"type": "array"},
+            "bg_palette": {"type": "array"},
+            "shade_band_thresholds": {"type": "array"},
+            "elevation_rows": {"type": "object"},
+            "per_row": {"type": "array"},
+            "fallback_bytes": {"type": "object"}
+          }
+        },
+        "glyph_pools": {
+          "type": "object",
+          "anyOf": [
+            {"required": ["glyph_ids"]},
+            {"required": ["cp437", "extended"]}
+          ],
+          "properties": {
+            "glyph_ids": {"type": "array", "items": {"type": "integer", "minimum": 0}},
+            "cp437": {"type": "array", "items": {"type": "integer", "minimum": 0, "maximum": 255}},
+            "extended": {"type": "array", "items": {"type": "integer", "minimum": 256}}
+          }
+        },
+        "role_buckets": {
+          "type": "object",
+          "required": ["ramp", "density", "direction", "edge", "flow", "accent"],
+          "properties": {
+            "ramp": {"type": "array"},
+            "density": {"type": "array"},
+            "direction": {"type": "array"},
+            "edge": {"type": "array"},
+            "flow": {"type": "array"},
+            "accent": {"type": "array"}
+          }
+        },
+        "scoring": {
+          "type": "object",
+          "required": ["detail_contrast", "tone_contrast", "density_bias", "role_weights"]
+        },
+        "projected_feature_extent_admission": {"$ref": "#/definitions/projected_feature_extent_admission"},
+        "active_stroke_topology": {"$ref": "#/definitions/active_stroke_topology"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"source_class": {"const": "mesh"}}},
+          "then": {
+            "required": [
+              "projected_feature_extent_admission",
+              "active_stroke_topology"
+            ]
+          }
+        }
+      ]
+    },
+    "extent_threshold": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enter_q", "exit_q"],
+      "properties": {
+        "enter_q": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "exit_q": {"type": "integer", "minimum": 1, "maximum": 4294967295}
+      }
+    },
+    "projected_feature_extent_admission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema", "extent_quantization_version", "mesh_thresholds", "filled_threshold", "suggestive_contour"],
+      "properties": {
+        "schema": {"const": "fl4512.projected_feature_extent_admission.v2"},
+        "extent_quantization_version": {"const": 1},
+        "mesh_thresholds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["silhouette", "crease", "material_boundary", "suggestive_contour"],
+          "properties": {
+            "silhouette": {"$ref": "#/definitions/extent_threshold"},
+            "crease": {"$ref": "#/definitions/extent_threshold"},
+            "material_boundary": {"$ref": "#/definitions/extent_threshold"},
+            "suggestive_contour": {"$ref": "#/definitions/extent_threshold"}
+          }
+        },
+        "filled_threshold": {"$ref": "#/definitions/extent_threshold"},
+        "suggestive_contour": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["estimator_id", "derivative_enter_q16", "stability_angle_min_q16", "suggestive_claim_enabled"],
+          "properties": {
+            "estimator_id": {"const": "fl4512.cubic_monge_qr.v1"},
+            "derivative_enter_q16": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+            "stability_angle_min_q16": {"type": "integer", "minimum": 0, "maximum": 205887},
+            "suggestive_claim_enabled": {"type": "boolean"}
+          }
+        }
+      }
+    },
+    "active_stroke_topology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "alpha_q0_16",
+        "beta_q0_16",
+        "attraction_lambda_q0_16",
+        "temporal_lambda_q0_16",
+        "step_q0_16",
+        "gaussian_sigma_q16_16",
+        "gaussian_distance2_step_q16_16",
+        "gaussian_table_count",
+        "relaxation_iterations",
+        "resample_min_q16_16",
+        "resample_max_q16_16",
+        "coverage_radius_q16_16",
+        "trim_radius_q16_16",
+        "extend_radius_q16_16",
+        "merge_radius_q16_16",
+        "coverage_tangent_dot_min_q1_15",
+        "merge_tangent_dot_min_q1_15",
+        "split_tangent_dot_max_q1_15",
+        "topology_balance_q0_16",
+        "spring_stiffness_q1_15",
+        "extension_step_q16_16",
+        "extension_max_steps",
+        "trim_support_min",
+        "max_topology_passes",
+        "max_tracks",
+        "max_controls_per_track",
+        "max_controls_per_owner",
+        "max_samples_per_owner",
+        "quantization_version",
+        "content_sha256"
+      ],
+      "properties": {
+        "schema": {"const": "fl4512.active_stroke_topology.v2"},
+        "alpha_q0_16": {"type": "integer", "minimum": 0, "maximum": 65535},
+        "beta_q0_16": {"type": "integer", "minimum": 0, "maximum": 65535},
+        "attraction_lambda_q0_16": {"type": "integer", "minimum": 0, "maximum": 65535},
+        "temporal_lambda_q0_16": {"type": "integer", "minimum": 0, "maximum": 65535},
+        "step_q0_16": {"type": "integer", "minimum": 1, "maximum": 65535},
+        "gaussian_sigma_q16_16": {"const": 65536},
+        "gaussian_distance2_step_q16_16": {"const": 4096},
+        "gaussian_table_count": {"const": 145},
+        "relaxation_iterations": {"type": "integer", "minimum": 1, "maximum": 255},
+        "resample_min_q16_16": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "resample_max_q16_16": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "coverage_radius_q16_16": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "trim_radius_q16_16": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "extend_radius_q16_16": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "merge_radius_q16_16": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "coverage_tangent_dot_min_q1_15": {"type": "integer", "minimum": 0, "maximum": 32768},
+        "merge_tangent_dot_min_q1_15": {"type": "integer", "minimum": 0, "maximum": 32768},
+        "split_tangent_dot_max_q1_15": {"type": "integer", "minimum": 0, "maximum": 32768},
+        "topology_balance_q0_16": {"type": "integer", "minimum": 0, "maximum": 65535},
+        "spring_stiffness_q1_15": {"type": "integer", "minimum": 0, "maximum": 32768},
+        "extension_step_q16_16": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+        "extension_max_steps": {"type": "integer", "minimum": 1, "maximum": 255},
+        "trim_support_min": {"type": "integer", "minimum": 1, "maximum": 65535},
+        "max_topology_passes": {"type": "integer", "minimum": 1, "maximum": 255},
+        "max_tracks": {"type": "integer", "minimum": 1, "maximum": 4096},
+        "max_controls_per_track": {"type": "integer", "minimum": 1, "maximum": 4096},
+        "max_controls_per_owner": {"type": "integer", "minimum": 1, "maximum": 65536},
+        "max_samples_per_owner": {"type": "integer", "minimum": 1, "maximum": 65536},
+        "quantization_version": {"const": 2},
+        "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}

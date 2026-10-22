@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "content_pack_id": "material.additive.v1",
+  "description": "FL-4131 generated extended material shape presets. Each preset is a 4x4 terrain ramp: rows are contour/edge roles, columns increase density or shade strength.",
+  "default_rows": 4,
+  "default_cols": 4,
+  "presets": [
+    {
+      "purpose": "Grass Tops",
+      "material": "GRASS",
+      "name": "soft_top_curve",
+      "rows": [
+        {"role": "soft_top", "preferred_glyph_ids": [616, 623, 624, 625], "query": {"roles": ["grass_top"], "repertoire": ["arabic"], "density_range": [0.05, 0.55], "top_weight_min": 0.08}},
+        {"role": "curve_flow", "preferred_glyph_ids": [512, 617, 626, 627], "query": {"roles": ["grass_top", "wave_flow"], "repertoire": ["arabic", "math"], "curve_score_min": 0.20}},
+        {"role": "flower_top", "preferred_glyph_ids": [620, 622, 628, 629], "query": {"roles": ["flower_top"], "repertoire": ["arabic", "shapes"], "density_range": [0.08, 0.62]}},
+        {"role": "edge_accent", "preferred_glyph_ids": [633, 634, 632, 628], "query": {"roles": ["corner_lip", "wave_flow"], "repertoire": ["box", "math", "arabic"], "curve_score_min": 0.12}}
+      ]
+    },
+    {
+      "purpose": "Wave Flow",
+      "material": "WATER",
+      "name": "curve_current",
+      "rows": [
+        {"role": "surface_wave", "preferred_glyph_ids": [544, 545, 542, 543], "query": {"roles": ["wave_flow"], "repertoire": ["math"], "density_range": [0.05, 0.55]}},
+        {"role": "arabic_flow", "preferred_glyph_ids": [626, 627, 628, 629], "query": {"roles": ["wave_flow"], "repertoire": ["arabic"], "curve_score_min": 0.20}},
+        {"role": "contour_loop", "preferred_glyph_ids": [512, 632, 568, 569], "query": {"roles": ["wave_flow"], "stroke_class": ["curve", "line"]}},
+        {"role": "ripple_edge", "preferred_glyph_ids": [520, 521, 546, 617], "query": {"roles": ["wave_flow", "corner_lip"], "density_range": [0.05, 0.50]}}
+      ]
+    },
+    {
+      "purpose": "Flower Tops",
+      "material": "GRASS",
+      "name": "light_bloom",
+      "rows": [
+        {"role": "pin_dots", "preferred_glyph_ids": [528, 529, 547, 565], "query": {"roles": ["sparse_detail"], "density_range": [0.01, 0.18]}},
+        {"role": "ring_blooms", "preferred_glyph_ids": [530, 531, 548, 583], "query": {"repertoire": ["shapes", "punct"], "density_range": [0.02, 0.35]}},
+        {"role": "arabic_bowls", "preferred_glyph_ids": [620, 621, 622, 628], "query": {"roles": ["flower_top"], "repertoire": ["arabic"]}},
+        {"role": "star_blooms", "preferred_glyph_ids": [571, 572, 573, 574], "query": {"repertoire": ["shapes"], "density_range": [0.10, 0.55]}}
+      ]
+    },
+    {
+      "purpose": "Rock Faces",
+      "material": "STONE",
+      "name": "vertical_angular",
+      "rows": [
+        {"role": "grain", "preferred_glyph_ids": [556, 557, 637, 638], "query": {"roles": ["rock_face"], "repertoire": ["katakana", "cjk"], "density_range": [0.05, 0.65]}},
+        {"role": "strata", "preferred_glyph_ids": [543, 640, 517, 639], "query": {"roles": ["strata", "rock_face"], "density_range": [0.05, 0.70]}},
+        {"role": "hard_edge", "preferred_glyph_ids": [515, 516, 642, 646], "query": {"roles": ["fracture", "rock_face"], "stroke_class": ["corner", "cross", "diagonal", "vertical"]}},
+        {"role": "fracture", "preferred_glyph_ids": [641, 643, 633, 635], "query": {"roles": ["fracture", "corner_lip"], "density_range": [0.05, 0.65]}}
+      ]
+    },
+    {
+      "purpose": "Strata",
+      "material": "DIRT",
+      "name": "horizontal_bands",
+      "rows": [
+        {"role": "fine_band", "preferred_glyph_ids": [645, 521, 543, 640], "query": {"roles": ["strata"], "density_range": [0.02, 0.45]}},
+        {"role": "heavy_band", "preferred_glyph_ids": [644, 517, 637, 639], "query": {"roles": ["strata", "rock_face"], "density_range": [0.10, 0.70]}},
+        {"role": "wave_band", "preferred_glyph_ids": [544, 545, 542, 543], "query": {"roles": ["wave_flow", "strata"], "repertoire": ["math"]}},
+        {"role": "break_band", "preferred_glyph_ids": [518, 519, 515, 516], "query": {"roles": ["fracture"], "density_range": [0.04, 0.45]}}
+      ]
+    },
+    {
+      "purpose": "Corners / Lips",
+      "material": "STONE",
+      "name": "rounded_edges",
+      "rows": [
+        {"role": "rounded_corner", "preferred_glyph_ids": [633, 634, 635, 636], "query": {"roles": ["corner_lip"], "repertoire": ["box"], "curve_score_min": 0.08}},
+        {"role": "hard_corner", "preferred_glyph_ids": [522, 523, 524, 525], "query": {"roles": ["corner_lip"], "stroke_class": ["corner"]}},
+        {"role": "triangle_lip", "preferred_glyph_ids": [589, 590, 591, 592], "query": {"repertoire": ["shapes"], "stroke_class": ["diagonal", "corner"]}},
+        {"role": "contour_lip", "preferred_glyph_ids": [515, 512, 632, 546], "query": {"roles": ["corner_lip", "wave_flow"], "repertoire": ["math", "box"]}}
+      ]
+    },
+    {
+      "purpose": "Fracture",
+      "material": "GRAVEL",
+      "name": "analytic_cracks",
+      "rows": [
+        {"role": "cross_break", "preferred_glyph_ids": [641, 642, 643, 515], "query": {"roles": ["fracture"], "stroke_class": ["cross", "diagonal", "corner"]}},
+        {"role": "orthogonal_break", "preferred_glyph_ids": [516, 517, 526, 527], "query": {"roles": ["fracture"], "stroke_class": ["vertical", "horizontal", "line"]}},
+        {"role": "slash_break", "preferred_glyph_ids": [518, 519, 534, 535], "query": {"roles": ["fracture"], "stroke_class": ["diagonal"]}},
+        {"role": "jagged_corner", "preferred_glyph_ids": [633, 635, 522, 525], "query": {"roles": ["corner_lip", "fracture"]}}
+      ]
+    }
+  ]
+}

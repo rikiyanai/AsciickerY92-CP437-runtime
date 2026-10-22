@@ -1,0 +1,1347 @@
+{
+  "fallback_policy": "source_derived",
+  "jurisdiction": {
+    "country_code": "JP"
+  },
+  "pack_id": "japan_urban",
+  "parents": [
+    "japan"
+  ],
+  "place_front_profiles": [
+    {
+      "accent_rgb": [
+        144,
+        140,
+        128
+      ],
+      "awning_rgb": [
+        55,
+        58,
+        55
+      ],
+      "base_rgb": [
+        144,
+        140,
+        128
+      ],
+      "body_rgb": [
+        78,
+        58,
+        43
+      ],
+      "edge_width_fraction": 0.45,
+      "geometry_family": "place_entry_gate",
+      "height_m": 2.75,
+      "id": "jp.urban.buddhist_place_entry_gate",
+      "match": {
+        "amenity": "place_of_worship",
+        "religion": "buddhist"
+      },
+      "max_width_m": 4.0,
+      "min_width_m": 2.6,
+      "panel_rgb": [
+        119,
+        95,
+        64
+      ],
+      "post_rgb": [
+        78,
+        58,
+        43
+      ],
+      "primary_rgb": [
+        55,
+        58,
+        55
+      ],
+      "provenance": "declarative locale place-entry archetype; OSM identity; source review required",
+      "roof_rgb": [
+        55,
+        58,
+        55
+      ],
+      "physical": {
+        "asset_id": "jp.urban.buddhist_place_entry_gate",
+        "semantic_family": "place_entry_gate",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 4.0,
+        "intended_depth_m": 0.8,
+        "intended_height_m": 2.75,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "declared profile height_m/max_width_m"
+      }
+    }
+  ],
+  "railway_crossing_profiles": [
+    {
+      "approach_offset_m": 4.2,
+      "barrier_arm_blocks": 8,
+      "barrier_arm_start_m": 0.28,
+      "barrier_arm_step_m": 0.48,
+      "cluster_radius_m": 12.0,
+      "dark_rgb": [
+        40,
+        43,
+        40
+      ],
+      "id": "jp.urban.railway_grade_crossing",
+      "max_rail_distance_m": 12.0,
+      "post_height_m": 2.5,
+      "post_offset_m": 2.05,
+      "provenance": "declarative jurisdiction urban railway-crossing proposal; source review required",
+      "signal_box_max_m": 2.18,
+      "signal_box_min_m": 1.72,
+      "warning_rgb": [
+        220,
+        177,
+        35
+      ],
+      "physical": {
+        "asset_id": "jp.urban.railway_grade_crossing",
+        "semantic_family": "crossing_equipment",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 0.3,
+        "intended_depth_m": 0.3,
+        "intended_height_m": 2.5,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "declared profile post_height_m 2.5 (arms/site vary; cluster checked against family range)"
+      }
+    }
+  ],
+  "schema": "y92.world_template_pack.v1",
+  "site_contexts": [
+    "urban_residential",
+    "railway_station"
+  ],
+  "templates": [
+    {
+      "face_mode": "source_parameters",
+      "geometry_family": "jp_vending_machine",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "vending_machine",
+      "template_id": "jp.urban.vending_machine_rectangular_v1",
+      "physical": {
+        "asset_id": "jp.urban.vending_machine_rectangular_v1",
+        "semantic_family": "vending_machine",
+        "archetype_subtype": "vending_machine",
+        "native_bbox_m": [
+          1.1,
+          0.83,
+          1.85
+        ],
+        "intended_width_m": 1.1,
+        "intended_depth_m": 0.83,
+        "intended_height_m": 1.85,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(vending_machine) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "source_parameters",
+      "geometry_family": "jp_concrete_utility_pole",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "utility_pole",
+      "template_id": "jp.urban.utility_pole_concrete_v1",
+      "physical": {
+        "asset_id": "jp.urban.utility_pole_concrete_v1",
+        "semantic_family": "utility_pole",
+        "archetype_subtype": "utility_pole",
+        "native_bbox_m": [
+          1.6,
+          0.3,
+          7.0
+        ],
+        "intended_width_m": 1.6,
+        "intended_depth_m": 0.3,
+        "intended_height_m": 7.0,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(utility_pole) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_traffic_signal",
+      "identity_bucket": "semi_standardized",
+      "parameters": {
+        "amber_rgb": [
+          224,
+          176,
+          36
+        ],
+        "green_rgb": [
+          48,
+          168,
+          72
+        ],
+        "housing_rgb": [
+          48,
+          52,
+          48
+        ],
+        "intersection_corner_offset_m": 4.25,
+        "minimum_road_clearance_m": 2.25,
+        "placement_mode": "roadside_from_logical_control",
+        "pole_rgb": [
+          92,
+          96,
+          92
+        ],
+        "red_rgb": [
+          208,
+          44,
+          36
+        ],
+        "roadside_offset_m": 3.0,
+        "traffic_side": "left",
+        "visual_traits": [
+          "road_edge_placement",
+          "oriented_signal_face",
+          "three_aspect_signal"
+        ]
+      },
+      "semantic_class": "traffic_signal",
+      "template_id": "jp.urban.traffic_signal_v1",
+      "physical": {
+        "asset_id": "jp.urban.traffic_signal_v1",
+        "semantic_family": "traffic_signal",
+        "archetype_subtype": "traffic_signal",
+        "native_bbox_m": [
+          0.44,
+          0.32,
+          3.05
+        ],
+        "intended_width_m": 0.44,
+        "intended_depth_m": 0.32,
+        "intended_height_m": 3.05,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(traffic_signal) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_post_box",
+      "identity_bucket": "semi_standardized",
+      "parameters": {
+        "body_rgb": [
+          188,
+          37,
+          42
+        ],
+        "pole_rgb": [
+          104,
+          108,
+          104
+        ],
+        "slot_rgb": [
+          55,
+          45,
+          42
+        ],
+        "visual_traits": [
+          "pole_mounted_box",
+          "raised_mail_slot",
+          "red_jp_post_box"
+        ]
+      },
+      "semantic_class": "post_box",
+      "template_id": "jp.urban.post_box_v1",
+      "physical": {
+        "asset_id": "jp.urban.post_box_v1",
+        "semantic_family": "post_box",
+        "archetype_subtype": "post_box",
+        "native_bbox_m": [
+          0.68,
+          0.545,
+          1.55
+        ],
+        "intended_width_m": 0.68,
+        "intended_depth_m": 0.545,
+        "intended_height_m": 1.55,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(post_box) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_public_telephone",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "public_telephone",
+      "template_id": "jp.urban.public_telephone_v1",
+      "physical": {
+        "asset_id": "jp.urban.public_telephone_v1",
+        "semantic_family": "public_telephone",
+        "archetype_subtype": "public_telephone",
+        "native_bbox_m": [
+          0.68,
+          0.59,
+          1.85
+        ],
+        "intended_width_m": 0.68,
+        "intended_depth_m": 0.59,
+        "intended_height_m": 1.85,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(public_telephone) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_bicycle_parking_rack",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "bicycle_parking",
+      "template_id": "jp.urban.bicycle_parking_rack_v1",
+      "physical": {
+        "asset_id": "jp.urban.bicycle_parking_rack_v1",
+        "semantic_family": "bicycle_parking",
+        "archetype_subtype": "bicycle_parking",
+        "native_bbox_m": [
+          1.58,
+          0.8,
+          0.78
+        ],
+        "intended_width_m": 1.58,
+        "intended_depth_m": 0.8,
+        "intended_height_m": 0.78,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(bicycle_parking) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_bench",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "bench",
+      "template_id": "jp.urban.bench_v1",
+      "physical": {
+        "asset_id": "jp.urban.bench_v1",
+        "semantic_family": "bench",
+        "archetype_subtype": "bench",
+        "native_bbox_m": [
+          1.6,
+          0.47,
+          0.95
+        ],
+        "intended_width_m": 1.6,
+        "intended_depth_m": 0.47,
+        "intended_height_m": 0.95,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(bench) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_waste_basket",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "waste_basket",
+      "template_id": "jp.urban.waste_basket_v1",
+      "physical": {
+        "asset_id": "jp.urban.waste_basket_v1",
+        "semantic_family": "waste_basket",
+        "archetype_subtype": "waste_basket",
+        "native_bbox_m": [
+          0.5,
+          0.51,
+          0.8
+        ],
+        "intended_width_m": 0.5,
+        "intended_depth_m": 0.51,
+        "intended_height_m": 0.8,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(waste_basket) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_drinking_water",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "drinking_water",
+      "template_id": "jp.urban.drinking_water_v1",
+      "physical": {
+        "asset_id": "jp.urban.drinking_water_v1",
+        "semantic_family": "drinking_water",
+        "archetype_subtype": "drinking_water",
+        "native_bbox_m": [
+          0.6,
+          0.5,
+          0.9
+        ],
+        "intended_width_m": 0.6,
+        "intended_depth_m": 0.5,
+        "intended_height_m": 0.9,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(drinking_water) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_shelter",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "shelter",
+      "template_id": "jp.urban.shelter_v1",
+      "physical": {
+        "asset_id": "jp.urban.shelter_v1",
+        "semantic_family": "shelter",
+        "archetype_subtype": "shelter",
+        "native_bbox_m": [
+          3.2,
+          1.6,
+          2.45
+        ],
+        "intended_width_m": 3.2,
+        "intended_depth_m": 1.6,
+        "intended_height_m": 2.45,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(shelter) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_clock",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "clock",
+      "template_id": "jp.urban.clock_v1",
+      "physical": {
+        "asset_id": "jp.urban.clock_v1",
+        "semantic_family": "clock",
+        "archetype_subtype": "clock",
+        "native_bbox_m": [
+          0.6,
+          0.2,
+          2.7
+        ],
+        "intended_width_m": 0.6,
+        "intended_depth_m": 0.2,
+        "intended_height_m": 2.7,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(clock) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_fountain",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "fountain",
+      "template_id": "jp.urban.fountain_v1",
+      "physical": {
+        "asset_id": "jp.urban.fountain_v1",
+        "semantic_family": "fountain",
+        "archetype_subtype": "fountain",
+        "native_bbox_m": [
+          1.3,
+          1.3,
+          0.32
+        ],
+        "intended_width_m": 1.3,
+        "intended_depth_m": 1.3,
+        "intended_height_m": 0.32,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(fountain) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_street_lamp",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "street_lamp",
+      "template_id": "jp.urban.street_lamp_v1",
+      "physical": {
+        "asset_id": "jp.urban.street_lamp_v1",
+        "semantic_family": "street_lamp",
+        "archetype_subtype": "street_lamp",
+        "native_bbox_m": [
+          0.75,
+          0.4,
+          5.0
+        ],
+        "intended_width_m": 0.75,
+        "intended_depth_m": 0.4,
+        "intended_height_m": 5.0,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(street_lamp) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_bus_stop",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "bus_stop",
+      "template_id": "jp.urban.bus_stop_v1",
+      "physical": {
+        "asset_id": "jp.urban.bus_stop_v1",
+        "semantic_family": "bus_stop",
+        "archetype_subtype": "bus_stop",
+        "native_bbox_m": [
+          0.5,
+          0.12,
+          2.2
+        ],
+        "intended_width_m": 0.5,
+        "intended_depth_m": 0.12,
+        "intended_height_m": 2.2,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(bus_stop) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_stop_sign",
+      "identity_bucket": "semi_standardized",
+      "parameters": {
+        "border_rgb": [
+          239,
+          238,
+          224
+        ],
+        "fill_rgb": [
+          197,
+          42,
+          43
+        ],
+        "placement_mode": "roadside_from_logical_control",
+        "pole_rgb": [
+          118,
+          122,
+          118
+        ],
+        "roadside_offset_m": 2.5,
+        "traffic_side": "left",
+        "visual_traits": [
+          "inverted_triangle",
+          "white_border",
+          "road_edge_placement"
+        ]
+      },
+      "semantic_class": "stop_sign",
+      "template_id": "jp.urban.stop_sign_v1",
+      "physical": {
+        "asset_id": "jp.urban.stop_sign_v1",
+        "semantic_family": "stop_sign_panel",
+        "archetype_subtype": "stop_sign",
+        "native_bbox_m": [
+          0.84,
+          0.144,
+          2.26
+        ],
+        "intended_width_m": 0.84,
+        "intended_depth_m": 0.144,
+        "intended_height_m": 2.26,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(stop_sign) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_pedestrian_gate",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "pedestrian_gate",
+      "template_id": "jp.urban.pedestrian_gate_v1",
+      "physical": {
+        "asset_id": "jp.urban.pedestrian_gate_v1",
+        "semantic_family": "gate_barrier",
+        "archetype_subtype": "pedestrian_gate",
+        "native_bbox_m": [
+          2.0,
+          0.16,
+          1.1
+        ],
+        "intended_width_m": 2.0,
+        "intended_depth_m": 0.16,
+        "intended_height_m": 1.1,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(pedestrian_gate) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_lift_gate",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "lift_gate",
+      "template_id": "jp.urban.lift_gate_v1",
+      "physical": {
+        "asset_id": "jp.urban.lift_gate_v1",
+        "semantic_family": "gate_barrier",
+        "archetype_subtype": "lift_gate",
+        "native_bbox_m": [
+          2.9,
+          0.2,
+          1.2
+        ],
+        "intended_width_m": 2.9,
+        "intended_depth_m": 0.2,
+        "intended_height_m": 1.2,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(lift_gate) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_cycle_barrier",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "cycle_barrier",
+      "template_id": "jp.urban.cycle_barrier_v1",
+      "physical": {
+        "asset_id": "jp.urban.cycle_barrier_v1",
+        "semantic_family": "gate_barrier",
+        "archetype_subtype": "cycle_barrier",
+        "native_bbox_m": [
+          1.5,
+          0.12,
+          1.05
+        ],
+        "intended_width_m": 1.5,
+        "intended_depth_m": 0.12,
+        "intended_height_m": 1.05,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(cycle_barrier) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_bollard",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "bollard",
+      "template_id": "jp.urban.bollard_v1",
+      "physical": {
+        "asset_id": "jp.urban.bollard_v1",
+        "semantic_family": "bollard",
+        "archetype_subtype": "bollard",
+        "native_bbox_m": [
+          0.22,
+          0.22,
+          0.86
+        ],
+        "intended_width_m": 0.22,
+        "intended_depth_m": 0.22,
+        "intended_height_m": 0.86,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(bollard) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_turnstile",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "turnstile",
+      "template_id": "jp.urban.turnstile_v1",
+      "physical": {
+        "asset_id": "jp.urban.turnstile_v1",
+        "semantic_family": "gate_barrier",
+        "archetype_subtype": "turnstile",
+        "native_bbox_m": [
+          1.44,
+          0.16,
+          1.15
+        ],
+        "intended_width_m": 1.44,
+        "intended_depth_m": 0.16,
+        "intended_height_m": 1.15,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(turnstile) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_railway_signal",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "railway_signal",
+      "template_id": "jp.urban.railway_signal_v1",
+      "physical": {
+        "asset_id": "jp.urban.railway_signal_v1",
+        "semantic_family": "railway_signal",
+        "archetype_subtype": "railway_signal",
+        "native_bbox_m": [
+          0.4,
+          0.26,
+          3.2
+        ],
+        "intended_width_m": 0.4,
+        "intended_depth_m": 0.26,
+        "intended_height_m": 3.2,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(railway_signal) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_railway_switch",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "railway_switch",
+      "template_id": "jp.urban.railway_switch_v1",
+      "physical": {
+        "asset_id": "jp.urban.railway_switch_v1",
+        "semantic_family": "railway_ground_equipment",
+        "archetype_subtype": "railway_switch",
+        "native_bbox_m": [
+          0.68,
+          0.24,
+          0.18
+        ],
+        "intended_width_m": 0.68,
+        "intended_depth_m": 0.24,
+        "intended_height_m": 0.18,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(railway_switch) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_railway_buffer_stop",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "railway_buffer_stop",
+      "template_id": "jp.urban.railway_buffer_stop_v1",
+      "physical": {
+        "asset_id": "jp.urban.railway_buffer_stop_v1",
+        "semantic_family": "railway_buffer_stop",
+        "archetype_subtype": "railway_buffer_stop",
+        "native_bbox_m": [
+          1.44,
+          0.32,
+          0.75
+        ],
+        "intended_width_m": 1.44,
+        "intended_depth_m": 0.32,
+        "intended_height_m": 0.75,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(railway_buffer_stop) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_railway_derailer",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "railway_derailer",
+      "template_id": "jp.urban.railway_derailer_v1",
+      "physical": {
+        "asset_id": "jp.urban.railway_derailer_v1",
+        "semantic_family": "railway_ground_equipment",
+        "archetype_subtype": "railway_derailer",
+        "native_bbox_m": [
+          0.6,
+          0.32,
+          0.22
+        ],
+        "intended_width_m": 0.6,
+        "intended_depth_m": 0.32,
+        "intended_height_m": 0.22,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(railway_derailer) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_flagpole",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "flagpole",
+      "template_id": "jp.urban.flagpole_v1",
+      "physical": {
+        "asset_id": "jp.urban.flagpole_v1",
+        "semantic_family": "flagpole",
+        "archetype_subtype": "flagpole",
+        "native_bbox_m": [
+          0.8,
+          0.1,
+          5.0
+        ],
+        "intended_width_m": 0.8,
+        "intended_depth_m": 0.1,
+        "intended_height_m": 5.0,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(flagpole) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_street_cabinet",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "street_cabinet",
+      "template_id": "jp.urban.street_cabinet_v1",
+      "physical": {
+        "asset_id": "jp.urban.street_cabinet_v1",
+        "semantic_family": "street_cabinet",
+        "archetype_subtype": "street_cabinet",
+        "native_bbox_m": [
+          0.84,
+          0.56,
+          1.25
+        ],
+        "intended_width_m": 0.84,
+        "intended_depth_m": 0.56,
+        "intended_height_m": 1.25,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(street_cabinet) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_fire_hydrant",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "fire_hydrant",
+      "template_id": "jp.urban.fire_hydrant_v1",
+      "physical": {
+        "asset_id": "jp.urban.fire_hydrant_v1",
+        "semantic_family": "fire_hydrant",
+        "archetype_subtype": "fire_hydrant",
+        "native_bbox_m": [
+          0.48,
+          0.28,
+          0.65
+        ],
+        "intended_width_m": 0.48,
+        "intended_depth_m": 0.28,
+        "intended_height_m": 0.65,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(fire_hydrant) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_information_board",
+      "identity_bucket": "semi_standardized",
+      "parameters": {
+        "panel_rgb": [
+          209,
+          190,
+          151
+        ],
+        "roof_rgb": [
+          91,
+          71,
+          49
+        ],
+        "timber_rgb": [
+          166,
+          132,
+          87
+        ],
+        "visual_traits": [
+          "wide_wooden_board",
+          "dual_wood_posts",
+          "pitched_gable_roof"
+        ]
+      },
+      "semantic_class": "information_board",
+      "template_id": "jp.urban.information_board_v1",
+      "physical": {
+        "asset_id": "jp.urban.information_board_v1",
+        "semantic_family": "information_board",
+        "archetype_subtype": "information_board",
+        "native_bbox_m": [
+          1.76,
+          0.38,
+          2.12
+        ],
+        "intended_width_m": 1.76,
+        "intended_depth_m": 0.38,
+        "intended_height_m": 2.12,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(information_board) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_traffic_sign",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "traffic_sign",
+      "template_id": "jp.urban.traffic_sign_v1",
+      "physical": {
+        "asset_id": "jp.urban.traffic_sign_v1",
+        "semantic_family": "stop_sign_panel",
+        "archetype_subtype": "traffic_sign",
+        "native_bbox_m": [
+          0.68,
+          0.12,
+          2.26
+        ],
+        "intended_width_m": 0.68,
+        "intended_depth_m": 0.12,
+        "intended_height_m": 2.26,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(traffic_sign) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_advertising_sign",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "advertising_sign",
+      "template_id": "jp.urban.advertising_sign_v1",
+      "physical": {
+        "asset_id": "jp.urban.advertising_sign_v1",
+        "semantic_family": "advertising_sign",
+        "archetype_subtype": "advertising_sign",
+        "native_bbox_m": [
+          1.1,
+          0.16,
+          1.3
+        ],
+        "intended_width_m": 1.1,
+        "intended_depth_m": 0.16,
+        "intended_height_m": 1.3,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(advertising_sign) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_pedestrian_crossing_marker",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "pedestrian_crossing_marker",
+      "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+      "physical": {
+        "asset_id": "jp.urban.pedestrian_crossing_marker_v1",
+        "semantic_family": "pedestrian_crossing_marker",
+        "archetype_subtype": "pedestrian_crossing_marker",
+        "native_bbox_m": [
+          1.5,
+          1.24,
+          0.03
+        ],
+        "intended_width_m": 1.5,
+        "intended_depth_m": 1.24,
+        "intended_height_m": 0.03,
+        "allowed_scale_min": 0.5,
+        "allowed_scale_max": 2.0,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(pedestrian_crossing_marker) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_street_tree",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "tree",
+      "template_id": "jp.urban.street_tree_v1",
+      "physical": {
+        "asset_id": "jp.urban.street_tree_v1",
+        "semantic_family": "tree",
+        "archetype_subtype": "tree",
+        "native_bbox_m": [
+          1.7,
+          1.7,
+          3.55
+        ],
+        "intended_width_m": 1.7,
+        "intended_depth_m": 1.7,
+        "intended_height_m": 3.55,
+        "allowed_scale_min": 0.7,
+        "allowed_scale_max": 1.5,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "measured _build_archetype(tree) output at scale 1.0"
+      }
+    }
+    ,
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_store_signboard",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "store_signboard",
+      "template_id": "jp.urban.store_signboard_v1",
+      "physical": {
+        "asset_id": "jp.urban.store_signboard_v1",
+        "semantic_family": "advertising_sign",
+        "archetype_subtype": "store_signboard",
+        "native_bbox_m": [
+          1.6,
+          0.12,
+          2.8
+        ],
+        "intended_width_m": 1.6,
+        "intended_depth_m": 0.12,
+        "intended_height_m": 2.8,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "OBJECT_METRIC_DEFAULTS advertising_sign band (0.5-2.0, 0.1-0.4, 1.0-3.0); measured _build_archetype(store_signboard) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_manhole_cover",
+      "identity_bucket": "standardized",
+      "semantic_class": "manhole_cover",
+      "template_id": "jp.urban.manhole_cover_v1",
+      "physical": {
+        "asset_id": "jp.urban.manhole_cover_v1",
+        "semantic_family": "manhole_cover",
+        "archetype_subtype": "manhole_cover",
+        "native_bbox_m": [
+          0.6,
+          0.6,
+          0.035
+        ],
+        "intended_width_m": 0.6,
+        "intended_depth_m": 0.6,
+        "intended_height_m": 0.035,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "JP standard 600mm utility manhole cover class; measured _build_archetype(manhole_cover) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_traffic_cone",
+      "identity_bucket": "standardized",
+      "semantic_class": "traffic_cone",
+      "template_id": "jp.urban.traffic_cone_v1",
+      "physical": {
+        "asset_id": "jp.urban.traffic_cone_v1",
+        "semantic_family": "traffic_cone",
+        "archetype_subtype": "traffic_cone",
+        "native_bbox_m": [
+          0.36,
+          0.36,
+          0.7
+        ],
+        "intended_width_m": 0.36,
+        "intended_depth_m": 0.36,
+        "intended_height_m": 0.7,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "JP 700mm road-work cone class; measured _build_archetype(traffic_cone) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_banner_sign",
+      "identity_bucket": "semi_standardized",
+      "semantic_class": "banner_sign",
+      "template_id": "jp.urban.banner_sign_v1",
+      "physical": {
+        "asset_id": "jp.urban.banner_sign_v1",
+        "semantic_family": "advertising_sign",
+        "archetype_subtype": "banner_sign",
+        "native_bbox_m": [
+          0.7,
+          0.1,
+          2.9
+        ],
+        "intended_width_m": 0.7,
+        "intended_depth_m": 0.1,
+        "intended_height_m": 2.9,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "OBJECT_METRIC_DEFAULTS advertising_sign band (0.5-2.0, 0.1-0.4, 1.0-3.0); measured _build_archetype(banner_sign) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_catch_basin_grate",
+      "identity_bucket": "standardized",
+      "semantic_class": "catch_basin_grate",
+      "template_id": "jp.urban.catch_basin_grate_v1",
+      "physical": {
+        "asset_id": "jp.urban.catch_basin_grate_v1",
+        "semantic_family": "catch_basin_grate",
+        "archetype_subtype": "catch_basin_grate",
+        "native_bbox_m": [
+          0.6,
+          0.4,
+          0.06
+        ],
+        "intended_width_m": 0.6,
+        "intended_depth_m": 0.4,
+        "intended_height_m": 0.06,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "JP side-ditch grate 600x400 class; measured _build_archetype(catch_basin_grate) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_driveway_apron",
+      "identity_bucket": "standardized",
+      "semantic_class": "driveway_apron",
+      "template_id": "jp.urban.driveway_apron_v1",
+      "physical": {
+        "asset_id": "jp.urban.driveway_apron_v1",
+        "semantic_family": "paver",
+        "archetype_subtype": "driveway_apron",
+        "native_bbox_m": [
+          2.5,
+          2.0,
+          0.08
+        ],
+        "intended_width_m": 2.5,
+        "intended_depth_m": 2.0,
+        "intended_height_m": 0.08,
+        "allowed_scale_min": 0.5,
+        "allowed_scale_max": 2.0,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "OBJECT_METRIC_DEFAULTS paver band (0.01-3.0, 0.01-3.0, 0.01-0.1); measured _build_archetype(driveway_apron) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_generic_sign_plate",
+      "identity_bucket": "standardized",
+      "semantic_class": "sign_plate",
+      "template_id": "jp.urban.generic_sign_plate_v1",
+      "physical": {
+        "asset_id": "jp.urban.generic_sign_plate_v1",
+        "semantic_family": "notice_panel",
+        "archetype_subtype": "generic_sign_plate",
+        "native_bbox_m": [
+          0.6,
+          0.1,
+          2.2
+        ],
+        "intended_width_m": 0.6,
+        "intended_depth_m": 0.1,
+        "intended_height_m": 2.2,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "OBJECT_METRIC_DEFAULTS notice_panel band (0.4-1.2, 0.05-0.3, 1.2-2.6); measured _build_archetype(generic_sign_plate) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_warning_sign",
+      "identity_bucket": "standardized",
+      "semantic_class": "warning_sign_plate",
+      "template_id": "jp.urban.warning_sign_v1",
+      "parameters": {
+        "plate_shape": "triangle"
+      },
+      "physical": {
+        "asset_id": "jp.urban.warning_sign_v1",
+        "semantic_family": "stop_sign_panel",
+        "archetype_subtype": "warning_sign",
+        "native_bbox_m": [
+          0.8,
+          0.14,
+          2.3
+        ],
+        "intended_width_m": 0.8,
+        "intended_depth_m": 0.14,
+        "intended_height_m": 2.3,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "OBJECT_METRIC_DEFAULTS stop_sign_panel band (0.5-1.0, 0.1-0.3, 1.8-3.0); measured _build_archetype(warning_sign) output at scale 1.0"
+      }
+    },
+    {
+      "face_mode": "synthesized_archetype",
+      "geometry_family": "jp_water_valve_cover",
+      "identity_bucket": "standardized",
+      "semantic_class": "water_valve_cover",
+      "template_id": "jp.urban.water_valve_cover_v1",
+      "physical": {
+        "asset_id": "jp.urban.water_valve_cover_v1",
+        "semantic_family": "manhole_cover",
+        "archetype_subtype": "water_valve_cover",
+        "native_bbox_m": [
+          0.15,
+          0.15,
+          0.05
+        ],
+        "intended_width_m": 0.15,
+        "intended_depth_m": 0.15,
+        "intended_height_m": 0.05,
+        "allowed_scale_min": 0.85,
+        "allowed_scale_max": 1.15,
+        "scale_basis": "measured",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "JP small-valve cover 150mm class; measured _build_archetype(water_valve_cover) output at scale 1.0"
+      }
+    }
+  ]
+}

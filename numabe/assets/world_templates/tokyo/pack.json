@@ -1,0 +1,697 @@
+{
+  "schema": "y92.world_template_pack.v1",
+  "pack_id": "tokyo",
+  "parents": [
+    "japan_urban"
+  ],
+  "jurisdiction": {
+    "country_code": "JP",
+    "region": "Tokyo"
+  },
+  "fallback_policy": "source_derived",
+  "templates": [],
+  "facade_profiles": [
+    {
+      "id": "tokyo.warm_tile",
+      "wall_rgb": [
+        192,
+        184,
+        168
+      ],
+      "glass_rgb": [
+        76,
+        88,
+        96
+      ],
+      "trim_rgb": [
+        104,
+        98,
+        88
+      ],
+      "roof_rgb": [
+        72,
+        74,
+        76
+      ],
+      "bay_width_m": 2.5,
+      "window_fraction": 0.48,
+      "storey_m": 3.0
+    },
+    {
+      "id": "tokyo.pale_render",
+      "wall_rgb": [
+        208,
+        204,
+        192
+      ],
+      "glass_rgb": [
+        80,
+        96,
+        104
+      ],
+      "trim_rgb": [
+        112,
+        116,
+        112
+      ],
+      "roof_rgb": [
+        80,
+        82,
+        84
+      ],
+      "bay_width_m": 2.8,
+      "window_fraction": 0.55,
+      "storey_m": 3.0
+    },
+    {
+      "id": "tokyo.grey_siding",
+      "wall_rgb": [
+        156,
+        160,
+        160
+      ],
+      "glass_rgb": [
+        64,
+        80,
+        88
+      ],
+      "trim_rgb": [
+        72,
+        76,
+        80
+      ],
+      "roof_rgb": [
+        56,
+        60,
+        64
+      ],
+      "bay_width_m": 2.4,
+      "window_fraction": 0.42,
+      "storey_m": 2.9
+    },
+    {
+      "id": "tokyo.brown_tile",
+      "wall_rgb": [
+        152,
+        128,
+        108
+      ],
+      "glass_rgb": [
+        76,
+        88,
+        92
+      ],
+      "trim_rgb": [
+        88,
+        76,
+        68
+      ],
+      "roof_rgb": [
+        72,
+        64,
+        60
+      ],
+      "bay_width_m": 2.6,
+      "window_fraction": 0.45,
+      "storey_m": 3.1
+    },
+    {
+      "id": "tokyo.commercial_white",
+      "building_types": [
+        "commercial",
+        "retail",
+        "office"
+      ],
+      "wall_rgb": [
+        212,
+        212,
+        204
+      ],
+      "glass_rgb": [
+        72,
+        100,
+        112
+      ],
+      "trim_rgb": [
+        92,
+        100,
+        104
+      ],
+      "roof_rgb": [
+        100,
+        104,
+        104
+      ],
+      "bay_width_m": 3.2,
+      "window_fraction": 0.72,
+      "storey_m": 3.4
+    }
+  ],
+  "facade_profile_provenance": "synthesized art-direction parameters; not measured building identity",
+  "place_front_profiles": [
+    {
+      "id": "tokyo.familymart_front",
+      "match": {
+        "brand_identity_contains": [
+          "familymart",
+          "ファミリーマート"
+        ]
+      },
+      "geometry_family": "convenience_store_front",
+      "body_rgb": [
+        104,
+        62,
+        50
+      ],
+      "primary_rgb": [
+        0,
+        145,
+        211
+      ],
+      "accent_rgb": [
+        0,
+        146,
+        79
+      ],
+      "awning_rgb": [
+        244,
+        244,
+        232
+      ],
+      "window_rgb": [
+        196,
+        208,
+        200
+      ],
+      "door_rgb": [
+        170,
+        190,
+        186
+      ],
+      "label_rgb": [
+        21,
+        112,
+        160
+      ],
+      "identity_sign": {
+        "display_text": "FAMILY MART",
+        "fascia_z_min_m": 2.2,
+        "fascia_z_max_m": 3.27,
+        "label_z_min_m": 2.77,
+        "label_z_max_m": 3.09,
+        "label_width_fraction": 0.8,
+        "label_y_min_m": -0.34,
+        "label_y_max_m": -0.3
+      },
+      "ground_floor": {
+        "glazing": {
+          "z_min_m": 0.4,
+          "z_max_m": 1.95,
+          "side_margin_m": 0.4,
+          "bays": 1,
+          "mullion_spacing_m": 1.25,
+          "mullion_width_m": 0.07,
+          "mullion_z_min_m": 0.36,
+          "mullion_z_max_m": 1.99,
+          "frame_rgb": [
+            168,
+            170,
+            168
+          ]
+        },
+        "door": {
+          "side": "right",
+          "edge_margin_m": 0.45,
+          "width_m": 1.7,
+          "z_min_m": 0.06,
+          "z_max_m": 2.1
+        },
+        "piers": {
+          "width_m": 0.6
+        },
+        "awning": false,
+        "fascia": {
+          "face_o_m": 0.3
+        }
+      },
+      "fascia_bands": [
+        {
+          "fraction": 0.14,
+          "rgb": [
+            0,
+            146,
+            79
+          ]
+        },
+        {
+          "fraction": 0.36,
+          "rgb": [
+            244,
+            244,
+            232
+          ]
+        },
+        {
+          "fraction": 0.18,
+          "rgb": [
+            0,
+            145,
+            211
+          ]
+        },
+        {
+          "fraction": 0.32,
+          "rgb": [
+            244,
+            244,
+            232
+          ]
+        }
+      ],
+      "max_width_m": 8.0,
+      "visual_traits": [
+        "green_white_blue_fascia",
+        "warm_lit_glazing",
+        "source_named_frontage"
+      ],
+      "provenance": "OSM brand identity plus declarative operator colour prior; ground floor and fascia re-authored 2026-10-16 from Mapillary panoramas 945852359566475, 300504531651066, 912183052892738 of the Denenchofu Honcho store (+-0.2 m by eye: dark red-brown brick wall, glazing 0.40-1.95 m, entrance at the corner end about 1.7 m wide, no separate awning, white fascia 2.20-3.27 m projecting about 0.3 m with green top stripe, blue lower stripe and white soffit)",
+      "physical": {
+        "asset_id": "tokyo.familymart_front",
+        "semantic_family": "storefront_front",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 8.0,
+        "intended_depth_m": 0.8,
+        "intended_height_m": 2.9,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "class_default",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "rules OBJECT_METRIC_DEFAULTS storefront_front"
+      }
+    },
+    {
+      "id": "tokyo.mybasket_front",
+      "match": {
+        "brand_identity_contains": [
+          "my basket",
+          "まいばすけっと"
+        ]
+      },
+      "geometry_family": "neighborhood_supermarket_front",
+      "body_rgb": [
+        222,
+        214,
+        210
+      ],
+      "primary_rgb": [
+        51,
+        153,
+        102
+      ],
+      "accent_rgb": [
+        244,
+        244,
+        238
+      ],
+      "awning_rgb": [
+        42,
+        126,
+        84
+      ],
+      "window_rgb": [
+        222,
+        200,
+        150
+      ],
+      "door_rgb": [
+        30,
+        92,
+        62
+      ],
+      "label_rgb": [
+        246,
+        240,
+        228
+      ],
+      "identity_sign": {
+        "display_text": "MY BASKET",
+        "fascia_z_min_m": 2.02,
+        "fascia_z_max_m": 3.22,
+        "label_z_min_m": 2.24,
+        "label_z_max_m": 3.00,
+        "label_width_fraction": 0.90,
+        "label_y_min_m": -0.225,
+        "label_y_max_m": -0.175
+      },
+      "fascia_bands": [
+        {
+          "fraction": 0.22,
+          "rgb": [
+            51,
+            153,
+            102
+          ]
+        },
+        {
+          "fraction": 0.56,
+          "rgb": [
+            244,
+            238,
+            230
+          ]
+        },
+        {
+          "fraction": 0.22,
+          "rgb": [
+            51,
+            153,
+            102
+          ]
+        }
+      ],
+      "max_width_m": 8.0,
+      "visual_traits": [
+        "green_white_green_fascia",
+        "warm_lit_glazing",
+        "source_named_frontage"
+      ],
+      "provenance": "OSM brand identity plus licensed Mapillary storefront observation mapillary_773000440270518",
+      "physical": {
+        "asset_id": "tokyo.mybasket_front",
+        "semantic_family": "storefront_front",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 8.0,
+        "intended_depth_m": 0.8,
+        "intended_height_m": 2.9,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "class_default",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "rules OBJECT_METRIC_DEFAULTS storefront_front"
+      }
+    },
+    {
+      "id": "tokyo.pharmacy_front",
+      "match": {
+        "commercial_category_in": [
+          "shop=chemist",
+          "shop=pharmacy",
+          "amenity=pharmacy"
+        ]
+      },
+      "geometry_family": "pharmacy_front",
+      "body_rgb": [
+        223,
+        221,
+        205
+      ],
+      "primary_rgb": [
+        56,
+        92,
+        151
+      ],
+      "accent_rgb": [
+        224,
+        190,
+        43
+      ],
+      "awning_rgb": [
+        205,
+        207,
+        195
+      ],
+      "max_width_m": 8.0,
+      "provenance": "declarative regional pharmacy archetype prior",
+      "physical": {
+        "asset_id": "tokyo.pharmacy_front",
+        "semantic_family": "storefront_front",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 8.0,
+        "intended_depth_m": 0.8,
+        "intended_height_m": 2.9,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "class_default",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "rules OBJECT_METRIC_DEFAULTS storefront_front"
+      }
+    },
+    {
+      "id": "tokyo.lawson_front",
+      "match": {
+        "brand_identity_contains": [
+          "lawson",
+          "ローソン"
+        ]
+      },
+      "geometry_family": "convenience_store_front",
+      "body_rgb": [
+        226,
+        228,
+        226
+      ],
+      "primary_rgb": [
+        0,
+        118,
+        190
+      ],
+      "accent_rgb": [
+        255,
+        255,
+        255
+      ],
+      "awning_rgb": [
+        0,
+        118,
+        190
+      ],
+      "window_rgb": [
+        196,
+        214,
+        226
+      ],
+      "door_rgb": [
+        170,
+        196,
+        210
+      ],
+      "label_rgb": [
+        255,
+        255,
+        255
+      ],
+      "identity_sign": {
+        "display_text": "LAWSON",
+        "fascia_z_min_m": 2.2,
+        "fascia_z_max_m": 3.1,
+        "label_z_min_m": 2.4,
+        "label_z_max_m": 2.92,
+        "label_width_fraction": 0.5,
+        "label_y_min_m": -0.24,
+        "label_y_max_m": -0.2
+      },
+      "ground_floor": {
+        "glazing": {
+          "z_min_m": 0.4,
+          "z_max_m": 2.1,
+          "side_margin_m": 0.12,
+          "bays": 1,
+          "mullion_spacing_m": 1.4,
+          "mullion_width_m": 0.06,
+          "mullion_z_min_m": 0.36,
+          "mullion_z_max_m": 2.14,
+          "frame_rgb": [
+            200,
+            204,
+            206
+          ]
+        },
+        "door": {
+          "side": "right",
+          "edge_margin_m": 0.3,
+          "width_m": 1.1,
+          "z_min_m": 0.06,
+          "z_max_m": 2.1
+        },
+        "piers": {
+          "width_m": 0.12
+        },
+        "awning": false,
+        "fascia": {
+          "face_o_m": 0.2
+        }
+      },
+      "fascia_bands": [
+        {
+          "fraction": 0.08,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "fraction": 0.84,
+          "rgb": [
+            0,
+            118,
+            190
+          ]
+        },
+        {
+          "fraction": 0.08,
+          "rgb": [
+            255,
+            255,
+            255
+          ]
+        }
+      ],
+      "max_width_m": 8.0,
+      "visual_traits": [
+        "blue_white_fascia",
+        "lit_glazing",
+        "brand_prior_unobserved"
+      ],
+      "provenance": "OSM brand identity plus declarative operator colour prior (blue 0,118,190 fascia band with white LAWSON text, clear glazing, glass entrance, no awning); no Lawson street imagery exists in the corpus (nearest panorama 323.8 m, Mapillary does not cover the northern extension), so layout and dimensions are a brand prior, not an observation",
+      "physical": {
+        "asset_id": "tokyo.lawson_front",
+        "semantic_family": "storefront_front",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 8.0,
+        "intended_depth_m": 0.8,
+        "intended_height_m": 3.1,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "class_default",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "rules OBJECT_METRIC_DEFAULTS storefront_front"
+      }
+    },
+    {
+      "id": "tokyo.generic_small_commercial_front",
+      "geometry_family": "small_commercial_front",
+      "body_rgb": [
+        203,
+        198,
+        183
+      ],
+      "primary_rgb": [
+        76,
+        69,
+        62
+      ],
+      "accent_rgb": [
+        178,
+        154,
+        103
+      ],
+      "awning_rgb": [
+        145,
+        132,
+        112
+      ],
+      "max_width_m": 4.8,
+      "provenance": "declarative regional small-commercial archetype prior",
+      "physical": {
+        "asset_id": "tokyo.generic_small_commercial_front",
+        "semantic_family": "storefront_front",
+        "archetype_subtype": null,
+        "native_bbox_m": null,
+        "intended_width_m": 4.8,
+        "intended_depth_m": 0.8,
+        "intended_height_m": 2.9,
+        "allowed_scale_min": 0.8,
+        "allowed_scale_max": 1.25,
+        "scale_basis": "class_default",
+        "anchor_origin": "ground_center",
+        "orientation_basis": "yaw_only",
+        "stylization_class": "ps1_simplified",
+        "provenance": "rules OBJECT_METRIC_DEFAULTS storefront_front"
+      }
+    }
+  ],
+  "building_fallback_rules": [
+    {
+      "family": "railway_structure",
+      "building_types": [
+        "train_station",
+        "station",
+        "transportation"
+      ],
+      "height_m": 6.0
+    },
+    {
+      "family": "light_industrial",
+      "building_types": [
+        "industrial",
+        "warehouse",
+        "service"
+      ],
+      "height_m": 6.0
+    },
+    {
+      "family": "small_commercial",
+      "building_types": [
+        "commercial",
+        "retail",
+        "office"
+      ],
+      "height_m": 9.0
+    },
+    {
+      "family": "lowrise_apartment",
+      "building_types": [
+        "apartments",
+        "dormitory"
+      ],
+      "height_m": 9.0
+    },
+    {
+      "family": "small_outbuilding",
+      "max_area_m2": 25,
+      "height_m": 3.0
+    },
+    {
+      "family": "small_lowrise_residential",
+      "max_area_m2": 110,
+      "height_m": 6.0
+    },
+    {
+      "family": "lowrise_residential",
+      "max_area_m2": 220,
+      "height_m": 9.0
+    },
+    {
+      "family": "large_unclassified",
+      "height_m": 9.0
+    }
+  ],
+  "surface_palette": {
+    "land": {
+      "bg": [
+        168,
+        163,
+        150
+      ],
+      "fg": [
+        188,
+        184,
+        172
+      ],
+      "provenance": "synthesized"
+    }
+  }
+}

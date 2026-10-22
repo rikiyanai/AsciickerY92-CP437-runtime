@@ -1,0 +1,940 @@
+{
+  "schema": "fl4512.authored_plant_stamps.v1",
+  "version": 1,
+  "cell_size": [
+    16,
+    32
+  ],
+  "coordinate_system": {
+    "member_x": "cell offset from the rooted plant center",
+    "member_y": "row above the attachment; row 0 is attachment and row 4 is tip",
+    "l1_member_x": [
+      -1,
+      1
+    ],
+    "l1_member_y": [
+      0,
+      4
+    ],
+    "l2_member_x": [
+      -2,
+      2
+    ],
+    "l2_member_y": [
+      0,
+      1
+    ]
+  },
+  "roles": {
+    "stem": 0,
+    "tip": 1,
+    "flower": 2
+  },
+  "authoring_choices": {
+    "l1_grass_height": 4,
+    "l1_fern_height": 4,
+    "l1_flower_stem_height": 3,
+    "l1_flower_leaf_side": "both",
+    "note": "Variant 0, fern and flower rows follow archived Late Letter output. Grass variants 1 and 2 are new rooted compositions using the operator-saved viewer foliage glyphs for their broad foreground bodies and Late Letter tip roles. These adaptations require visual review; approval of the source glyphs is not approval of the new layout."
+  },
+  "sources": [
+    {
+      "path": "articles/2026-09-07-lateletter-text-art-media/archive/legacy-repo-7b9389d/src/lateletter/garden/plants.py",
+      "symbols": [
+        "_grass",
+        "_fern",
+        "_flower"
+      ],
+      "note": "Rows are the archived Late Letter generators at their authored maximum height. Variable procedural height remains a selection concern; this file records the native stamp rows."
+    },
+    {
+      "path": "assets/glyphs/authored/glyph_combinations.v1.json",
+      "symbols": [
+        "fan_open",
+        "fan_collapsed",
+        "orb_bracketed"
+      ],
+      "note": "L2 flower contours reuse the reviewed Stone Story combinations and their stored horizontal mirrors."
+    },
+    {
+      "path": "docs/research/ascii/glyph_audit/saved_families.jsonl",
+      "symbols": [
+        "foliage_wind_same_cell",
+        "foliage_grass_wind"
+      ],
+      "note": "Operator-saved Arabic and Canadian Syllabics foreground foliage forms supply the body cells in grass variants 1 and 2."
+    }
+  ],
+  "l1": {
+    "dimensions": [
+      3,
+      5
+    ],
+    "species": [
+      {
+        "id": "rooted_grass_0",
+        "kind": "grass",
+        "source_symbol": "_grass",
+        "phase_mode": "source_tip_cycle",
+        "phase_offset": 0,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": 0,
+                "chars": [
+                  "/",
+                  "\\",
+                  "`",
+                  "'"
+                ],
+                "role": "tip"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rooted_grass_1",
+        "kind": "grass",
+        "source_symbol": "viewer_foliage_body_with_lateletter_root_and_tip",
+        "phase_mode": "source_tip_cycle",
+        "phase_offset": 1,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": 0,
+                "char": "'",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "ژ",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": 0,
+                "char": "ڙ",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": 0,
+                "chars": [
+                  "/",
+                  "\\",
+                  "`",
+                  "'"
+                ],
+                "role": "tip"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rooted_grass_2",
+        "kind": "grass",
+        "source_symbol": "viewer_foliage_body_with_lateletter_root_and_tip",
+        "phase_mode": "source_tip_cycle",
+        "phase_offset": 2,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": 0,
+                "char": "'",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "ᣗ",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": 0,
+                "char": "ᣘ",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": 0,
+                "chars": [
+                  "/",
+                  "\\",
+                  "`",
+                  "'"
+                ],
+                "role": "tip"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fern",
+        "kind": "fern",
+        "source_symbol": "_fern",
+        "phase_mode": "static_source_rows",
+        "phase_offset": 0,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": -1,
+                "char": "*",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": "*",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": -1,
+                "char": ",",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": ",",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": -1,
+                "char": "*",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": "*",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": -1,
+                "char": ",",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": ",",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              {
+                "col": 0,
+                "char": "*",
+                "role": "tip"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "daisy",
+        "kind": "flower",
+        "source_symbol": "_flower",
+        "source_species": "daisy",
+        "phase_mode": "wind_mirror",
+        "phase_offset": 0,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": -1,
+                "char": "\\",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": "/",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": -1,
+                "char": "-",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "O",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "-",
+                "role": "flower"
+              }
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              {
+                "col": -1,
+                "char": "\\",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "*",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "/",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tulip",
+        "kind": "flower",
+        "source_symbol": "_flower",
+        "source_species": "tulip",
+        "phase_mode": "wind_mirror",
+        "phase_offset": 0,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": -1,
+                "char": "\\",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": "/",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": -1,
+                "char": "|",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "\"",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "|",
+                "role": "flower"
+              }
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              {
+                "col": -1,
+                "char": "(",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "\"",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": ")",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sunflower",
+        "kind": "flower",
+        "source_symbol": "_flower",
+        "source_species": "sunflower",
+        "phase_mode": "wind_mirror",
+        "phase_offset": 0,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": -1,
+                "char": "\\",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": "/",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": -1,
+                "char": "{",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "#",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "}",
+                "role": "flower"
+              }
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              {
+                "col": -1,
+                "char": "{",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "O",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "}",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "wildflower",
+        "kind": "flower",
+        "source_symbol": "_flower",
+        "source_species": "wildflower",
+        "phase_mode": "wind_mirror",
+        "phase_offset": 0,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": -1,
+                "char": "\\",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": "/",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": -1,
+                "char": ">",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "*",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "<",
+                "role": "flower"
+              }
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              {
+                "col": 0,
+                "char": "*",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rose",
+        "kind": "flower",
+        "source_symbol": "_flower",
+        "source_species": "rose",
+        "phase_mode": "wind_mirror",
+        "phase_offset": 0,
+        "rows": [
+          {
+            "row": 0,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 2,
+            "cells": [
+              {
+                "col": -1,
+                "char": "\\",
+                "role": "stem"
+              },
+              {
+                "col": 0,
+                "char": "|",
+                "role": "stem"
+              },
+              {
+                "col": 1,
+                "char": "/",
+                "role": "stem"
+              }
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              {
+                "col": -1,
+                "char": "(",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "@",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": ")",
+                "role": "flower"
+              }
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              {
+                "col": -1,
+                "char": "@",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "@",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "@",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "l2": {
+    "dimensions": [
+      5,
+      2
+    ],
+    "species": [
+      {
+        "species": "daisy",
+        "contour_combo": "fan_open",
+        "rows": [
+          {
+            "row": 0,
+            "combo_offset": -1,
+            "role": "flower"
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": -1,
+                "char": "\\",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "*",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "/",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "species": "tulip",
+        "contour_combo": "fan_open",
+        "rows": [
+          {
+            "row": 0,
+            "combo_offset": -1,
+            "role": "flower"
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": -1,
+                "char": "(",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "\"",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": ")",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "species": "sunflower",
+        "contour_combo": "fan_open",
+        "rows": [
+          {
+            "row": 0,
+            "combo_offset": -1,
+            "role": "flower"
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": -2,
+                "char": "\\",
+                "role": "flower"
+              },
+              {
+                "col": -1,
+                "char": "{",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "O",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "}",
+                "role": "flower"
+              },
+              {
+                "col": 2,
+                "char": "/",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "species": "wildflower",
+        "contour_combo": "fan_open",
+        "rows": [
+          {
+            "row": 0,
+            "combo_offset": -1,
+            "role": "flower"
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": 0,
+                "char": "*",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "species": "rose",
+        "contour_combo": "orb_bracketed",
+        "rows": [
+          {
+            "row": 0,
+            "combo_offset": -1,
+            "role": "flower"
+          },
+          {
+            "row": 1,
+            "cells": [
+              {
+                "col": -1,
+                "char": "@",
+                "role": "flower"
+              },
+              {
+                "col": 0,
+                "char": "@",
+                "role": "flower"
+              },
+              {
+                "col": 1,
+                "char": "@",
+                "role": "flower"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

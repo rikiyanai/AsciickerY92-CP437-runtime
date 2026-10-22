@@ -1,0 +1,240 @@
+{
+  "schema": "y92.world_e2e_requirements.v1",
+  "profile_id": "numabe_home_to_station",
+  "compiler_inputs": {
+    "hero_source_coverage_review": "hero_source_coverage_review.json",
+    "official_road_classification": "../numabe_home_to_station_20260912/official_road_classification.json",
+    "official_road_source_policy": "../../public_realm_corpora/jp/ota/doro_map_ota_phase1.json",
+    "osm_source": "numabe_home_to_station_sakurazaka_aoi.osm",
+    "route_source": "valhalla_pedestrian_route.json",
+    "required_landmarks": "required_landmarks.json"
+  },
+  "locale_contexts": {
+    "route_default": {
+      "country_code": "JP",
+      "region": "Tokyo",
+      "municipality": "Ota",
+      "site_contexts": [
+        "urban_residential"
+      ],
+      "operator_ids": [],
+      "template_pack_chain": [
+        "common_global",
+        "japan",
+        "japan_urban",
+        "tokyo"
+      ]
+    },
+    "station_default": {
+      "country_code": "JP",
+      "region": "Tokyo",
+      "municipality": "Ota",
+      "site_contexts": [
+        "urban_residential",
+        "railway_station"
+      ],
+      "operator_ids": [
+        "tokyu"
+      ],
+      "template_pack_chain": [
+        "common_global",
+        "japan",
+        "japan_urban",
+        "tokyo",
+        "tokyo_station_small",
+        "tokyu"
+      ]
+    }
+  },
+  "fl4813_observation_artifacts": {
+    "station_capture_index": "station_capture_source_index.json",
+    "camera_registration": "station_camera_solve_receipt.json",
+    "camera_sparse_reconstruction": "station_sparse_reconstruction.json",
+    "object_detections": "station_object_observations.json",
+    "object_masks": "station_mask_observations.json",
+    "object_tracks": "station_object_tracks.json",
+    "track_triangulation": "station_track_triangulation.json",
+    "sign_ocr": "station_sign_ocr_observations.json",
+    "station_facade_reconstruction": "station_facade_reconstruction.json",
+    "station_facade_world_ir": "station_facade.world_ir.json",
+    "station_identity_plane": "station_identity_sign_plane.json",
+    "template_candidates": "station_template_candidates.json"
+  },
+  "home_start_marker": "home_start",
+  "route_composition_requirements": {
+    "default_place_max_route_offset_m": 60.0,
+    "minimum_place_facing_dot": 0.15,
+    "required_places": [
+      {
+        "feature_id": "feature:place:node/11404946450",
+        "label": "Cocokara Fine",
+        "rendered_text_required": true,
+        "max_route_offset_m": 20.0
+      },
+      {
+        "feature_id": "feature:place:node/2684634174",
+        "label": "My Basket",
+        "rendered_text_required": true,
+        "max_route_offset_m": 25.0,
+        "must_face_route": false
+      },
+      {
+        "feature_id": "feature:place:node/2929215092",
+        "label": "FamilyMart",
+        "rendered_text_required": true,
+        "max_route_offset_m": 40.0
+      },
+      {
+        "feature_id": "feature:place:node/2339243972",
+        "representation_kind": "place_entry_gate_proposal",
+        "max_route_offset_m": 100.0,
+        "must_face_route": false
+      }
+    ],
+    "required_infrastructure_counts": {
+      "station_platform_proposal": 1,
+      "station_entrance_assembly_proposal": 2,
+      "rail_corridor_fence_proposal": 1,
+      "railway_crossing_equipment_proposal": 1
+    },
+    "station_assembly_semantics": [
+      "station_platform_proposal",
+      "station_entrance_assembly_proposal",
+      "railway_crossing_equipment_proposal"
+    ],
+    "station_assembly_max_span_m": 80.0,
+    "station_identity_labels_minimum": 2,
+    "streetscape_route_coverage": {
+      "utility_pole": {
+        "bin_m": 60.0,
+        "max_route_offset_m": 25.0,
+        "minimum_covered_fraction": 0.75
+      },
+      "street_lamp": {
+        "bin_m": 60.0,
+        "max_route_offset_m": 25.0,
+        "minimum_covered_fraction": 0.625
+      },
+      "street_handrail": {
+        "bin_m": 60.0,
+        "max_route_offset_m": 25.0,
+        "minimum_covered_fraction": 0.5
+      },
+      "tree": {
+        "bin_m": 60.0,
+        "max_route_offset_m": 35.0,
+        "minimum_covered_fraction": 0.625
+      }
+    }
+  },
+  "minimap_labels": [
+    "17-16 Den-en-chōfu Honchō",
+    "沼部駅"
+  ],
+  "hero_facades": [
+    {
+      "feature_id": "feature:building_footprint:way/725138637",
+      "id": "home_block",
+      "requirement": "rule_backed_reconstruction",
+      "source_coverage": false,
+      "source_coverage_ref": "hero_source_coverage_review.json#home_block"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/1507403647",
+      "id": "mid_route_landmark",
+      "requirement": "rule_backed_reconstruction",
+      "source_coverage": true,
+      "source_coverage_ref": "hero_source_coverage_review.json#mid_route_landmark"
+    },
+    {
+      "feature_id": "feature:facade_plane:numabe_station_entrance_1",
+      "id": "numabe_station_entrance",
+      "requirement": "accepted_station_reconstruction",
+      "source_coverage": true
+    }
+  ],
+  "required_signs": [
+    {
+      "id": "numabe_station_identity",
+      "requirement": "source_derived",
+      "source_coverage": true
+    }
+  ],
+  "fl4813_image_corpora": [
+    {
+      "id": "route_forward",
+      "capture_index": "mapillary_rectilinear_capture_source_index.json",
+      "detections": "mapillary_route_object_observations.json",
+      "masks": "mapillary_route_mask_observations.json"
+    },
+    {
+      "id": "route_facades",
+      "capture_index": "mapillary_facade_capture_source_index.json",
+      "detections": "mapillary_facade_object_observations.json",
+      "masks": "mapillary_facade_mask_observations.json",
+      "planar_tracks": "mapillary_facade_tracks_IThCrth270.json",
+      "camera_registration": "mapillary_lateral_camera_solve_receipt.json",
+      "frozen_planar_candidates": "mapillary_facade_shared_sfm_surfaces.json"
+    }
+  ],
+  "required_resolved_archetypes": {
+    "fixtures": [
+      {
+        "semantic_class": "traffic_signal",
+        "template_id": "jp.urban.traffic_signal_v1",
+        "visual_traits": [
+          "road_edge_placement",
+          "oriented_signal_face",
+          "three_aspect_signal"
+        ]
+      },
+      {
+        "semantic_class": "post_box",
+        "template_id": "jp.urban.post_box_v1",
+        "visual_traits": [
+          "pole_mounted_box",
+          "raised_mail_slot",
+          "red_jp_post_box"
+        ]
+      },
+      {
+        "semantic_class": "stop_sign",
+        "template_id": "jp.urban.stop_sign_v1",
+        "visual_traits": [
+          "inverted_triangle",
+          "white_border",
+          "road_edge_placement"
+        ]
+      },
+      {
+        "semantic_class": "information_board",
+        "template_id": "jp.urban.information_board_v1",
+        "visual_traits": [
+          "wide_wooden_board",
+          "dual_wood_posts",
+          "pitched_gable_roof"
+        ]
+      }
+    ],
+    "place_fronts": [
+      {
+        "feature_id": "feature:place:node/2929215092",
+        "profile_id": "tokyo.familymart_front",
+        "visual_traits": [
+          "green_white_blue_fascia",
+          "warm_lit_glazing",
+          "source_named_frontage"
+        ]
+      },
+      {
+        "feature_id": "feature:place:node/2684634174",
+        "profile_id": "tokyo.mybasket_front",
+        "visual_traits": [
+          "green_white_green_fascia",
+          "warm_lit_glazing",
+          "source_named_frontage"
+        ]
+      }
+    ]
+  }
+}

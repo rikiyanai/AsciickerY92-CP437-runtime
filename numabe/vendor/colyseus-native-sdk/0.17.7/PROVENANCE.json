@@ -1,0 +1,28 @@
+{
+  "schema": "asciicker.colyseus_native_sdk_patch.v1",
+  "sdk": {
+    "repository": "https://github.com/colyseus/native-sdk.git",
+    "release_tag": "godot-v0.17.7",
+    "base_commit": "458d0d3888c09fd6cb037e6bc77b0cbe7af22d2c",
+    "wire_compatibility": "Colyseus 0.17 Schema protocol; no server upgrade"
+  },
+  "patch": {
+    "path": "vendor/colyseus-native-sdk/0.17.7/0001-dynamic-schema-lifetime-and-godot-state-lock.patch",
+    "sha256": "2c593ba99e34cafaf631a9eb889fbba04bc66b70814595b23b418ca56652329c",
+    "includes_upstream_commit": "62807849b449bd3ed73b34cf7707b56d51473b4c",
+    "local_snapshot_lock_commit": "02f539da11488730e88dc9d597886166460a9291 + 2b01fb953d41fc734a4ae6d2ef0e25c25b433868 recursive callback reentry + 3641be461331d28fdf8b1d0c325eac67d1a414d2 transport teardown backports"
+  },
+  "build": {
+    "script": "scripts/build_colyseus_godot_macos_sdk.sh",
+    "zig_version": "0.15.2",
+    "outputs": [
+      "godot_project/addons/colyseus/bin/libcolyseus_godot.macos.debug.dylib",
+      "godot_project/addons/colyseus/bin/libcolyseus_godot.macos.release.dylib"
+    ],
+    "output_sha256": {
+      "godot_project/addons/colyseus/bin/libcolyseus_godot.macos.debug.dylib": "8391adae97c215ba525b8eb69b372c83e007189346fe66733abe64f793e5b5fa",
+      "godot_project/addons/colyseus/bin/libcolyseus_godot.macos.release.dylib": "385c443771f5619ec2f7a3ab9dd82fd02d2bf42f77da072d8028fb3f6c1ec2d0"
+    },
+    "architecture": "macOS arm64 (Mach-O 64-bit arm64; not universal)"
+  }
+}

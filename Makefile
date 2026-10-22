@@ -46,6 +46,21 @@ run-terminal:
 	@[ -x .run/game_term ] || { echo "Terminal client not built; run: make terminal"; exit 1; }
 	@./.run/game_term
 
+.PHONY: numabe-check numabe-editor numabe-game numabe-server numabe-test numabe-source-verify
+numabe-check:
+	@python3 tools/numabe/run.py check
+numabe-editor:
+	@python3 tools/numabe/run.py editor
+numabe-game:
+	@$(MAKE) -C numabe game
+numabe-server:
+	@$(MAKE) -C numabe server
+numabe-test:
+	@$(MAKE) -C numabe test
+	@python3 -m pytest -q -p no:cacheprovider tests/test_numabe_workspace.py
+numabe-source-verify:
+	@$(MAKE) -C numabe source-verify
+
 serve-web:
 	@test -f .web/index.html || { echo "Web client not built; run: make web"; exit 1; }
 	@python3 -m http.server 8765 --bind 127.0.0.1 --directory .web

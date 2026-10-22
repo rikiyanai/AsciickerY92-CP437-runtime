@@ -1,0 +1,41 @@
+{
+  "schema": "asciicker.car.native_foreground_binding.v1",
+  "subject": "cresta_gx71",
+  "status": "MANUAL_INTEGRATION_IN_REVIEW_NOT_RUNTIME_ACCEPTANCE",
+  "construction": "articles/fl4831-aahub-car-turntables-20261019/revision-04/cresta_gx71/construction.json",
+  "construction_sha256": "919ecccbd1b81953891197f8a858ad923aecdf4dfcdd72ca52178ca595faeb40",
+  "font": "articles/fl4831-aahub-car-turntables-20261019/revision-04/gifs/Saitamaar.ttf",
+  "font_sha256": "592bf6be803ed76311841b95a10b20db3df0ec693a15f858757d47420b9b3a28",
+  "font_px": 16,
+  "row_pitch_px": 17,
+  "authorship": "Manual integration of the already approved native artwork, not a claim that a transport compiler hand-authored its glyphs. Preserve the original choices and their multi-feature 3D associations. No fitter rerun, GIF sampling, whole-car plane, or generic glyph replacement.",
+  "inspected_native_samples": [0, 12, 24, 36, 48, 60, 72, 84],
+  "native_passages": {"f ": "Five approved tokens use a native f plus trailing space to carry its overhang safely. Retain the full source text/advance; paint the intact f mask, never trim spacing or clip the overhang."},
+  "wheel_motion_binding": {
+    "body": 0,
+    "steer_only_outline": 1,
+    "physical_spin": 2,
+    "outline_suffixes": ["tire", "rim", "hub"],
+    "rule": "Circular outlines are optical geometry, not painted marks: retain their observed source-world points and apply body/steering only. Valve, vents, sidewall tone and tread undo source demonstration spin and follow actual runtime wheel spin. A glyph carrying both classes stays whole; changing-pose layout remains an explicit acceptance gate."
+  },
+  "bindings": [
+    {"prefix": "body.", "part": 0, "retain": "Long flat bonnet, three-box shoulder, arch clearances, sill and side crease; selected construction, not triangulation edges."},
+    {"prefix": "cabin.", "part": 0, "retain": "Low roof, connected A/C pillars and transverse screen boundaries; preserve open glazing."},
+    {"prefix": "glass.", "part": 0, "retain": "Four-door glass rhythm, separate panes; no pane interior stipple."},
+    {"prefix": "door.", "part": 0, "retain": "Separate seams and small handles; retain bounded lower-panel tone, not random texture."},
+    {"prefix": "mirror.", "part": 0, "retain": "Small attached contours, never detached overlay marks."},
+    {"prefix": "front.", "part": 0, "retain": "Thin rectangular lamp/grille band, separate bumper and physical fictional plate ﾎ99-46."},
+    {"prefix": "rear.", "part": 0, "retain": "Wide lamp frames, separate bumper, boot and same physical fictional plate."},
+    {"prefix": "contact.", "part": 0, "retain": "Short fixed ground contacts; never rotate with wheels."},
+    {"prefix": "wheel.-1.0.", "part": 1, "retain": "Left-front tire/rim/hub/valve and admitted detail. Undo source demonstration spin before actual runtime travel and steering."},
+    {"prefix": "wheel.1.0.", "part": 2, "retain": "Right-front wheel; independent steering/travel, no bitmap mirroring."},
+    {"prefix": "wheel.-1.1.", "part": 3, "retain": "Left-rear wheel; no front steering or camera-driven spin."},
+    {"prefix": "wheel.1.1.", "part": 4, "retain": "Right-rear wheel; no front steering or camera-driven spin."},
+    {"prefix": "tone.", "part": 0, "retain": "Only existing bounded source-owned sites; no generated panel filler."}
+  ],
+  "output": "godot_project/assets/world_mesh/foreground/cresta_gx71.native.json",
+  "compiler": "scripts/compile_fl4831_cresta_native.py",
+  "runtime": "FF_SHARED diagnostic foreground inside the existing Camera3D CompositorEffect",
+  "visibility_depth_binding": "Per-native-ink original feature points, not the glyph's average anchor depth and never the occluding scene surface. Preserve frontmost associated contributor at a true shared ink junction. Unmatched ink explicitly inherits its nearest associated ink point; wholly unassociated passages retain the already recorded inferred attachment. Plate ink uses its physical plate plane. This transport change does not approve unresolved occlusion/articulation or create new manually drawn glyphs.",
+  "open": ["Same-shot final viewport comparison", "Layout at changing scale/view", "Whole-glyph occlusion/reveal", "Driving playback", "F9 native-feature provenance integration"]
+}

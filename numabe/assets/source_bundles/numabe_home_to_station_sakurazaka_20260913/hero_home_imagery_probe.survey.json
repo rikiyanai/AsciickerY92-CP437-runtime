@@ -1,0 +1,694 @@
+{
+  "aoi_bbox_lonlat": null,
+  "providers": {
+    "kartaview": {
+      "access": {
+        "credential_required": false,
+        "hosts_probed": [
+          "https://api.kartaview.org",
+          "https://api.openstreetcam.org"
+        ],
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "stated_licence": "CC-BY-SA-4.0"
+      },
+      "control": {
+        "http": [
+          200,
+          200
+        ],
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "pictures": 890,
+        "purpose": "proves the endpoint and its parameters work, so a zero at the target is a real absence and not a request error",
+        "radius_m": 500,
+        "refused": null
+      },
+      "counts": {
+        "capture_dates_free_text": 0,
+        "capture_dates_max": null,
+        "capture_dates_min": null,
+        "farthest_m": null,
+        "nearest_m": null,
+        "pictures": 0,
+        "pictures_inside_aoi_polygon": null,
+        "sequences": 0,
+        "with_capture_date": 0,
+        "with_heading": 0
+      },
+      "http": [
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 196,
+          "content_type": "application/json",
+          "elapsed_s": 1.517,
+          "error": null,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 50 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": "600",
+          "api_message": "The request has been processed without incidents",
+          "bytes": 182,
+          "content_type": "application/json",
+          "elapsed_s": 1.384,
+          "error": null,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 50 m | totalFilteredItems=0",
+          "url": "https://api.openstreetcam.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 197,
+          "content_type": "application/json",
+          "elapsed_s": 1.204,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "2.0/photo radius 50 m | data=0",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=35.5848660&lng=139.6759190&radius=50"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 196,
+          "content_type": "application/json",
+          "elapsed_s": 1.179,
+          "error": null,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 100 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": "600",
+          "api_message": "The request has been processed without incidents",
+          "bytes": 182,
+          "content_type": "application/json",
+          "elapsed_s": 1.215,
+          "error": null,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 100 m | totalFilteredItems=0",
+          "url": "https://api.openstreetcam.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 198,
+          "content_type": "application/json",
+          "elapsed_s": 1.157,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "2.0/photo radius 100 m | data=0",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=35.5848660&lng=139.6759190&radius=100"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 604922,
+          "content_type": "application/json",
+          "elapsed_s": 3.146,
+          "error": null,
+          "http": 200,
+          "method": "POST",
+          "note": "nearby-photos radius 500 m | totalFilteredItems=0",
+          "url": "https://api.kartaview.org/1.0/list/nearby-photos/"
+        },
+        {
+          "api_code": 600,
+          "api_message": "The request has been processed without incidents",
+          "bytes": 26861,
+          "content_type": "application/json",
+          "elapsed_s": 2.787,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "2.0/photo radius 500 m | data=11",
+          "url": "https://api.kartaview.org/2.0/photo/?lat=48.8566000&lng=2.3522000&radius=500"
+        }
+      ],
+      "ladder": [
+        {
+          "http": [
+            200,
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 50.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 100.0,
+          "refused": null
+        }
+      ],
+      "licence": {
+        "attribution": "(c) KartaView contributors, CC-BY-SA-4.0",
+        "counts": {},
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "notes": [],
+      "pictures": [],
+      "provider": "kartaview",
+      "queried": [
+        "radius 50 m about 35.5848660,139.6759190",
+        "radius 100 m about 35.5848660,139.6759190"
+      ],
+      "sequences": {},
+      "state": "ABSENT_IN_SURVEYED_RADIUS",
+      "viewpoints": {
+        "at_least_2": false,
+        "at_least_3": false,
+        "distinct_viewpoints": 0,
+        "heading_verified_viewpoints": 0,
+        "max_baseline_m": 0.0,
+        "median_baseline_m": 0.0,
+        "nearest_m": null,
+        "params": {
+          "half_fov_deg": 45.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 3.0
+        },
+        "pictures_in_range": 0,
+        "viewpoint_ids": []
+      },
+      "what_would_change_the_verdict": [
+        "new uploads inside the surveyed radius, or a wider radius rung"
+      ]
+    },
+    "mapillary": {
+      "access": {
+        "access_token_env": "MAPILLARY_ACCESS_TOKEN",
+        "credential_required": true,
+        "graph_endpoint": "https://graph.mapillary.com/images",
+        "tile_endpoint": "https://tiles.mapillary.com/maps/vtp/{tileset}/2/{z}/{x}/{y}",
+        "token_supplied": true
+      },
+      "control": {},
+      "counts": {
+        "capture_dates_free_text": 0,
+        "capture_dates_max": "2019-07-24T07:43:53.803000+00:00",
+        "capture_dates_min": "2019-07-24T07:43:53.803000+00:00",
+        "farthest_m": 83.2,
+        "nearest_m": 83.2,
+        "pictures": 1,
+        "pictures_inside_aoi_polygon": null,
+        "sequences": 1,
+        "with_capture_date": 1,
+        "with_heading": 1
+      },
+      "http": [
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 11,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.112,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "graph images bbox, radius 50 m, page 1",
+          "url": "https://graph.mapillary.com/images?bbox=139.6753661%2C35.5844163%2C139.6764719%2C35.5853157&limit=2000&fields=id%2Cgeometry%2Ccomputed_geometry%2Ccaptured_at%2Ccompass_angle%2Ccamera_type%2Csequence%2Cthumb_1024_url%2Ccreator%2Cwidth%2Cheight%2Cmake%2Cmodel"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 1175200,
+          "content_type": "application/x-protobuf",
+          "elapsed_s": 0.706,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "coverage tile mly1_public z14/14548/6457",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/14/14548/6457?access_token=%3Credacted%3E"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 38,
+          "content_type": "application/x-protobuf",
+          "elapsed_s": 0.072,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "coverage tile mly1_public z17/116390/51656",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/17/116390/51656?access_token=%3Credacted%3E"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 1234359,
+          "content_type": "application/x-protobuf",
+          "elapsed_s": 0.155,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z14/14548/6457",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/14/14548/6457?access_token=%3Credacted%3E"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 38,
+          "content_type": "application/x-protobuf",
+          "elapsed_s": 0.089,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z17/116390/51656",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/17/116390/51656?access_token=%3Credacted%3E"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 896,
+          "content_type": "application/json; charset=UTF-8",
+          "elapsed_s": 0.272,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "graph images bbox, radius 100 m, page 1",
+          "url": "https://graph.mapillary.com/images?bbox=139.6748132%2C35.5839667%2C139.6770248%2C35.5857653&limit=2000&fields=id%2Cgeometry%2Ccomputed_geometry%2Ccaptured_at%2Ccompass_angle%2Ccamera_type%2Csequence%2Cthumb_1024_url%2Ccreator%2Cwidth%2Cheight%2Cmake%2Cmodel"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 1175200,
+          "content_type": "application/x-protobuf",
+          "elapsed_s": 0.151,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "coverage tile mly1_public z14/14548/6457",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/14/14548/6457?access_token=%3Credacted%3E"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 38,
+          "content_type": "application/x-protobuf",
+          "elapsed_s": 0.067,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "coverage tile mly1_public z17/116390/51656",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_public/2/17/116390/51656?access_token=%3Credacted%3E"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 1234359,
+          "content_type": "application/x-protobuf",
+          "elapsed_s": 0.131,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z14/14548/6457",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/14/14548/6457?access_token=%3Credacted%3E"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 38,
+          "content_type": "application/x-protobuf",
+          "elapsed_s": 0.072,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "coverage tile mly1_computed_public z17/116390/51656",
+          "url": "https://tiles.mapillary.com/maps/vtp/mly1_computed_public/2/17/116390/51656?access_token=%3Credacted%3E"
+        }
+      ],
+      "ladder": [
+        {
+          "http": [
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 50.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "pictures": 1,
+          "radius_m": 100.0,
+          "refused": null
+        }
+      ],
+      "licence": {
+        "attribution": null,
+        "counts": {
+          "CC-BY-SA-4.0": 1
+        },
+        "licence_uri": null
+      },
+      "notes": [],
+      "pictures": [
+        {
+          "asset_uri": "https://scontent-iad6-1.xx.fbcdn.net/m1/v/t6/An-swRjwOy6X7pYyRdaK1bb0hwco733czo5If9-O0seEBvqXBhxH95k47-JJiq1-yw5K2uUtJk4G769FBMleHbOjemLnVyA1lTJklo-yNkdRsu7_m1kyrlYaqZcRXJvxZTaP9MFlqClpLvr9Hdn1OQ?stp=s1024x768&_nc_gid=8AgLYZZEtQdRV6aoyvLy0Q&_nc_oc=AdpRfwqdQhZxpwa-dUhkD-K-O_R8vmbT1zjuDS2SysdLnCx9gdC0Cc5rLWX2jDsItcWmwyRrewJvKObLg5DDpI6z&ccb=10-5&oh=00_AQIrPQRYl6Fh6pDC5m5F6lZrhqpF10cKdF8VnE23K_FTLA&oe=6ACEDCA2&_nc_sid=201bca",
+          "author": "morita",
+          "camera": "HMD Global Nokia 6.1 Plus",
+          "capture_date": "2019-07-24T07:43:53.803000+00:00",
+          "extra": {
+            "camera_type": "perspective",
+            "computed_geometry": {
+              "coordinates": [
+                139.6754241667,
+                35.584235042982
+              ],
+              "type": "Point"
+            },
+            "creator_id": "103948661848033"
+          },
+          "focal_35mm": null,
+          "focal_length_mm": null,
+          "heading_deg": 91.845123291016,
+          "height": 3456,
+          "lat": 35.584235042982,
+          "licence": "CC-BY-SA-4.0",
+          "lon": 139.6754241667,
+          "page_uri": "https://www.mapillary.com/app/?pKey=924573248395982",
+          "picture_id": "924573248395982",
+          "provider": "mapillary",
+          "sequence_id": "pciwy37ri1x1ub57n6scbp",
+          "sequence_index": null,
+          "source_uri": "https://graph.mapillary.com/images?bbox=139.6748132,35.5839667,139.6770248,35.5857653&limit=2000&fields=id,geometry,computed_geometry,captured_at,compass_angle,camera_type,sequence,thumb_1024_url,creator,width,height,make,model",
+          "width": 4608
+        }
+      ],
+      "provider": "mapillary",
+      "queried": [
+        "radius 50 m about 35.5848660,139.6759190",
+        "radius 100 m about 35.5848660,139.6759190"
+      ],
+      "sequences": {},
+      "state": "PRESENT",
+      "viewpoints": {
+        "at_least_2": false,
+        "at_least_3": false,
+        "distinct_viewpoints": 0,
+        "heading_verified_viewpoints": 0,
+        "max_baseline_m": 0.0,
+        "median_baseline_m": 0.0,
+        "nearest_m": null,
+        "params": {
+          "half_fov_deg": 45.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 3.0
+        },
+        "pictures_in_range": 0,
+        "viewpoint_ids": []
+      },
+      "what_would_change_the_verdict": [
+        "nothing; coverage was returned and is recorded"
+      ]
+    },
+    "panoramax": {
+      "access": {
+        "credential_required": false,
+        "endpoints": [
+          "https://api.panoramax.xyz/api/search"
+        ],
+        "stated_licence": "CC-BY-SA-4.0"
+      },
+      "control": {
+        "http": [
+          200
+        ],
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "pictures": 500,
+        "purpose": "proves the endpoint and its parameters work, so a zero at the target is a real absence and not a request error",
+        "radius_m": 500,
+        "refused": null
+      },
+      "counts": {
+        "capture_dates_free_text": 0,
+        "capture_dates_max": null,
+        "capture_dates_min": null,
+        "farthest_m": null,
+        "nearest_m": null,
+        "pictures": 0,
+        "pictures_inside_aoi_polygon": null,
+        "sequences": 0,
+        "with_capture_date": 0,
+        "with_heading": 0
+      },
+      "http": [
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 26,
+          "content_type": "application/json",
+          "elapsed_s": 0.268,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 50 m bbox",
+          "url": "https://api.panoramax.xyz/api/search?bbox=139.6753661%2C35.5844163%2C139.6764719%2C35.5853157&limit=500"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 26,
+          "content_type": "application/json",
+          "elapsed_s": 0.274,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 100 m bbox",
+          "url": "https://api.panoramax.xyz/api/search?bbox=139.6748132%2C35.5839667%2C139.6770248%2C35.5857653&limit=500"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 3306884,
+          "content_type": "application/json",
+          "elapsed_s": 1.161,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "radius 500 m bbox",
+          "url": "https://api.panoramax.xyz/api/search?bbox=2.3453657%2C48.8521034%2C2.3590343%2C48.8610966&limit=500"
+        }
+      ],
+      "ladder": [
+        {
+          "http": [
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 50.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 100.0,
+          "refused": null
+        }
+      ],
+      "licence": {
+        "attribution": null,
+        "counts": {},
+        "licence_uri": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "notes": [],
+      "pictures": [],
+      "provider": "panoramax",
+      "queried": [
+        "radius 50 m about 35.5848660,139.6759190",
+        "radius 100 m about 35.5848660,139.6759190"
+      ],
+      "sequences": {},
+      "state": "ABSENT_IN_SURVEYED_RADIUS",
+      "viewpoints": {
+        "at_least_2": false,
+        "at_least_3": false,
+        "distinct_viewpoints": 0,
+        "heading_verified_viewpoints": 0,
+        "max_baseline_m": 0.0,
+        "median_baseline_m": 0.0,
+        "nearest_m": null,
+        "params": {
+          "half_fov_deg": 45.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 3.0
+        },
+        "pictures_in_range": 0,
+        "viewpoint_ids": []
+      },
+      "what_would_change_the_verdict": [
+        "new uploads inside the surveyed radius, or a wider radius rung"
+      ]
+    },
+    "wikimedia_commons": {
+      "access": {
+        "api": "https://commons.wikimedia.org/w/api.php",
+        "credential_required": false,
+        "note": "per-file licence is authoritative; Commons hosts several distinct licences"
+      },
+      "control": {
+        "http": [
+          200
+        ],
+        "label": "Paris, Ile-de-la-Cite",
+        "lat": 48.8566,
+        "lon": 2.3522,
+        "pictures": 100,
+        "purpose": "proves the endpoint and its parameters work, so a zero at the target is a real absence and not a request error",
+        "radius_m": 250,
+        "refused": null
+      },
+      "counts": {
+        "capture_dates_free_text": 0,
+        "capture_dates_max": null,
+        "capture_dates_min": null,
+        "farthest_m": null,
+        "nearest_m": null,
+        "pictures": 0,
+        "pictures_inside_aoi_polygon": null,
+        "sequences": 0,
+        "with_capture_date": 0,
+        "with_heading": 0
+      },
+      "http": [
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 45,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.882,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "geosearch radius 50 m",
+          "url": "https://commons.wikimedia.org/w/api.php?list=geosearch&gscoord=35.584866%7C139.675919&gsradius=50&gslimit=100&gsnamespace=6&action=query&format=json"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 45,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.822,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "geosearch radius 100 m",
+          "url": "https://commons.wikimedia.org/w/api.php?list=geosearch&gscoord=35.584866%7C139.675919&gsradius=100&gslimit=100&gsnamespace=6&action=query&format=json"
+        },
+        {
+          "api_code": null,
+          "api_message": null,
+          "bytes": 15785,
+          "content_type": "application/json; charset=utf-8",
+          "elapsed_s": 0.877,
+          "error": null,
+          "http": 200,
+          "method": "GET",
+          "note": "geosearch radius 250 m",
+          "url": "https://commons.wikimedia.org/w/api.php?list=geosearch&gscoord=48.8566%7C2.3522&gsradius=250&gslimit=100&gsnamespace=6&action=query&format=json"
+        }
+      ],
+      "ladder": [
+        {
+          "http": [
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 50.0,
+          "refused": null
+        },
+        {
+          "http": [
+            200
+          ],
+          "pictures": 0,
+          "radius_m": 100.0,
+          "refused": null
+        }
+      ],
+      "licence": {
+        "attribution": null,
+        "counts": {},
+        "licence_uri": "https://commons.wikimedia.org/wiki/Commons:Licensing"
+      },
+      "notes": [],
+      "pictures": [],
+      "provider": "wikimedia_commons",
+      "queried": [
+        "radius 50 m about 35.5848660,139.6759190",
+        "radius 100 m about 35.5848660,139.6759190"
+      ],
+      "sequences": {},
+      "state": "ABSENT_IN_SURVEYED_RADIUS",
+      "viewpoints": {
+        "at_least_2": false,
+        "at_least_3": false,
+        "distinct_viewpoints": 0,
+        "heading_verified_viewpoints": 0,
+        "max_baseline_m": 0.0,
+        "median_baseline_m": 0.0,
+        "nearest_m": null,
+        "params": {
+          "half_fov_deg": 45.0,
+          "max_range_m": 80.0,
+          "min_baseline_m": 3.0
+        },
+        "pictures_in_range": 0,
+        "viewpoint_ids": []
+      },
+      "what_would_change_the_verdict": [
+        "new uploads inside the surveyed radius, or a wider radius rung"
+      ]
+    }
+  },
+  "radius_ladder_m": [
+    50,
+    100
+  ],
+  "request_count": 24,
+  "schema_version": "street-imagery-survey/1",
+  "state_tokens": [
+    "ABSENT_IN_SURVEYED_RADIUS",
+    "PRESENT",
+    "UNKNOWN_PENDING_ACCESS",
+    "NOT_SURVEYED"
+  ],
+  "survey_id": "numabe_home_hero_20260914_open_imagery",
+  "surveyed_utc": "2026-09-14T02:25Z",
+  "target": {
+    "label": "17-16 Den-en-chofu Honcho home hero",
+    "lat": 35.584866,
+    "lon": 139.675919
+  },
+  "tool_version": "street_imagery_probe/1",
+  "user_agent": "asciicker-Y9-2-FL4810-hero-acquisition/1.0 (info@yuuz.co)"
+}

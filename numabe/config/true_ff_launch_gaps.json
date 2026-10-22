@@ -1,0 +1,97 @@
+{
+  "schema": "true_ff.launch_gaps.v2",
+  "owner": "scripts/true_ff_launch_guard.py reads this file at every True FF launch admission (FL-4516).",
+  "closure_rule": "A gap is open while any open_if check holds against current source: 'present' = the defect pattern still matches in that file; 'absent' = the required fix pattern matches in none of the listed files. No log entry or status field closes a gap. A blocking open gap refuses agent proof launches.",
+  "gaps": [
+    {
+      "id": "G1_PLAYER_STICK_FIGURE",
+      "blocks_launch": true,
+      "requirement": "Operator 2026-10-04: 'FOR PLAYER SPECIFICALLY, I NEED THE STICKFIGURE LOOK' (Stone Story canon O, /|\\, / \\).",
+      "defect": "The player rig is an ambient mover (kind 11, material 237, World.gd ACTOR_RIG_MAT). tff_figure_feature_role (true_ff_role_figure.glslinc:145-163) returns GENERIC for it. LIMB_STROKE covers only spiders and birds. The Figure binding reaches only pieta_statue; xbot_head is listed under not_wired in outline_language.v1.json.",
+      "found_by": "FL-4907 INDEPENDENT_COMBINED_INTEGRATION_REVIEW_20261004",
+      "open_if": [
+        {"absent": "if\\s*\\(\\s*tff_fig_is_actor_rig\\s*\\(",
+         "files": ["godot_project/render/ascii/composition/true_ff_role_figure.glslinc"],
+         "means": "no figure role branch calls tff_fig_is_actor_rig (a comment or name alone does not close this)"},
+        {"absent": "rig_part_poses = _true_ff_stick_figure_poses\\(rig_part_poses\\)",
+         "files": ["godot_project/scripts/World.gd"],
+         "means": "the FF actor publication does not zero-scale the non-stick bones (30 finger bones, hands, feet would each draw)"}
+      ]
+    },
+    {
+      "id": "G2_SILENT_BLANK_FRAME",
+      "blocks_launch": true,
+      "requirement": "goal-v4 PROCESS and line 160: diagnosis must locate the first stage P0-P6 of an unjustified change; agents read godot_client.log.",
+      "defect": "Historical: GPU rejection/omission words were visible only through F9 text export, so godot_client.log could not attribute a missing page. Current survivor semantics retain certified sites, layout page-fatal is zero, and the always-on asynchronous status callback reports raw upstream/layout/obligation words plus named reasons without synchronous readback.",
+      "found_by": "FL-4907 INDEPENDENT_COMBINED_INTEGRATION_REVIEW_20261004",
+      "open_if": [
+        {"absent": "push_warning\\(\\s*\"true_ff_gpu_items_omitted:[^\\n]*upstream=.*layout=.*obligations=.*reasons=",
+         "files": ["godot_project/render/ascii/features/TrueFFFeaturePasses.gd",
+                   "godot_project/render/ascii/features/TrueFFFeatureRenderer.gd",
+                   "godot_project/render/ascii/composition/TrueFFFrameRenderer.gd",
+                   "godot_project/render/ascii/composition/TrueFFCompositorEffect.gd"],
+         "means": "no asynchronous host log line reports the GPU omission/fatal words and named stage reasons"}
+      ]
+    },
+    {
+      "id": "G3_CUT_HYSTERESIS_RESET",
+      "blocks_launch": true,
+      "requirement": "goal-v4 line 106: separate split and collapse thresholds prevent cut flicker; line 155: zero unjustified RED/YELLOW.",
+      "defect": "tff_split_scale treated a node as previously open only if committed in exactly the previous epoch, so one failed frame erased every node's history.",
+      "found_by": "FL-4907 INDEPENDENT_COMBINED_INTEGRATION_REVIEW_20261004",
+      "open_if": [
+        {"present": "cut\\.w\\s*\\+\\s*1u\\s*==\\s*cam\\.counts\\.y|cam\\.counts\\.y\\s*==\\s*[A-Za-z_.]*cut\\.w\\s*\\+\\s*1u",
+         "files": ["godot_project/render/ascii/features/true_ff_feature_traverse.glslinc"],
+         "means": "split history still requires the immediately previous epoch"}
+      ]
+    },
+    {
+      "id": "G6_RESIDENCY_TRUTH_COPIED_ACROSS_OWNERS",
+      "blocks_launch": true,
+      "requirement": "One owner per truth (improve-codebase-architecture-y9: reject a second cache/resolver for the same truth). Operator 2026-10-04: address the structural error, not the next micro breakage.",
+      "defect": "The static residency identity was computed independently at seven sites from different counters (bank publication and record key, P0 witness and stamp, frame-renderer stamp, Figure key, passes) and compared field by field in TrueFFStaticVisibility.prepare. The key scene_revision carried two meanings: SceneGeometryDB._revision increments on every active-roster commit (SceneGeometryDB.gd:674,888), while the bank published the registry revision. Every preparation failed with static_visibility_hierarchy_publication_mismatch (operator blue screen, run .run/fl4359_manual_play/20261004-143941). Derived GPU buffers are legitimate; the defect is the independently derived identity. Fix: SceneGeometryDB.true_ff_static_residency_generation is the one identity and every consumer compares it.",
+      "found_by": "FL-4907 OPERATOR_BLUE_SCREEN_MANUAL_RUN_20261004",
+      "open_if": [
+        {"present": "scene_revision",
+         "files": ["godot_project/render/ascii/structure/TrueFFStaticVisibility.gd"],
+         "means": "P0 still reconciles the bank hierarchy against its own copies field by field"}
+      ]
+    },
+    {
+      "id": "G7_FIGURE_ROLES_WITHOUT_RECIPES",
+      "blocks_launch": false,
+      "requirement": "A depiction role must resolve to run rows in the site's language; a missing role recipe stays unresolved and draws nothing (true_ff_feature_native.glsl select_idiom_variant).",
+      "defect": "outline_language.v1.json run_table has no body_outline rows in any language, so BODY_OUTLINE sites (spider bodies and seat, actor-pose kind 128) select nothing. limb_stroke rows exist only for hard, while figure sites default to soft (source_languages 5) and spider leg materials 239/248 and bird material 213 have no hard binding, so spider legs and birds also select nothing. Inferred from the tables and select_idiom_variant; not observed at runtime.",
+      "found_by": "FL-4907 G1_PLAYER_STICK_FIGURE_ROLE_20261004",
+      "open_if": [
+        {"absent": "\"role\": \"body_outline\"",
+         "files": ["godot_project/assets/glyphs/true_ff/outline_language.v1.json"],
+         "means": "no body_outline run rows are compiled"}
+      ]
+    },
+    {
+      "id": "G4_ALL_RETRY_ROUNDS_RECORDED",
+      "blocks_launch": false,
+      "requirement": "goal-v4 line 120: dispatch every pass from surviving counts.",
+      "defect": "TrueFFFeaturePasses.gd records coarsening_round_capacity() rounds on every execute(); only the GPU zeroes the unneeded rounds. Cost is unmeasured; a headed run can measure it, so this gap does not block.",
+      "found_by": "FL-4907 INDEPENDENT_COMBINED_INTEGRATION_REVIEW_20261004",
+      "open_if": [
+        {"present": "for cut_round in range\\(cut_rounds\\)",
+         "files": ["godot_project/render/ascii/features/TrueFFFeaturePasses.gd"],
+         "means": "every round is still recorded each frame"}
+      ]
+    },
+    {
+      "id": "G5_SKY_WATER_NO_RECOVERY",
+      "blocks_launch": false,
+      "requirement": "Withdrawn families must recover when their source becomes valid again.",
+      "defect": "update_live skipped rejected families and recovery ran only on a residency stamp change; water had no recovery event.",
+      "found_by": "FL-4907 INDEPENDENT_COMBINED_INTEGRATION_REVIEW_20261004",
+      "open_if": [
+        {"absent": "func reconcile_residency\\(",
+         "files": ["godot_project/render/ascii/features/TrueFFWorldFeatureSources.gd"],
+         "means": "no per-frame family recovery owner exists"}
+      ]
+    }
+  ]
+}

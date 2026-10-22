@@ -1,0 +1,428 @@
+carriers_total: 1329
+carriers_with_any_placement: 785
+placements_total: 2765
+placements_evidence_observation: 1017
+placements_evidence_rule: 1748
+placements_evidence_osm: 0
+placements_domain_custom_identity: 15
+placements_domain_facade_archetype: 713
+placements_domain_generic_storefront: 117
+placements_domain_property_frontage: 96
+placements_domain_rail_edge: 110
+placements_domain_road_cross_section: 707
+placements_domain_street_fixture: 637
+placements_domain_utility_network: 266
+placements_domain_vegetation: 104
+empty_pairs: 16435
+canonical_carriers_without_population_requirement: 4
+spine_placements_within_15m: 667
+off_spine_placements: 2098
+dropped_outside_aoi_ring_rule_or_osm: 2340
+dropped_obs_outside_terrain_bbox: 6
+dropped_outside_aoi_ring_observations: 6
+dropped_observation_outside_ring: authored-SF-4876-0474 E=379825.75 N=3938409.01
+dropped_observation_outside_ring: authored-SF-4876-0486 E=379823.88 N=3938415.43
+dropped_observation_outside_ring: authored-SF-4876-S405-030 E=379830.2 N=3938414.0
+dropped_observation_outside_ring: authored-SF-4876-S405-032 E=379822.1 N=3938412.0
+dropped_observation_outside_ring: authored-SF-4876-S406-009 E=379820.0 N=3938415.3
+dropped_observation_outside_ring: authored-SF-4876-S406-014 E=379816.1 N=3938417.0
+continuous_runs: 1582
+continuous_run_length_total_m: 20897.2
+point_placements: 1142
+pole_canonical_features: 102
+pole_observed_adopted: 40 pole_observed_new: 41 pole_unhosted: 5 pole_outside_aoi: 21
+pole_rule_filled: 1 pole_generic_bypassed: 411 pole_carriers: 28
+pole_gap_fill: carrier 1115662463 from 11.888 to 51.07 rule_at 41.888
+pole_gap_unfilled: carrier 1087430630 from 14.335 to 98.767 rule_at 44.335 reason=mass_or_surface_nonconformant:rule_point_strict
+pole_gap_unfilled: carrier 1087430630 from 14.335 to 98.767 rule_at 74.335 reason=mass_or_surface_nonconformant:rule_point_strict
+pole_gap_unfilled: carrier 1115662463 from 94.153 to 133.861 rule_at 124.153 reason=mass_or_surface_nonconformant:rule_point_strict
+structural_policy: y92.plan05_structural.v1
+structural_checked: 2609
+structural_moved: 23
+structural_clipped_segments: 461
+structural_dropped: 71
+structural_residual_violations: 0
+structural_scale_band_violations: 0
+structural_observation_runs: created=194 kept_as_point=194 extent_source=DEFAULT:authoring (one annotation fixes position, not extent) clipped=96 point_yaw_rederived=642
+structural_orientation: checked=2429 violations=0 exempt_observations=0
+structural_by_module:
+  bollard_curb_island: moved=0 clipped=150 dropped=24 residual=0
+  concrete_retaining_edge: moved=0 clipped=8 dropped=2 residual=0
+  curb_edge_line: moved=0 clipped=76 dropped=14 residual=0
+  hazard_strip_barrier: moved=2 clipped=0 dropped=0 residual=0
+  horizontal_traffic_signal: moved=2 clipped=0 dropped=0 residual=0
+  level_crossing_equipment: moved=0 clipped=0 dropped=2 residual=0
+  manhole_and_grate: moved=0 clipped=0 dropped=2 residual=0
+  narrow_mixed_use: moved=0 clipped=0 dropped=1 residual=0
+  rail_corridor_fence: moved=0 clipped=8 dropped=2 residual=0
+  regulatory_sign_family: moved=14 clipped=0 dropped=0 residual=0
+  residential_facade_roofed_entry: moved=1 clipped=3 dropped=0 residual=0
+  sidewalk_paver_surface: moved=0 clipped=216 dropped=24 residual=0
+  stone_marker_bollard: moved=2 clipped=0 dropped=0 residual=0
+  traffic_sign_pole_cluster: moved=2 clipped=0 dropped=0 residual=0
+bilateral_carrier_modules: 183
+bilateral_both_sides: 159
+bilateral_L_runs: 446 bilateral_R_runs: 433
+bilateral_final_pairs: 107
+bilateral_final_both_sides: 97
+bilateral_final_one_sided: 10
+  one_sided: carrier 1059458086 curb_edge_line missing_R cause=emission_blocked kept={'L': 2, 'R': 0}
+  one_sided: carrier 1059458086 sidewalk_paver_surface missing_R cause=emission_blocked kept={'L': 3, 'R': 0}
+  one_sided: carrier 1087430625 curb_edge_line missing_R cause=clipped_away kept={'L': 1, 'R': 0}
+  one_sided: carrier 1087430625 sidewalk_paver_surface missing_R cause=clipped_away kept={'L': 1, 'R': 0}
+  one_sided: carrier 1087430627 sidewalk_paver_surface missing_L cause=clipped_away kept={'L': 0, 'R': 6}
+  one_sided: carrier 1087430630 sidewalk_paver_surface missing_L cause=clipped_away kept={'L': 0, 'R': 4}
+  one_sided: carrier 1455022086 sidewalk_paver_surface missing_R cause=emission_blocked kept={'L': 3, 'R': 0}
+  one_sided: carrier 1455022108 sidewalk_paver_surface missing_R cause=clipped_away kept={'L': 1, 'R': 0}
+  one_sided: carrier 456475384 curb_edge_line missing_R cause=clipped_away kept={'L': 1, 'R': 0}
+  one_sided: carrier 456475384 sidewalk_paver_surface missing_R cause=clipped_away kept={'L': 1, 'R': 0}
+max_placements_any_carrier: 18
+guardrail_qualifying_road_carriers: 131 of 131 (sidewalk_width_gt_0 131; crossing_approach_15m 4; railway_adjacent_footway 8)
+guardrail_runs_on_building_carriers: 0
+buildings_total: 715
+buildings_with_facade_slot: 715 (archetype_run 693 + observation_filled 23)
+facade_archetype_rule_runs: 693
+facade_rule_per_module:
+  concrete_wall_column: 0
+  lowrise_roof_edge: 0
+  narrow_mixed_use: 65
+  residential_facade_roofed_entry: 621
+  residential_facade_with_boundary_sign: 0
+  roller_shutter_facade: 7
+  rooftop_safety_railing: 0
+  service_alley: 0
+facade_class_split:
+  residential: 621
+  commercial: 53
+  mixed: 12
+facade_height_basis:
+  building:levels: 2
+  height_tag: 0
+  rules_default: 691
+facade_height_default_m: 6.0 (rules DEFAULT; levels x 3.0 m where tagged)
+storefront_rule_runs: 0
+sign_rule_points: 0
+boundary_rule_runs: 0
+interior_lots: 153
+facade_run_ring_clipped: 42
+facade_fallback_edge: 9 (true front outside ring; run on nearest clippable edge)
+facade_dropped_outside_ring: 455
+facade_unfillable_slots: 0 (boundary straddlers with no >= 1 m in-ring face; falsifier-exempt, slot cannot be built)
+rule_placements_per_module:
+  bollard_curb_island: 321
+  concrete_retaining_edge: 9
+  curb_edge_line: 276
+  hazard_strip_barrier: 2
+  horizontal_traffic_signal: 2
+  level_crossing_equipment: 2
+  manhole_and_grate: 31
+  narrow_mixed_use: 65
+  pole_streetlight: 30
+  rail_corridor_fence: 9
+  regulatory_sign_family: 14
+  residential_facade_roofed_entry: 621
+  road_text_arrow_30: 1
+  roller_shutter_facade: 7
+  sidewalk_paver_surface: 264
+  stone_marker_bollard: 2
+  street_tree: 32
+  traffic_sign_pole_cluster: 2
+  utility_pole_wire_cluster: 47
+  zebra_crossing: 5
+density_prior_per_module_per_m:
+  bollard_curb_island: 0.000420
+  concrete_block_wall: 0.001330
+  concrete_retaining_edge: 0.000560
+  concrete_wall_column: 0.000140
+  convex_mirror: 0.000070
+  covered_waste_storage_enclosure: 0.000140
+  crosswalk_and_edge_guardrail: 0.000140
+  curb_and_open_gutter: 0.000210
+  decorative_waterwheel: 0.000070
+  directional_road_sign: 0.000490
+  exterior_ac_condenser: 0.002240
+  frontage_merchandise_crates: 0.000280
+  frontage_merchandise_display: 0.000700
+  glass_entry: 0.000560
+  green_cycle_or_walk_band: 0.000210
+  hazard_strip_barrier: 0.000490
+  horizontal_traffic_signal: 0.000980
+  independent_storefront_awning: 0.000140
+  lattice_boundary_fence: 0.000280
+  level_crossing_equipment: 0.000560
+  manhole_and_grate: 0.003919
+  mesh_fence: 0.000840
+  metal_boundary_fence: 0.000350
+  metal_fence: 0.001260
+  meter_and_service_cabinet: 0.002799
+  noren_or_shutter_entry: 0.000280
+  notice_sign: 0.003009
+  open_and_covered_drain: 0.000350
+  overhead_gantry_wire: 0.001330
+  parked_bicycles: 0.002449
+  pedestrian_guardrail_continuous: 0.000630
+  pedestrian_guardrail_vertical_bar_continuous: 0.000350
+  pedestrian_warning_sign: 0.000140
+  picket_fence: 0.000280
+  platform_railing: 0.001190
+  pole_notice_banner: 0.000490
+  pole_poster_notice_carrier: 0.000210
+  pole_streetlight: 0.001260
+  poster_notice_carrier: 0.000980
+  potted_frontage_plant: 0.002310
+  rail_corridor_fence: 0.000980
+  rail_corridor_mesh_fence: 0.000420
+  red_mailbox: 0.000350
+  regulatory_sign_family: 0.001960
+  residential_carport_canopy: 0.000210
+  residential_facade_roofed_entry: 0.000070
+  road_surface_text_marking: 0.000210
+  road_text_arrow_30: 0.000350
+  roadside_reflector_bollard: 0.000910
+  roller_shutter_facade: 0.000630
+  rooftop_safety_railing: 0.000630
+  sidewalk_paver_surface: 0.000490
+  sidewalk_signboard: 0.002170
+  small_commercial_awning: 0.001750
+  small_tree: 0.001470
+  stone_cobble_wall: 0.000490
+  stone_lined_water_channel: 0.000350
+  stone_marker_bollard: 0.000840
+  storefront_banner: 0.000280
+  storefront_pedestal_sign: 0.000490
+  storefront_signboard: 0.002729
+  street_name_sign: 0.000140
+  street_sign_carrier: 0.000070
+  street_tree: 0.001330
+  traffic_mirror: 0.000210
+  traffic_sign_pole_cluster: 0.000420
+  trimmed_hedge: 0.001750
+  utility_pole_wire_cluster: 0.006509
+  vending_white_red_blue: 0.001540
+  wall_mounted_mailbox: 0.000560
+  waste_collection_bin_pair: 0.000700
+  water_control_structure: 0.000140
+  waterway_bridge_railing: 0.000280
+  white_railguard: 0.000630
+  zebra_crossing: 0.001190
+observed_density_denominator_m: 14288.7 over 116 carriers
+spacing_cap: none (rules_resolved carries no numeric spacing basis; density governs)
+band_statement: rule total below 2000 because guardrail and road-edge families were removed from building carriers, each building carrier carries slot placements only (one facade run, one boundary run, one storefront run plus one sign point), and point modules are density-bounded with no numeric spacing cap
+below_band_reason_per_module:
+  bollard_curb_island: rule=321 prior=0.000420 density-bounded points and one module per family slot
+  concrete_block_wall: rule=0 prior=0.001330 one boundary run per residential street-facing building
+  concrete_retaining_edge: rule=9 prior=0.000560 density-bounded points and one module per family slot
+  concrete_wall_column: rule=0 prior=0.000140 facade slot: one archetype run per building front edge (commercial/mixed take narrow_mixed_use, residential takes residential_facade_roofed_entry); observations fill the rest
+  convex_mirror: rule=0 prior=0.000070 density-bounded points and one module per family slot
+  covered_waste_storage_enclosure: rule=0 prior=0.000140 density-bounded points and one module per family slot
+  crosswalk_and_edge_guardrail: rule=0 prior=0.000140 guardrail road-edge hardware: road/footway carriers only, never buildings
+  curb_and_open_gutter: rule=0 prior=0.000210 road-edge family: road carriers only
+  curb_edge_line: rule=276 prior=0.000000 road-edge family: road carriers only
+  decorative_waterwheel: rule=0 prior=0.000070 density-bounded points and one module per family slot
+  directional_road_sign: rule=0 prior=0.000490 density-bounded points and one module per family slot
+  exterior_ac_condenser: rule=0 prior=0.002240 density-bounded points and one module per family slot
+  frontage_merchandise_crates: rule=0 prior=0.000280 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  frontage_merchandise_display: rule=0 prior=0.000700 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  glass_entry: rule=0 prior=0.000560 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  green_cycle_or_walk_band: rule=0 prior=0.000210 road-edge family: road carriers only
+  hazard_strip_barrier: rule=2 prior=0.000490 density-bounded points and one module per family slot
+  horizontal_traffic_signal: rule=2 prior=0.000980 density-bounded points and one module per family slot
+  independent_storefront_awning: rule=0 prior=0.000140 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  lattice_boundary_fence: rule=0 prior=0.000280 one boundary run per residential street-facing building
+  level_crossing_equipment: rule=2 prior=0.000560 rail hardware: railway carriers only; crossing equipment at crossing nodes
+  manhole_and_grate: rule=31 prior=0.003919 density-bounded points and one module per family slot
+  mesh_fence: rule=0 prior=0.000840 one boundary run per residential street-facing building
+  metal_boundary_fence: rule=0 prior=0.000350 one boundary run per residential street-facing building
+  metal_fence: rule=0 prior=0.001260 one boundary run per residential street-facing building
+  meter_and_service_cabinet: rule=0 prior=0.002799 density-bounded points and one module per family slot
+  narrow_mixed_use: rule=65 prior=0.000000 facade slot: one archetype run per building front edge (commercial/mixed take narrow_mixed_use, residential takes residential_facade_roofed_entry); observations fill the rest
+  noren_or_shutter_entry: rule=0 prior=0.000280 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  notice_sign: rule=0 prior=0.003009 density-bounded points and one module per family slot
+  open_and_covered_drain: rule=0 prior=0.000350 drain/channel: open waterway carriers only; culverts excluded
+  overhead_gantry_wire: rule=0 prior=0.001330 rail hardware: railway carriers only; crossing equipment at crossing nodes
+  parked_bicycles: rule=0 prior=0.002449 density-bounded points and one module per family slot
+  pedestrian_guardrail_continuous: rule=0 prior=0.000630 guardrail road-edge hardware: road/footway carriers only, never buildings
+  pedestrian_guardrail_vertical_bar_continuous: rule=0 prior=0.000350 guardrail road-edge hardware: road/footway carriers only, never buildings
+  pedestrian_warning_sign: rule=0 prior=0.000140 density-bounded points and one module per family slot
+  picket_fence: rule=0 prior=0.000280 one boundary run per residential street-facing building
+  platform_railing: rule=0 prior=0.001190 rail hardware: railway carriers only; crossing equipment at crossing nodes
+  pole_notice_banner: rule=0 prior=0.000490 density-bounded points and one module per family slot
+  pole_poster_notice_carrier: rule=0 prior=0.000210 density-bounded points and one module per family slot
+  pole_streetlight: rule=30 prior=0.001260 density-bounded points and one module per family slot
+  poster_notice_carrier: rule=0 prior=0.000980 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  potted_frontage_plant: rule=0 prior=0.002310 density-bounded points and one module per family slot
+  rail_corridor_fence: rule=9 prior=0.000980 rail hardware: railway carriers only; crossing equipment at crossing nodes
+  rail_corridor_mesh_fence: rule=0 prior=0.000420 rail hardware: railway carriers only; crossing equipment at crossing nodes
+  red_mailbox: rule=0 prior=0.000350 density-bounded points and one module per family slot
+  regulatory_sign_family: rule=14 prior=0.001960 density-bounded points and one module per family slot
+  residential_carport_canopy: rule=0 prior=0.000210 density-bounded points and one module per family slot
+  residential_facade_roofed_entry: rule=621 prior=0.000070 facade slot: one archetype run per building front edge (commercial/mixed take narrow_mixed_use, residential takes residential_facade_roofed_entry); observations fill the rest
+  road_surface_text_marking: rule=0 prior=0.000210 density-bounded points and one module per family slot
+  road_text_arrow_30: rule=1 prior=0.000350 density-bounded points and one module per family slot
+  roadside_reflector_bollard: rule=0 prior=0.000910 density-bounded points and one module per family slot
+  roller_shutter_facade: rule=7 prior=0.000630 facade slot: one archetype run per building front edge (commercial/mixed take narrow_mixed_use, residential takes residential_facade_roofed_entry); observations fill the rest
+  rooftop_safety_railing: rule=0 prior=0.000630 facade slot: one archetype run per building front edge (commercial/mixed take narrow_mixed_use, residential takes residential_facade_roofed_entry); observations fill the rest
+  sidewalk_paver_surface: rule=264 prior=0.000490 road-edge family: road carriers only
+  sidewalk_signboard: rule=0 prior=0.002170 density-bounded points and one module per family slot
+  small_commercial_awning: rule=0 prior=0.001750 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  small_tree: rule=0 prior=0.001470 density-bounded points and one module per family slot
+  stone_cobble_wall: rule=0 prior=0.000490 one boundary run per residential street-facing building
+  stone_lined_water_channel: rule=0 prior=0.000350 drain/channel: open waterway carriers only; culverts excluded
+  stone_marker_bollard: rule=2 prior=0.000840 density-bounded points and one module per family slot
+  storefront_banner: rule=0 prior=0.000280 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  storefront_pedestal_sign: rule=0 prior=0.000490 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  storefront_signboard: rule=0 prior=0.002729 commercial slot: shop/amenity/office-tagged buildings only (none tagged in this AOI)
+  street_name_sign: rule=0 prior=0.000140 density-bounded points and one module per family slot
+  street_sign_carrier: rule=0 prior=0.000070 density-bounded points and one module per family slot
+  street_tree: rule=32 prior=0.001330 density-bounded points and one module per family slot
+  traffic_mirror: rule=0 prior=0.000210 density-bounded points and one module per family slot
+  traffic_sign_pole_cluster: rule=2 prior=0.000420 density-bounded points and one module per family slot
+  trimmed_hedge: rule=0 prior=0.001750 one boundary run per residential street-facing building
+  utility_pole_wire_cluster: rule=47 prior=0.006509 density-bounded points and one module per family slot
+  vending_white_red_blue: rule=0 prior=0.001540 commercial: shop-tagged or place-proximate buildings only
+  wall_mounted_mailbox: rule=0 prior=0.000560 density-bounded points and one module per family slot
+  waste_collection_bin_pair: rule=0 prior=0.000700 density-bounded points and one module per family slot
+  water_control_structure: rule=0 prior=0.000140 density-bounded points and one module per family slot
+  waterway_bridge_railing: rule=0 prior=0.000280 density-bounded points and one module per family slot
+  white_railguard: rule=0 prior=0.000630 rail hardware: railway carriers only; crossing equipment at crossing nodes
+  zebra_crossing: rule=5 prior=0.001190 density-bounded points and one module per family slot
+family_basis_table:
+  above_rail_corridor: railway_boundary
+  above_rooftops: NONE
+  alley_or_forecourt: setback
+  alley_side_boundary: setback
+  along_rail_corridor: railway_boundary
+  atop_boundary_wall_property_edge: NONE
+  blind_roadside_junction: road_structure
+  boundary_or_forecourt: setback
+  building_facade: setback
+  building_front: NONE
+  building_frontage: setback
+  building_or_parking_edge: NONE
+  building_roofline: NONE
+  building_wall: NONE
+  carriageway: road_structure
+  carriageway_and_crosswalk: marking_form
+  carriageway_edge: road_structure
+  carriageway_or_platform_edge: railway_boundary
+  carriageway_surface: road_structure
+  commercial_corner: setback
+  commercial_entry: setback
+  commercial_forecourt: setback
+  commercial_frontage: setback
+  commercial_or_mixed_use_frontage: setback
+  commercial_or_residential_frontage: setback
+  commercial_or_service_frontage: setback
+  corner_commercial_frontage: setback
+  corner_frontage: setback
+  crossing_and_sidewalk: marking_form
+  crossing_approach: marking_form
+  crosswalk: marking_form
+  crosswalk_and_carriageway_edge: marking_form
+  crosswalk_and_sidewalk: marking_form
+  crosswalk_connection: marking_form
+  crosswalk_edge: marking_form
+  cultural_or_property_frontage: setback
+  cultural_or_residential_frontage: setback
+  curb_and_gutter: road_structure
+  facade_attached: setback
+  frontage: setback
+  frontage_boundary: setback
+  frontage_edge: setback
+  frontage_walkway: setback
+  grade_change: NONE
+  intersection: NONE
+  intersection_approach: NONE
+  intersection_overhead: occupation
+  level_crossing_approach: railway_boundary
+  level_crossing_roadside: railway_boundary
+  narrow_alley_frontage: setback
+  narrow_sidewalk_edge: road_structure
+  narrow_street_frontage: setback
+  parallel_to_rail_corridor: railway_boundary
+  parking_edge: NONE
+  path_side: road_structure
+  pedestrian_crossing_approach: marking_form
+  pedestrian_route: road_structure
+  pedestrian_route_at_corner: road_structure
+  pedestrian_route_crossing_approach: marking_form
+  planting_edge_property_boundary: setback
+  property_boundary: setback
+  property_boundary_with_planting: setback
+  property_or_cultural_frontage: setback
+  property_or_property_frontage: setback
+  property_or_service_edge: NONE
+  property_or_waterway_frontage: setback
+  property_wall_frontage: setback
+  public_edge: NONE
+  public_or_commercial_entry: setback
+  rail_adjacent_frontage: railway_boundary
+  rail_corridor: railway_boundary
+  rail_corridor_edge: railway_boundary
+  rail_crossing: railway_boundary
+  rail_crossing_approach: railway_boundary
+  rail_or_property_corridor_edge: railway_boundary
+  railside_service_edge: railway_boundary
+  railway_crossing: railway_boundary
+  railway_or_bridge_edge: railway_boundary
+  rear_alley: setback
+  residential_frontage: setback
+  residential_or_commercial_boundary: setback
+  residential_or_commercial_frontage: setback
+  residential_or_cultural_frontage: setback
+  residential_or_service_frontage: setback
+  residential_setback: NONE
+  residential_sidewalk_edge: road_structure
+  residential_street_edge: road_structure
+  road_and_walkway_edge: road_structure
+  road_crossing: marking_form
+  roadside: road_structure
+  roadside_above_roofline: road_structure
+  roadside_drainage_edge: road_structure
+  roadside_intersection: road_structure
+  roadside_or_bridge_edge: road_structure
+  roadside_or_frontage: setback
+  roadside_or_frontage_verge: setback
+  roadside_or_property_boundary: setback
+  roadside_or_property_edge: road_structure
+  roadside_or_rail_adjacent: railway_boundary
+  roadside_pole: occupation
+  roadside_pole_cluster: occupation
+  roadside_property_boundary: setback
+  roadside_regulatory_sign: sign_form
+  roadside_shared_path: road_structure
+  roadside_sign_pole: sign_form
+  roadside_utility_corridor: occupation
+  roadside_verge: road_structure
+  roadside_warning_point: road_structure
+  service_frontage: setback
+  service_frontage_or_verge: setback
+  shopfront: NONE
+  sidewalk: road_structure
+  sidewalk_and_carriageway_edge: road_structure
+  sidewalk_and_ramp_edge: road_structure
+  sidewalk_corner: road_structure
+  sidewalk_edge: road_structure
+  sidewalk_frontage: setback
+  sidewalk_frontage_edge: setback
+  sidewalk_or_crossing_edge: marking_form
+  sidewalk_or_frontage_edge: setback
+  sidewalk_red_surface: road_structure
+  sidewalk_stair_frontage: setback
+  small_commercial_frontage: setback
+  stairs_or_ramp_edge: NONE
+  station_or_storefront_forecourt: occupation
+  station_platform: railway_boundary
+  station_platform_edge: railway_boundary
+  station_platform_stair_edge: railway_boundary
+  station_rail_edge: railway_boundary
+  station_ramp_and_sidewalk: road_structure
+  storefront_forecourt: occupation
+  street_corner_frontage: setback
+  street_frontage: setback
+  street_frontage_boundary: setback
+  vegetated_property_boundary: setback
+  waterway_edge: NONE
+  waterway_or_cultural_frontage: setback
+  waterway_or_property_edge: NONE
+  waterway_or_property_frontage: setback

@@ -1,0 +1,27 @@
+{
+ "counts": {
+  "kind:fixture_archetype": 4,
+  "kind:front_archetype": 2,
+  "kind:hero_facade": 3,
+  "kind:home_start": 1,
+  "kind:infrastructure_count": 4,
+  "kind:input_file": 3,
+  "kind:minimap_label": 4,
+  "kind:required_place": 4,
+  "kind:required_sign": 1,
+  "kind:station_labels": 1,
+  "kind:station_span": 1,
+  "kind:streetscape_coverage": 3,
+  "met": 29,
+  "not_evaluable": 1,
+  "rows": 31,
+  "suspicious_empty": false,
+  "unmet": 1
+ },
+ "inputs": {
+  "build_dir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple",
+  "plan": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/representation_plan.json",
+  "requirements": "/Users/r/Projects/asciicker-Y9-2/assets/source_bundles/numabe_connected_neighborhood_scope_20260915/e2e_requirements.json"
+ },
+ "schema": "y92.requirements_gate_receipt.v1"
+}

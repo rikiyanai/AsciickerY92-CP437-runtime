@@ -1,0 +1,34 @@
+{
+  "schema": "y92.place_front_logo_sources.v1",
+  "owner": "scripts/pipeline/compile_sign_sprites.py (FL-4876 SIGN-XP-02)",
+  "purpose": "Bind each OSM brand place front to the capture-review crop that shows its fascia logo. The sign-sprite stage pastes that crop, as an XP sprite, into the front's identity_sign label slot.",
+  "review": {
+    "method": "visual inspection of each crop image beside its place-front anchor in the Numabe stage viewer payload (build_reg_21)",
+    "reviewer": "Claude (agent), session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03, 2026-10-11",
+    "status": "agent-reviewed; operator review pending",
+    "identity_adjudication": "2026-10-12: every binding re-checked one by one against its capture (artifacts/experiments/fl4876_identity_adjudication/cards); the Cocokara Fine binding ann-...-aedfdf is the ground-floor ココカラファイン fascia, NOT the dentist sign ann-...-a3b41d that the capture review tagged cocokara_fine_storefront"
+  },
+  "bindings": [
+    {
+      "place_feature_id": "feature:place:node/11404946450",
+      "label": "Cocokara Fine",
+      "annotation_id": "ann-1789503533890-aedfdf",
+      "crop": "artifacts/experiments/fl4810_aoi_street_network_boxing_20260915/crops/ann-1789503533890-aedfdf.png",
+      "basis": "crop of the Cocokara Fine fascia (red cross mark plus katakana name); its custom-identity instance (obs-inst-0112) lies 12 m from the OSM place front, the closest of three Cocokara crops"
+    },
+    {
+      "place_feature_id": "feature:place:node/2684634174",
+      "label": "My Basket",
+      "annotation_id": "ann-1789452109673-ec011b",
+      "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789452109673-ec011b.png",
+      "basis": "crop of the まいばすけっと fascia sign from mapillary_138974158240453, the on-disk observation-debt frame for this place (6.4 m); the capture review filed it under candidate_independent_shop_sign_cluster_404_408, so no brand label matched it"
+    },
+    {
+      "place_feature_id": "feature:place:node/2929222223",
+      "label": "割烹浜蝶",
+      "annotation_id": "ann-1789452040564-1abf97",
+      "crop": "artifacts/experiments/fl4813_capture_review_20260915/crops/ann-1789452040564-1abf97.png",
+      "basis": "FL-4876 IDADJ: the green curved fascia うなぎ 寿司 割烹 浜蝶 read in the crop and its capture; the capture review filed it as candidate_local_sign_cluster_392, so no place name matched it (authored_observation_positions.json identities)"
+    }
+  ]
+}

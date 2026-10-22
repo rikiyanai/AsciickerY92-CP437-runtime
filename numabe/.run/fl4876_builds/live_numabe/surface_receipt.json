@@ -1,0 +1,1867 @@
+{
+  "features": [
+    {
+      "attachment_id": null,
+      "feature_id": "feature:crossing:way/1087430626",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:crossing:way/1087430626",
+      "role": "crossing",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:crossing:way/1087430628",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:crossing:way/1087430628",
+      "role": "crossing",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:crossing:way/1087430629",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:crossing:way/1087430629",
+      "role": "crossing",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:crossing:way/1087430631",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:crossing:way/1087430631",
+      "role": "crossing",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:crossing:way/1455022087",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:crossing:way/1455022087",
+      "role": "crossing",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:crossing:way/1455022097",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:crossing:way/1455022097",
+      "role": "crossing",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:crossing:way/1455022107",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:crossing:way/1455022107",
+      "role": "crossing",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/1168798217320538",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/1168798217320538",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/1168798220653871",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/1168798220653871",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/1168798407320519",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/1168798407320519",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/1226986977878757",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/1226986977878757",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/1482825203154999",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/1482825203154999",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/3174343619543532",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/3174343619543532",
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/3174343636210197",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/3174343636210197",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/3184442801819580",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/3184442801819580",
+      "role": "pedestrian_area",
+      "width_m": 2.0,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/420292716941171",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/420292716941171",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/461726332613568",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/461726332613568",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/461726335946901",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/461726335946901",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/461726342613567",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/461726342613567",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/461726365946898",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/461726365946898",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/497732421671160",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/497732421671160",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/497759768335092",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/497759768335092",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/497786408332428",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/497786408332428",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/497822934995442",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/497822934995442",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/497902194987516",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/497902194987516",
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/497924711651931",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/497924711651931",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/497981198312949",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/497981198312949",
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/498113264966409",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/498113264966409",
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/506658154687064",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/506658154687064",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/937637420361946",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/937637420361946",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/937696023689419",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/937696023689419",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/937725000353188",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/937725000353188",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/937726700353018",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/937726700353018",
+      "role": "pedestrian_area",
+      "width_m": 2.0,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/937758207016534",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/937758207016534",
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/937922973666724",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/937922973666724",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/937979343661087",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/937979343661087",
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/937999903659031",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/937999903659031",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/938670593591962",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/938670593591962",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/981309655961828",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/981309655961828",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/981410115951782",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/981410115951782",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/981468699279257",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/981468699279257",
+      "role": "crossing",
+      "width_m": 1.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/981507162608744",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/981507162608744",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/981542689271858",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/981542689271858",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/981557609270366",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/981557609270366",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:mapillary_object/981616489264478",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:mapillary_object/981616489264478",
+      "role": "crossing",
+      "width_m": 2.5,
+      "width_provenance": "representation:surface_decal_diameter"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/1038001322",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/1038001322",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/1038001323",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/1038001323",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/1038001324",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/1038001324",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/1126040241",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/1126040241",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/1304205922",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/1304205922",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/152855008",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/152855008",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/24475081",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/24475081",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/796878139",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/796878139",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/796878141",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/796878141",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:railway_boundary:way/796878145",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:railway_boundary:way/796878145",
+      "role": "railway",
+      "width_m": 10.0,
+      "width_provenance": "DEFAULT:authoring (JP-RAILWAY-TECH-STD family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/1059458086",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/1059458086",
+      "role": "road_primary",
+      "width_m": 11.0,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/1090211362",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/1090211362",
+      "role": "road_tertiary",
+      "width_m": 7.0,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/1115662463",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/1115662463",
+      "role": "road_primary",
+      "width_m": 11.0,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/114097315",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/114097315",
+      "role": "road_residential",
+      "width_m": 4.13,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 0.75 m + right 3.38 m, medians of 18 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/126233940",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/126233940",
+      "role": "road_residential",
+      "width_m": 6.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.75 m + right 4.75 m, medians of 71 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/126233952",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/126233952",
+      "role": "road_residential",
+      "width_m": 4.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2 m + right 2.5 m, medians of 29 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/126233956",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/126233956",
+      "role": "road_residential",
+      "width_m": 3.37,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.62 m + right 0.75 m, medians of 24 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/126233962",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/126233962",
+      "role": "road_residential",
+      "width_m": 5.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 4 m + right 1 m, medians of 13 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/126233970",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/126233970",
+      "role": "road_residential",
+      "width_m": 3.25,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.75 m + right 1.5 m, medians of 26 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/126234006",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/126234006",
+      "role": "road_residential",
+      "width_m": 5.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.5 m + right 3 m, medians of 74 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/126234012",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/126234012",
+      "role": "road_residential",
+      "width_m": 6.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 3 m + right 3 m, medians of 25 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/1465498421",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/1465498421",
+      "role": "road_residential",
+      "width_m": 4.25,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.5 m + right 1.75 m, medians of 13 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/1465498422",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/1465498422",
+      "role": "road_residential",
+      "width_m": 3.75,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2 m + right 1.75 m, medians of 6 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/1465498423",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/1465498423",
+      "role": "road_residential",
+      "width_m": 5.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.62 m + right 2.88 m, medians of 4 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/196858614",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/196858614",
+      "role": "road_residential",
+      "width_m": 4.62,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.5 m + right 2.12 m, medians of 50 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/199578447",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/199578447",
+      "role": "road_residential",
+      "width_m": 3.75,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.75 m + right 2 m, medians of 31 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/199578448",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/199578448",
+      "role": "road_residential",
+      "width_m": 3.38,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.38 m + right 2 m, medians of 30 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/200087061",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/200087061",
+      "role": "road_residential",
+      "width_m": 4.12,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2 m + right 2.12 m, medians of 24 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/225098962",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/225098962",
+      "role": "road_residential",
+      "width_m": 4.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.75 m + right 2.25 m, medians of 10 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/225104982",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/225104982",
+      "role": "road_residential",
+      "width_m": 5.75,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.25 m + right 3.5 m, medians of 92 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/225194669",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/225194669",
+      "role": "road_residential",
+      "width_m": 5.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2 m + right 3 m, medians of 29 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/225201667",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/225201667",
+      "role": "road_residential",
+      "width_m": 4.24,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.62 m + right 1.62 m, medians of 6 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/225201822",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/225201822",
+      "role": "road_residential",
+      "width_m": 3.87,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.12 m + right 1.75 m, medians of 12 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/229865708",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/229865708",
+      "role": "road_residential",
+      "width_m": 4.76,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.88 m + right 1.88 m, medians of 24 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/233636148",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/233636148",
+      "role": "road_residential",
+      "width_m": 3.25,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.5 m + right 1.75 m, medians of 21 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/233636150",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/233636150",
+      "role": "road_residential",
+      "width_m": 3.25,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.5 m + right 1.75 m, medians of 22 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/23990281",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/23990281",
+      "role": "road_tertiary",
+      "width_m": 8.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 4 m + right 4 m, medians of 65 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/264238102",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/264238102",
+      "role": "road_residential",
+      "width_m": 5.25,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.75 m + right 2.5 m, medians of 98 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/264753664",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/264753664",
+      "role": "road_residential",
+      "width_m": 5.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 3.25 m + right 1.75 m, medians of 63 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/264753665",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/264753665",
+      "role": "road_residential",
+      "width_m": 4.13,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.38 m + right 2.75 m, medians of 32 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/264844671",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/264844671",
+      "role": "road_residential",
+      "width_m": 3.75,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.5 m + right 2.25 m, medians of 7 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/264844672",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/264844672",
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 0.75 m + right 2.75 m, medians of 15 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/27073255",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/27073255",
+      "role": "road_primary",
+      "width_m": 11.0,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/285885323",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/285885323",
+      "role": "road_primary",
+      "width_m": 11.0,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/285885337",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/285885337",
+      "role": "road_tertiary",
+      "width_m": 8.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 4 m + right 4.5 m, medians of 31 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/288994921",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/288994921",
+      "role": "road_residential",
+      "width_m": 3.88,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2 m + right 1.88 m, medians of 10 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/289197221",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/289197221",
+      "role": "road_residential",
+      "width_m": 4.5,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/31706445",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/31706445",
+      "role": "road_tertiary",
+      "width_m": 8.25,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 3.5 m + right 4.75 m, medians of 54 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/31993395",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/31993395",
+      "role": "road_residential",
+      "width_m": 5.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2 m + right 3 m, medians of 32 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/31993399",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/31993399",
+      "role": "road_tertiary",
+      "width_m": 7.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 3.25 m + right 3.75 m, medians of 44 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/31993400",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/31993400",
+      "role": "road_residential",
+      "width_m": 6.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.5 m + right 3.5 m, medians of 70 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/37661730",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/37661730",
+      "role": "road_tertiary",
+      "width_m": 7.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 3.5 m + right 4 m, medians of 41 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/37661731",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/37661731",
+      "role": "road_residential",
+      "width_m": 4.75,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.75 m + right 3 m, medians of 39 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/37661732",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/37661732",
+      "role": "road_residential",
+      "width_m": 4.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.75 m + right 1.75 m, medians of 31 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/37708746",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/37708746",
+      "role": "road_residential",
+      "width_m": 7.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 3 m + right 4 m, medians of 69 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/37708747",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/37708747",
+      "role": "road_residential",
+      "width_m": 4.38,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 3.38 m + right 1 m, medians of 18 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/37708748",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/37708748",
+      "role": "road_residential",
+      "width_m": 5.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.25 m + right 3.75 m, medians of 21 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/456475366",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/456475366",
+      "role": "road_residential",
+      "width_m": 4.25,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.25 m + right 2 m, medians of 27 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/456475384",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/456475384",
+      "role": "road_residential",
+      "width_m": 13.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.5 m + right 11 m, medians of 8 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/456475385",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/456475385",
+      "role": "road_residential",
+      "width_m": 3.0,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.12 m + right 0.88 m, medians of 14 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/456475386",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/456475386",
+      "role": "road_residential",
+      "width_m": 4.25,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 1.75 m + right 2.5 m, medians of 21 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/670892441",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/670892441",
+      "role": "road_residential",
+      "width_m": 4.75,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 2.25 m + right 2.5 m, medians of 19 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/670892442",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/670892442",
+      "role": "road_tertiary",
+      "width_m": 7.5,
+      "width_provenance": "TMG 2023 LiDAR clear corridor: left 3 m + right 4.5 m, medians of 7 stations (compile_lidar_road_corridor.py; FL-4934); painted as default strip UNION the station polygon (each side max(default / 2, min(local clearance, road median)))"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:road:way/989310374",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:road:way/989310374",
+      "role": "road_residential",
+      "width_m": 4.5,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/1087430624",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/1087430624",
+      "role": "footway",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/1087430625",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/1087430625",
+      "role": "footway",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/1087430627",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/1087430627",
+      "role": "footway",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/1087430630",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/1087430630",
+      "role": "footway",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/1455022086",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/1455022086",
+      "role": "footway",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/1455022088",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/1455022088",
+      "role": "footway",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/1455022108",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/1455022108",
+      "role": "footway",
+      "width_m": 1.8,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/225100142",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/225100142",
+      "role": "steps",
+      "width_m": 1.5,
+      "width_provenance": "OSM width tag"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:sidewalk:way/264847040",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:sidewalk:way/264847040",
+      "role": "footway",
+      "width_m": 3.0,
+      "width_provenance": "DEFAULT:authoring (JP-ROAD-STRUCT-ORDER base-class family; moved from world_surfaces.py; no article-level citation)"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:terrain:way/1268595560",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:terrain:way/1268595560",
+      "role": "water",
+      "width_m": 1.0,
+      "width_provenance": "canonical polygon"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:terrain:way/1268595561",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:terrain:way/1268595561",
+      "role": "water",
+      "width_m": 1.0,
+      "width_provenance": "canonical polygon"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:terrain:way/225198783",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:terrain:way/225198783",
+      "role": "water",
+      "width_m": 1.0,
+      "width_provenance": "canonical polygon"
+    },
+    {
+      "attachment_id": null,
+      "feature_id": "feature:terrain:way/264846635",
+      "layer_index": 0,
+      "representation_id": "surface_decal:feature:terrain:way/264846635",
+      "role": "land",
+      "width_m": 1.0,
+      "width_provenance": "canonical polygon"
+    }
+  ],
+  "height_changed": false,
+  "materials_written": 134,
+  "reconciliation": {
+    "balanced": true,
+    "new_asset_required": 0,
+    "painted": 122,
+    "planned": 122,
+    "skipped_with_reason": 0
+  },
+  "render_features": 122,
+  "roles": {
+    "cells_restamped": 7365888,
+    "per_role": {
+      "crossing": 7929,
+      "footway": 21907,
+      "land": 6101684,
+      "pedestrian_area": 194,
+      "railway": 244166,
+      "road_primary": 177065,
+      "road_residential": 549413,
+      "road_tertiary": 258191,
+      "steps": 232,
+      "water": 5107
+    },
+    "records": 7365888,
+    "skipped_no_patch": 0,
+    "skipped_owned_by_later_stage": 0,
+    "skipped_unmapped_role": 0
+  },
+  "schema": "y92.world_ir_surface_stamp.v2",
+  "surface_plan": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/surface_stamp_plan.json",
+  "terminal_states": [
+    {
+      "feature_id": "feature:crossing:way/1087430626",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "crossing",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:crossing:way/1087430628",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "crossing",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:crossing:way/1087430629",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "crossing",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:crossing:way/1087430631",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "crossing",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:crossing:way/1455022087",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "crossing",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:crossing:way/1455022097",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "crossing",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:crossing:way/1455022107",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "crossing",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/1168798217320538",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/1168798220653871",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/1168798407320519",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/1226986977878757",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/1482825203154999",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/3174343619543532",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/3174343636210197",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/3184442801819580",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "fixture",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/420292716941171",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/461726332613568",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/461726335946901",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/461726342613567",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/461726365946898",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/497732421671160",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/497759768335092",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/497786408332428",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/497822934995442",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/497902194987516",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/497924711651931",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/497981198312949",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/498113264966409",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/506658154687064",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/937637420361946",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/937696023689419",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/937725000353188",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/937726700353018",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "fixture",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/937758207016534",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/937922973666724",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/937979343661087",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/937999903659031",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/938670593591962",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/981309655961828",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/981410115951782",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/981468699279257",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/981507162608744",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/981542689271858",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/981557609270366",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:mapillary_object/981616489264478",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road_marking",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1038001322",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1038001323",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1038001324",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1126040241",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1304205922",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/152855008",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/24475081",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878139",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878141",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878145",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "railway_boundary",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/1059458086",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/1090211362",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/1115662463",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/114097315",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/126233940",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/126233952",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/126233956",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/126233962",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/126233970",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/126234006",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/126234012",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/1465498421",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/1465498422",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/1465498423",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/196858614",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/199578447",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/199578448",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/200087061",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/225098962",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/225104982",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/225194669",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/225201667",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/225201822",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/229865708",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/233636148",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/233636150",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/23990281",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/264238102",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/264753664",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/264753665",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/264844671",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/264844672",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/27073255",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/285885323",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/285885337",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/288994921",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/289197221",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/31706445",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/31993395",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/31993399",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/31993400",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/37661730",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/37661731",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/37661732",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/37708746",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/37708747",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/37708748",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/456475366",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/456475384",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/456475385",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/456475386",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/670892441",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/670892442",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:road:way/989310374",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "road",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1087430624",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1087430625",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1087430627",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1087430630",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1455022086",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1455022088",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1455022108",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/225100142",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/264847040",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "sidewalk",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:terrain:way/1268595560",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "terrain",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:terrain:way/1268595561",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "terrain",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:terrain:way/225198783",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "terrain",
+      "state": "painted"
+    },
+    {
+      "feature_id": "feature:terrain:way/264846635",
+      "reason": "exact stamp layers compiled before serialization",
+      "semantic_class": "terrain",
+      "state": "painted"
+    }
+  ]
+}

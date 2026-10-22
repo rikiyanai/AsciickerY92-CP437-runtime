@@ -1,0 +1,49 @@
+[
+  {
+    "attachment_id": "attachment:station-facade:feature:facade_plane:numabe_station_entrance_1",
+    "authored_spatial_decision": {
+      "action": "offset_facade_normal",
+      "decision_id": "fl4876-manual-station-facade-outward",
+      "rationale": "The entrance identity and direction are correct, but the facade plane is visibly embedded in the station mass. Move it along its authored outward normal toward the approach footway. REVISED 2026-10-10 from 1.0 m to 4.7 m by agent:claude-opus-5.5 session 0e4cdb7d-789e-4f42-9ca8-ce5af0878c03 under operator instruction 'DONT STOP TILL FULL MAP IS BUIDLABLE': in build_reg_06 (every other coherence row PASS) the 1.0 m facade is still 0.96 m inside PLATEAU footprint bldg_b3153710 (5.4 m measured, the long platform canopy/station structure between the tracks; the OSM entrance node itself lies 0.97 m inside it). Along the same outward normal (az 319.8) the first point outside every canonical footprint is at 4.4 m; 4.7 m puts the gate 0.3 m beyond the canopy end. Direction unchanged."
+    },
+    "facade_feature_id": "feature:facade_plane:numabe_station_entrance_1",
+    "feature_id": "feature:station_entrance:node/9865199050",
+    "flags": 3,
+    "inst_name": "facade_feature_facade_plane_numabe_station_entrance_1",
+    "intended_depth_m": 0.045,
+    "intended_height_m": 5.79888,
+    "intended_width_m": 7.152709,
+    "mesh_name": "facade_feature_facade_plane_numabe_station_entrance_1.akm",
+    "placement_id": "station-facade:feature:facade_plane:numabe_station_entrance_1",
+    "planned_normal": [
+      -0.655093544559507,
+      0.7555477800089557
+    ],
+    "planned_tangent": [
+      -0.7555477800089557,
+      -0.655093544559507
+    ],
+    "semantic_family": "station_facade",
+    "spatial_basis": "anchored_facade_reconstruction.anchor.osm_ref+plane+outward_normal_offset:4.700m",
+    "station_plan_schema": "y92.station_facade_plan.v1",
+    "story_id": -1,
+    "transform": [
+      -0.7555477800089557,
+      -0.655093544559507,
+      0.0,
+      0.0,
+      -0.655093544559507,
+      0.7555477800089557,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      417.25662221311325,
+      451.33277178354916,
+      195.0,
+      1.0
+    ]
+  }
+]

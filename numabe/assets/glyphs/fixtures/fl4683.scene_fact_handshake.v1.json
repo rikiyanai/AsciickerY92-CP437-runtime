@@ -1,0 +1,182 @@
+{
+  "schema": "fl4683.scene_fact_handshake.v1",
+  "version": 1,
+  "contract_kind": "typed_handshake_contract",
+  "status": "defined_unwired",
+  "identity": {
+    "native_header": "platform/fl4683_scene_fact_handshake.h",
+    "scene_fact_schema_id": "SceneFactV1",
+    "glyph_program_schema_id": "GlyphProgramV1",
+    "selector_input_schema_id": "Fl4683SelectorInputV1",
+    "final_output_type": "FinalGlyphResultV2",
+    "compiler_artifact_schema": "fl4676.glyph_fact.v1",
+    "compiler_artifact_path": "assets/glyphs/generated/fl4676.glyph_fact.v1.json"
+  },
+  "scene_fact_v1": {
+    "owner": "renderer",
+    "schema_version": 1,
+    "fields": [
+      { "name": "schema_version", "type": "u32", "owner": "renderer" },
+      { "name": "frame_id", "type": "u64", "owner": "renderer" },
+      { "name": "cell_x", "type": "u32", "owner": "renderer" },
+      { "name": "cell_y", "type": "u32", "owner": "renderer" },
+      { "name": "surface_id", "type": "u64", "owner": "renderer" },
+      { "name": "feature_ref", "type": "u64", "owner": "renderer" },
+      { "name": "material_namespace", "type": "i16", "owner": "renderer" },
+      { "name": "material_key", "type": "i16", "owner": "renderer" },
+      { "name": "role", "type": "u8", "owner": "renderer" },
+      { "name": "ramp_bin", "type": "u8", "owner": "renderer" },
+      { "name": "density_bin", "type": "u8", "owner": "renderer" },
+      { "name": "direction_bin", "type": "u8", "owner": "renderer" },
+      { "name": "flow_bin", "type": "u8", "owner": "renderer" },
+      { "name": "edge_bin", "type": "u8", "owner": "renderer" },
+      { "name": "vertical_relation", "type": "u8", "owner": "renderer" },
+      { "name": "topology_event", "type": "u8", "owner": "renderer" },
+      { "name": "visibility_state", "type": "u8", "owner": "renderer" },
+      { "name": "route_family_mask", "type": "u8", "owner": "renderer" },
+      { "name": "depth_q0_16", "type": "u16", "owner": "renderer", "quantization": "q0_16" },
+      { "name": "normal_oct_x_q1_14", "type": "i16", "owner": "renderer", "quantization": "q1_14" },
+      { "name": "normal_oct_y_q1_14", "type": "i16", "owner": "renderer", "quantization": "q1_14" },
+      { "name": "projected_area_q0_16", "type": "u16", "owner": "renderer", "quantization": "q0_16" },
+      { "name": "motion_phase_q0_16", "type": "u16", "owner": "renderer", "quantization": "q0_16" },
+      { "name": "payload_sha256", "type": "sha256_bytes", "owner": "renderer" },
+      { "name": "valid", "type": "u8", "owner": "renderer" }
+    ],
+    "forbidden_fields": [
+      "glyph_record_id",
+      "glyph_intrinsic_metadata",
+      "membership_weight",
+      "relation_edge",
+      "compiled_cost_weight"
+    ]
+  },
+  "route_families": {
+    "discriminator_field": "route_family_mask",
+    "discriminator_owner": "renderer",
+    "why": "ramp.v1 and density.v1 are two distinct compiled attribute families that share the tonal role code. Without a renderer-stated discriminator a selector cannot tell ramp lane N from density lane N, which FL-4684 measured as 64 of 99 compiled addresses not uniquely addressable.",
+    "legal_masks": ["single_family_bit", "ramp_density_tonal_pair"],
+    "families": [
+      { "route_key": "ramp.v1", "bit": 1, "lane_field": "ramp_bin" },
+      { "route_key": "density.v1", "bit": 2, "lane_field": "density_bin" },
+      { "route_key": "edge.v1", "bit": 4, "lane_field": "edge_bin" },
+      { "route_key": "direction.v1", "bit": 8, "lane_field": "direction_bin" },
+      { "route_key": "flow.v1", "bit": 16, "lane_field": "flow_bin" },
+      { "route_key": "filled.field.v1", "bit": 32, "lane_field": null },
+      { "route_key": "mesh_feature.bundle.v1", "bit": 64, "lane_field": null }
+    ]
+  },
+  "glyph_program_v1": {
+    "owner": "offline_compiler",
+    "schema_version": 1,
+    "artifact_view": [
+      { "name": "schema_version", "type": "u32", "owner": "offline_compiler" },
+      { "name": "artifact_sha256", "type": "sha256_bytes", "owner": "offline_compiler" },
+      { "name": "artifact_content_sha256", "type": "sha256_bytes", "owner": "offline_compiler" },
+      { "name": "glyph_universe_sha256", "type": "sha256_bytes", "owner": "offline_compiler" },
+      { "name": "scene_fact_schema_sha256", "type": "sha256_bytes", "owner": "handshake_contract" },
+      { "name": "glyph_record_count", "type": "u32", "owner": "offline_compiler" },
+      { "name": "fact_count", "type": "u32", "owner": "offline_compiler" },
+      { "name": "runtime_rights", "type": "u32", "owner": "handshake_contract" },
+      { "name": "max_fact_members", "type": "u16", "owner": "offline_compiler" },
+      { "name": "max_relation_edges", "type": "u16", "owner": "offline_compiler" },
+      { "name": "runtime_consumption_allowed", "type": "u8", "owner": "handshake_contract" }
+    ],
+    "required_identities": [
+      "artifact_sha256",
+      "artifact_content_sha256",
+      "glyph_universe_sha256",
+      "scene_fact_schema_sha256"
+    ]
+  },
+  "selector_input_v1": {
+    "owner": "single_native_selector",
+    "fields": [
+      { "name": "schema_version", "type": "u32", "owner": "single_native_selector" },
+      { "name": "adapter_kind", "type": "u8", "owner": "adapter" },
+      { "name": "scene_fact", "type": "SceneFactV1", "owner": "renderer" },
+      { "name": "glyph_program", "type": "GlyphProgramV1", "owner": "offline_compiler" },
+      { "name": "requested_glyph_fact_id_sha256", "type": "sha256_bytes", "owner": "single_native_selector" },
+      { "name": "compiled_address_sha256", "type": "sha256_bytes", "owner": "single_native_selector" },
+      { "name": "prior_tuple", "type": "FinalGlyphResultV2", "owner": "u6_final_tuple_writer" },
+      { "name": "output_tuple", "type": "FinalGlyphResultV2*", "owner": "u6_final_tuple_writer" }
+    ],
+    "allowed_evaluation": [
+      "select_fact_id_from_scene_fact",
+      "score_compiler_emitted_costs"
+    ]
+  },
+  "selector_output_v1": {
+    "type": "FinalGlyphResultV2",
+    "owner_after_selection": "u6_final_tuple_writer",
+    "absence_publication": "named_rejection_visible_absence_tuple"
+  },
+  "rejection_reasons": [
+    "runtime_rights_blocked",
+    "missing_artifact",
+    "artifact_sha_mismatch",
+    "glyph_universe_mismatch",
+    "scene_schema_mismatch",
+    "unknown_glyph_fact",
+    "unknown_glyph_record",
+    "missing_compiled_address",
+    "empty_legal_row",
+    "unadmitted_glyph",
+    "missing_scene_fact",
+    "malformed_scene_fact",
+    "frame_order_violation",
+    "adapter_abi_mismatch"
+  ],
+  "runtime_rights": {
+    "runtime_consumption_allowed_now": false,
+    "allowed_after_fl4683": [
+      "select_fact_id_from_scene_fact",
+      "score_compiler_emitted_costs"
+    ],
+    "forbidden_authorities": [
+      "derive_glyph_metadata_at_runtime",
+      "derive_relation_edges_at_runtime",
+      "invent_membership_at_runtime",
+      "synthesize_replacement_rows",
+      "substitute_missing_fact",
+      "mutate_compiled_artifact",
+      "treat_scene_fact_as_glyph_metadata"
+    ]
+  },
+  "frame_ordering": {
+    "lifetime": "one_render_frame",
+    "ordering": [
+      "renderer_emits_scene_fact_v1",
+      "adapter_transports_scene_fact_without_reselection",
+      "selector_checks_artifact_universe_and_scene_schema_identities",
+      "selector_evaluates_compiler_emitted_costs_only",
+      "u6_final_tuple_writer_publishes_finalglyphresultv2",
+      "presenter_consumes_finalglyphresultv2_without_reselection"
+    ]
+  },
+  "adapters": [
+    {
+      "adapter_kind": "desktop_term_plus_plus",
+      "platform": "desktop",
+      "rights": [
+        "transport_scene_fact_bytes",
+        "transport_final_tuple_bytes",
+        "present_final_tuple_without_reselection"
+      ]
+    },
+    {
+      "adapter_kind": "webassembly_webgl_transport",
+      "platform": "webassembly",
+      "rights": [
+        "transport_scene_fact_bytes",
+        "transport_final_tuple_bytes",
+        "present_final_tuple_without_reselection"
+      ]
+    }
+  ],
+  "non_activation": {
+    "installs_loader": false,
+    "installs_selector": false,
+    "installs_presenter": false,
+    "activates_runtime_consumption": false
+  }
+}

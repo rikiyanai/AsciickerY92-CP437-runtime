@@ -45,33 +45,6 @@ This file contains the "knowledge base" of your project. Add magic numbers, comm
 }
 ```
 
-## Agent Ops Tools
-
-A suite of tools for "Agent Self-Documentation". Useful if you are building AI agents that work on this codebase.
-
-### 🧠 Automatic Agent Logging (The "Brain Dump")
-
-To enable **Automatic Stream-of-Thought Logging**, you must give your Agent the "Reflex" to use these tools.
-
-1.  **Copy** the agent instructions from the project `docs/agent/claude.md`.
-2.  **Paste** them into your Agent's System Prompt or Custom Instructions.
-
-**Once installed, the Agent will AUTOMATICALLY:**
-1.  **Dump Thoughts**: Every time it makes a decision, it will run `scripts/agent_hook.py "Thinking..."`.
-2.  **Update State**: The `knowledge_tracker.py` runs instantly to organize these thoughts.
-3.  **Link Context**: The system auto-links code references.
-
-**Result**: A massive, chronological log of the Agent's mind in `logs/AGENT_TRACE.jsonl` and a "Current Status" report in `CURRENT_UNDERSTANDING.md`.
-
-### The Hook (Internal Tool)
-*   **`scripts/agent_hook.py`**: The script the Agent calls.
-    *   *Agent calls*: `python scripts/agent_hook.py "I suspect the heuristic is wrong"`
-
-### Underlying Tools (Advanced)
-*   **`scripts/agent_logger.py`**: Records raw logs to `logs/AGENT_TRACE.jsonl`.
-*   **`scripts/knowledge_tracker.py`**: Generates `CURRENT_UNDERSTANDING.md`.
-*   **`scripts/reference_linker.py`**: Links symbols in the understanding doc.
-
 ## CLI Options
 
 Both extractor and analyzer scripts support common arguments:

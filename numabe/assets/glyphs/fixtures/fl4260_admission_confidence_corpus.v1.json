@@ -1,0 +1,105 @@
+{
+  "schema": "fl4260.admission_confidence_corpus.v1",
+  "scorer_id": "u7.mask.v1",
+  "threshold": {
+    "numerator": 15,
+    "denominator": 100
+  },
+  "materials": [
+    {
+      "profile_namespace": "mesh",
+      "material_key": 200,
+      "accepted_exemplars": [
+        {
+          "exemplar_id": "mesh200.accepted.vertical",
+          "glyph_id": 601,
+          "mask8_u64_le_hex": "0808080808080800",
+          "raster_provenance": {
+            "page16_tile_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+            "reduction_version": "coverage_ge_2.v1",
+            "source": "fl4260_admission_confidence_fixture.v1"
+          }
+        },
+        {
+          "exemplar_id": "mesh200.accepted.horizontal",
+          "glyph_id": 602,
+          "mask8_u64_le_hex": "000000007e000000",
+          "raster_provenance": {
+            "page16_tile_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+            "reduction_version": "coverage_ge_2.v1",
+            "source": "fl4260_admission_confidence_fixture.v1"
+          }
+        }
+      ],
+      "rejected_exemplars": [
+        {
+          "exemplar_id": "mesh200.rejected.cross",
+          "glyph_id": 603,
+          "mask8_u64_le_hex": "080808087e080800",
+          "raster_provenance": {
+            "page16_tile_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "reduction_version": "coverage_ge_2.v1",
+            "source": "fl4260_admission_confidence_fixture.v1"
+          }
+        },
+        {
+          "exemplar_id": "mesh200.rejected.corner",
+          "glyph_id": 604,
+          "mask8_u64_le_hex": "0000000008080808",
+          "raster_provenance": {
+            "page16_tile_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+            "reduction_version": "coverage_ge_2.v1",
+            "source": "fl4260_admission_confidence_fixture.v1"
+          }
+        }
+      ]
+    }
+  ],
+  "calibration_samples": [
+    {
+      "sample_id": "mesh200.sample.accepted_horizontal",
+      "profile_namespace": "mesh",
+      "material_key": 200,
+      "mask8_u64_le_hex": "000000007e000000",
+      "raster_provenance": {
+        "page16_tile_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+        "reduction_version": "coverage_ge_2.v1",
+        "source": "fl4260_admission_confidence_fixture.v1"
+      }
+    },
+    {
+      "sample_id": "mesh200.sample.accepted_vertical",
+      "profile_namespace": "mesh",
+      "material_key": 200,
+      "mask8_u64_le_hex": "0808080808080800",
+      "raster_provenance": {
+        "page16_tile_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "reduction_version": "coverage_ge_2.v1",
+        "source": "fl4260_admission_confidence_fixture.v1"
+      }
+    },
+    {
+      "sample_id": "mesh200.sample.rejected_corner",
+      "profile_namespace": "mesh",
+      "material_key": 200,
+      "mask8_u64_le_hex": "0000000008080808",
+      "raster_provenance": {
+        "page16_tile_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+        "reduction_version": "coverage_ge_2.v1",
+        "source": "fl4260_admission_confidence_fixture.v1"
+      }
+    },
+    {
+      "sample_id": "mesh200.sample.rejected_cross",
+      "profile_namespace": "mesh",
+      "material_key": 200,
+      "mask8_u64_le_hex": "080808087e080800",
+      "raster_provenance": {
+        "page16_tile_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+        "reduction_version": "coverage_ge_2.v1",
+        "source": "fl4260_admission_confidence_fixture.v1"
+      }
+    }
+  ],
+  "corpus_sha256": "c869a52996d0c529702a37e2a1f0d7a461bdf36cd5ec3b9800b78b2473e7b074"
+}

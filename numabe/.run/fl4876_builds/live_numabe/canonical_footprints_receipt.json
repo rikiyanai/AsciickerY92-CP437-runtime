@@ -1,0 +1,1095 @@
+{
+  "area_band_reports": [],
+  "counts": {
+    "added_mapillary": 575,
+    "added_plateau_only": 65,
+    "building_features_after": 715,
+    "features_before": 814,
+    "kept_osm_area_band": 0,
+    "kept_osm_subdivision_disagreement": 10,
+    "kept_osm_swallows_observation": 6,
+    "merged_mapillary_claims": 8,
+    "osm_only": 94,
+    "rewritten_to_plateau": 540,
+    "skipped_overlap": 71,
+    "storeys_sentinels_dropped": 25,
+    "swallow_guard_ran": true
+  },
+  "inputs": {
+    "canonical_entities": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical_entities.json",
+    "osm_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/osm.world_ir.json",
+    "plateau_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plateau.world_ir.json"
+  },
+  "largest_area_changes": [
+    {
+      "area_after_m2": 370.275,
+      "area_before_m2": 621.272,
+      "area_delta_m2": -250.997,
+      "canonical_id": "bldg_4c14795657cd",
+      "feature_id": "feature:building_footprint:way/725138055",
+      "iou": 0.5386,
+      "osm_source_ref": "way/725138055",
+      "plateau_gml_id": "bldg_e7974aa4-2a24-429c-a80e-0b1214dff205"
+    },
+    {
+      "area_after_m2": 172.033,
+      "area_before_m2": 294.96,
+      "area_delta_m2": -122.927,
+      "canonical_id": "bldg_39b90d0f581d",
+      "feature_id": "feature:building_footprint:way/1507398034",
+      "iou": 0.5788,
+      "osm_source_ref": "way/1507398034",
+      "plateau_gml_id": "bldg_066ee483-eae6-4023-8285-cc5d89d7d7f4"
+    },
+    {
+      "area_after_m2": 209.629,
+      "area_before_m2": 320.373,
+      "area_delta_m2": -110.744,
+      "canonical_id": "bldg_f6f51b37bdea",
+      "feature_id": "feature:building_footprint:way/225101048",
+      "iou": 0.649,
+      "osm_source_ref": "way/225101048",
+      "plateau_gml_id": "bldg_aeaf0dc7-084f-47a7-9da5-21c63fdc6bb2"
+    },
+    {
+      "area_after_m2": 366.127,
+      "area_before_m2": 271.281,
+      "area_delta_m2": 94.846,
+      "canonical_id": "bldg_6bd1e16e58bd",
+      "feature_id": "feature:building_footprint:way/725137927",
+      "iou": 0.6819,
+      "osm_source_ref": "way/725137927",
+      "plateau_gml_id": "bldg_115331d9-e29c-489c-b7f7-7c89d9b177a5"
+    },
+    {
+      "area_after_m2": 763.386,
+      "area_before_m2": 835.483,
+      "area_delta_m2": -72.097,
+      "canonical_id": "bldg_d0d24ae2b4d8",
+      "feature_id": "feature:building_footprint:way/477599554",
+      "iou": 0.8727,
+      "osm_source_ref": "way/477599554",
+      "plateau_gml_id": "bldg_463fa6c4-4a10-4e28-8840-bd8493270390"
+    },
+    {
+      "area_after_m2": 150.08,
+      "area_before_m2": 84.667,
+      "area_delta_m2": 65.413,
+      "canonical_id": "bldg_0c37c6631f05",
+      "feature_id": "feature:building_footprint:way/725138346",
+      "iou": 0.5561,
+      "osm_source_ref": "way/725138346",
+      "plateau_gml_id": "bldg_662a71e2-25c9-4a87-8613-b6c6b68a3c22"
+    },
+    {
+      "area_after_m2": 194.335,
+      "area_before_m2": 256.588,
+      "area_delta_m2": -62.253,
+      "canonical_id": "bldg_fbb02997ea6f",
+      "feature_id": "feature:building_footprint:way/1507403713",
+      "iou": 0.7162,
+      "osm_source_ref": "way/1507403713",
+      "plateau_gml_id": "bldg_7b172bb4-45cd-4b01-9853-a18e1f2d1421"
+    },
+    {
+      "area_after_m2": 143.486,
+      "area_before_m2": 199.122,
+      "area_delta_m2": -55.635,
+      "canonical_id": "bldg_39d5074b57b0",
+      "feature_id": "feature:building_footprint:way/1507403689",
+      "iou": 0.7206,
+      "osm_source_ref": "way/1507403689",
+      "plateau_gml_id": "bldg_021b3a26-5fd0-4424-b23d-b43a362f6c10"
+    },
+    {
+      "area_after_m2": 79.419,
+      "area_before_m2": 130.988,
+      "area_delta_m2": -51.568,
+      "canonical_id": "bldg_f6394df614c1",
+      "feature_id": "feature:building_footprint:way/1507403558",
+      "iou": 0.6002,
+      "osm_source_ref": "way/1507403558",
+      "plateau_gml_id": "bldg_e2e91d5b-1b8c-459c-92ca-46db2cc1b7bf"
+    },
+    {
+      "area_after_m2": 148.673,
+      "area_before_m2": 104.587,
+      "area_delta_m2": 44.087,
+      "canonical_id": "bldg_5a864718d26f",
+      "feature_id": "feature:building_footprint:way/289193022",
+      "iou": 0.556,
+      "osm_source_ref": "way/289193022",
+      "plateau_gml_id": "bldg_e9744dd0-fee6-4050-a6cd-104043d1faf3"
+    }
+  ],
+  "mean_iou_rewritten": 0.7955,
+  "overlap_reports": [
+    {
+      "area_m2": 64.946,
+      "canonical_id": "bldg_028d6a788db0",
+      "overlap_fraction": 0.3401,
+      "overlap_with": "feature:building_footprint:way/725138410",
+      "plateau_gml_id": "bldg_97ed811d-e018-438a-861a-2a12a2038bdf",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 8.237,
+      "canonical_id": "bldg_0a66c052f3c7",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_875382dd-e7e4-4830-af03-7140061f02a2",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 8.802,
+      "canonical_id": "bldg_0a70066470cd",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_a81f20ec-cef0-4e96-8165-37b74accfa60",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 14.355,
+      "canonical_id": "bldg_0e3dc04c06a4",
+      "overlap_fraction": 0.6275,
+      "overlap_with": "feature:building_footprint:way/225367802",
+      "plateau_gml_id": "bldg_4095e1fa-5ea9-430a-8852-dfea0789dadc",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 19.834,
+      "canonical_id": "bldg_0ec974e0fd72",
+      "overlap_fraction": 0.71,
+      "overlap_with": "feature:building_footprint:way/225369226",
+      "plateau_gml_id": "bldg_ded7f0cc-56b4-4494-8b8e-54c6140d5669",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 55.331,
+      "canonical_id": "bldg_0ef2a4924a36",
+      "overlap_fraction": 0.82,
+      "overlap_with": "feature:building_footprint:way/225367802",
+      "plateau_gml_id": "bldg_58b69223-22a4-44c5-98ae-02cf845e9691",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 35.011,
+      "canonical_id": "bldg_0f83582f301a",
+      "overlap_fraction": 0.6627,
+      "overlap_with": "feature:building_footprint:way/225562519",
+      "plateau_gml_id": "bldg_a95ff884-8d6e-457b-8d24-d3a9024fb899",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 27.079,
+      "canonical_id": "bldg_12b1289c588c",
+      "overlap_fraction": 0.652,
+      "overlap_with": "feature:building_footprint:way/725138028",
+      "plateau_gml_id": "bldg_4d69ba67-d278-46b7-ae63-fe9f769a4459",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 20.719,
+      "canonical_id": "bldg_143a8ca53524",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_fb6aea54-f7b6-44e8-a554-78d2c835d7c5",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 159.327,
+      "canonical_id": "bldg_148be0dd40ee",
+      "overlap_fraction": 0.2652,
+      "overlap_with": "feature:building_footprint:way/225563355",
+      "plateau_gml_id": "bldg_a63f82d9-a534-4264-9899-891f4aac2e6f",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 22.538,
+      "canonical_id": "bldg_15dccee237c5",
+      "overlap_fraction": 0.7733,
+      "overlap_with": "feature:building_footprint:way/225563758",
+      "plateau_gml_id": "bldg_bb9de0fe-fe1b-48ff-ab20-34a11cfa1045",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 268.54,
+      "canonical_id": "bldg_1a51c41165b0",
+      "overlap_fraction": 0.2113,
+      "overlap_with": "feature:building_footprint:way/1507398033",
+      "plateau_gml_id": "bldg_c1a1424a-66f4-4edf-867b-d94c433d14e5",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 33.523,
+      "canonical_id": "bldg_1e7f78015963",
+      "overlap_fraction": 0.5467,
+      "overlap_with": "feature:building_footprint:way/225369231",
+      "plateau_gml_id": "bldg_f416ca61-6d76-4142-bfb6-5e0b0b6d1266",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 84.307,
+      "canonical_id": "bldg_20253f0dc764",
+      "overlap_fraction": 0.4795,
+      "overlap_with": "feature:building_footprint:way/225369225",
+      "plateau_gml_id": "bldg_a0c4200f-d08d-4a90-8d5c-f7dc89cd50dc",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 39.856,
+      "canonical_id": "bldg_23dd2d13f928",
+      "overlap_fraction": 0.2474,
+      "overlap_with": "feature:building_footprint:way/725137923",
+      "plateau_gml_id": "bldg_a1747c7c-338d-4183-a966-ec9d3eca174d",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 73.279,
+      "canonical_id": "bldg_24355ee4cb8e",
+      "overlap_fraction": 0.3522,
+      "overlap_with": "feature:building_footprint:way/725138014",
+      "plateau_gml_id": "bldg_9b3ccb1a-2978-4a3d-8a6b-ca672c72f732",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 46.334,
+      "canonical_id": "bldg_267c1635d0dd",
+      "overlap_fraction": 0.67,
+      "overlap_with": "feature:building_footprint:way/725138234",
+      "plateau_gml_id": "bldg_ef903782-79fa-441b-8042-84f3bd9bd11b",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 9.999,
+      "canonical_id": "bldg_27545863b7cf",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_89a8e6bd-609a-46ca-8bcc-93312184f653",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 60.255,
+      "canonical_id": "bldg_2d9650ebc8e8",
+      "overlap_fraction": 0.61,
+      "overlap_with": "feature:building_footprint:way/725138494",
+      "plateau_gml_id": "bldg_f96fd914-af8c-48d2-bf85-019cacc6c3bc",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 12.071,
+      "canonical_id": "bldg_31bf806623da",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_949e75bb-2276-45d5-86f6-8273c9b13594",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 36.262,
+      "canonical_id": "bldg_331e57b00aa2",
+      "overlap_fraction": 0.9399,
+      "overlap_with": "feature:building_footprint:way/225367798",
+      "plateau_gml_id": "bldg_f1b8ff6f-42e1-4ced-b9b5-cf2b3ccdf65d",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 28.556,
+      "canonical_id": "bldg_345e14a3d513",
+      "overlap_fraction": 0.2322,
+      "overlap_with": "feature:building_footprint:way/477599554",
+      "plateau_gml_id": "bldg_e3d05591-b480-4b73-9ba9-b2c6fcd83d9c",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 13.298,
+      "canonical_id": "bldg_346b458e642e",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_bfe2b1cb-c135-41e7-8ffc-6df5ebbab30d",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 28.944,
+      "canonical_id": "bldg_381926e4afff",
+      "overlap_fraction": 0.6429,
+      "overlap_with": "feature:building_footprint:way/725138021",
+      "plateau_gml_id": "bldg_667d9ce6-e52c-4bd1-bfab-84e6073825f7",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 194.611,
+      "canonical_id": "bldg_3ec530cf172a",
+      "overlap_fraction": 0.4862,
+      "overlap_with": "feature:building_footprint:way/225367798",
+      "plateau_gml_id": "bldg_23ff3d75-63ca-44e5-8296-0cc29c0f1d71",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 52.48,
+      "canonical_id": "bldg_42beb33bc130",
+      "overlap_fraction": 0.2195,
+      "overlap_with": "feature:building_footprint:way/725138494",
+      "plateau_gml_id": "bldg_c54d9bb2-386f-42a6-8a13-f0b090dbcc6a",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 6.255,
+      "canonical_id": "bldg_463e6778fc30",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_c1c5593e-b9f2-402a-beac-52dc499488af",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 75.756,
+      "canonical_id": "bldg_475480a1e9ff",
+      "overlap_fraction": 0.1812,
+      "overlap_with": "feature:building_footprint:way/725138234",
+      "plateau_gml_id": "bldg_52e977bd-e5c0-4fd8-9535-0350b5e5d430",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 47.249,
+      "canonical_id": "bldg_49b6a83ef467",
+      "overlap_fraction": 0.6549,
+      "overlap_with": "feature:building_footprint:way/725138492",
+      "plateau_gml_id": "bldg_a7c07bc3-e00c-483b-bace-63e9bedf9ff3",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 226.723,
+      "canonical_id": "bldg_49f38ba800aa",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_b3153710-a4fa-4a81-865d-f5f3cbc4a334",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 32.663,
+      "canonical_id": "bldg_4d56c3b82e75",
+      "overlap_fraction": 0.1959,
+      "overlap_with": "feature:building_footprint:way/725138027",
+      "plateau_gml_id": "bldg_645d861f-5211-49d5-8bda-82e714c5e955",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 42.052,
+      "canonical_id": "bldg_51f368ba4508",
+      "overlap_fraction": 0.7588,
+      "overlap_with": "feature:building_footprint:way/725137923",
+      "plateau_gml_id": "bldg_393a783a-2eac-4c20-a604-700a7060b501",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 37.072,
+      "canonical_id": "bldg_52fa99cfada0",
+      "overlap_fraction": 0.6793,
+      "overlap_with": "feature:building_footprint:way/225197886",
+      "plateau_gml_id": "bldg_9b454fb5-f83d-4c78-86af-e595192930bf",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 94.636,
+      "canonical_id": "bldg_53e00f85c57a",
+      "overlap_fraction": 0.4515,
+      "overlap_with": "feature:building_footprint:way/1507403753",
+      "plateau_gml_id": "bldg_ea56d0a7-c51b-466f-a4c4-b07f1e491df4",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 38.723,
+      "canonical_id": "bldg_5a7e902be936",
+      "overlap_fraction": 0.6769,
+      "overlap_with": "feature:building_footprint:way/725138130",
+      "plateau_gml_id": "bldg_fdf685c4-fb95-4b59-8e05-946bd0ca2724",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 22.031,
+      "canonical_id": "bldg_5f76a6486e56",
+      "overlap_fraction": 0.6755,
+      "overlap_with": "feature:building_footprint:way/225562523",
+      "plateau_gml_id": "bldg_483a174f-cee9-4296-b99d-b51cc3ba3719",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 43.038,
+      "canonical_id": "bldg_60dd0f397b55",
+      "overlap_fraction": 0.7389,
+      "overlap_with": "feature:building_footprint:way/225367804",
+      "plateau_gml_id": "bldg_0007203c-3847-4093-a7f4-1e1b456238f4",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 48.996,
+      "canonical_id": "bldg_65ba3aeca355",
+      "overlap_fraction": 0.3885,
+      "overlap_with": "feature:building_footprint:way/725138061",
+      "plateau_gml_id": "bldg_94920973-0346-455c-af47-ba1cf62a473c",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 35.998,
+      "canonical_id": "bldg_6a04f9f7fa57",
+      "overlap_fraction": 0.3378,
+      "overlap_with": "feature:building_footprint:way/725137923",
+      "plateau_gml_id": "bldg_4486fa03-be55-47d5-82e0-467ffb9254d8",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 4.403,
+      "canonical_id": "bldg_6ece7057ea3b",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_06e846af-b07e-4246-a9ed-3a018742a55a",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 39.804,
+      "canonical_id": "bldg_6f83ad2eb9dc",
+      "overlap_fraction": 0.6506,
+      "overlap_with": "feature:building_footprint:way/225369223",
+      "plateau_gml_id": "bldg_298bf71d-773a-4ee7-939c-6365ea3d5e10",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 23.791,
+      "canonical_id": "bldg_74ca245cdc6c",
+      "overlap_fraction": 0.835,
+      "overlap_with": "feature:building_footprint:way/725138146",
+      "plateau_gml_id": "bldg_439dc690-790b-4c30-8b9f-db31a5c9b97e",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 3.469,
+      "canonical_id": "bldg_79a356f163b0",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_bd94319e-0797-47ba-8f30-b7c7a6d4b0bf",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 14.208,
+      "canonical_id": "bldg_7a1907007c54",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_96458c93-ccc4-485d-97ac-405de37ad41f",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 46.074,
+      "canonical_id": "bldg_7d74eeb4c601",
+      "overlap_fraction": 0.7101,
+      "overlap_with": "feature:building_footprint:way/725138316",
+      "plateau_gml_id": "bldg_e3c99125-f1b0-4ec3-9e82-3f041c889367",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 84.71,
+      "canonical_id": "bldg_802beb393618",
+      "overlap_fraction": 0.3458,
+      "overlap_with": "feature:building_footprint:way/725138050",
+      "plateau_gml_id": "bldg_d0df38e9-d796-4a4f-bf88-6c4ffefd8020",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 70.866,
+      "canonical_id": "bldg_8358d75cbc83",
+      "overlap_fraction": 0.5226,
+      "overlap_with": "feature:building_footprint:way/225369235",
+      "plateau_gml_id": "bldg_641e8472-256f-46ed-9157-7cd0c2a256f5",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 46.309,
+      "canonical_id": "bldg_85dccdee8b9a",
+      "overlap_fraction": 0.8273,
+      "overlap_with": "feature:building_footprint:way/225562531",
+      "plateau_gml_id": "bldg_91497648-50a7-4975-ac43-813d08a755b6",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 75.552,
+      "canonical_id": "bldg_870fb04ad721",
+      "overlap_fraction": 0.6069,
+      "overlap_with": "feature:building_footprint:way/725138195",
+      "plateau_gml_id": "bldg_424f1011-cf17-4ca0-b704-636f8e1dca29",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 117.33,
+      "canonical_id": "bldg_87c0c46c9de5",
+      "overlap_fraction": 0.3866,
+      "overlap_with": "feature:building_footprint:way/225197888",
+      "plateau_gml_id": "bldg_be572aea-e516-4693-b9ef-26f1b4a37355",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 25.893,
+      "canonical_id": "bldg_88670b2d80aa",
+      "overlap_fraction": 0.9811,
+      "overlap_with": "feature:building_footprint:way/225367802",
+      "plateau_gml_id": "bldg_e155fe15-bf5b-44b3-ab5b-371fa45598fd",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 62.884,
+      "canonical_id": "bldg_8c8f91e1f4aa",
+      "overlap_fraction": 0.6255,
+      "overlap_with": "feature:building_footprint:way/725138195",
+      "plateau_gml_id": "bldg_89db7bbd-2c5d-42c2-87cf-ffb46e4929bb",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 174.744,
+      "canonical_id": "bldg_8cda0b9bca3a",
+      "overlap_fraction": 0.4672,
+      "overlap_with": "feature:building_footprint:way/1507403766",
+      "plateau_gml_id": "bldg_5603a503-35d4-4de2-989b-fcf160b0d65c",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 26.141,
+      "canonical_id": "bldg_8f3c5d96c0d1",
+      "overlap_fraction": 0.131,
+      "overlap_with": "feature:building_footprint:way/1507403558",
+      "plateau_gml_id": "bldg_79fe2af6-0428-47c7-8c83-7e097e18953b",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 83.703,
+      "canonical_id": "bldg_93901917fd92",
+      "overlap_fraction": 0.3605,
+      "overlap_with": "feature:building_footprint:way/1507403759",
+      "plateau_gml_id": "bldg_e319900d-33ad-45bd-9afc-93b5625ec3cf",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 42.448,
+      "canonical_id": "bldg_969f55bb356b",
+      "overlap_fraction": 0.9606,
+      "overlap_with": "feature:building_footprint:way/725138329",
+      "plateau_gml_id": "bldg_12b420b1-0946-4167-a6b7-b1ce9ea011e0",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 9.038,
+      "canonical_id": "bldg_9be53b3cf248",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_6a81306e-be59-4dcb-9d43-b1743f79b8f1",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 20.399,
+      "canonical_id": "bldg_9cb702da7cd7",
+      "overlap_fraction": 0.5112,
+      "overlap_with": "feature:building_footprint:way/225369234",
+      "plateau_gml_id": "bldg_a766efc8-c5d8-4577-a1c9-2a51961e4d02",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 114.676,
+      "canonical_id": "bldg_9d5163930269",
+      "overlap_fraction": 0.4238,
+      "overlap_with": "feature:building_footprint:way/725138617",
+      "plateau_gml_id": "bldg_baf8d146-f4df-4399-98b6-bc4a6fb9c36d",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 39.105,
+      "canonical_id": "bldg_9efb077dbed1",
+      "overlap_fraction": 0.8509,
+      "overlap_with": "feature:building_footprint:way/725137902",
+      "plateau_gml_id": "bldg_52d57082-6e50-440f-b688-b27ea023c379",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 7.738,
+      "canonical_id": "bldg_a29e5d332a07",
+      "overlap_fraction": 0.62,
+      "overlap_with": "feature:building_footprint:way/225369238",
+      "plateau_gml_id": "bldg_ed85b356-b23d-4883-8631-ce60935b925d",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 35.039,
+      "canonical_id": "bldg_a3806a21b4aa",
+      "overlap_fraction": 0.182,
+      "overlap_with": "feature:building_footprint:way/725138356",
+      "plateau_gml_id": "bldg_3418e4e7-2077-477a-add0-9fae6db95fa6",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 17.423,
+      "canonical_id": "bldg_a3fd1cd8b339",
+      "overlap_fraction": 0.7917,
+      "overlap_with": "feature:building_footprint:way/225563756",
+      "plateau_gml_id": "bldg_b0f70781-e607-4f02-80a9-f84163e98636",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 12.911,
+      "canonical_id": "bldg_ac2641c145f1",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_0df6008c-fa99-458a-aaef-b704cdff6888",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 45.736,
+      "canonical_id": "bldg_b3366cf6fcfd",
+      "overlap_fraction": 0.5073,
+      "overlap_with": "feature:building_footprint:way/289194875",
+      "plateau_gml_id": "bldg_617718f1-87c7-409e-8b9c-c620699e3cc7",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 49.729,
+      "canonical_id": "bldg_c091080b3a19",
+      "overlap_fraction": 0.5387,
+      "overlap_with": "feature:building_footprint:way/725138234",
+      "plateau_gml_id": "bldg_a63ef2d6-e84b-417b-a759-b7c280ff949f",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 41.621,
+      "canonical_id": "bldg_c2ecf7f55c61",
+      "overlap_fraction": 0.5016,
+      "overlap_with": "feature:building_footprint:way/725138126",
+      "plateau_gml_id": "bldg_cd1f9212-412e-4224-a253-15a88c5a3f4b",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 41.408,
+      "canonical_id": "bldg_c419f27903b5",
+      "overlap_fraction": 0.5516,
+      "overlap_with": "feature:building_footprint:way/725138024",
+      "plateau_gml_id": "bldg_cc85d8f6-e7b2-4220-b611-5c188c652dbf",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 57.801,
+      "canonical_id": "bldg_c848ba2618c3",
+      "overlap_fraction": 0.6165,
+      "overlap_with": "feature:building_footprint:way/725138316",
+      "plateau_gml_id": "bldg_c993f73e-32fb-4041-9a4c-cc44ced9a393",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 57.497,
+      "canonical_id": "bldg_cec0bc2884dd",
+      "overlap_fraction": 0.8593,
+      "overlap_with": "feature:building_footprint:way/725138234",
+      "plateau_gml_id": "bldg_72eb85f8-71d9-431c-a232-07c8011d25b4",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 31.886,
+      "canonical_id": "bldg_d48f9ca7a714",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_f62fdb5d-83e5-43c6-aae2-809e79e0298f",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 46.948,
+      "canonical_id": "bldg_d8ad24a42d93",
+      "overlap_fraction": 0.6552,
+      "overlap_with": "feature:building_footprint:way/225369232",
+      "plateau_gml_id": "bldg_503fa48a-dc05-49f4-b1b0-5a9f89d62040",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 240.968,
+      "canonical_id": "bldg_db8c9bddd96b",
+      "overlap_fraction": 0.4536,
+      "overlap_with": "feature:building_footprint:way/477645438",
+      "plateau_gml_id": "bldg_ce6b8692-77f7-47ab-9eef-d2e2c8d88866",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 44.534,
+      "canonical_id": "bldg_e0e97f8b5b8c",
+      "overlap_fraction": 0.5634,
+      "overlap_with": "feature:building_footprint:way/225562527",
+      "plateau_gml_id": "bldg_5b83e524-ba35-480a-9d08-bb3fd0e929c7",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 26.975,
+      "canonical_id": "bldg_e2d53e463051",
+      "overlap_fraction": 0.3527,
+      "overlap_with": "feature:building_footprint:way/725137902",
+      "plateau_gml_id": "bldg_be7bf52a-a218-4cf5-8c50-1d5feef5a7d1",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 54.691,
+      "canonical_id": "bldg_e7c5747310ed",
+      "overlap_fraction": 0.9845,
+      "overlap_with": "feature:building_footprint:way/725138234",
+      "plateau_gml_id": "bldg_aaad36ff-1c9e-4fe5-99dc-eea9ee4f1bf4",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 36.58,
+      "canonical_id": "bldg_ea081d9c2c52",
+      "overlap_fraction": 1.0,
+      "overlap_with": "feature:building_footprint:way/225369239",
+      "plateau_gml_id": "bldg_d70f9651-6337-4f53-a34c-2a2c99ffdf8f",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 55.43,
+      "canonical_id": "bldg_ebe6e50f4d1f",
+      "overlap_fraction": 0.5627,
+      "overlap_with": "feature:building_footprint:way/725138384",
+      "plateau_gml_id": "bldg_40437b13-338b-4b18-ae32-023ed4234b7b",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 123.698,
+      "canonical_id": "bldg_ec0b7257cac4",
+      "overlap_fraction": 0.3378,
+      "overlap_with": "feature:building_footprint:way/225563361",
+      "plateau_gml_id": "bldg_3e7164e9-2425-4fbe-98a7-b69ce0b4f386",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 388.175,
+      "canonical_id": "bldg_ecc749dad324",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_65fc97db-a31a-44a8-a374-12ebaf7d4d73",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 55.408,
+      "canonical_id": "bldg_ee14368e042f",
+      "overlap_fraction": 0.7812,
+      "overlap_with": "feature:building_footprint:way/725138234",
+      "plateau_gml_id": "bldg_45c9a5c9-fc75-4406-9f45-d24f66537d75",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 41.785,
+      "canonical_id": "bldg_ee1bbf2c2eba",
+      "overlap_fraction": 0.7376,
+      "overlap_with": "feature:building_footprint:way/725138061",
+      "plateau_gml_id": "bldg_7655091f-d44a-4c21-8d86-be153a8ea66b",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 21.449,
+      "canonical_id": "bldg_ef8be8444e4f",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_43c4d01f-f9f0-48ec-92f7-7a0cc1811896",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 7.838,
+      "canonical_id": "bldg_f4b19348f574",
+      "overlap_fraction": 0.4627,
+      "overlap_with": "feature:building_footprint:way/725138523",
+      "plateau_gml_id": "bldg_92302ba9-0029-4eda-abd5-bfd5f1693d0d",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 11.861,
+      "canonical_id": "bldg_f4da671130b5",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_db6fb7ef-a3bf-43a4-bb50-54b6b6aea291",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 36.858,
+      "canonical_id": "bldg_f6421557275f",
+      "overlap_fraction": 0.7953,
+      "overlap_with": "feature:building_footprint:way/725138146",
+      "plateau_gml_id": "bldg_5ae35ee6-0a3e-4b0d-8575-46ceda853085",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 87.335,
+      "canonical_id": "bldg_fa1cbfea3ed5",
+      "overlap_fraction": 0.6052,
+      "overlap_with": "feature:building_footprint:way/725138517",
+      "plateau_gml_id": "bldg_6022ec92-58fb-4747-a546-5b0b52c13d5f",
+      "reason": "overlap"
+    },
+    {
+      "area_m2": 12.548,
+      "canonical_id": "bldg_fe259683c680",
+      "plateau_class_code": "3003",
+      "plateau_gml_id": "bldg_5fcfad60-df8f-466e-8be4-e79132d346da",
+      "reason": "wall_less_structure"
+    },
+    {
+      "area_m2": 75.561,
+      "canonical_id": "bldg_ff37f172aff2",
+      "overlap_fraction": 0.4385,
+      "overlap_with": "feature:building_footprint:way/725138595",
+      "plateau_gml_id": "bldg_9ef34907-671d-4d37-ad48-25ba7f091856",
+      "reason": "overlap"
+    }
+  ],
+  "schema": "y92.canonical_footprints.v1",
+  "subdivision_reports": [
+    {
+      "canonical_id": "bldg_0efea97c9cd6",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/725137944",
+        "fraction": 0.5966,
+        "intersection_m2": 31.302,
+        "other_area_m2": 52.467
+      },
+      "osm_area_m2": 206.114,
+      "osm_source_ref": "way/725137960",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 311.313,
+      "plateau_gml_id": "bldg_978eed40-498c-4aea-8670-6c5ace01a479",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_13c6e46d4230",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/1507403772",
+        "fraction": 0.9342,
+        "intersection_m2": 149.085,
+        "other_area_m2": 159.593
+      },
+      "osm_area_m2": 405.187,
+      "osm_source_ref": "way/1507403771",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 502.763,
+      "plateau_gml_id": "bldg_37daabdd-80a3-4802-b51f-1ce839947683",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_2c68b0c3f1de",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/225197883",
+        "fraction": 0.4267,
+        "intersection_m2": 15.288,
+        "other_area_m2": 35.827
+      },
+      "osm_area_m2": 49.003,
+      "osm_source_ref": "way/225197887",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 57.126,
+      "plateau_gml_id": "bldg_51ee6856-ba05-4410-a8e8-31e491e9e986",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_401f49f73e49",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/1507403754",
+        "fraction": 0.9541,
+        "intersection_m2": 99.558,
+        "other_area_m2": 104.35
+      },
+      "osm_area_m2": 168.042,
+      "osm_source_ref": "way/1507403752",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 274.884,
+      "plateau_gml_id": "bldg_55d8b55e-298e-4666-bfa7-43e10a31875f",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_46a75365f1ec",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/1507403648",
+        "fraction": 0.8124,
+        "intersection_m2": 40.863,
+        "other_area_m2": 50.302
+      },
+      "osm_area_m2": 165.54,
+      "osm_source_ref": "way/1507403649",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 198.02,
+      "plateau_gml_id": "bldg_ece1e4e6-048f-4776-b6de-b20370eb233d",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_4f9dbbfeef80",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/725138062",
+        "fraction": 0.592,
+        "intersection_m2": 15.18,
+        "other_area_m2": 25.641
+      },
+      "osm_area_m2": 51.694,
+      "osm_source_ref": "way/725138067",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 75.697,
+      "plateau_gml_id": "bldg_0f283bb1-75e4-433d-b55c-e5ea0a9feb05",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_7971cd62b62a",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/225369236",
+        "fraction": 0.2026,
+        "intersection_m2": 8.967,
+        "other_area_m2": 44.258
+      },
+      "osm_area_m2": 107.189,
+      "osm_source_ref": "way/225369233",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 110.53,
+      "plateau_gml_id": "bldg_befad126-9b3e-4129-876a-b5d1affdda62",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_c3fc5c8f8195",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/1507403716",
+        "fraction": 0.9171,
+        "intersection_m2": 22.06,
+        "other_area_m2": 24.054
+      },
+      "osm_area_m2": 47.088,
+      "osm_source_ref": "way/1507403715",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 74.81,
+      "plateau_gml_id": "bldg_ee68bf8d-fc7a-401b-8054-3650f2814398",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_cd951345f356",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/225563758",
+        "fraction": 0.1697,
+        "intersection_m2": 5.522,
+        "other_area_m2": 32.544
+      },
+      "osm_area_m2": 53.012,
+      "osm_source_ref": "way/225563757",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 48.263,
+      "plateau_gml_id": "bldg_2beb6b27-1cb5-452f-9f26-d020f23f227c",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    },
+    {
+      "canonical_id": "bldg_e06b0f537a37",
+      "covers_neighbour": {
+        "feature_id": "feature:building_footprint:way/225369226",
+        "fraction": 0.1366,
+        "intersection_m2": 3.528,
+        "other_area_m2": 25.821
+      },
+      "osm_area_m2": 51.366,
+      "osm_source_ref": "way/225369237",
+      "overlap_fraction_threshold": 0.1,
+      "plateau_area_m2": 43.544,
+      "plateau_gml_id": "bldg_6b7b9119-a0ed-4f99-975f-87181997fa37",
+      "reason": "subdivision_disagreement",
+      "resolution": "unresolved"
+    }
+  ],
+  "swallow_reports": [
+    {
+      "canonical_id": "bldg_12ef13cb6d66",
+      "osm_area_m2": 408.572,
+      "osm_source_ref": "way/225369230",
+      "plateau_area_m2": 383.117,
+      "plateau_gml_id": "bldg_5d7cf351-2e58-405c-8840-3b9e7ce85e6d",
+      "reason": "swallows_observation",
+      "swallowed": [
+        {
+          "E": 379791.271,
+          "N": 3938489.761,
+          "feature_id": "feature:mapillary_object/937890660336622",
+          "semantic_class": "fixture"
+        }
+      ]
+    },
+    {
+      "canonical_id": "bldg_1c00fd7c6792",
+      "osm_area_m2": 65.397,
+      "osm_source_ref": "way/225367800",
+      "plateau_area_m2": 54.491,
+      "plateau_gml_id": "bldg_d78fbf62-fcbc-4f8b-81c4-67070718013f",
+      "reason": "swallows_observation",
+      "swallowed": [
+        {
+          "E": 379817.224,
+          "N": 3938532.676,
+          "feature_id": "feature:mapillary_object/981421452617315",
+          "semantic_class": "sign"
+        },
+        {
+          "E": 379817.215,
+          "N": 3938532.011,
+          "feature_id": "feature:mapillary_object/981538985938895",
+          "semantic_class": "sign"
+        }
+      ]
+    },
+    {
+      "canonical_id": "bldg_59a9c54fcc2d",
+      "osm_area_m2": 251.442,
+      "osm_source_ref": "way/225367852",
+      "plateau_area_m2": 225.753,
+      "plateau_gml_id": "bldg_26c8afd4-efee-440a-8b71-6e5d196434aa",
+      "reason": "swallows_observation",
+      "swallowed": [
+        {
+          "E": 379841.285,
+          "N": 3938502.399,
+          "feature_id": "feature:mapillary_object/1168798480653845",
+          "semantic_class": "fixture"
+        }
+      ]
+    },
+    {
+      "canonical_id": "bldg_717c413a3c98",
+      "osm_area_m2": 68.331,
+      "osm_source_ref": "way/225367803",
+      "plateau_area_m2": 60.767,
+      "plateau_gml_id": "bldg_0363ffa5-7ac1-4d4b-ad97-7ee05a75fa42",
+      "reason": "swallows_observation",
+      "swallowed": [
+        {
+          "E": 379804.695,
+          "N": 3938544.383,
+          "feature_id": "feature:mapillary_object/498116958299373",
+          "semantic_class": "sign"
+        }
+      ]
+    },
+    {
+      "canonical_id": "bldg_978711929c45",
+      "osm_area_m2": 66.643,
+      "osm_source_ref": "way/225367807",
+      "plateau_area_m2": 100.447,
+      "plateau_gml_id": "bldg_b1322992-dd8d-4a8a-9837-adfd6e310dcf",
+      "reason": "swallows_observation",
+      "swallowed": [
+        {
+          "E": 379798.998,
+          "N": 3938525.156,
+          "feature_id": "feature:mapillary_object/937830117009343",
+          "semantic_class": "fixture"
+        }
+      ]
+    },
+    {
+      "canonical_id": "bldg_fb15ef270d46",
+      "osm_area_m2": 247.024,
+      "osm_source_ref": "way/225369224",
+      "plateau_area_m2": 220.783,
+      "plateau_gml_id": "bldg_10b9f94c-dbb9-408b-8ad1-ebaa84ee0237",
+      "reason": "swallows_observation",
+      "swallowed": [
+        {
+          "E": 379779.815,
+          "N": 3938513.878,
+          "feature_id": "feature:mapillary_object/497691318341937",
+          "semantic_class": "fixture"
+        }
+      ]
+    }
+  ],
+  "total_footprint_area_m2": {
+    "after": 56540.968,
+    "before": 54935.091
+  },
+  "validation": [],
+  "validation_findings": 0
+}

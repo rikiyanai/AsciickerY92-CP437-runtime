@@ -1,0 +1,61 @@
+{
+  "asciiid_used": false,
+  "counts": {
+    "dem_features": 1,
+    "instances": 0,
+    "minimap_markers": 29,
+    "osm_features": 811,
+    "patches": 51336,
+    "patches_x": 186,
+    "patches_y": 276
+  },
+  "inputs": {
+    "aoi": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/aoi.direct.geojson",
+    "aoi_sha256": "659c708e767f4613b95b5e32bbfdca269318022a38c8e189732a81f9bf072a55",
+    "dem_world_ir": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/dem5a.world_ir.json",
+    "dem_world_ir_sha256": "dab6e836687471d5ded86e869ec3ac90a40d2555b78044e3f6563a0fa814d228",
+    "osm_world_ir": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/osm.world_ir.json",
+    "osm_world_ir_sha256": "db7a080aeb0f3363db6c7f786a3b27331ca429788dfe574f491a9180f39cb88f",
+    "palette_map": "/Users/r/Downloads/asciicker-Y9-2/assets/a3d/game_map_y8.a3d",
+    "palette_map_sha256": "fed5a4098ef8e64669b482e902de4132442589b532072a1bcdfc499920db66e4"
+  },
+  "legacy_sbu_runner_used": false,
+  "output": {
+    "map": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/classic_base.a3d",
+    "map_sha256": "e830ee1379b9e4ac9227b5893d40fcc3f39f857c542671ed73e3a00c2a9e6698"
+  },
+  "projection": {
+    "content_scale": 3.421334928531115,
+    "offset_x": 32.0,
+    "offset_y": 32.0,
+    "origin_easting": 379699.09478405997,
+    "origin_northing": 3938417.876643479,
+    "projection_kind": "epsg32654_affine",
+    "schema": "y92.classic_base_projection.v1",
+    "terrain_bounds": {
+      "max_x": 1488.0,
+      "max_y": 2208.0,
+      "min_x": 0,
+      "min_y": 0
+    }
+  },
+  "runtime_launched": false,
+  "schema": "y92.classic_base_compile.v1",
+  "spawn": {
+    "source": "home_start",
+    "x": 1191.3476602027645,
+    "y": 1039.3439180774467,
+    "yaw": 0.0
+  },
+  "stage": "base_only_not_launchable",
+  "station": {
+    "label": "沼部駅 / Numabe Station",
+    "x": 288.5381197256369,
+    "y": 288.60095532019767
+  },
+  "target_runtime": "original_cpp_classic",
+  "world_extent": {
+    "height": 2208.0,
+    "width": 1488.0
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "asciicker.launcher-products.v1",
+  "native_modes": {
+    "fl4512_unicode_euclidean": {
+      "game_mode": "fl4512_unicode_euclidean",
+      "world_geometry": "euclidean",
+      "renderer": "fl4512_unicode",
+      "binary": "game",
+      "make_target": "game-fl4512",
+      "label": "FL-4512 Unicode / Euclidean",
+      "action": "game-fl4512-unicode-euclidean",
+      "glyph_program_path": "assets/glyphs/generated/fl4683.glyph_program.v1.bin",
+      "classic_baseline_path": null,
+      "fl4512_runtime_owner_count": 1,
+      "default_map": "assets/a3d/game_map_y8.a3d"
+    },
+    "classic_euclidean": {
+      "game_mode": "classic_euclidean",
+      "world_geometry": "euclidean",
+      "renderer": "classic_cp437",
+      "binary": "game_classic",
+      "make_target": "game-classic",
+      "label": "Classic CP437 / Euclidean",
+      "action": "game-classic-euclidean",
+      "glyph_program_path": null,
+      "classic_baseline_path": "assets/glyphs/fixtures/legacy_cp437_baseline.json",
+      "fl4512_runtime_owner_count": 0,
+      "default_map": "assets/a3d/game_map_y8.a3d"
+    },
+    "spherical_classic": {
+      "game_mode": "spherical_classic",
+      "world_geometry": "spherical",
+      "renderer": "classic_cp437",
+      "binary": "game_classic",
+      "make_target": "game-classic",
+      "label": "Spherical Geometry / Classic Renderer",
+      "action": "game-spherical-classic",
+      "glyph_program_path": null,
+      "classic_baseline_path": "assets/glyphs/fixtures/legacy_cp437_baseline.json",
+      "fl4512_runtime_owner_count": 0,
+      "default_map": "assets/a3d/game_map_y8_s3_local.a3d"
+    }
+  },
+  "products": {
+    "classic_game": {
+      "label": "Game (Classic CP437 default)",
+      "kind": "binary",
+      "binary": "game_classic",
+      "make_target": "game-classic",
+      "launch_action": "game-classic-euclidean"
+    },
+    "fl4512_game": {
+      "label": "Game (FL-4512 Unicode)",
+      "kind": "binary",
+      "binary": "game",
+      "make_target": "game-fl4512",
+      "launch_action": "game-fl4512-unicode-euclidean"
+    },
+    "fl4512_presenter": {
+      "label": "ASCIID FL4512 Presenter",
+      "kind": "binary",
+      "binary": "asciicker-presenter",
+      "make_target": "editor-native",
+      "launch_action": "map-asciicker-presenter-native"
+    },
+    "classic_editor": {
+      "label": "ASCIIID Classic",
+      "kind": "binary",
+      "binary": "asciiid-classic",
+      "make_target": "editor-classic",
+      "launch_action": "map-asciiid-classic"
+    },
+    "terminal": {
+      "label": "Terminal FL-4512 runtime",
+      "kind": "binary",
+      "binary": "game_term",
+      "make_target": "terminal",
+      "launch_action": null
+    },
+    "godot": {
+      "label": "Godot 4 authoritative client",
+      "kind": "godot",
+      "project_path": "godot_project/project.godot",
+      "launch_script": "scripts/launch_fl4359_manual_play.py",
+      "colyseus_path": "colyseus_server",
+      "colyseus_manifest": "package.json",
+      "colyseus_runtime_module": "node_modules/tsx",
+      "required_commands": ["node"],
+      "launch_action": "game-godot",
+      "version_policy": "godot",
+      "launch_strategy": "macos_app_else_binary",
+      "default_binary": "/opt/homebrew/bin/godot",
+      "default_app": "/Applications/Godot.app"
+    }
+  }
+}

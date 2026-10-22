@@ -1,0 +1,128 @@
+{
+  "schema": "y92.hero_source_coverage_review.v1",
+  "reviewed_utc": "2026-09-14T02:25Z",
+  "licence_basis": {
+    "mapillary_imagery": "CC-BY-SA-4.0",
+    "source_uri": "https://help.mapillary.com/hc/en-us/articles/115001770409-CC-BY-SA-license-for-open-data",
+    "attribution_required": true
+  },
+  "inputs": {
+    "home_probe_spec": {
+      "path": "hero_home_imagery_probe.spec.json",
+      "sha256": "52fc83900f4aeced1fd862303ffafb9262663709c30c771dd81f5f1c10c2eeb8"
+    },
+    "home_probe_survey": {
+      "path": "hero_home_imagery_probe.survey.json",
+      "sha256": "7eca05e593163f6d603935453ef216087704e2faa0adfe8c5bd20535ec5512ac"
+    },
+    "mid_probe_spec": {
+      "path": "hero_mid_imagery_probe.spec.json",
+      "sha256": "1d85a262d9fd3790759123d403b47e3cee5e7e7bb9dda86f588095f404db2f25"
+    },
+    "mid_probe_survey": {
+      "path": "hero_mid_imagery_probe.survey.json",
+      "sha256": "2445c0efc15d1423afc1037575c784f95376898ddd34594878b7a0e024dfc949"
+    },
+    "retained_capture_index": "mapillary_capture_source_index.json",
+    "osm_extract": "numabe_home_to_station_sakurazaka_aoi.osm"
+  },
+  "hero_targets": [
+    {
+      "id": "home_block",
+      "target_lonlat": [
+        139.675919,
+        35.584866
+      ],
+      "route_chainage_m": 0.0,
+      "source_coverage": false,
+      "probe_result": {
+        "mapillary": {
+          "pictures_within_100m": 1,
+          "nearest_picture_m": 83.2,
+          "heading_consistent_pictures_within_80m": 0
+        },
+        "kartaview": "ABSENT_IN_SURVEYED_RADIUS",
+        "panoramax": "ABSENT_IN_SURVEYED_RADIUS",
+        "wikimedia_commons": "ABSENT_IN_SURVEYED_RADIUS"
+      },
+      "acquisition_state": "operator_capture_required",
+      "minimum_capture_handoff": {
+        "capture_count": 12,
+        "capture_spacing_m": [
+          2.0,
+          4.0
+        ],
+        "passes": [
+          "route-facing oblique pass",
+          "opposite oblique or return pass"
+        ],
+        "required_metadata": [
+          "GPS",
+          "timestamp",
+          "heading",
+          "camera make/model or calibrated intrinsics"
+        ],
+        "required_content": [
+          "home-side parent facades",
+          "ground contacts",
+          "road edges",
+          "visible signs and street furniture"
+        ]
+      },
+      "geometry_state": "no_accepted_camera_or_facade_geometry"
+    },
+    {
+      "id": "mid_route_landmark",
+      "target_lonlat": [
+        139.6747304840919,
+        35.58335088058806
+      ],
+      "route_chainage_m": 200.0,
+      "source_coverage": true,
+      "probe_result": {
+        "mapillary_pictures_within_100m": 247,
+        "heading_consistent_pictures_within_80m": 17,
+        "distinct_heading_consistent_viewpoints": 11,
+        "visual_review_finding": "Most heading/range candidates are railway, retaining-wall, or window-edge views and are not facade evidence. The retained admitted observation visibly contains multiple residential facade regions."
+      },
+      "admitted_source_observations": [
+        {
+          "capture_id": "mapillary_320855056383055",
+          "local_path": "captures/mapillary/mapillary_320855056383055.jpg",
+          "sha256": "2c622671b461501313491667b097d2fa8ad49fa544569771b7ae9ada1ca87463",
+          "license": "CC-BY-SA-4.0",
+          "attribution": "morita / Mapillary, CC BY-SA 4.0",
+          "camera_lonlat": [
+            139.6746474,
+            35.5831898
+          ],
+          "heading_deg": 0.0,
+          "projection_model": "perspective",
+          "source_dimensions_px": [
+            4608,
+            3456
+          ],
+          "retained_dimensions_px": [
+            1024,
+            768
+          ],
+          "route_chainage_m": 218.56,
+          "route_lateral_m": 5.765
+        }
+      ],
+      "parent_building_candidates": [
+        "way/1507403695",
+        "way/1507403696",
+        "way/1507403698"
+      ],
+      "parent_correspondence_state": "unresolved_pending_FL-4812_camera_registration_and_FL-4813_facade_review",
+      "reconstruction_route": "single_image_plus_OSM_footprint_ground_and_facade_priors",
+      "geometry_state": "source_observation_admitted_no_accepted_camera_or_facade_geometry"
+    }
+  ],
+  "rejected_inferences": [
+    "Heading and target range alone do not establish facade visibility.",
+    "A source-covered hero target is not a reconstructed or street-derived facade until FL-4812 and FL-4813 accept its placement and representation.",
+    "The absent public home corpus must not be replaced by synthesized geometry carrying source-derived provenance."
+  ]
+}

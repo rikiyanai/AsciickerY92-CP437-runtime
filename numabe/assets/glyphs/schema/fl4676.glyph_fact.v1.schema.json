@@ -1,0 +1,688 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fl4676.glyph_fact.v1.schema.json",
+  "title": "FL-4676 unified offline GlyphRecord and GlyphFact artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "version",
+    "artifact_kind",
+    "artifact_identity",
+    "source_pins",
+    "loader_contract",
+    "runtime_rights",
+    "normalization_contract",
+    "relation_representation",
+    "glyph_record_contract",
+    "glyph_record_count",
+    "glyph_records",
+    "profile_count",
+    "profiles",
+    "temporal_policy_count",
+    "temporal_policies",
+    "fact_count",
+    "facts",
+    "canonical_content_sha256"
+  ],
+  "properties": {
+    "schema": { "const": "fl4676.glyph_fact.v1" },
+    "version": { "const": 1 },
+    "artifact_kind": { "const": "offline_glyph_record_and_fact_compiler_output" },
+    "artifact_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "compiler_id",
+        "compiler_script_sha256",
+        "input_set_sha256",
+        "glyph_universe_source_file_sha256",
+        "glyph_universe_declared_sha256",
+        "relation_source_content_sha256",
+        "scene_fact_schema_state"
+      ],
+      "properties": {
+        "artifact_id": { "type": "string", "pattern": "^glyphfact\\.v1\\.[0-9a-f]{16}$" },
+        "compiler_id": { "const": "scripts/compile_fl4676_glyph_facts.py" },
+        "compiler_script_sha256": { "$ref": "#/$defs/sha256" },
+        "input_set_sha256": { "$ref": "#/$defs/sha256" },
+        "glyph_universe_source_file_sha256": { "$ref": "#/$defs/sha256" },
+        "glyph_universe_declared_sha256": { "$ref": "#/$defs/sha256" },
+        "relation_source_content_sha256": { "$ref": "#/$defs/sha256" },
+        "scene_fact_schema_state": { "const": "blocked_by_fl4683" }
+      }
+    },
+    "source_pins": {
+      "type": "array",
+      "minItems": 100,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/source_pin" }
+    },
+    "loader_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fail_closed", "rejection_reason_field", "rejection_classes"],
+      "properties": {
+        "fail_closed": { "const": true },
+        "rejection_reason_field": { "const": "glyph_fact_rejection_reason" },
+        "rejection_classes": {
+          "type": "array",
+          "minItems": 16,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "artifact_sha_mismatch",
+              "schema_mismatch",
+              "source_pin_mismatch",
+              "admitted_universe_mismatch",
+              "required_attribute_missing",
+              "source_join_mismatch",
+              "unknown_fact_id",
+              "unknown_glyph_record_id",
+              "duplicate_fact_id",
+              "duplicate_glyph_record_id",
+              "relation_scope_violation",
+              "membership_overlap_without_semantics",
+              "capacity_exceeded",
+              "malformed_record",
+              "empty_subset",
+              "unnormalized_fact_weights"
+            ]
+          }
+        }
+      }
+    },
+    "runtime_rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runtime_consumption_allowed",
+        "blocked_by",
+        "future_rights_after_handshake",
+        "forbidden_authorities"
+      ],
+      "properties": {
+        "runtime_consumption_allowed": { "const": false },
+        "blocked_by": { "const": "FL-4683" },
+        "future_rights_after_handshake": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["select_fact_id_from_scene_fact", "score_compiler_emitted_costs"]
+          }
+        },
+        "forbidden_authorities": {
+          "type": "array",
+          "minItems": 7,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "derive_glyph_metadata_at_runtime",
+              "derive_relation_edges_at_runtime",
+              "invent_membership_at_runtime",
+              "synthesize_replacement_rows",
+              "substitute_missing_fact",
+              "mutate_compiled_artifact",
+              "treat_scene_fact_as_glyph_metadata"
+            ]
+          }
+        }
+      }
+    },
+    "normalization_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["weight_encoding", "required_sum_q0_16", "algorithm"],
+      "properties": {
+        "weight_encoding": { "const": "q0_16" },
+        "required_sum_q0_16": { "const": 65535 },
+        "algorithm": { "const": "descending_rank_largest_remainder.v1" }
+      }
+    },
+    "relation_representation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edge_owner", "storage", "dense_table_required", "projection_scope", "max_edges_per_fact"],
+      "properties": {
+        "edge_owner": { "const": "offline_compiler" },
+        "storage": { "const": "bounded_projection_per_fact" },
+        "dense_table_required": { "const": false },
+        "projection_scope": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": { "enum": ["unary", "relation", "structural", "temporal"] }
+        },
+        "max_edges_per_fact": { "const": 32 }
+      }
+    },
+    "glyph_record_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "id_encoding",
+        "descriptor_source_codes",
+        "profile_memberships_default",
+        "catalog_roles_default",
+        "stroke_port_graph_default",
+        "stroke_port_graph_required_for_scorer",
+        "stroke_port_graph_record_count"
+      ],
+      "properties": {
+        "schema": { "const": "fl4676.glyph_record.v1" },
+        "id_encoding": { "const": "admitted_glyph_id_u32" },
+        "descriptor_source_codes": {
+          "const": {
+            "0": "fl4512.descriptor_census.v1",
+            "1": "legacy_cp437_atlas_measurement",
+            "2": "shape_catalog_plus_atlas_measurement"
+          }
+        },
+        "profile_memberships_default": { "const": [] },
+        "catalog_roles_default": { "const": [] },
+        "stroke_port_graph_default": { "const": "absent" },
+        "stroke_port_graph_required_for_scorer": { "const": "u7.mask.v1" },
+        "stroke_port_graph_record_count": { "const": 32 }
+      }
+    },
+    "glyph_record_count": { "const": 111040 },
+    "glyph_records": {
+      "type": "array",
+      "minItems": 111040,
+      "maxItems": 111040,
+      "items": { "$ref": "#/$defs/glyph_record" }
+    },
+    "profile_count": { "type": "integer", "minimum": 1 },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/profile_record" }
+    },
+    "temporal_policy_count": { "type": "integer", "minimum": 1 },
+    "temporal_policies": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/temporal_policy" }
+    },
+    "fact_count": { "type": "integer", "minimum": 1 },
+    "facts": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/glyph_fact" }
+    },
+    "canonical_content_sha256": { "$ref": "#/$defs/sha256" }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "q0_16": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 65535
+    },
+    "source_pin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "path", "sha256"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "glyph_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "glyph_record_id",
+        "admission",
+        "text_identity",
+        "morphology",
+        "structure",
+        "connectivity",
+        "stroke_identity",
+        "mesh_admission_member",
+        "relation_descriptor_ref",
+        "record_sha256"
+      ],
+      "properties": {
+        "glyph_record_id": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+        "admission": { "$ref": "#/$defs/admission" },
+        "text_identity": { "$ref": "#/$defs/text_identity" },
+        "morphology": { "$ref": "#/$defs/morphology" },
+        "structure": { "$ref": "#/$defs/structure" },
+        "connectivity": { "$ref": "#/$defs/connectivity" },
+        "stroke_identity": { "$ref": "#/$defs/stroke_identity" },
+        "profile_memberships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "mesh_admission_member": { "type": "boolean" },
+        "relation_descriptor_ref": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source", "descriptor_sha256"],
+              "properties": {
+                "source": { "const": "fl4512.glyph_transform_relation.v2" },
+                "descriptor_sha256": { "$ref": "#/$defs/sha256" }
+              }
+            }
+          ]
+        },
+        "record_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "admission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "content_pack_id",
+        "pack_index",
+        "page_index",
+        "layer_index",
+        "source_column",
+        "source_row",
+        "runtime_binding_declared"
+      ],
+      "properties": {
+        "content_pack_id": { "type": "string", "minLength": 1 },
+        "pack_index": { "type": "integer", "minimum": 0 },
+        "page_index": { "type": "integer", "minimum": 0 },
+        "layer_index": { "type": "integer", "minimum": 0 },
+        "source_column": { "type": "integer", "minimum": 0 },
+        "source_row": { "type": "integer", "minimum": 0 },
+        "runtime_binding_declared": { "type": "boolean" }
+      }
+    },
+    "text_identity": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "unicode_scalar"],
+          "properties": {
+            "kind": { "const": "unicode_scalar" },
+            "unicode_scalar": { "type": "integer", "minimum": 1, "maximum": 1114111 }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "cp437_code_unit"],
+          "properties": {
+            "kind": { "const": "cp437_code_unit" },
+            "cp437_code_unit": { "type": "integer", "minimum": 0, "maximum": 255 }
+          }
+        }
+      ]
+    },
+    "morphology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["descriptor_source", "shape6_q0_16", "shape6_norm_q0_16", "density_q0_16"],
+      "properties": {
+        "descriptor_source": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "shape6_q0_16": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": { "$ref": "#/$defs/q0_16" }
+        },
+        "shape6_norm_q0_16": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": { "$ref": "#/$defs/q0_16" }
+        },
+        "density_q0_16": { "$ref": "#/$defs/q0_16" },
+        "catalog_roles": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["beta0", "beta1", "euler_characteristic", "endpoint_count", "junction_count"],
+      "properties": {
+        "beta0": { "type": "integer", "minimum": 0 },
+        "beta1": { "type": "integer", "minimum": 0 },
+        "euler_characteristic": { "type": "integer" },
+        "endpoint_count": { "type": "integer", "minimum": 0 },
+        "junction_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "connectivity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mask8_u64_le_hex", "skeleton_u64_le_hex"],
+      "properties": {
+        "mask8_u64_le_hex": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+        "skeleton_u64_le_hex": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+        "stroke_port_graph": {
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/$defs/stroke_port_graph" }
+          ]
+        }
+      }
+    },
+    "stroke_port_graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "graph_schema",
+        "graph_valid",
+        "graph_rejection_reason",
+        "boundary_port_count",
+        "port_connectivity_count",
+        "skeleton_component_graph",
+        "boundary_ports",
+        "port_connectivity"
+      ],
+      "properties": {
+        "graph_schema": { "const": "u7.stroke_port_graph.v1" },
+        "graph_valid": { "type": "boolean" },
+        "graph_rejection_reason": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "enum": ["capacity_exceeded:boundary_ports", "capacity_exceeded:port_connectivity"] }
+          ]
+        },
+        "boundary_port_count": { "type": "integer", "minimum": 0, "maximum": 8 },
+        "port_connectivity_count": { "type": "integer", "minimum": 0, "maximum": 28 },
+        "skeleton_component_graph": { "$ref": "#/$defs/skeleton_component_graph" },
+        "boundary_ports": {
+          "type": "array",
+          "maxItems": 8,
+          "items": { "$ref": "#/$defs/boundary_port" }
+        },
+        "port_connectivity": {
+          "type": "array",
+          "maxItems": 28,
+          "items": { "$ref": "#/$defs/port_connectivity" }
+        }
+      }
+    },
+    "skeleton_component_graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["components", "holes", "junctions", "skeleton_edges"],
+      "properties": {
+        "components": { "type": "integer", "minimum": 0, "maximum": 64 },
+        "holes": { "type": "integer", "minimum": 0, "maximum": 64 },
+        "junctions": { "type": "integer", "minimum": 0, "maximum": 64 },
+        "skeleton_edges": { "type": "integer", "minimum": 0, "maximum": 256 }
+      }
+    },
+    "boundary_port": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "port_id",
+        "component_id",
+        "side_or_corner",
+        "boundary_t_q0_16",
+        "position_xy",
+        "endpoint_xy",
+        "virtual_boundary",
+        "tangent_q1_15",
+        "endpoint_or_junction_degree",
+        "terminal_kind"
+      ],
+      "properties": {
+        "port_id": { "type": "integer", "minimum": 0, "maximum": 7 },
+        "component_id": { "type": "integer", "minimum": 0, "maximum": 63 },
+        "side_or_corner": { "enum": ["N", "NE", "E", "SE", "S", "SW", "W", "NW", "interior"] },
+        "boundary_t_q0_16": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "integer", "minimum": 0, "maximum": 65535 }
+          ]
+        },
+        "position_xy": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer", "minimum": 0, "maximum": 7 }
+        },
+        "endpoint_xy": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer", "minimum": 0, "maximum": 7 }
+        },
+        "virtual_boundary": { "type": "boolean" },
+        "tangent_q1_15": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer", "minimum": -32767, "maximum": 32767 }
+        },
+        "endpoint_or_junction_degree": { "type": "integer", "minimum": 0, "maximum": 8 },
+        "terminal_kind": { "enum": ["endpoint", "junction", "boundary"] }
+      }
+    },
+    "port_connectivity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "component_id",
+        "port_a",
+        "port_b",
+        "connected",
+        "arc_length_q8_8",
+        "turn_count",
+        "curvature_class"
+      ],
+      "properties": {
+        "component_id": { "type": "integer", "minimum": 0, "maximum": 63 },
+        "port_a": { "type": "integer", "minimum": 0, "maximum": 7 },
+        "port_b": { "type": "integer", "minimum": 0, "maximum": 7 },
+        "connected": { "const": true },
+        "arc_length_q8_8": { "type": "integer", "minimum": 0, "maximum": 32767 },
+        "turn_count": { "type": "integer", "minimum": 0, "maximum": 63 },
+        "curvature_class": { "enum": ["straight", "corner", "curved"] }
+      }
+    },
+    "stroke_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mask_class", "orientation_q1_15", "catalog_stroke_class"],
+      "properties": {
+        "mask_class": {
+          "enum": ["blank", "block", "multi_component", "branching", "loop", "closed", "horizontal", "vertical", "diagonal"]
+        },
+        "orientation_q1_15": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer", "minimum": -32767, "maximum": 32767 }
+        },
+        "catalog_stroke_class": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "profile_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile_id", "source_profile_sha256", "compiled_profile_sha256", "role_weights", "runtime_profile_live", "profile_sha256"],
+      "properties": {
+        "profile_id": { "type": "string", "minLength": 1 },
+        "source_profile_sha256": { "$ref": "#/$defs/sha256" },
+        "compiled_profile_sha256": { "$ref": "#/$defs/sha256" },
+        "role_weights": {
+          "type": "array",
+          "items": { "type": "number", "minimum": 0 }
+        },
+        "runtime_profile_live": { "type": "boolean" },
+        "profile_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "temporal_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["temporal_policy_id", "source_table_sha256", "source_row", "policy_sha256"],
+      "properties": {
+        "temporal_policy_id": { "type": "string", "pattern": "^temporalpolicy://fl4676/v1/.+$" },
+        "source_table_sha256": { "$ref": "#/$defs/sha256" },
+        "source_row": { "type": "object" },
+        "policy_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "fact_member": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["glyph_record_id", "membership_weight_q0_16"],
+      "properties": {
+        "glyph_record_id": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+        "membership_weight_q0_16": { "$ref": "#/$defs/q0_16" }
+      }
+    },
+    "route_membership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis", "key", "source"],
+      "properties": {
+        "axis": { "type": "string", "minLength": 1 },
+        "key": { "type": "string", "minLength": 1 },
+        "source": { "type": "string", "minLength": 1 }
+      }
+    },
+    "relation_edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from_glyph_record_id",
+        "to_glyph_record_id",
+        "aspect",
+        "membership_weight_q0_16",
+        "relation_confidence_q0_16",
+        "compiled_transform_cost"
+      ],
+      "properties": {
+        "from_glyph_record_id": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+        "to_glyph_record_id": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+        "aspect": { "type": "integer", "minimum": 0 },
+        "membership_weight_q0_16": { "$ref": "#/$defs/q0_16" },
+        "relation_confidence_q0_16": { "$ref": "#/$defs/q0_16" },
+        "compiled_transform_cost": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "relation_projection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["projection_id", "source_table", "projection_state", "scope", "max_outgoing_edges", "edges", "projection_sha256"],
+      "properties": {
+        "projection_id": { "type": "string", "pattern": "^fl4676\\.[0-9a-f]{16}\\.relation_projection\\.v1$" },
+        "source_table": { "const": "fl4512.glyph_transform_relation.v2" },
+        "projection_state": { "enum": ["compiled", "no_admitted_relation_edges"] },
+        "scope": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": { "enum": ["unary", "relation", "structural", "temporal"] }
+        },
+        "max_outgoing_edges": { "const": 32 },
+        "edges": {
+          "type": "array",
+          "maxItems": 32,
+          "items": { "$ref": "#/$defs/relation_edge" }
+        },
+        "projection_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "glyph_fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "glyph_fact_schema",
+        "fact_id",
+        "source_profile_id",
+        "scene_membership_key",
+        "subset_weight_sum_q0_16",
+        "glyph_members",
+        "route_memberships",
+        "overlap_semantics",
+        "temporal_policy_state",
+        "temporal_policy_id",
+        "relation_projection",
+        "absence_policy",
+        "fact_sha256"
+      ],
+      "properties": {
+        "glyph_fact_schema": { "const": "fl4676.glyph_fact_record.v1" },
+        "fact_id": { "type": "string", "pattern": "^glyphfact://fl4676/v1/[0-9a-f]{16}$" },
+        "source_profile_id": { "type": "string", "minLength": 1 },
+        "scene_membership_key": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["profile_namespace", "material_key", "role", "lane_name", "route_key", "row_sha256", "scorer_id", "capacity"],
+          "properties": {
+            "profile_namespace": { "type": "string", "minLength": 1 },
+            "material_key": { "type": "integer", "minimum": 0 },
+            "role": { "type": "string", "minLength": 1 },
+            "lane_name": { "type": "string", "minLength": 1 },
+            "route_key": { "type": "string", "minLength": 1 },
+            "row_sha256": { "$ref": "#/$defs/sha256" },
+            "scorer_id": { "type": "string", "minLength": 1 },
+            "capacity": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "subset_weight_sum_q0_16": { "const": 65535 },
+        "glyph_members": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": { "$ref": "#/$defs/fact_member" }
+        },
+        "route_memberships": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "$ref": "#/$defs/route_membership" }
+        },
+        "overlap_semantics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["overlap_group_id", "weights_are_normalized", "normalization_sum_q0_16", "resolution_rule"],
+          "properties": {
+            "overlap_group_id": { "type": "string", "minLength": 1 },
+            "weights_are_normalized": { "const": true },
+            "normalization_sum_q0_16": { "const": 65535 },
+            "resolution_rule": { "const": "compiled_rank_then_scene_cost" }
+          }
+        },
+        "temporal_policy_state": {
+          "enum": ["compiled_margin", "not_applicable_to_structural_field"]
+        },
+        "temporal_policy_id": {
+          "type": ["string", "null"]
+        },
+        "relation_projection": { "$ref": "#/$defs/relation_projection" },
+        "absence_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["missing_fact_rejection_reason", "unknown_record_rejection_reason", "empty_subset_rejection_reason", "weight_rejection_reason"],
+          "properties": {
+            "missing_fact_rejection_reason": { "const": "unknown_fact_id" },
+            "unknown_record_rejection_reason": { "const": "unknown_glyph_record_id" },
+            "empty_subset_rejection_reason": { "const": "empty_subset" },
+            "weight_rejection_reason": { "const": "unnormalized_fact_weights" }
+          }
+        },
+        "fact_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    }
+  }
+}

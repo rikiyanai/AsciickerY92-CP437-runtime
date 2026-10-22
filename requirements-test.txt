@@ -2,3 +2,6 @@ fonttools>=4.0
 numpy>=1.20
 Pillow>=10.0
 pytest>=7.0
+# Numabe's station-clearance geometry imports the camera-solve package.
+opencv-python-headless>=4.8
+scipy>=1.8

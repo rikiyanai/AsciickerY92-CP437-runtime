@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- FL-4876 operator map editor, evidence tab (served by map_editor.py). Follows the /map selection over
+     BroadcastChannel 'numabe-map-editor'. Panorama markers: equirectangular x = 0.5 + (bearing - true
+     heading)/360, true heading = pano_index compass + authored heading_offset_deg. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Numabe Evidence View</title>
+<style>
+:root{--bg:#121216;--panel:#1c1c22;--ink:#e8e4da;--dim:#9a958a;--acc:#ffd166;--cam:#55d8ef;--bad:#ff6b6b}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font:12px ui-monospace,Menlo,monospace}
+main{padding:10px 16px;max-width:1100px}h2{font-size:14px;color:var(--acc);margin:8px 0}h3{font-size:12px;color:var(--cam);margin:14px 0 4px}
+.sw{display:inline-block;width:46px;height:22px;border:1px solid #555;vertical-align:middle;margin-right:4px}
+.dim{color:var(--dim)}.bad{color:var(--bad)}pre{white-space:pre-wrap;background:#0d0d10;padding:6px;border:1px solid #2a2a30;max-height:260px;overflow:auto}
+.pano{position:relative;margin:6px 0 14px}.pano img{width:100%;display:block}.pano canvas{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}
+.pano .cap{color:var(--dim);margin-bottom:2px}.photos img{max-width:48%;margin:2px;border:1px solid #444}
+#drop{border:1px dashed #555;padding:8px;margin:8px 0;color:var(--dim)}select,button{background:#2a2a33;color:var(--ink);border:1px solid #555;font:inherit}
+a{color:var(--cam)}
+</style></head><body><main id="m"><h2>Select something in the /map tab</h2><p class="dim">This tab follows the map selection. Put both tabs in Chrome split view.</p></main>
+<script>
+'use strict';
+const chan=new BroadcastChannel('numabe-map-editor'),$=id=>document.getElementById(id);let W=null,cur=null;
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const sw=(rgb,t)=>rgb?`<span class="sw" style="background:rgb(${rgb.join(',')})"></span>${t} ${rgb.join(',')}`:`<span class="dim">${t} none</span>`;
+const cen=ring=>{let e=0,n=0;ring.forEach(q=>{e+=q[0];n+=q[1]});return [e/ring.length,n/ring.length]};
+const brg=(p,q)=>(Math.atan2(q[0]-p.E,q[1]-p.N)*180/Math.PI+360)%360;
+const fx=(p,b)=>{const h=p.heading??p.compass;return ((0.5+(((b-h+540)%360)-180)/360)%1+1)%1};
+async function j(u,b){const r=await fetch(u,b?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}:{});const x=await r.json();if(!r.ok)throw new Error(x.error);return x}
+// one panorama with marker lines (and an optional shaded span) for the selected things
+function panoHTML(p,marks,why){const id='pv'+Math.random().toString(36).slice(2);
+  setTimeout(()=>{const im=document.querySelector(`#${id} img`),cv=document.querySelector(`#${id} canvas`);const go=()=>{cv.width=im.naturalWidth;cv.height=im.naturalHeight;const c=cv.getContext('2d');
+    for(const m of marks){c.strokeStyle=m.col||'#ffd166';c.fillStyle=(m.col||'#ffd166')+'33';c.lineWidth=3;
+      if(m.span){let [a,b]=m.span.map(v=>v*cv.width);if(b<a){c.fillRect(a,0,cv.width-a,cv.height);c.fillRect(0,0,b,cv.height)}else c.fillRect(a,0,b-a,cv.height)}
+      const x=m.x*cv.width;c.beginPath();c.moveTo(x,0);c.lineTo(x,cv.height);c.stroke();c.fillStyle=m.col||'#ffd166';c.font='bold 16px ui-monospace';c.fillText(m.label||'',Math.min(x+4,cv.width-140),18)}};
+    im.complete?go():im.onload=go},0);
+  return `<div class="pano" id="${id}"><div class="cap">${esc(p.id)} · ${esc((p.taken||'').slice(0,10))} · ${p.heading==null?'<span class="bad">UNALIGNED (compass only)</span>':'heading '+p.heading+'°'} · ${esc(why)}
+    · <a href="#" data-focus="${p.E},${p.N}">show on map</a></div><div style="position:relative"><img src="/img?path=${encodeURIComponent(p.img)}"><canvas></canvas></div></div>`}
+function wire(){document.querySelectorAll('[data-focus]').forEach(a=>a.onclick=e=>{e.preventDefault();const [E,N]=a.dataset.focus.split(',').map(Number);chan.postMessage({type:'focus',E,N})})}
+function nearPanos(pt,maxd,skip){return W.panoramas.filter(p=>!skip.has(p.id)).map(p=>({p,d:Math.hypot(p.E-pt[0],p.N-pt[1])})).filter(x=>x.d<maxd).sort((a,b)=>a.d-b.d)}
+async function showBuilding(id,face){const b=W.bmap[id],rec=await j('/api/building?id='+encodeURIComponent(id)),a=rec.appearance||{},inf=rec.inferred||{};
+  const c=cen(b.ring),seen=W.panoramas.filter(p=>p.seen.includes(id)),skip=new Set(seen.map(p=>p.id)),near=nearPanos(c,45,skip).slice(0,4);
+  const markFor=p=>{const xs=b.ring.map(q=>fx(p,brg(p,q))),x=fx(p,brg(p,c));let lo=Math.min(...xs),hi=Math.max(...xs);const span=hi-lo>0.5?[hi,lo]:[lo,hi];return [{x,span,label:id.split('/').pop()}]};
+  const photos=(a.operator_facade_photos||[]).map(ph=>`<div><img src="/img?path=${encodeURIComponent(ph.path)}"><div class="dim">face ${ph.face_index} (${ph.face_bearing_deg}°) · ${esc(ph.status)} · ${esc(ph.pasted_on)}</div></div>`).join('');
+  $('m').innerHTML=`<h2>${esc(id)}</h2>
+   <div>${sw(a.wall_rgb||inf.wall_rgb,'wall'+(a.wall_rgb?' (authored)':' ('+(inf.tier||'none')+')'))} &nbsp; ${sw(a.trim_rgb||inf.trim_rgb,'trim')} &nbsp; ${sw(a.roof_rgb,'roof')}</div>
+   <p>${esc(a.wall_judgement?.basis||a.wall_judgement?.text||inf.basis||'')}</p>
+   <p class="dim">roof_form: ${esc(JSON.stringify(a.roof_form||null))} · attachments: ${(a.attachments||[]).map(x=>x.kind+'@'+Math.round(x.face_bearing_deg??0)+'° s'+(x.storey||1)).join(', ')||'none'}</p>
+   <div id="drop">Paste (⌘V) a facade photo here → face <select id="face">${rec.faces.map(f=>`<option value="${f.index}" ${f.index===face?'selected':''}>${f.index}: faces ${f.bearing}° · ${f.length_m} m</option>`).join('')}</select>
+     <input id="pnote" placeholder="optional note" style="width:40%;background:#0d0d10;color:#eee;border:1px solid #444"></div>
+   <div class="photos">${photos}</div>
+   <h3>Panoramas that saw it (${seen.length})</h3>${seen.map(p=>panoHTML(p,markFor(p),'recorded in buildings_seen')).join('')||'<p class="dim">none recorded</p>'}
+   <h3>Other panoramas within 45 m</h3>${near.map(x=>panoHTML(x.p,markFor(x.p),x.d.toFixed(0)+' m')).join('')||'<p class="dim">none</p>'}
+   <h3>Record</h3><pre>${esc(JSON.stringify(a,null,1))}</pre>`;wire()}
+function showObjects(ids){const os=ids.map(i=>W.omap[i]).filter(Boolean),o=os[0];if(!o)return;
+  const near=nearPanos([o.E,o.N],30,new Set()).slice(0,4);
+  $('m').innerHTML=`<h2>${os.length} object(s)</h2>${os.slice(0,30).map(o=>`<div>${esc(o.module||o.mesh)} <span class="dim">· ${o.family} · ${esc(o.fixture_id||o.attachment_id)} · ${esc(o.evidence)} · ${esc(o.feature)} · E ${o.E} N ${o.N}</span></div>`).join('')}
+   <p class="dim">${os.filter(o=>o.fixture_id).length} authored fixture(s) (Delete removes them from authored_scene_fixtures.json); the rest are generated (Delete queues a request).</p>
+   <h3>Nearest panoramas to ${esc(o.module)}</h3>${near.map(x=>panoHTML(x.p,os.slice(0,8).map(q=>({x:fx(x.p,brg(x.p,[q.E,q.N])),label:q.module,col:'#ff6bd6'})),x.d.toFixed(1)+' m')).join('')}`;wire()}
+function showPano(id){const p=W.pmap[id];const marks=p.seen.map(bid=>W.bmap[bid]).filter(Boolean).map(b=>({x:fx(p,brg(p,cen(b.ring))),label:b.id.split('/').pop(),col:'#55d8ef'}));
+  $('m').innerHTML=`<h2>${esc(id)}</h2><p class="dim">compass ${p.compass}° · true ${p.heading??'unaligned'} · E ${p.E} N ${p.N}</p>${panoHTML(p,marks,p.seen.length+' buildings seen')}`;wire()}
+chan.onmessage=async e=>{const m=e.data;if(m.type!=='select')return;cur=m;try{
+  if(m.buildings.length===1&&!m.objects.length)await showBuilding(m.buildings[0],m.face);
+  else if(m.objects.length)showObjects(m.objects);else if(m.panoramas.length)showPano(m.panoramas[0]);
+  else if(m.buildings.length)await showBuilding(m.buildings[0],m.face)}catch(err){$('m').innerHTML='<p class="bad">'+esc(err.message)+'</p>'}};
+addEventListener('paste',async e=>{const it=[...(e.clipboardData?.items||[])].find(i=>i.type.startsWith('image/'));if(!it||!cur?.buildings?.length)return;e.preventDefault();
+  const bid=cur.buildings[0],face=+($('face')?.value??0),url=await new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result);f.readAsDataURL(it.getAsFile())});
+  try{await j('/api/facade',{building_id:bid,face_index:face,data_url:url,note:$('pnote')?.value||''});chan.postMessage({type:'reload'});await showBuilding(bid,face)}catch(err){alertBar(err.message)}});
+function alertBar(t){const d=document.createElement('p');d.className='bad';d.textContent='FAILED: '+t;$('m').prepend(d)}
+j('/api/world').then(w=>{W=w;W.bmap=Object.fromEntries(w.buildings.map(b=>[b.id,b]));W.omap=Object.fromEntries(w.objects.map(o=>[o.id,o]));W.pmap=Object.fromEntries(w.panoramas.map(p=>[p.id,p]))});
+</script></body></html>

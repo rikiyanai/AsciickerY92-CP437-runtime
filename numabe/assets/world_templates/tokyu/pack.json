@@ -1,0 +1,24 @@
+{
+  "schema": "y92.world_template_pack.v1",
+  "pack_id": "tokyu",
+  "parents": ["tokyo_station_small"],
+  "jurisdiction": {"country_code": "JP", "region": "Tokyo"},
+  "site_contexts": ["railway_station"],
+  "operator_ids": ["tokyu"],
+  "fallback_policy": "source_derived",
+  "templates": [
+    {
+      "template_id": "jp.tokyu.station_identity_v1",
+      "semantic_class": "station_identity_sign",
+      "identity_bucket": "operator_standard",
+      "geometry_family": "tokyu_station_identity_sign",
+      "face_mode": "parameterized_catalog",
+      "parameters": {
+        "label_suffix": " STA",
+        "panel_rgb": [157, 45, 83],
+        "trim_rgb": [220, 219, 208],
+        "text_rgb": [239, 238, 224]
+      }
+    }
+  ]
+}

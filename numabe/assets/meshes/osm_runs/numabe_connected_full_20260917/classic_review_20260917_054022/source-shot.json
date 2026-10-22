@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "stamp": 0,
+  "size": {"width": 128, "height": 72},
+  "map_path": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/output.a3d",
+  "camera": {
+    "pos": [1191.3434, 1039.3450, 988.5327],
+    "yaw": 0.0000,
+    "zoom": 1.0000,
+    "perspective": true,
+    "scene_shift": 0,
+    "cam_shift": 0
+  },
+  "light": {
+    "dir": [1.0000, 0.0000, 1.0000],
+    "ambience": 0.5000
+  },
+  "water": 55
+,
+  "render_report": {
+    "s3_active": 0,
+    "s3_projection_identity": 0
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "counts": {
+    "bilinear_vertices": 349521,
+    "boundary_idw4_vertices": 473704,
+    "dem_samples": 8227,
+    "patches": 51336,
+    "seam_mismatches": 0,
+    "unique_height_vertices": 823225
+  },
+  "elevation": {
+    "compiled_raw_max": 1117,
+    "compiled_raw_min": 128,
+    "compiled_relative_max_m": 18.06677840410615,
+    "compiled_relative_min_m": 0.0,
+    "local_bake_datum_m": 6.5,
+    "source_max_m": 24.56,
+    "source_min_m": 6.5,
+    "source_range_m": 18.06,
+    "vertical_datum": "orthometric metres on the Japanese vertical datum (source_manifest.json record gsi_dem5a_elevation, field crs)"
+  },
+  "input_map": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/classic_base.a3d",
+  "input_map_sha256": "e830ee1379b9e4ac9227b5893d40fcc3f39f857c542671ed73e3a00c2a9e6698",
+  "invariants": {
+    "a3d_tail_preserved": true,
+    "source_dem_nonflat": true,
+    "terrain_seams_equal": true
+  },
+  "output_map": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/dem_terrain.a3d",
+  "output_map_sha256": "37547d8b8f1e0baefc33fd162883b27344f2d9ed630d3efc377ba578bc6d1276",
+  "run_root": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full",
+  "scale": {
+    "bake_units_per_metre": 54.74135885649784,
+    "bake_units_per_world_unit": 16.0,
+    "baseline_raw": 128.0,
+    "world_units_per_metre": 3.421334928531115
+  },
+  "schema": "y92.world_ir_dem_a3d_lowering.v1",
+  "world_ir": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/dem5a.world_ir.json",
+  "world_ir_sha256": "dab6e836687471d5ded86e869ec3ac90a40d2555b78044e3f6563a0fa814d228"
+}

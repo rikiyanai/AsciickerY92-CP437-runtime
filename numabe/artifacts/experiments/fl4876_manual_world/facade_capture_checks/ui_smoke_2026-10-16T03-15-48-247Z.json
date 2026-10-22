@@ -1,0 +1,143 @@
+{
+ "base": "http://127.0.0.1:8791",
+ "started": "2026-10-16T03:15:48.247Z",
+ "checks": [
+  {
+   "name": "page loads, map ready",
+   "pass": true,
+   "evidence": {
+    "status": "→ building way/725138644"
+   }
+  },
+  {
+   "name": "goto lawson selects a building",
+   "pass": true,
+   "evidence": {
+    "sel": [
+     "building:feature:building_footprint:way/725137997"
+    ]
+   }
+  },
+  {
+   "name": "location bar shows copy lat,lon / address / id",
+   "pass": true,
+   "evidence": {
+    "hasLinks": [
+     true,
+     true,
+     true
+    ],
+    "where": "way/725137997 · near ローソン・スリーエフ (convenience, 4 m)\n35.5871506, 139.6755171 · E 380004.94 N 3938966.19 · x 1617.6 y 2862.0 · facing 62°\ncopy lat,loncopy addresscopy building idStreet View herebookmark"
+   }
+  },
+  {
+   "name": "copy lat,lon -> clipboard",
+   "pass": true,
+   "evidence": {
+    "clipboard": "35.5871506, 139.6755171"
+   }
+  },
+  {
+   "name": "copy address (location bar) -> clipboard",
+   "pass": true,
+   "evidence": {
+    "clipboard": "東京都大田区田園調布本町46-23",
+    "status": "copied 東京都大田区田園調布本町46-23 · GSI 番-号 point at the building (within 3 m) · also 東京都大田区田園調布本町46-24 (6 m), 東京都大田区田園調布本町44-1 (10 m), 東京都大田区田園調布本町45-11 (11 m)"
+   }
+  },
+  {
+   "name": "copy building id (location bar) -> clipboard",
+   "pass": true,
+   "evidence": {
+    "clipboard": "way/725137997"
+   }
+  },
+  {
+   "name": "inspector shows the address line",
+   "pass": true,
+   "evidence": {
+    "addrLine": "東京都大田区田園調布本町46-23 · GSI 番-号 point at the building (within 3 m)"
+   }
+  },
+  {
+   "name": "inspector Copy address -> clipboard",
+   "pass": true,
+   "evidence": {
+    "clipboard": "東京都大田区田園調布本町46-23"
+   }
+  },
+  {
+   "name": "inspector Copy id -> clipboard",
+   "pass": true,
+   "evidence": {
+    "clipboard": "way/725137997"
+   }
+  },
+  {
+   "name": "double-click a wall -> camera moves to face it (zoom 1, facing message)",
+   "pass": true,
+   "evidence": {
+    "building": "feature:building_footprint:way/725138036",
+    "moved_units": 83.3,
+    "yaw_before": 332.70000000000005,
+    "yaw_after": 297.9,
+    "zoom_before": 0.7,
+    "zoom_after": 1,
+    "messages": [
+     "facing 725138036 face 5/6 (5.6 m wide, faces 242.1°) · Street View here matches this view"
+    ]
+   }
+  },
+  {
+   "name": "status message stays readable 2.5 s after the action",
+   "pass": true,
+   "evidence": {
+    "status_now": "facing 725138036 face 5/6 (5.6 m wide, faces 242.1°) · Street View here matches this view"
+   }
+  },
+  {
+   "name": "drop transparent PNG file -> capture opens in logo mode, converts, previews in the map",
+   "pass": true,
+   "evidence": {
+    "open": true,
+    "title": "Facade capture — way/725138046 · face 4/4",
+    "type": "logo",
+    "kind": "web_image_reference",
+    "cells": "CP437 result of sign (23×7 cells, exactly what the sprite holds)",
+    "cost": "runtime cost: 1 sprite(s), 161 cells (blitted, no mesh) · mesh faces +0\n1 sprite(s) live in the map now",
+    "live_sprites": 1,
+    "status": "logo capture: move / resize the sign box on the face; the preview shows in the map"
+   }
+  },
+  {
+   "name": "drop image LINK (Google Images style) -> server fetch -> capture opens as web image, logo mode, converts",
+   "pass": true,
+   "evidence": {
+    "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+    "open": true,
+    "title": "Facade capture — way/725138046 · face 4/4",
+    "type": "logo",
+    "kind": "web_image_reference",
+    "cells": "CP437 result of sign (23×7 cells, exactly what the sprite holds)",
+    "cost": "runtime cost: 1 sprite(s), 161 cells (blitted, no mesh) · mesh faces +0\n1 sprite(s) live in the map now",
+    "status": "logo capture: move / resize the sign box on the face; the preview shows in the map"
+   }
+  },
+  {
+   "name": "no page errors in console",
+   "pass": true,
+   "evidence": {
+    "errors": []
+   }
+  }
+ ],
+ "console_errors": [],
+ "shot_home": "/private/tmp/claude-501/-Users-r-Projects-asciicker-Y9-2/0e4cdb7d-789e-4f42-9ca8-ce5af0878c03/scratchpad/ui/ui_1_home.png",
+ "shot_lawson": "/private/tmp/claude-501/-Users-r-Projects-asciicker-Y9-2/0e4cdb7d-789e-4f42-9ca8-ce5af0878c03/scratchpad/ui/ui_2_lawson_selected.png",
+ "shot_dblclick": "/private/tmp/claude-501/-Users-r-Projects-asciicker-Y9-2/0e4cdb7d-789e-4f42-9ca8-ce5af0878c03/scratchpad/ui/ui_3_after_dblclick.png",
+ "shot_logo_drop": "/private/tmp/claude-501/-Users-r-Projects-asciicker-Y9-2/0e4cdb7d-789e-4f42-9ca8-ce5af0878c03/scratchpad/ui/ui_4_logo_file_drop.png",
+ "shot_link_drop": "/private/tmp/claude-501/-Users-r-Projects-asciicker-Y9-2/0e4cdb7d-789e-4f42-9ca8-ce5af0878c03/scratchpad/ui/ui_5_link_drop.png",
+ "finished": "2026-10-16T03:16:29.106Z",
+ "passed": 14,
+ "total": 14
+}

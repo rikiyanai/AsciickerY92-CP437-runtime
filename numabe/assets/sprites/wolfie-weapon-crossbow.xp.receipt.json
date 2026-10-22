@@ -1,0 +1,56 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "wolfie_weapon_crossbow",
+  "output_path": "assets/sprites/wolfie-weapon-crossbow.xp",
+  "output_sha256": "d57a52ad7dd0e90010ffbb08019a63785f2715393da6ace29daf643969f079d0",
+  "output_dimensions": {
+    "width": 180,
+    "height": 96
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/wolfie-0002.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/wolfie-0002.xp",
+    "raw_layer_index": 4,
+    "upstream_xp_sha256": "d93d04c2045bfaebb8567993a6b18bb2b3d4ff22a0cf2cdf2d32ff629e13d9f0",
+    "upstream_layer_count": 5,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 1,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 2,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 3,
+        "width": 180,
+        "height": 96
+      },
+      {
+        "index": 4,
+        "width": 180,
+        "height": 96
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "direct XP cell inspection + upstream AHSW loop check 2026-05-20",
+    "method": "Corrected 2026-05-20: upstream game.cpp AHSW loop makes wolfie-0002.xp the W=2 no-shield crossbow file; direct wolfie-0002:L4 cell inspection shows canonical crossbow glyphs matching player-0002:L3 and plydie-0002:L3. Prior wolfie-0010:L4 crossbow mapping was wrong; wolfie-0010:L4 is shield. This is a per-row source-of-record correction, not a generalized rule that L4 is crossbow in every W=2 wolfie file; e.g. user review has wolfie-0012:L4 as shield and wolfie-0012:L5 as crossbow.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=wolfie_weapon_crossbow -> upstream_xp_path=sprites/wolfie-0002.xp:raw_layer_index=4. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490690,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

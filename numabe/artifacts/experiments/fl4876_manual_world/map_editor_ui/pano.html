@@ -1,0 +1,72 @@
+<!doctype html>
+<!-- FL-4876 local panorama viewer (served by map_editor.py at /pano). Shows one of the 346 Mapillary
+     panoramas (equirectangular, local files) as a rectilinear view you can drag around. Its pose (camera position +
+     the compass heading you look at) is broadcast as 'pano_pose' on BroadcastChannel 'numabe-map-editor', so the
+     /a3d tab follows it with SV->A3D on, without any extension.
+     Heading model (same as map_editor_ui/view.html): equirect u = 0.5 + (compass - true_heading) / 360, where
+     true_heading = pano_index compass + authored heading_offset_deg (null offset -> compass only, marked UNALIGNED). -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Numabe Pano Viewer</title>
+<style>
+:root{--bg:#000;--panel:#15151b;--ink:#e8e4da;--dim:#8f8a80;--acc:#ffd166;--cam:#55d8ef;--bad:#ff6b6b}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:12px ui-monospace,Menlo,monospace;overflow:hidden}
+#bar{position:fixed;left:0;right:0;top:0;height:30px;display:flex;gap:6px;align-items:center;padding:0 6px;background:var(--panel);border-bottom:1px solid #333;z-index:3;white-space:nowrap;overflow-x:auto}
+button{background:#24242c;color:var(--ink);border:1px solid #4a4a55;font:inherit;padding:3px 7px;cursor:pointer}button.on{background:#5a4a12;border-color:var(--acc)}
+#c{position:fixed;left:0;top:30px;cursor:grab}
+#hud{position:fixed;left:8px;bottom:8px;background:#000c;border:1px solid #333;padding:5px 8px;z-index:3;line-height:1.5}
+#near{position:fixed;right:8px;top:38px;width:260px;max-height:70vh;overflow:auto;background:#15151be8;border:1px solid #333;padding:6px;z-index:3}
+#near div{padding:2px 0;cursor:pointer;border-bottom:1px solid #2a2a30}#near div:hover{color:var(--acc)}
+.bad{color:var(--bad)}.dim{color:var(--dim)}
+</style></head><body>
+<div id="bar"><b style="color:var(--acc)">PANO</b><span id="pid"></span><button id="bFollow" class="on" title="send this pose to the A3D tab">drive A3D</button>
+<button id="bPrev">◀ prev in sequence</button><button id="bNext">next ▶</button><span class="dim">drag = look · wheel = zoom · click a nearby pano to move · ←/→ turn</span></div>
+<canvas id="c"></canvas><div id="hud"></div><div id="near"></div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),cv=$('c'),gl=cv.getContext('webgl2'),chan=new BroadcastChannel('numabe-map-editor');
+let P=[],cur=null,look={h:0,p:0,fov:80},follow=true,tex=null,prog,uni={};
+const VS=`#version 300 es
+in vec2 q;out vec2 s;void main(){s=q;gl_Position=vec4(q,0,1);}`;
+// per pixel: view ray -> compass longitude / latitude -> equirect (u, v)
+const FSH=`#version 300 es
+precision highp float;in vec2 s;out vec4 o;uniform sampler2D t;uniform float yaw,pitch,tanh,aspect,head;
+void main(){vec3 d=normalize(vec3(s.x*tanh*aspect,s.y*tanh,1.0));
+ float cp=cos(pitch),sp=sin(pitch);d=vec3(d.x,d.y*cp+d.z*sp,-d.y*sp+d.z*cp);
+ float lon=yaw+atan(d.x,d.z),lat=asin(clamp(d.y,-1.0,1.0));
+ float u=fract(0.5+(degrees(lon)-head)/360.0);float v=0.5-degrees(lat)/180.0;o=texture(t,vec2(u,v));}`;
+function sh(k,src){const x=gl.createShader(k);gl.shaderSource(x,src);gl.compileShader(x);if(!gl.getShaderParameter(x,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(x));return x}
+function init(){prog=gl.createProgram();gl.attachShader(prog,sh(gl.VERTEX_SHADER,VS));gl.attachShader(prog,sh(gl.FRAGMENT_SHADER,FSH));gl.linkProgram(prog);gl.useProgram(prog);
+  const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  const a=gl.getAttribLocation(prog,'q');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
+  for(const n of ['yaw','pitch','tanh','aspect','head'])uni[n]=gl.getUniformLocation(prog,n);tex=gl.createTexture()}
+function size(){cv.width=innerWidth*devicePixelRatio;cv.height=(innerHeight-30)*devicePixelRatio;cv.style.width=innerWidth+'px';cv.style.height=(innerHeight-30)+'px';draw()}
+function draw(){if(!cur||!cur.ready)return;gl.viewport(0,0,cv.width,cv.height);
+  gl.uniform1f(uni.yaw,look.h*Math.PI/180);gl.uniform1f(uni.pitch,look.p*Math.PI/180);gl.uniform1f(uni.tanh,Math.tan(look.fov*Math.PI/360));
+  gl.uniform1f(uni.aspect,cv.width/cv.height);gl.uniform1f(uni.head,cur.heading??cur.compass);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);hud()}
+function hud(){$('hud').innerHTML=`${cur.id} · looking <b>${((look.h%360)+360)%360|0}°</b> pitch ${look.p|0}° fov ${look.fov|0}° · ${cur.heading==null?'<span class="bad">UNALIGNED: compass heading only</span>':'aligned heading '+cur.heading.toFixed(1)+'°'}`}
+let sendT=null;function send(){if(!follow||!cur)return;clearTimeout(sendT);sendT=setTimeout(()=>chan.postMessage({type:'pano_pose',id:cur.id,x:cur.x,y:cur.y,heading:((look.h%360)+360)%360,from:'pano'}),60)}
+async function show(p,keepLook){cur={...p,ready:false};$('pid').textContent=p.id;if(!keepLook){look.h=p.heading??p.compass;look.p=0}
+  const img=new Image();await new Promise((ok,bad)=>{img.onload=ok;img.onerror=()=>bad(new Error('pano image'));img.src='/img?path='+encodeURIComponent(p.img)}); // onload works in hidden tabs; decode() does not
+  gl.bindTexture(gl.TEXTURE_2D,tex);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,img);gl.generateMipmap(gl.TEXTURE_2D);
+  gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);
+  cur.ready=true;nearby();draw();send();history.replaceState(null,'','/pano?id='+encodeURIComponent(p.id))}
+function nearby(){const L=P.filter(q=>q.id!==cur.id).map(q=>({q,d:Math.hypot(q.x-cur.x,q.y-cur.y)/S,b:(Math.atan2(q.x-cur.x,q.y-cur.y)*180/Math.PI+360)%360})).sort((a,b)=>a.d-b.d).slice(0,14);
+  $('near').innerHTML='<b>nearby panoramas</b>'+L.map(x=>`<div data-id="${x.q.id}">${x.d.toFixed(0)} m at ${x.b.toFixed(0)}° <span class="dim">${x.q.id.slice(10,22)}${x.q.heading==null?' (unaligned)':''}</span></div>`).join('');
+  $('near').querySelectorAll('[data-id]').forEach(n=>n.onclick=()=>show(P.find(q=>q.id===n.dataset.id),true))}
+let S=3.4213,drag=null;
+cv.addEventListener('mousedown',e=>{drag={x:e.clientX,y:e.clientY,h:look.h,p:look.p};cv.style.cursor='grabbing'});
+addEventListener('mousemove',e=>{if(!drag)return;const k=look.fov/cv.clientWidth;look.h=drag.h-(e.clientX-drag.x)*k;look.p=Math.max(-80,Math.min(80,drag.p+(e.clientY-drag.y)*k));draw();send()});
+addEventListener('mouseup',()=>{drag=null;cv.style.cursor='grab'});
+cv.addEventListener('wheel',e=>{e.preventDefault();look.fov=Math.max(20,Math.min(110,look.fov*Math.exp(e.deltaY*.001)));draw()},{passive:false});
+addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){look.h-=5;draw();send()}if(e.key==='ArrowRight'){look.h+=5;draw();send()}});
+$('bFollow').onclick=()=>{follow=!follow;$('bFollow').classList.toggle('on',follow);send()};
+function seqStep(dir){const L=P.filter(q=>q.id!==cur.id).map(q=>({q,d:Math.hypot(q.x-cur.x,q.y-cur.y),b:(Math.atan2(q.x-cur.x,q.y-cur.y)*180/Math.PI+360)%360}))
+  .filter(x=>{const dd=Math.abs(((x.b-(look.h+(dir<0?180:0)))%360+540)%360-180);return dd<35}).sort((a,b)=>a.d-b.d);if(L[0])show(L[0].q,true)}
+$('bNext').onclick=()=>seqStep(1);$('bPrev').onclick=()=>seqStep(-1);
+addEventListener('resize',size);
+(async()=>{init();const L=await (await fetch('/api/layers')).json();P=L.panoramas;S=L.meta.content_scale;size();
+  const q=new URLSearchParams(location.search);let p=P.find(x=>x.id===q.get('id'));
+  if(!p&&q.get('x')){const x=+q.get('x'),y=+q.get('y');p=P.slice().sort((a,b)=>Math.hypot(a.x-x,a.y-y)-Math.hypot(b.x-x,b.y-y))[0];await show(p);if(q.get('heading')){look.h=+q.get('heading');draw();send()}return}
+  await show(p||P[0])})();
+chan.onmessage=e=>{const m=e.data;if(m.type==='open_pano'&&m.id){const p=P.find(x=>x.id===m.id);if(p)show(p)}};
+</script></body></html>

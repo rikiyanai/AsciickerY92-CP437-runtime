@@ -1,0 +1,3899 @@
+{
+ "checked": 1022,
+ "clear_m": 0.3,
+ "counts": {
+  "checked": 1022,
+  "moved": 246,
+  "withdrawn": 11
+ },
+ "elevated_rail_lines_excluded": 3,
+ "lidar_corridor_quads": 841,
+ "max_move_m": 8.0,
+ "moved": [
+  {
+   "adjustment_m": 5.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "chainage_m": 61.865,
+   "lateral_offset_m": 4.0,
+   "module_id": "concrete_block_wall",
+   "placement_id": "obs-authored-SF-4876-0202",
+   "side": "R",
+   "source_lateral_offset_m": 3.488,
+   "source_pose_epsg32654": [
+    379729.8,
+    3938531.4
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 4.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "chainage_m": 62.464,
+   "lateral_offset_m": 4.657,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-S405-051",
+   "side": "R",
+   "source_lateral_offset_m": 2.655,
+   "source_pose_epsg32654": [
+    379731.0,
+    3938531.25
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.75,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "chainage_m": 29.842,
+   "lateral_offset_m": 2.741,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-S406-017",
+   "side": "R",
+   "source_lateral_offset_m": 1.995,
+   "source_pose_epsg32654": [
+    379754.5,
+    3938503.6
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 4.499,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "chainage_m": 93.121,
+   "lateral_offset_m": 3.534,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-S405-050",
+   "side": "R",
+   "source_lateral_offset_m": 0.944,
+   "source_pose_epsg32654": [
+    379717.0,
+    3938554.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001323",
+   "chainage_m": 1045.056,
+   "lateral_offset_m": 2.123,
+   "module_id": "rail_corridor_mesh_fence",
+   "placement_id": "obs-inst-0464",
+   "side": "R",
+   "source_lateral_offset_m": 1.128,
+   "source_pose_epsg32654": [
+    379781.26,
+    3938472.01
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001323",
+   "chainage_m": 1019.103,
+   "lateral_offset_m": 1.98,
+   "module_id": "metal_fence",
+   "placement_id": "obs-inst-0490",
+   "side": "R",
+   "source_lateral_offset_m": 0.487,
+   "source_pose_epsg32654": [
+    379798.17,
+    3938452.25
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 39.088,
+   "lateral_offset_m": 4.612,
+   "module_id": "pedestrian_guardrail_vertical_bar_continuous",
+   "placement_id": "obs-inst-0492",
+   "side": "R",
+   "source_lateral_offset_m": 4.392,
+   "source_pose_epsg32654": [
+    379805.9,
+    3938457.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 78.964,
+   "lateral_offset_m": 2.008,
+   "module_id": "platform_railing",
+   "placement_id": "obs-authored-SF-4876-S405-033",
+   "side": "R",
+   "source_lateral_offset_m": 1.76,
+   "source_pose_epsg32654": [
+    379829.0,
+    3938424.5
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 5.249,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 20.542,
+   "lateral_offset_m": 6.02,
+   "module_id": "platform_railing",
+   "placement_id": "obs-authored-SF-4876-S405-038",
+   "side": "L",
+   "source_lateral_offset_m": 0.794,
+   "source_pose_epsg32654": [
+    379790.4,
+    3938467.8
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 4.249,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 10.226,
+   "lateral_offset_m": 6.082,
+   "module_id": "pedestrian_guardrail_vertical_bar_continuous",
+   "placement_id": "obs-authored-SF-4876-S405-041",
+   "side": "L",
+   "source_lateral_offset_m": 1.852,
+   "source_pose_epsg32654": [
+    379783.0,
+    3938475.2
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.75,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 27.378,
+   "lateral_offset_m": 4.511,
+   "module_id": "platform_railing",
+   "placement_id": "obs-authored-SF-4876-S409-013",
+   "side": "R",
+   "source_lateral_offset_m": 2.965,
+   "source_pose_epsg32654": [
+    379796.8,
+    3938465.9
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "kind": "run",
+   "module_id": "concrete_retaining_edge",
+   "normal": [
+    0.775002,
+    0.631959
+   ],
+   "placement_id": "rule-1038001324-parallel_to_rail_corridor-L-g00",
+   "samples": 9,
+   "samples_on_carriageway": 1,
+   "source_run_epsg32654": [
+    379783.0630945463,
+    3938485.9630411253,
+    379831.51661900134,
+    3938426.5420742845
+   ]
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "kind": "run",
+   "module_id": "rail_corridor_fence",
+   "normal": [
+    0.775002,
+    0.631959
+   ],
+   "placement_id": "rule-1038001324-rail_or_property_corridor_edge-L-g00",
+   "samples": 9,
+   "samples_on_carriageway": 1,
+   "source_run_epsg32654": [
+    379783.0630945463,
+    3938485.9630411253,
+    379831.51661900134,
+    3938426.5420742845
+   ]
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 6.144,
+   "lateral_offset_m": 4.971,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-S405-042",
+   "side": "R",
+   "source_lateral_offset_m": 2.762,
+   "source_pose_epsg32654": [
+    379783.0,
+    3938482.5
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 5.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 6.102,
+   "lateral_offset_m": 5.059,
+   "module_id": "rail_corridor_fence",
+   "placement_id": "obs-inst-0121",
+   "side": "R",
+   "source_lateral_offset_m": 0.642,
+   "source_pose_epsg32654": [
+    379780.59,
+    3938482.1
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 20.64,
+   "lateral_offset_m": 4.734,
+   "module_id": "directional_road_sign",
+   "placement_id": "obs-authored-SF-4876-S409-026",
+   "side": "R",
+   "source_lateral_offset_m": 4.616,
+   "source_pose_epsg32654": [
+    379794.2,
+    3938471.7
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.245,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 0.0,
+   "lateral_offset_m": 3.141,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-0163",
+   "side": "R",
+   "source_lateral_offset_m": 2.902,
+   "source_pose_epsg32654": [
+    379780.0,
+    3938486.4
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 4.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001324",
+   "chainage_m": 6.264,
+   "lateral_offset_m": 5.186,
+   "module_id": "platform_railing",
+   "placement_id": "obs-authored-SF-4876-S406-003",
+   "side": "R",
+   "source_lateral_offset_m": 1.355,
+   "source_pose_epsg32654": [
+    379782.0,
+    3938481.5
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 7.5,
+   "canonical_carrier_id": "feature:sidewalk:way/1087430624",
+   "kind": "run",
+   "module_id": "bollard_curb_island",
+   "normal": [
+    -0.7643,
+    -0.644861
+   ],
+   "placement_id": "rule-1087430624-sidewalk_corner-L-g00",
+   "samples": 9,
+   "samples_on_carriageway": 9,
+   "source_run_epsg32654": [
+    379773.1598405612,
+    3938492.10316632,
+    379771.2252563618,
+    3938494.3960649166
+   ]
+  },
+  {
+   "adjustment_m": 7.75,
+   "canonical_carrier_id": "feature:sidewalk:way/1087430624",
+   "kind": "run",
+   "module_id": "bollard_curb_island",
+   "normal": [
+    -0.7643,
+    -0.644861
+   ],
+   "placement_id": "rule-1087430624-sidewalk_corner-L-g01",
+   "samples": 9,
+   "samples_on_carriageway": 9,
+   "source_run_epsg32654": [
+    379763.98842476064,
+    3938502.9732677233,
+    379762.05384056125,
+    3938505.26616632
+   ]
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 40.393,
+   "lateral_offset_m": 3.789,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-0114",
+   "side": "R",
+   "source_lateral_offset_m": 3.303,
+   "source_pose_epsg32654": [
+    379825.72,
+    3938492.09
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 55.139,
+   "lateral_offset_m": 2.471,
+   "module_id": "directional_road_sign",
+   "placement_id": "obs-authored-SF-4876-0261",
+   "side": "L",
+   "source_lateral_offset_m": 1.564,
+   "source_pose_epsg32654": [
+    379815.199,
+    3938504.2
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.499,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 44.293,
+   "lateral_offset_m": 3.787,
+   "module_id": "pedestrian_warning_sign",
+   "placement_id": "obs-authored-SF-4876-0266",
+   "side": "R",
+   "source_lateral_offset_m": 3.302,
+   "source_pose_epsg32654": [
+    379822.39,
+    3938494.121
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 9.996,
+   "lateral_offset_m": 3.873,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-0292",
+   "side": "R",
+   "source_lateral_offset_m": 2.468,
+   "source_pose_epsg32654": [
+    379851.47,
+    3938477.21
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 114.021,
+   "lateral_offset_m": 3.807,
+   "module_id": "roadside_reflector_bollard",
+   "placement_id": "obs-authored-SF-4876-0325",
+   "side": "R",
+   "source_lateral_offset_m": 2.558,
+   "source_pose_epsg32654": [
+    379767.4,
+    3938510.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 22.499,
+   "lateral_offset_m": 3.844,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-S400-032",
+   "side": "R",
+   "source_lateral_offset_m": 2.345,
+   "source_pose_epsg32654": [
+    379841.4,
+    3938483.599
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.749,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 18.116,
+   "lateral_offset_m": 2.504,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-S401-004",
+   "side": "L",
+   "source_lateral_offset_m": 0.8,
+   "source_pose_epsg32654": [
+    379846.4,
+    3938484.2
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 9.948,
+   "lateral_offset_m": 3.801,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-S403-077",
+   "side": "R",
+   "source_lateral_offset_m": 2.631,
+   "source_pose_epsg32654": [
+    379851.5,
+    3938477.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 10.405,
+   "lateral_offset_m": 3.992,
+   "module_id": "street_name_sign",
+   "placement_id": "obs-authored-SF-4876-S403-081",
+   "side": "R",
+   "source_lateral_offset_m": 2.493,
+   "source_pose_epsg32654": [
+    379851.6,
+    3938477.1
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 40.143,
+   "lateral_offset_m": 3.838,
+   "module_id": "pole_notice_banner",
+   "placement_id": "obs-authored-SF-4876-S403-106",
+   "side": "R",
+   "source_lateral_offset_m": 3.134,
+   "source_pose_epsg32654": [
+    379825.7,
+    3938492.3
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 78.724,
+   "lateral_offset_m": 3.809,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-S404-008",
+   "side": "R",
+   "source_lateral_offset_m": 1.311,
+   "source_pose_epsg32654": [
+    379794.0,
+    3938513.7
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.248,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 99.783,
+   "lateral_offset_m": 3.823,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-S404-009",
+   "side": "R",
+   "source_lateral_offset_m": 3.576,
+   "source_pose_epsg32654": [
+    379779.462,
+    3938517.77
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.0,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 97.762,
+   "lateral_offset_m": 2.668,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-S404-010",
+   "side": "L",
+   "source_lateral_offset_m": 0.321,
+   "source_pose_epsg32654": [
+    379779.2,
+    3938521.8
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.75,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 99.99,
+   "lateral_offset_m": 3.777,
+   "module_id": "traffic_sign_pole_cluster",
+   "placement_id": "obs-authored-SF-4876-S404-014",
+   "side": "R",
+   "source_lateral_offset_m": 3.064,
+   "source_pose_epsg32654": [
+    379778.8,
+    3938517.9
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 98.46,
+   "lateral_offset_m": 2.531,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-S404-018",
+   "side": "L",
+   "source_lateral_offset_m": 0.041,
+   "source_pose_epsg32654": [
+    379778.4,
+    3938521.6
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.25,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 99.591,
+   "lateral_offset_m": 2.466,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-S404-021",
+   "side": "L",
+   "source_lateral_offset_m": 0.225,
+   "source_pose_epsg32654": [
+    379777.4,
+    3938520.999
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.0,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 100.332,
+   "lateral_offset_m": 2.64,
+   "module_id": "traffic_sign_pole_cluster",
+   "placement_id": "obs-authored-SF-4876-S404-022",
+   "side": "L",
+   "source_lateral_offset_m": 0.654,
+   "source_pose_epsg32654": [
+    379776.6,
+    3938520.9
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.499,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 100.475,
+   "lateral_offset_m": 2.58,
+   "module_id": "pole_poster_notice_carrier",
+   "placement_id": "obs-authored-SF-4876-S404-023",
+   "side": "L",
+   "source_lateral_offset_m": 0.087,
+   "source_pose_epsg32654": [
+    379776.5,
+    3938520.1
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 101.921,
+   "lateral_offset_m": 3.94,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-S409-039",
+   "side": "R",
+   "source_lateral_offset_m": 3.702,
+   "source_pose_epsg32654": [
+    379777.8,
+    3938516.3
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.0,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 92.066,
+   "lateral_offset_m": 2.498,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-S401-067",
+   "side": "L",
+   "source_lateral_offset_m": 0.343,
+   "source_pose_epsg32654": [
+    379781.8,
+    3938523.5
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.499,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 133.459,
+   "lateral_offset_m": 2.427,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-pole-0012",
+   "side": "L",
+   "source_lateral_offset_m": 2.13,
+   "source_pose_epsg32654": [
+    379747.128,
+    3938509.215
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 100.591,
+   "lateral_offset_m": 3.855,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0012",
+   "side": "R",
+   "source_lateral_offset_m": 3.659,
+   "source_pose_epsg32654": [
+    379779.0,
+    3938517.3
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 31.259,
+   "lateral_offset_m": 3.823,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0019",
+   "side": "R",
+   "source_lateral_offset_m": 3.639,
+   "source_pose_epsg32654": [
+    379833.1,
+    3938487.2
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.499,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 99.975,
+   "lateral_offset_m": 2.568,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0166",
+   "side": "L",
+   "source_lateral_offset_m": 0.076,
+   "source_pose_epsg32654": [
+    379776.9,
+    3938520.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 22.68,
+   "lateral_offset_m": 3.784,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0483",
+   "side": "R",
+   "source_lateral_offset_m": 2.785,
+   "source_pose_epsg32654": [
+    379841.0,
+    3938483.33
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 109.329,
+   "lateral_offset_m": 3.815,
+   "module_id": "pole_notice_banner",
+   "placement_id": "obs-authored-SF-4876-0531",
+   "side": "R",
+   "source_lateral_offset_m": 3.361,
+   "source_pose_epsg32654": [
+    379771.799,
+    3938512.2
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.999,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 33.908,
+   "lateral_offset_m": 3.818,
+   "module_id": "pedestrian_guardrail_continuous",
+   "placement_id": "obs-authored-SF-4876-S403-101",
+   "side": "R",
+   "source_lateral_offset_m": 1.82,
+   "source_pose_epsg32654": [
+    379832.0,
+    3938490.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 101.344,
+   "lateral_offset_m": 3.855,
+   "module_id": "red_mailbox",
+   "placement_id": "obs-authored-SF-4876-0557",
+   "side": "R",
+   "source_lateral_offset_m": 3.632,
+   "source_pose_epsg32654": [
+    379778.36,
+    3938516.83
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.25,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 10.273,
+   "lateral_offset_m": 2.496,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-0516",
+   "side": "L",
+   "source_lateral_offset_m": 0.668,
+   "source_pose_epsg32654": [
+    379852.0,
+    3938478.999
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 4.001,
+   "canonical_carrier_id": "feature:railway_boundary:way/152855008",
+   "chainage_m": 56.511,
+   "lateral_offset_m": 3.507,
+   "module_id": "concrete_retaining_edge",
+   "placement_id": "obs-authored-SF-4876-S400-006",
+   "side": "R",
+   "source_lateral_offset_m": 0.606,
+   "source_pose_epsg32654": [
+    379891.5,
+    3938433.2
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.75,
+   "canonical_carrier_id": "feature:railway_boundary:way/152855008",
+   "chainage_m": 43.914,
+   "lateral_offset_m": 6.813,
+   "module_id": "concrete_retaining_edge",
+   "placement_id": "obs-authored-SF-4876-S408-030",
+   "side": "L",
+   "source_lateral_offset_m": 5.106,
+   "source_pose_epsg32654": [
+    379884.0,
+    3938424.2
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 391.052,
+   "lateral_offset_m": 2.267,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-0020",
+   "side": "R",
+   "source_lateral_offset_m": 2.021,
+   "source_pose_epsg32654": [
+    379799.7,
+    3938565.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 394.32,
+   "lateral_offset_m": 3.221,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0056",
+   "side": "L",
+   "source_lateral_offset_m": 2.0,
+   "source_pose_epsg32654": [
+    379800.47,
+    3938559.73
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.25,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 399.443,
+   "lateral_offset_m": 3.296,
+   "module_id": "bollard_curb_island",
+   "placement_id": "obs-authored-SF-4876-0076",
+   "side": "L",
+   "source_lateral_offset_m": 1.098,
+   "source_pose_epsg32654": [
+    379805.45,
+    3938557.61
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 359.43,
+   "lateral_offset_m": 3.235,
+   "module_id": "white_railguard",
+   "placement_id": "obs-authored-SF-4876-0182",
+   "side": "L",
+   "source_lateral_offset_m": 2.77,
+   "source_pose_epsg32654": [
+    379770.3,
+    3938578.15
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 384.946,
+   "lateral_offset_m": 3.214,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-0184",
+   "side": "L",
+   "source_lateral_offset_m": 2.854,
+   "source_pose_epsg32654": [
+    379791.6,
+    3938564.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 368.122,
+   "lateral_offset_m": 3.36,
+   "module_id": "roadside_reflector_bollard",
+   "placement_id": "obs-authored-SF-4876-0221",
+   "side": "L",
+   "source_lateral_offset_m": 2.662,
+   "source_pose_epsg32654": [
+    379777.6,
+    3938573.6
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 376.056,
+   "lateral_offset_m": 3.219,
+   "module_id": "roadside_reflector_bollard",
+   "placement_id": "obs-authored-SF-4876-0223",
+   "side": "L",
+   "source_lateral_offset_m": 2.872,
+   "source_pose_epsg32654": [
+    379784.7,
+    3938568.8
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 357.101,
+   "lateral_offset_m": 3.313,
+   "module_id": "white_railguard",
+   "placement_id": "obs-authored-SF-4876-0279",
+   "side": "L",
+   "source_lateral_offset_m": 2.682,
+   "source_pose_epsg32654": [
+    379768.2,
+    3938579.6
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.75,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 386.82,
+   "lateral_offset_m": 3.255,
+   "module_id": "street_tree",
+   "placement_id": "obs-authored-SF-4876-S401-044",
+   "side": "L",
+   "source_lateral_offset_m": 2.557,
+   "source_pose_epsg32654": [
+    379793.4,
+    3938563.6
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 364.751,
+   "lateral_offset_m": 2.336,
+   "module_id": "pole_notice_banner",
+   "placement_id": "obs-authored-SF-4876-S404-029",
+   "side": "R",
+   "source_lateral_offset_m": 0.164,
+   "source_pose_epsg32654": [
+    379776.3,
+    3938577.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 378.973,
+   "lateral_offset_m": 2.277,
+   "module_id": "street_tree",
+   "placement_id": "obs-authored-SF-4876-S407-005",
+   "side": "R",
+   "source_lateral_offset_m": 1.36,
+   "source_pose_epsg32654": [
+    379788.8,
+    3938571.2
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 374.725,
+   "lateral_offset_m": 2.262,
+   "module_id": "traffic_sign_pole_cluster",
+   "placement_id": "obs-authored-SF-4876-S407-006",
+   "side": "R",
+   "source_lateral_offset_m": 1.564,
+   "source_pose_epsg32654": [
+    379785.9,
+    3938573.3
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.749,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 375.161,
+   "lateral_offset_m": 2.306,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-S407-007",
+   "side": "R",
+   "source_lateral_offset_m": 0.597,
+   "source_pose_epsg32654": [
+    379785.2,
+    3938572.6
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 347.562,
+   "lateral_offset_m": 3.283,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0383",
+   "side": "L",
+   "source_lateral_offset_m": 2.825,
+   "source_pose_epsg32654": [
+    379760.6,
+    3938584.3
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.751,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 352.609,
+   "lateral_offset_m": 3.192,
+   "module_id": "red_mailbox",
+   "placement_id": "obs-authored-SF-4876-0415",
+   "side": "L",
+   "source_lateral_offset_m": 2.442,
+   "source_pose_epsg32654": [
+    379764.9,
+    3938582.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 352.631,
+   "lateral_offset_m": 3.626,
+   "module_id": "white_railguard",
+   "placement_id": "obs-authored-SF-4876-0125",
+   "side": "R",
+   "source_lateral_offset_m": 3.262,
+   "source_pose_epsg32654": [
+    379767.2,
+    3938587.3
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:road:way/229865708",
+   "chainage_m": 8.984,
+   "lateral_offset_m": 2.792,
+   "module_id": "directional_road_sign",
+   "placement_id": "obs-authored-SF-4876-0529",
+   "side": "R",
+   "source_lateral_offset_m": 1.299,
+   "source_pose_epsg32654": [
+    379937.5,
+    3938543.5
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 720.098,
+   "lateral_offset_m": 3.063,
+   "module_id": "rail_corridor_mesh_fence",
+   "placement_id": "obs-authored-SF-4876-0025",
+   "side": "R",
+   "source_lateral_offset_m": 3.508,
+   "source_pose_epsg32654": [
+    379764.1,
+    3938506.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 5.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 680.956,
+   "lateral_offset_m": 7.233,
+   "module_id": "rail_corridor_fence",
+   "placement_id": "obs-authored-SF-4876-0026",
+   "side": "R",
+   "source_lateral_offset_m": 2.255,
+   "source_pose_epsg32654": [
+    379738.2,
+    3938535.6
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 6.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 691.693,
+   "lateral_offset_m": 7.534,
+   "module_id": "rail_corridor_fence",
+   "placement_id": "obs-authored-SF-4876-0070",
+   "side": "R",
+   "source_lateral_offset_m": 2.033,
+   "source_pose_epsg32654": [
+    379746.98,
+    3938524.47
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 742.636,
+   "lateral_offset_m": 2.131,
+   "module_id": "platform_railing",
+   "placement_id": "obs-authored-SF-4876-0079",
+   "side": "R",
+   "source_lateral_offset_m": 1.635,
+   "source_pose_epsg32654": [
+    379777.4,
+    3938487.5
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 5.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 709.173,
+   "lateral_offset_m": 7.683,
+   "module_id": "level_crossing_equipment",
+   "placement_id": "obs-authored-SF-4876-0080",
+   "side": "R",
+   "source_lateral_offset_m": 2.665,
+   "source_pose_epsg32654": [
+    379757.61,
+    3938512.42
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 719.77,
+   "lateral_offset_m": 2.543,
+   "module_id": "mesh_fence",
+   "placement_id": "obs-authored-SF-4876-0083",
+   "side": "R",
+   "source_lateral_offset_m": 2.705,
+   "source_pose_epsg32654": [
+    379763.3,
+    3938505.7
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 7.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 702.568,
+   "lateral_offset_m": 5.245,
+   "module_id": "rail_corridor_fence",
+   "placement_id": "obs-authored-SF-4876-0085",
+   "side": "L",
+   "source_lateral_offset_m": 1.973,
+   "source_pose_epsg32654": [
+    379752.36,
+    3938517.769
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 5.249,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 693.888,
+   "lateral_offset_m": 7.429,
+   "module_id": "meter_and_service_cabinet",
+   "placement_id": "obs-authored-SF-4876-0086",
+   "side": "R",
+   "source_lateral_offset_m": 2.411,
+   "source_pose_epsg32654": [
+    379747.76,
+    3938524.11
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 5.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 689.122,
+   "lateral_offset_m": 7.458,
+   "module_id": "rail_corridor_fence",
+   "placement_id": "obs-authored-SF-4876-X002",
+   "side": "R",
+   "source_lateral_offset_m": 1.987,
+   "source_pose_epsg32654": [
+    379743.8,
+    3938528.3
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 667.342,
+   "lateral_offset_m": 7.055,
+   "module_id": "rail_corridor_fence",
+   "placement_id": "obs-authored-SF-4876-S406-035",
+   "side": "R",
+   "source_lateral_offset_m": 4.07,
+   "source_pose_epsg32654": [
+    379731.5,
+    3938546.7
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.75,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 729.194,
+   "lateral_offset_m": 2.241,
+   "module_id": "pedestrian_guardrail_vertical_bar_continuous",
+   "placement_id": "obs-inst-0150",
+   "side": "R",
+   "source_lateral_offset_m": 1.497,
+   "source_pose_epsg32654": [
+    379766.53,
+    3938495.43
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 5.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 699.34,
+   "lateral_offset_m": 5.439,
+   "module_id": "roadside_reflector_bollard",
+   "placement_id": "obs-authored-SF-4876-S405-052",
+   "side": "L",
+   "source_lateral_offset_m": 0.461,
+   "source_pose_epsg32654": [
+    379748.3,
+    3938518.9
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 733.229,
+   "lateral_offset_m": 5.687,
+   "module_id": "platform_railing",
+   "placement_id": "obs-inst-0471",
+   "side": "R",
+   "source_lateral_offset_m": 6.8,
+   "source_pose_epsg32654": [
+    379774.9,
+    3938498.4
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.249,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 2.356,
+   "lateral_offset_m": 3.161,
+   "module_id": "roadside_reflector_bollard",
+   "placement_id": "obs-authored-SF-4876-0075",
+   "side": "R",
+   "source_lateral_offset_m": 1.077,
+   "source_pose_epsg32654": [
+    379860.0,
+    3938485.459
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 2.779,
+   "lateral_offset_m": 3.206,
+   "module_id": "pedestrian_warning_sign",
+   "placement_id": "obs-authored-SF-4876-0362",
+   "side": "R",
+   "source_lateral_offset_m": 3.0,
+   "source_pose_epsg32654": [
+    379860.12,
+    3938487.84
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 5.156,
+   "lateral_offset_m": 3.249,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0334",
+   "side": "R",
+   "source_lateral_offset_m": 2.999,
+   "source_pose_epsg32654": [
+    379861.99,
+    3938489.07
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 128.43,
+   "lateral_offset_m": 3.248,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0490",
+   "side": "R",
+   "source_lateral_offset_m": 3.005,
+   "source_pose_epsg32654": [
+    379944.13,
+    3938576.87
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.751,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 2.465,
+   "lateral_offset_m": 3.151,
+   "module_id": "trimmed_hedge",
+   "placement_id": "obs-authored-SF-4876-0523",
+   "side": "R",
+   "source_lateral_offset_m": 1.529,
+   "source_pose_epsg32654": [
+    379859.999,
+    3938486.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 138.245,
+   "lateral_offset_m": 1.963,
+   "module_id": "pedestrian_guardrail_continuous",
+   "placement_id": "obs-inst-0108",
+   "side": "L",
+   "source_lateral_offset_m": 1.744,
+   "source_pose_epsg32654": [
+    379767.15,
+    3938508.13
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 130.919,
+   "lateral_offset_m": 1.944,
+   "module_id": "white_railguard",
+   "placement_id": "obs-authored-SF-4876-0007",
+   "side": "L",
+   "source_lateral_offset_m": 1.012,
+   "source_pose_epsg32654": [
+    379772.0,
+    3938502.2
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 119.368,
+   "lateral_offset_m": 1.4,
+   "module_id": "pedestrian_guardrail_continuous",
+   "placement_id": "obs-authored-SF-4876-0072",
+   "side": "R",
+   "source_lateral_offset_m": 0.676,
+   "source_pose_epsg32654": [
+    379779.5,
+    3938494.1
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 113.836,
+   "lateral_offset_m": 2.965,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-0206",
+   "side": "R",
+   "source_lateral_offset_m": 3.046,
+   "source_pose_epsg32654": [
+    379782.8,
+    3938488.6
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 122.198,
+   "lateral_offset_m": 1.953,
+   "module_id": "roadside_reflector_bollard",
+   "placement_id": "obs-authored-SF-4876-0324",
+   "side": "L",
+   "source_lateral_offset_m": 1.504,
+   "source_pose_epsg32654": [
+    379778.9,
+    3938497.3
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 1.52,
+   "lateral_offset_m": 2.109,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-0361",
+   "side": "L",
+   "source_lateral_offset_m": 1.921,
+   "source_pose_epsg32654": [
+    379857.4,
+    3938482.69
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.499,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 4.307,
+   "lateral_offset_m": 4.281,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0514",
+   "side": "R",
+   "source_lateral_offset_m": 3.719,
+   "source_pose_epsg32654": [
+    379863.0,
+    3938478.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.75,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 62.671,
+   "lateral_offset_m": 1.376,
+   "module_id": "wall_mounted_mailbox",
+   "placement_id": "obs-authored-SF-4876-0548",
+   "side": "R",
+   "source_lateral_offset_m": 1.174,
+   "source_pose_epsg32654": [
+    379819.59,
+    3938458.42
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.25,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 4.345,
+   "lateral_offset_m": 4.008,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-S401-002",
+   "side": "R",
+   "source_lateral_offset_m": 4.019,
+   "source_pose_epsg32654": [
+    379863.3,
+    3938478.1
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.499,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 132.001,
+   "lateral_offset_m": 1.932,
+   "module_id": "directional_road_sign",
+   "placement_id": "obs-authored-SF-4876-S402-008",
+   "side": "L",
+   "source_lateral_offset_m": 1.466,
+   "source_pose_epsg32654": [
+    379771.4,
+    3938503.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 61.963,
+   "lateral_offset_m": 1.27,
+   "module_id": "parked_bicycles",
+   "placement_id": "obs-authored-SF-4876-S403-030",
+   "side": "R",
+   "source_lateral_offset_m": 0.604,
+   "source_pose_epsg32654": [
+    379820.68,
+    3938457.95
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 59.836,
+   "lateral_offset_m": 1.289,
+   "module_id": "waste_collection_bin_pair",
+   "placement_id": "obs-authored-SF-4876-S403-032",
+   "side": "R",
+   "source_lateral_offset_m": 0.842,
+   "source_pose_epsg32654": [
+    379823.42,
+    3938454.049
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 32.276,
+   "lateral_offset_m": 1.297,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-S404-050",
+   "side": "R",
+   "source_lateral_offset_m": 1.059,
+   "source_pose_epsg32654": [
+    379844.3,
+    3938457.6
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 22.402,
+   "lateral_offset_m": 1.297,
+   "module_id": "pole_notice_banner",
+   "placement_id": "obs-authored-SF-4876-S404-051",
+   "side": "R",
+   "source_lateral_offset_m": 0.188,
+   "source_pose_epsg32654": [
+    379850.8,
+    3938464.2
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.25,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 137.793,
+   "lateral_offset_m": 1.364,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0161",
+   "side": "R",
+   "source_lateral_offset_m": 0.281,
+   "source_pose_epsg32654": [
+    379764.7,
+    3938507.9
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1449.207,
+   "lateral_offset_m": 5.516,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0510",
+   "side": "L",
+   "source_lateral_offset_m": 3.025,
+   "source_pose_epsg32654": [
+    379874.0,
+    3938471.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.25,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1437.396,
+   "lateral_offset_m": 4.424,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0511",
+   "side": "R",
+   "source_lateral_offset_m": 3.26,
+   "source_pose_epsg32654": [
+    379880.0,
+    3938459.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 122.701,
+   "lateral_offset_m": 1.968,
+   "module_id": "stone_marker_bollard",
+   "placement_id": "obs-authored-SF-4876-0255",
+   "side": "L",
+   "source_lateral_offset_m": 0.977,
+   "source_pose_epsg32654": [
+    379777.9,
+    3938497.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 105.295,
+   "lateral_offset_m": 1.952,
+   "module_id": "pedestrian_guardrail_continuous",
+   "placement_id": "obs-inst-0344",
+   "side": "L",
+   "source_lateral_offset_m": 1.622,
+   "source_pose_epsg32654": [
+    379792.53,
+    3938487.04
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.499,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 4.683,
+   "lateral_offset_m": 4.984,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-0269",
+   "side": "R",
+   "source_lateral_offset_m": 4.634,
+   "source_pose_epsg32654": [
+    379863.92,
+    3938478.65
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1444.469,
+   "lateral_offset_m": 5.505,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0363",
+   "side": "L",
+   "source_lateral_offset_m": 4.005,
+   "source_pose_epsg32654": [
+    379878.64,
+    3938468.98
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1404.875,
+   "lateral_offset_m": 4.511,
+   "module_id": "pedestrian_guardrail_continuous",
+   "placement_id": "obs-authored-SF-4876-0382",
+   "side": "R",
+   "source_lateral_offset_m": 3.534,
+   "source_pose_epsg32654": [
+    379901.909,
+    3938435.88
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1420.903,
+   "lateral_offset_m": 5.501,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0455",
+   "side": "L",
+   "source_lateral_offset_m": 4.501,
+   "source_pose_epsg32654": [
+    379896.73,
+    3938452.829
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1446.716,
+   "lateral_offset_m": 5.521,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0527",
+   "side": "L",
+   "source_lateral_offset_m": 4.836,
+   "source_pose_epsg32654": [
+    379877.5,
+    3938470.8
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.75,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1397.141,
+   "lateral_offset_m": 5.522,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-S400-012",
+   "side": "L",
+   "source_lateral_offset_m": 2.773,
+   "source_pose_epsg32654": [
+    379912.0,
+    3938434.5
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 4.75,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1423.124,
+   "lateral_offset_m": 4.576,
+   "module_id": "pedestrian_guardrail_continuous",
+   "placement_id": "obs-authored-SF-4876-S400-016",
+   "side": "R",
+   "source_lateral_offset_m": 0.173,
+   "source_pose_epsg32654": [
+    379892.0,
+    3938451.5
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.999,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1435.053,
+   "lateral_offset_m": 5.648,
+   "module_id": "horizontal_traffic_signal",
+   "placement_id": "obs-authored-SF-4876-S404-034",
+   "side": "L",
+   "source_lateral_offset_m": 1.74,
+   "source_pose_epsg32654": [
+    379885.5,
+    3938460.5
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.499,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1431.09,
+   "lateral_offset_m": 5.651,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-S404-035",
+   "side": "L",
+   "source_lateral_offset_m": 2.152,
+   "source_pose_epsg32654": [
+    379888.0,
+    3938458.5
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 5.0,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1416.448,
+   "lateral_offset_m": 5.51,
+   "module_id": "hazard_strip_barrier",
+   "placement_id": "obs-authored-SF-4876-S408-020",
+   "side": "L",
+   "source_lateral_offset_m": 0.511,
+   "source_pose_epsg32654": [
+    379897.0,
+    3938446.8
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.75,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1405.94,
+   "lateral_offset_m": 4.464,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-S408-024",
+   "side": "R",
+   "source_lateral_offset_m": 0.715,
+   "source_pose_epsg32654": [
+    379903.3,
+    3938438.5
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.999,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1449.804,
+   "lateral_offset_m": 4.536,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-S409-047",
+   "side": "R",
+   "source_lateral_offset_m": 0.56,
+   "source_pose_epsg32654": [
+    379872.0,
+    3938468.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.499,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1444.641,
+   "lateral_offset_m": 5.577,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0528",
+   "side": "L",
+   "source_lateral_offset_m": 4.114,
+   "source_pose_epsg32654": [
+    379878.8,
+    3938469.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.25,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1433.786,
+   "lateral_offset_m": 4.571,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0409",
+   "side": "R",
+   "source_lateral_offset_m": 3.407,
+   "source_pose_epsg32654": [
+    379882.4,
+    3938456.299
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1448.734,
+   "lateral_offset_m": 5.501,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0445",
+   "side": "L",
+   "source_lateral_offset_m": 4.501,
+   "source_pose_epsg32654": [
+    379875.43,
+    3938471.85
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 5.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878145",
+   "chainage_m": 51.371,
+   "lateral_offset_m": 3.329,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0571",
+   "side": "R",
+   "source_lateral_offset_m": 1.602,
+   "source_pose_epsg32654": [
+    379885.0,
+    3938439.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.0,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1440.04,
+   "lateral_offset_m": 4.491,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0512",
+   "side": "R",
+   "source_lateral_offset_m": 1.492,
+   "source_pose_epsg32654": [
+    379879.0,
+    3938462.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 4.5,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1455.166,
+   "lateral_offset_m": 5.618,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0515",
+   "side": "L",
+   "source_lateral_offset_m": 1.136,
+   "source_pose_epsg32654": [
+    379868.0,
+    3938472.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.999,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1418.104,
+   "lateral_offset_m": 4.512,
+   "module_id": "concrete_retaining_edge",
+   "placement_id": "obs-authored-SF-4876-S409-004",
+   "side": "R",
+   "source_lateral_offset_m": 0.513,
+   "source_pose_epsg32654": [
+    379895.0,
+    3938447.4
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:road:way/31706445",
+   "chainage_m": 217.826,
+   "lateral_offset_m": 4.555,
+   "module_id": "white_railguard",
+   "placement_id": "obs-authored-SF-4876-0143",
+   "side": "L",
+   "source_lateral_offset_m": 3.557,
+   "source_pose_epsg32654": [
+    379810.399,
+    3938566.1
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/31706445",
+   "chainage_m": 223.938,
+   "lateral_offset_m": 3.248,
+   "module_id": "bollard_curb_island",
+   "placement_id": "obs-authored-SF-4876-0285",
+   "side": "R",
+   "source_lateral_offset_m": 2.25,
+   "source_pose_epsg32654": [
+    379812.4,
+    3938558.001
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.25,
+   "canonical_carrier_id": "feature:road:way/31706445",
+   "chainage_m": 218.426,
+   "lateral_offset_m": 3.066,
+   "module_id": "traffic_mirror",
+   "placement_id": "obs-authored-SF-4876-0453",
+   "side": "R",
+   "source_lateral_offset_m": 1.986,
+   "source_pose_epsg32654": [
+    379814.6,
+    3938562.299
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/31706445",
+   "chainage_m": 218.995,
+   "lateral_offset_m": 4.638,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-S401-048",
+   "side": "L",
+   "source_lateral_offset_m": 3.895,
+   "source_pose_epsg32654": [
+    379809.6,
+    3938565.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/31706445",
+   "chainage_m": 217.821,
+   "lateral_offset_m": 4.514,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-S404-025",
+   "side": "L",
+   "source_lateral_offset_m": 3.391,
+   "source_pose_epsg32654": [
+    379810.3,
+    3938565.6
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/31706445",
+   "chainage_m": 207.861,
+   "lateral_offset_m": 3.073,
+   "module_id": "red_mailbox",
+   "placement_id": "obs-authored-SF-4876-S407-023",
+   "side": "R",
+   "source_lateral_offset_m": 2.831,
+   "source_pose_epsg32654": [
+    379821.0,
+    3938571.6
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/31706445",
+   "chainage_m": 212.718,
+   "lateral_offset_m": 4.734,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0451",
+   "side": "L",
+   "source_lateral_offset_m": 3.496,
+   "source_pose_epsg32654": [
+    379813.14,
+    3938570.68
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 7.25,
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "kind": "run",
+   "module_id": "bollard_curb_island",
+   "normal": [
+    -0.764421,
+    -0.644718
+   ],
+   "placement_id": "rule-456475384-sidewalk_corner-R-g00",
+   "samples": 9,
+   "samples_on_carriageway": 9,
+   "source_run_epsg32654": [
+    379726.790651801,
+    3938545.828125093,
+    379728.7248051248,
+    3938543.5348630236
+   ]
+  },
+  {
+   "adjustment_m": 4.249,
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "chainage_m": 46.948,
+   "lateral_offset_m": 2.298,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0198",
+   "side": "R",
+   "source_lateral_offset_m": 1.752,
+   "source_pose_epsg32654": [
+    379758.57,
+    3938512.9
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.249,
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "chainage_m": 17.241,
+   "lateral_offset_m": 2.247,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0243",
+   "side": "R",
+   "source_lateral_offset_m": 0.875,
+   "source_pose_epsg32654": [
+    379741.5,
+    3938534.5
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 6.5,
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "chainage_m": 46.594,
+   "lateral_offset_m": 2.477,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-S406-031",
+   "side": "R",
+   "source_lateral_offset_m": 0.51,
+   "source_pose_epsg32654": [
+    379756.4,
+    3938517.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.999,
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "chainage_m": 45.339,
+   "lateral_offset_m": 2.25,
+   "module_id": "level_crossing_equipment",
+   "placement_id": "obs-authored-SF-4876-0024",
+   "side": "R",
+   "source_lateral_offset_m": 1.593,
+   "source_pose_epsg32654": [
+    379759.2,
+    3938512.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 4.75,
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "chainage_m": 12.274,
+   "lateral_offset_m": 2.308,
+   "module_id": "trimmed_hedge",
+   "placement_id": "obs-authored-SF-4876-0162",
+   "side": "R",
+   "source_lateral_offset_m": 2.412,
+   "source_pose_epsg32654": [
+    379736.2,
+    3938538.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/456475385",
+   "chainage_m": 7.557,
+   "lateral_offset_m": 1.32,
+   "module_id": "roadside_reflector_bollard",
+   "placement_id": "obs-authored-SF-4876-S407-049",
+   "side": "R",
+   "source_lateral_offset_m": 0.844,
+   "source_pose_epsg32654": [
+    379836.0,
+    3938529.801
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:road:way/456475385",
+   "chainage_m": 30.341,
+   "lateral_offset_m": 1.665,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0484",
+   "side": "L",
+   "source_lateral_offset_m": 1.528,
+   "source_pose_epsg32654": [
+    379854.52,
+    3938543.571
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.499,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 42.858,
+   "lateral_offset_m": 2.307,
+   "module_id": "trimmed_hedge",
+   "placement_id": "obs-authored-SF-4876-0054",
+   "side": "R",
+   "source_lateral_offset_m": 1.814,
+   "source_pose_epsg32654": [
+    379834.371,
+    3938522.01
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.499,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 80.395,
+   "lateral_offset_m": 2.187,
+   "module_id": "roadside_reflector_bollard",
+   "placement_id": "obs-authored-SF-4876-0118",
+   "side": "L",
+   "source_lateral_offset_m": 0.725,
+   "source_pose_epsg32654": [
+    379854.18,
+    3938489.73
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 35.926,
+   "lateral_offset_m": 2.029,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-0134",
+   "side": "L",
+   "source_lateral_offset_m": 1.104,
+   "source_pose_epsg32654": [
+    379828.16,
+    3938525.78
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 30.523,
+   "lateral_offset_m": 2.011,
+   "module_id": "trimmed_hedge",
+   "placement_id": "obs-authored-SF-4876-0135",
+   "side": "L",
+   "source_lateral_offset_m": 1.521,
+   "source_pose_epsg32654": [
+    379824.56,
+    3938530.45
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 54.586,
+   "lateral_offset_m": 2.175,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-0136",
+   "side": "L",
+   "source_lateral_offset_m": 0.926,
+   "source_pose_epsg32654": [
+    379838.9,
+    3938510.9
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 48.93,
+   "lateral_offset_m": 2.019,
+   "module_id": "trimmed_hedge",
+   "placement_id": "obs-authored-SF-4876-0138",
+   "side": "L",
+   "source_lateral_offset_m": 1.384,
+   "source_pose_epsg32654": [
+    379835.0,
+    3938515.6
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.749,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 55.78,
+   "lateral_offset_m": 2.183,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-0140",
+   "side": "L",
+   "source_lateral_offset_m": 0.434,
+   "source_pose_epsg32654": [
+    379840.0,
+    3938510.2
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 27.549,
+   "lateral_offset_m": 2.278,
+   "module_id": "potted_frontage_plant",
+   "placement_id": "obs-authored-SF-4876-0187",
+   "side": "R",
+   "source_lateral_offset_m": 1.585,
+   "source_pose_epsg32654": [
+    379825.4,
+    3938534.8
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 38.921,
+   "lateral_offset_m": 2.248,
+   "module_id": "trimmed_hedge",
+   "placement_id": "obs-authored-SF-4876-0189",
+   "side": "L",
+   "source_lateral_offset_m": 0.999,
+   "source_pose_epsg32654": [
+    379829.77,
+    3938523.63
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.75,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 74.081,
+   "lateral_offset_m": 2.068,
+   "module_id": "trimmed_hedge",
+   "placement_id": "obs-authored-SF-4876-0213",
+   "side": "L",
+   "source_lateral_offset_m": 1.318,
+   "source_pose_epsg32654": [
+    379849.859,
+    3938494.79
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 64.95,
+   "lateral_offset_m": 2.441,
+   "module_id": "concrete_block_wall",
+   "placement_id": "obs-authored-SF-4876-0227",
+   "side": "R",
+   "source_lateral_offset_m": 2.213,
+   "source_pose_epsg32654": [
+    379847.38,
+    3938504.38
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 78.589,
+   "lateral_offset_m": 2.018,
+   "module_id": "trimmed_hedge",
+   "placement_id": "obs-authored-SF-4876-0309",
+   "side": "L",
+   "source_lateral_offset_m": 1.525,
+   "source_pose_epsg32654": [
+    379852.24,
+    3938491.08
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 23.679,
+   "lateral_offset_m": 2.203,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-0417",
+   "side": "L",
+   "source_lateral_offset_m": 1.973,
+   "source_pose_epsg32654": [
+    379820.4,
+    3938535.9
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 85.5,
+   "lateral_offset_m": 2.032,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0575",
+   "side": "L",
+   "source_lateral_offset_m": 1.283,
+   "source_pose_epsg32654": [
+    379856.5,
+    3938485.5
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 32.756,
+   "lateral_offset_m": 2.033,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-P0005",
+   "side": "L",
+   "source_lateral_offset_m": 1.788,
+   "source_pose_epsg32654": [
+    379825.6,
+    3938528.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.749,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 78.6,
+   "lateral_offset_m": 2.163,
+   "module_id": "traffic_mirror",
+   "placement_id": "obs-authored-SF-4876-S401-003",
+   "side": "L",
+   "source_lateral_offset_m": 1.479,
+   "source_pose_epsg32654": [
+    379852.51,
+    3938490.78
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 45.431,
+   "lateral_offset_m": 2.135,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-S401-020",
+   "side": "L",
+   "source_lateral_offset_m": 1.149,
+   "source_pose_epsg32654": [
+    379833.3,
+    3938518.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 41.601,
+   "lateral_offset_m": 2.496,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-pole-0006",
+   "side": "R",
+   "source_lateral_offset_m": 2.25,
+   "source_pose_epsg32654": [
+    379833.974,
+    3938523.321
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.0,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 76.703,
+   "lateral_offset_m": 2.07,
+   "module_id": "stone_cobble_wall",
+   "placement_id": "obs-authored-SF-4876-S407-056",
+   "side": "L",
+   "source_lateral_offset_m": 0.12,
+   "source_pose_epsg32654": [
+    379852.6,
+    3938493.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.75,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 85.488,
+   "lateral_offset_m": 2.465,
+   "module_id": "stone_lined_water_channel",
+   "placement_id": "obs-authored-SF-4876-0518",
+   "side": "R",
+   "source_lateral_offset_m": 0.466,
+   "source_pose_epsg32654": [
+    379859.0,
+    3938485.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 3.74,
+   "lateral_offset_m": 3.469,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0282",
+   "side": "L",
+   "source_lateral_offset_m": 2.971,
+   "source_pose_epsg32654": [
+    379804.3,
+    3938555.6
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 34.656,
+   "lateral_offset_m": 2.472,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-0357",
+   "side": "R",
+   "source_lateral_offset_m": 2.032,
+   "source_pose_epsg32654": [
+    379788.4,
+    3938528.4
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.75,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 11.541,
+   "lateral_offset_m": 3.626,
+   "module_id": "pole_notice_banner",
+   "placement_id": "obs-authored-SF-4876-S401-037",
+   "side": "L",
+   "source_lateral_offset_m": 2.88,
+   "source_pose_epsg32654": [
+    379799.4,
+    3938549.499
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.499,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 5.854,
+   "lateral_offset_m": 3.575,
+   "module_id": "parked_bicycles",
+   "placement_id": "obs-authored-SF-4876-S407-034",
+   "side": "L",
+   "source_lateral_offset_m": 1.088,
+   "source_pose_epsg32654": [
+    379804.6,
+    3938553.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.0,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 4.053,
+   "lateral_offset_m": 3.581,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-pole-0011",
+   "side": "L",
+   "source_lateral_offset_m": 1.264,
+   "source_pose_epsg32654": [
+    379806.661,
+    3938555.783
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.499,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 40.062,
+   "lateral_offset_m": 2.447,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-pole-0034",
+   "side": "R",
+   "source_lateral_offset_m": 1.064,
+   "source_pose_epsg32654": [
+    379783.587,
+    3938524.809
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.5,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 35.327,
+   "lateral_offset_m": 2.343,
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-inst-0416",
+   "side": "R",
+   "source_lateral_offset_m": 1.993,
+   "source_pose_epsg32654": [
+    379790.32,
+    3938530.79
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878139",
+   "chainage_m": 7.748,
+   "lateral_offset_m": 1.906,
+   "module_id": "concrete_retaining_edge",
+   "placement_id": "obs-authored-SF-4876-S408-033",
+   "side": "R",
+   "source_lateral_offset_m": 1.57,
+   "source_pose_epsg32654": [
+    379886.0,
+    3938434.6
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878139",
+   "chainage_m": 0.0,
+   "lateral_offset_m": 3.859,
+   "module_id": "rail_corridor_mesh_fence",
+   "placement_id": "obs-authored-SF-4876-S400-005",
+   "side": "L",
+   "source_lateral_offset_m": 1.831,
+   "source_pose_epsg32654": [
+    379888.0,
+    3938439.0
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 4.999,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878140",
+   "chainage_m": 4.968,
+   "lateral_offset_m": 1.222,
+   "module_id": "rail_corridor_mesh_fence",
+   "placement_id": "obs-authored-SF-4876-S405-015",
+   "side": "R",
+   "source_lateral_offset_m": 3.184,
+   "source_pose_epsg32654": [
+    379895.5,
+    3938448.3
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.501,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878140",
+   "chainage_m": 15.425,
+   "lateral_offset_m": 2.116,
+   "module_id": "regulatory_sign_family",
+   "placement_id": "obs-authored-SF-4876-0179",
+   "side": "R",
+   "source_lateral_offset_m": 1.92,
+   "source_pose_epsg32654": [
+    379900.98,
+    3938449.14
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878140",
+   "chainage_m": 4.343,
+   "lateral_offset_m": 2.75,
+   "module_id": "pole_streetlight",
+   "placement_id": "obs-authored-SF-4876-0475",
+   "side": "R",
+   "source_lateral_offset_m": 2.613,
+   "source_pose_epsg32654": [
+    379891.06,
+    3938445.9
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878141",
+   "chainage_m": 7.916,
+   "lateral_offset_m": 3.496,
+   "module_id": "rail_corridor_fence",
+   "placement_id": "obs-authored-SF-4876-S405-016",
+   "side": "R",
+   "source_lateral_offset_m": 2.518,
+   "source_pose_epsg32654": [
+    379912.3,
+    3938454.3
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878141",
+   "chainage_m": 8.126,
+   "lateral_offset_m": 3.544,
+   "module_id": "notice_sign",
+   "placement_id": "obs-authored-SF-4876-S405-017",
+   "side": "R",
+   "source_lateral_offset_m": 2.295,
+   "source_pose_epsg32654": [
+    379912.4,
+    3938454.099
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878141",
+   "chainage_m": 7.6,
+   "lateral_offset_m": 3.514,
+   "module_id": "concrete_retaining_edge",
+   "placement_id": "obs-authored-SF-4876-S405-021",
+   "side": "R",
+   "source_lateral_offset_m": 2.536,
+   "source_pose_epsg32654": [
+    379912.0,
+    3938454.2
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.999,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878141",
+   "chainage_m": 4.539,
+   "lateral_offset_m": 5.452,
+   "module_id": "vending_white_red_blue",
+   "placement_id": "obs-authored-SF-4876-0180",
+   "side": "L",
+   "source_lateral_offset_m": 3.485,
+   "source_pose_epsg32654": [
+    379911.52,
+    3938447.53
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.249,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878141",
+   "chainage_m": 8.402,
+   "lateral_offset_m": 3.578,
+   "module_id": "meter_and_service_cabinet",
+   "placement_id": "obs-authored-SF-4876-S400-011",
+   "side": "R",
+   "source_lateral_offset_m": 0.382,
+   "source_pose_epsg32654": [
+    379912.8,
+    3938452.2
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.75,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878145",
+   "chainage_m": 49.695,
+   "lateral_offset_m": 3.739,
+   "module_id": "concrete_retaining_edge",
+   "placement_id": "obs-authored-SF-4876-S405-008",
+   "side": "R",
+   "source_lateral_offset_m": 2.989,
+   "source_pose_epsg32654": [
+    379882.599,
+    3938443.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.0,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 258.605,
+   "lateral_offset_m": 1.946,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/13441692978",
+   "side": "L",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    380016.661,
+    3938685.647
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.999,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 88.266,
+   "lateral_offset_m": 1.984,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/13441692982",
+   "side": "L",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    379924.499,
+    3938541.649
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 10.042,
+   "lateral_offset_m": 3.132,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1168798273987199",
+   "side": "R",
+   "source_lateral_offset_m": 0.815,
+   "source_pose_epsg32654": [
+    379866.485,
+    3938489.414
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.749,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 7.68,
+   "lateral_offset_m": 3.183,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1168798530653840",
+   "side": "R",
+   "source_lateral_offset_m": 1.464,
+   "source_pose_epsg32654": [
+    379864.666,
+    3938488.994
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.499,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 6.795,
+   "lateral_offset_m": 3.186,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/928050947987260",
+   "side": "R",
+   "source_lateral_offset_m": 0.87,
+   "source_pose_epsg32654": [
+    379863.743,
+    3938487.675
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 10.592,
+   "lateral_offset_m": 3.268,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/928518997940455",
+   "side": "R",
+   "source_lateral_offset_m": 3.019,
+   "source_pose_epsg32654": [
+    379866.521,
+    3938492.075
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 4.422,
+   "lateral_offset_m": 1.948,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/937777030347985",
+   "side": "L",
+   "source_lateral_offset_m": 0.966,
+   "source_pose_epsg32654": [
+    379863.713,
+    3938485.457
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.0,
+   "canonical_carrier_id": "feature:road:way/264753664",
+   "chainage_m": 5.762,
+   "lateral_offset_m": 3.287,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/971925890233538",
+   "side": "R",
+   "source_lateral_offset_m": 1.329,
+   "source_pose_epsg32654": [
+    379863.751,
+    3938488.229
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.75,
+   "canonical_carrier_id": "feature:road:way/285885337",
+   "chainage_m": 24.652,
+   "lateral_offset_m": 3.734,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/9985945729",
+   "side": "R",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    379976.769,
+    3939007.5
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/1059458086",
+   "chainage_m": 274.539,
+   "lateral_offset_m": 5.504,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/2887270554",
+   "side": "R",
+   "source_lateral_offset_m": 4.511,
+   "source_pose_epsg32654": [
+    379992.478,
+    3939039.516
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 4.5,
+   "canonical_carrier_id": "feature:road:way/1059458086",
+   "chainage_m": 283.421,
+   "lateral_offset_m": 5.532,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/773373363380185",
+   "side": "R",
+   "source_lateral_offset_m": 1.047,
+   "source_pose_epsg32654": [
+    379982.616,
+    3939037.985
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 4.0,
+   "canonical_carrier_id": "feature:road:way/23990281",
+   "chainage_m": 1.856,
+   "lateral_offset_m": 3.544,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/354761385",
+   "side": "L",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    379929.88,
+    3938748.162
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.25,
+   "canonical_carrier_id": "feature:road:way/31706445",
+   "chainage_m": 223.38,
+   "lateral_offset_m": 4.596,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/761054301149481",
+   "side": "L",
+   "source_lateral_offset_m": 1.352,
+   "source_pose_epsg32654": [
+    379809.438,
+    3938560.072
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 4.283,
+   "lateral_offset_m": 1.991,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1168798287320531",
+   "side": "R",
+   "source_lateral_offset_m": 1.616,
+   "source_pose_epsg32654": [
+    379860.901,
+    3938478.506
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 4.189,
+   "lateral_offset_m": 2.215,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1168798397320520",
+   "side": "R",
+   "source_lateral_offset_m": 2.52,
+   "source_pose_epsg32654": [
+    379861.801,
+    3938478.05
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.25,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 133.398,
+   "lateral_offset_m": 2.073,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/497876924990043",
+   "side": "L",
+   "source_lateral_offset_m": 1.862,
+   "source_pose_epsg32654": [
+    379770.629,
+    3938504.683
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/264753665",
+   "chainage_m": 117.554,
+   "lateral_offset_m": 2.178,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/928472877945067",
+   "side": "L",
+   "source_lateral_offset_m": 1.18,
+   "source_pose_epsg32654": [
+    379782.27,
+    3938494.32
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 105.195,
+   "lateral_offset_m": 2.492,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/10669964998",
+   "side": "L",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    379772.845,
+    3938517.111
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 81.298,
+   "lateral_offset_m": 2.466,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/302046711",
+   "side": "L",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    379792.731,
+    3938516.0
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 4.001,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 3.809,
+   "lateral_offset_m": 3.895,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/442165549",
+   "side": "R",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    379859.253,
+    3938475.288
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.25,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 8.55,
+   "lateral_offset_m": 2.581,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1168798310653862",
+   "side": "L",
+   "source_lateral_offset_m": 0.333,
+   "source_pose_epsg32654": [
+    379854.558,
+    3938478.591
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.75,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 80.529,
+   "lateral_offset_m": 3.786,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/497839751660427",
+   "side": "R",
+   "source_lateral_offset_m": 1.208,
+   "source_pose_epsg32654": [
+    379791.615,
+    3938515.272
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 41.015,
+   "lateral_offset_m": 2.622,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/928601311265557",
+   "side": "L",
+   "source_lateral_offset_m": 1.623,
+   "source_pose_epsg32654": [
+    379827.615,
+    3938496.704
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.25,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 9.781,
+   "lateral_offset_m": 3.919,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/928620857930269",
+   "side": "R",
+   "source_lateral_offset_m": 2.685,
+   "source_pose_epsg32654": [
+    379851.814,
+    3938476.741
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.749,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 11.048,
+   "lateral_offset_m": 3.817,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/928665067925848",
+   "side": "R",
+   "source_lateral_offset_m": 1.069,
+   "source_pose_epsg32654": [
+    379851.84,
+    3938478.627
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.0,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 46.338,
+   "lateral_offset_m": 2.614,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/937941000331588",
+   "side": "L",
+   "source_lateral_offset_m": 0.671,
+   "source_pose_epsg32654": [
+    379822.207,
+    3938498.884
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "chainage_m": 10.283,
+   "lateral_offset_m": 3.785,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981520012607459",
+   "side": "R",
+   "source_lateral_offset_m": 2.875,
+   "source_pose_epsg32654": [
+    379851.811,
+    3938476.52
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.499,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 29.947,
+   "lateral_offset_m": 2.393,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/10669964997",
+   "side": "R",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    379790.437,
+    3938534.069
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 3.372,
+   "lateral_offset_m": 2.401,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1226986981212090",
+   "side": "R",
+   "source_lateral_offset_m": 0.086,
+   "source_pose_epsg32654": [
+    379806.635,
+    3938553.898
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.249,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 3.83,
+   "lateral_offset_m": 2.499,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1226986994545422",
+   "side": "R",
+   "source_lateral_offset_m": 0.261,
+   "source_pose_epsg32654": [
+    379806.628,
+    3938553.343
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.25,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 5.214,
+   "lateral_offset_m": 2.337,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/3174343656210195",
+   "side": "R",
+   "source_lateral_offset_m": 1.093,
+   "source_pose_epsg32654": [
+    379806.61,
+    3938552.011
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.0,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 34.697,
+   "lateral_offset_m": 2.495,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/497730338338035",
+   "side": "R",
+   "source_lateral_offset_m": 1.5,
+   "source_pose_epsg32654": [
+    379788.175,
+    3938528.963
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.0,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 40.41,
+   "lateral_offset_m": 2.37,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/497801594997576",
+   "side": "R",
+   "source_lateral_offset_m": 0.962,
+   "source_pose_epsg32654": [
+    379782.671,
+    3938524.045
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.0,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 31.051,
+   "lateral_offset_m": 3.524,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/937895037002851",
+   "side": "L",
+   "source_lateral_offset_m": 0.652,
+   "source_pose_epsg32654": [
+    379788.221,
+    3938532.402
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.249,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 38.423,
+   "lateral_offset_m": 2.418,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/937913030334385",
+   "side": "R",
+   "source_lateral_offset_m": 1.191,
+   "source_pose_epsg32654": [
+    379785.422,
+    3938526.448
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.75,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 30.777,
+   "lateral_offset_m": 3.562,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/937947180330970",
+   "side": "L",
+   "source_lateral_offset_m": 0.929,
+   "source_pose_epsg32654": [
+    379788.227,
+    3938532.845
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.75,
+   "canonical_carrier_id": "feature:road:way/670892442",
+   "chainage_m": 5.952,
+   "lateral_offset_m": 2.414,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981547432604717",
+   "side": "R",
+   "source_lateral_offset_m": 0.322,
+   "source_pose_epsg32654": [
+    379804.798,
+    3938552.036
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.749,
+   "canonical_carrier_id": "feature:road:way/37708748",
+   "chainage_m": 80.285,
+   "lateral_offset_m": 1.708,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/13441692979",
+   "side": "R",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    380024.08,
+    3938696.863
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.999,
+   "canonical_carrier_id": "feature:road:way/225098134",
+   "chainage_m": 6.221,
+   "lateral_offset_m": 2.051,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/2339219650",
+   "side": "L",
+   "source_lateral_offset_m": 0.078,
+   "source_pose_epsg32654": [
+    379975.535,
+    3938797.325
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 4.0,
+   "canonical_carrier_id": "feature:road:way/264238102",
+   "chainage_m": 412.908,
+   "lateral_offset_m": 3.408,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_fixture_node/441509765",
+   "side": "L",
+   "source_lateral_offset_m": 0.0,
+   "source_pose_epsg32654": [
+    380032.274,
+    3938905.879
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.75,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1445.577,
+   "lateral_offset_m": 5.574,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/971790420247085",
+   "side": "L",
+   "source_lateral_offset_m": 2.825,
+   "source_pose_epsg32654": [
+    379877.08,
+    3938468.636
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.5,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1419.96,
+   "lateral_offset_m": 4.427,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981467785946015",
+   "side": "R",
+   "source_lateral_offset_m": 2.951,
+   "source_pose_epsg32654": [
+    379892.192,
+    3938446.8
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.25,
+   "canonical_carrier_id": "feature:road:way/27073255",
+   "chainage_m": 1438.632,
+   "lateral_offset_m": 4.568,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981615685931225",
+   "side": "R",
+   "source_lateral_offset_m": 2.319,
+   "source_pose_epsg32654": [
+    379879.689,
+    3938460.502
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.75,
+   "canonical_carrier_id": "feature:road:way/456475385",
+   "chainage_m": 3.136,
+   "lateral_offset_m": 1.48,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1165768624146879",
+   "side": "R",
+   "source_lateral_offset_m": 0.735,
+   "source_pose_epsg32654": [
+    379832.553,
+    3938526.923
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.249,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 80.382,
+   "lateral_offset_m": 2.114,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1168798497320510",
+   "side": "L",
+   "source_lateral_offset_m": 0.135,
+   "source_pose_epsg32654": [
+    379854.717,
+    3938490.459
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.25,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 3.19,
+   "lateral_offset_m": 2.203,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/3174343792876848",
+   "side": "L",
+   "source_lateral_offset_m": 0.617,
+   "source_pose_epsg32654": [
+    379809.369,
+    3938554.969
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.0,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 2.295,
+   "lateral_offset_m": 2.424,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/488688509242218",
+   "side": "R",
+   "source_lateral_offset_m": 0.757,
+   "source_pose_epsg32654": [
+    379810.29,
+    3938556.067
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 35.056,
+   "lateral_offset_m": 2.257,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/971722136920580",
+   "side": "R",
+   "source_lateral_offset_m": 1.757,
+   "source_pose_epsg32654": [
+    379829.854,
+    3938528.402
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 1.75,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 79.845,
+   "lateral_offset_m": 2.059,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981335782625882",
+   "side": "L",
+   "source_lateral_offset_m": 0.334,
+   "source_pose_epsg32654": [
+    379853.818,
+    3938490.916
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 35.056,
+   "lateral_offset_m": 2.257,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981367192622741",
+   "side": "R",
+   "source_lateral_offset_m": 1.757,
+   "source_pose_epsg32654": [
+    379829.854,
+    3938528.402
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.499,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 36.687,
+   "lateral_offset_m": 2.107,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981417655951028",
+   "side": "L",
+   "source_lateral_offset_m": 1.617,
+   "source_pose_epsg32654": [
+    379827.997,
+    3938525.099
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.5,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 78.293,
+   "lateral_offset_m": 2.113,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981453925947401",
+   "side": "L",
+   "source_lateral_offset_m": 1.75,
+   "source_pose_epsg32654": [
+    379851.735,
+    3938491.403
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.75,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 3.201,
+   "lateral_offset_m": 2.101,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981470829279044",
+   "side": "L",
+   "source_lateral_offset_m": 0.867,
+   "source_pose_epsg32654": [
+    379809.363,
+    3938554.526
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 1.499,
+   "canonical_carrier_id": "feature:road:way/670892441",
+   "chainage_m": 22.331,
+   "lateral_offset_m": 2.189,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981563839269743",
+   "side": "L",
+   "source_lateral_offset_m": 0.717,
+   "source_pose_epsg32654": [
+    379820.913,
+    3938537.397
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 4.25,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878138",
+   "chainage_m": 3.539,
+   "lateral_offset_m": 2.772,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1168798297320530",
+   "side": "L",
+   "source_lateral_offset_m": 1.155,
+   "source_pose_epsg32654": [
+    379901.212,
+    3938443.683
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.999,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878138",
+   "chainage_m": 3.308,
+   "lateral_offset_m": 2.096,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/1168798320653861",
+   "side": "L",
+   "source_lateral_offset_m": 0.435,
+   "source_pose_epsg32654": [
+    379903.024,
+    3938443.659
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 0.999,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 390.659,
+   "lateral_offset_m": 2.255,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/2974909265988490",
+   "side": "R",
+   "source_lateral_offset_m": 1.339,
+   "source_pose_epsg32654": [
+    379798.627,
+    3938564.877
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.499,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 383.808,
+   "lateral_offset_m": 2.277,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/461726352613566",
+   "side": "R",
+   "source_lateral_offset_m": 0.222,
+   "source_pose_epsg32654": [
+    379792.313,
+    3938567.069
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.249,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 391.686,
+   "lateral_offset_m": 2.336,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/760679657853612",
+   "side": "R",
+   "source_lateral_offset_m": 0.122,
+   "source_pose_epsg32654": [
+    379799.506,
+    3938562.868
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 2.25,
+   "canonical_carrier_id": "feature:road:way/225104982",
+   "chainage_m": 393.367,
+   "lateral_offset_m": 3.199,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/761041591150752",
+   "side": "L",
+   "source_lateral_offset_m": 1.001,
+   "source_pose_epsg32654": [
+    379800.387,
+    3938560.97
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "chainage_m": 37.762,
+   "lateral_offset_m": 1.902,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/488736436076904",
+   "side": "R",
+   "source_lateral_offset_m": 0.002,
+   "source_pose_epsg32654": [
+    379752.564,
+    3938509.142
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.999,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "chainage_m": 10.371,
+   "lateral_offset_m": 2.124,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/549495616481669",
+   "side": "R",
+   "source_lateral_offset_m": 1.854,
+   "source_pose_epsg32654": [
+    379769.541,
+    3938491.163
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "chainage_m": 38.025,
+   "lateral_offset_m": 2.012,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/549495619815002",
+   "side": "R",
+   "source_lateral_offset_m": 0.381,
+   "source_pose_epsg32654": [
+    379751.68,
+    3938510.817
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 3.5,
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "chainage_m": 14.809,
+   "lateral_offset_m": 2.086,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/549495626481668",
+   "side": "R",
+   "source_lateral_offset_m": 1.399,
+   "source_pose_epsg32654": [
+    379766.857,
+    3938493.75
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 4.0,
+   "canonical_carrier_id": "feature:railway_boundary:way/24475081",
+   "chainage_m": 732.045,
+   "lateral_offset_m": 2.316,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/549495629815001",
+   "side": "R",
+   "source_lateral_offset_m": 1.656,
+   "source_pose_epsg32654": [
+    379767.762,
+    3938493.738
+   ],
+   "source_side": "L"
+  },
+  {
+   "adjustment_m": 2.0,
+   "canonical_carrier_id": "feature:road:way/225201667",
+   "chainage_m": 3.846,
+   "lateral_offset_m": 1.467,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/927994127992942",
+   "side": "L",
+   "source_lateral_offset_m": 0.001,
+   "source_pose_epsg32654": [
+    379786.418,
+    3938533.092
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.499,
+   "canonical_carrier_id": "feature:road:way/225201667",
+   "chainage_m": 15.832,
+   "lateral_offset_m": 2.704,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/937831517009203",
+   "side": "R",
+   "source_lateral_offset_m": 2.25,
+   "source_pose_epsg32654": [
+    379775.251,
+    3938540.366
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 0.249,
+   "canonical_carrier_id": "feature:road:way/225201667",
+   "chainage_m": 12.373,
+   "lateral_offset_m": 2.771,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/937880047004350",
+   "side": "R",
+   "source_lateral_offset_m": 2.524,
+   "source_pose_epsg32654": [
+    379777.421,
+    3938537.983
+   ],
+   "source_side": "R"
+  },
+  {
+   "adjustment_m": 3.75,
+   "canonical_carrier_id": "feature:railway_boundary:way/796878141",
+   "chainage_m": 4.245,
+   "lateral_offset_m": 3.618,
+   "module_id": "street_fixture",
+   "placement_id": "rep-fixture-feature_mapillary_object/981570695935724",
+   "side": "R",
+   "source_lateral_offset_m": 0.049,
+   "source_pose_epsg32654": [
+    379910.371,
+    3938450.771
+   ],
+   "source_side": "L"
+  }
+ ],
+ "overhead_modules": [
+  "overhead_gantry_wire",
+  "wire_span"
+ ],
+ "rail_clear_m": 1.9,
+ "rail_lines": 8,
+ "rail_surface_items": [
+  "level_crossing_equipment:roadway_over_double_track",
+  "rail_track_corridor:None"
+ ],
+ "schema": "y92.roadside_clearance.v1",
+ "standing_min_m": 0.25,
+ "standing_owners": [
+  "fixtures",
+  "custom",
+  "linear"
+ ],
+ "withdrawn": [
+  {
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "kind": "run",
+   "module_id": "concrete_retaining_edge",
+   "placement_id": "rule-1038001322-parallel_to_rail_corridor-L-g01",
+   "reason": "run stands on painted carriageway and no legal kerbside offset exists within 8.0 m",
+   "samples": 9,
+   "samples_on_carriageway": 1,
+   "source_run_epsg32654": [
+    379743.2057821518,
+    3938512.665315999,
+    379731.26244351786,
+    3938527.2309905994
+   ]
+  },
+  {
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "kind": "run",
+   "module_id": "concrete_retaining_edge",
+   "placement_id": "rule-1038001322-parallel_to_rail_corridor-L-g01-c01",
+   "reason": "run stands on painted carriageway and no legal kerbside offset exists within 8.0 m",
+   "samples": 9,
+   "samples_on_carriageway": 1,
+   "source_run_epsg32654": [
+    379724.6621774307,
+    3938535.2804423524,
+    379718.37620972865,
+    3938542.946586879
+   ]
+  },
+  {
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "kind": "run",
+   "module_id": "rail_corridor_fence",
+   "placement_id": "rule-1038001322-rail_or_property_corridor_edge-L-g01",
+   "reason": "run stands on painted carriageway and no legal kerbside offset exists within 8.0 m",
+   "samples": 9,
+   "samples_on_carriageway": 1,
+   "source_run_epsg32654": [
+    379743.2057821518,
+    3938512.665315999,
+    379731.26244351786,
+    3938527.2309905994
+   ]
+  },
+  {
+   "canonical_carrier_id": "feature:railway_boundary:way/1038001322",
+   "kind": "run",
+   "module_id": "rail_corridor_fence",
+   "placement_id": "rule-1038001322-rail_or_property_corridor_edge-L-g01-c01",
+   "reason": "run stands on painted carriageway and no legal kerbside offset exists within 8.0 m",
+   "samples": 9,
+   "samples_on_carriageway": 1,
+   "source_run_epsg32654": [
+    379724.6621774307,
+    3938535.2804423524,
+    379718.37620972865,
+    3938542.946586879
+   ]
+  },
+  {
+   "canonical_carrier_id": "feature:sidewalk:way/1087430627",
+   "kind": "run",
+   "module_id": "bollard_curb_island",
+   "placement_id": "rule-1087430627-sidewalk_corner-R-g03",
+   "reason": "run stands on painted carriageway and no legal kerbside offset exists within 8.0 m",
+   "samples": 9,
+   "samples_on_carriageway": 8,
+   "source_run_epsg32654": [
+    379760.3965953696,
+    3938504.0875088163,
+    379763.28921611694,
+    3938504.8829613216
+   ]
+  },
+  {
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "kind": "run",
+   "module_id": "bollard_curb_island",
+   "placement_id": "rule-1115662463-sidewalk_corner-L-g02",
+   "reason": "run stands on painted carriageway and no legal kerbside offset exists within 8.0 m",
+   "samples": 9,
+   "samples_on_carriageway": 9,
+   "source_run_epsg32654": [
+    379762.0207475012,
+    3938505.6433859603,
+    379759.14617213624,
+    3938504.7850058167
+   ]
+  },
+  {
+   "canonical_carrier_id": "feature:road:way/1115662463",
+   "kind": "run",
+   "module_id": "bollard_curb_island",
+   "placement_id": "rule-1115662463-sidewalk_corner-R-g06",
+   "reason": "run stands on painted carriageway and no legal kerbside offset exists within 8.0 m",
+   "samples": 9,
+   "samples_on_carriageway": 9,
+   "source_run_epsg32654": [
+    379756.07448851486,
+    3938510.786575714,
+    379753.6305149068,
+    3938510.260274467
+   ]
+  },
+  {
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-S406-032",
+   "reason": "resolved pose stands on painted carriageway and no legal kerbside site exists within 8.0 m",
+   "source_lateral_offset_m": 0.311,
+   "source_pose_epsg32654": [
+    379748.901,
+    3938526.6
+   ],
+   "source_side": "L"
+  },
+  {
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "kind": "run",
+   "module_id": "bollard_curb_island",
+   "placement_id": "rule-456475384-sidewalk_corner-R-g01",
+   "reason": "run stands on painted carriageway and no legal kerbside offset exists within 8.0 m",
+   "samples": 9,
+   "samples_on_carriageway": 9,
+   "source_run_epsg32654": [
+    379754.67469554784,
+    3938512.7669302616,
+    379756.28648998437,
+    3938510.855878537
+   ]
+  },
+  {
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "module_id": "utility_pole_wire_cluster",
+   "placement_id": "obs-authored-SF-4876-0245",
+   "reason": "resolved pose stands on painted carriageway and no legal kerbside site exists within 8.0 m",
+   "source_lateral_offset_m": 0.922,
+   "source_pose_epsg32654": [
+    379750.8,
+    3938523.4
+   ],
+   "source_side": "L"
+  },
+  {
+   "canonical_carrier_id": "feature:road:way/456475384",
+   "module_id": "meter_and_service_cabinet",
+   "placement_id": "obs-authored-SF-4876-S406-030",
+   "reason": "resolved pose stands on painted carriageway and no legal kerbside site exists within 8.0 m",
+   "source_lateral_offset_m": 0.701,
+   "source_pose_epsg32654": [
+    379754.8,
+    3938519.0
+   ],
+   "source_side": "L"
+  }
+ ]
+}

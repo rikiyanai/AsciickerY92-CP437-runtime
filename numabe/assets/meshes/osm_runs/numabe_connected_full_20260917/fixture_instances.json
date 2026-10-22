@@ -1,0 +1,2297 @@
+[
+  {
+    "feature_id": "feature:crossing:node/13441692983",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_13441692983",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      807.0556041054273,
+      478.30003707647086
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      807.0556041054273,
+      478.30003707647086,
+      730.528,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/13441692984",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_13441692984",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      810.6155153935667,
+      464.0568866882087
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      810.6155153935667,
+      464.0568866882087,
+      735.915,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/13441692985",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_13441692985",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      824.7980007574226,
+      483.45082715257354
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      824.7980007574226,
+      483.45082715257354,
+      739.399,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/13441692986",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_13441692986",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      825.5282572022985,
+      468.6005322379401
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      825.5282572022985,
+      468.6005322379401,
+      745.164,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391077838",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391077838",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      952.6486284698818,
+      2101.8460792388673
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      952.6486284698818,
+      2101.8460792388673,
+      1078.0,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391077840",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391077840",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      971.4981357271744,
+      2140.9518997396
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      971.4981357271744,
+      2140.9518997396,
+      1074.0,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391077846",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391077846",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      1189.4525343720036,
+      1723.6628137845041
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1189.4525343720036,
+      1723.6628137845041,
+      1029.0,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391077850",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391077850",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      1154.289824974998,
+      1727.9692793400236
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1154.289824974998,
+      1727.9692793400236,
+      1033.842,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391077852",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391077852",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      1160.6603567401803,
+      1687.5752052849805
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1160.6603567401803,
+      1687.5752052849805,
+      1037.07,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391082562",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391082562",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      842.006011608783,
+      1156.0123161004178
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      842.006011608783,
+      1156.0123161004178,
+      681.012,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391082563",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391082563",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      805.2473911006778,
+      1173.093577770674
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      805.2473911006778,
+      1173.093577770674,
+      679.811,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391082564",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391082564",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      808.4423978778822,
+      1145.5710242193227
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      808.4423978778822,
+      1145.5710242193227,
+      651.007,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391082572",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391082572",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      1146.9997874933497,
+      950.9356152117934
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1146.9997874933497,
+      950.9356152117934,
+      869.234,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391082573",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391082573",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      837.0235972010161,
+      1182.040720331829
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      837.0235972010161,
+      1182.040720331829,
+      690.542,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/2391082579",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_2391082579",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      1120.726863990782,
+      980.0210801563475
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1120.726863990782,
+      980.0210801563475,
+      868.363,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9144072735",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9144072735",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      1050.9717665258142,
+      1915.984852718909
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1050.9717665258142,
+      1915.984852718909,
+      1066.0,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9963411819",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9963411819",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      112.31832474157089,
+      370.26505355241284
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      112.31832474157089,
+      370.26505355241284,
+      161.021,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9963411823",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9963411823",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      173.69725707077902,
+      321.08254588546146
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      173.69725707077902,
+      321.08254588546146,
+      172.849,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9963411825",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9963411825",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      258.4918708641659,
+      339.068832953105
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      258.4918708641659,
+      339.068832953105,
+      176.0,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9963411830",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9963411830",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      299.3963224318045,
+      383.38049895560647
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      299.3963224318045,
+      383.38049895560647,
+      184.907,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9963411831",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9963411831",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      328.4075893372305,
+      382.6478898321656
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      328.4075893372305,
+      382.6478898321656,
+      193.0,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9963411832",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9963411832",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      329.69579611926616,
+      411.51441685313364
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      329.69579611926616,
+      411.51441685313364,
+      190.885,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9963411837",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9963411837",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      580.0479055052049,
+      237.60878644753222
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      580.0479055052049,
+      237.60878644753222,
+      252.809,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:crossing:node/9963411838",
+    "flags": 3,
+    "inst_name": "fixture_feature_crossing_node_9963411838",
+    "mesh_name": "fixture_jp_pedestrian_crossing_marker.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "pedestrian_crossing_marker",
+    "source_control_world_xy": [
+      572.8829685692971,
+      232.80907638501324
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.pedestrian_crossing_marker_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      572.8829685692971,
+      232.80907638501324,
+      247.441,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/10669964997",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_10669964997",
+    "mesh_name": "fixture_jp_traffic_signal.akm",
+    "physical_offset_m": 4.25,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "amber_rgb": [
+        224,
+        176,
+        36
+      ],
+      "green_rgb": [
+        48,
+        168,
+        72
+      ],
+      "housing_rgb": [
+        48,
+        52,
+        48
+      ],
+      "intersection_corner_offset_m": 4.25,
+      "minimum_road_clearance_m": 2.25,
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        92,
+        96,
+        92
+      ],
+      "red_rgb": [
+        208,
+        44,
+        36
+      ],
+      "roadside_offset_m": 3.0,
+      "traffic_side": "left",
+      "visual_traits": [
+        "road_edge_placement",
+        "oriented_signal_face",
+        "three_aspect_signal"
+      ]
+    },
+    "road_centerline_clearance_m": 4.25,
+    "semantic_subtype": "traffic_signal",
+    "source_control_world_xy": [
+      344.5112030459671,
+      429.53323040849006
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.traffic_signal_v1",
+    "transform": [
+      -0.7722966860050516,
+      0.635262015852998,
+      0.0,
+      0.0,
+      -0.635262015852998,
+      -0.7722966860050516,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      355.7409169607932,
+      420.2960928831605,
+      685.449,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/10669964998",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_10669964998",
+    "mesh_name": "fixture_jp_traffic_signal.akm",
+    "physical_offset_m": 4.25,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "amber_rgb": [
+        224,
+        176,
+        36
+      ],
+      "green_rgb": [
+        48,
+        168,
+        72
+      ],
+      "housing_rgb": [
+        48,
+        52,
+        48
+      ],
+      "intersection_corner_offset_m": 4.25,
+      "minimum_road_clearance_m": 2.25,
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        92,
+        96,
+        92
+      ],
+      "red_rgb": [
+        208,
+        44,
+        36
+      ],
+      "roadside_offset_m": 3.0,
+      "traffic_side": "left",
+      "visual_traits": [
+        "road_edge_placement",
+        "oriented_signal_face",
+        "three_aspect_signal"
+      ]
+    },
+    "road_centerline_clearance_m": 4.247,
+    "semantic_subtype": "traffic_signal",
+    "source_control_world_xy": [
+      284.3227316113378,
+      371.5139245127177
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.traffic_signal_v1",
+    "transform": [
+      0.6185638094830161,
+      -0.7857345694303254,
+      0.0,
+      0.0,
+      0.7857345694303254,
+      0.6185638094830161,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      275.3283972519724,
+      382.93903430223963,
+      186.117,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/13441692978",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_13441692978",
+    "mesh_name": "fixture_jp_stop_sign.akm",
+    "physical_offset_m": 2.5,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "border_rgb": [
+        239,
+        238,
+        224
+      ],
+      "fill_rgb": [
+        197,
+        42,
+        43
+      ],
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        118,
+        122,
+        118
+      ],
+      "roadside_offset_m": 2.5,
+      "traffic_side": "left",
+      "visual_traits": [
+        "inverted_triangle",
+        "white_border",
+        "road_edge_placement"
+      ]
+    },
+    "road_centerline_clearance_m": 2.5,
+    "semantic_subtype": "stop_sign",
+    "source_control_world_xy": [
+      1118.4995835172183,
+      948.1307639525269
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.stop_sign_v1",
+    "transform": [
+      0.8516685245770097,
+      -0.5240808375096531,
+      0.0,
+      0.0,
+      0.5240808375096531,
+      0.8516685245770097,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1111.2149753405536,
+      952.6134041393909,
+      874.12,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/13441692979",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_13441692979",
+    "mesh_name": "fixture_jp_stop_sign.akm",
+    "physical_offset_m": 2.5,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "border_rgb": [
+        239,
+        238,
+        224
+      ],
+      "fill_rgb": [
+        197,
+        42,
+        43
+      ],
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        118,
+        122,
+        118
+      ],
+      "roadside_offset_m": 2.5,
+      "traffic_side": "left",
+      "visual_traits": [
+        "inverted_triangle",
+        "white_border",
+        "road_edge_placement"
+      ]
+    },
+    "road_centerline_clearance_m": 2.498,
+    "semantic_subtype": "stop_sign",
+    "source_control_world_xy": [
+      1143.881666143711,
+      986.5035746506097
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.stop_sign_v1",
+    "transform": [
+      -0.8188450467694249,
+      0.5740146247101883,
+      0.0,
+      0.0,
+      -0.5740146247101883,
+      -0.8188450467694249,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1150.8855240426285,
+      981.5938339380881,
+      893.922,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/13441692982",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_13441692982",
+    "mesh_name": "fixture_jp_stop_sign.akm",
+    "physical_offset_m": 2.5,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "border_rgb": [
+        239,
+        238,
+        224
+      ],
+      "fill_rgb": [
+        197,
+        42,
+        43
+      ],
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        118,
+        122,
+        118
+      ],
+      "roadside_offset_m": 2.5,
+      "traffic_side": "left",
+      "visual_traits": [
+        "inverted_triangle",
+        "white_border",
+        "road_edge_placement"
+      ]
+    },
+    "road_centerline_clearance_m": 2.5,
+    "semantic_subtype": "stop_sign",
+    "source_control_world_xy": [
+      803.182583645392,
+      455.4652179965912
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.stop_sign_v1",
+    "transform": [
+      0.7561951352216868,
+      -0.6543461755577508,
+      0.0,
+      0.0,
+      0.6543461755577508,
+      0.7561951352216868,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      796.7145915730938,
+      461.0620615610574,
+      722.715,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/2339219650",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_2339219650",
+    "mesh_name": "fixture_jp_bollard.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "bollard",
+    "source_control_world_xy": [
+      977.7945215748153,
+      1330.2207038241204
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.bollard_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      977.7945215748153,
+      1330.2207038241204,
+      994.642,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/2339232435",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_2339232435",
+    "mesh_name": "fixture_jp_public_telephone.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "public_telephone",
+    "source_control_world_xy": [
+      408.87703001676,
+      551.3749151262022
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.public_telephone_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      408.87703001676,
+      551.3749151262022,
+      245.687,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/2684631067",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_2684631067",
+    "mesh_name": "fixture_jp_public_telephone.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "public_telephone",
+    "source_control_world_xy": [
+      349.8016755244392,
+      240.02765907994535
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.public_telephone_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      349.8016755244392,
+      240.02765907994535,
+      170.0,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/2887270554",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_2887270554",
+    "mesh_name": "fixture_jp_bus_stop.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "bus_stop",
+    "source_control_world_xy": [
+      1035.7613875252334,
+      2158.836921758466
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.bus_stop_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1035.7613875252334,
+      2158.836921758466,
+      1068.069,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/2925408644",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_2925408644",
+    "mesh_name": "fixture_jp_post_box.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "body_rgb": [
+        188,
+        37,
+        42
+      ],
+      "pole_rgb": [
+        104,
+        108,
+        104
+      ],
+      "slot_rgb": [
+        55,
+        45,
+        42
+      ],
+      "visual_traits": [
+        "pole_mounted_box",
+        "raised_mail_slot",
+        "red_jp_post_box"
+      ]
+    },
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "post_box",
+    "source_control_world_xy": [
+      1148.8485284942585,
+      1772.9054747655232
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.post_box_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1148.8485284942585,
+      1772.9054747655232,
+      1040.836,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/302046711",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_302046711",
+    "mesh_name": "fixture_jp_traffic_signal.akm",
+    "physical_offset_m": 4.25,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "amber_rgb": [
+        224,
+        176,
+        36
+      ],
+      "green_rgb": [
+        48,
+        168,
+        72
+      ],
+      "housing_rgb": [
+        48,
+        52,
+        48
+      ],
+      "intersection_corner_offset_m": 4.25,
+      "minimum_road_clearance_m": 2.25,
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        92,
+        96,
+        92
+      ],
+      "red_rgb": [
+        208,
+        44,
+        36
+      ],
+      "roadside_offset_m": 3.0,
+      "traffic_side": "left",
+      "visual_traits": [
+        "road_edge_placement",
+        "oriented_signal_face",
+        "three_aspect_signal"
+      ]
+    },
+    "road_centerline_clearance_m": 4.25,
+    "semantic_subtype": "traffic_signal",
+    "source_control_world_xy": [
+      352.35958558288996,
+      367.7123446134674
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.traffic_signal_v1",
+    "transform": [
+      0.5174603790193635,
+      0.8557071672862958,
+      0.0,
+      0.0,
+      -0.8557071672862958,
+      0.5174603790193635,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      344.8353631901929,
+      355.26978612833557,
+      192.053,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/354761385",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_354761385",
+    "mesh_name": "fixture_jp_traffic_signal.akm",
+    "physical_offset_m": 4.25,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "amber_rgb": [
+        224,
+        176,
+        36
+      ],
+      "green_rgb": [
+        48,
+        168,
+        72
+      ],
+      "housing_rgb": [
+        48,
+        52,
+        48
+      ],
+      "intersection_corner_offset_m": 4.25,
+      "minimum_road_clearance_m": 2.25,
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        92,
+        96,
+        92
+      ],
+      "red_rgb": [
+        208,
+        44,
+        36
+      ],
+      "roadside_offset_m": 3.0,
+      "traffic_side": "left",
+      "visual_traits": [
+        "road_edge_placement",
+        "oriented_signal_face",
+        "three_aspect_signal"
+      ]
+    },
+    "road_centerline_clearance_m": 2.859,
+    "semantic_subtype": "traffic_signal",
+    "source_control_world_xy": [
+      821.5927735050922,
+      1162.0183489331114
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.traffic_signal_v1",
+    "transform": [
+      -0.28225885516599886,
+      -0.9593382816714757,
+      0.0,
+      0.0,
+      0.9593382816714757,
+      -0.28225885516599886,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      818.17243193471,
+      1176.1510219928198,
+      691.436,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/441509765",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_441509765",
+    "mesh_name": "fixture_jp_traffic_signal.akm",
+    "physical_offset_m": 4.25,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "amber_rgb": [
+        224,
+        176,
+        36
+      ],
+      "green_rgb": [
+        48,
+        168,
+        72
+      ],
+      "housing_rgb": [
+        48,
+        52,
+        48
+      ],
+      "intersection_corner_offset_m": 4.25,
+      "minimum_road_clearance_m": 2.25,
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        92,
+        96,
+        92
+      ],
+      "red_rgb": [
+        208,
+        44,
+        36
+      ],
+      "roadside_offset_m": 3.0,
+      "traffic_side": "left",
+      "visual_traits": [
+        "road_edge_placement",
+        "oriented_signal_face",
+        "three_aspect_signal"
+      ]
+    },
+    "road_centerline_clearance_m": 3.256,
+    "semantic_subtype": "traffic_signal",
+    "source_control_world_xy": [
+      1171.9177393015418,
+      1701.6190025758176
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.traffic_signal_v1",
+    "transform": [
+      0.7802628540472166,
+      -0.6254517396203259,
+      0.0,
+      0.0,
+      0.6254517396203259,
+      0.7802628540472166,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      1157.380720621568,
+      1701.2930084519785,
+      1035.0,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/442165549",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_442165549",
+    "mesh_name": "fixture_jp_traffic_signal.akm",
+    "physical_offset_m": 4.25,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "amber_rgb": [
+        224,
+        176,
+        36
+      ],
+      "green_rgb": [
+        48,
+        168,
+        72
+      ],
+      "housing_rgb": [
+        48,
+        52,
+        48
+      ],
+      "intersection_corner_offset_m": 4.25,
+      "minimum_road_clearance_m": 2.25,
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        92,
+        96,
+        92
+      ],
+      "red_rgb": [
+        208,
+        44,
+        36
+      ],
+      "roadside_offset_m": 3.0,
+      "traffic_side": "left",
+      "visual_traits": [
+        "road_edge_placement",
+        "oriented_signal_face",
+        "three_aspect_signal"
+      ]
+    },
+    "road_centerline_clearance_m": 3.567,
+    "semantic_subtype": "traffic_signal",
+    "source_control_world_xy": [
+      579.9552128064068,
+      228.42488606978867
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.traffic_signal_v1",
+    "transform": [
+      -0.9999490700146318,
+      0.0100924415714333,
+      0.0,
+      0.0,
+      -0.0100924415714333,
+      -0.9999490700146318,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      592.6205395070258,
+      235.56776250980076,
+      255.851,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/442291348",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_442291348",
+    "mesh_name": "fixture_jp_post_box.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "body_rgb": [
+        188,
+        37,
+        42
+      ],
+      "pole_rgb": [
+        104,
+        108,
+        104
+      ],
+      "slot_rgb": [
+        55,
+        45,
+        42
+      ],
+      "visual_traits": [
+        "pole_mounted_box",
+        "raised_mail_slot",
+        "red_jp_post_box"
+      ]
+    },
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "post_box",
+    "source_control_world_xy": [
+      343.312406739419,
+      250.85642680413613
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.post_box_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      343.312406739419,
+      250.85642680413613,
+      169.719,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:node/9985945729",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_node_9985945729",
+    "mesh_name": "fixture_jp_traffic_signal.akm",
+    "physical_offset_m": 4.25,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "derived from nearest road frame",
+      "position": "derived roadside position from logical OSM control point; nearest-road residual=0.000m",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "amber_rgb": [
+        224,
+        176,
+        36
+      ],
+      "green_rgb": [
+        48,
+        168,
+        72
+      ],
+      "housing_rgb": [
+        48,
+        52,
+        48
+      ],
+      "intersection_corner_offset_m": 4.25,
+      "minimum_road_clearance_m": 2.25,
+      "placement_mode": "roadside_from_logical_control",
+      "pole_rgb": [
+        92,
+        96,
+        92
+      ],
+      "red_rgb": [
+        208,
+        44,
+        36
+      ],
+      "roadside_offset_m": 3.0,
+      "traffic_side": "left",
+      "visual_traits": [
+        "road_edge_placement",
+        "oriented_signal_face",
+        "three_aspect_signal"
+      ]
+    },
+    "road_centerline_clearance_m": 4.25,
+    "semantic_subtype": "traffic_signal",
+    "source_control_world_xy": [
+      982.0150561797609,
+      2049.3004354434556
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.traffic_signal_v1",
+    "transform": [
+      0.879401878745915,
+      0.47608017776227035,
+      0.0,
+      0.0,
+      -0.47608017776227035,
+      0.879401878745915,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      969.2279606328915,
+      2042.3779090443784,
+      1078.386,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:fixture:way/1304205919",
+    "flags": 3,
+    "inst_name": "fixture_feature_fixture_way_1304205919",
+    "mesh_name": "fixture_jp_bicycle_parking_rack.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {},
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "bicycle_parking",
+    "source_control_world_xy": [
+      219.62882141750774,
+      285.77227953203885
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.bicycle_parking_rack_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      219.62882141750774,
+      285.77227953203885,
+      180.701,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:sign:node/2340149659",
+    "flags": 3,
+    "inst_name": "fixture_feature_sign_node_2340149659",
+    "mesh_name": "fixture_jp_information_board.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "panel_rgb": [
+        209,
+        190,
+        151
+      ],
+      "roof_rgb": [
+        91,
+        71,
+        49
+      ],
+      "timber_rgb": [
+        166,
+        132,
+        87
+      ],
+      "visual_traits": [
+        "wide_wooden_board",
+        "dual_wood_posts",
+        "pitched_gable_roof"
+      ]
+    },
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "information_board",
+    "source_control_world_xy": [
+      377.8147567907617,
+      544.8476998162497
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.information_board_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      377.8147567907617,
+      544.8476998162497,
+      242.424,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:sign:node/6282556210",
+    "flags": 3,
+    "inst_name": "fixture_feature_sign_node_6282556210",
+    "mesh_name": "fixture_jp_information_board.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "panel_rgb": [
+        209,
+        190,
+        151
+      ],
+      "roof_rgb": [
+        91,
+        71,
+        49
+      ],
+      "timber_rgb": [
+        166,
+        132,
+        87
+      ],
+      "visual_traits": [
+        "wide_wooden_board",
+        "dual_wood_posts",
+        "pitched_gable_roof"
+      ]
+    },
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "information_board",
+    "source_control_world_xy": [
+      344.3072861929398,
+      570.8431020059072
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.information_board_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      344.3072861929398,
+      570.8431020059072,
+      250.729,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:sign:node/6282556211",
+    "flags": 3,
+    "inst_name": "fixture_feature_sign_node_6282556211",
+    "mesh_name": "fixture_jp_information_board.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "panel_rgb": [
+        209,
+        190,
+        151
+      ],
+      "roof_rgb": [
+        91,
+        71,
+        49
+      ],
+      "timber_rgb": [
+        166,
+        132,
+        87
+      ],
+      "visual_traits": [
+        "wide_wooden_board",
+        "dual_wood_posts",
+        "pitched_gable_roof"
+      ]
+    },
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "information_board",
+    "source_control_world_xy": [
+      303.53891880224245,
+      292.76361345511464
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.information_board_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      303.53891880224245,
+      292.76361345511464,
+      166.382,
+      1.0
+    ]
+  },
+  {
+    "feature_id": "feature:sign:node/6282556212",
+    "flags": 3,
+    "inst_name": "fixture_feature_sign_node_6282556212",
+    "mesh_name": "fixture_jp_information_board.akm",
+    "physical_offset_m": 0.0,
+    "provenance": {
+      "collision": "none; alpha=255",
+      "identity": "derived from OSM tags",
+      "orientation": "synthesized zero yaw; source carries no usable bearing",
+      "position": "measured OSM geometry",
+      "rendering_geometry": "synthesized locale archetype"
+    },
+    "resolved_parameters": {
+      "panel_rgb": [
+        209,
+        190,
+        151
+      ],
+      "roof_rgb": [
+        91,
+        71,
+        49
+      ],
+      "timber_rgb": [
+        166,
+        132,
+        87
+      ],
+      "visual_traits": [
+        "wide_wooden_board",
+        "dual_wood_posts",
+        "pitched_gable_roof"
+      ]
+    },
+    "road_centerline_clearance_m": null,
+    "semantic_subtype": "information_board",
+    "source_control_world_xy": [
+      381.87552183411555,
+      542.4777112039721
+    ],
+    "story_id": -1,
+    "template_id": "jp.urban.information_board_v1",
+    "transform": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      16.0,
+      0.0,
+      381.87552183411555,
+      542.4777112039721,
+      242.239,
+      1.0
+    ]
+  }
+]

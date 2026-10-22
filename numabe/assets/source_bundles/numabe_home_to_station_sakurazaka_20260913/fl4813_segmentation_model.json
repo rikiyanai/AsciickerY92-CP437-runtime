@@ -1,0 +1,8 @@
+{
+  "schema": "y92.segmentation_model.v1",
+  "id": "facebook/sam2.1-hiera-tiny",
+  "revision": "de431c4043854a71d8101e17995dfe596bf101a5",
+  "license": "Apache-2.0",
+  "source_uri": "https://huggingface.co/facebook/sam2.1-hiera-tiny/tree/de431c4043854a71d8101e17995dfe596bf101a5",
+  "weights_sha256": "48c14467e5cf9e51870511feb72c89688e82dd74523142c0538b663e193ac2a7"
+}

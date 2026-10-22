@@ -1,0 +1,1538 @@
+{
+  "excluded": [
+    {
+      "feature_id": "feature:road:way/225098135",
+      "reason": "non-ground structure"
+    },
+    {
+      "feature_id": "feature:terrain:way/266759693",
+      "reason": "non-ground structure"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878138",
+      "reason": "non-ground structure"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878140",
+      "reason": "non-ground structure"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878144",
+      "reason": "non-ground structure"
+    },
+    {
+      "feature_id": "feature:terrain:way/1268595562",
+      "reason": "non-ground structure"
+    },
+    {
+      "feature_id": "feature:terrain:way/1268595563",
+      "reason": "non-ground structure"
+    }
+  ],
+  "features": [
+    {
+      "feature_id": "feature:road:way/23990281",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/23990281"
+      ],
+      "role": "road_tertiary",
+      "width_m": 5.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/24475081",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/24475081"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/27073255",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/27073255"
+      ],
+      "role": "road_primary",
+      "width_m": 6.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/31706445",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/31706445"
+      ],
+      "role": "road_tertiary",
+      "width_m": 5.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/31993395",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/31993395"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/31993399",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/31993399"
+      ],
+      "role": "road_tertiary",
+      "width_m": 5.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/31993400",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/31993400"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/37661730",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/37661730"
+      ],
+      "role": "road_tertiary",
+      "width_m": 5.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/37661731",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/37661731"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/37661732",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/37661732"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/37708746",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/37708746"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/37708747",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/37708747"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/37708748",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/37708748"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/114097315",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/114097315"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/126233940",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/126233940"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/126233952",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/126233952"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/126233956",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/126233956"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/126233962",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/126233962"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/126233970",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/126233970"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/126234006",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/126234006"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/126234012",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/126234012"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/152855008",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/152855008"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/196858614",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/196858614"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/199578447",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/199578447"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/199578448",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/199578448"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/200087061",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/200087061"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/200087062",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/200087062"
+      ],
+      "role": "steps",
+      "width_m": 1.5,
+      "width_provenance": "OSM width tag"
+    },
+    {
+      "feature_id": "feature:road:way/225098134",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/225098134"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/225098962",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/225098962"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/225100142",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/225100142"
+      ],
+      "role": "steps",
+      "width_m": 1.5,
+      "width_provenance": "OSM width tag"
+    },
+    {
+      "feature_id": "feature:road:way/225104982",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/225104982"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/225194669",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/225194669"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:terrain:way/225198783",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/225198783"
+      ],
+      "role": "water",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/225201667",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/225201667"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/225201822",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/225201822"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/229865708",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/229865708"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/233636148",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/233636148"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/233636150",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/233636150"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/264238102",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/264238102"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/264753664",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/264753664"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/264753665",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/264753665"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/264844671",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/264844671"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/264844672",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/264844672"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/264847040",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/264847040"
+      ],
+      "role": "footway",
+      "width_m": 1.6,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/285885323",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/285885323"
+      ],
+      "role": "road_primary",
+      "width_m": 6.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/285885337",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/285885337"
+      ],
+      "role": "road_tertiary",
+      "width_m": 5.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/288994921",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/288994921"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/289192819",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/289192819"
+      ],
+      "role": "parking",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/289197221",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/289197221"
+      ],
+      "role": "parking",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/456475366",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/456475366"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/456475384",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/456475384"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/456475385",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/456475385"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/456475386",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/456475386"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/670892441",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/670892441"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/670892442",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/670892442"
+      ],
+      "role": "road_tertiary",
+      "width_m": 5.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878139",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/796878139"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878141",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/796878141"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/796878145",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/796878145"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/989310374",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/989310374"
+      ],
+      "role": "parking",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1038001322",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1038001322"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1038001323",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1038001323"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1038001324",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1038001324"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/1059458086",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1059458086"
+      ],
+      "role": "road_primary",
+      "width_m": 6.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1087430624",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1087430624"
+      ],
+      "role": "footway",
+      "width_m": 1.6,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1087430625",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1087430625"
+      ],
+      "role": "footway",
+      "width_m": 1.6,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:way/1087430626",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1087430626"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1087430627",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1087430627"
+      ],
+      "role": "footway",
+      "width_m": 1.6,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:way/1087430628",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1087430628"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:way/1087430629",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1087430629"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1087430630",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1087430630"
+      ],
+      "role": "footway",
+      "width_m": 1.6,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:way/1087430631",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1087430631"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/1090211362",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1090211362"
+      ],
+      "role": "road_tertiary",
+      "width_m": 5.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/1115662463",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1115662463"
+      ],
+      "role": "road_primary",
+      "width_m": 6.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1126040241",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1126040241"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:terrain:way/1268595560",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1268595560"
+      ],
+      "role": "water",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:terrain:way/1268595561",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1268595561"
+      ],
+      "role": "water",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:railway_boundary:way/1304205922",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1304205922"
+      ],
+      "role": "railway",
+      "width_m": 3.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1455022086",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1455022086"
+      ],
+      "role": "footway",
+      "width_m": 1.6,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:way/1455022087",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1455022087"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1455022088",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1455022088"
+      ],
+      "role": "footway",
+      "width_m": 1.6,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:way/1455022097",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1455022097"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:way/1455022107",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1455022107"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:sidewalk:way/1455022108",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:way/1455022108"
+      ],
+      "role": "footway",
+      "width_m": 1.6,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/1465498421",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/1465498421"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/1465498422",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/1465498422"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:road:way/1465498423",
+      "generated_components": [
+        {
+          "authority": "presentation_only",
+          "kind": "residential_edge_strip",
+          "provenance": "synthesized Tokyo residential street prior",
+          "role": "footway",
+          "total_width_m": 4.7,
+          "visible_each_side_m": 0.6
+        }
+      ],
+      "observation_ids": [
+        "obs:osm:way/1465498423"
+      ],
+      "role": "road_residential",
+      "width_m": 3.5,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391077838",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391077838"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391077840",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391077840"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391077846",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391077846"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391077850",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391077850"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391077852",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391077852"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391082562",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391082562"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391082563",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391082563"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391082564",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391082564"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391082572",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391082572"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391082573",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391082573"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/2391082579",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/2391082579"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9144072735",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9144072735"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9963411819",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9963411819"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9963411823",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9963411823"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9963411825",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9963411825"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9963411830",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9963411830"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9963411831",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9963411831"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9963411832",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9963411832"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9963411837",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9963411837"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/9963411838",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/9963411838"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/13441692983",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/13441692983"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/13441692984",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/13441692984"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/13441692985",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/13441692985"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    },
+    {
+      "feature_id": "feature:crossing:node/13441692986",
+      "generated_components": [],
+      "observation_ids": [
+        "obs:osm:node/13441692986"
+      ],
+      "role": "crossing",
+      "width_m": 2.0,
+      "width_provenance": "synthesized semantic width prior"
+    }
+  ],
+  "height_changed": false,
+  "materials_written": 56,
+  "render_features": 152,
+  "roles": {
+    "cells_restamped": 3285504,
+    "per_role": {
+      "crossing": 3201,
+      "footway": 65729,
+      "land": 2819733,
+      "parking": 6066,
+      "railway": 94359,
+      "road_primary": 45167,
+      "road_residential": 167993,
+      "road_tertiary": 78484,
+      "steps": 212,
+      "water": 4560
+    },
+    "records": 3285504,
+    "skipped_no_patch": 0,
+    "skipped_owned_by_later_stage": 0,
+    "skipped_unmapped_role": 0
+  },
+  "schema": "y92.world_ir_surface_stamp.v1",
+  "synthesized_road_edge_strips": 42,
+  "unobserved_land_appearance": "synthesized neutral ground",
+  "world_ir": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/osm.world_ir.json"
+}

@@ -1,0 +1,356 @@
+{
+  "version": "godot-proof-pose-registry.v1",
+  "owner": "config/godot_proof_pose_registry.json",
+  "owned_truth": "single machine-readable owner for Godot proof scripts, proof routes, diagnostic poses, spawn identities, and non-executable proof markers",
+  "supersedes": [
+    {
+      "path": "scripts/godot_proof_poses.py",
+      "new_role": "compatibility reader for legacy terrain location APIs"
+    }
+  ],
+  "docs": {
+    "reader": "docs/agent/godot-proof-pose-registry.md",
+    "canonical_proof_index": "docs/proofs/README.md",
+    "canonical_proof_index_json": "docs/proofs/index.json",
+    "failure_log": "docs/FAILURE_LOG.md",
+    "canonical_requirements": [
+      "docs/plans/2026-03-22-multiplayer-canonical-spec.md:RQ-195",
+      "docs/plans/2026-03-22-multiplayer-canonical-spec.md:RQ-196",
+      "docs/plans/GODOT_GOAL.MD:RQ-195",
+      "docs/plans/GODOT_GOAL.MD:RQ-196"
+    ]
+  },
+  "canonical_proof_index": {
+    "owner": "config/godot_proof_pose_registry.json",
+    "reader": "docs/proofs/README.md",
+    "generated_json": "docs/proofs/index.json",
+    "generator": "scripts/build_godot_canonical_proof_index.py",
+    "contract": "Generated/read-only discovery surface for the registry. Do not edit it as a second proof inventory.",
+    "evidence_query_commands": [
+      "python3 scripts/analyze_runs.py fl context FL-4781 --task \"canonical proof inventory\"",
+      "python3 scripts/analyze_runs.py fl context FL-4359 --task \"camera turn airplane strafe canonical proof receipts\"",
+      "rg -n \"source_shimmer-jitter.gif|fl4359_ground_turn_current_20260702-190000|fl4359_groundspeed_tier_current_20260702-184200|tower_strafe_normal|ghost_pulse_receipt|source_shimmer\" docs/FAILURE_LOG.md config/godot_proof_pose_registry.json"
+    ],
+    "unresolved_retrieval": [
+      {
+        "id": "camera_turn_successful_execution_receipt",
+        "status": "execution-evidence-unrecovered",
+        "protocol_ref": "route.r27_canonical_ground_turn_five_capture",
+        "do_not_substitute": [".run/fl4359_ground_turn_current_20260702-190000", "route.r20_canonical_movement_grid"],
+        "known_evidence": ["Protocol ground_turn_perspective recovered from operator-derived120move/8turn/5capture preflight and current wrapper scenario. Protocol identity is not missing.", "search=Phase on-foot route preflight result", "search=GPT55_CAMERA_TURN_PROTOCOL_RECOVERY_20260913", "Historical fl4359_ground_turn_current_20260702-190000 remains separate18-turn evidence."],
+        "next_action": "Recover an exact successful five-capture execution receipt separately; reconcile the current full-grid capture adapter without changing the recovered protocol or treating failed/unexecuted proof as absent designation."
+      }
+    ],
+    "recovered_lineage_by_identity": {
+      "route.r07_operator_walk_strafe_tower": {
+        "lineage": ["FL-4431 operator tower_strafe route", "search=tower_strafe_normal", "run_id=.run/fl4359_pulse_witness_0cd6a8bd5/tower_strafe_normal/ghost_pulse_receipt.json", "docs/FAILURE_LOG.md:160131"],
+        "distinction": "operator-designated strafe/movement route; spatial pose is not by itself temporal proof coverage"
+      },
+      "route.r08_operator_scripted_airborne_airplane_movement": {
+        "lineage": ["media=source_shimmer-jitter.gif", "build=e2a9b12cf", "search=source_shimmer-jitter.gif", "docs/FAILURE_LOG.md:165659", "docs/FAILURE_LOG.md:165852"],
+        "distinction": "sole recovered FL-4359 airplane proof pose authority; FL-4265 spawn ancestry is not the airplane trajectory"
+      },
+      "route.r13_operator_site3_pieta_head_eyes": {
+        "lineage": ["FL-4743 Site3 wording", "FL-4652 subject record", "pose.pieta_operator_hud_mark"],
+        "distinction": "operator-designated subject with missing executable Godot pose"
+      },
+      "route.r20_canonical_movement_grid": {
+        "lineage": ["FL-4408 original-bug-lanes manifest", "search=fl4359_groundspeed_tier_current_20260702-184200", "search=fl4359_ground_turn_current_20260702-190000", ".run/fl4359_groundspeed_tier_current_20260702-184200", ".run/fl4359_ground_turn_current_20260702-190000"],
+        "distinction": "canonical-historical movement evidence; distinct from the recovered R27 five-capture camera-turn protocol"
+      },
+      "route.r24_operator_foliage_seed": {
+        "lineage": ["FL-4216 successor-proof manifest"],
+        "distinction": "operator-designated seed but rejected-conflicted incomplete route"
+      },
+      "route.r25_canonical_airplane_air_grid": {
+        "lineage": ["FL-4408 original-bug-lanes manifest"],
+        "distinction": "canonical-historical airplane grid route; keep distinct from operator-designated FL-4359 airplane movement"
+      },
+      "temporal.camera_turn_five_frame": {
+        "lineage": ["scripts/run_godot_visual_owner_proof.py:ground_turn_perspective", "search=Phase on-foot route preflight result", "search=PROCESS FAILURE — SINGLE-ROUTE COLLAPSE", "search=GPT55_CAMERA_TURN_PROTOCOL_RECOVERY_20260913"],
+        "distinction": "Recovered canonical five-capture turn protocol; eight turn-input frames do not mean eight proof captures. Successful exact runtime receipt remains unrecovered."
+      },
+      "route.r27_canonical_ground_turn_five_capture": {
+        "lineage": ["scripts/run_godot_visual_owner_proof.py:ground_turn_perspective", "docs/FAILURE_LOG.md:Phase on-foot route preflight result", "docs/FAILURE_LOG.md:PROCESS FAILURE — SINGLE-ROUTE COLLAPSE", "docs/FAILURE_LOG.md:GPT55_CAMERA_TURN_PROTOCOL_RECOVERY_20260913"],
+        "distinction": "Operator-required camera-turn surface with recovered canonical120move/8turn/5capture protocol, distinct from a successful execution receipt and from the historical18-turn run."
+      }
+    }
+  },
+  "defaults": {
+    "legacy_default_yaws": "0,30,60,90,120,150,180,210,240,270,300,330",
+    "legacy_default_location_set": "flat_default,elevated_grass",
+    "godot_project": "godot_project",
+    "main_scene": "godot_project/scenes/Main.tscn",
+    "main_menu_scene": "godot_project/scenes/ui/MainMenu.tscn"
+  },
+  "publication_classifications": {
+    "owner": "config/godot_proof_pose_registry.json",
+    "scope": "registered Godot proof producers only; audit discovery outside this registry remains incomplete",
+    "states": {
+      "SHARED_PUBLICATION_INTEGRATED": "emits a godot-proof-publication.v1 manifest at its delivery boundary",
+      "SHARED_PUBLICATION_DIAGNOSTIC_ONLY": "emits and validates a shared manifest and Finder tags, but records INCOMPLETE_CURRENT_CAPTURE and cannot be delivered as attested proof",
+      "PENDING_SHARED_PUBLICATION": "known producer; it must integrate the shared publisher before a new delivery is claimed",
+      "INAPPLICABLE_STATIC_CONTRACT": "static reader or contract test; it emits no proof artifact package"
+    },
+    "by_source_path": {
+      "godot_project/scripts/proofs/FL4350ProofGridOverlay.gd": "PENDING_SHARED_PUBLICATION",
+      "godot_project/tools/proofs/run_fl4265_airplane_dogfight_proof.gd": "PENDING_SHARED_PUBLICATION",
+      "godot_project/tools/proofs/run_fl4270_view_mode_capture.gd": "PENDING_SHARED_PUBLICATION",
+      "godot_project/tools/proofs/run_fl4359_static_capture.gd": "PENDING_SHARED_PUBLICATION",
+      "godot_project/tools/proofs/run_fl4359_walk_capture.gd": "PENDING_SHARED_PUBLICATION",
+      "scripts/run_fl4265_airplane_proof.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/run_fl4265_hunter_catch.py": "SHARED_PUBLICATION_INTEGRATED",
+      "scripts/run_fl4346_actor_presentation_proof.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/run_fl4359_acceptance_package.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/run_fl4359_card_chroma_pose_capture.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/run_fl4359_headed_movement.py": "SHARED_PUBLICATION_DIAGNOSTIC_ONLY",
+      "scripts/run_fl4359_phase2a_capture.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/run_fl4431_baseline_receipt_v2_bootstrap.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/run_fl4431_perf_visual_runner.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/run_godot_visual_owner_proof.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/check_fl4216_shoreline_break_behavior.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/check_fl4743_waterfall_behavior.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/check_fl4782_flow_field_static.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/fl4359_geometry_parity_gate.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/fl4359_mesh_presence_gate.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/fl4359_owner_churn_gate.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/fl4359_presence_proof_gate.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/fl4359_product_identity_churn_gate.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/measure_true_ff_text_flips.py": "SHARED_PUBLICATION_INTEGRATED",
+      "scripts/fl4359_proof_sensitivity_gate.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/godot_feature_regression_gate.py": "PENDING_SHARED_PUBLICATION",
+      "scripts/build_godot_canonical_png_grid.py": "SHARED_PUBLICATION_DIAGNOSTIC_ONLY",
+      "scripts/publish_godot_labeled_media.py": "SHARED_PUBLICATION_DIAGNOSTIC_ONLY"
+    }
+  },
+  "proof_scripts": [
+    {"id": "proof.fl4350_grid_overlay", "kind": "godot_runtime_proof", "menu_group": "renderer", "source_path": "godot_project/scripts/proofs/FL4350ProofGridOverlay.gd", "fl_refs": ["FL-4350"], "rq_refs": ["RQ-195", "RQ-197"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4265_airplane_dogfight_gd", "kind": "godot_runtime_proof", "menu_group": "aircraft", "source_path": "godot_project/tools/proofs/run_fl4265_airplane_dogfight_proof.gd", "fl_refs": ["FL-4265"], "rq_refs": ["RQ-195"], "pose_refs": ["pose.fl4265_canonical_airplane_spawn", "pose.fl4265_npc_crash_spawn"], "status": "source-present"},
+    {"id": "proof.fl4270_view_mode_capture", "kind": "godot_runtime_proof", "menu_group": "camera", "source_path": "godot_project/tools/proofs/run_fl4270_view_mode_capture.gd", "fl_refs": ["FL-4270"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4359_static_capture", "kind": "godot_runtime_proof", "menu_group": "capture", "source_path": "godot_project/tools/proofs/run_fl4359_static_capture.gd", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4359_walk_capture", "kind": "godot_runtime_proof", "menu_group": "capture", "source_path": "godot_project/tools/proofs/run_fl4359_walk_capture.gd", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4359_o1_capture_lifecycle_invariants", "kind": "godot_static_contract", "menu_group": "capture", "source_path": "godot_project/scripts/tests/test_fl4359_o1_capture_lifecycle_invariants.gd", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4359_product_mask_capture_abi", "kind": "godot_static_contract", "menu_group": "capture", "source_path": "godot_project/scripts/tests/test_fl4359_product_mask_capture_abi.gd", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4359_sparse_capture_lifecycle", "kind": "godot_static_contract", "menu_group": "capture", "source_path": "godot_project/scripts/tests/test_fl4359_sparse_capture_lifecycle.gd", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.scene_geometry_probe_draw_receipt", "kind": "godot_static_contract", "menu_group": "scene", "source_path": "godot_project/scripts/tests/test_scene_geometry_probe_draw_receipt.gd", "fl_refs": [], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4265_airplane_py", "kind": "godot_launcher_proof", "menu_group": "aircraft", "source_path": "scripts/run_fl4265_airplane_proof.py", "fl_refs": ["FL-4265"], "rq_refs": ["RQ-195"], "pose_refs": ["pose.fl4265_canonical_airplane_spawn", "pose.fl4265_npc_crash_spawn"], "status": "source-present"},
+    {"id": "proof.fl4265_hunter_catch", "kind": "godot_launcher_proof", "menu_group": "aircraft", "source_path": "scripts/run_fl4265_hunter_catch.py", "fl_refs": ["FL-4265", "FL-4877"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present", "execution_boundary": "Existing live walk/physical M boarding/hunter chase/closeup producer. Source-integrated shared publication is not visual acceptance or an FL-4359 temporal route. Captures record actual dynamic poses and PixelCamera identity; no invented static pose."},
+    {"id": "proof.fl4346_actor_presentation", "kind": "godot_launcher_proof", "menu_group": "actor", "source_path": "scripts/run_fl4346_actor_presentation_proof.py", "fl_refs": ["FL-4346"], "rq_refs": ["RQ-194", "RQ-195"], "pose_refs": ["route.r22_canonical_actor_water_phases"], "status": "source-present"},
+    {"id": "proof.fl4359_acceptance_package", "kind": "receipt_builder", "menu_group": "acceptance", "source_path": "scripts/run_fl4359_acceptance_package.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4359_card_chroma_pose_capture", "kind": "godot_launcher_proof", "menu_group": "capture", "source_path": "scripts/run_fl4359_card_chroma_pose_capture.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4359_headed_movement", "kind": "godot_launcher_proof", "menu_group": "movement", "source_path": "scripts/run_fl4359_headed_movement.py", "fl_refs": ["FL-4359", "FL-4265", "FL-4431"], "rq_refs": ["RQ-195"], "pose_refs": ["pose.tower_strafe_f3_route", "pose.fl4359_default_airplane_spawn"], "status": "source-present"},
+    {"id": "proof.godot_canonical_png_grid_builder", "kind": "receipt_builder", "menu_group": "acceptance", "source_path": "scripts/build_godot_canonical_png_grid.py", "fl_refs": ["FL-4431"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.godot_labeled_media_builder", "kind": "receipt_builder", "menu_group": "acceptance", "source_path": "scripts/publish_godot_labeled_media.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4359_phase2a_capture", "kind": "godot_launcher_proof", "menu_group": "capture", "source_path": "scripts/run_fl4359_phase2a_capture.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.fl4431_baseline_receipt_v2_bootstrap", "kind": "receipt_builder", "menu_group": "baseline", "source_path": "scripts/run_fl4431_baseline_receipt_v2_bootstrap.py", "fl_refs": ["FL-4431"], "rq_refs": ["RQ-195"], "pose_refs": ["route.r17_canonical_night_lighthouse_beam", "route.r20_canonical_movement_grid", "route.r25_canonical_airplane_air_grid", "route.r26_canonical_terrain_water_static"], "status": "source-present"},
+    {"id": "proof.fl4431_perf_visual_runner", "kind": "godot_launcher_proof", "menu_group": "performance", "source_path": "scripts/run_fl4431_perf_visual_runner.py", "fl_refs": ["FL-4431"], "rq_refs": ["RQ-195"], "pose_refs": ["route.r07_operator_walk_strafe_tower", "route.r08_operator_scripted_airborne_airplane_movement"], "status": "source-present"},
+    {"id": "proof.godot_visual_owner", "kind": "godot_launcher_proof", "menu_group": "visual-owner", "source_path": "scripts/run_godot_visual_owner_proof.py", "fl_refs": [], "rq_refs": ["RQ-195"], "pose_refs": ["route.r21_canonical_wake_leaf_bird"], "status": "source-present"},
+    {"id": "gate.fl4216_shoreline_break_behavior", "kind": "gate", "menu_group": "water", "source_path": "scripts/check_fl4216_shoreline_break_behavior.py", "fl_refs": ["FL-4216"], "rq_refs": ["RQ-195"], "pose_refs": ["pose.water_shore_flat_line", "pose.water_shore_grass_context"], "status": "source-present"},
+    {"id": "gate.fl4743_waterfall_behavior", "kind": "gate", "menu_group": "waterfall", "source_path": "scripts/check_fl4743_waterfall_behavior.py", "fl_refs": ["FL-4743"], "rq_refs": ["RQ-195"], "pose_refs": ["route.r11_operator_site1_waterfall_headland", "route.r12_operator_site2_waterfall_seastack", "route.r13_operator_site3_pieta_head_eyes"], "status": "source-present"},
+    {"id": "gate.fl4782_flow_field_static", "kind": "gate", "menu_group": "waterfall", "source_path": "scripts/check_fl4782_flow_field_static.py", "fl_refs": ["FL-4782", "FL-4743"], "rq_refs": ["RQ-195"], "pose_refs": ["route.r13_operator_site3_pieta_head_eyes"], "status": "source-present"},
+    {"id": "gate.fl4359_geometry_parity", "kind": "gate", "menu_group": "capture", "source_path": "scripts/fl4359_geometry_parity_gate.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "gate.fl4359_mesh_presence", "kind": "gate", "menu_group": "capture", "source_path": "scripts/fl4359_mesh_presence_gate.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "gate.fl4359_owner_churn", "kind": "gate", "menu_group": "capture", "source_path": "scripts/fl4359_owner_churn_gate.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "gate.fl4359_presence_proof", "kind": "gate", "menu_group": "capture", "source_path": "scripts/fl4359_presence_proof_gate.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "gate.fl4359_product_identity_churn", "kind": "gate", "menu_group": "capture", "source_path": "scripts/fl4359_product_identity_churn_gate.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "gate.true_ff_text_flips", "kind": "gate", "menu_group": "capture", "source_path": "scripts/measure_true_ff_text_flips.py", "fl_refs": ["FL-4896", "FL-4894", "FL-4877", "FL-4872"], "rq_refs": ["RQ-170", "RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "gate.fl4359_proof_sensitivity", "kind": "gate", "menu_group": "capture", "source_path": "scripts/fl4359_proof_sensitivity_gate.py", "fl_refs": ["FL-4359"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "gate.godot_feature_regression", "kind": "gate", "menu_group": "feature-registry", "source_path": "scripts/godot_feature_regression_gate.py", "fl_refs": ["FL-4781"], "rq_refs": ["RQ-195", "RQ-196"], "pose_refs": [], "status": "source-present"},
+    {"id": "proof.compat_godot_proof_poses", "kind": "compatibility_reader", "menu_group": "pose-registry", "source_path": "scripts/godot_proof_poses.py", "fl_refs": ["FL-4781", "FL-4216"], "rq_refs": ["RQ-195"], "pose_refs": ["pose.flat_default", "pose.elevated_grass", "pose.just_grass", "pose.legacy_elevated_grass", "pose.shoreline", "pose.just_rocks_mountain", "pose.shoreline_real", "pose.shore_grass_dead_pose", "pose.shoreline_water_south", "pose.deep_water_only", "pose.firefly_proven_grass", "pose.mossy_rocks"], "status": "compatibility-only"},
+    {"id": "test.fl4216_temporal_capture_contract", "kind": "static_contract", "menu_group": "water", "source_path": "scripts/test_fl4216_temporal_capture_contract.py", "fl_refs": ["FL-4216"], "rq_refs": ["RQ-195"], "pose_refs": ["pose.p1_reflection_submerged_hand"], "status": "source-present"},
+    {"id": "test.fl4231_f13_capture_only_contract", "kind": "static_contract", "menu_group": "terrain", "source_path": "scripts/test_fl4231_f13_capture_only_contract.py", "fl_refs": ["FL-4231"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "test.fl4231_moving_capture_attack_contract", "kind": "static_contract", "menu_group": "actor", "source_path": "scripts/test_fl4231_moving_capture_attack_contract.py", "fl_refs": ["FL-4231"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "test.fl4332_lighthouse_beam_night_gate", "kind": "static_contract", "menu_group": "lighting", "source_path": "scripts/test_fl4332_lighthouse_beam_night_gate.py", "fl_refs": ["FL-4332"], "rq_refs": ["RQ-195"], "pose_refs": ["route.r17_canonical_night_lighthouse_beam"], "status": "source-present"},
+    {"id": "test.fl4346_actor_presentation_contract", "kind": "static_contract", "menu_group": "actor", "source_path": "scripts/test_fl4346_actor_presentation_proof_contract.py", "fl_refs": ["FL-4346"], "rq_refs": ["RQ-195"], "pose_refs": ["route.r22_canonical_actor_water_phases"], "status": "source-present"},
+    {"id": "test.fl4737_exact_pose_runner_contract", "kind": "static_contract", "menu_group": "water", "source_path": "scripts/test_fl4737_exact_pose_runner_contract.py", "fl_refs": ["FL-4737"], "rq_refs": ["RQ-195"], "pose_refs": ["pose.p1_reflection_submerged_hand"], "status": "source-present"},
+    {"id": "test.godot_canonical_png_grid_runner", "kind": "static_contract", "menu_group": "acceptance", "source_path": "scripts/test_godot_canonical_png_grid_runner.py", "fl_refs": [], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"},
+    {"id": "test.fl4216_settled_p1_capture_contract", "kind": "static_contract", "menu_group": "water", "source_path": "scripts/tests/test_fl4216_settled_p1_capture_contract.py", "fl_refs": ["FL-4216"], "rq_refs": ["RQ-195"], "pose_refs": ["pose.p1_reflection_submerged_hand"], "status": "source-present"},
+    {"id": "test.fl4731_pieta_proof_launcher", "kind": "static_contract", "menu_group": "pieta", "source_path": "scripts/tests/test_fl4731_pieta_proof_launcher.py", "fl_refs": ["FL-4731", "FL-4512"], "rq_refs": ["RQ-195"], "pose_refs": ["route.r13_operator_site3_pieta_head_eyes"], "status": "source-present"},
+    {"id": "test.fl4739_water_baseline_receipt", "kind": "static_contract", "menu_group": "water", "source_path": "scripts/tests/test_fl4739_water_baseline_receipt.py", "fl_refs": ["FL-4739"], "rq_refs": ["RQ-195"], "pose_refs": [], "status": "source-present"}
+  ],
+  "poses": [
+    {"id": "pose.flat_default", "legacy_location_name": "flat_default", "kind": "diagnostic_location", "title": "Legacy default renderer A/B pose", "player_position": null, "default_yaws": null, "operator_locked": false, "source": "legacy default renderer A/B pose", "status": "historical-diagnostic"},
+    {"id": "pose.elevated_grass", "legacy_location_name": "elevated_grass", "kind": "operator_pose", "title": "Operator elevated grass pose", "player_position": [69.8537673950195, 5.4859299659729, 89.6720123291016], "default_yaws": "169.916", "operator_locked": true, "source": "FL-4216/FL-4184 operator X ledger 2026-06-05 JUST GRASS", "status": "operator-designated"},
+    {"id": "pose.just_grass", "legacy_location_name": "just_grass", "kind": "operator_pose", "title": "Operator just-grass alias", "player_position": [69.8537673950195, 5.4859299659729, 89.6720123291016], "default_yaws": "169.916", "operator_locked": true, "source": "FL-4216/FL-4184 operator X ledger 2026-06-05 JUST GRASS", "status": "operator-designated"},
+    {"id": "pose.legacy_elevated_grass", "legacy_location_name": "legacy_elevated_grass", "kind": "diagnostic_location", "title": "Historical terrain-detail elevated grass", "player_position": [173.1, 65.0, 6.4], "default_yaws": null, "operator_locked": false, "source": "historical FL-4057 terrain-detail pose", "status": "historical-diagnostic"},
+    {"id": "pose.shoreline", "legacy_location_name": "shoreline", "kind": "operator_pose", "title": "Operator shoreline pose", "player_position": [84.0261917114258, 3.25772857666016, 81.0828704833984], "default_yaws": "25.727", "operator_locked": true, "source": "FL-4216/FL-4184 operator X ledger 2026-06-05 SHORELINE", "status": "operator-designated"},
+    {"id": "pose.just_rocks_mountain", "legacy_location_name": "just_rocks_mountain", "kind": "operator_pose", "title": "Operator rocks/mountain pose", "player_position": [91.1793212890625, 20.2613391876221, 190.932113647461], "default_yaws": "31.461", "operator_locked": true, "source": "FL-4216/FL-4184 operator X ledger 2026-06-05 JUST ROCKS/MOUNTAIN", "status": "operator-designated"},
+    {"id": "pose.shoreline_real", "legacy_location_name": "shoreline_real", "kind": "diagnostic_location", "title": "On-map shoreline pose", "player_position": [324.0, 10.56, -52.0], "default_yaws": "180", "operator_locked": false, "source": "FL-4129 on-map shoreline pose from FL-4148 height-straddle finder", "status": "historical-diagnostic"},
+    {"id": "pose.shore_grass_dead_pose", "legacy_location_name": "shore_grass_dead_pose", "kind": "diagnostic_location", "title": "Shore grass dead-pose diagnostic", "player_position": [-93.5, 4.7, 88.2], "default_yaws": "180", "operator_locked": false, "source": "FL-4129 and FL-4184 combined diagnostic pose", "status": "historical-diagnostic"},
+    {"id": "pose.shoreline_water_south", "legacy_location_name": "shoreline_water_south", "kind": "diagnostic_location", "title": "Historical off-map south water lane", "player_position": [-64.0, 6.0, 629.0], "default_yaws": null, "operator_locked": false, "source": "historical off-map water-lane diagnostic pose", "status": "historical-diagnostic"},
+    {"id": "pose.deep_water_only", "legacy_location_name": "deep_water_only", "kind": "diagnostic_location", "title": "Historical off-map deep water lane", "player_position": [0.0, 6.0, 700.0], "default_yaws": null, "operator_locked": false, "source": "historical off-map water-lane diagnostic pose", "status": "historical-diagnostic"},
+    {"id": "pose.firefly_proven_grass", "legacy_location_name": "firefly_proven_grass", "kind": "operator_pose", "title": "Corrected A3D firefly grass pose", "player_position": [276.0, 8.0, 28.0], "default_yaws": "0,90,180,270", "operator_locked": true, "source": "FL-4204/FL-4184 corrected A3D source-to-Godot pose patch(27,25), verified 2026-06-06", "status": "operator-designated"},
+    {"id": "pose.mossy_rocks", "legacy_location_name": "mossy_rocks", "kind": "operator_marker_pose", "title": "Mossy rocks / Pieta placement inspection", "player_position": [246.5, 8.0, 64.0], "default_yaws": "180", "operator_locked": false, "source": "FL-4251 mossy-rock /note mark (246.5,51.9); height estimate remains diagnostic", "status": "height-estimate"},
+    {"id": "pose.tower_strafe_f3_route", "kind": "route_pose", "title": "tower_strafe F3 route", "player_position": [66.131, 18.894, 44.123], "camera_position": [95.586, 35.394, 59.003], "yaw_degrees": 63.198115, "pitch_degrees": -25.159299, "waypoints": [{"label": "0527", "player": [66.131, 18.894, 44.123], "camera": [95.586, 35.394, 59.003]}, {"label": "0618", "player": [65.545, 18.812, 45.284], "camera": [95.0, 35.312, 60.164]}, {"label": "0696", "player": [66.424, 19.017, 43.543], "camera": [95.879, 35.517, 58.423]}], "source": "FL-4431 operator tower_strafe route and scripts/run_fl4359_headed_movement.py", "status": "operator-designated"},
+    {"id": "pose.fl4359_default_airplane_spawn", "kind": "spawn", "title": "FL-4359 default airplane proof spawn", "spawn": {"x": -80.8, "z": 307.2}, "source": "scripts/run_fl4359_headed_movement.py DEFAULT_AIRPLANE_PROOF_SPAWN_X/Z", "status": "source-present"},
+    {"id": "pose.fl4265_canonical_airplane_spawn", "kind": "spawn", "title": "FL-4265 canonical airplane proof spawn", "spawn": {"x": -180.0, "z": 230.0, "altitude": 80.0, "throttle": 0.37}, "source": "FL-4265 canonical airplane proof spawn", "status": "operator-designated"},
+    {"id": "pose.fl4265_npc_crash_spawn", "kind": "spawn", "title": "FL-4265 NPC crash sequence spawn", "spawn": {"x": 86.0, "z": 93.0, "altitude": 45.0, "throttle": 0.85, "NAUSICAA_SPAWN_IN_PLANE": 1}, "source": "FL-4265 NPC crash route receipts", "status": "operator-designated"},
+    {"id": "pose.p1_reflection_submerged_hand", "kind": "operator_pose", "title": "P1 reflection / submerged hand", "player_position": [127.110328674316, 0.0, -3.92257308959961], "camera_position": [124.412208557129, 19.5625, 28.9669418334961], "yaw_radians": -0.0818525847650367, "pitch_radians": -0.463647669653925, "fov_degrees": 58.0, "source": "FL-4216 operator P1 pose lock and scripts/test_fl4737_exact_pose_runner_contract.py", "status": "operator-designated"},
+    {"id": "pose.female_hand_mesh_anchor", "kind": "non_pose_anchor", "title": "Female hand mesh anchor", "anchor_xz": [127.110000610352, -3.92300009727478], "sink": 5.5, "face_count": 8082, "source": "godot_project/scripts/World.gd STATIC_WORLD_FEMALE_HAND_ANCHOR_XZ", "status": "world-anchor"},
+    {"id": "pose.pieta_operator_hud_mark", "kind": "non_pose_marker", "title": "Pieta statue operator HUD/world mark", "mark_xz": [133.0, -72.0], "source_hud_pose": "P133,11,-72", "sink": 5.5, "source": "operator HUD coordinate; not an executable proof pose", "status": "marker-only"},
+    {"id": "pose.water_shore_flat_line", "kind": "diagnostic_location", "title": "Water X-dump shore flat line", "player_position": [155.5, 4.0, -0.5], "default_yaws": "0", "viewport": [1280, 800], "source": "scripts/proofs/proof_fl4216_water_xdump.py POSES.shore_flat_line", "status": "canonical-historical"},
+    {"id": "pose.water_actor_sink_deep", "kind": "diagnostic_location", "title": "Water X-dump actor sink deep", "player_position": [155.5, 2.0, -0.5], "default_yaws": "180", "camera_pitch_degrees": -30.0, "wake_dir": [0.0, 0.0, 1.0], "viewport": [1280, 800], "source": "scripts/proofs/proof_fl4216_water_xdump.py POSES.actor_sink_deep", "status": "canonical-historical"},
+    {"id": "pose.water_shore_grass_context", "kind": "diagnostic_location", "title": "Water X-dump shore grass context", "player_position": [155.5, 4.0, -0.5], "default_yaws": "0", "viewport": [1280, 800], "source": "scripts/proofs/proof_fl4216_water_xdump.py POSES.shore_grass_context", "status": "canonical-historical"},
+    {"id": "pose.water_open_reflection_band", "kind": "diagnostic_location", "title": "Water X-dump off-map reflection band", "player_position": [0.0, 6.0, 700.0], "default_yaws": "180", "viewport": [1280, 800], "source": "scripts/proofs/proof_fl4216_water_xdump.py POSES.open_reflection_band", "status": "diagnostic-only"},
+    {"id": "pose.water_open_reflection_source_backed", "kind": "diagnostic_location", "title": "Water X-dump source-backed reflection", "player_position": [-366.5, 6.0, -46.5], "default_yaws": "180", "viewport": [1280, 800], "source_cell": {"x": -423, "y": 129}, "material_id": 0, "source": "scripts/proofs/proof_fl4216_water_xdump.py POSES.open_reflection_source_backed", "status": "closure-eligible-diagnostic"},
+    {"id": "pose.water_wave_band_sweep", "kind": "diagnostic_location", "title": "Water X-dump wave band sweep", "player_position": [155.5, 2.0, -0.5], "default_yaws": "180", "viewport": [1280, 800], "source": "scripts/proofs/proof_fl4216_water_xdump.py POSES.wave_band_sweep", "status": "canonical-historical"}
+  ],
+  "routes": [
+    {"id": "route.r01_operator_locked_just_grass", "route_number": "R01", "designation": "OPERATOR_DESIGNATED", "pose_refs": ["pose.just_grass"], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r02_operator_locked_shoreline", "route_number": "R02", "designation": "OPERATOR_DESIGNATED", "pose_refs": ["pose.shoreline"], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r03_operator_locked_just_rocks_mountain", "route_number": "R03", "designation": "OPERATOR_DESIGNATED", "pose_refs": ["pose.just_rocks_mountain"], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r04_operator_locked_firefly_proven_grass", "route_number": "R04", "designation": "OPERATOR_DESIGNATED", "pose_refs": ["pose.firefly_proven_grass"], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r05_operator_selected_reflection_pose", "route_number": "R05", "designation": "OPERATOR_DESIGNATED", "pose_refs": ["pose.p1_reflection_submerged_hand"], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r06_operator_selected_celestial_pose", "route_number": "R06", "designation": "OPERATOR_DESIGNATED", "pose_refs": [], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "pose-known-not-yet-promoted"},
+    {"id": "route.r07_operator_walk_strafe_tower", "route_number": "R07", "designation": "OPERATOR_DESIGNATED", "pose_refs": ["pose.tower_strafe_f3_route"], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r08_operator_scripted_airborne_airplane_movement", "route_number": "R08", "designation": "OPERATOR_DESIGNATED", "pose_refs": ["pose.fl4359_default_airplane_spawn"], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r09_operator_server_npc_projectile_airplane_crash_sequence", "route_number": "R09", "designation": "OPERATOR_DESIGNATED", "pose_refs": ["pose.fl4265_npc_crash_spawn"], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r10_operator_manual_ortho_airplane_stall_lateral_slide", "route_number": "R10", "designation": "OPERATOR_SUPPLIED_OBSERVATION_IDENTITY", "pose_refs": [], "source": "docs/FAILURE_LOG.md FL-4781 route table", "status": "partial"},
+    {"id": "route.r11_operator_site1_waterfall_headland", "route_number": "R11", "designation": "OPERATOR_DESIGNATED_SITE_POSE", "pose_refs": [], "player_position": [139.702987670898, 0.0, -285.332275390625], "camera_position": [131.273391723633, 39.1033363342285, -225.927383422852], "yaw_radians": -0.14095961009428, "pitch_radians": -0.463647702973936, "source": "FL-4743 operator SITE1 dump1786761076_462146", "status": "partial"},
+    {"id": "route.r12_operator_site2_waterfall_seastack", "route_number": "R12", "designation": "OPERATOR_DESIGNATED_SITE_POSE", "pose_refs": [], "player_position": [-160.499160766602, 0.0, 137.774154663086], "camera_position": [-142.165557861328, 40.347110748291, 165.212799072266], "yaw_radians": 0.589040707527153, "pitch_radians": -0.463647569693896, "source": "FL-4743 operator SITE2 dump1786761198_584850", "status": "partial"},
+    {"id": "route.r13_operator_site3_pieta_head_eyes", "route_number": "R13", "designation": "OPERATOR_DESIGNATED_SUBJECT_WITH_MISSING_POSE", "pose_refs": ["pose.pieta_operator_hud_mark"], "source": "FL-4743 Site3 wording and FL-4652 subject record", "status": "missing-executable-pose"},
+    {"id": "route.r14_operator_official_dump1781866280", "route_number": "R14", "designation": "OPERATOR_SUPPLIED_OFFICIAL_DUMP", "pose_refs": [], "player_position": [56.3897247314453, 9.77867698669434, 58.5685157775879], "camera_position": [62.5427742004395, 14.6636753082275, 66.1575012207031], "yaw_radians": 0.681283789687168, "pitch_radians": -0.37847551403718, "mode": "perspective", "source": "FL-4336 attempt179 official dump pose-grid manifest", "status": "nonconforming-official-dump"},
+    {"id": "route.r15_operator_official_dump1781866841", "route_number": "R15", "designation": "OPERATOR_SUPPLIED_OFFICIAL_DUMP", "pose_refs": [], "player_position": [-2.03723335266113, 18.1532421112061, 60.8741264343262], "camera_position": [51.2986068725586, 78.1532440185547, 150.154556274414], "yaw_radians": 0.538508645427787, "pitch_radians": -0.523759559465666, "mode": "orthographic", "source": "FL-4336 attempt179 official dump pose-grid manifest", "status": "nonconforming-official-dump"},
+    {"id": "route.r16_operator_selected_ortho_tree_pose", "route_number": "R16", "designation": "OPERATOR_DESIGNATED", "pose_refs": [], "camera_position": [143.012619018555, 72.9521636962891, -52.8658561706543], "yaw_radians": 0.7244489365, "pitch_radians": -0.5236165327, "mode": "orthographic", "source": "docs/agent/2026-07-29-fl4431-ortho-ab/CANONICAL_POSE.json", "status": "partial"},
+    {"id": "route.r17_canonical_night_lighthouse_beam", "route_number": "R17", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": [], "source": "FL-4408 original-bug-lanes manifest", "status": "canonical-historical"},
+    {"id": "route.r18_canonical_water_actor_sink", "route_number": "R18", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": ["pose.water_actor_sink_deep"], "source": "scripts/proofs/proof_fl4216_water_xdump.py", "status": "canonical-historical"},
+    {"id": "route.r19_canonical_water_wave_sweep", "route_number": "R19", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": ["pose.water_wave_band_sweep"], "source": "scripts/proofs/proof_fl4216_water_xdump.py", "status": "canonical-historical"},
+    {"id": "route.r20_canonical_movement_grid", "route_number": "R20", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": [], "source": "FL-4408 original-bug-lanes manifest", "status": "canonical-historical"},
+    {"id": "route.r21_canonical_wake_leaf_bird", "route_number": "R21", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": [], "source": "scripts/run_godot_visual_owner_proof.py", "status": "canonical-historical"},
+    {"id": "route.r22_canonical_actor_water_phases", "route_number": "R22", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": [], "source": "scripts/run_fl4346_actor_presentation_proof.py", "status": "canonical-historical"},
+    {"id": "route.r23_canonical_manual_water_flat", "route_number": "R23", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": ["pose.water_shore_flat_line", "pose.water_shore_grass_context"], "source": "scripts/proofs/proof_fl4216_water_xdump.py", "status": "canonical-historical"},
+    {"id": "route.r24_operator_foliage_seed", "route_number": "R24", "designation": "OPERATOR_DESIGNATED_SEED_BUT_INCOMPLETE_ROUTE", "pose_refs": [], "player_position": [73.2764587402344, 5.39622640609741, 90.044303894043], "camera_position": [-22.3817749023438, 65.3962249755859, 130.854705810547], "yaw_radians": -1.167548637324, "pitch_radians": -0.5232, "source": "FL-4216 successor-proof manifest", "status": "rejected-conflicted"},
+    {"id": "route.r25_canonical_airplane_air_grid", "route_number": "R25", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": [], "source": "FL-4408 original-bug-lanes manifest", "status": "canonical-historical"},
+    {"id": "route.r26_canonical_terrain_water_static", "route_number": "R26", "designation": "CANONICAL_HISTORICAL_NOT_OPERATOR_DESIGNATED", "pose_refs": [], "player_position": [56.5800514221191, 2.21207451820374, 105.755363464355], "camera_position": [70.9501342773438, 9.4120740890503, 104.827644348145], "yaw_radians": 1.63526624647715, "pitch_radians": -0.406566751282227, "fov_degrees": 60.0, "mode": "perspective", "source": "FL-4408 original-bug-lanes manifest", "status": "canonical-historical"},
+    {
+      "id": "route.r27_canonical_ground_turn_five_capture",
+      "route_number": "R27",
+      "designation": "OPERATOR_REQUIRED_SURFACE_CANONICAL_PROTOCOL",
+      "pose_refs": [],
+      "source": "scripts/run_godot_visual_owner_proof.py:ground_turn_perspective",
+      "status": "canonical-protocol-adapter-connected-execution-pending",
+      "protocol": {
+        "scenario_id": "ground_turn_perspective",
+        "wrapper": "scripts/run_godot_visual_owner_proof.py",
+        "runner": "scripts/run_fl4359_headed_movement.py",
+        "route_identity": "scripted_ground_movement",
+        "camera_mode": "perspective",
+        "move_frames": 120,
+        "turn_frames": 8,
+        "turn_action": "rotate_right",
+        "jitter_capture_frame_limit": 5,
+        "settle_frames": 2,
+        "after_frames": 2,
+        "product_time": 17,
+        "day_cycle_time": 0.5,
+        "analyzer_proof_profile": "full_grid_temporal_oracle_v1",
+        "full_grid_contract_mode": "camera_turn",
+        "presentation_size": [3840, 2160],
+        "cell_aspect": "terminal",
+        "native_cell_size": [16, 32],
+        "capture_start_frame": 0,
+        "capture_envelope": "5 active proof captures plus1 release and1 settle witness",
+        "historical_preflight": "Operator-derived3840x2160,32px,120move/8turn/5capture,Product0 SELF_CHECK_PASS; headed motion unexecuted.",
+        "parameter_lineage": "Current wrapper pins Product17 and day0.5. Historical wrapper day0.75 is stale and must not override current source.",
+        "execution_boundary": "The camera_turn adapter now selects the first five frames of the declared eight-frame physical rotation input and passes strict preflight. No headed/custom-engine execution receipt exists yet; do not claim runtime or visual acceptance. No camera poses were invented."
+      }
+    }
+  ],
+  "temporal_regression_requirements": {
+    "fl_ref": "FL-4359",
+    "rq_ref": "RQ-195",
+    "scope": "Required coverage, not executed coverage or renderer acceptance. Preserve existing route identities and historical receipts; do not substitute one route for another.",
+    "route_families": {
+      "camera_turn_five_frame": {
+        "proof_refs": ["proof.fl4359_headed_movement"],
+        "route_refs": ["route.r27_canonical_ground_turn_five_capture"],
+        "identity_gap": "Canonical five-capture ground_turn_perspective protocol recovered and connected to the explicit camera_turn adapter. Strict preflight passes; successful headed/custom-engine execution receipt remains unrecovered. Do not invent poses or substitute historical18-turn evidence.",
+        "required_events": ["canonical_five_camera_turn_capture_frames", "stationary_before_and_after"],
+        "capture_cadence_rule": "Five proof captures are not necessarily five turn-input frames. Preserve the designated protocol timing; distinguish protocol identity from runtime success."
+      },
+      "airplane": {
+        "proof_refs": ["proof.fl4359_headed_movement", "proof.fl4265_airplane_py"],
+        "route_refs": ["route.r08_operator_scripted_airborne_airplane_movement", "route.r25_canonical_airplane_air_grid"],
+        "identity_gap": "Five-camera exact-translation recipe recovered and source-checked 2026-09-13. Keep historical and operator-designated routes distinct. No original per-frame player trajectory beyond the recorded fixed-anchor diagnostic is inferred.",
+        "required_events": ["five_contiguous_flying_frames", "probe_grid_crossing", "turn_and_translation"],
+        "canonical_capture_recipe": {
+          "owner_source": "docs/plans/GODOT_GOAL.MD:Five-frame translation recipe",
+          "runner": "scripts/run_fl4359_headed_movement.py",
+          "route_kind": "exact_translation",
+          "camera_positions": [[447, 48, -336], [448, 48, -337], [448, 48, -338], [449, 48, -339], [450, 48, -340]],
+          "camera_yaw_radians": 2.356194490192345,
+          "camera_pitch_radians": -0.36651914291880922,
+          "perspective_fov_degrees": 58,
+          "player_anchor": [411, 28, -297],
+          "product_time": 17,
+          "day_cycle_time": 0.5,
+          "move_frames": 5,
+          "turn_frames": 0,
+          "jitter_capture_frame_limit": 5,
+          "world_sample_stride": 1,
+          "scope": "Fixed-time camera-translation diagnostic over the narrow grass patch with water and distant scenery. Not actor/plant-overlap or live-animation acceptance. Additional turn/probe-transition coverage must not change these canonical five camera poses.",
+          "identity_receipt": "artifacts/FL-4359_TEXEL_SPLATTING_SINGLE_ENTRY/MOVED_ORIGINALS/.run/fl4359_tier_ab_baseline/SOL-r11-baseline/receipt.json.txt",
+          "identity_receipt_sha256": "434bf3224da711d53abc1adac0aff3ba96baeeaf1e8675ec135f11df7a05fd97",
+          "identity_receipt_pass": false,
+          "evidence_role": "Identity support only; failed historical receipt is not acceptance."
+        }
+      },
+      "strafe_movement": {
+        "proof_refs": ["proof.fl4359_headed_movement"],
+        "route_refs": ["route.r07_operator_walk_strafe_tower", "route.r20_canonical_movement_grid"],
+        "identity_gap": "Bind the exact operator tower-strafe and canonical movement receipts separately; preserve existing ground and walk-speed evidence.",
+        "required_events": ["five_contiguous_strafe_frames", "move_stop_move", "probe_grid_crossing", "occlusion_and_disocclusion"]
+      }
+    },
+    "defect_classes": ["jitter", "shimmer", "parallax_error", "ghost_mesh", "omission", "duplicate_out_of_place"],
+    "sampling_axes": ["matrix_columns_rows", "cell_width_height", "cell_aspect_square_terminal", "raster_target_width_height", "presentation_width_height_scale_crop", "glyph_source_width_height_hash", "probe_face_resolution", "projection_fov_or_ortho_size", "zoom_and_actual_camera_pose", "foreground_background_mode"],
+    "runtime_sampling_domain": {
+      "matrix_cell_height_steps_px": [96, 64, 48, 32, 24, 20, 16, 12],
+      "cell_aspects": {
+        "square_1x1": "cell_width_px equals cell_height_px",
+        "terminal_1x2": "cell_width_px equals cell_height_px divided by two"
+      },
+      "raster_admission": "Any positive runtime raster is structurally admissible. Raster dimensions need not divide cell dimensions: the logical ANSI address domain uses ceiling division, actual raster dimensions own perspective aspect and splat attachments, and edge-cell scans must bounds-check partial coverage.",
+      "canonical_route_rasters": {
+        "ground_turn_perspective": [3840, 2160],
+        "airplane_exact_translation": [3600, 2252]
+      },
+      "probe_face_resolution_px": [128, 256, 384],
+      "default_probe_face_resolution_px": 384,
+      "camera_zoom": {
+        "matrix_control_is_not_camera_zoom": true,
+        "normal_is_route_default_actual_camera_state": true,
+        "perspective_runtime_range": [0.35, 10.0],
+        "orthographic_runtime_range": [0.35, 2.4],
+        "perspective_fov_degrees": 58,
+        "normal_on_foot_perspective": 1.6283329941,
+        "normal_airplane_perspective": 2.254,
+        "normal_orthographic": 1.0,
+        "orthographic_pilot_additional_factor": 1.5,
+        "restriction_boundary": "These are implemented control bounds and route defaults, not certified shimmer-safe thresholds. Each receipt must record actual camera pose, projection and zoom."
+      },
+      "capture_identity_rule": "One five-frame proof capture has one immutable matrix/raster/cell-aspect identity. A live matrix transition must fail or restart an armed proof request; fixed world/probe captures may survive when their own world-space identity remains valid, while cell/raster-domain resources rebuild."
+    },
+    "presentation_modes": ["FF"],
+    "presentation_mode_policy": "Operator correction 2026-09-13: FF is the default and sufficient required temporal proof mode. FC/CF/CC are optional diagnostics, not required acceptance arms or substitutes for FF. Prioritize matrix resolution, normal zoom and square 1:1 versus terminal 1:2 text size. Operator decision 2026-09-28 (FL-4896): True FF temporal claims are measured on Saitamaar native text rows (17 px rows; each character's codepoint, pen x, advance and paint) with scripts/measure_true_ff_text_flips.py, never on fixed pixel cells; scripts/measure_f10_churn.py and fixed-cell box annotators are non-True-FF diagnostics.",
+    "required_witnesses": ["same_frame_final_display_and_runtime_truth", "per_frame_view_projection_and_probe_origins", "source_identity_and_physical_capture_generation", "expected_and_observed_depth_visibility_and_cell_address", "complete_glyph_mask_and_separate_foreground_background", "postprocess_and_canvas_provenance", "per_pair_population_exclusions_and_first_divergence", "defect_pixel_cell_world_source_join", "executed_source_fingerprint_and_publication_manifest", "frame_exact_game_frame_sequence_with_per_frame_metadata"],
+    "sensitivity_controls": ["known_displacement_or_freeze_jump", "known_colour_or_glyph_flicker", "wrong_depth_or_reprojection", "stale_generation_duplicate_ghost", "missing_geometry", "legitimate_motion_and_occlusion_negative_controls"],
+    "acceptance_rules": [
+      "Every route family must carry its own coverage and unresolved gaps. A five-frame result cannot certify unobserved intervals or all possible settings.",
+      "In FF, exercise square and terminal cells, all supported matrix steps, normal zoom and declared zoom/raster/probe boundary cases. Record actual dimensions and camera state; record untested combinations rather than infer their safety.",
+      "Preserve canonical five-frame artifacts and add continuous companion windows for stop/start, cache retirement, and probe transitions.",
+      "Use existing geometry, reprojection, jitter and shimmer detectors; extend missing adapters rather than create a second renderer or proof route. The True FF text-row adapter is scripts/measure_true_ff_text_flips.py.",
+      "Treat missing, truncated, stale, unclassified or zero-comparable evidence as incomplete, never as zero defects.",
+      "Bound capture, readback, decode, disk output and preservation together. Compression must retain the information needed by every detector and be tested against the original format.",
+      "Thresholds require an explicit contract or calibration. Mean sampling density and coarser cells do not certify correct geometry or shimmer freedom.",
+      "Temporal jitter and shimmer observations must use frame-exact capture: one PNG entry per rendered game frame plus a single manifest.txt carrying every frame line. Display-rate screen capture containing duplicated frames is not an observation.",
+      "True FF temporal observations (FL-4896, operator convention FL-4894): one true_ff.text_frame.v1 export line per rendered frame of one continuous run, classified by scripts/measure_true_ff_text_flips.py. Every delivered temporal media shows its classification as cell borders at native character geometry: RED = a character changed without a displacement explanation (substituted in place or vanished; a flip), YELLOW = a character appeared where the previous frame had no ink nearby; no border = the same glyph moved, scrolled or stayed. The legend text is in the delivered HTML and burned into the GIF. The same-state test (compare) requires identical text for one scene, pose and camera reached by two paths; any RED is history dependence. Its sensitivity controls are a known in-place flip (RED expected) and a known pure translation (no border expected) on the same route."
+    ]
+  },
+  "feature_route_family": {
+    "source_path": "config/godot_feature_regressions.json",
+    "id_prefix": "GODOT-R",
+    "observed_ids": ["GODOT-R01", "GODOT-R02", "GODOT-R03", "GODOT-R04", "GODOT-R05", "GODOT-R06", "GODOT-R07", "GODOT-R08", "GODOT-R09", "GODOT-R10", "GODOT-R11", "GODOT-R12", "GODOT-R13"],
+    "role": "feature coverage rows only; not proof poses"
+  }
+}

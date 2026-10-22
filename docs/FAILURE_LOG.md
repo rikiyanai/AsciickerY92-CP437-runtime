@@ -1,5 +1,110 @@
 # Failure Log
 
+## Numabe public saved-map/editor port — 2026-10-21
+
+- The next Linux run passed the GDAL scope tests and 51 Numabe cases but
+  exposed OpenCV imported transitively by camera-solve package initialization
+  in the station-clearance negative control. Inspection of that package's
+  full import closure also found SciPy. Both are now explicit test
+  dependencies, rather than relying on the developer machine's packages.
+  The original negative control and its rail-clearance assertions remain.
+
+- The Linux contracts rerun exposed an undeclared native/Python GDAL
+  dependency in the scope compiler tests. CI now installs matching native
+  GDAL and Python bindings; the README separates this test prerequisite from
+  the saved-map editor's lightweight requirements. No test was skipped to
+  avoid this dependency. The public-content check remains unchanged:
+  removed irrelevant handoff comments in thirteen empty stub files and the
+  unrelated recovery utility (original retained locally), removed obsolete
+  orchestration instructions from the root tool README, and made two
+  legitimate parser/approval comments describe their data contracts directly.
+  An initial atomic cleanup patch failed on the legacy render-file comment
+  path without modifying files; the corrected patch uses the inspected text.
+
+- Publication-CI repair: restored the historical equipment-recording link.
+  Standalone checks now report 46 passing pytest cases plus all script,
+  JavaScript and manifest/coverage gates. Three negative-control cases
+  exercise exact document ownership: unknown sibling documents, stale/glob
+  owners and instruction files still fail. CI now uses the same explicit
+  owner model as local commit placement, retaining 37 exact upstream or
+  existing source/license owners instead of exempting imported directories.
+  No existing source or license was removed. The contracts job also runs
+  the 60-case Numabe release suite, not just the older root-engine tests.
+
+- PR #2's actual GitHub attribution check and native server, macOS terminal
+  and web builds passed. The contracts job failed on the existing README
+  omission of `docs/recordings/cp437-runtime-layer-transitions.gif` (42
+  other cases passed). The upstream-main README also lacks that link.
+  Restore the real existing recording link, not a weakened test assertion.
+  Inspection also found the workflow's blanket Markdown placement check
+  predates exact imported-document ownership; preserve existing source and
+  licenses rather than deleting them to make that placement check green.
+
+- Recovery: the operator approved the single-branch exception. Ruleset
+  25459478 now also excludes only `refs/heads/numabe-publication` from its
+  non-main creation/update prohibition. Enforcement stays active, with no
+  bypass actors. The required attribution check and main integrity rules
+  are unchanged. Restore the original exclusion list (`refs/heads/main`
+  only) after the checked pull request is merged.
+- The first approved-rule command was intercepted by the local shell-source
+  materializer, which wrote a relative script under the Y9 checkout and then
+  failed to open it from the publication checkout. No API request ran in
+  that attempt. A reviewed, explicitly located Python helper applied the
+  exact single-branch exception and checked the returned rule state.
+
+- Publication commit `6c4ac3424e6d8b6fb6cf81d406b5b363f4cc490c`
+  passed the local commit hooks. The ordinary push to `main` was rejected
+  with GH013: required status check `AI attribution policy` is expected.
+  A subsequent publication-branch transfer timed out with HTTP 408.
+  After connectivity recovered, the retry failed with GH013 because
+  repository rules restrict creation of every non-main branch. The server
+  can resolve the uploaded commit, but no branch points to it: this is not
+  publication. Main remains at `ab4ee1d8fc4c090d7ce4d4301c6075e66073edc1`.
+  Rule inspection confirmed no bypass actors for either policy. No rule
+  was changed, no check was fabricated, and no push was forced. Operator
+  approval is requested for a narrowly scoped temporary branch exception
+  so the real GitHub check can run before merging and restoring the rule.
+- Final local rerun: 60 tests passed, one historical fixture skipped and
+  the optional raw-acquisition test deselected. Exact staged-blob gate:
+  13,284 changed files, largest 51,971,284 bytes, all saved-map meshes
+  present, no raw surveys and the README GIF present. No sharding required.
+
+- Public export rerun:52 scoped tests passed,1 historical-build fixture
+  skipped;8 ownership/portability/helper tests passed. Only the strict raw
+  acquisition test is excluded from the default release suite and remains
+  available through `make numabe-source-verify`.
+- The first clean-checkout HTTP start raced the previous editor's shutdown
+  and returned address-in-use. A subsequent listener inspection found8792
+  free. Restart and explicit API checks follow; no existing service is killed.
+
+- First public-export test run:49 passed,3 failed,1 skipped,1 external-survey
+  test deselected. The three scope tests require the frozen499-annotation crop
+  snapshot, not just the current annotation files. The export omitted that
+  frozen input. Add its unchanged input/crops and rerun; do not weaken the
+  scope or digest assertions. Runtime asset check already resolved all meshes
+  and346 panoramas within the clean checkout.
+
+- Operator requested commit/push of Numabe, the associated HTML/editor
+  workflow and a README train GIF. The clean checkout was fast-forwarded to
+  remote `ab4ee1d`; unrelated dirty/divergent work in the older checkout is
+  preserved and is not part of this publication.
+- A raw CityGML terrain tile is731169780 bytes and another is566991911 bytes.
+  These are acquisition/reconstruction inputs, not saved-map/editor inputs.
+  The operator authorised excluding unnecessary surveys and sharding only
+  required oversized assets. No required published asset needs sharding.
+  Raw data remains untouched locally. Transport uses ordinary Git.
+- The public export retains the supported map/editor/source closure rather
+  than old proof/build caches. Its active paths are clone-relative. The map
+  remains3646 mesh instances with the obsolete station billboard removed;
+  independent station infrastructure, signs, terrain and train routes remain.
+- The first-person defect is not hidden: Classic walk is a trailing camera,
+  while the eye-level WebGL preview is labelled non-gameplay. Both views and
+  the top-down/reference/Street View/facade tools are ported. Actual Classic
+  first-person and the foreground-glyph style pass remain open.
+- A documentation patch was rejected before edits because the transport gate
+  matched a forbidden-command name inside explanatory prose. The revised
+  documentation states the actual ordinary-Git method without that prose.
+
 ## P0C-06 / FL-4512 · 2026-08-11 — private repository created
 
 - The historical base, first FL-4512 source commit, divergent deployment, and

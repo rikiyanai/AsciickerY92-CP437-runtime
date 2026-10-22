@@ -1,0 +1,12 @@
+{
+ "schema": "y92.fl4876.facade_capture_check.v1",
+ "at": "2026-10-14",
+ "session": "0e4cdb7d-789e-4f42-9ca8-ce5af0878c03",
+ "corrects": "receipt_20261014.json field preexisting_finding",
+ "retracted_claim": "build_reg_73 output.a3d holds 0 of the 19 sign sprites its sign_sprites_receipt.json lists",
+ "measured": "sprites_in_map.py on .run/fl4876_builds/build_reg_73/output.a3d: 3914 mesh + 19 sprite instances, all 19 sign_* names of the receipt present (FamilyMart sign_front_2929215092_c8f9b1fa2e.xp at 508.1,683.9,398.8)",
+ "cause_of_false_finding": "inst_diff.py compared build_reg_73 with a scratch copy on which compile_sign_sprites.build had been re-run; that re-run did not remove the existing sign sprites (its filter tested mesh_name, which is empty on sprite records read back from a map; the name is in inst_name), so the copy held each sign twice and the Counter difference reported the second copies as 'only in B'",
+ "fix": "scripts/pipeline/compile_sign_sprites.py build(): the sign-sprite filter also tests inst_name",
+ "fix_check": "sign_idem.py: scratch copy of build_reg_73, stage run twice: map sprites 19 -> 19 -> 19, receipt signs 19 both runs",
+ "unaffected": "preview vs rebuilt-map parity (0 differing bytes in the Lawson frame): duplicate signs share positions and none is in that frame"
+}

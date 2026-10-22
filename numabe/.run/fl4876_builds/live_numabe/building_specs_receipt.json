@@ -1,0 +1,95 @@
+{
+  "canonical_entities": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical_entities.json",
+  "conflicting_heights": [],
+  "counts": {
+    "conflicting_heights": 0,
+    "height_provenance": {
+      "authoritative_observed": 619,
+      "measured": 81,
+      "synthesized": 15
+    },
+    "height_source": {
+      "default_synthesized": 15,
+      "plateau_measured": 619,
+      "tmg_lidar_measured": 81
+    },
+    "specs_emitted": 715,
+    "world_ir_buildings": 715
+  },
+  "height_contract": {
+    "explicit_height": "OSM height metres",
+    "fallback_height_m": 9.0,
+    "fallback_provenance": "synthesized",
+    "fallback_source": "rules_resolved",
+    "ground_owner": "DEM terrain sampled by bake_osm_building_footprints.py",
+    "levels": "building:levels × 3 m",
+    "storey_height_m": 3.0,
+    "storey_source": "rules_resolved"
+  },
+  "input_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical.world_ir.json",
+  "output": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/building_instances.json",
+  "schema": "y92.world_ir_building_specs.v1",
+  "synthesized_buildings": [
+    {
+      "feature_id": "feature:building_footprint:way/1507403651",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/1507403656",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/1507403657",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/1507403658",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/1507403659",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/1507403681",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/225197883",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/225367799",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/225563361",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/725138281",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/725138329",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/725138331",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/725138518",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/725138523",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    },
+    {
+      "feature_id": "feature:building_footprint:way/725138589",
+      "reason": "entity_without_height_claim;no OSM height/levels tags"
+    }
+  ],
+  "terrain_metadata": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/terrain_metadata.json"
+}

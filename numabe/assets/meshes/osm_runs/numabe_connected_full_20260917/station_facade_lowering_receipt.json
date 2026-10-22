@@ -1,0 +1,120 @@
+{
+  "artifact_inspection": {
+    "a3d_instance_matches": 1,
+    "akm_nonempty": true,
+    "lowered_world_ir_representations": 2
+  },
+  "counts": {
+    "facades_emitted": 1,
+    "mesh_instances_embedded": 1,
+    "selected_locale_templates": 1,
+    "signs_emitted": 1
+  },
+  "inputs": {
+    "reconstruction": {
+      "path": "/Users/r/Downloads/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/station_facade_reconstruction.json",
+      "sha256": "7ba9178f55de4241d63a254c214541931ab6388182b603272707e6aafe335075"
+    },
+    "world_ir": {
+      "path": "/Users/r/Downloads/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/station_facade.world_ir.json",
+      "sha256": "51b478ff6caf7c87768b1bbc9549269bf136f89b520007e3d9cca56aa0030a00"
+    }
+  },
+  "locale_pack_chain": [
+    "common_global",
+    "japan",
+    "japan_urban",
+    "tokyo",
+    "tokyo_station_small",
+    "tokyu"
+  ],
+  "representation": {
+    "alpha": 255,
+    "authored_palette": {
+      "glass_rgb": [
+        40,
+        48,
+        48
+      ],
+      "mode": "source_palette_ps1_station_structure",
+      "trim_rgb": [
+        105,
+        110,
+        110
+      ],
+      "wall_rgb": [
+        136,
+        144,
+        144
+      ]
+    },
+    "facade_raster": [
+      32,
+      24
+    ],
+    "faces": 772,
+    "instance_name": "facade_feature_facade_plane_numabe_station_entrance_1",
+    "mesh_path": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/meshes/facade_feature_facade_plane_numabe_station_entrance_1.akm",
+    "mesh_sha256": "a0998c002ac4fec740dd095a16620f0a8576ef99d15624b6e0cb22c378c44a2b",
+    "preview_path": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/station_facade_classic_preview.png",
+    "preview_sha256": "5c80f95f6a9257ec6a4357e37d63bf8ea772e1a04eaece186bf445479529c136",
+    "sign_raster": [
+      48,
+      16
+    ],
+    "vertices": 3088,
+    "world_position": [
+      288.5381197256369,
+      288.60095532019767,
+      170.0
+    ]
+  },
+  "schema": "y92.classic_facade_lowering.v1",
+  "selected_template": {
+    "face_mode": "parameterized_catalog",
+    "geometry_family": "tokyu_station_identity_sign",
+    "identity_bucket": "operator_standard",
+    "ocr_matches": [],
+    "pack_id": "tokyu",
+    "parameters": {
+      "label_suffix": " STA",
+      "panel_rgb": [
+        157,
+        45,
+        83
+      ],
+      "text_rgb": [
+        239,
+        238,
+        224
+      ],
+      "trim_rgb": [
+        220,
+        219,
+        208
+      ]
+    },
+    "score": 175,
+    "score_reasons": [
+      "semantic_class",
+      "country",
+      "region",
+      "operator",
+      "site_context"
+    ],
+    "semantic_class": "station_identity_sign",
+    "template_id": "jp.tokyu.station_identity_v1"
+  },
+  "source_observations": {
+    "facade": [
+      "object-observation:nmb01:0025",
+      "object-observation:nmb03:0008"
+    ],
+    "sign": [
+      "object-observation:nmb00:0013",
+      "object-observation:nmb01:0012",
+      "object-observation:nmb03:0013"
+    ]
+  },
+  "stage": "executed_artifact_attested"
+}

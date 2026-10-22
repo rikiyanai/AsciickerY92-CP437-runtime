@@ -1,0 +1,45 @@
+{
+  "schema": "y92.official_road_classification.v1",
+  "classification_id": "numabe_connected_neighborhood_ota_management_20260916",
+  "adapter_id": "jp.tokyo.ota.doro_map.phase1.v1",
+  "reviewed_on": "2026-09-16",
+  "route": {
+    "path": "connected_scope.geojson#connected_playable_route",
+    "sha256": "bb7e9b456a179b79e1d5cbf4ff926d1f07ab0d54e2fb26d512e438cc766f8241",
+    "length_m": 1016.882
+  },
+  "source_layer_updates": {
+    "GH": "2026-08-04",
+    "RM": "2026-08-04",
+    "KK": "2026-09-02",
+    "CS": "2026-09-02",
+    "KJ": "2026-06-01"
+  },
+  "join_method": {
+    "kind": "reviewed_route_to_live_rm_factual_join",
+    "spatial_tolerance_m": 5.0,
+    "raw_official_geometry_retained": false,
+    "crossing_route_policy": "A crossing route does not replace the continuing route unless the pedestrian spine turns onto it."
+  },
+  "management_spans": [
+    {"start_m": 0.0, "end_m": 27.0, "management_class": "ota_managed", "route_key": "5030310", "route_name_ja": "大田区道3-31号線"},
+    {"start_m": 27.0, "end_m": 143.0, "management_class": "not_ota_managed", "route_key": null, "route_name_ja": null, "claim_limit": "The RM absence establishes only that Ota does not manage this span."},
+    {"start_m": 143.0, "end_m": 468.0, "management_class": "ota_managed", "route_key": "5030510", "route_name_ja": "大田区道3-51号線"},
+    {"start_m": 468.0, "end_m": 583.0, "management_class": "ota_managed", "route_key": "5030250", "route_name_ja": "大田区道3-25号線"},
+    {"start_m": 583.0, "end_m": 618.0, "management_class": "ota_managed", "route_key": "5030490", "route_name_ja": "大田区道3-49号線"},
+    {"start_m": 618.0, "end_m": 643.0, "management_class": "ota_managed", "route_key": "4000600", "route_name_ja": "大田区道主要第60号線"},
+    {"start_m": 643.0, "end_m": 718.0, "management_class": "ota_managed", "route_key": "4000460", "route_name_ja": "大田区道主要第46号線"},
+    {"start_m": 718.0, "end_m": 773.0, "management_class": "not_ota_managed", "route_key": null, "route_name_ja": null, "claim_limit": "The RM absence establishes only that Ota does not manage this span."},
+    {"start_m": 773.0, "end_m": 803.0, "management_class": "ota_managed", "route_key": "5030250", "route_name_ja": "大田区道3-25号線"},
+    {"start_m": 803.0, "end_m": 883.0, "management_class": "not_ota_managed", "route_key": null, "route_name_ja": null, "claim_limit": "The RM absence establishes only that Ota does not manage this span."},
+    {"start_m": 883.0, "end_m": 933.0, "management_class": "ota_managed", "route_key": "5031200", "route_name_ja": "大田区道3-120号線"},
+    {"start_m": 933.0, "end_m": 953.0, "management_class": "ota_managed", "route_key": "4000600", "route_name_ja": "大田区道主要第60号線"},
+    {"start_m": 953.0, "end_m": 1016.882, "management_class": "ota_managed", "route_key": "4000450", "route_name_ja": "大田区道主要第45号線"}
+  ],
+  "phase1_output_boundary": {
+    "legal_width_selected": false,
+    "building_standards_act_category_selected": false,
+    "observed_features_joined": false,
+    "physical_instances_registered": false
+  }
+}

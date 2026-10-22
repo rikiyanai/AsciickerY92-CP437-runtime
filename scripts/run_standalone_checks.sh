@@ -10,6 +10,7 @@ python3 -m pytest -q \
   scripts/test_glyph_topology_gate_t1.py \
   scripts/test_glyph_topology_gate_t2_fixtures.py \
   tests/test_recording_contract.py \
+  tests/test_document_placement.py \
   tests/test_wallace_sand_scene.py \
   tests/test_spooky_skins.py \
   tests/test_native_ws_read.py

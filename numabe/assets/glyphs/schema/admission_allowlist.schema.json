@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://asciicker.dev/schema/admission_allowlist.schema.json",
+  "title": "FL-4131 admission allowlist (W6 draft)",
+  "description": "Schema for assets/glyphs/admission_allowlist.json. Contract draft only — runtime enforcement is Phase 2+ and lives in the FL-4049 owner lane.",
+  "type": "object",
+  "required": ["version", "fl", "stage", "allow", "deny", "resolution_policy"],
+  "additionalProperties": true,
+  "properties": {
+    "_comment": {
+      "type": "string",
+      "description": "Free-form documentation. Marker for tools that should skip non-manifest JSON in glyphs/ folders."
+    },
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "fl": {
+      "type": "string",
+      "pattern": "^FL-[0-9]+$"
+    },
+    "stage": {
+      "type": "string",
+      "description": "Lifecycle marker. Phase 0 keeps W6_DRAFT_NO_RUNTIME_ENFORCEMENT; Phase 2+ promotion will change this."
+    },
+    "allow": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/allow_entry" }
+    },
+    "deny": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/deny_entry" }
+    },
+    "resolution_policy": {
+      "type": "object",
+      "required": ["order"],
+      "properties": {
+        "order": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "phase_2_runtime_note": { "type": "string" }
+      }
+    }
+  },
+  "definitions": {
+    "allow_entry": {
+      "type": "object",
+      "required": ["kind", "reason"],
+      "properties": {
+        "kind": { "enum": ["fixture", "directory", "file", "directory_prefix"] },
+        "path": { "type": "string" },
+        "path_prefix": { "type": "string" },
+        "reason": { "type": "string", "minLength": 1 }
+      },
+      "oneOf": [
+        { "required": ["path"], "not": { "required": ["path_prefix"] } },
+        { "required": ["path_prefix"], "not": { "required": ["path"] } }
+      ]
+    },
+    "deny_entry": {
+      "type": "object",
+      "required": ["kind", "reason"],
+      "properties": {
+        "kind": { "enum": ["directory", "file", "directory_prefix"] },
+        "path": { "type": "string" },
+        "path_prefix": { "type": "string" },
+        "reason": { "type": "string", "minLength": 1 }
+      },
+      "oneOf": [
+        { "required": ["path"], "not": { "required": ["path_prefix"] } },
+        { "required": ["path_prefix"], "not": { "required": ["path"] } }
+      ]
+    }
+  }
+}

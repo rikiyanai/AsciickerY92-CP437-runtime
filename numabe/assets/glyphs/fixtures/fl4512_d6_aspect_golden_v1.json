@@ -1,0 +1,298 @@
+{
+  "schema": "fl4512.aspect_golden_vectors.v1",
+  "quantization_version": 3,
+  "strict_binary64_version": "fl4512.strict_binary64.v1",
+  "transform_version": "fl4512.projected_view_transform.v3",
+  "N": 8,
+  "authority_revision": "fl4512.projected_aspect_family.v1/qv3-polar-transform",
+  "metric_contract": {
+    "world_metric_q24_8": [1024, 1024, 256],
+    "effective_linear": "C=W*L*M^-1",
+    "angular_linear": "R from right polar C=R*S",
+    "scale_linear": "full C",
+    "normalization_space": "canonical_asset_before_q1_15_snap",
+    "asset_id_preimage": "AKM_bytes || LE32(anchor_q24_8[3]) || UTF8(axis_convention) || LE32(asset_metric_q24_8[3])"
+  },
+  "coordinate_convention": {
+    "cell_index": "row*N+col",
+    "row_zero": "v=-1",
+    "col_zero": "u=-1",
+    "exact_internal_boundary": "lower_index",
+    "seam_pair_coordinates": "row_col"
+  },
+  "polar_cases": [
+    {
+      "id": "rotated_anisotropic_stretch",
+      "C_row_major": [0.0, -1.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.5],
+      "expected": {
+        "C_row_major": [0.0, -1.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.5],
+        "R_row_major": [0.0, -1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0000000000000127],
+        "S_row_major": [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.5000000000000063],
+        "iterations": 6,
+        "orthogonality_residual": 2.531308496145357e-14,
+        "determinant_C": 1.0,
+        "determinant_R": 1.0000000000000127,
+        "symmetry_residual": 0.0,
+        "positive_definite_principal_minors": [2.0, 2.0, 1.0000000000000127],
+        "reconstruction_residual": 1.2656542480726785e-14
+      }
+    },
+    {
+      "id": "symmetric_shear",
+      "C_row_major": [1.0, 0.25, 0.0, 0.25, 1.5, 0.0, 0.0, 0.0, 0.75],
+      "expected": {
+        "C_row_major": [1.0, 0.25, 0.0, 0.25, 1.5, 0.0, 0.0, 0.0, 0.75],
+        "R_row_major": [1.0, -4.8553343532451844e-20, 0.0, -4.8553343532451844e-20, 1.0, 0.0, 0.0, 0.0, 1.000000000000001],
+        "S_row_major": [1.0, 0.25, 0.0, 0.25, 1.5, 0.0, 0.0, 0.0, 0.7500000000000009],
+        "iterations": 5,
+        "orthogonality_residual": 2.220446049250313e-15,
+        "determinant_C": 1.078125,
+        "determinant_R": 1.000000000000001,
+        "symmetry_residual": 0.0,
+        "positive_definite_principal_minors": [1.0, 1.4375, 1.0781250000000013],
+        "reconstruction_residual": 1.7763568394002505e-15
+      }
+    },
+    {
+      "id": "near_singular_positive_determinant",
+      "C_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 9.5367431640625e-07],
+      "expected": {
+        "C_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 9.5367431640625e-07],
+        "R_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0000000000000253],
+        "S_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 9.536743164062741e-07],
+        "iterations": 24,
+        "orthogonality_residual": 5.062616992290714e-14,
+        "determinant_C": 9.5367431640625e-07,
+        "determinant_R": 1.0000000000000253,
+        "symmetry_residual": 0.0,
+        "positive_definite_principal_minors": [1.0, 1.0, 9.536743164062741e-07],
+        "reconstruction_residual": 4.828087799349512e-20
+      }
+    },
+    {
+      "id": "reflection_rejected",
+      "C_row_major": [-1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+      "expected_cause": "reflected_transform"
+    },
+    {
+      "id": "determinant_overflow_rejected",
+      "C_row_major": [1e308, 0.0, 0.0, 0.0, 1e308, 0.0, 0.0, 0.0, 1e308],
+      "expected_cause": "determinant_overflow"
+    }
+  ],
+  "seam_pairs": [
+    [0, 7],
+    [0, 56],
+    [1, 6],
+    [2, 5],
+    [3, 4],
+    [7, 63],
+    [8, 48],
+    [15, 55],
+    [16, 40],
+    [23, 47],
+    [24, 32],
+    [31, 39],
+    [56, 63],
+    [57, 62],
+    [58, 61],
+    [59, 60]
+  ],
+  "forbidden_seam_edges": {
+    "corner_diagonals": [
+      [0, 63],
+      [7, 56]
+    ],
+    "reason": "point contact is not edge adjacency"
+  },
+  "view_vectors": [
+    {
+      "id": "positive_z",
+      "input": [0.0, 0.0, 1.0],
+      "expected_q15": [0, 0, 32767],
+      "expected": {"nu": 0, "nv": 0, "s": 32767, "row": 3, "col": 3, "cell_index": 27}
+    },
+    {
+      "id": "negative_z",
+      "input": [0.0, 0.0, -1.0],
+      "expected_q15": [0, 0, -32768],
+      "expected": {"nu": 32768, "nv": 32768, "s": 32768, "row": 7, "col": 7, "cell_index": 63}
+    },
+    {
+      "id": "positive_x_z_zero",
+      "input": [1.0, 0.0, 0.0],
+      "expected_q15": [32767, 0, 0],
+      "expected": {"nu": 32767, "nv": 0, "s": 32767, "row": 3, "col": 7, "cell_index": 31}
+    },
+    {
+      "id": "negative_x_z_zero",
+      "input": [-1.0, 0.0, 0.0],
+      "expected_q15": [-32768, 0, 0],
+      "expected": {"nu": -32768, "nv": 0, "s": 32768, "row": 3, "col": 0, "cell_index": 24}
+    },
+    {
+      "id": "positive_y_z_zero",
+      "input": [0.0, 1.0, 0.0],
+      "expected_q15": [0, 32767, 0],
+      "expected": {"nu": 0, "nv": 32767, "s": 32767, "row": 7, "col": 3, "cell_index": 59}
+    },
+    {
+      "id": "negative_y_z_zero",
+      "input": [0.0, -1.0, 0.0],
+      "expected_q15": [0, -32768, 0],
+      "expected": {"nu": 0, "nv": -32768, "s": 32768, "row": 0, "col": 3, "cell_index": 3}
+    },
+    {
+      "id": "upper_octant",
+      "input": [1.0, 1.0, 1.0],
+      "expected_q15": [18919, 18919, 18919],
+      "expected": {"nu": 18919, "nv": 18919, "s": 56757, "row": 5, "col": 5, "cell_index": 45}
+    },
+    {
+      "id": "lower_octant",
+      "input": [1.0, 1.0, -1.0],
+      "expected_q15": [18919, 18919, -18919],
+      "expected": {"nu": 37838, "nv": 37838, "s": 56757, "row": 6, "col": 6, "cell_index": 54}
+    },
+    {
+      "id": "right_lower_seam",
+      "input": [1.0, 0.0, -1.0],
+      "expected_q15": [23170, 0, -23170],
+      "expected": {"nu": 46340, "nv": 23170, "s": 46340, "row": 5, "col": 7, "cell_index": 47}
+    },
+    {
+      "id": "left_lower_seam",
+      "input": [-1.0, 0.0, -1.0],
+      "expected_q15": [-23170, 0, -23170],
+      "expected": {"nu": -46340, "nv": 23170, "s": 46340, "row": 5, "col": 0, "cell_index": 40}
+    },
+    {
+      "id": "top_lower_seam",
+      "input": [0.0, 1.0, -1.0],
+      "expected_q15": [0, 23170, -23170],
+      "expected": {"nu": 23170, "nv": 46340, "s": 46340, "row": 7, "col": 5, "cell_index": 61}
+    },
+    {
+      "id": "bottom_lower_seam",
+      "input": [0.0, -1.0, -1.0],
+      "expected_q15": [0, -23170, -23170],
+      "expected": {"nu": 23170, "nv": -46340, "s": 46340, "row": 0, "col": 5, "cell_index": 5}
+    }
+  ],
+  "metric_cases": [
+    {
+      "id": "world_metric_changes_cell_index",
+      "world_metric_q24_8": [1024, 1024, 256],
+      "asset_metric_q24_8": [1024, 1024, 256],
+      "instance_linear_row_major": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+      "eye_world_q24_8": [256, 0, 256],
+      "translation_world_q24_8": [0, 0, 0],
+      "anchor_q24_8": [0, 0, 0],
+      "expected": {
+        "effective_linear_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+        "polar": {
+          "C_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+          "R_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+          "S_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+          "iterations": 0,
+          "orthogonality_residual": 0.0,
+          "determinant_C": 1.0,
+          "determinant_R": 1.0,
+          "symmetry_residual": 0.0,
+          "positive_definite_principal_minors": [1.0, 1.0, 1.0],
+          "reconstruction_residual": 0.0
+        },
+        "q15": [31790, 0, 7947],
+        "nu": 31790,
+        "nv": 0,
+        "s": 39737,
+        "row": 3,
+        "col": 7,
+        "cell_index": 31
+      }
+    },
+    {
+      "id": "pieta_metric_inverse_is_live",
+      "world_metric_q24_8": [1024, 1024, 256],
+      "asset_metric_q24_8": [61440, 61440, 245760],
+      "instance_linear_row_major": [60, 0, 0, 0, 60, 0, 0, 0, 960],
+      "eye_world_q24_8": [512, 0, 256],
+      "translation_world_q24_8": [0, 0, 0],
+      "anchor_q24_8": [1, -4, 68],
+      "expected": {
+        "effective_linear_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+        "polar": {
+          "C_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+          "R_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+          "S_row_major": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+          "iterations": 0,
+          "orthogonality_residual": 0.0,
+          "determinant_C": 1.0,
+          "determinant_R": 1.0,
+          "symmetry_residual": 0.0,
+          "positive_definite_principal_minors": [1.0, 1.0, 1.0],
+          "reconstruction_residual": 0.0
+        },
+        "q15": [911, 484, -32752],
+        "nu": 33663,
+        "nv": 33236,
+        "s": 34147,
+        "row": 7,
+        "col": 7,
+        "cell_index": 63
+      }
+    }
+  ],
+  "snapped_vectors": [
+    {
+      "id": "u_boundary_negative_three_quarters",
+      "q15": [-3, 0, 1],
+      "expected": {"nu": -3, "nv": 0, "s": 4, "row": 3, "col": 0, "cell_index": 24}
+    },
+    {
+      "id": "u_boundary_negative_one_quarter",
+      "q15": [-1, 0, 3],
+      "expected": {"nu": -1, "nv": 0, "s": 4, "row": 3, "col": 2, "cell_index": 26}
+    },
+    {
+      "id": "u_boundary_positive_one_quarter",
+      "q15": [1, 0, 3],
+      "expected": {"nu": 1, "nv": 0, "s": 4, "row": 3, "col": 4, "cell_index": 28}
+    },
+    {
+      "id": "u_boundary_positive_three_quarters",
+      "q15": [3, 0, 1],
+      "expected": {"nu": 3, "nv": 0, "s": 4, "row": 3, "col": 6, "cell_index": 30}
+    },
+    {
+      "id": "v_boundary_negative_three_quarters",
+      "q15": [0, -3, 1],
+      "expected": {"nu": 0, "nv": -3, "s": 4, "row": 0, "col": 3, "cell_index": 3}
+    },
+    {
+      "id": "v_boundary_negative_one_quarter",
+      "q15": [0, -1, 3],
+      "expected": {"nu": 0, "nv": -1, "s": 4, "row": 2, "col": 3, "cell_index": 19}
+    },
+    {
+      "id": "v_boundary_positive_one_quarter",
+      "q15": [0, 1, 3],
+      "expected": {"nu": 0, "nv": 1, "s": 4, "row": 4, "col": 3, "cell_index": 35}
+    },
+    {
+      "id": "v_boundary_positive_three_quarters",
+      "q15": [0, 3, 1],
+      "expected": {"nu": 0, "nv": 3, "s": 4, "row": 6, "col": 3, "cell_index": 51}
+    },
+    {
+      "id": "z_zero_mixed_sign",
+      "q15": [1, -1, 0],
+      "expected": {"nu": 1, "nv": -1, "s": 2, "row": 1, "col": 5, "cell_index": 13}
+    },
+    {
+      "id": "zero_vector_rejected",
+      "q15": [0, 0, 0],
+      "expected_cause": "zero_vector"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "fl4512.temporal_margin_table.v1",
+  "policy_set_id": "mixed-authored-calibrated-v1",
+  "method": "mixed_policy_basis.v1",
+  "perceptual_claim": false,
+  "suppressed_real_change": 0,
+  "corpus": [
+    {
+      "path": "scratchpad/fl4512-u6-two-active-calibration-fast-pan-v1/temporal_measurement.jsonl",
+      "sha256": "1a1ceb048276ca2e72e66229e245dc9693d41346b1a1d6878cd276185cdc9283"
+    }
+  ],
+  "corpus_hash": "9d3e6a4d9e446d38fe8243ce14ecdbf9031294bb57a477536762cd3b021aa270",
+  "rows": [
+    {
+      "scorer_kind": 1,
+      "scorer_version": 2,
+      "scorer_id": "fl4512.shape6_f8_w4.v2",
+      "score_domain": "fl4512.shape6_f8_w4.v2.score_int.u32",
+      "calibration_id": "authored-exact-argmin-tie-v1",
+      "policy_basis": "authored_exact_argmin_tie.v1",
+      "delta_keep": {
+        "type": "u32",
+        "value": 0
+      }
+    },
+    {
+      "scorer_kind": 2,
+      "scorer_version": 1,
+      "scorer_id": "u7.mask.v1",
+      "score_domain": "u7.mask.v1.score_num.u32",
+      "calibration_id": "provisional-n2",
+      "policy_basis": "calibrated_nearest_rank_p99.v1",
+      "corpus_hash": "9d3e6a4d9e446d38fe8243ce14ecdbf9031294bb57a477536762cd3b021aa270",
+      "quantile_rank": {
+        "numerator": 99,
+        "denominator": 100,
+        "nearest_rank_index_zero_based": 2026,
+        "sample_count": 2047
+      },
+      "delta_keep": {
+        "type": "u32",
+        "value": 730
+      }
+    }
+  ],
+  "table_sha256": "18545e4fb63b3259b6c8d89db89dfa89c8f92dbdc329c69b57af74d0f02ba731"
+}

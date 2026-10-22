@@ -1,0 +1,24 @@
+{
+  "canonical_world": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical.world_ir.json",
+  "canonical_world_sha256": "bcc806ee1998931ba4bc8d2f8dfe046f83f1060ed35820b059c5183f37787b03",
+  "catalog": "/Users/r/Projects/asciicker-Y9-2/artifacts/experiments/fl4813_capture_review_20260915/preserved/numabe_full_727_mapping_20260915/generic_module_catalog.json",
+  "outputs": {
+    "custom": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population/population_plan.custom.json",
+    "fixtures": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population/population_plan.fixtures.json",
+    "linear": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population/population_plan.linear.json",
+    "terminal": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population/population_plan.terminal.json"
+  },
+  "placements_by_owner": {
+    "custom": 15,
+    "fixtures": 1487,
+    "linear": 1574,
+    "terminal": 26
+  },
+  "representation_plan": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/representation_plan.json",
+  "representation_plan_sha256": "6888b471904175469acad3d1dc62ff6e9803139577b85d489047653e98478ae6",
+  "rules": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/rules_resolved.json",
+  "rules_sha256": "7bfdb5e6173fa79c49b16c16d9cd6417575ba7d2de70cd05195bcf56e48c10d6",
+  "schema": "y92.population_dispatch.v1",
+  "source_population_plan": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/plan/population/population_plan.representation_merged.json",
+  "source_population_plan_sha256": "bc25c9ca67ca748a02ef38f335137bc5f867fd968ec2e667000071b78f0eee5f"
+}

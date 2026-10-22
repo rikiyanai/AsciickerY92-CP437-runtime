@@ -1,0 +1,247 @@
+{
+ "schema": "y92.authored_mapillary_object_decisions.v1",
+ "owner": "authored per-object decisions for Mapillary detections (and the two OSM entrance gates the infrastructure stage already draws); read by scripts/pipeline/compile_representation_plan.py (R-AUTHORED-REJECT / R-AUTHORED-MINIMAP / move_to) via scripts/pipeline/authored_mapillary_decisions.py",
+ "derivation_boundary": "A decision changes what the plan builds for a detection. It never edits the detection in mapillary_objects/.",
+ "decisions": [
+  {
+   "decision_id": "MLY-4876-001",
+   "mapillary_object_id": "549495619815002",
+   "action": "minimap_only",
+   "basis": "Second sighting of the junction box 488736436076904: same object--junction-box class, same 3 frames, raw positions 1.9 m apart (E 379751.68 N 3938510.82 vs E 379752.56 N 3938509.14), built 0.2 m apart so the two street_cabinet meshes read as one grey slab beside the platform railing (editor top view F_junction_boxes_top_y0.png shows one slab, not two objects). 488736436076904 stays.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_junction_boxes_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N00_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-002",
+   "mapillary_object_id": "549495629815001",
+   "action": "reject",
+   "basis": "Second head of the signal 549495626481668: both are traffic-light detections, raw positions 0.9 m apart (E 379767.76 N 3938493.74 vs E 379766.86 N 3938493.75), same frames; it was built 8.2 m away on the other side of the track (E 379771.09 N 3938495.96, carrier 24475081 chainage 731.6). 549495626481668 stays as the one signal. The generic same-class merge would also fold it; this row records the reviewed decision.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N16_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_signal_heads_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-003",
+   "mapillary_object_id": "549495616481669",
+   "action": "minimap_only",
+   "basis": "Cabinet (street_cabinet) at the platform edge: built E 379766.71 N 3938488.33, 2.1 m from route 1 and 2.8 m from the station anchor, i.e. on the platform edge line; the raw detection (4.0 m from the built point) is itself 2.0 m from route 0. No position inside the platform clearance is supported by the detection, and the roof above it hides the object in every editor view (F_platform_edge_cabinet_top_y0.png shows only the flat roof), so it is kept off the platform.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_platform_edge_cabinet_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N09_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-004",
+   "mapillary_object_id": "497990994978636",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 2.1 m from the authored/identity sign obs-manual-business:cleaner, which is already drawn; the review item records wrong_height as well. Picture crops/N10_persp_y0.png is context only (wall, card not resolvable), so the basis is the measured distance.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N10_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-005",
+   "mapillary_object_id": "497844031659999",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 0.5 m from the authored sign SF-4876-0552 (accepted), which is already drawn; the review item records wrong_height as well. Picture crops/N12_persp_y0.png is context only (wall, card not resolvable), so the basis is the measured distance.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N12_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-006",
+   "mapillary_object_id": "404140967341742",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 0.6 m from the authored platform board SF-4876-S402-008 (accepted), which is already drawn; the review item records wrong_height as well. Picture F_platform_board_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_platform_board_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N15_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-007",
+   "mapillary_object_id": "404169080672264",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 1.2 m from the authored platform board SF-4876-S402-008 (accepted), which is already drawn; the review item records wrong_height as well. Picture F_platform_board_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_platform_board_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N15_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-008",
+   "mapillary_object_id": "497768135000922",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 2.0 m from the authored platform board SF-4876-S402-008 (accepted), which is already drawn; the review item records wrong_height as well. Picture F_platform_board_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_platform_board_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N15_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-009",
+   "mapillary_object_id": "497735248337544",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 0.7 m from the authored sign SF-4876-S404-014 (accepted), which is already drawn; the review item records wrong_height as well. Picture crops/N22_persp_y0.png is context only (wall, card not resolvable), so the basis is the measured distance.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N22_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-010",
+   "mapillary_object_id": "497806448330424",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 0.8 m from the authored sign SF-4876-0208 (accepted), which is already drawn; the review item records wrong_height as well. Picture F_blade_stack_N37_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_blade_stack_N37_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N29_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-011",
+   "mapillary_object_id": "937684937023861",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 0.9 m from the authored sign SF-4876-0208 (accepted), which is already drawn; the review item records wrong_height as well. Picture F_blade_stack_N37_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_blade_stack_N37_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N29_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-012",
+   "mapillary_object_id": "937867110338977",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 0.5 m from the authored/identity sign obs-manual-business:shige, which is already drawn; the review item records wrong_height as well. Picture F_blade_stack_N37_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_blade_stack_N37_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N37_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-013",
+   "mapillary_object_id": "937883417004013",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 0.6 m from the authored sign SF-4876-0300 (accepted), which is already drawn; the review item records wrong_height as well. Picture F_blade_stack_N37_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_blade_stack_N37_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N37_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-014",
+   "mapillary_object_id": "937759080349780",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 0.8 m from the authored sign SF-4876-S402-018 (accepted), which is already drawn; the review item records wrong_height as well. Picture F_blade_stack_N37_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_blade_stack_N37_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N37_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-015",
+   "mapillary_object_id": "937789140346774",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 1.0 m from the authored sign SF-4876-S402-018 (accepted), which is already drawn; the review item records wrong_height as well. Picture F_blade_stack_N37_top_y0.png shows the platform wall and the authored card; the stand-in is not separable from it.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_fix_20261016/station/F_blade_stack_N37_top_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N37_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-016",
+   "mapillary_object_id": "937683050357383",
+   "action": "minimap_only",
+   "basis": "generic 1x3 m blade stand-in (street_fixture store/advertising/banner signboard mesh) built 1.0 m from the identity sign My Basket, which is already drawn; the review item records wrong_height as well. Picture crops/N41_persp_y0.png is context only (wall, card not resolvable), so the basis is the measured distance.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N41_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-017",
+   "mapillary_object_id": "488555189255550",
+   "action": "minimap_only",
+   "basis": "traffic_sign pole stand-in 0.15 m from the pole that the authored pole poster SF-4876-0082 already draws at E 379772.4 N 3938497.3; two poles in one spot. SF-4876-0082 stays. Picture crops/N16_persp_y0.png shows the platform end only (context).",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N16_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-018",
+   "target_feature_id": "feature:station_entrance:node/9865199049",
+   "action": "minimap_only",
+   "basis": "OSM station-entrance gate 9865199049: pedestrian_gate mesh (generic 1x3 m blade) 3.3 m from the entrance mesh that the infrastructure stage already draws for the same node, placed on a drug-store wall face; wrong_height. The entrance stays drawn by the infrastructure stage.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N04_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  },
+  {
+   "decision_id": "MLY-4876-019",
+   "target_feature_id": "feature:station_entrance:node/9865199050",
+   "action": "minimap_only",
+   "basis": "OSM station-entrance gate 9865199050: the same node is drawn three times, by the infrastructure entrance mesh (infrastructure_station_entrance_feature_station_entrance_node_9865199050.akm, same E 379774.08 N 3938492.88), by this gate, and by the 7.15 m facade plane. The infrastructure mesh and the facade stay.",
+   "reviewed_by": "agent FL-4876 station/track card fix (sonnet-5.5)",
+   "reviewed_on": "2026-10-16",
+   "evidence": [
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/crops/N20_persp_y0.png",
+    "artifacts/experiments/fl4876_manual_world/assess/card_review_20261016/station_track/review.json"
+   ]
+  }
+ ]
+}

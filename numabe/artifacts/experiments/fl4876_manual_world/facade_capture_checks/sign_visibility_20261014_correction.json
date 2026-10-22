@@ -1,0 +1,17 @@
+{
+ "schema": "y92.fl4876.sign_visibility_check.v1",
+ "at": "2026-10-14",
+ "session": "0e4cdb7d-789e-4f42-9ca8-ce5af0878c03",
+ "corrects": "sign_visibility_20261014.json and sign_yaws_build_reg_73.jsonl / sign_yaws_clear_1m.jsonl: all were measured with the WRONG sprites",
+ "cause": "assets/sprites held 19 untracked sign_*.xp written 2026-10-13 08:03:20 by an unidentified process, same names as the build's signs but the old 1x size (FamilyMart 14x5 vs 21x8). LoadSprites registers assets/sprites first and the registry keeps the first name, so RegisterMapSprites skipped every build's own <map>.sprites/ signs - in the editor's wasm .data package and in the native game alike.",
+ "found_by": "sign_same_pos.mjs: the map's own sign vs a preview copy of <map>.sprites/<name> at the same position drew different cells (FamilyMart 47 vs 111) under every preview-path variant; after moving the 19 files out, 0 differing cells (6 signs x 8 headings)",
+ "action": "files moved (not deleted) to quarantined_assets_sprites/ with manifest.json; compile_sign_sprites.py SIGN-SHADOW-01 now refuses a build whose sign names exist in assets/sprites; wasm rebuilt (.data no longer carries them)",
+ "remeasured_8_headings_build_own_sprites": {
+  "at_foot_build_reg_73": "7/19 signs show >= 40% of their cells from some heading",
+  "at_foot_plus_1m": "17/19 (komatsuya 270/270, 割烹浜蝶 120/120, ebara_musen 159/162, shige 177/198)",
+  "still_failing": {"unagi_tempura": "0 at foot, 2/240 at +1 m", "cafe_bit": "58/168 at +1 m"},
+  "files": ["sign_yaws_build_reg_73_unshadowed.jsonl", "sign_yaws_clear_1m_unshadowed.jsonl"]
+ },
+ "decision": "FOOT_CLEAR_M = 1.0 (compile_sign_sprites.py)",
+ "retracted": "the earlier statement that 11 signs draw nothing at any offset and are occluded by buildings across the street was measured on the stale 1x sprites; with the build's sprites only unagi_tempura stays near 0"
+}

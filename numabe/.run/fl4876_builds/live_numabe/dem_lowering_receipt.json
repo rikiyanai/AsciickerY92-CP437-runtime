@@ -1,0 +1,40 @@
+{
+  "counts": {
+    "bilinear_vertices": 786476,
+    "boundary_idw4_vertices": 1057765,
+    "dem_samples": 8227,
+    "patches": 115092,
+    "seam_mismatches": 0,
+    "unique_height_vertices": 1844241
+  },
+  "elevation": {
+    "compiled_raw_max": 1611,
+    "compiled_raw_min": 128,
+    "compiled_relative_max_m": 18.06068916298579,
+    "compiled_relative_min_m": 0.0,
+    "local_bake_datum_m": 6.5,
+    "source_max_m": 24.56,
+    "source_min_m": 6.5,
+    "source_range_m": 18.06,
+    "vertical_datum": "orthometric metres on the Japanese vertical datum (source_manifest.json record gsi_dem5a_elevation, field crs)"
+  },
+  "input_map": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/classic_base.a3d",
+  "input_map_sha256": "c91ea2f4321ea63ca2b7fbbb5f9ad93837396ebaa3e23e28e2fcc4c1aac79e8d",
+  "invariants": {
+    "a3d_tail_preserved": true,
+    "source_dem_nonflat": true,
+    "terrain_seams_equal": true
+  },
+  "output_map": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/dem_terrain.a3d",
+  "output_map_sha256": "2ca5c1c763794f0e0ac6266f0c9a2607cb7641e7d7f76787fb1354735014abc6",
+  "run_root": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple",
+  "scale": {
+    "bake_units_per_metre": 82.11203828474676,
+    "bake_units_per_world_unit": 16.0,
+    "baseline_raw": 128.0,
+    "world_units_per_metre": 5.1320023927966725
+  },
+  "schema": "y92.world_ir_dem_a3d_lowering.v1",
+  "world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_inputs/dem5a.world_ir.json",
+  "world_ir_sha256": "77743ba34c93788085fdc57cfa7cc2e89e826ce5b8f2edaf0bd34f40cfed075f"
+}

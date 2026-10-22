@@ -1,0 +1,28 @@
+{
+ "schema": "y92.authored_representation_waivers.v2",
+ "scope": "numabe_connected_neighborhood",
+ "derivation_boundary": [
+  "A waiver approves an omission. It is not evidence, and it never asserts that the feature is absent from the world.",
+  "A waiver lowers no threshold and removes no observation. The waived row keeps its supporting observation and asserts no physical presence.",
+  "A waiver discharges a debt that would otherwise block. It has no power over a row the planner already resolves, so it can never quietly overwrite a decision nobody was asked about.",
+  "A waiver is not a substitute for an authored asset. It records that no honest representation exists today, not that authoring one was declined for cost.",
+  "status 'proposed' is an argument, not a decision. A proposed row discharges nothing, is withheld from the planner, and leaves the feature blocking. Only an operator moves a row to 'approved'.",
+  "An approval is bound to conditions_sha256, the digest of the feature, its observations, its presentation requirements, and the debt verdict that made it owe anything. The planner refuses an approval whose conditions have moved; it must be reviewed again rather than re-applied.",
+  "A superseded row is kept, never deleted. The audit trail of who approved what is the point of the document."
+ ],
+ "waivers": [
+  {
+   "waiver_id": "WVR-4809-001",
+   "feature_id": "feature:mapillary_object/937664923692529",
+   "disposition_waived": "observation_owed",
+   "status": "approved",
+   "proposed_by": "agent:claude-opus-5 session_01MF4NmhzorUcjervkD9U5ju",
+   "proposed_on": "2026-09-23",
+   "conditions_sha256": "266ef3f8fa3f339b0d642ea77c6100361db98207c4a41a84afaa3eedb1ef9cf2",
+   "reason": "PROPOSAL, NOT AN APPROVAL. No operator has decided this omission. An earlier revision of this row carried approved_by 'operator' on the strength of a menu selection that chose which mechanism to BUILD; the operator was never shown this justification and never approved the omission. That row is retracted, and the schema now refuses a proposal that names an approver. WHAT IS MEASURED. Mapillary object--cctv-camera is the only one of 569 canonical Mapillary objects routed to human_review; the other 568 resolved without calling the backend (513 existing_asset, 55 procedural_template). JEV answered representation observation_debt with PROBABILITY 0.94 and CONFIDENCE 0.92, routine resolution rule unmatched, reason 'no verified catalog or surface representation; keep model review'. Its presentation requirements are gameplay_authority presentation_only, must_not_imply_collision true, silhouette_required false, legibility_class secondary. The 84-module generic catalog contains no camera. WHAT IS NOT EVIDENCE FOR THIS FEATURE, corrected from the retracted row. Geometry confidence is 0.6, not the 0.7 previously written, and 0.6 is a constant across all 569 Mapillary rows; so are semantic_class 0.7 and object_value 0.9. None of them distinguishes this camera from any other object, so none of them is a reason to omit this one. asset_choice 'none' at 1.0 is a single-key distribution and is 1.0 by construction, not by conviction. The earlier claim of 'one Mapillary frame' is withdrawn: frames_seen is the corrupt value [\"data\"] on all 569 rows (FL-4871), so the frame count was never measured. The retained raw bundle shows this feature actually has four frames. WHAT THE CATALOG SEARCH DOES AND DOES NOT SHOW. It shows no authored module depicts a camera. It does not show that no honest representation can be authored, and the previous row's conclusion that 'no honest representation exists today' overreached from one to the other, against this document's own derivation boundary. A minimal non-colliding secondary-legibility camera glyph is not ruled out by anything measured here. WHY IT IS STILL WORTH PROPOSING. The nearest existing modules, pole_streetlight and meter_and_service_cabinet, would assert a physical form never observed, which contradicts the feature's own presentation requirements. So the live choice is between authoring a new camera asset and approving an omission. That choice belongs to an operator, and this row exists so it can be made on the record rather than by a default.",
+   "approved_by": "RIKI YANAI HERNANDEZ <33168192+rikiyanai@users.noreply.github.com>",
+   "approved_on": "2026-10-12",
+   "approval_record": "commit:1b16a64c58c35ad8deee159e7f28f772a5fc7e58"
+  }
+ ]
+}

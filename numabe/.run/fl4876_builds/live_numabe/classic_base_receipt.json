@@ -1,0 +1,61 @@
+{
+  "asciiid_used": false,
+  "counts": {
+    "dem_features": 1,
+    "instances": 0,
+    "minimap_markers": 30,
+    "osm_features": 814,
+    "patches": 115092,
+    "patches_x": 278,
+    "patches_y": 414
+  },
+  "inputs": {
+    "aoi": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/aoi.direct.geojson",
+    "aoi_sha256": "659c708e767f4613b95b5e32bbfdca269318022a38c8e189732a81f9bf072a55",
+    "dem_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_inputs/dem5a.world_ir.json",
+    "dem_world_ir_sha256": "77743ba34c93788085fdc57cfa7cc2e89e826ce5b8f2edaf0bd34f40cfed075f",
+    "osm_world_ir": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/osm.world_ir.json",
+    "osm_world_ir_sha256": "86d0333f70e978caa8ea3779786c3a6507d1b38769647958d76e0cd11f9d49ab",
+    "palette_map": "/Users/r/Projects/asciicker-Y9-2/assets/a3d/game_map_y8.a3d",
+    "palette_map_sha256": "fed5a4098ef8e64669b482e902de4132442589b532072a1bcdfc499920db66e4"
+  },
+  "legacy_sbu_runner_used": false,
+  "output": {
+    "map": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/classic_base.a3d",
+    "map_sha256": "c91ea2f4321ea63ca2b7fbbb5f9ad93837396ebaa3e23e28e2fcc4c1aac79e8d"
+  },
+  "projection": {
+    "content_scale": 5.1320023927966725,
+    "offset_x": 48.0,
+    "offset_y": 48.0,
+    "origin_easting": 379699.09478405997,
+    "origin_northing": 3938417.876643479,
+    "projection_kind": "epsg32654_affine",
+    "schema": "y92.classic_base_projection.v1",
+    "terrain_bounds": {
+      "max_x": 2224.0,
+      "max_y": 3312.0,
+      "min_x": 0,
+      "min_y": 0
+    }
+  },
+  "runtime_launched": false,
+  "schema": "y92.classic_base_compile.v1",
+  "spawn": {
+    "source": "home_start",
+    "x": 1787.0214903041467,
+    "y": 1559.01587711617,
+    "yaw": 0.0
+  },
+  "stage": "base_only_not_launchable",
+  "station": {
+    "label": "沼部駅 / Numabe Station",
+    "x": 432.80717958845526,
+    "y": 432.9014329802965
+  },
+  "target_runtime": "original_cpp_classic",
+  "world_extent": {
+    "height": 3312.0,
+    "width": 2224.0
+  }
+}

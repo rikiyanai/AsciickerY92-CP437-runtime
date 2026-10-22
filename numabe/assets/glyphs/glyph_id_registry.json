@@ -1,0 +1,190 @@
+{
+  "schema": "glyph_id_registry.v1",
+  "generated_by": "scripts/allocate_glyph_id.py",
+  "registry_sha256": "a879313780fe016527f1d9ce17fafde744d7f2573f03157a799b48af44b2e029",
+  "allocation_surfaces": [
+    {
+      "path": "<packed_content_range>",
+      "kind": "reserved_range",
+      "sha256": "n/a",
+      "min_gid": 512,
+      "max_gid": 671,
+      "count": 160,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/fixtures/extended_glyph_terrain_v1.json",
+      "kind": "json_glyph_ids",
+      "sha256": "16ecb09c686b179b08fc4189b32a98c02426a68c19b1a09c1f3bc04745d76c25",
+      "min_gid": 256,
+      "max_gid": 265,
+      "count": 10,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/fixtures/fl4208_foliage_palette_v1.json",
+      "kind": "json_glyph_ids",
+      "sha256": "4bc47f790e21825ab697ee1fc4ae23e98f696a9ecbe32b63ae2340a64ead8099",
+      "min_gid": -1,
+      "max_gid": 647,
+      "count": 40,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/fixtures/material_glyph_sidecar_example.json",
+      "kind": "json_glyph_ids",
+      "sha256": "84f886a891193c8322cb4b405f41b702c9a337a9a626c1e7c86f61b4f8e7cf3f",
+      "min_gid": 256,
+      "max_gid": 257,
+      "count": 2,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/fixtures/fl4131_material_sidecar_valid.a3d.glyph_profile.json",
+      "kind": "json_glyph_ids",
+      "sha256": "8ae368cd3486a6b2d02dcb0041217fec5990d27436d06c2128e55cc4bae8a318",
+      "min_gid": 512,
+      "max_gid": 631,
+      "count": 120,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/fixtures/extended_glyph_material_additive_v1.json",
+      "kind": "json_glyph_ids",
+      "sha256": "4239cdeb0ff08224f8ccc02fe86a8692a9a2d56b62a6d5a57f42770885a9a56c",
+      "min_gid": 512,
+      "max_gid": 1879,
+      "count": 274,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/fixtures/extended_glyph_material_morphology_v2.json",
+      "kind": "json_glyph_ids",
+      "sha256": "c63c300834e4c802e09ecb945fd0a2ca63b1e98ca0fa0a8d882d46b7bd56e1c2",
+      "min_gid": 672,
+      "max_gid": 1880,
+      "count": 2226,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/generated/extended_coverage_table.json",
+      "kind": "json_glyph_ids",
+      "sha256": "849e516bd6eee7741aac54979b88199450a9b475756cdd29b7d3b94dde288d26",
+      "min_gid": 256,
+      "max_gid": 647,
+      "count": 146,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/generated/fl4512.compiled_pool.v1.json",
+      "kind": "json_glyph_ids",
+      "sha256": "21a1b9bb9553b354413fe4430fb6330cf92c567cc4261375cc64ea387c1e729a",
+      "min_gid": 512,
+      "max_gid": 671,
+      "count": 1548,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/generated/fl4216_shoreline_wave_receipts.json",
+      "kind": "json_glyph_ids",
+      "sha256": "ddd769f6170802fdf69c79fba559ec5c8c431df215e4046352ecb29e74e49036",
+      "min_gid": 517,
+      "max_gid": 671,
+      "count": 34,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/generated/material.morphology.v2.shape_catalog.json",
+      "kind": "json_glyph_ids",
+      "sha256": "782a2be3e3f9ab112bd4a57dd2b8e46c8bb50cbc475d6efe1cb28c43906807ea",
+      "min_gid": 672,
+      "max_gid": 1880,
+      "count": 1205,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/generated/material.additive.v1.shape_catalog.json",
+      "kind": "json_glyph_ids",
+      "sha256": "3988528639f9117490d9a802afd2359891774e33781e420efdaff6c780ffa8f7",
+      "min_gid": 512,
+      "max_gid": 1876,
+      "count": 161,
+      "scanner": "allocate_glyph_id.py"
+    },
+    {
+      "path": "assets/glyphs/profiles/material_rendering_profiles.v1.json",
+      "kind": "json_glyph_ids",
+      "sha256": "1bd6e396ad38da1a78b1b2d585325d0b8ec0da485e677c0841ec6c349242062b",
+      "min_gid": 32,
+      "max_gid": 671,
+      "count": 428,
+      "scanner": "allocate_glyph_id.py"
+    }
+  ],
+  "reserved_ids": [],
+  "allocated_ids": [
+    1876,
+    1879
+  ],
+  "absence_tile": {
+    "glyph_id": 1876,
+    "symbol_name": "GLYPH_ID_ABSENT_TILE",
+    "unicode_scalar": "U+25A1",
+    "display_name": "Absence Tile (WHITE SQUARE)",
+    "semantic_role": "absence_tile",
+    "allocated_by": "scripts/allocate_glyph_id.py",
+    "allocated_at_commit": "302d53281886aea5a8e431ad2b4697992bc9785f",
+    "allocation_scan_sha256": "afb31fc8b526fabf5fa0f12a269a9fe18b0ba8b38d69ea98ff456fd2aa917685",
+    "atlas_manifest_path": "assets/glyphs/atlases/material.additive.v1.atlas_of_atlases.json",
+    "atlas_manifest_sha256": "251e53afc6227fec345ae49bb9e3daf3e6d3e65e4cb83fde0a0e9f5d1c91704c",
+    "shape_catalog_path": "assets/glyphs/generated/material.morphology.v2.shape_catalog.json",
+    "shape_catalog_sha256": "d75f59708f3a74fef0baa093b6f9f5c7871e769bfcdacc01a023ddb781dd77c3",
+    "admission_manifest_path": "assets/glyphs/fixtures/extended_glyph_material_additive_v1.json",
+    "admission_manifest_sha256": "4239cdeb0ff08224f8ccc02fe86a8692a9a2d56b62a6d5a57f42770885a9a56c",
+    "lut_sha256": "78b0a0f43c842282ec9da7b27921cf32b9da09639bc07cd7b3efca2c82cefb7c",
+    "atlas_page_sha256": "fc9963161536864ef5d8857821582f14b8134c31470de50af396c28ef1ec5749",
+    "admitted": true
+  },
+  "note": "absence tile 1876 (U+25A1) admitted to material.additive.v1 atlas (page0 row 160); existing 512..671 cells byte-identical. ABI-A3 atlas-admission receipt prerequisite satisfied at the atlas level; CPU/GPU empty-pool absence resolution + headed P1 re-run remain. | FL-4512 G5: absence taxonomy now 3 distinct atlas glyphs (1876/1877/1878), manifest_hash 9657fbf6...",
+  "pinned_commit": "302d53281886aea5a8e431ad2b4697992bc9785f",
+  "absence_classes": {
+    "empty_absence": {
+      "glyph_id": 1876,
+      "symbol_name": "GLYPH_ID_ABSENT_EMPTY",
+      "unicode_scalar": "U+25A1",
+      "fg": 244,
+      "bg": 238,
+      "reason": "empty_absence"
+    },
+    "blocked_missing_fact": {
+      "glyph_id": 1877,
+      "symbol_name": "GLYPH_ID_ABSENT_MISSING_FACT",
+      "unicode_scalar": "U+25A4",
+      "fg": 203,
+      "bg": 238,
+      "reason": "missing_fact"
+    },
+    "blocked_unadmitted_glyph": {
+      "glyph_id": 1878,
+      "symbol_name": "GLYPH_ID_ABSENT_UNADMITTED_GLYPH",
+      "unicode_scalar": "U+2612",
+      "fg": 99,
+      "bg": 238,
+      "reason": "unadmitted_glyph"
+    },
+    "pool_load_failure": {
+      "glyph_id": 1879,
+      "symbol_name": "GLYPH_ID_ABSENT_POOL_LOAD_FAILED",
+      "unicode_scalar": "U+26A0",
+      "display_name": "Pool Load Failure Warning",
+      "fg": 220,
+      "bg": 52,
+      "reason": "pool_load_failed",
+      "admitted": true,
+      "admission_manifest_sha256": "4239cdeb0ff08224f8ccc02fe86a8692a9a2d56b62a6d5a57f42770885a9a56c",
+      "atlas_manifest_sha256": "251e53afc6227fec345ae49bb9e3daf3e6d3e65e4cb83fde0a0e9f5d1c91704c",
+      "lut_sha256": "78b0a0f43c842282ec9da7b27921cf32b9da09639bc07cd7b3efca2c82cefb7c",
+      "atlas_page_sha256": "fc9963161536864ef5d8857821582f14b8134c31470de50af396c28ef1ec5749"
+    }
+  }
+}

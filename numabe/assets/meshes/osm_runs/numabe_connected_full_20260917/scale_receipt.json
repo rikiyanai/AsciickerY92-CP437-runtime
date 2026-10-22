@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "expected_m": 1040.0,
+      "got_m": 1041.7621157507763,
+      "id": "route_length_agreement",
+      "residual_m": 1.7621157507762746,
+      "source": "valhalla_pedestrian_route trip.summary.length vs compiled corridor",
+      "tolerance_m": 10.4,
+      "verdict": true
+    },
+    {
+      "corridor_samples": 36060,
+      "got_radius_m": 0.38971143170299744,
+      "id": "avatar_corridor_plausibility",
+      "missing_samples": 0,
+      "post_blocked_samples": 0,
+      "radius_bounds_m": [
+        0.3,
+        0.5
+      ],
+      "source": "anthropometric envelope + compiled corridor blockage",
+      "verdict": true
+    },
+    {
+      "expected_source_range_m": 18.06,
+      "got_compiled_range_m": 18.06677840410615,
+      "id": "vertical_range_agreement",
+      "residual_m": 0.006778404106150049,
+      "source": "gsi_dem5a source range vs compiled bake range",
+      "tolerance_m": 1.56,
+      "verdict": true
+    },
+    {
+      "anchor_pairs": 32,
+      "id": "anchor_metrology",
+      "max_residual_m": 4.04121180963557e-14,
+      "source": "osm anchor EPSG32654 chords vs y9_world chords",
+      "tolerance_m": 1.3833333333333333,
+      "verdict": true
+    },
+    {
+      "gate_pass": true,
+      "id": "gravity_level_record",
+      "readings_deg": [],
+      "source": "fl4812 gravity alignment (orientation evidence only)",
+      "threshold_deg": 2.5,
+      "verdict": true
+    }
+  ],
+  "inputs": {
+    "anchor_set": {
+      "path": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/osm.anchor_set.json",
+      "sha256": "5fbf1b2964e3e8a7378aeadcd81d0cc172bacaaa9115fc58fbd4075c634edda5"
+    },
+    "camera_registration": {
+      "path": "/Users/r/Downloads/asciicker-Y9-2/assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/station_camera_solve_receipt.json",
+      "sha256": "916f88ade800b71ad4e0d54a6718b01f73f21183d29c2118f0e772c8c07beda3"
+    },
+    "dem_receipt": {
+      "path": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/dem_lowering_receipt.json",
+      "sha256": "a909a1774285ca4581cd7366db2ac8c0db562d2833e7b052491eba33f6fdabef"
+    },
+    "route_walkability_receipt": {
+      "path": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/route_walkability_receipt.json",
+      "sha256": "bf65ad0bd3317dda72d0a55fd57a1d150abcfc7ee7aa4d26e6a27d19e95fcc67"
+    },
+    "terrain_metadata": {
+      "path": "/Users/r/Downloads/asciicker-Y9-2/.run/numabe_connected/build_full/terrain_metadata.json",
+      "sha256": "638b4df0381487876ba3a38e4eef3d31d506b168ea165be66f3c3146eeeaeb6b"
+    }
+  },
+  "pass": true,
+  "schema": "y92.scale_receipt.v1",
+  "stage": "executed_scale_cross_check",
+  "world_units_per_metre_quoted": 3.421334928531115
+}

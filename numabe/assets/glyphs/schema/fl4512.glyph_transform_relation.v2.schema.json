@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fl4512.glyph_transform_relation.v2.schema.json",
+  "title": "FL-4512 immutable view-conditioned glyph transform relations",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "version",
+    "descriptor_abi",
+    "glyph_ids",
+    "descriptor_count",
+    "aspect_count",
+    "relations_per_aspect",
+    "relation_count",
+    "bound_sha256",
+    "component_calibration",
+    "descriptors",
+    "aspects",
+    "relations",
+    "descriptor_sha256",
+    "aspect_sha256",
+    "relation_sha256",
+    "content_sha256"
+  ],
+  "properties": {
+    "schema": {"const": "fl4512.glyph_transform_relation.v2"},
+    "version": {"const": 2},
+    "descriptor_abi": {"const": "fl4512.glyph_transform_descriptor.v2"},
+    "glyph_ids": {
+      "type": "array",
+      "minItems": 32,
+      "maxItems": 32,
+      "items": {"type": "integer", "minimum": 1, "maximum": 4294967295}
+    },
+    "descriptor_count": {"const": 32},
+    "aspect_count": {"const": 64},
+    "relations_per_aspect": {"const": 1024},
+    "relation_count": {"const": 65536},
+    "bound_sha256": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "admitted_row_sha256",
+        "font_bytes_sha256",
+        "raster_identity_sha256",
+        "atlas_registry_sha256",
+        "descriptor_sha256",
+        "aspect_asset_sha256",
+        "material_profile_sha256",
+        "schema_sha256"
+      ],
+      "properties": {
+        "admitted_row_sha256": {"$ref": "#/$defs/sha256"},
+        "font_bytes_sha256": {"$ref": "#/$defs/sha256"},
+        "raster_identity_sha256": {"$ref": "#/$defs/sha256"},
+        "atlas_registry_sha256": {"$ref": "#/$defs/sha256"},
+        "descriptor_sha256": {"$ref": "#/$defs/sha256"},
+        "aspect_asset_sha256": {"$ref": "#/$defs/sha256"},
+        "material_profile_sha256": {"$ref": "#/$defs/sha256"},
+        "schema_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "component_calibration": {
+      "type": "array",
+      "minItems": 18,
+      "maxItems": 18,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "cap", "maximum_contribution"],
+        "properties": {
+          "name": {"type": "string"},
+          "cap": {"type": "integer", "minimum": 1, "maximum": 16777216},
+          "maximum_contribution": {"type": "integer", "minimum": 1, "maximum": 80}
+        }
+      }
+    },
+    "descriptors": {"type": "array", "minItems": 32, "maxItems": 32},
+    "aspects": {"type": "array", "minItems": 64, "maxItems": 64},
+    "relations": {
+      "type": "array",
+      "minItems": 65536,
+      "maxItems": 65536,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "aspect",
+          "from_glyph_id",
+          "to_glyph_id",
+          "static_components",
+          "affine_components",
+          "relation_confidence_q0_16",
+          "compiled_transform_cost"
+        ],
+        "properties": {
+          "aspect": {"type": "integer", "minimum": 0, "maximum": 63},
+          "from_glyph_id": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+          "to_glyph_id": {"type": "integer", "minimum": 1, "maximum": 4294967295},
+          "static_components": {
+            "type": "array",
+            "minItems": 11,
+            "maxItems": 11,
+            "items": {"type": "integer", "minimum": 0, "maximum": 28}
+          },
+          "affine_components": {
+            "type": "array",
+            "minItems": 7,
+            "maxItems": 7,
+            "items": {"type": "integer", "minimum": 0, "maximum": 80}
+          },
+          "relation_confidence_q0_16": {"type": "integer", "minimum": 0, "maximum": 65535},
+          "compiled_transform_cost": {"type": "integer", "minimum": 0, "maximum": 65535}
+        }
+      }
+    },
+    "descriptor_sha256": {"$ref": "#/$defs/sha256"},
+    "aspect_sha256": {"$ref": "#/$defs/sha256"},
+    "relation_sha256": {"$ref": "#/$defs/sha256"},
+    "content_sha256": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

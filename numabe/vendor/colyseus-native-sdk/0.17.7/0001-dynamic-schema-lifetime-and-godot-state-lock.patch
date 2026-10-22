@@ -1,0 +1,690 @@
+diff --git a/include/colyseus/room.h b/include/colyseus/room.h
+index 5733395..c7f6b65 100644
+--- a/include/colyseus/room.h
++++ b/include/colyseus/room.h
+@@ -71,6 +71,8 @@ struct colyseus_room {
+     /* Schema serializer */
+     colyseus_schema_serializer_t* serializer;
+     const colyseus_schema_vtable_t* state_vtable;
++    /* Guards serializer/state across the transport and consumer threads. */
++    void* state_mutex;
+ 
+     /* Connection callbacks (stored for async response) */
+     void (*connect_on_success)(void* userdata);
+@@ -119,8 +121,12 @@ void colyseus_room_free(colyseus_room_t* room);
+ /* Set state type - must be called before connect for schema serialization */
+ void colyseus_room_set_state_type(colyseus_room_t* room, const colyseus_schema_vtable_t* state_vtable);
+ 
+-/* Get current state (returns pointer to schema state, or NULL if not available) */
++/* Get current state (returns a borrowed schema pointer, or NULL).
++ * Callers that traverse it concurrently with transport processing must hold the
++ * state lock for the whole traversal. */
+ void* colyseus_room_get_state(colyseus_room_t* room);
++void colyseus_room_state_lock(colyseus_room_t* room);
++void colyseus_room_state_unlock(colyseus_room_t* room);
+ 
+ /* Connection */
+ void colyseus_room_connect(
+diff --git a/include/colyseus/websocket_transport.h b/include/colyseus/websocket_transport.h
+index 8e69f4a..ab17bf8 100644
+--- a/include/colyseus/websocket_transport.h
++++ b/include/colyseus/websocket_transport.h
+@@ -53,7 +53,6 @@ extern "C" {
+ 
+         /* 1-byte fields */
+         bool running;
+-        bool in_tick_thread;         /* True when executing inside tick thread */
+         bool pending_close;          /* Close requested from within tick thread */
+         int pending_close_code;      /* Close code for deferred close */
+         char* pending_close_reason;  /* Close reason for deferred close (must free) */
+diff --git a/platforms/godot/src/colyseus_room.c b/platforms/godot/src/colyseus_room.c
+index 6c88ff1..8e4c77d 100644
+--- a/platforms/godot/src/colyseus_room.c
++++ b/platforms/godot/src/colyseus_room.c
+@@ -335,20 +335,21 @@ void gdext_colyseus_room_get_state(void* p_method_userdata, GDExtensionClassInst
+         return;
+     }
+     
+-    // Get the state from the room
++    /* The transport thread mutates this dynamic tree. Keep the lock through
++     * the whole walk, not merely room_get_state(): map items can be replaced
++     * while dictionary conversion is iterating them. */
++    colyseus_room_state_lock(wrapper->native_room);
+     void* state = colyseus_room_get_state(wrapper->native_room);
+     const colyseus_schema_vtable_t* vtable = wrapper->native_room->state_vtable;
+-    
++
+     if (state && vtable) {
+-        // Check if this is a dynamic schema
+         if (colyseus_vtable_is_dynamic(vtable)) {
+-            colyseus_dynamic_schema_t* dyn_schema = (colyseus_dynamic_schema_t*)state;
+-            colyseus_dynamic_schema_to_dictionary(dyn_schema, result);
++            colyseus_dynamic_schema_to_dictionary((colyseus_dynamic_schema_t*)state, result);
+         } else {
+-            // Static schema - convert to dictionary
+             colyseus_schema_to_dictionary((colyseus_schema_t*)state, vtable, result);
+         }
+     }
++    colyseus_room_state_unlock(wrapper->native_room);
+     // If no state, just return the empty dictionary we created
+ }
+ 
+diff --git a/src/network/websocket_transport.c b/src/network/websocket_transport.c
+index 6b0d2bb..d1078f7 100644
+--- a/src/network/websocket_transport.c
++++ b/src/network/websocket_transport.c
+@@ -33,6 +33,16 @@
+     #define THREAD_CALL
+ #endif
+ 
++/* A close must distinguish the calling tick thread from a merely active
++ * transport. Thread-local identity remains valid through on_close, where a
++ * callback may destroy this transport. */
++static _Thread_local const colyseus_ws_transport_data_t* ws_current_tick = NULL;
++
++/* `running` and `state` cross threads. Keep their header representation plain
++ * for Zig translate-c, and use acquire/release at each cross-thread access. */
++#define ws_load(p)     __atomic_load_n((p), __ATOMIC_ACQUIRE)
++#define ws_store(p, v) __atomic_store_n((p), (v), __ATOMIC_RELEASE)
++
+ /* Runtime-gated diagnostics: set COLYSEUS_WS_DEBUG=1 in the environment to enable.
+  * This keeps pre-push hooks / non-CI runs quiet while still letting Windows CI
+  * emit detailed frame-level tracing. */
+@@ -84,6 +94,9 @@ static ssize_t ws_socket_recv(colyseus_ws_transport_data_t* data, uint8_t* buf,
+ static ssize_t ws_socket_send(colyseus_ws_transport_data_t* data, const uint8_t* buf, size_t len, int* would_block);
+ static void ws_socket_close(colyseus_ws_transport_data_t* data);
+ static void ws_cleanup_wslay(colyseus_ws_transport_data_t* data);
++static bool ws_on_tick_thread(const colyseus_ws_transport_data_t* data);
++static void ws_reap_tick_thread(colyseus_ws_transport_data_t* data);
++static void ws_finish_close(colyseus_transport_t* transport, int code, const char* reason);
+ 
+ /* wslay callbacks */
+ static void ws_on_msg_recv_callback(wslay_event_context_ptr ctx, const struct wslay_event_on_msg_recv_arg* arg, void* user_data);
+@@ -119,9 +132,8 @@ colyseus_transport_t* colyseus_websocket_transport_create(const colyseus_transpo
+     }
+ 
+     memset(data, 0, sizeof(colyseus_ws_transport_data_t));
+-    data->state = COLYSEUS_WS_DISCONNECTED;
+-    data->running = false;
+-    data->in_tick_thread = false;
++    ws_store(&data->state, COLYSEUS_WS_DISCONNECTED);
++    ws_store(&data->running, false);
+     data->pending_close = false;
+     data->pending_close_code = 0;
+     data->pending_close_reason = NULL;
+@@ -146,8 +158,9 @@ static void ws_connect_impl(colyseus_transport_t* transport, const char* url) {
+ 
+     WS_LOG("Connect called: %s (TLS=%d, skip_verify=%d)", url, data->use_tls, data->tls_skip_verify);
+ 
+-    if (data->state != COLYSEUS_WS_DISCONNECTED) {
+-        WS_LOG("Already connecting/connected, state=%d", data->state);
++    colyseus_ws_state_t current_state = ws_load(&data->state);
++    if (current_state != COLYSEUS_WS_DISCONNECTED) {
++        WS_LOG("Already connecting/connected, state=%d", current_state);
+         return;
+     }
+ 
+@@ -164,16 +177,42 @@ static void ws_connect_impl(colyseus_transport_t* transport, const char* url) {
+     }
+ 
+     WS_LOG("Socket initialized, starting state machine");
+-    data->state = COLYSEUS_WS_CONNECTING;
+-    data->running = true;
++    ws_store(&data->state, COLYSEUS_WS_CONNECTING);
++    ws_store(&data->running, true);
+ 
+     /* Create tick thread */
+ #ifdef _WIN32
+     data->tick_thread = CreateThread(NULL, 0, ws_tick_thread_func, transport, 0, NULL);
++    if (!data->tick_thread) {
++        ws_store(&data->running, false);
++        ws_store(&data->state, COLYSEUS_WS_DISCONNECTED);
++        if (transport->events.on_error) {
++            transport->events.on_error("Failed to create tick thread", transport->events.userdata);
++        }
++        return;
++    }
+ #else
+     pthread_t* thread = malloc(sizeof(pthread_t));
+-    pthread_create(thread, NULL, ws_tick_thread_func, transport);
++    if (!thread) {
++        ws_store(&data->running, false);
++        ws_store(&data->state, COLYSEUS_WS_DISCONNECTED);
++        if (transport->events.on_error) {
++            transport->events.on_error("Failed to create tick thread", transport->events.userdata);
++        }
++        return;
++    }
++    /* Publish before the child can report a close through on_close. */
+     data->tick_thread = thread;
++    if (pthread_create(thread, NULL, ws_tick_thread_func, transport) != 0) {
++        data->tick_thread = NULL;
++        free(thread);
++        ws_store(&data->running, false);
++        ws_store(&data->state, COLYSEUS_WS_DISCONNECTED);
++        if (transport->events.on_error) {
++            transport->events.on_error("Failed to create tick thread", transport->events.userdata);
++        }
++        return;
++    }
+ #endif
+ 
+     WS_LOG("Tick thread created");
+@@ -182,11 +221,12 @@ static void ws_connect_impl(colyseus_transport_t* transport, const char* url) {
+ static void ws_send_impl(colyseus_transport_t* transport, const uint8_t* data, size_t length) {
+     colyseus_ws_transport_data_t* impl = (colyseus_ws_transport_data_t*)transport->impl_data;
+ 
+-    WS_LOG("ws_send_impl called: state=%d length=%zu", impl->state, length);
++    colyseus_ws_state_t state = ws_load(&impl->state);
++    WS_LOG("ws_send_impl called: state=%d length=%zu", state, length);
+     ws_hex_dump("ws_send_impl_payload", data, length);
+ 
+-    if (impl->state != COLYSEUS_WS_CONNECTED) {
+-        WS_LOG("ws_send_impl: DROPPING - not connected (state=%d)", impl->state);
++    if (state != COLYSEUS_WS_CONNECTED) {
++        WS_LOG("ws_send_impl: DROPPING - not connected (state=%d)", state);
+         return;
+     }
+ 
+@@ -207,62 +247,74 @@ static void ws_send_unreliable_impl(colyseus_transport_t* transport, const uint8
+     (void)length;
+ }
+ 
+-static void ws_close_impl(colyseus_transport_t* transport, int code, const char* reason) {
+-    colyseus_ws_transport_data_t* data = (colyseus_ws_transport_data_t*)transport->impl_data;
+-
+-    if (data->state == COLYSEUS_WS_DISCONNECTED) {
+-        return;
+-    }
+-
+-    /* If we're being called from within the tick thread, defer the close.
+-     * We cannot pthread_join() on ourselves - that would deadlock. */
+-    if (data->in_tick_thread) {
+-        WS_LOG("Close called from tick thread - deferring");
+-        data->pending_close = true;
+-        data->pending_close_code = code;
+-        free(data->pending_close_reason);
+-        data->pending_close_reason = reason ? strdup(reason) : NULL;
+-        data->running = false;  /* Signal thread to exit */
+-        return;
+-    }
+-
+-    data->running = false;
+-
+-    if (data->wslay_ctx && data->state == COLYSEUS_WS_CONNECTED) {
+-        wslay_event_queue_close(data->wslay_ctx, code, (const uint8_t*)reason, reason ? strlen(reason) : 0);
+-        wslay_event_send(data->wslay_ctx);
+-    }
+-
+-    ws_tls_cleanup(data);
+-    ws_socket_close(data);
+-    ws_cleanup_wslay(data);
++static bool ws_on_tick_thread(const colyseus_ws_transport_data_t* data) {
++    return ws_current_tick == data;
++}
+ 
+-    /* Wait for thread */
++/* Reap the OS handle before the transport or any resource touched by its loop
++ * is released. A close callback may destroy from the tick thread itself, so
++ * that case detaches rather than joining itself. */
++static void ws_reap_tick_thread(colyseus_ws_transport_data_t* data) {
++    if (!data || !data->tick_thread) return;
+ #ifdef _WIN32
+-    if (data->tick_thread) {
++    if (!ws_on_tick_thread(data)) {
+         WaitForSingleObject(data->tick_thread, INFINITE);
+-        CloseHandle(data->tick_thread);
+-        data->tick_thread = NULL;
+     }
++    CloseHandle(data->tick_thread);
+ #else
+-    if (data->tick_thread) {
+-        pthread_t* thread = (pthread_t*)data->tick_thread;
++    pthread_t* thread = (pthread_t*)data->tick_thread;
++    if (ws_on_tick_thread(data)) {
++        pthread_detach(pthread_self());
++    } else {
+         pthread_join(*thread, NULL);
+-        free(thread);
+-        data->tick_thread = NULL;
+     }
++    free(thread);
+ #endif
++    data->tick_thread = NULL;
++}
+ 
+-    data->state = COLYSEUS_WS_DISCONNECTED;
+-
++/* No caller may access transport-owned data after on_close: the callback may
++ * synchronously destroy the room and extension wrapper. */
++static void ws_finish_close(colyseus_transport_t* transport, int code, const char* reason) {
++    colyseus_ws_transport_data_t* data = (colyseus_ws_transport_data_t*)transport->impl_data;
++    ws_tls_cleanup(data);
++    ws_socket_close(data);
++    ws_cleanup_wslay(data);
++    ws_store(&data->state, COLYSEUS_WS_DISCONNECTED);
+     if (transport->events.on_close) {
+         transport->events.on_close(code, reason, transport->events.userdata);
+     }
+ }
+ 
++static void ws_close_impl(colyseus_transport_t* transport, int code, const char* reason) {
++    colyseus_ws_transport_data_t* data = (colyseus_ws_transport_data_t*)transport->impl_data;
++    if (!data) return;
++
++    if (ws_on_tick_thread(data)) {
++        if (ws_load(&data->state) == COLYSEUS_WS_DISCONNECTED) {
++            ws_reap_tick_thread(data);
++            return;
++        }
++        WS_LOG("Close called from tick thread - deferring");
++        data->pending_close = true;
++        data->pending_close_code = code;
++        free(data->pending_close_reason);
++        data->pending_close_reason = reason ? strdup(reason) : NULL;
++        ws_store(&data->running, false);
++        return;
++    }
++
++    /* The external owner stops and joins before it reads state or releases
++     * TLS, socket, or wslay. The loop may still be using all of them. */
++    ws_store(&data->running, false);
++    ws_reap_tick_thread(data);
++    if (ws_load(&data->state) == COLYSEUS_WS_DISCONNECTED) return;
++    ws_finish_close(transport, code, reason);
++}
++
+ static bool ws_is_open_impl(const colyseus_transport_t* transport) {
+     colyseus_ws_transport_data_t* data = (colyseus_ws_transport_data_t*)transport->impl_data;
+-    return data->state == COLYSEUS_WS_CONNECTED;
++    return ws_load(&data->state) == COLYSEUS_WS_CONNECTED;
+ }
+ 
+ static void ws_destroy_impl(colyseus_transport_t* transport) {
+@@ -289,9 +341,9 @@ static thread_return_t THREAD_CALL ws_tick_thread_func(void* arg) {
+     colyseus_transport_t* transport = (colyseus_transport_t*)arg;
+     colyseus_ws_transport_data_t* data = (colyseus_ws_transport_data_t*)transport->impl_data;
+ 
+-    data->in_tick_thread = true;
++    ws_current_tick = data;
+ 
+-    while (data->running) {
++    while (ws_load(&data->running)) {
+         ws_tick_once(transport);
+ 
+ #ifdef _WIN32
+@@ -301,31 +353,19 @@ static thread_return_t THREAD_CALL ws_tick_thread_func(void* arg) {
+ #endif
+     }
+ 
+-    data->in_tick_thread = false;
+-
+-    /* Handle deferred close (was requested from within tick thread) */
+     if (data->pending_close) {
+-        WS_LOG("Handling deferred close: code=%d, reason=%s",
+-               data->pending_close_code,
+-               data->pending_close_reason ? data->pending_close_reason : "(null)");
+-
+-        ws_tls_cleanup(data);
+-        ws_socket_close(data);
+-        ws_cleanup_wslay(data);
+-
+-        data->state = COLYSEUS_WS_DISCONNECTED;
+-
+-        if (transport->events.on_close) {
+-            transport->events.on_close(data->pending_close_code,
+-                                       data->pending_close_reason,
+-                                       transport->events.userdata);
+-        }
+-
+-        free(data->pending_close_reason);
++        int code = data->pending_close_code;
++        char* reason = data->pending_close_reason;
+         data->pending_close_reason = NULL;
+         data->pending_close = false;
++        WS_LOG("Handling deferred close: code=%d, reason=%s", code, reason ? reason : "(null)");
++        ws_finish_close(transport, code, reason);
++        free(reason);
++        /* ws_finish_close may have synchronously destroyed data. */
+     }
+ 
++    ws_current_tick = NULL;
++
+ #ifdef _WIN32
+     return 0;
+ #else
+@@ -336,7 +376,7 @@ static thread_return_t THREAD_CALL ws_tick_thread_func(void* arg) {
+ static void ws_tick_once(colyseus_transport_t* transport) {
+     colyseus_ws_transport_data_t* data = (colyseus_ws_transport_data_t*)transport->impl_data;
+ 
+-    if (data->state == COLYSEUS_WS_CONNECTED) {
++    if (ws_load(&data->state) == COLYSEUS_WS_CONNECTED) {
+         int ret = wslay_event_recv(data->wslay_ctx);
+         if (ret != 0) {
+             WS_LOG("wslay_event_recv error: %d", ret);
+@@ -354,7 +394,7 @@ static void ws_tick_once(colyseus_transport_t* transport) {
+         return;
+     }
+ 
+-    if (data->state == COLYSEUS_WS_REMOTE_DISCONNECT) {
++    if (ws_load(&data->state) == COLYSEUS_WS_REMOTE_DISCONNECT) {
+         WS_LOG("Remote disconnect");
+         uint16_t code = wslay_event_get_status_code_received(data->wslay_ctx);
+         ws_close_impl(transport, code, "Remote disconnect");
+@@ -362,7 +402,7 @@ static void ws_tick_once(colyseus_transport_t* transport) {
+     }
+ 
+     /* State machine */
+-    if (data->state == COLYSEUS_WS_CONNECTING) {
++    if (ws_load(&data->state) == COLYSEUS_WS_CONNECTING) {
+         if (ws_connect_tick(data)) {
+             WS_LOG("TCP connected");
+             if (data->use_tls) {
+@@ -370,30 +410,30 @@ static void ws_tick_once(colyseus_transport_t* transport) {
+                     ws_close_impl(transport, 1006, "TLS init failed");
+                     return;
+                 }
+-                data->state = COLYSEUS_WS_TLS_HANDSHAKE;
++                ws_store(&data->state, COLYSEUS_WS_TLS_HANDSHAKE);
+             } else {
+-                data->state = COLYSEUS_WS_HANDSHAKE_SENDING;
++                ws_store(&data->state, COLYSEUS_WS_HANDSHAKE_SENDING);
+                 ws_http_handshake_init(data);
+             }
+         }
+     }
+-    else if (data->state == COLYSEUS_WS_TLS_HANDSHAKE) {
++    else if (ws_load(&data->state) == COLYSEUS_WS_TLS_HANDSHAKE) {
+         if (ws_tls_handshake_tick(data)) {
+             WS_LOG("TLS handshake complete");
+-            data->state = COLYSEUS_WS_HANDSHAKE_SENDING;
++            ws_store(&data->state, COLYSEUS_WS_HANDSHAKE_SENDING);
+             ws_http_handshake_init(data);
+         }
+     }
+-    else if (data->state == COLYSEUS_WS_HANDSHAKE_SENDING) {
++    else if (ws_load(&data->state) == COLYSEUS_WS_HANDSHAKE_SENDING) {
+         if (ws_http_handshake_send(data)) {
+             WS_LOG("Handshake sent");
+-            data->state = COLYSEUS_WS_HANDSHAKE_RECEIVING;
++            ws_store(&data->state, COLYSEUS_WS_HANDSHAKE_RECEIVING);
+         }
+     }
+-    else if (data->state == COLYSEUS_WS_HANDSHAKE_RECEIVING) {
++    else if (ws_load(&data->state) == COLYSEUS_WS_HANDSHAKE_RECEIVING) {
+         if (ws_http_handshake_receive(data)) {
+             WS_LOG("Handshake received, WS connected");
+-            data->state = COLYSEUS_WS_CONNECTED;
++            ws_store(&data->state, COLYSEUS_WS_CONNECTED);
+ 
+             /* Initialize wslay */
+             struct wslay_event_callbacks callbacks = {
+@@ -697,7 +737,7 @@ static void ws_on_msg_recv_callback(wslay_event_context_ptr ctx, const struct ws
+                 fflush(stderr);
+             }
+             ws_hex_dump("close_payload", arg->msg, arg->msg_length);
+-            data->state = COLYSEUS_WS_REMOTE_DISCONNECT;
++            ws_store(&data->state, COLYSEUS_WS_REMOTE_DISCONNECT);
+         }
+         // wslay handles ping/pong automatically
+     } else {
+diff --git a/src/room.c b/src/room.c
+index 5fc128e..b596797 100644
+--- a/src/room.c
++++ b/src/room.c
+@@ -6,6 +6,47 @@
+ #include <string.h>
+ #include <stdio.h>
+ 
++#ifdef _WIN32
++#include <windows.h>
++typedef CRITICAL_SECTION room_state_mutex_t;
++static room_state_mutex_t* room_state_mutex_create(void) {
++    room_state_mutex_t* mutex = malloc(sizeof(*mutex));
++    if (mutex) InitializeCriticalSection(mutex);
++    return mutex;
++}
++static void room_state_mutex_destroy(room_state_mutex_t* mutex) {
++    if (!mutex) return;
++    DeleteCriticalSection(mutex);
++    free(mutex);
++}
++static void room_state_mutex_lock(room_state_mutex_t* mutex) { EnterCriticalSection(mutex); }
++static void room_state_mutex_unlock(room_state_mutex_t* mutex) { LeaveCriticalSection(mutex); }
++#else
++#include <pthread.h>
++typedef pthread_mutex_t room_state_mutex_t;
++static room_state_mutex_t* room_state_mutex_create(void) {
++    room_state_mutex_t* mutex = malloc(sizeof(*mutex));
++    if (!mutex) return NULL;
++    pthread_mutexattr_t attributes;
++    if (pthread_mutexattr_init(&attributes) != 0) { free(mutex); return NULL; }
++    if (pthread_mutexattr_settype(&attributes, PTHREAD_MUTEX_RECURSIVE) != 0 ||
++        pthread_mutex_init(mutex, &attributes) != 0) {
++        pthread_mutexattr_destroy(&attributes);
++        free(mutex);
++        return NULL;
++    }
++    pthread_mutexattr_destroy(&attributes);
++    return mutex;
++}
++static void room_state_mutex_destroy(room_state_mutex_t* mutex) {
++    if (!mutex) return;
++    pthread_mutex_destroy(mutex);
++    free(mutex);
++}
++static void room_state_mutex_lock(room_state_mutex_t* mutex) { pthread_mutex_lock(mutex); }
++static void room_state_mutex_unlock(room_state_mutex_t* mutex) { pthread_mutex_unlock(mutex); }
++#endif
++
+ /* Internal helper functions */
+ static void room_on_transport_open(void* userdata);
+ static void room_on_transport_message(const uint8_t* data, size_t length, void* userdata);
+@@ -34,6 +75,12 @@ colyseus_room_t* colyseus_room_create(const char* name, colyseus_transport_facto
+     room->message_handlers = NULL;
+     room->serializer = NULL;
+     room->serializer_id = NULL;
++    room->state_mutex = room_state_mutex_create();
++    if (!room->state_mutex) {
++        free(room->name);
++        free(room);
++        return NULL;
++    }
+ 
+     return room;
+ }
+@@ -46,10 +93,13 @@ void colyseus_room_free(colyseus_room_t* room) {
+         colyseus_transport_destroy(room->transport);
+     }
+ 
+-    /* Cleanup serializer */
++    /* transport_destroy joins the tick thread before this serializer is freed. */
++    colyseus_room_state_lock(room);
+     if (room->serializer) {
+         colyseus_schema_serializer_free(room->serializer);
++        room->serializer = NULL;
+     }
++    colyseus_room_state_unlock(room);
+ 
+     /* Free strings */
+     free(room->name);
+@@ -66,16 +116,28 @@ void colyseus_room_free(colyseus_room_t* room) {
+         free(handler);
+     }
+ 
++    room_state_mutex_destroy((room_state_mutex_t*)room->state_mutex);
+     free(room);
+ }
+ 
++void colyseus_room_state_lock(colyseus_room_t* room) {
++    if (room && room->state_mutex) room_state_mutex_lock((room_state_mutex_t*)room->state_mutex);
++}
++
++void colyseus_room_state_unlock(colyseus_room_t* room) {
++    if (room && room->state_mutex) room_state_mutex_unlock((room_state_mutex_t*)room->state_mutex);
++}
++
+ /* Set the state schema vtable - must be called before connect */
+ void colyseus_room_set_state_type(colyseus_room_t* room, const colyseus_schema_vtable_t* state_vtable) {
+     if (!room) return;
++    colyseus_room_state_lock(room);
+     room->state_vtable = state_vtable;
++    colyseus_room_state_unlock(room);
+ }
+ 
+-/* Get current state */
++/* Get current state. The returned pointer is borrowed; callers that traverse it
++ * must retain colyseus_room_state_lock() until the traversal is complete. */
+ void* colyseus_room_get_state(colyseus_room_t* room) {
+     if (!room || !room->serializer) return NULL;
+     return colyseus_schema_serializer_get_state(room->serializer);
+@@ -560,6 +622,7 @@ static void room_on_transport_message(const uint8_t* data, size_t length, void*
+ 
+     switch (code) {
+         case COLYSEUS_PROTOCOL_JOIN_ROOM: {
++            colyseus_room_state_lock(room);
+             /* Decode reconnection token (string with length prefix) */
+             if (offset < length) {
+                 uint8_t token_len = data[offset];
+@@ -616,6 +679,7 @@ static void room_on_transport_message(const uint8_t* data, size_t length, void*
+             /* else: "none" serializer or unknown - no state handling */
+ 
+             room->has_joined = true;
++            colyseus_room_state_unlock(room);
+ 
+             if (room->on_join) {
+                 room->on_join(room->on_join_userdata);
+@@ -647,9 +711,11 @@ static void room_on_transport_message(const uint8_t* data, size_t length, void*
+ 
+         case COLYSEUS_PROTOCOL_ROOM_STATE: {
+             /* Handle full state */
++            colyseus_room_state_lock(room);
+             if (room->serializer) {
+                 colyseus_schema_serializer_set_state(room->serializer, data, length, (int)offset);
+             }
++            colyseus_room_state_unlock(room);
+ 
+             if (room->on_state_change) {
+                 room->on_state_change(room->on_state_change_userdata);
+@@ -659,9 +725,11 @@ static void room_on_transport_message(const uint8_t* data, size_t length, void*
+ 
+         case COLYSEUS_PROTOCOL_ROOM_STATE_PATCH: {
+             /* Handle state patch */
++            colyseus_room_state_lock(room);
+             if (room->serializer) {
+                 colyseus_schema_serializer_patch(room->serializer, data, length, (int)offset);
+             }
++            colyseus_room_state_unlock(room);
+ 
+             if (room->on_state_change) {
+                 room->on_state_change(room->on_state_change_userdata);
+@@ -730,10 +798,12 @@ static void room_on_transport_message(const uint8_t* data, size_t length, void*
+ static void room_on_transport_close(int code, const char* reason, void* userdata) {
+     colyseus_room_t* room = (colyseus_room_t*)userdata;
+ 
+-    /* Teardown serializer */
++    /* Teardown serializer without racing a state traversal. */
++    colyseus_room_state_lock(room);
+     if (room->serializer) {
+         colyseus_schema_serializer_teardown(room->serializer);
+     }
++    colyseus_room_state_unlock(room);
+ 
+     if (!room->has_joined) {
+         fprintf(stderr, "Room connection closed unexpectedly: %s\n", reason);
+diff --git a/src/schema/decoder.c b/src/schema/decoder.c
+index 073d88d..abbb2bf 100644
+--- a/src/schema/decoder.c
++++ b/src/schema/decoder.c
+@@ -636,6 +636,36 @@ static void* decode_value(
+  * Schema decode
+  * ============================================================================ */
+ 
++/*
++ * Copy a field's outgoing value so a change record outlives the store that is
++ * about to free it. Rewrites *value to the copy and returns true when the
++ * caller now owns it; ref/array/map are ref_tracker-owned and stay put.
++ */
++static bool copy_previous_value(colyseus_field_type_t field_type, void** value) {
++    switch (field_type) {
++        case COLYSEUS_FIELD_STRING: {
++            char* copy = strdup((const char*)*value);
++            if (!copy) return false;
++            *value = copy;
++            return true;
++        }
++
++        case COLYSEUS_FIELD_REF:
++        case COLYSEUS_FIELD_ARRAY:
++        case COLYSEUS_FIELD_MAP:
++            return false;
++
++        default: {
++            /* every primitive fits in a double, and so does the dynamic union */
++            void* copy = malloc(sizeof(double));
++            if (!copy) return false;
++            memcpy(copy, *value, sizeof(double));
++            *value = copy;
++            return true;
++        }
++    }
++}
++
+ static bool decode_schema(colyseus_decoder_t* decoder, const uint8_t* bytes, size_t length,
+     colyseus_iterator_t* it, colyseus_schema_t* schema) {
+ 
+@@ -684,16 +714,16 @@ static bool decode_schema(colyseus_decoder_t* decoder, const uint8_t* bytes, siz
+         ? get_dyn_schema_field((colyseus_dynamic_schema_t*)schema, dyn_field)
+         : get_schema_field(schema, field);
+     void* value = NULL;
+-    
+-    /* For string fields being deleted, we need to duplicate previous_value before it gets freed.
+-     * Otherwise the change record will point to freed memory when callbacks are triggered. */
+-    // TODO: refactor this!
++
++    /* Storing into the field frees what previous_value points at, so the change
++     * record needs its own copy: a static string field frees the old string, and
++     * the dynamic store frees the whole entry a primitive points into. */
+     void* previous_value_for_change = previous_value;
+     bool owns_previous_value = false;
+-    if (previous_value && field_type == COLYSEUS_FIELD_STRING && 
+-        (operation & (uint8_t)COLYSEUS_OP_DELETE) == (uint8_t)COLYSEUS_OP_DELETE) {
+-        previous_value_for_change = strdup((const char*)previous_value);
+-        owns_previous_value = true;
++    if (previous_value != NULL &&
++        (operation & (uint8_t)COLYSEUS_OP_DELETE) == (uint8_t)COLYSEUS_OP_DELETE &&
++        (field_type == COLYSEUS_FIELD_STRING || is_dynamic)) {
++        owns_previous_value = copy_previous_value(field_type, &previous_value_for_change);
+     }
+ 
+     /* Handle DELETE operations */
+@@ -762,28 +792,7 @@ static bool decode_schema(colyseus_decoder_t* decoder, const uint8_t* bytes, siz
+              * - The old dyn_value entry (where previous_value points into)
+              * Save previous_value before, and re-fetch value after. */
+             if (previous_value_for_change != NULL && !owns_previous_value) {
+-                switch (field_type) {
+-                    case COLYSEUS_FIELD_STRING: {
+-                        previous_value_for_change = strdup((const char*)previous_value_for_change);
+-                        owns_previous_value = true;
+-                        break;
+-                    }
+-                    case COLYSEUS_FIELD_REF:
+-                    case COLYSEUS_FIELD_ARRAY:
+-                    case COLYSEUS_FIELD_MAP:
+-                        /* Managed by ref_tracker, pointer stays valid */
+-                        break;
+-                    default: {
+-                        /* Primitive: copy value (all fit in sizeof(double)) */
+-                        void* copy = malloc(sizeof(double));
+-                        if (copy) {
+-                            memcpy(copy, previous_value_for_change, sizeof(double));
+-                            previous_value_for_change = copy;
+-                            owns_previous_value = true;
+-                        }
+-                        break;
+-                    }
+-                }
++                owns_previous_value = copy_previous_value(field_type, &previous_value_for_change);
+             }
+ 
+             set_dyn_schema_field((colyseus_dynamic_schema_t*)schema, dyn_field, value);

@@ -1,0 +1,55 @@
+{
+  "fallback_policy": "source_derived",
+  "jurisdiction": {
+    "country_code": "US"
+  },
+  "pack_id": "united_states",
+  "parents": [
+    "common_global"
+  ],
+  "rail_infrastructure_profiles": [
+    {
+      "bridge_clearance_m": 7.0,
+      "default_gauge_mm": 1435,
+      "id": "us.national.standard_gauge_rail",
+      "provenance": "jurisdiction rail-infrastructure fallback; source tags override"
+    }
+  ],
+  "railway_crossing_profiles": [
+    {
+      "approach_offset_m": 4.5,
+      "barrier_arm_blocks": 8,
+      "barrier_arm_start_m": 0.3,
+      "barrier_arm_step_m": 0.5,
+      "cluster_radius_m": 12.0,
+      "dark_rgb": [
+        45,
+        45,
+        42
+      ],
+      "id": "us.generic.urban_grade_crossing",
+      "max_rail_distance_m": 12.0,
+      "post_height_m": 2.7,
+      "post_offset_m": 2.2,
+      "provenance": "declarative US urban grade-crossing proposal; source review required",
+      "signal_box_max_m": 2.25,
+      "signal_box_min_m": 1.75,
+      "warning_rgb": [
+        210,
+        210,
+        204
+      ]
+    }
+  ],
+  "schema": "y92.world_template_pack.v1",
+  "support_tier": "full",
+  "templates": [
+    {
+      "face_mode": "source_variant_until_subclass_resolved",
+      "geometry_family": "us_regulatory_sign",
+      "identity_bucket": "standardized",
+      "semantic_class": "statutory_traffic_sign",
+      "template_id": "us.traffic.regulatory_family_v1"
+    }
+  ]
+}

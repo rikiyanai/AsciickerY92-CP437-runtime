@@ -1,0 +1,1211 @@
+{
+  "buildings": {
+    "feature:building_footprint:way/1507398062": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507398062#f5",
+          "capture_id": "mapillary_139010614903352__yaw_p090",
+          "digest": "sha256:cd6032eac7f1a39a99578c72a573dedeabf20f4e767a8a5ecaf68923ca7195fc",
+          "mask_area_px": 12815,
+          "observation_id": "object-observation:mapillary_139010614903352__yaw_p090:0000",
+          "ray_distance_m": 38.647,
+          "rgb": [
+            48,
+            48,
+            56
+          ],
+          "segmentation_score": 0.89172417
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:cd6032eac7f1a39a99578c72a573dedeabf20f4e767a8a5ecaf68923ca7195fc"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_139010614903352__yaw_p090:0000"
+      ],
+      "wall_rgb": [
+        48,
+        48,
+        56
+      ]
+    },
+    "feature:building_footprint:way/1507403650": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507403650#f6",
+          "capture_id": "mapillary_2876157412698526__yaw_p270",
+          "digest": "sha256:df7ec1c4dfa1e7a70219e4e357dcb6f4a2b90b788f89fe13f2749c97a63f0048",
+          "mask_area_px": 43403,
+          "observation_id": "object-observation:mapillary_2876157412698526__yaw_p270:0002",
+          "ray_distance_m": 70.966,
+          "rgb": [
+            208,
+            176,
+            160
+          ],
+          "segmentation_score": 0.89209324
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:df7ec1c4dfa1e7a70219e4e357dcb6f4a2b90b788f89fe13f2749c97a63f0048"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_2876157412698526__yaw_p270:0002"
+      ],
+      "wall_rgb": [
+        208,
+        176,
+        160
+      ]
+    },
+    "feature:building_footprint:way/1507403667": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507403667#f6",
+          "capture_id": "mapillary_750275662327766__yaw_p270",
+          "digest": "sha256:8e84f8e49bad6da990abc576ae407dacf1b5d4fe883304ae04828e09f014e96d",
+          "mask_area_px": 83422,
+          "observation_id": "object-observation:mapillary_750275662327766__yaw_p270:0008",
+          "ray_distance_m": 13.203,
+          "rgb": [
+            72,
+            64,
+            64
+          ],
+          "segmentation_score": 0.92216229
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:8e84f8e49bad6da990abc576ae407dacf1b5d4fe883304ae04828e09f014e96d"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_750275662327766__yaw_p270:0008"
+      ],
+      "wall_rgb": [
+        72,
+        64,
+        64
+      ]
+    },
+    "feature:building_footprint:way/1507403670": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507403670#f7",
+          "capture_id": "mapillary_4232338600119124__yaw_p270",
+          "digest": "sha256:4f41c9e68f87e1aabd5d475322d57752b896dc9a5b8af4d39bf4271dcf326db3",
+          "mask_area_px": 57994,
+          "observation_id": "object-observation:mapillary_4232338600119124__yaw_p270:0003",
+          "ray_distance_m": 36.171,
+          "rgb": [
+            128,
+            104,
+            88
+          ],
+          "segmentation_score": 0.91341662
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507403670#f6",
+          "capture_id": "mapillary_1007789950037389__yaw_p270",
+          "digest": "sha256:8b592b323814c0bdb3f108dc684c1267fa34b94369677a68ab956444570a6527",
+          "mask_area_px": 49481,
+          "observation_id": "object-observation:mapillary_1007789950037389__yaw_p270:0006",
+          "ray_distance_m": 43.469,
+          "rgb": [
+            104,
+            104,
+            112
+          ],
+          "segmentation_score": 0.86271006
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:4f41c9e68f87e1aabd5d475322d57752b896dc9a5b8af4d39bf4271dcf326db3",
+        "sha256:8b592b323814c0bdb3f108dc684c1267fa34b94369677a68ab956444570a6527"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_4232338600119124__yaw_p270:0003",
+        "object-observation:mapillary_1007789950037389__yaw_p270:0006"
+      ],
+      "wall_rgb": [
+        128,
+        104,
+        112
+      ]
+    },
+    "feature:building_footprint:way/1507403671": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507403671#f4",
+          "capture_id": "mapillary_2531959320441008__yaw_p270",
+          "digest": "sha256:4259e9bec01d17d6c73687505fc63359b0705c8d7e64075159cfb7209c220333",
+          "mask_area_px": 34890,
+          "observation_id": "object-observation:mapillary_2531959320441008__yaw_p270:0001",
+          "ray_distance_m": 17.546,
+          "rgb": [
+            120,
+            96,
+            80
+          ],
+          "segmentation_score": 0.88684142
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507403671#f4",
+          "capture_id": "mapillary_1129661880872738__yaw_p270",
+          "digest": "sha256:ceee04f4438c73db53d2cf0018c0e6415ed12da15221489424994a0de68cf465",
+          "mask_area_px": 79642,
+          "observation_id": "object-observation:mapillary_1129661880872738__yaw_p270:0011",
+          "ray_distance_m": 6.701,
+          "rgb": [
+            200,
+            168,
+            144
+          ],
+          "segmentation_score": 0.87867582
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507403671#f4",
+          "capture_id": "mapillary_1129661880872738__yaw_p270",
+          "digest": "sha256:ceee04f4438c73db53d2cf0018c0e6415ed12da15221489424994a0de68cf465",
+          "mask_area_px": 85705,
+          "observation_id": "object-observation:mapillary_1129661880872738__yaw_p270:0013",
+          "ray_distance_m": 6.707,
+          "rgb": [
+            192,
+            160,
+            136
+          ],
+          "segmentation_score": 0.85410762
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:4259e9bec01d17d6c73687505fc63359b0705c8d7e64075159cfb7209c220333",
+        "sha256:ceee04f4438c73db53d2cf0018c0e6415ed12da15221489424994a0de68cf465",
+        "sha256:ceee04f4438c73db53d2cf0018c0e6415ed12da15221489424994a0de68cf465"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_2531959320441008__yaw_p270:0001",
+        "object-observation:mapillary_1129661880872738__yaw_p270:0011",
+        "object-observation:mapillary_1129661880872738__yaw_p270:0013"
+      ],
+      "wall_rgb": [
+        192,
+        160,
+        136
+      ]
+    },
+    "feature:building_footprint:way/1507403786": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/1507403786#f0",
+          "capture_id": "mapillary_1206629753089748__yaw_p090",
+          "digest": "sha256:3eeea0c7bf309b9d41d8ce429b124f87db7140818d6d9fcb51d85df698f449f9",
+          "mask_area_px": 39649,
+          "observation_id": "object-observation:mapillary_1206629753089748__yaw_p090:0003",
+          "ray_distance_m": 57.284,
+          "rgb": [
+            64,
+            64,
+            80
+          ],
+          "segmentation_score": 0.90593046
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:3eeea0c7bf309b9d41d8ce429b124f87db7140818d6d9fcb51d85df698f449f9"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_1206629753089748__yaw_p090:0003"
+      ],
+      "wall_rgb": [
+        64,
+        64,
+        80
+      ]
+    },
+    "feature:building_footprint:way/225198068": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225198068#f5",
+          "capture_id": "mapillary_491497328965350__yaw_p270",
+          "digest": "sha256:66ed4b7cf9f1afbe11451d0af42a88134137d7f670d5ba1e0156040dd96c08c5",
+          "mask_area_px": 20833,
+          "observation_id": "object-observation:mapillary_491497328965350__yaw_p270:0010",
+          "ray_distance_m": 15.552,
+          "rgb": [
+            168,
+            160,
+            160
+          ],
+          "segmentation_score": 0.94833338
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:66ed4b7cf9f1afbe11451d0af42a88134137d7f670d5ba1e0156040dd96c08c5"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_491497328965350__yaw_p270:0010"
+      ],
+      "wall_rgb": [
+        168,
+        160,
+        160
+      ]
+    },
+    "feature:building_footprint:way/225198101": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225198101#f2",
+          "capture_id": "mapillary_512859586791898__yaw_p090",
+          "digest": "sha256:1b1de26108cbd191d7935ebfa84f97d485b1fd8071e8f074555234e133b41646",
+          "mask_area_px": 25294,
+          "observation_id": "object-observation:mapillary_512859586791898__yaw_p090:0005",
+          "ray_distance_m": 31.153,
+          "rgb": [
+            80,
+            64,
+            64
+          ],
+          "segmentation_score": 0.81592196
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:1b1de26108cbd191d7935ebfa84f97d485b1fd8071e8f074555234e133b41646"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_512859586791898__yaw_p090:0005"
+      ],
+      "wall_rgb": [
+        80,
+        64,
+        64
+      ]
+    },
+    "feature:building_footprint:way/225198199": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225198199#f9",
+          "capture_id": "mapillary_2880221968867371__yaw_p090",
+          "digest": "sha256:98664d980dd108bd035fe72a7b3fa5fbb612bb5b52254f92a29b74e3c2ed2c6e",
+          "mask_area_px": 20668,
+          "observation_id": "object-observation:mapillary_2880221968867371__yaw_p090:0008",
+          "ray_distance_m": 17.715,
+          "rgb": [
+            56,
+            48,
+            48
+          ],
+          "segmentation_score": 0.97834456
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:98664d980dd108bd035fe72a7b3fa5fbb612bb5b52254f92a29b74e3c2ed2c6e"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_2880221968867371__yaw_p090:0008"
+      ],
+      "wall_rgb": [
+        56,
+        48,
+        48
+      ]
+    },
+    "feature:building_footprint:way/225367798": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367798#f8",
+          "capture_id": "mapillary_300504531651066__yaw_p270",
+          "digest": "sha256:0f772e86a35bbe1d0c93c4b4995ad5872748f00ba1159a0274db282d90816145",
+          "mask_area_px": 2430,
+          "observation_id": "object-observation:mapillary_300504531651066__yaw_p270:0004",
+          "ray_distance_m": 2.615,
+          "rgb": [
+            208,
+            200,
+            200
+          ],
+          "segmentation_score": 0.90289116
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367798#f8",
+          "capture_id": "mapillary_945852359566475__yaw_p090",
+          "digest": "sha256:d28522897cebec48398c43aa9e35478b09bd60c4c1323ee08965a6e112c049b8",
+          "mask_area_px": 54739,
+          "observation_id": "object-observation:mapillary_945852359566475__yaw_p090:0005",
+          "ray_distance_m": 3.665,
+          "rgb": [
+            64,
+            56,
+            64
+          ],
+          "segmentation_score": 0.82537478
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:0f772e86a35bbe1d0c93c4b4995ad5872748f00ba1159a0274db282d90816145",
+        "sha256:d28522897cebec48398c43aa9e35478b09bd60c4c1323ee08965a6e112c049b8"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_300504531651066__yaw_p270:0004",
+        "object-observation:mapillary_945852359566475__yaw_p090:0005"
+      ],
+      "wall_rgb": [
+        208,
+        200,
+        200
+      ]
+    },
+    "feature:building_footprint:way/225367802": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367802#f0",
+          "capture_id": "mapillary_191209566163531__yaw_p270",
+          "digest": "sha256:ce88d821eba6fa826d8e52362b8d7ee0382b231dc8263ba772fd6c5949fcd3d5",
+          "mask_area_px": 41033,
+          "observation_id": "object-observation:mapillary_191209566163531__yaw_p270:0008",
+          "ray_distance_m": 8.462,
+          "rgb": [
+            88,
+            88,
+            104
+          ],
+          "segmentation_score": 0.90464926
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:ce88d821eba6fa826d8e52362b8d7ee0382b231dc8263ba772fd6c5949fcd3d5"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_191209566163531__yaw_p270:0008"
+      ],
+      "wall_rgb": [
+        88,
+        88,
+        104
+      ]
+    },
+    "feature:building_footprint:way/225367805": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367805#f7",
+          "capture_id": "mapillary_353365796119189__yaw_p270",
+          "digest": "sha256:1e591145b3efbba3d2be1994aa1b4af5bef5eaaf634dedfcb6e4e8c7bf22f6a7",
+          "mask_area_px": 12996,
+          "observation_id": "object-observation:mapillary_353365796119189__yaw_p270:0008",
+          "ray_distance_m": 15.996,
+          "rgb": [
+            120,
+            112,
+            128
+          ],
+          "segmentation_score": 0.92128259
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367805#f12",
+          "capture_id": "mapillary_512859586791898__yaw_p270",
+          "digest": "sha256:8fba6df95c66e220de4c829cdda7236c9eb07b146b8e20ed924c593c5f5e6dd2",
+          "mask_area_px": 32239,
+          "observation_id": "object-observation:mapillary_512859586791898__yaw_p270:0016",
+          "ray_distance_m": 7.857,
+          "rgb": [
+            88,
+            80,
+            88
+          ],
+          "segmentation_score": 0.85871744
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367805#f12",
+          "capture_id": "mapillary_494839251650001__yaw_p270",
+          "digest": "sha256:8e6ad52ca126cd00ab60a458e0d0dc0b8d349120850db9c25abdac5df62dd6d4",
+          "mask_area_px": 42927,
+          "observation_id": "object-observation:mapillary_494839251650001__yaw_p270:0008",
+          "ray_distance_m": 10.21,
+          "rgb": [
+            96,
+            88,
+            96
+          ],
+          "segmentation_score": 0.84774071
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:1e591145b3efbba3d2be1994aa1b4af5bef5eaaf634dedfcb6e4e8c7bf22f6a7",
+        "sha256:8fba6df95c66e220de4c829cdda7236c9eb07b146b8e20ed924c593c5f5e6dd2",
+        "sha256:8e6ad52ca126cd00ab60a458e0d0dc0b8d349120850db9c25abdac5df62dd6d4"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_353365796119189__yaw_p270:0008",
+        "object-observation:mapillary_512859586791898__yaw_p270:0016",
+        "object-observation:mapillary_494839251650001__yaw_p270:0008"
+      ],
+      "wall_rgb": [
+        96,
+        88,
+        96
+      ]
+    },
+    "feature:building_footprint:way/225367852": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367852#f0",
+          "capture_id": "mapillary_2531959320441008__yaw_p090",
+          "digest": "sha256:248b1d64bf35f9badee67497c31c05a94863663e3e7227f611dd2f13d99e1f97",
+          "mask_area_px": 35851,
+          "observation_id": "object-observation:mapillary_2531959320441008__yaw_p090:0002",
+          "ray_distance_m": 26.435,
+          "rgb": [
+            72,
+            72,
+            88
+          ],
+          "segmentation_score": 0.93768573
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367852#f5",
+          "capture_id": "mapillary_158653836175708__yaw_p270",
+          "digest": "sha256:f6cc18674a652a83f73870509fbe66a6e73a6ec42c2aba2dc4f9ca81ce2f99c5",
+          "mask_area_px": 27351,
+          "observation_id": "object-observation:mapillary_158653836175708__yaw_p270:0007",
+          "ray_distance_m": 3.947,
+          "rgb": [
+            112,
+            104,
+            120
+          ],
+          "segmentation_score": 0.86687177
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225367852#f5",
+          "capture_id": "mapillary_906694533522058__yaw_p270",
+          "digest": "sha256:69d204c99a5dfdb0b0c8c840f9e1461b1722fccce7ee6b79a96c611d17b1586e",
+          "mask_area_px": 27572,
+          "observation_id": "object-observation:mapillary_906694533522058__yaw_p270:0005",
+          "ray_distance_m": 4.303,
+          "rgb": [
+            144,
+            144,
+            160
+          ],
+          "segmentation_score": 0.837767
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:248b1d64bf35f9badee67497c31c05a94863663e3e7227f611dd2f13d99e1f97",
+        "sha256:f6cc18674a652a83f73870509fbe66a6e73a6ec42c2aba2dc4f9ca81ce2f99c5",
+        "sha256:69d204c99a5dfdb0b0c8c840f9e1461b1722fccce7ee6b79a96c611d17b1586e"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_2531959320441008__yaw_p090:0002",
+        "object-observation:mapillary_158653836175708__yaw_p270:0007",
+        "object-observation:mapillary_906694533522058__yaw_p270:0005"
+      ],
+      "wall_rgb": [
+        112,
+        104,
+        120
+      ]
+    },
+    "feature:building_footprint:way/225369223": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369223#f2",
+          "capture_id": "mapillary_263192462175914__yaw_p270",
+          "digest": "sha256:e663249efbbd87363791569be6f3d6e33537d8ec0fcdad51d88e91682f8f89bc",
+          "mask_area_px": 42029,
+          "observation_id": "object-observation:mapillary_263192462175914__yaw_p270:0002",
+          "ray_distance_m": 0.536,
+          "rgb": [
+            104,
+            88,
+            72
+          ],
+          "segmentation_score": 0.89280087
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369223#f2",
+          "capture_id": "mapillary_263192462175914__yaw_p270",
+          "digest": "sha256:e663249efbbd87363791569be6f3d6e33537d8ec0fcdad51d88e91682f8f89bc",
+          "mask_area_px": 69271,
+          "observation_id": "object-observation:mapillary_263192462175914__yaw_p270:0007",
+          "ray_distance_m": 0.537,
+          "rgb": [
+            96,
+            80,
+            72
+          ],
+          "segmentation_score": 0.85517871
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:e663249efbbd87363791569be6f3d6e33537d8ec0fcdad51d88e91682f8f89bc",
+        "sha256:e663249efbbd87363791569be6f3d6e33537d8ec0fcdad51d88e91682f8f89bc"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_263192462175914__yaw_p270:0002",
+        "object-observation:mapillary_263192462175914__yaw_p270:0007"
+      ],
+      "wall_rgb": [
+        104,
+        88,
+        72
+      ]
+    },
+    "feature:building_footprint:way/225369224": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369224#f0",
+          "capture_id": "mapillary_288939312769731__yaw_p270",
+          "digest": "sha256:e9b481c0f4999774d8a6035895ab60fb41f80dd66fbf37d82e9101c0734facff",
+          "mask_area_px": 17978,
+          "observation_id": "object-observation:mapillary_288939312769731__yaw_p270:0004",
+          "ray_distance_m": 1.11,
+          "rgb": [
+            160,
+            144,
+            128
+          ],
+          "segmentation_score": 0.97318572
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369224#f4",
+          "capture_id": "mapillary_806994576584543__yaw_p270",
+          "digest": "sha256:3a816a7d060a1e2e3954d19fb1bc4f885f2cf210d15a8b3679403a08829708ec",
+          "mask_area_px": 87885,
+          "observation_id": "object-observation:mapillary_806994576584543__yaw_p270:0002",
+          "ray_distance_m": 11.337,
+          "rgb": [
+            96,
+            48,
+            64
+          ],
+          "segmentation_score": 0.96521062
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369224#f3",
+          "capture_id": "mapillary_296605365469454__yaw_p090",
+          "digest": "sha256:15cb05a0b1517844d82f3733d14042bcc25939aa9e8ced9eacbc95f520d34569",
+          "mask_area_px": 41934,
+          "observation_id": "object-observation:mapillary_296605365469454__yaw_p090:0005",
+          "ray_distance_m": 7.468,
+          "rgb": [
+            64,
+            56,
+            64
+          ],
+          "segmentation_score": 0.95949978
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369224#f3",
+          "capture_id": "mapillary_288939312769731__yaw_p090",
+          "digest": "sha256:347bb192b1f737fe1e88601bf4a1bfce8ab5c2809ed8da5da6fd3e15cd634a16",
+          "mask_area_px": 52434,
+          "observation_id": "object-observation:mapillary_288939312769731__yaw_p090:0003",
+          "ray_distance_m": 10.935,
+          "rgb": [
+            72,
+            64,
+            72
+          ],
+          "segmentation_score": 0.94249386
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369224#f0",
+          "capture_id": "mapillary_2982678828632535__yaw_p090",
+          "digest": "sha256:00314b56ea0259ea34ca5cdb276b168df0747bf66e6b6ed5fe9d95f6fdca9fd9",
+          "mask_area_px": 9710,
+          "observation_id": "object-observation:mapillary_2982678828632535__yaw_p090:0005",
+          "ray_distance_m": 9.399,
+          "rgb": [
+            224,
+            208,
+            192
+          ],
+          "segmentation_score": 0.91074449
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369224#f2",
+          "capture_id": "mapillary_2982678828632535__yaw_p270",
+          "digest": "sha256:826a945d74ce202ca145fd4d9e8e01333c5e10ef08ad4b249d743c4c97a8d18d",
+          "mask_area_px": 9564,
+          "observation_id": "object-observation:mapillary_2982678828632535__yaw_p270:0003",
+          "ray_distance_m": 3.241,
+          "rgb": [
+            80,
+            72,
+            64
+          ],
+          "segmentation_score": 0.88670969
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:e9b481c0f4999774d8a6035895ab60fb41f80dd66fbf37d82e9101c0734facff",
+        "sha256:3a816a7d060a1e2e3954d19fb1bc4f885f2cf210d15a8b3679403a08829708ec",
+        "sha256:15cb05a0b1517844d82f3733d14042bcc25939aa9e8ced9eacbc95f520d34569",
+        "sha256:347bb192b1f737fe1e88601bf4a1bfce8ab5c2809ed8da5da6fd3e15cd634a16",
+        "sha256:00314b56ea0259ea34ca5cdb276b168df0747bf66e6b6ed5fe9d95f6fdca9fd9",
+        "sha256:826a945d74ce202ca145fd4d9e8e01333c5e10ef08ad4b249d743c4c97a8d18d"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_288939312769731__yaw_p270:0004",
+        "object-observation:mapillary_806994576584543__yaw_p270:0002",
+        "object-observation:mapillary_296605365469454__yaw_p090:0005",
+        "object-observation:mapillary_288939312769731__yaw_p090:0003",
+        "object-observation:mapillary_2982678828632535__yaw_p090:0005",
+        "object-observation:mapillary_2982678828632535__yaw_p270:0003"
+      ],
+      "wall_rgb": [
+        96,
+        72,
+        72
+      ]
+    },
+    "feature:building_footprint:way/225369225": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369225#f2",
+          "capture_id": "mapillary_4262919317051644__yaw_p270",
+          "digest": "sha256:7f55b674af174212a10b402ae66065f585343747c2254403877669f8ef4b1d5f",
+          "mask_area_px": 37141,
+          "observation_id": "object-observation:mapillary_4262919317051644__yaw_p270:0004",
+          "ray_distance_m": 0.657,
+          "rgb": [
+            136,
+            112,
+            96
+          ],
+          "segmentation_score": 0.88216132
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:7f55b674af174212a10b402ae66065f585343747c2254403877669f8ef4b1d5f"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_4262919317051644__yaw_p270:0004"
+      ],
+      "wall_rgb": [
+        136,
+        112,
+        96
+      ]
+    },
+    "feature:building_footprint:way/225369227": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369227#f1",
+          "capture_id": "mapillary_151386460324139__yaw_p270",
+          "digest": "sha256:70f5fb48dd8bb3866bd1a3ed451a47a2f204977d82b382781395843837b21705",
+          "mask_area_px": 86416,
+          "observation_id": "object-observation:mapillary_151386460324139__yaw_p270:0005",
+          "ray_distance_m": 4.418,
+          "rgb": [
+            80,
+            80,
+            80
+          ],
+          "segmentation_score": 0.93530953
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369227#f2",
+          "capture_id": "mapillary_132880498823214__yaw_p270",
+          "digest": "sha256:6aa2721c9da6ca65da66406c084a18d6b03a5c3a5d83ba6a161adb2acc51bfd9",
+          "mask_area_px": 146677,
+          "observation_id": "object-observation:mapillary_132880498823214__yaw_p270:0000",
+          "ray_distance_m": 1.909,
+          "rgb": [
+            96,
+            96,
+            88
+          ],
+          "segmentation_score": 0.92670715
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369227#f2",
+          "capture_id": "mapillary_149084003888966__yaw_p090",
+          "digest": "sha256:7139f24292e6c4c076b75deeec5a9c3234c86f3301fb6fcac5dc456b5d1d474a",
+          "mask_area_px": 15279,
+          "observation_id": "object-observation:mapillary_149084003888966__yaw_p090:0005",
+          "ray_distance_m": 1.439,
+          "rgb": [
+            88,
+            88,
+            80
+          ],
+          "segmentation_score": 0.90743583
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369227#f1",
+          "capture_id": "mapillary_457090682036818__yaw_p270",
+          "digest": "sha256:7dca8a5f49489ea5823c5d82d4a7275dae9f06b6b1914088c64c259f3749b544",
+          "mask_area_px": 92135,
+          "observation_id": "object-observation:mapillary_457090682036818__yaw_p270:0007",
+          "ray_distance_m": 0.705,
+          "rgb": [
+            96,
+            104,
+            104
+          ],
+          "segmentation_score": 0.90119213
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:70f5fb48dd8bb3866bd1a3ed451a47a2f204977d82b382781395843837b21705",
+        "sha256:6aa2721c9da6ca65da66406c084a18d6b03a5c3a5d83ba6a161adb2acc51bfd9",
+        "sha256:7139f24292e6c4c076b75deeec5a9c3234c86f3301fb6fcac5dc456b5d1d474a",
+        "sha256:7dca8a5f49489ea5823c5d82d4a7275dae9f06b6b1914088c64c259f3749b544"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_151386460324139__yaw_p270:0005",
+        "object-observation:mapillary_132880498823214__yaw_p270:0000",
+        "object-observation:mapillary_149084003888966__yaw_p090:0005",
+        "object-observation:mapillary_457090682036818__yaw_p270:0007"
+      ],
+      "wall_rgb": [
+        96,
+        96,
+        88
+      ]
+    },
+    "feature:building_footprint:way/225369228": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369228#f4",
+          "capture_id": "mapillary_298941768278559__yaw_p270",
+          "digest": "sha256:e867260d2b4eb6a67ed8119e8ae0d9bfe79692c7717ef22c99d841a20cc5bfea",
+          "mask_area_px": 26275,
+          "observation_id": "object-observation:mapillary_298941768278559__yaw_p270:0001",
+          "ray_distance_m": 9.038,
+          "rgb": [
+            112,
+            112,
+            112
+          ],
+          "segmentation_score": 0.85792696
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:e867260d2b4eb6a67ed8119e8ae0d9bfe79692c7717ef22c99d841a20cc5bfea"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_298941768278559__yaw_p270:0001"
+      ],
+      "wall_rgb": [
+        112,
+        112,
+        112
+      ]
+    },
+    "feature:building_footprint:way/225369229": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369229#f1",
+          "capture_id": "mapillary_1373024203079091__yaw_p270",
+          "digest": "sha256:a9de9d40c2cdff76240aa69d3e62542c63d763126ee7623fe277592a6c3f4e3f",
+          "mask_area_px": 93276,
+          "observation_id": "object-observation:mapillary_1373024203079091__yaw_p270:0004",
+          "ray_distance_m": 0.885,
+          "rgb": [
+            104,
+            80,
+            64
+          ],
+          "segmentation_score": 0.94045788
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:a9de9d40c2cdff76240aa69d3e62542c63d763126ee7623fe277592a6c3f4e3f"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_1373024203079091__yaw_p270:0004"
+      ],
+      "wall_rgb": [
+        104,
+        80,
+        64
+      ]
+    },
+    "feature:building_footprint:way/225369230": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369230#f1",
+          "capture_id": "mapillary_668139833981689__yaw_p090",
+          "digest": "sha256:52380926d6dceba87a86edbc8c4df045541825405bebf9c386fc04c97bedc73b",
+          "mask_area_px": 44467,
+          "observation_id": "object-observation:mapillary_668139833981689__yaw_p090:0009",
+          "ray_distance_m": 10.828,
+          "rgb": [
+            168,
+            152,
+            144
+          ],
+          "segmentation_score": 0.95365548
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369230#f1",
+          "capture_id": "mapillary_196724462295987__yaw_p090",
+          "digest": "sha256:b4438ec7f19b1be9389f62a6c95b9605dd78a76540eddeed5f1367c1f430af23",
+          "mask_area_px": 17339,
+          "observation_id": "object-observation:mapillary_196724462295987__yaw_p090:0003",
+          "ray_distance_m": 19.287,
+          "rgb": [
+            112,
+            104,
+            112
+          ],
+          "segmentation_score": 0.94961667
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369230#f1",
+          "capture_id": "mapillary_668139833981689__yaw_p090",
+          "digest": "sha256:52380926d6dceba87a86edbc8c4df045541825405bebf9c386fc04c97bedc73b",
+          "mask_area_px": 133844,
+          "observation_id": "object-observation:mapillary_668139833981689__yaw_p090:0016",
+          "ray_distance_m": 10.797,
+          "rgb": [
+            144,
+            128,
+            112
+          ],
+          "segmentation_score": 0.93049389
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369230#f0",
+          "capture_id": "mapillary_4116751331720826__yaw_p090",
+          "digest": "sha256:186c3eb5b7c4d489d5e483fb96a1beeb8031e1e12783f37d38b641d15592ce43",
+          "mask_area_px": 25709,
+          "observation_id": "object-observation:mapillary_4116751331720826__yaw_p090:0008",
+          "ray_distance_m": 9.69,
+          "rgb": [
+            120,
+            96,
+            96
+          ],
+          "segmentation_score": 0.92999035
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369230#f0",
+          "capture_id": "mapillary_512859586791898__yaw_p270",
+          "digest": "sha256:8fba6df95c66e220de4c829cdda7236c9eb07b146b8e20ed924c593c5f5e6dd2",
+          "mask_area_px": 45176,
+          "observation_id": "object-observation:mapillary_512859586791898__yaw_p270:0013",
+          "ray_distance_m": 10.803,
+          "rgb": [
+            64,
+            64,
+            72
+          ],
+          "segmentation_score": 0.88728714
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:52380926d6dceba87a86edbc8c4df045541825405bebf9c386fc04c97bedc73b",
+        "sha256:b4438ec7f19b1be9389f62a6c95b9605dd78a76540eddeed5f1367c1f430af23",
+        "sha256:52380926d6dceba87a86edbc8c4df045541825405bebf9c386fc04c97bedc73b",
+        "sha256:186c3eb5b7c4d489d5e483fb96a1beeb8031e1e12783f37d38b641d15592ce43",
+        "sha256:8fba6df95c66e220de4c829cdda7236c9eb07b146b8e20ed924c593c5f5e6dd2"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_668139833981689__yaw_p090:0009",
+        "object-observation:mapillary_196724462295987__yaw_p090:0003",
+        "object-observation:mapillary_668139833981689__yaw_p090:0016",
+        "object-observation:mapillary_4116751331720826__yaw_p090:0008",
+        "object-observation:mapillary_512859586791898__yaw_p270:0013"
+      ],
+      "wall_rgb": [
+        120,
+        104,
+        112
+      ]
+    },
+    "feature:building_footprint:way/225369232": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369232#f0",
+          "capture_id": "mapillary_158653836175708__yaw_p090",
+          "digest": "sha256:cba9fca80ef1e157955d1f6b1f66e1c3512e1a52a4e7d35e1de830419d00e3a5",
+          "mask_area_px": 74161,
+          "observation_id": "object-observation:mapillary_158653836175708__yaw_p090:0007",
+          "ray_distance_m": 14.514,
+          "rgb": [
+            120,
+            96,
+            96
+          ],
+          "segmentation_score": 0.93278962
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:cba9fca80ef1e157955d1f6b1f66e1c3512e1a52a4e7d35e1de830419d00e3a5"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_158653836175708__yaw_p090:0007"
+      ],
+      "wall_rgb": [
+        120,
+        96,
+        96
+      ]
+    },
+    "feature:building_footprint:way/225369239": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369239#f1",
+          "capture_id": "mapillary_380824489761280__yaw_p090",
+          "digest": "sha256:077be07c6817adb388d49e2c4a91fc2d87498f18abe4a3c6c7945f04b4192952",
+          "mask_area_px": 32177,
+          "observation_id": "object-observation:mapillary_380824489761280__yaw_p090:0004",
+          "ray_distance_m": 44.374,
+          "rgb": [
+            160,
+            144,
+            136
+          ],
+          "segmentation_score": 0.9614805
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369239#f0",
+          "capture_id": "mapillary_1149421485524930__yaw_p090",
+          "digest": "sha256:8d89d4bdaac121a56ede1385a324ac9b47348a724adc8497dd93da611e6d74df",
+          "mask_area_px": 30220,
+          "observation_id": "object-observation:mapillary_1149421485524930__yaw_p090:0003",
+          "ray_distance_m": 12.614,
+          "rgb": [
+            128,
+            120,
+            120
+          ],
+          "segmentation_score": 0.93263376
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369239#f3",
+          "capture_id": "mapillary_263587128824320__yaw_p090",
+          "digest": "sha256:7dde025408d68fab972d9953f655c495cafdcbce05057ebf3b30216ac00b0eaa",
+          "mask_area_px": 60408,
+          "observation_id": "object-observation:mapillary_263587128824320__yaw_p090:0006",
+          "ray_distance_m": 0.764,
+          "rgb": [
+            80,
+            64,
+            72
+          ],
+          "segmentation_score": 0.92574942
+        },
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225369239#f1",
+          "capture_id": "mapillary_796673880977928__yaw_p090",
+          "digest": "sha256:532ee3b7c6a09c103747e403287272385d62b5ea8e5867e3400f312d25838081",
+          "mask_area_px": 26222,
+          "observation_id": "object-observation:mapillary_796673880977928__yaw_p090:0003",
+          "ray_distance_m": 17.96,
+          "rgb": [
+            88,
+            88,
+            96
+          ],
+          "segmentation_score": 0.90709937
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:077be07c6817adb388d49e2c4a91fc2d87498f18abe4a3c6c7945f04b4192952",
+        "sha256:8d89d4bdaac121a56ede1385a324ac9b47348a724adc8497dd93da611e6d74df",
+        "sha256:7dde025408d68fab972d9953f655c495cafdcbce05057ebf3b30216ac00b0eaa",
+        "sha256:532ee3b7c6a09c103747e403287272385d62b5ea8e5867e3400f312d25838081"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_380824489761280__yaw_p090:0004",
+        "object-observation:mapillary_1149421485524930__yaw_p090:0003",
+        "object-observation:mapillary_263587128824320__yaw_p090:0006",
+        "object-observation:mapillary_796673880977928__yaw_p090:0003"
+      ],
+      "wall_rgb": [
+        128,
+        120,
+        120
+      ]
+    },
+    "feature:building_footprint:way/225482963": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225482963#f6",
+          "capture_id": "mapillary_191191426174466__yaw_p270",
+          "digest": "sha256:7b68c8ea5798fd29553495b65d1acd670623ee0cbd92c2d086d176aa8ee071b5",
+          "mask_area_px": 129688,
+          "observation_id": "object-observation:mapillary_191191426174466__yaw_p270:0001",
+          "ray_distance_m": 59.92,
+          "rgb": [
+            112,
+            88,
+            72
+          ],
+          "segmentation_score": 0.98144031
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:7b68c8ea5798fd29553495b65d1acd670623ee0cbd92c2d086d176aa8ee071b5"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_191191426174466__yaw_p270:0001"
+      ],
+      "wall_rgb": [
+        112,
+        88,
+        72
+      ]
+    },
+    "feature:building_footprint:way/225482968": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225482968#f3",
+          "capture_id": "mapillary_215550649976711__yaw_p090",
+          "digest": "sha256:86030c84a490b7951e16c697ebffa0fe5af20b296761525c070e07770cb948fa",
+          "mask_area_px": 126742,
+          "observation_id": "object-observation:mapillary_215550649976711__yaw_p090:0012",
+          "ray_distance_m": 59.892,
+          "rgb": [
+            72,
+            64,
+            64
+          ],
+          "segmentation_score": 0.89075541
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:86030c84a490b7951e16c697ebffa0fe5af20b296761525c070e07770cb948fa"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_215550649976711__yaw_p090:0012"
+      ],
+      "wall_rgb": [
+        72,
+        64,
+        64
+      ]
+    },
+    "feature:building_footprint:way/225562528": {
+      "associations": [
+        {
+          "association_method": "capture_heading_plus_mask_centroid_nearest_canonical_building_intersection",
+          "canonical_face_id": "feature:building_footprint:way/225562528#f8",
+          "capture_id": "mapillary_4132819600116881__yaw_p270",
+          "digest": "sha256:f6ee9f6133728c54b47f23f8535b2d8cec34c8d47ef75b8f68f84b11adfbe928",
+          "mask_area_px": 15283,
+          "observation_id": "object-observation:mapillary_4132819600116881__yaw_p270:0003",
+          "ray_distance_m": 19.065,
+          "rgb": [
+            192,
+            160,
+            136
+          ],
+          "segmentation_score": 0.83941323
+        }
+      ],
+      "colour_method": "direct camera-ray canonical-building association",
+      "source_digests": [
+        "sha256:f6ee9f6133728c54b47f23f8535b2d8cec34c8d47ef75b8f68f84b11adfbe928"
+      ],
+      "source_observations": [
+        "object-observation:mapillary_4132819600116881__yaw_p270:0003"
+      ],
+      "wall_rgb": [
+        192,
+        160,
+        136
+      ]
+    }
+  },
+  "counts": {
+    "associated": 49,
+    "buildings_with_direct_colour": 25,
+    "facade_masks": 56,
+    "ray_miss": 4,
+    "rejected_colour_contract": 3
+  },
+  "inputs": {
+    "canonical_world_ir": {
+      "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/canonical.world_ir.json",
+      "sha256": "bcc806ee1998931ba4bc8d2f8dfe046f83f1060ed35820b059c5183f37787b03"
+    },
+    "image_world_ir": [
+      {
+        "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/image_observations/route_forward.world_ir.json",
+        "sha256": "989fab82f0e270a4afb6e2c1652be3f5cf3ed5886f5d767c6095694055d2115d"
+      },
+      {
+        "path": "/Users/r/Projects/asciicker-Y9-2/.run/fl4876_builds/build_reg_88_temple/image_observations/route_facades.world_ir.json",
+        "sha256": "cd272593127bf1f19d7dd6f6c4e96d26db655bc27287d3d1217f497e8ff4b212"
+      }
+    ]
+  },
+  "schema": "y92.facade_evidence_associations.v1"
+}

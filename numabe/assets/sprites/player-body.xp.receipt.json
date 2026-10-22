@@ -1,0 +1,46 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "player_body",
+  "output_path": "assets/sprites/player-body.xp",
+  "output_sha256": "3994f4ad18856671e11316715557db6e4ba3994ba49a612068d4243ab73ce8d9",
+  "output_dimensions": {
+    "width": 126,
+    "height": 72
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/player-0000.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/player-0000.xp",
+    "raw_layer_index": 2,
+    "upstream_xp_sha256": "5cbb0d4ac1b9d0e0dc721ed5cd30bec8eafd6afcab98383a77b8116d0859acad",
+    "upstream_layer_count": 3,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 126,
+        "height": 72
+      },
+      {
+        "index": 1,
+        "width": 126,
+        "height": 72
+      },
+      {
+        "index": 2,
+        "width": 126,
+        "height": 72
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "reviewer visual inspection 2026-05-19",
+    "method": "Source: upstream/master:sprites/player-0000.xp is the only 3-layer (L0/L1/L2) no-equipment baseline at 126x72. L2 carries the full humanoid body across all angles/anims with no equipment overlays. Reviewer visual call 2026-05-19: full humanoid body sheet (no equipment).",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=player_body -> upstream_xp_path=sprites/player-0000.xp:raw_layer_index=2. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

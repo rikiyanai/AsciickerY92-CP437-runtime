@@ -1,0 +1,21 @@
+{
+  "schema": "asciicker.car.native_foreground_binding.v1",
+  "subject": "kei_sambar",
+  "status": "MANUAL_INTEGRATION_IN_REVIEW_NOT_RUNTIME_ACCEPTANCE",
+  "mechanical_contract": "assets/meshes/incoming/approved_car_foreground.mechanics.json",
+  "construction": "articles/fl4831-aahub-car-turntables-20261019/revision-04/kei_sambar/construction.json",
+  "construction_sha256": "8d58430599ba44c4b6ee270a574112a75174d79c06d697720db342170970af54",
+  "authorship": "Retain the approved native cab-over open-flatbed drawing across all96views. Manual semantic binding, not a sedan with a pickup outline or newly hand-typed source art.",
+  "inspected_native_samples": [0],
+  "sequence": {"first": 0, "last": 95, "retain": "All original proportional glyphs, neighboring passages, body gaps and load-bed negative space through the full GIF."},
+  "bindings": [
+    {"prefix": "cab.", "part": 0, "retain": "Tall short cab-over nose and upright screen, flat narrow roof, sideglass, doors/handles, front arches and attached mirror stalks. Preserve the four protected glass openings."},
+    {"prefix": "bed.", "part": 0, "retain": "Open flatbed: separate top rails, bed floor, sidewall press lines, tailgate and latches. Empty load volume must stay open, not a solid van roof or white box."},
+    {"prefix": "chassis.", "part": 0, "retain": "Visible low chassis/under-bed support and original gaps between bed, wheels and cab."},
+    {"prefix": "front.", "part": 0, "retain": "Source rectangular lamps and small grille bands, bumper and physical fictional ﾎ60-91 plate."},
+    {"prefix": "rear.", "part": 0, "retain": "Small rear lamp/bumper shapes below the tailgate and physical ﾎ60-91 plate."}
+  ],
+  "wheel_character": "Small source wheels and four-vent hubs remain proportionate to the cab-over body; actual front steering and travel spin only.",
+  "output": "godot_project/assets/world_mesh/foreground/kei_sambar.native.json",
+  "open": ["Runtime continuous rotation", "Player walk-around", "Bed/glazing negative space", "Scale and occlusion transitions"]
+}

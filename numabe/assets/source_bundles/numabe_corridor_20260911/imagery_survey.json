@@ -1,0 +1,190 @@
+{
+  "aoi_bbox_lonlat": [
+    139.6722376,
+    35.5819619,
+    139.6746123,
+    35.5834444
+  ],
+  "google_street_view": {
+    "metadata_probe": {
+      "error_message": "You must use an API key to authenticate each request to Google Maps Platform APIs.",
+      "http": 200,
+      "result": "No panorama ID coverage could be recorded: the metadata endpoint requires an API key and none is configured in this repo.",
+      "status": "REQUEST_DENIED",
+      "url": "https://maps.googleapis.com/maps/api/streetview/metadata?location=35.582856,139.6730398&radius=50"
+    },
+    "policy": "Street View content may be referenced by panorama ID / metadata only. Prefetching, storing or caching Street View imagery is prohibited. No imagery was requested or downloaded."
+  },
+  "mapillary": {
+    "probe": {
+      "error": "Invalid OAuth 2.0 Access Token (MLYApiException code 190)",
+      "http": 500,
+      "url": "https://graph.mapillary.com/images?bbox=139.6722376,35.5819619,139.6746123,35.5834444&limit=1"
+    },
+    "result": "Requires an OAuth token; not queried further. No imagery requested or downloaded."
+  },
+  "panoramax": {
+    "api_landing": "https://api.panoramax.xyz/api",
+    "camera_fields_present": [
+      "pers:interior_orientation.camera_manufacturer",
+      "pers:interior_orientation.camera_model",
+      "pers:interior_orientation.focal_length (present on Pixel captures, ABSENT on all 268 iPhone captures sampled)",
+      "pers:interior_orientation.sensor_array_dimensions",
+      "view:azimuth",
+      "quality:horizontal_accuracy",
+      "exif.Exif.Photo.FocalLength",
+      "exif.Exif.Photo.FocalLengthIn35mmFilm",
+      "exif.Exif.GPSInfo.GPSLatitude",
+      "exif.Exif.GPSInfo.GPSLongitude",
+      "exif.Exif.GPSInfo.GPSAltitude",
+      "exif.Exif.GPSInfo.GPSImgDirection"
+    ],
+    "control_query": {
+      "bbox": "2.30,48.85,2.36,48.88 (Paris)",
+      "http": 200,
+      "pictures_returned": 200,
+      "purpose": "proves the search endpoint and bbox parameter work; the AOI zero is real, not an API artifact"
+    },
+    "federation": {
+      "instance_count": 23,
+      "instances_endpoint": "https://api.panoramax.xyz/api/instances",
+      "japan_hosted_instance": false,
+      "note": "No Japan-hosted Panoramax instance is federated; nearest regional instance is osm-tw (Taiwan)."
+    },
+    "instances_queried": [
+      {
+        "aoi_http": 200,
+        "aoi_pictures": 0,
+        "endpoint": "https://api.panoramax.xyz/api/search",
+        "instance": "panoramax.xyz (central)",
+        "radius_1km_pictures": 0
+      },
+      {
+        "aoi_http": 200,
+        "aoi_pictures": 0,
+        "endpoint": "https://panoramax.openstreetmap.fr/api/search",
+        "instance": "osm-fr",
+        "radius_1km_pictures": 0
+      },
+      {
+        "aoi_http": 200,
+        "aoi_pictures": 0,
+        "endpoint": "https://panoramax.ign.fr/api/search",
+        "instance": "ign",
+        "radius_1km_pictures": 0
+      },
+      {
+        "aoi_http": 200,
+        "aoi_pictures": 0,
+        "endpoint": "https://panoramax.osm.tw/api/search",
+        "instance": "osm-tw",
+        "radius_1km_pictures": 0
+      }
+    ],
+    "licences_observed": {
+      "counts": {
+        "CC-BY-SA-4.0": 200
+      },
+      "proprietary_or_unset": 0,
+      "scope": "200-picture sample, bbox 139.66,35.54,139.79,35.61 (Ota City and neighbours)"
+    },
+    "nearest_picture": {
+      "camera": "Google Pixel 9 Pro XL",
+      "capture_date": "2026-08-18T06:52:46.541000+00:00",
+      "distance_m": 1382.0,
+      "focal_length_mm": 6.9,
+      "horizontal_accuracy_m": 5.0,
+      "id": "0f3fd3e4-ae03-4016-94d4-572a54dff703",
+      "licence": "CC-BY-SA-4.0",
+      "producer": "Anonymous897234",
+      "sensor_array_dimensions": [
+        2160,
+        3840
+      ],
+      "view_azimuth_deg": 152
+    },
+    "providers_observed": {
+      "geovisio_producer_values": [
+        "motocultrice",
+        "Anonymous897234"
+      ],
+      "stac_providers_field": "absent on all 200 sampled pictures"
+    },
+    "radius_ladder_from_entrance_node_9865199050": [
+      {
+        "http": 200,
+        "pictures": 0,
+        "radius_m": 250
+      },
+      {
+        "http": 200,
+        "pictures": 0,
+        "radius_m": 500
+      },
+      {
+        "http": 200,
+        "pictures": 0,
+        "radius_m": 1000
+      },
+      {
+        "http": 200,
+        "pictures": 1,
+        "radius_m": 2000
+      },
+      {
+        "http": 200,
+        "pictures": 1,
+        "radius_m": 3000
+      },
+      {
+        "http": 200,
+        "pictures": 500,
+        "radius_m": 4000
+      },
+      {
+        "http": 200,
+        "pictures": 500,
+        "radius_m": 5000
+      }
+    ],
+    "search_endpoint": "/api/search?bbox=<min_lon,min_lat,max_lon,max_lat>&limit=<n>",
+    "spacing_probe": {
+      "collection": "05e79ef6-1aff-4c03-93c6-dab1d8552e75",
+      "fraction_in_2_to_4_m_band": 0.476,
+      "fraction_le_4_m": 0.674,
+      "items": 268,
+      "note": "nearest dense Japanese sequence, 4.48 km from the AOI; measured only to characterise what Panoramax capture in this city looks like, NOT as AOI coverage",
+      "sequence_length_m": 949.3,
+      "spacing_m": {
+        "max": 21.29,
+        "median": 3.43,
+        "min": 0.0,
+        "p25": 2.32,
+        "p75": 4.27
+      },
+      "verdict": "spacing supports 2-4 m keyframes where coverage exists; it does not exist here"
+    },
+    "viewpoint_multiplicity_in_aoi": {
+      "distinct_viewpoints": 0,
+      "met": false,
+      "required": ">=2, preferably >=3"
+    }
+  },
+  "retention_decision": {
+    "downloaded_into_repo": 0,
+    "downloaded_into_scratchpad": 2,
+    "reason": "Zero pictures exist inside the AOI, so no in-AOI bytes could be retained. Two out-of-AOI CC-BY-SA-4.0 probes were fetched to scratchpad only, to prove the delivery path and the camera-metadata content of a Panoramax picture. Their manifest rows carry aoi_relation=outside_reference.",
+    "rule": "download at most six probe pictures, and only under an explicitly open licence"
+  },
+  "scope": "panoramax_only",
+  "superseded_by": "imagery_survey_v2.json",
+  "survey_id": "numabe_corridor_20260911_imagery",
+  "surveyed_utc": "2026-09-12T02:12Z-02:40Z",
+  "user_agent": "asciicker-Y9-2-FL4810/1.0 (source acquisition research; info@yuuz.co)",
+  "verdict": "ZERO street-level imagery inside the AOI on every Panoramax instance queried. SCOPE CORRECTION: this survey tested Panoramax ONLY. Its original conclusion that the corridor is not reconstructable from open street-level imagery was an unsupported generalisation from one provider and is WITHDRAWN. See imagery_survey_v2.json for the multi-provider result: KartaView PRESENT regionally but absent inside the AOI, Mapillary and Google Street View UNKNOWN_PENDING_ACCESS because every no-token route was refused at the control location too, and Wikimedia Commons PRESENT with 15 openly licensed images inside the AOI polygon.",
+  "withdrawn_claim": {
+    "text": "Corridor is NOT reconstructable from open street-level imagery today.",
+    "why_withdrawn": "Generalised from a single provider. KartaView was never queried; Mapillary and Google returned authentication failures that carry no coverage information; no open photo pool was searched. Two OSM footways inside the AOI cite Mapillary image ids from 2022 surveys.",
+    "withdrawn_utc": "2026-09-12T00:00Z"
+  }
+}

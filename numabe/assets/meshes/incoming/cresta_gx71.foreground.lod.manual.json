@@ -1,0 +1,62 @@
+{
+  "schema": "asciicker.car.manual_native_lod.v1",
+  "subject": "cresta_gx71",
+  "status": "MANUAL_DRAWING_REVIEW_NOT_RUNTIME",
+  "reference": "articles/fl4831-aahub-car-turntables-20261019/revision-04/cresta_gx71/frames/000.png",
+  "font": "articles/fl4831-aahub-car-turntables-20261019/revision-04/gifs/Saitamaar.ttf",
+  "font_sha256": "592bf6be803ed76311841b95a10b20db3df0ec693a15f858757d47420b9b3a28",
+  "font_px": 16,
+  "row_pitch_px": 17,
+  "size": [320, 238],
+  "view": "front-left quarter; original source sample000 camera",
+  "authorship": "Manually typed adjacent native rows. No contour fitter or automatic glyph thinning. This is a reduced-scale construction study, not an alternate approved target or a runtime billboard.",
+  "revision": 4,
+  "rejected_drawing_03": {
+    "reason": "Native metric inspection: middle front-wheel row11px left of its top arc, bottom arc5px left; handles not yet separately articulated. Preserved only as a drawing study, never loaded in Godot.",
+    "rows": ["", "", "", "", "　　　　　　　　　　　＿＿＿＿＿＿", "   　　　　　　　　,／　　       /　|　＼", "   　　　　＿_ .／＿＿＿＿ /　　|　 ｀ヽ_", "   　_.-‐'´　　　￣ヽ-‐／￣ |　    |　 (o)", "   r┬ﾛﾛ┬三三┬　 ／_c＼|　　 '　 ヽﾉ", "   |   ｢　 ｣ ｰ‐‐┐　　  /´ヽ└‐´", "   ｀‐ l_＿｣＿＿｣　　/|o）|", "　　　　　　　　　　　　 ヽ__ﾉ", "", ""]
+  },
+  "reference_landmarks_at_half_viewport": {
+    "near_front_wheel_center": [155.3, 174.6],
+    "near_rear_wheel_center": [237.2, 134.7],
+    "near_A_roof": [186.6, 85.7],
+    "near_A_foot": [172.6, 124.2],
+    "B_pillar_top": [201.0, 88.3],
+    "B_pillar_foot": [204.9, 110.0],
+    "rear_roof": [213.4, 81.0],
+    "C_pillar_foot": [231.1, 105.3],
+    "door_seam_front": [[178.4, 125.9], [178.1, 155.5]],
+    "door_seam_middle": [[210.3, 115.3], [209.5, 141.3]]
+  },
+  "rejected_drawing_02": {
+    "reason": "Image read improved, but direct projected-construction review disproved the proportions: both visible wheels roughly40px too far forward and roof roughly30px too short. Not loaded in Godot.",
+    "rows": ["", "", "", "", "   　　　　　　　　　＿＿＿＿_", "   　　　　　　　　,／　　　￣/｀ヽ＿", "   　　　　＿_ .／＿＿＿／_l_ｒ-、ヽ", "   　_.-‐'´　　　￣ヽ-‐／￣|　ｒ‐､ |", "   r┬ﾛﾛ┬三三┬ .／ ヽ　|　(o) |", "   L|[ ]|-‐ﾆ_｣ / /o）|ﾆ-┘", "    ｀￣￣￣‐‐┘ヽ＿ノ´", "", "", ""]
+  },
+  "rejected_drawing_01": {
+    "reason": "Native inspection: disconnected stacked roof strokes; far rear wheel larger than near front wheel; nose touches canvas edge. Fullwidth small-o is absent from the runtime native repertoire. Not loaded in Godot.",
+    "rows": ["", "", "", "", "　　　　　　　　　　　＿二二＿_", "　　　　　　　　,／　　　￣/｀ヽ＿", "　　　　＿_ .／＿＿＿／_l_ｒ-、ヽ", "　_.-‐'´　　　￣ヽ-‐／￣|　厂ヽ |", "r┬ﾛﾛ┬三三┬ .／ ヽ　|　| ｏ| |", "L|[ ]|-‐ﾆ_｣ / /ｏ）|ﾆ-┘ ヽ._ノ", " ｀￣￣￣‐‐┘ヽ＿ノ´", "", "", ""]
+  },
+  "requirements": {
+    "bonnet": "Long shallow white bonnet, not a short generic cab-over nose",
+    "fascia": "Separate rectangular lamp and grille band",
+    "glazing": "Low roof and two side panes, clear white interiors",
+    "wheels": "Distinct front/rear tire and hub; arch gap separates body",
+    "tone": "Subordinate bonnet-roll punctuation, not panel filler",
+    "plate": "At this scale the full kana/serial cannot fit the physical plate. Retain plate outline; do not float oversized numbers."
+  },
+  "rows": [
+    "",
+    "",
+    "",
+    "",
+    "　　　　　　　　　　　＿＿＿＿＿＿",
+    "   　　　　　　　　,／　　       /　|　＼",
+    "   　　　　＿_ .／＿＿＿＿ /　　|　 '-ヽ_",
+    "   　_.-‐'´　　　￣ヽ-‐／￣ |　 - |　 (o)",
+    "   r┬ﾛﾛ┬三三┬　 ／_c＼|　　 '　 ヽﾉ",
+    "   |   ｢　 ｣ ｰ‐‐┐　　  /´ヽ└‐´",
+    "   ｀‐ l_＿｣＿＿｣　　　/|o）|",
+    "　　　　　　　　　　　　  ヽ__ﾉ",
+    "",
+    ""
+  ]
+}

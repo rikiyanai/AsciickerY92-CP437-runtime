@@ -1,0 +1,101 @@
+{
+  "schema": "y92.connected_product_scope.v1",
+  "scope_id": "numabe_connected_neighborhood_scope_20260915",
+  "compiled_utc": "2026-09-15T06:22:00Z",
+  "supersedes_scope": "assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/numabe_home_to_station_sakurazaka_aoi.geojson",
+  "sources": {
+    "base_aoi": "assets/source_bundles/numabe_home_to_station_sakurazaka_20260913/numabe_home_to_station_sakurazaka_aoi.geojson",
+    "pedestrian_route": "assets/source_bundles/numabe_connected_neighborhood_scope_20260915/valhalla_pedestrian_route.json",
+    "pedestrian_route_uri": "https://valhalla1.openstreetmap.de/route",
+    "osm_attribution": "© OpenStreetMap contributors",
+    "osm_licence": "ODbL-1.0"
+  },
+  "route_order": [
+    "numabe_station_selected_entrance",
+    "private_home_block",
+    "sakurazaka_full_lower_endpoint",
+    "sakurazaka_full_upper_endpoint",
+    "lawson_coin_laundry_cluster"
+  ],
+  "preserved_base_route": {
+    "feature_role": "walking_route",
+    "from_provider_location_index": 0,
+    "to_provider_location_index": 1,
+    "max_endpoint_distance_m": 5.0
+  },
+  "buffers_m": {
+    "route_lateral": 55.0,
+    "route_endpoint": 75.0,
+    "quadrant_segments": 16
+  },
+  "mapped_landmarks": [
+    {
+      "landmark_id": "numabe_station_selected_entrance",
+      "name": "Numabe Station selected entrance",
+      "osm_type": "node",
+      "osm_id": 9865199050,
+      "source_ref": "node/9865199050",
+      "lonlat": [139.6730398, 35.582856]
+    },
+    {
+      "landmark_id": "lawson_three_f_denenchofuhoncho",
+      "name": "ローソン・スリーエフ",
+      "osm_type": "node",
+      "osm_id": 441523546,
+      "source_ref": "node/441523546",
+      "osm_snapshot_timestamp": "2024-07-01T01:55:17Z",
+      "lonlat": [139.6755558, 35.5871679]
+    }
+  ],
+  "route_landmarks": [
+    {
+      "landmark_id": "sakurazaka",
+      "name": "桜坂",
+      "source_ref": "way/37661730",
+      "base_feature_role": "required_landmark",
+      "required_route_pass_points_lonlat": [
+        [139.6747211, 35.5851761],
+        [139.6758276, 35.5866102]
+      ],
+      "max_route_distance_m": 1.0
+    }
+  ],
+  "private_waypoints": [
+    {
+      "waypoint_id": "private_home_block",
+      "route_waypoint_index": 1,
+      "coordinate_source": "existing frozen GSI endpoint in the superseded bundle",
+      "privacy": "do not repeat the street address in public handoffs"
+    }
+  ],
+  "operator_reported_search_zones": [
+    {
+      "zone_id": "coin_laundry_near_lawson",
+      "landmark_kind": "coin_laundry",
+      "center_lonlat": [139.6755558, 35.5871679],
+      "radius_m": 75.0,
+      "location_state": "operator_reported_unresolved_within_cluster",
+      "note": "Included in product scope. Exact business object was not present in the fresh OSM survey around the stated Lawson, so this polygon is a search/authoring zone and not a fabricated storefront coordinate."
+    }
+  ],
+  "coverage_state": {
+    "geometry": "compiled_connected",
+    "existing_428m_capture_manifest": "retained_as_partial_evidence_only",
+    "sakurazaka_imagery": "not_yet_accepted",
+    "lawson_coin_laundry_extension_imagery": "not_yet_surveyed",
+    "required_next_receipt": "expanded route imagery survey and route_capture_manifest",
+    "prohibition": "Do not relabel old route imagery or operator boxes as coverage of newly added segments."
+  },
+  "annotation_snapshot": {
+    "path": "artifacts/experiments/fl4813_capture_review_20260915/preserved/operator_boxes_complete_20260915/annotations.json",
+    "annotations": 499,
+    "crops": 499,
+    "missing_crops": 0,
+    "digest_mismatches": 0,
+    "source_receipt_sha256": "3687284f92edc25e63e42582ce1ae62abc2b51cefd95a769ba16c5d80ea92dd7",
+    "frozen_annotations_sha256": "2cafb9d89d427eb1a40711b039ff6100e7bb5d984f4edb2d4ef9bc0bf5439a50",
+    "snapshot_receipt": "artifacts/experiments/fl4813_capture_review_20260915/preserved/operator_boxes_complete_20260915/snapshot_receipt.json",
+    "label_state": "first_pass_geometry; inherited labels are non-authoritative until review",
+    "review_contract": "Tinder-style accept/reject/correct with correction note; repeatable fixtures use generic classes; location-specific store and station signs require custom_extraction_required metadata."
+  }
+}

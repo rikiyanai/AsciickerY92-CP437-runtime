@@ -1,0 +1,136 @@
+{
+  "_comment": "FL-4131 Phase 0: Parity corpus for glyph_sidecar_parsers_contract_parity gate. Both scripts/glyph_sidecar.py (Python) and engine/glyph_sidecar.cpp (C++) must produce identical results for every case. The test runner is scripts/test_glyph_sidecar_parity.py. Cases cover: valid sidecars, all required missing-field rejections, wrong version, wrong profile_kind, malformed hash, sentinel in wrong position.",
+  "corpus_version": 1,
+  "cases": [
+    {
+      "id": "valid_minimal",
+      "description": "Minimal valid sidecar with all required fields",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"6dc89a37253f0009aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"}",
+      "expect": "ok",
+      "expected_fields": {
+        "sidecar_version": 1,
+        "profile_kind": "extended_glyph_v1",
+        "content_pack_id": "terrain.extended.v1",
+        "glyph_manifest_hash": "6dc89a37253f0009aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "glyph_manifest_path": null
+      }
+    },
+    {
+      "id": "valid_with_manifest_path",
+      "description": "Valid sidecar with optional glyph_manifest_path",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\",\"glyph_manifest_path\":\"assets/glyphs/manifests/terrain_v1.json\"}",
+      "expect": "ok",
+      "expected_fields": {
+        "sidecar_version": 1,
+        "profile_kind": "extended_glyph_v1",
+        "content_pack_id": "terrain.extended.v1",
+        "glyph_manifest_hash": "abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789",
+        "glyph_manifest_path": "assets/glyphs/manifests/terrain_v1.json"
+      }
+    },
+    {
+      "id": "valid_null_manifest_path",
+      "description": "Valid sidecar with explicit null glyph_manifest_path",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"signs.v1\",\"glyph_manifest_hash\":\"0000000000000000000000000000000000000000000000000000000000000001\",\"glyph_manifest_path\":null}",
+      "expect": "ok",
+      "expected_fields": {
+        "sidecar_version": 1,
+        "profile_kind": "extended_glyph_v1",
+        "content_pack_id": "signs.v1",
+        "glyph_manifest_hash": "0000000000000000000000000000000000000000000000000000000000000001",
+        "glyph_manifest_path": null
+      }
+    },
+    {
+      "id": "reject_missing_sidecar_version",
+      "description": "Must reject when sidecar_version is absent",
+      "sidecar_json": "{\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\"}",
+      "expect": "error",
+      "error_contains": "sidecar_version"
+    },
+    {
+      "id": "reject_wrong_sidecar_version",
+      "description": "Must reject sidecar_version != 1",
+      "sidecar_json": "{\"sidecar_version\":2,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\"}",
+      "expect": "error",
+      "error_contains": "sidecar_version"
+    },
+    {
+      "id": "reject_missing_profile_kind",
+      "description": "Must reject when profile_kind is absent",
+      "sidecar_json": "{\"sidecar_version\":1,\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\"}",
+      "expect": "error",
+      "error_contains": "profile_kind"
+    },
+    {
+      "id": "reject_wrong_profile_kind",
+      "description": "Must fail closed for unknown profile_kind — extended loader not implemented",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v2\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\"}",
+      "expect": "error",
+      "error_contains": "profile_kind"
+    },
+    {
+      "id": "reject_legacy_profile_kind",
+      "description": "profile_kind='legacy_cp437' must be rejected — legacy XPs have no sidecar",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"legacy_cp437\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\"}",
+      "expect": "error",
+      "error_contains": "profile_kind"
+    },
+    {
+      "id": "reject_missing_content_pack_id",
+      "description": "Must reject when content_pack_id is absent",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\"}",
+      "expect": "error",
+      "error_contains": "content_pack_id"
+    },
+    {
+      "id": "reject_empty_content_pack_id",
+      "description": "Must reject empty-string content_pack_id",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\"}",
+      "expect": "error",
+      "error_contains": "content_pack_id"
+    },
+    {
+      "id": "reject_missing_manifest_hash",
+      "description": "Must reject when glyph_manifest_hash is absent",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\"}",
+      "expect": "error",
+      "error_contains": "glyph_manifest_hash"
+    },
+    {
+      "id": "reject_short_manifest_hash",
+      "description": "Must reject glyph_manifest_hash that is not 64 hex chars",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"abcdef\"}",
+      "expect": "error",
+      "error_contains": "glyph_manifest_hash"
+    },
+    {
+      "id": "reject_uppercase_manifest_hash",
+      "description": "Must reject glyph_manifest_hash with uppercase hex (must be lowercase)",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789\"}",
+      "expect": "error",
+      "error_contains": "glyph_manifest_hash"
+    },
+    {
+      "id": "reject_non_hex_manifest_hash",
+      "description": "Must reject glyph_manifest_hash with non-hex characters",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg\"}",
+      "expect": "error",
+      "error_contains": "glyph_manifest_hash"
+    },
+    {
+      "id": "reject_non_object_root",
+      "description": "Must reject sidecar that is a JSON array instead of object",
+      "sidecar_json": "[1, 2, 3]",
+      "expect": "error",
+      "error_contains": "object"
+    },
+    {
+      "id": "reject_numeric_manifest_path",
+      "description": "glyph_manifest_path must be a string or null, not a number",
+      "sidecar_json": "{\"sidecar_version\":1,\"profile_kind\":\"extended_glyph_v1\",\"content_pack_id\":\"terrain.extended.v1\",\"glyph_manifest_hash\":\"abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789\",\"glyph_manifest_path\":42}",
+      "expect": "error",
+      "error_contains": "glyph_manifest_path"
+    }
+  ]
+}

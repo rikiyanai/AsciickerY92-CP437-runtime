@@ -1,0 +1,51 @@
+{
+  "schema": "phase3_derived_xp_receipt.v1",
+  "derived_id": "plydie_helmet_regular",
+  "output_path": "assets/sprites/plydie-helmet-regular.xp",
+  "output_sha256": "86b7227757ffafbac56c140e795489bea77f00a583695dc2430aa0ca0a315bbf",
+  "output_dimensions": {
+    "width": 110,
+    "height": 96
+  },
+  "extraction_method": "raw_layer_copy",
+  "source_authority": {
+    "upstream_repo": "https://github.com/msokalski/asciicker",
+    "upstream_ref": "upstream/master",
+    "upstream_xp_path": "sprites/plydie-0100.xp",
+    "raw_url": "https://raw.githubusercontent.com/msokalski/asciicker/master/sprites/plydie-0100.xp",
+    "raw_layer_index": 3,
+    "upstream_xp_sha256": "4a9700f3956979ab454b67c926ca2c1a806ae3cc5a4bc9f16c2153f1bcacbb08",
+    "upstream_layer_count": 4,
+    "upstream_layer_dimensions": [
+      {
+        "index": 0,
+        "width": 110,
+        "height": 96
+      },
+      {
+        "index": 1,
+        "width": 110,
+        "height": 96
+      },
+      {
+        "index": 2,
+        "width": 110,
+        "height": 96
+      },
+      {
+        "index": 3,
+        "width": 110,
+        "height": 96
+      }
+    ]
+  },
+  "verification": {
+    "verified_by": "reviewer visual inspection 2026-05-19",
+    "method": "Source: upstream/master:sprites/plydie-0100.xp is a 4-layer 110x96 file (+8 rows taller than the 110x88 baseline). L3 is the added overlay with sparse head-area marks. Reviewer visual call 2026-05-19: sparse head/top overlay.",
+    "tool": "scripts/pipeline/xp_raw_layer_inspector.py"
+  },
+  "output_xp_structure": "L0 = upstream L0 (color-key + metadata); L1 = upstream L1 (height/depth); L2 = upstream L<raw_layer_index> (extracted role layer)",
+  "fl_4078_source_identity_contract": "derived_id=plydie_helmet_regular -> upstream_xp_path=sprites/plydie-0100.xp:raw_layer_index=3. Mapping verified by explicit human review; no AHSW/bit-diff/occupancy inference.",
+  "generated_at_unix": 1779490691,
+  "generator_path": "scripts/pipeline/extract_derived_xp_by_mapping.py"
+}

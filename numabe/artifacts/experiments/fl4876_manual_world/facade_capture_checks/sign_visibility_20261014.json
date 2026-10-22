@@ -1,0 +1,16 @@
+{
+ "schema": "y92.fl4876.sign_visibility_check.v1",
+ "at": "2026-10-14",
+ "session": "0e4cdb7d-789e-4f42-9ca8-ce5af0878c03",
+ "build": ".run/fl4876_builds/build_reg_73 (19 sign sprites, all present in output.a3d)",
+ "method": "Classic wasm (same as the editor), 160x70 cells, zoom 1, camera target = sign anchor, looking along -normal; cells drawn = frame difference with the sign hidden via ClassicSetSpriteVisible (hide path proven on controls: hidden cells == add/remove cells). Probes: sign_vis.mjs, sign_sweep.mjs, sign_pick.mjs in this folder.",
+ "served_build_front_view": "0 of 19 signs draw a single cell",
+ "with_FOOT_CLEAR_M_0_2": "3 of 19 partially (komatsuya 7/270, shige 24/198, respa 10/112); damassa then fell on painted carriageway -> carriageway test moved to the wall foot (19 kept)",
+ "sweep_minus2_to_plus3_m_from_cleared_anchor": {
+  "draw_when_further_out_0_5_to_1_m": {"My Basket": "168/232 at +1", "割烹浜蝶": "120/120 at +0.5", "ebara_musen": "118/162 at +0.5", "komatsuya": "50/270 at 0", "sakurazaka_bal": "173/184 at +1", "shige": "198/198 at +1.5", "tenrokuen": "54/156 at +1", "respa": "21/112 at 0"},
+  "draw_nothing_at_any_offset_either_side": ["FamilyMart", "Cocokara Fine", "cafe_bit", "iijima", "mikasa", "fukasawa", "cleaner", "unagi_tempura", "nabin", "miyoshiya", "damassa"]
+ },
+ "pick_at_blocked_signs": "the screen cell of the sign shows a building across the street (e.g. FamilyMart cell -> mass_way_225367798, 16.9 m away, 9.7 m higher): occluded from this camera angle, NOT proven broken",
+ "interpretation": "recoverable signs stand on buildings drawn by mass_way meshes whose surface is further out than the terrain wall snap_to_wall measures; the foot anchor puts them behind the mesh. A single global offset was not adopted; facade capture bands carry an operator out_m judged against the live preview.",
+ "open": "existing 19 signs still use the foot anchor (+0.2 m); a renderer-verified per-sign anchor (or multi-yaw visibility gate) is the proposed next step"
+}

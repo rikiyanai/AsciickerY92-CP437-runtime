@@ -1,0 +1,129 @@
+{
+  "counts": {
+    "akm_files_written": 402,
+    "continuous_run_segments": 157,
+    "foreign_placements_ignored": 1162,
+    "instances_emitted": 3330,
+    "placements_consumed": 602,
+    "placements_in_domains": 607,
+    "placements_per_module": {
+      "concrete_block_wall": 11,
+      "concrete_retaining_edge": 1,
+      "crosswalk_and_edge_guardrail": 2,
+      "curb_and_open_gutter": 4,
+      "curb_edge_line": 63,
+      "green_cycle_or_walk_band": 3,
+      "ivy_wall": 3,
+      "lattice_boundary_fence": 1,
+      "level_crossing_equipment": 16,
+      "manhole_and_grate": 4,
+      "mesh_fence": 4,
+      "metal_boundary_fence": 1,
+      "meter_and_service_cabinet": 7,
+      "open_and_covered_drain": 3,
+      "overhead_gantry_wire": 6,
+      "picket_fence": 1,
+      "platform_railing": 16,
+      "pole_streetlight": 3,
+      "potted_frontage_plant": 7,
+      "rail_corridor_fence": 13,
+      "rail_corridor_mesh_fence": 7,
+      "rail_track_corridor": 11,
+      "road_edge_dashed_marking": 4,
+      "road_surface_text_marking": 12,
+      "road_text_arrow_30": 13,
+      "sidewalk_paver_surface": 74,
+      "small_tree": 2,
+      "stone_cobble_wall": 4,
+      "stone_lined_water_channel": 6,
+      "street_tree": 1,
+      "transformer_drum_cluster": 3,
+      "trimmed_hedge": 257,
+      "utility_pole_wire_cluster": 15,
+      "water_control_structure": 1,
+      "waterway_bridge_railing": 2,
+      "white_edge_line_shoulder": 7,
+      "white_railguard": 2,
+      "wire_span": 2,
+      "zebra_crossing": 10
+    },
+    "skipped": [
+      {
+        "module_id": "wire_span",
+        "placement_id": "obs-inst-0184",
+        "reason": "endpoint_without_span"
+      },
+      {
+        "module_id": "wire_span",
+        "placement_id": "obs-inst-0195",
+        "reason": "endpoint_without_span"
+      },
+      {
+        "module_id": "trimmed_hedge",
+        "placement_id": "rule-1507403605-cultural_or_residential_frontage",
+        "reason": "run_shorter_than_quarter_unit"
+      },
+      {
+        "module_id": "wire_span",
+        "placement_id": "rule-27073255-residential_street_edge-0",
+        "reason": "endpoint_without_span"
+      },
+      {
+        "module_id": "trimmed_hedge",
+        "placement_id": "rule-725138157-cultural_or_residential_frontage",
+        "reason": "run_shorter_than_quarter_unit"
+      }
+    ],
+    "span_segments": 6,
+    "unit_length_m_per_module": {
+      "concrete_block_wall": 4.011,
+      "concrete_retaining_edge": 4.0,
+      "crosswalk_and_edge_guardrail": 4.0,
+      "curb_and_open_gutter": 4.0,
+      "curb_edge_line": 6.0,
+      "green_cycle_or_walk_band": 7.931,
+      "ivy_wall": 19.96,
+      "lattice_boundary_fence": 4.0,
+      "manhole_and_grate": 6.025,
+      "mesh_fence": 5.812,
+      "metal_boundary_fence": 4.0,
+      "metal_fence": 4.0,
+      "open_and_covered_drain": 9.06,
+      "picket_fence": 4.0,
+      "platform_railing": 6.38,
+      "rail_corridor_fence": 22.436,
+      "rail_corridor_mesh_fence": 4.0,
+      "rail_track_corridor": 6.13,
+      "road_edge_dashed_marking": 3.0,
+      "road_surface_text_marking": 4.0,
+      "road_text_arrow_30": 4.0,
+      "sidewalk_paver_surface": 9.426,
+      "stone_cobble_wall": 9.07,
+      "stone_lined_water_channel": 12.08,
+      "trimmed_hedge": 4.464,
+      "waterway_bridge_railing": 4.0,
+      "white_edge_line_shoulder": 6.0,
+      "white_railguard": 4.0,
+      "zebra_crossing": 3.0
+    }
+  },
+  "lane": "lower_linear",
+  "origin": {
+    "easting": 379699.09478405997,
+    "northing": 3938417.876643479,
+    "offset_x": 32.0,
+    "offset_y": 32.0
+  },
+  "runs": {
+    "partial_segments": 297,
+    "plan_rule_run_total_length_m": 33819.803,
+    "plan_run_count": 1169,
+    "plan_run_total_length_m": 33890.282,
+    "run_placements_consumed": 382,
+    "run_segments_emitted": 3106,
+    "run_total_length_m": 16677.581
+  },
+  "scale": 3.421334928531115,
+  "stage": "lowered",
+  "z_mode": "terrain_snap"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "fl4512.projected_feature_extent_golden_vectors.v2",
+  "extent_schema": "fl4512.projected_feature_extent_admission.v2",
+  "extent_quantization_version": 1,
+  "projected_extent_format": "unsigned_q16_16_terminal_cell_arc_length",
+  "mesh_thresholds": {
+    "silhouette": {"enter_q": 32768, "exit_q": 24576},
+    "crease": {"enter_q": 65536, "exit_q": 49152},
+    "material_boundary": {"enter_q": 49152, "exit_q": 40960},
+    "suggestive_contour": {"enter_q": 49152, "exit_q": 40960}
+  },
+  "filled_threshold": {"enter_q": 8192, "exit_q": 4096},
+  "suggestive_contour": {
+    "estimator_id": "fl4512.cubic_monge_qr.v1",
+    "derivative_enter_q16": 1024,
+    "stability_angle_min_q16": 51472,
+    "suggestive_claim_enabled": true
+  },
+  "handoff_cases": [
+    {"id": "crease_current_above_enter", "feature_class": "crease", "projected_extent_q": 65536, "incumbent_same_surface_role": false, "expected_state": "CLAIMED_CURRENT"},
+    {"id": "crease_new_claim_waits_inside_band", "feature_class": "crease", "projected_extent_q": 57344, "incumbent_same_surface_role": false, "expected_state": "NOT_CLAIMED_EXTENT"},
+    {"id": "crease_incumbent_retained_inside_band", "feature_class": "crease", "projected_extent_q": 57344, "incumbent_same_surface_role": true, "expected_state": "U6_RETAIN_WITHIN_BAND"},
+    {"id": "crease_handoff_mandatory_below_exit", "feature_class": "crease", "projected_extent_q": 49151, "incumbent_same_surface_role": true, "expected_state": "NOT_CLAIMED_EXTENT"},
+    {"id": "suggestive_current_above_enter", "feature_class": "suggestive_contour", "projected_extent_q": 49152, "incumbent_same_surface_role": false, "expected_state": "CLAIMED_CURRENT"},
+    {"id": "filled_terminal_band", "feature_class": "filled", "projected_extent_q": 4096, "incumbent_same_surface_role": true, "expected_state": "U6_RETAIN_WITHIN_BAND"},
+    {"id": "filled_terminal_handoff", "feature_class": "filled", "projected_extent_q": 4095, "incumbent_same_surface_role": true, "expected_state": "NOT_CLAIMED_EXTENT"}
+  ]
+}
