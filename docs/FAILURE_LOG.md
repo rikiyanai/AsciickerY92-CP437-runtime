@@ -2,6 +2,18 @@
 
 ## Numabe public saved-map/editor port — 2026-10-21
 
+- The Linux contracts rerun exposed an undeclared native/Python GDAL
+  dependency in the scope compiler tests. CI now installs matching native
+  GDAL and Python bindings; the README separates this test prerequisite from
+  the saved-map editor's lightweight requirements. No test was skipped to
+  avoid this dependency. The public-content check remains unchanged:
+  removed irrelevant handoff comments in thirteen empty stub files and the
+  unrelated recovery utility (original retained locally), removed obsolete
+  orchestration instructions from the root tool README, and made two
+  legitimate parser/approval comments describe their data contracts directly.
+  An initial atomic cleanup patch failed on the legacy render-file comment
+  path without modifying files; the corrected patch uses the inspected text.
+
 - Publication-CI repair: restored the historical equipment-recording link.
   Standalone checks now report 46 passing pytest cases plus all script,
   JavaScript and manifest/coverage gates. Three negative-control cases

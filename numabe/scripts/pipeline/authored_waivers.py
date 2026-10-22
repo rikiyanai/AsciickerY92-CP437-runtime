@@ -149,7 +149,7 @@ ROLE_NOUNS = frozenset({"operator", "agent", "user", "admin", "me", "human",
 # a lane spanning many commits and many attempts; it answers "which project",
 # not "which decision".
 APPROVAL_RECORD_FORMS = (
-    # the operator's own decision turn, in a session transcript
+    # the operator's own recorded decision, pinned to its message identity
     ("transcript", re.compile(
         r"^transcript:[0-9a-f-]{36}:[0-9a-f-]{36}$")),
     # the commit that carried the approval into the repository

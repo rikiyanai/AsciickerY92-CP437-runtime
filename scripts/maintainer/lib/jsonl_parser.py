@@ -1,7 +1,7 @@
 """Parse Claude session JSONL files for maintainer analysis.
 
-Claude Code writes session transcripts as JSONL where each line is a JSON
-object with a ``type`` field.  Known types include:
+Claude Code stores each conversation event as a JSONL object with a
+``type`` field. Known types include:
 
 - ``"user"``   — human input (message field contains text or content blocks)
 - ``"assistant"`` — Claude response (message field, may contain tool_use)

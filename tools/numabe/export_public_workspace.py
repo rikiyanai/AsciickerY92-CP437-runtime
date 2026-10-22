@@ -50,6 +50,8 @@ def main():
         if not path.is_file() or path.suffix in CACHE_SUFFIXES or set(path.parts) & CACHE_PARTS:
             return
         name = str(path.relative_to(source))
+        if name == "scripts/recover_ephemeral_agent_docs.py":
+            return  # Private maintenance utility, never a map/editor dependency.
         if name.startswith(("assets/glyphs/generated/", "assets/meshes/quarantine/",
                             "web/asciiid-authoring-shell/")):
             return
