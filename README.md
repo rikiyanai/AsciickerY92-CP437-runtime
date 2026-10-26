@@ -1,5 +1,13 @@
 # Asciicker Y9-2 Runtime
 
+A fork of [msokalski/asciicker](https://github.com/msokalski/asciicker), a CP437 3D ASCII engine.
+
+This repository contains the Y9-2 C++ runtime: a multiplayer server, terminal
+client, WebAssembly client, maps, meshes, audio, sprites and actor appearance
+tools. The 3D glyph renderer is being refactored.
+
+The renderer keeps the original CP437 byte-cell path for glyph IDs `0..255`. Y9-2 also supports manifest-declared extended glyph IDs through an extended-glyph sidecar, so the current runtime is not limited to CP437 even though that remains its compatibility fast path.
+
 ## Numabe map and HTML editor
 
 ![Numabe station train in the Classic CP437 runtime](docs/recordings/numabe-train.gif)
@@ -33,14 +41,6 @@ The scope-geometry tests additionally need GDAL's Python bindings matching
 the native GDAL installation (on Ubuntu, install `libgdal-dev gdal-bin`, then
 `python3 -m pip install "GDAL==$(gdal-config --version)"`). The saved-map HTML
 editor itself only needs `numabe/requirements-editor.txt`.
-
-A fork of [msokalski/asciicker](https://github.com/msokalski/asciicker), a CP437 3D ASCII engine.
-
-This repository contains the Y9-2 C++ runtime: a multiplayer server, terminal
-client, WebAssembly client, maps, meshes, audio, sprites and actor appearance
-tools. The 3D glyph renderer is being refactored.
-
-The renderer keeps the original CP437 byte-cell path for glyph IDs `0..255`. Y9-2 also supports manifest-declared extended glyph IDs through an extended-glyph sidecar, so the current runtime is not limited to CP437 even though that remains its compatibility fast path.
 
 ## Sprites and animations
 
