@@ -125,4 +125,3 @@ The repository's GitHub Actions workflow is configured to run the standalone che
 ## Source and licensing
 
 See [docs/ATTRIBUTION.md](docs/ATTRIBUTION.md) for upstream and Y9-2 source identities, asset provenance, and licensing information. The original Asciicker source license is preserved under `docs/licenses/`.
-
