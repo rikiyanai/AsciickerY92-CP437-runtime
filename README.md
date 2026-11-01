@@ -1,5 +1,11 @@
 # Asciicker Y9-2 Runtime
 
+## License
+
+Original project code is available under the [MIT License](LICENSE).
+
+Upstream Asciicker code remains MIT licensed with its original copyright notice. Bundled third party code and assets retain their respective terms. See [source attribution](docs/ATTRIBUTION.md) and `docs/licenses/`.
+
 A fork of [msokalski/asciicker](https://github.com/msokalski/asciicker), a CP437 3D ASCII engine.
 
 This repository contains the Y9-2 C++ runtime: a multiplayer server, terminal
