@@ -8,6 +8,26 @@ Upstream Asciicker code remains MIT licensed with its original copyright notice.
 
 A fork of [msokalski/asciicker](https://github.com/msokalski/asciicker), a CP437 3D ASCII engine.
 
+## Play on Windows
+
+On an x64 Windows 11 PC, paste this single command into PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/rikiyanai/AsciickerY92-CP437-runtime/main/scripts/install-windows.ps1 | iex
+```
+
+The installer sets up Ubuntu 24.04 in WSL 2, installs the dependencies, builds
+Classic and its local server, and starts the game. The first installation
+downloads and compiles the game; no Git, Python or compiler setup is required
+from the player. If Windows needs a restart to enable WSL, installation resumes
+at the next sign-in. The game runs through WSLg in a desktop window.
+
+After installation, run `asciicker` to play. Run `asciicker launcher` for the
+menu, `asciicker numabe` to walk the current Numabe map, or `asciicker editor`
+to open its map editor. `asciicker --check` checks the installation without
+opening the game. Run the installer command again to update or retry a failed
+installation; it preserves local source edits.
+
 This repository contains the Y9-2 C++ runtime: a multiplayer server, terminal
 client, WebAssembly client, maps, meshes, audio, sprites and actor appearance
 tools. The 3D glyph renderer is being refactored.

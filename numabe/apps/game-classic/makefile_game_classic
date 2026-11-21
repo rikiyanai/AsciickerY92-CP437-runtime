@@ -144,8 +144,32 @@ SRCS :=	platform/gl.c \
 # Unresolved references after adding a source here are manual separation work.
 
 
+V8_FROM ?= auto
+V8_VENDOR_LIB := vendor/v8/v8/out.gn/x64.release/obj/libv8_monolith.a
+ifeq ($(V8_FROM),auto)
+ ifeq ($(wildcard $(V8_VENDOR_LIB)),)
+  ifneq ($(wildcard /usr/include/node/v8.h),)
+   override V8_FROM := system
+  else
+   override V8_FROM := vendor
+  endif
+ else
+  override V8_FROM := vendor
+ endif
+endif
+ifeq ($(V8_FROM),system)
+V8_INCLUDE := -I /usr/include/node -DAK_V8_SYSTEM
+V8_LIBDIR :=
+V8_LIB := -lnode
+else
+V8_INCLUDE := -I vendor/v8/v8/include
+V8_LIBDIR := -L vendor/v8/v8/out.gn/x64.release/obj
+V8_LIB := -l:libv8_monolith.a
+endif
+SDL_CFLAGS := $(shell pkg-config --cflags sdl2)
+
 LDLIBS := \
-	-l:libv8_monolith.a \
+	$(V8_LIB) \
 	-lutil -lGL -lX11 -lXinerama -lSDL2 -lpulse -ldl
 
 
@@ -191,7 +215,7 @@ CXXFLAGS := -std=c++17
 # C/C++ flags. The Classic renderer selects the CP437 compile guard and never
 # enables the FL-4512 glyph-program loader defines.
 CPPFLAGS := -save-temps=obj -pthread -DGAME -O3 -DUSE_SDL \
-	-I . -I vendor/v8/v8/include -I engine -I engine/render -I editor -I platform -I server \
+	-I . $(V8_INCLUDE) $(SDL_CFLAGS) -I engine -I engine/render -I editor -I platform -I server \
 	-DASCIICKER_RENDERER_CLASSIC_CP437=1
 #CPPFLAGS := -fsanitize=address -save-temps=obj -pthread -DGAME -g -DUSE_SDL -I vendor/v8/v8/include
 
@@ -200,7 +224,7 @@ CPPFLAGS := -save-temps=obj -pthread -DGAME -O3 -DUSE_SDL \
 # CPPFLAGS := -g -save-temps=obj -pthread -DGAME -fsanitize=address
 
 # linker flags. The Classic link always emits the link map for the forbidden-symbol audit.
-LDFLAGS := -save-temps=obj -pthread -O3 -L vendor/v8/v8/out.gn/x64.release/obj
+LDFLAGS := -save-temps=obj -pthread -O3 $(V8_LIBDIR)
 LDFLAGS += -Wl,-Map,$(LINK_MAP)
 # LDFLAGS := -g -save-temps=obj -pthread
 # LDFLAGS := -g -save-temps=obj -pthread -fsanitize=address.referenced
