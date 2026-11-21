@@ -71,7 +71,8 @@ def main() -> None:
     if args.action == "check":
         return
     if args.action == "editor":
-        os.execv(sys.executable, [sys.executable, str(EDITOR), "--port", str(args.port),
+        # -X utf8: the editor reads its JSON with bare read_text(); Windows would decode as cp1252.
+        os.execv(sys.executable, [sys.executable, "-X", "utf8", str(EDITOR), "--port", str(args.port),
                                   "--build", str(BUILD)])
     game = WORKSPACE / ".run/game_classic"
     if not game.is_file():

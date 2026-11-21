@@ -83,7 +83,7 @@
 #include <sys/poll.h>
 #include <sys/wait.h>
 #include <fcntl.h>
-#if defined(__linux__) && !defined(AK_V8_SYSTEM)
+#ifdef __linux__
 # include <linux/limits.h>
 #include <linux/input.h>
 #include <linux/joystick.h>
@@ -148,7 +148,7 @@
  //#define V8_ENABLE_SANDBOX 1
 #endif
 
-#ifdef __linux__
+#if defined(__linux__) && !defined(AK_V8_SYSTEM)
  // i'am lazy gumix
  // only x64 linux is supported
  #define V8_COMPRESS_POINTERS 1
